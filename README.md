@@ -3,7 +3,7 @@ Samples
 
 Samples for www.babylonjs.com site
 
-Foe questions, please use our (forum)[http://www.html5gamedevs.com/forum/16-babylonjs/]
+Foe questions, please use our [forum](http://www.html5gamedevs.com/forum/16-babylonjs/)
 
 
 ## Documentation
