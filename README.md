@@ -1,10 +1,11 @@
 Samples
 =======
 
-Samples for www.babylonjs.com site
+Samples for www.babylonjs.com site.
 
-Foe questions, please use our [forum](http://www.html5gamedevs.com/forum/16-babylonjs/)
+For questions, please use our [forum](http://www.html5gamedevs.com/forum/16-babylonjs/)
 
+Sources for Babylon.js are in a separate [repo](https://github.com/BabylonJS/Babylon.js)
 
 ## Documentation
 - [Wiki](https://github.com/babylonjs/babylon.js/wiki)
