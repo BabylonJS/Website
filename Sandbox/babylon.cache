@@ -1,0 +1,19 @@
+﻿CACHE MANIFEST
+ 
+# Version 1.1
+
+CACHE: 
+babylon.js 
+hand.minified-1.2.js
+index.html
+index.css
+index.js
+Assets/BtnDragdrop.png 
+Assets/BtnFullscreen.png
+Assets/BtnPerf.png
+Assets/FlecheDown.png
+Assets/FlecheTuto.png 
+Assets/LogoSandbox.png
+
+NETWORK: 
+*
