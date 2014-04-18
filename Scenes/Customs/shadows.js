@@ -24,7 +24,11 @@
     // Ground
     var ground = BABYLON.Mesh.CreateGround("ground", 1000, 1000, 1, scene, false);
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-    groundMaterial.diffuseTexture = new BABYLON.Texture("assets/grass.jpg", scene);
+    if (engine.getCaps().s3tc) {
+        groundMaterial.diffuseTexture = new BABYLON.Texture("/Scenes/Customs/grass.dds", scene);
+    } else {
+        groundMaterial.diffuseTexture = new BABYLON.Texture("/Scenes/Customs/grass.jpg", scene);
+    }
     groundMaterial.diffuseTexture.uScale = 60;
     groundMaterial.diffuseTexture.vScale = 60;
     groundMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
@@ -37,6 +41,12 @@
     torus.position.y = 6.0;
     var torus2 = BABYLON.Mesh.CreateTorus("torus2", 4, 1, 32, scene, false);
     torus2.position.y = 6.0;
+
+    var torusMaterial = new BABYLON.StandardMaterial("torus", scene);
+    torusMaterial.diffuseColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+    torusMaterial.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+    torus.material = torusMaterial;
+    torus2.material = torusMaterial;
     
     // Shadows
     var shadowGenerator = new BABYLON.ShadowGenerator(512, light);

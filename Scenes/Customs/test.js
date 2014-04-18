@@ -134,9 +134,11 @@
         
         spaceDek3.material.emissiveColor = new BABYLON.Color3(1.0, 0, 0);
 
-        spaceDek3.infiniteDistance = true;
-
         scene.beginAnimation(spaceDek3, 0, 100, true, 1.0);
+
+        // Test serialization
+        var serializationObject = BABYLON.SceneSerializer.Serialize(scene);
+        var string = JSON.stringify(serializationObject);
     });
 
     // Animations
@@ -162,7 +164,7 @@
         }
 
         if (spaceDek3) {
-            spaceDek3.rotation.y -= 0.01;
+            spaceDek3.rotation.z -= 0.01;
         }
         
         if (torus.intersectsMesh(box, true)) {
