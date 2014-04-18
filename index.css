@@ -6,6 +6,13 @@
     overflow: hidden;
     position: fixed;
     font-family: "Segoe WP", "Segoe UI", "Verdana", "Arial";
+    
+    touch-action: none;
+    -ms-touch-action: none;
+}
+
+.warning {
+    color: red;
 }
 
 a {
@@ -44,19 +51,20 @@ a {
     color: #2E7F80;
 }
 
-.footerLink:visited {
-    color: #2E7F80;
-}
+    .footerLink:visited {
+        color: #2E7F80;
+    }
 
 .buttonControlPanel {
-    height: 40px;
-    width: 200px;
+    height: 3em;
+    width: 17em;
     margin: 5px 0px 5px 0px;
+    line-height: 2.2em;
 }
 
 .smallButtonControlPanel {
-    height: 30px;
-    width: 200px;
+    height: 2.2em;
+    width: 17em;
     margin: 2px 0px 2px 0px;
 }
 
@@ -322,7 +330,7 @@ button {
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom: 0;
+    bottom: -1px;
     height: 30px;
     font-size: 20px;
     color: white;
@@ -367,14 +375,12 @@ button {
 #renderCanvas {
     width: 100%;
     height: 100%;
-    touch-action: none;
-    -ms-touch-action: none;
 }
 
 #fps {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 5em;
     font-size: 20px;
     color: white;
     text-shadow: 2px 2px 0 black;
@@ -383,7 +389,7 @@ button {
 #stats {
     position: absolute;
     right: 20px;
-    top: 60px;
+    top: 11em;
     font-size: 14px;
     color: white;
     text-align: right;
@@ -406,7 +412,7 @@ button {
     width: 500px;
     left: 50%;
     margin-left: -250px;
-    z-index: 1;
+    z-index: 10;
     transition: transform 0.25s ease-in-out;
     transform: translateY(250px);
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -442,13 +448,13 @@ button {
 #cameraPanel {
     position: absolute;
     right: 0px;
-    width: 300px;
-    top: 350px;
-    z-index: 1;
+    width: 17em;
+    top: 2em;
+    z-index: 10;
     transition: transform 0.25s ease-in-out;
-    transform: translateX(300px);
+    transform: translateX(17em);
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    -webkit-transform: translateX(300px);
+    -webkit-transform: translateX(17em);
 }
 
 .cameraTag {

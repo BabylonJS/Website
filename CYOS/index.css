@@ -1,0 +1,121 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#renderCanvas {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: calc(100% - 150px);
+    touch-action: none;
+    -ms-touch-action: none;
+    box-sizing: border-box;
+}
+
+#shadersContainer {
+    position: absolute;
+    display: table;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 2px 2px 8px 2px;
+}
+
+.row {
+    display: table-row;
+}
+
+#templateZone {
+    display: inline;
+}
+
+#templates {
+}
+
+.headerTitle {
+    float: right;
+}
+
+.header {
+    display: table-cell;
+    width: 98%;
+    height: 20px;
+    color: white;
+    font-family: tahoma, arial;
+    box-sizing: border-box;
+    padding: 4px 5px 0 0;
+}
+
+.shaderCode {
+    height: 98%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+#order {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 150px;
+    padding: 0;
+    background-color: black;
+}
+
+#compileButton {
+    float: left;
+    height: 120px;
+    width: 100px;
+    margin: 20px;
+    color: white;
+    border-width: 0px;
+    font-family: tahoma, arial;
+    background-color: green;
+    font-size: 24px;
+}
+
+#logCell {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#orderRow {
+    height: 150px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#errorLog {
+    margin-left: 10px;
+    color: white;
+    padding: 10px;
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    margin: 0;
+    font-size: 12px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+}
