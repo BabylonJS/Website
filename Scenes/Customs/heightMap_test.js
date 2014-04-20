@@ -18,11 +18,7 @@
     // Ground
     var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "Scenes/Customs/heightMap.png", 100, 100, 100, 0, 10, scene, false);
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-    if (engine.getCaps().s3tc) {
-        groundMaterial.diffuseTexture = new BABYLON.Texture("Scenes/Customs/grass.dds", scene);
-    } else {
-        groundMaterial.diffuseTexture = new BABYLON.Texture("Scenes/Customs/ground.jpg", scene);
-    }
+    groundMaterial.diffuseTexture = new BABYLON.Texture("Scenes/Customs/ground.jpg", scene);
 
     groundMaterial.diffuseTexture.uScale = 6;
     groundMaterial.diffuseTexture.vScale = 6;

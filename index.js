@@ -145,6 +145,7 @@ var onload = function () {
     ];
 
     var tests = [
+        { title: "CREATE YOUR OWN SHADER", url: "CYOS", screenshot: "cyos.jpg", size: "1 MB", anchor: "CYOS" },
         { title: "VERTEXDATA", url: "Scenes/Clouds/index.html", screenshot: "clouds.jpg", size: "1 MB", anchor: "CLOUDS" },
         { title: "POSTPROCESS - CONVOLUTION", id: 16, screenshot: "convolution.jpg", size: "1 MB", anchor: "PPCONVOLUTION" },
         { title: "CONSTRUCTIVE SOLID GEOMETRIES", id: 15, screenshot: "csg.jpg", size: "1 MB", anchor: "CSG" },
@@ -206,6 +207,7 @@ var onload = function () {
     var touchCamera = document.getElementById("touchCamera");
     var deviceOrientationCamera = document.getElementById("deviceOrientationCamera");
     var virtualJoysticksCamera = document.getElementById("virtualJoysticksCamera");
+    var anaglyphCamera = document.getElementById("anaglyphCamera");
     var camerasList = document.getElementById("camerasList");
     var toggleFsaa4 = document.getElementById("toggleFsaa4");
     var toggleFxaa = document.getElementById("toggleFxaa");
@@ -624,6 +626,7 @@ var onload = function () {
         }
     });
 
+    var previousPickedMesh;
     canvas.addEventListener("mousedown", function (evt) {
         if (!panelIsClosed) {
             panelIsClosed = true;
@@ -640,12 +643,11 @@ var onload = function () {
             if (evt.ctrlKey) {
                 status.innerHTML = "Selected object: " + pickResult.pickedMesh.name + "(" + pickResult.pickedPoint.x + "," + pickResult.pickedPoint.y + "," + pickResult.pickedPoint.z + ")";
 
-                // Animations
-                scene.beginAnimation(pickResult.pickedMesh, 0, 100, true, 1.0);
-                var material = pickResult.pickedMesh.material;
-                if (material) {
-                    scene.beginAnimation(material, 0, 100, true, 1.0);
+                if (previousPickedMesh) {
+                    previousPickedMesh.showBoundingBox = false;
                 }
+
+                pickResult.pickedMesh.showBoundingBox = true;
 
                 // Emit particles
                 var particleSystem = new BABYLON.ParticleSystem("particles", 400, scene);
@@ -671,6 +673,8 @@ var onload = function () {
                 particleSystem.disposeOnStop = true;
                 particleSystem.targetStopDuration = 0.1;
                 particleSystem.start();
+
+                previousPickedMesh = pickResult.pickedMesh;
 
             } else {
                 var dir = pickResult.pickedPoint.subtract(scene.activeCamera.position);
@@ -749,9 +753,21 @@ var onload = function () {
 
         var camera = new BABYLON.VirtualJoysticksCamera("virtualJoysticksCamera", scene.activeCamera.position, scene);
 
-        camera.leftjoystick.setJoystickSensibility(0.08);
-        camera.rightjoystick.setJoystickSensibility(0.02);
+        switchCamera(camera);
+    });
 
+    anaglyphCamera.addEventListener("click", function () {
+        if (!scene) {
+            return;
+        }
+
+        if (scene.activeCamera instanceof BABYLON.AnaglyphArcRotateCamera) {
+            return;
+        }
+
+        var camera = new BABYLON.AnaglyphFreeCamera("anaglyphCamera", scene.activeCamera.position, 0.2, scene);
+        //var camera = new BABYLON.AnaglyphArcRotateCamera("anaglyphCamera", 0, Math.PI / 2, 20, BABYLON.Vector3.Zero(), 0.2, scene);
+        
         switchCamera(camera);
     });
 
@@ -765,6 +781,7 @@ var onload = function () {
         }
 
         var camera = new BABYLON.DeviceOrientationCamera("deviceOrientationCamera", scene.activeCamera.position, scene);
+
         switchCamera(camera);
     });
 
