@@ -108,25 +108,26 @@
         loadingBack.removeEventListener("webkitTransitionEnd", importScene);
 
         BABYLON.SceneLoader.ImportMesh("", "/Scenes/Robot/Assets/", "Robot.babylon", scene, function () {
-           
-        for (var index = 0; index < scene.meshes.length; index++) {
-            if (scene.meshes[index].name == "Slide") {
-                slide = scene.meshes[index];
-                slide.material.diffuseTexture = new BABYLON.Texture(demos[slideid].image, scene);
+
+            scene.getMeshByName("LumHalo").material.opacityTexture.getAlphaFromRGB = true;
+
+            for (var index = 0; index < scene.meshes.length; index++) {
+                if (scene.meshes[index].name == "Slide") {
+                    slide = scene.meshes[index];
+                    slide.material.diffuseTexture = new BABYLON.Texture(demos[slideid].image, scene);
+                }
+                scene.stopAnimation(scene.meshes[index]);
+                scene.beginAnimation(scene.meshes[index], 0, 265, false, 1.0);
+
             }
-            scene.stopAnimation(scene.meshes[index]);
-            scene.beginAnimation(scene.meshes[index], 0, 265, false, 1.0);
-
-        }
-            
-
-        // UI
-        loadingBack.className = "loadingBack";
-        loadingText.className = "loadingText";
-        }, function (evt) {
-            loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
-        });
-    };
+           
+            // UI
+            loadingBack.className = "loadingBack";
+            loadingText.className = "loadingText";
+            }, function (evt) {
+                loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
+            });
+        };
 
     loadingBack.addEventListener("transitionend", importScene);
     loadingBack.addEventListener("webkitTransitionEnd", importScene);

@@ -2,12 +2,8 @@
 
 (function () {
     WORLDMONGER.WaterMaterial = function (name, scene, light) {
-        this.name = name;
-        this.id = name;
+        BABYLON.Material.call(this, name, scene);
         this.light = light;
-
-        this._scene = scene;
-        scene.materials.push(this);
 
         this.bumpTexture = new BABYLON.Texture("Shaders/Water/bump.png", scene);
         this.bumpTexture.uScale = 2;
@@ -94,7 +90,7 @@
         this._effect.setFloat2("waveData", this.waveLength, this.waveHeight);
 
         // Textures        
-        this._effect.setMatrix("windMatrix", this.bumpTexture._computeTextureMatrix().multiply(BABYLON.Matrix.Translation(this.waterDirection.x * this._time, this.waterDirection.y * this._time, 0)));
+        this._effect.setMatrix("windMatrix", this.bumpTexture.getTextureMatrix().multiply(BABYLON.Matrix.Translation(this.waterDirection.x * this._time, this.waterDirection.y * this._time, 0)));
         this._effect.setTexture("bumpSampler", this.bumpTexture);
         this._effect.setTexture("reflectionSampler", this.reflectionTexture);
         this._effect.setTexture("refractionSampler", this.refractionTexture);
@@ -105,13 +101,13 @@
             this.bumpTexture.dispose();
         }
         
-        if (this.groundTexture) {
-            this.groundTexture.dispose();
+        if (this.reflectionTexture) {
+            this.reflectionTexture.dispose();
         }
 
-        if (this.snowTexture) {
-            this.snowTexture.dispose();
+        if (this.refractionTexture) {
+            this.refractionTexture.dispose();
         }
-        this.baseDispose();
+        BABYLON.Material.dispose.call(this);
     };
 })();

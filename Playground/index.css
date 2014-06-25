@@ -1,0 +1,57 @@
+﻿html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #272822;
+}
+
+#jsEditor {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 50%;
+    bottom: 40px;
+    height: auto;
+}
+
+#canvasZone {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: calc(50% - 2px);
+    bottom: 40px;
+    height: auto;
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+#fpsLabel {
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    cursor: default;
+}
+
+#topbar {
+    padding: 5px;
+}
+
+.navbar .brand {
+    margin-left: 0px;
+}
+
+#errorZone {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    bottom: 40px;
+}
+
+#statusBar {
+    padding: 10px 15px 10px;
+    color: #999;
+}

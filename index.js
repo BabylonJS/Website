@@ -30,7 +30,10 @@ var onload = function () {
     // Demos
     var demos = [
         {
-            title: "HILLVALLEY", scene: "hillvalley", screenshot: "hill.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", incremental: false, big: true, onload: function () {
+            title: "ACP", url: "http://race.assassinscreedpirates.com/", screenshot: "ACP.jpg", size: "Assassin's Creed Pirates<BR>by Ubisoft", big: true, incremental: false
+        },
+        {
+            title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", incremental: true, onload: function () {
                 scene.collisionsEnabled = false;
                 scene.lightsEnabled = false;
                 scene.createOrUpdateSelectionOctree();
@@ -40,7 +43,7 @@ var onload = function () {
             }
         },
         {
-            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB", onload: function () {
+            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB", incremental: true, onload: function () {
                 scene.collisionsEnabled = false;
                 for (var index = 0; index < scene.cameras.length; index++) {
                     scene.cameras[index].minZ = 10;
@@ -74,7 +77,9 @@ var onload = function () {
             }
         },
         { title: "WORLDMONGER", url: "Scenes/Worldmonger/index.html", screenshot: "worldmonger.jpg", size: "8.5 MB" },
-        { title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", },
+        { title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", onload: function() {
+            scene.getMeshByName("Labels").setEnabled(false);
+        }},
 
         {
             title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", incremental: true, onload: function () {
@@ -93,7 +98,8 @@ var onload = function () {
             size: "44 MB",
             onload: function () {
                 var ecran = scene.getMeshByName("Ecran");
-                ecran.material.diffuseTexture = new BABYLON.VideoTexture("video", ["Scenes/Flat2009/babylonjs.mp4", "Scenes/Flat2009/babylonjs.webm"], 256, scene, true, true);
+                ecran.material.diffuseTexture = new BABYLON.VideoTexture("video", ["Scenes/Flat2009/babylonjs.mp4", "Scenes/Flat2009/babylonjs.webm"],
+                    { width: 1024, height: 512 }, scene, true, true);
                 scene.createOrUpdateSelectionOctree();
             }
         },
@@ -101,7 +107,7 @@ var onload = function () {
         { title: "VIPER", scene: "Viper", screenshot: "viper.jpg", size: "18 MB" },
         { title: "SPACESHIP", scene: "Spaceship", screenshot: "spaceship.jpg", size: "1 MB" },
         {
-            title: "OMEGA CRUSHER", scene: "SpaceDek", screenshot: "omegacrusher.jpg", size: "10 MB", anchor: "OMEGA", onload: function () {
+            title: "OMEGA CRUSHER", scene: "SpaceDeK", screenshot: "omegacrusher.jpg", size: "10 MB", anchor: "OMEGA", onload: function () {
                 scene.collisionsEnabled = false;
             }
         }];
@@ -128,16 +134,16 @@ var onload = function () {
 
     var oculusTests = [
         {
-            title: "HILLVALLEY", scene: "hillvalley", screenshot: "hill2.jpg", size: "70 MB", anchor: "OCC0", onload: oculusProcessing
+            title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB", anchor: "OCC0", onload: oculusProcessing, incremental: true
         },
         {
             title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", anchor: "OCC1", onload: oculusProcessingWithCollisionsAndGravity
         },
         {
-            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", anchor: "OCC2", onload: oculusProcessingWithCollisionsAndGravity
+            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", anchor: "OCC2", onload: oculusProcessingWithCollisionsAndGravity, incremental:true
         },
         {
-            title: "WINDOWS CAFE", scene: "wcafe", screenshot: "wcafe.jpg", size: "28 MB", anchor: "OCC3", onload: oculusProcessingWithCollisionsAndGravity
+            title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", size: "28 MB", anchor: "OCC3", onload: oculusProcessingWithCollisionsAndGravity
         },
         {
             title: "Flat 2009", scene: "Flat2009", screenshot: "Flat2009.jpg", size: "44 MB", anchor: "OCC4", onload: oculusProcessingWithCollisionsAndGravity
@@ -145,6 +151,9 @@ var onload = function () {
     ];
 
     var tests = [
+        { title: "INSTANCES", id: 18, screenshot: "instances.jpg", size: "1 MB", anchor: "INSTANCES" },
+        { title: "ACTIONS", id: 17, screenshot: "actions.jpg", size: "1 MB", anchor: "ACTIONS" },
+        { title: "PARTICLES", id: 19, screenshot: "particles.jpg", size: "1 MB", anchor: "PARTICLES" },
         { title: "CREATE YOUR OWN SHADER", url: "CYOS", screenshot: "cyos.jpg", size: "1 MB", anchor: "CYOS" },
         { title: "VERTEXDATA", url: "Scenes/Clouds/index.html", screenshot: "clouds.jpg", size: "1 MB", anchor: "CLOUDS" },
         { title: "POSTPROCESS - CONVOLUTION", id: 16, screenshot: "convolution.jpg", size: "1 MB", anchor: "PPCONVOLUTION" },
@@ -165,11 +174,14 @@ var onload = function () {
         { title: "BUMP", id: 2, screenshot: "bump.jpg", size: "0.1 MB" },
         { title: "FOG", id: 3, screenshot: "fog.jpg", size: "0.1 MB" },
         { title: "MULTIMATERIAL", id: 4, screenshot: "multimat.jpg", size: "0.1 MB" },
-        { title: "BLENDER", scene: "blender", screenshot: "blender.jpg", size: "0.2 MB" },
+        { title: "BLENDER", scene: "blender", screenshot: "blender.jpg", size: "0.2 MB", incremental: true },
         { title: "SCENE #1", id: 0, screenshot: "testscene.jpg", size: "10 MB" }
     ];
 
     var thirdParties = [
+        { title: "Wanaplan", url: "http://www.wanaplan.com/en/", screenshot: "wanaplan.jpg", size: "by Wanadev" },
+        { title: "DotVision Motion & Bing Maps", url: "http://live2.dotvision.com/live/virtualTour?guid=f0045a3c-6c11-4329-b881-8d8a170538fb&lang=fr&intro=true", screenshot: "myGeoLive3D.jpg", size: "by Dotvision" },
+        { title: "BLUE LADY", url: "http://www.3dworlds.ca/1webgl/blady/index.html", screenshot: "lady.jpg", size: "by Gryff" },
         { title: "LIGHT SPEED READY", url: "http://xanmia.github.io/Light-Speed-Ready/game.html", screenshot: "Light Speed Ready.jpg", size: "by Xanmia" },
         { title: "DRIFT", url: "http://www.visualiser.fr/Babylon/Drift/default.htm", screenshot: "Drift.jpg", size: "by S. Girardin" },
         { title: "BING 3D MAPS", url: "http://babylonbing.azurewebsites.net/", screenshot: "bing3D.jpg", size: "by A. Beaulieu" },
@@ -206,6 +218,7 @@ var onload = function () {
     var fullscreen = document.getElementById("fullscreen");
     var touchCamera = document.getElementById("touchCamera");
     var deviceOrientationCamera = document.getElementById("deviceOrientationCamera");
+    var gamepadCamera = document.getElementById("gamepadCamera");
     var virtualJoysticksCamera = document.getElementById("virtualJoysticksCamera");
     var anaglyphCamera = document.getElementById("anaglyphCamera");
     var camerasList = document.getElementById("camerasList");
@@ -232,6 +245,7 @@ var onload = function () {
                     return;
                 }
                 loadScene(demo.id !== undefined ? demo.id : demo.scene, demo.incremental ? ".incremental" : "", function () {
+                    BABYLON.StandardMaterial.BumpTextureEnabled = true;
                     if (demo.collisions !== undefined) {
                         scene.collisionsEnabled = demo.collisions;
                     }
@@ -338,7 +352,63 @@ var onload = function () {
     var engine = new BABYLON.Engine(canvas, true);
     var scene;
 
+    var previousPickedMesh;
+    var onPointerDown = function(evt, pickResult) {
+        if (!panelIsClosed) {
+            panelIsClosed = true;
+            controlPanel.style.webkitTransform = "translateY(250px)";
+            controlPanel.style.transform = "translateY(250px)";
+        }
+
+        if (pickResult.hit) {
+            if (evt.ctrlKey) {
+                status.innerHTML = "Selected object: " + pickResult.pickedMesh.name + "(" + pickResult.pickedPoint.x + "," + pickResult.pickedPoint.y + "," + pickResult.pickedPoint.z + ")";
+
+                if (previousPickedMesh) {
+                    previousPickedMesh.showBoundingBox = false;
+                }
+
+                pickResult.pickedMesh.showBoundingBox = true;
+
+                // Emit particles
+                var particleSystem = new BABYLON.ParticleSystem("particles", 400, scene);
+                particleSystem.particleTexture = new BABYLON.Texture("Assets/Flare.png", scene);
+                particleSystem.minAngularSpeed = -0.5;
+                particleSystem.maxAngularSpeed = 0.5;
+                particleSystem.minSize = 0.1;
+                particleSystem.maxSize = 0.5;
+                particleSystem.minLifeTime = 0.5;
+                particleSystem.maxLifeTime = 2.0;
+                particleSystem.minEmitPower = 0.5;
+                particleSystem.maxEmitPower = 1.0;
+                particleSystem.emitter = pickResult.pickedPoint;
+                particleSystem.emitRate = 400;
+                particleSystem.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
+                particleSystem.minEmitBox = new BABYLON.Vector3(0, 0, 0);
+                particleSystem.maxEmitBox = new BABYLON.Vector3(0, 0, 0);
+                particleSystem.direction1 = new BABYLON.Vector3(-1, -1, -1);
+                particleSystem.direction2 = new BABYLON.Vector3(1, 1, 1);
+                particleSystem.color1 = new BABYLON.Color4(1, 0, 0, 1);
+                particleSystem.color2 = new BABYLON.Color4(0, 1, 1, 1);
+                particleSystem.gravity = new BABYLON.Vector3(0, -5, 0);
+                particleSystem.disposeOnStop = true;
+                particleSystem.targetStopDuration = 0.1;
+                particleSystem.start();
+
+                previousPickedMesh = pickResult.pickedMesh;
+
+            } else {
+                var dir = pickResult.pickedPoint.subtract(scene.activeCamera.position);
+                dir.normalize();
+                pickResult.pickedMesh.applyImpulse(dir.scale(10), pickResult.pickedPoint);
+                status.innerHTML = "";
+            }
+        }
+    };
+
     var restoreUI = function () {
+        scene.onPointerDown = onPointerDown;
+
         loadingBack.className = "loadingBack";
         loadingText.className = "loadingText";
         menuPanel.className = "movedLeft";
@@ -370,6 +440,8 @@ var onload = function () {
         }
 
         sceneChecked = false;
+
+        BABYLON.SceneLoader.ForceFullSceneLoadingForIncremental = true;
 
         // History
         if (history.pushState) {
@@ -438,6 +510,15 @@ var onload = function () {
                     case 16:
                         newScene = CreateConvolutionTestScene(engine);
                         break;
+                    case 17:
+                        newScene = CreateActionsTestScene(engine);
+                        break;
+                    case 18:
+                        newScene = CreateInstancesTestScene(engine);
+                        break;
+                    case 19:
+                        newScene = CreateParticlesTestScene(engine);
+                        break;
                 }
                 scene = newScene;
 
@@ -457,6 +538,8 @@ var onload = function () {
             };
 
             var dlCount = 0;
+            //BABYLON.SceneLoader.Load("http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
+            //BABYLON.SceneLoader.Load("http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
             BABYLON.SceneLoader.Load("Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
                 scene = newScene;
                 scene.executeWhenReady(function () {
@@ -626,65 +709,6 @@ var onload = function () {
         }
     });
 
-    var previousPickedMesh;
-    canvas.addEventListener("mousedown", function (evt) {
-        if (!panelIsClosed) {
-            panelIsClosed = true;
-            controlPanel.style.webkitTransform = "translateY(250px)";
-            controlPanel.style.transform = "translateY(250px)";
-        }
-
-        if (!scene)
-            return;
-
-        var pickResult = scene.pick(evt.clientX, evt.clientY);
-
-        if (pickResult.hit) {
-            if (evt.ctrlKey) {
-                status.innerHTML = "Selected object: " + pickResult.pickedMesh.name + "(" + pickResult.pickedPoint.x + "," + pickResult.pickedPoint.y + "," + pickResult.pickedPoint.z + ")";
-
-                if (previousPickedMesh) {
-                    previousPickedMesh.showBoundingBox = false;
-                }
-
-                pickResult.pickedMesh.showBoundingBox = true;
-
-                // Emit particles
-                var particleSystem = new BABYLON.ParticleSystem("particles", 400, scene);
-                particleSystem.particleTexture = new BABYLON.Texture("Assets/Flare.png", scene);
-                particleSystem.minAngularSpeed = -0.5;
-                particleSystem.maxAngularSpeed = 0.5;
-                particleSystem.minSize = 0.1;
-                particleSystem.maxSize = 0.5;
-                particleSystem.minLifeTime = 0.5;
-                particleSystem.maxLifeTime = 2.0;
-                particleSystem.minEmitPower = 0.5;
-                particleSystem.maxEmitPower = 1.0;
-                particleSystem.emitter = pickResult.pickedPoint;
-                particleSystem.emitRate = 400;
-                particleSystem.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
-                particleSystem.minEmitBox = new BABYLON.Vector3(0, 0, 0);
-                particleSystem.maxEmitBox = new BABYLON.Vector3(0, 0, 0);
-                particleSystem.direction1 = new BABYLON.Vector3(-1, -1, -1);
-                particleSystem.direction2 = new BABYLON.Vector3(1, 1, 1);
-                particleSystem.color1 = new BABYLON.Color4(1, 0, 0, 1);
-                particleSystem.color2 = new BABYLON.Color4(0, 1, 1, 1);
-                particleSystem.gravity = new BABYLON.Vector3(0, -5, 0);
-                particleSystem.disposeOnStop = true;
-                particleSystem.targetStopDuration = 0.1;
-                particleSystem.start();
-
-                previousPickedMesh = pickResult.pickedMesh;
-
-            } else {
-                var dir = pickResult.pickedPoint.subtract(scene.activeCamera.position);
-                dir.normalize();
-                pickResult.pickedMesh.applyImpulse(dir.scale(10), pickResult.pickedPoint);
-                status.innerHTML = "";
-            }
-        }
-    });
-
     wireframe.addEventListener("change", function () {
         if (engine) {
             engine.forceWireframe = wireframe.checked;
@@ -742,6 +766,20 @@ var onload = function () {
         switchCamera(camera);
     });
 
+    gamepadCamera.addEventListener("click", function () {
+        if (!scene) {
+            return;
+        }
+
+        if (scene.activeCamera instanceof BABYLON.GamepadCamera) {
+            return;
+        }
+
+        var camera = new BABYLON.GamepadCamera("gamepadCamera", scene.activeCamera.position, scene);
+
+        switchCamera(camera);
+    });
+
     virtualJoysticksCamera.addEventListener("click", function () {
         if (!scene) {
             return;
@@ -767,7 +805,7 @@ var onload = function () {
 
         var camera = new BABYLON.AnaglyphFreeCamera("anaglyphCamera", scene.activeCamera.position, 0.2, scene);
         //var camera = new BABYLON.AnaglyphArcRotateCamera("anaglyphCamera", 0, Math.PI / 2, 20, BABYLON.Vector3.Zero(), 0.2, scene);
-        
+
         switchCamera(camera);
     });
 

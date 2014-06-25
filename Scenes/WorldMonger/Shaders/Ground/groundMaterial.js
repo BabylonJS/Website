@@ -2,12 +2,8 @@
 
 (function () {
     WORLDMONGER.GroundMaterial = function (name, scene, light) {
-        this.name = name;
-        this.id = name;
+        BABYLON.Material.call(this, name, scene);
         this.light = light;
-
-        this._scene = scene;
-        scene.materials.push(this);
         
         this.groundTexture = new BABYLON.Texture("Shaders/Ground/ground.jpg", scene);
         this.groundTexture.uScale = 6.0;
@@ -68,7 +64,7 @@
             return false;
 
         var defines = [];
-        if (BABYLON.clipPlane) {
+        if (this._scene.clipPlane) {
             defines.push("#define CLIPPLANE");
         }
 
@@ -78,7 +74,7 @@
 
             this._effect = engine.createEffect("./Shaders/Ground/ground",
                 ["position", "normal", "uv"],
-                ["worldViewProjection", "groundMatrix", "sandMatrix", "rockMatrix", "snowMatrix", "grassMatrix", "blendMatrix", "world", "vLightPosition", "vEyePosition", "vLimits", "vClipPlane"],
+                ["worldViewProjection", "groundMatrix", "sandMatrix", "rockMatrix", "snowMatrix", "grassMatrix", "blendMatrix", "world", "vLightPosition", "vLimits", "vClipPlane"],
                 ["groundSampler", "sandSampler", "rockSampler", "snowSampler", "grassSampler", "blendSampler"],
                 join);
         }
@@ -93,44 +89,44 @@
     WORLDMONGER.GroundMaterial.prototype.bind = function (world, mesh) {
         this._effect.setMatrix("world", world);
         this._effect.setMatrix("worldViewProjection", world.multiply(this._scene.getTransformMatrix()));        
-        this._effect.setVector3("vEyePosition", this._scene.activeCamera.position);
         this._effect.setVector3("vLightPosition", this.light.position);
 
         // Textures
         if (this.groundTexture) {
             this._effect.setTexture("groundSampler", this.groundTexture);
-            this._effect.setMatrix("groundMatrix", this.groundTexture._computeTextureMatrix());
+            this._effect.setMatrix("groundMatrix", this.groundTexture.getTextureMatrix());
         }
         
         if (this.sandTexture) {
             this._effect.setTexture("sandSampler", this.sandTexture);
-            this._effect.setMatrix("sandMatrix", this.sandTexture._computeTextureMatrix());
+            this._effect.setMatrix("sandMatrix", this.sandTexture.getTextureMatrix());
         }
         
         if (this.rockTexture) {
             this._effect.setTexture("rockSampler", this.rockTexture);
-            this._effect.setMatrix("rockMatrix", this.rockTexture._computeTextureMatrix());
+            this._effect.setMatrix("rockMatrix", this.rockTexture.getTextureMatrix());
         }
         
         if (this.snowTexture) {
             this._effect.setTexture("snowSampler", this.snowTexture);
-            this._effect.setMatrix("snowMatrix", this.snowTexture._computeTextureMatrix());
+            this._effect.setMatrix("snowMatrix", this.snowTexture.getTextureMatrix());
         }
         
         if (this.grassTexture) {
             this._effect.setTexture("grassSampler", this.grassTexture);
-            this._effect.setMatrix("grassMatrix", this.grassTexture._computeTextureMatrix());
+            this._effect.setMatrix("grassMatrix", this.grassTexture.getTextureMatrix());
         }
         
         if (this.blendTexture) {
             this._effect.setTexture("blendSampler", this.blendTexture);
-            this._effect.setMatrix("blendMatrix", this.blendTexture._computeTextureMatrix());
+            this._effect.setMatrix("blendMatrix", this.blendTexture.getTextureMatrix());
         }
         
         this._effect.setFloat3("vLimits", this.sandLimit, this.rockLimit, this.snowLimit);
         
-        if (BABYLON.clipPlane) {
-            this._effect.setFloat4("vClipPlane", BABYLON.clipPlane.normal.x, BABYLON.clipPlane.normal.y, BABYLON.clipPlane.normal.z, BABYLON.clipPlane.d);
+        if (this._scene.clipPlane) {
+            var clipPlane = this._scene.clipPlane;
+            this._effect.setFloat4("vClipPlane", clipPlane.normal.x, clipPlane.normal.y, clipPlane.normal.z, clipPlane.d);
         }
     };
     
@@ -155,6 +151,6 @@
             this.rockTexture.dispose();
         }
 
-        this.baseDispose();
+        BABYLON.Material.dispose(this);
     };
 })();

@@ -1,16 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Babylon.js - CYOS</title>
+    <script src="hand.minified-1.2.js"></script>
     <script src="../babylon.js"></script>
     <script src="index.js"></script>
     <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <link href="index.css" rel="stylesheet" />
-
 </head>
 <body>
     <div id="vertexShaderCode" class="hidden"></div>
     <div id="fragmentShaderCode" class="hidden"></div>
+    
+    <script type="application/shader" id="fresnelVertex">precision mediump float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+
+// Uniforms
+uniform mat4 world;
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec3 vPositionW;
+varying vec3 vNormalW;
+
+void main(void) {
+    vec4 outPosition = worldViewProjection * vec4(position, 1.0);
+    gl_Position = outPosition;
+    
+    vPositionW = vec3(world * vec4(position, 1.0));
+    vNormalW = normalize(vec3(world * vec4(normal, 0.0)));
+}
+    </script>
 
     <script type="application/shader" id="fresnelPixel">precision mediump float;
 
@@ -46,7 +69,6 @@ uniform mat4 worldViewProjection;
 // Varying
 varying vec4 vPosition;
 varying vec3 vNormal;
-varying vec2 vUV;
 
 void main() {
 
@@ -54,7 +76,6 @@ void main() {
 
     vPosition = p;
     vNormal = normal;
-    vUV = uv;
 
     gl_Position = worldViewProjection * p;
 
@@ -64,7 +85,6 @@ void main() {
 
 uniform mat4 worldView;
 
-varying vec2 vUV;
 varying vec4 vPosition;
 varying vec3 vNormal;
 
@@ -355,52 +375,64 @@ void main(void) {
     gl_FragColor = vec4(color, 1.);
 }</script>
 
-        <div id="shadersContainer">
-            <div class="row">
-                <div class="header">
-                    <div id="templateZone">
-                        Templates:
-                        <select id="templates">
-                            <option selected>Basic</option>
-                            <option>Black and white</option>
-                            <option>Cell shading</option>
-                            <option>Phong</option>
-                            <option>Discard</option>
-                            <option>Wave</option>
-                            <option>Spherical environment mapping</option>
-                            <option>Fresnel</option>
-                        </select>
-                        Meshes:
-                        <select id="meshes">
-                            <option selected>Sphere</option>
-                            <option>Torus</option>
-                            <option>Torus Knot</option>
-                            <option>Ground</option>
-                        </select>
-                    </div>
-                    <span class="headerTitle">VERTEX SHADER</span>
+    <div id="outerContainer">
+        <div id="subHeaderBackground">
+            <div id="templateDropdown" id="dropdownContainer">
+                <div class="dropdownLabel">Templates:</div>
+                <div class="dropdownSelectContainer">
+                    <select id="templates">
+                        <option>Basic</option>
+                        <option>Black and white</option>
+                        <option>Cell shading</option>
+                        <option>Phong</option>
+                        <option>Discard</option>
+                        <option>Wave</option>
+                        <option selected>Spherical environment mapping</option>
+                        <option>Fresnel</option>
+                    </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="shaderCode" id="vertexShaderEditor"></div>
-            </div>
-            <div class="row">
-                <div class="header"><span class="headerTitle">PIXEL(FRAGMENT) SHADER</span></div>
-            </div>
-            <div class="row">
-                <div class="shaderCode" id="fragmentShaderEditor"></div>
+           <div id="meshDropdown" id="dropdownContainer">
+               <div class="dropdownLabel">Meshes:</div>
+               <div class="dropdownSelectContainer">
+                   <select id="meshes">
+                        <option>Sphere</option>
+                        <option>Torus</option>
+                        <option selected>Torus Knot</option>
+                        <option>Ground</option>
+                   </select>
+               </div>
+           </div>    
+            <div id="buttons">
+                <div id="compileButton" class="circleButton" title="Compile"></div>
+                <div id="saveButton" class="circleButton" title="Save"></div>
             </div>
         </div>
-        <canvas id="renderCanvas"></canvas>
-        <table id="order">
-            <tr id="orderRow">
-                <td>
-                    <button id="compileButton">compile</button>
-                </td>
-                <td id="logCell">
-                    <div id="errorLog"></div>
-                </td>
-            </tr>
-        </table>
+        <div id="shadersContainer">
+            <div id="vertexRow" class="row">
+                <div class="rowHeader">
+                    <span class="headerTitle">PIXEL (FRAGMENT) SHADER</span>
+                </div>
+                <div class="rowEditor">
+                    <div class="shaderCode" id="fragmentShaderEditor"></div>
+                </div>
+            </div>
+            <div id="fragmentRow" class="row">
+                <div class="rowHeader">
+                    <span class="headerTitle">VERTEX SHADER</span>
+                </div>
+                <div class="rowEditor">
+                    <div class="shaderCode" id="vertexShaderEditor"></div>
+                </div>
+            </div>
+        </div>
+        <div id="renderContainer">
+            <div id="loading" class="hidden">Loading...</div>
+            <div id="renderCanvasContainer">
+                <canvas id="renderCanvas"></canvas>
+            </div>
+            <div id="errorLog"></div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Babylon.js sample code</title>
+    <!-- Babylon.js -->
+    <script src="http://www.babylonjs.com/hand.minified-1.2.js"></script>
+    <script src="http://www.babylonjs.com/cannon.js"></script>
+    <script src="http://www.babylonjs.com/babylon.js"></script>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script src="index.js"></script>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+        engine = new BABYLON.Engine(canvas, true);
+        var scene = new BABYLON.Scene(engine);
+
+        runScript(scene, canvas);
+
+        engine.runRenderLoop(function () {
+            scene.render();
+        });
+    </script>
+</body>
+</html>

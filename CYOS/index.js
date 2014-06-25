@@ -3,8 +3,9 @@
 (function () {
     document.addEventListener("DOMContentLoaded", start, false);
 
+    var snippetUrl = "http://babylonjs-api.azurewebsites.net/api/snippet";
     var engine;
-    var mesh;
+    var meshes = [];
     var scene;
     var shaderMaterial;
     var vertexEditor;
@@ -12,7 +13,6 @@
 
     function selectTemplate() {
         var select = document.getElementById("templates");
-        var meshesSelect = document.getElementById("meshes");
         var vertexId;
         var pixelId;
 
@@ -40,22 +40,20 @@
             case 5:
                 vertexId = "waveVertex";
                 pixelId = "phongPixel";
-                meshesSelect.selectedIndex = 0;
-                selectMesh();
                 break;
             case 6:
                 vertexId = "semVertex";
                 pixelId = "semPixel";
-                meshesSelect.selectedIndex = 2;
-                selectMesh();
                 break;
             case 7:
-                vertexId = "cellShadingVertex";
+                vertexId = "fresnelVertex";
                 pixelId = "fresnelPixel";
-                meshesSelect.selectedIndex = 2;
-                selectMesh();
                 break;
+            default:
+                return;
         }
+
+        location.hash = "";
 
         vertexEditor.setValue(BABYLON.Tools.GetDOMTextContent(document.getElementById(vertexId)));
         vertexEditor.gotoLine(0);
@@ -68,32 +66,110 @@
     function selectMesh() {
         var select = document.getElementById("meshes");
 
-        if (mesh) {
+        for (var index = 0; index < meshes.length; index++) {
+            var mesh = meshes[index];
             mesh.dispose();
         }
+        meshes = [];
 
         switch (select.selectedIndex) {
             case 0:
                 // Creating sphere
-                mesh = BABYLON.Mesh.CreateSphere("mesh", 16, 5, scene);
+                meshes.push(BABYLON.Mesh.CreateSphere("mesh", 16, 5, scene));
                 break;
             case 1:
                 // Creating Torus
-                mesh = BABYLON.Mesh.CreateTorus("mesh", 5, 1, 32, scene);
+                meshes.push(BABYLON.Mesh.CreateTorus("mesh", 5, 1, 32, scene));
                 break;
             case 2:
                 // Creating Torus knot
-                mesh = BABYLON.Mesh.CreateTorusKnot("mesh", 2, 0.5, 128, 64, 2, 3, scene);
+                meshes.push(BABYLON.Mesh.CreateTorusKnot("mesh", 2, 0.5, 128, 64, 2, 3, scene));
                 break;
             case 3:
-                mesh = BABYLON.Mesh.CreateGroundFromHeightMap("mesh", "heightMap.png", 8, 8, 100, 0, 3, scene, false);
+                meshes.push(BABYLON.Mesh.CreateGroundFromHeightMap("mesh", "heightMap.png", 8, 8, 100, 0, 3, scene, false));
                 break;
+            case 4:
+                document.getElementById("loading").className = "";
+                BABYLON.SceneLoader.ImportMesh("", "", "schooner.babylon", scene, function (newMeshes) {
+                    for (index = 0; index < newMeshes.length; index++) {
+                        mesh = newMeshes[index];
+                        mesh.material = shaderMaterial;
+                        meshes.push(mesh);
+                    }
+
+                    document.getElementById("loading").className = "hidden";
+                });
+                return;
         }
 
-        mesh.material = shaderMaterial;
+
+        for (index = 0; index < meshes.length; index++) {
+            mesh = meshes[index];
+            mesh.material = shaderMaterial;
+        }
     };
 
+    var currentSnippetToken;
+    var previousHash = "";
+
+    var checkHash = function() {
+        if (location.hash) {
+            if (previousHash != location.hash) {
+                cleanHash();
+
+                previousHash = location.hash;
+
+                try {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function () {
+                        if (xmlHttp.readyState == 4) {
+                            if (xmlHttp.status == 200) {
+                                document.getElementById("templates").value = "";
+
+                                var snippet = JSON.parse(xmlHttp.responseText);
+
+                                vertexEditor.setValue(snippet.vertexShader);
+                                vertexEditor.gotoLine(0);
+
+                                pixelEditor.setValue(snippet.pixelShader);
+                                pixelEditor.gotoLine(0);
+
+                                compile();
+                            }
+                        }
+                    }
+
+                    var hash = location.hash.substr(1);
+                    currentSnippetToken = hash.split("#")[0];
+                    xmlHttp.open("GET", snippetUrl + "/" + hash.replace("#", "/"));
+                    xmlHttp.send();
+                } catch (e) {
+
+                }
+            }
+        }
+
+        setTimeout(checkHash, 200);
+    }
+
+    var cleanHash = function () {
+        var splits = decodeURIComponent(location.hash.substr(1)).split("#");
+
+        if (splits.length > 2) {
+            splits.splice(2, splits.length - 2);
+        }
+
+        location.hash = splits.join("#");
+    }
+
+
+
     function start() {
+        effectiveStart();
+        checkHash();
+    }
+
+    function effectiveStart() {
         // Editors
         vertexEditor = ace.edit("vertexShaderEditor");
         vertexEditor.setTheme("ace/theme/chrome");
@@ -110,24 +186,57 @@
         document.getElementById("meshes").addEventListener("change", selectMesh, false);
         document.getElementById("compileButton").addEventListener("click", compile, false);
 
-        // Babylon.js
+        var saveFunction = function () {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
+                    var baseUrl = location.href.replace(location.hash, "");
+                    var snippet = JSON.parse(xmlHttp.responseText);
+                    var newUrl = baseUrl + "#" + snippet.id;
+                    currentSnippetToken = snippet.id;
+                    if (snippet.version != "0") {
+                        newUrl += "#" + snippet.version;
+                    }
+                    location.href = newUrl;
+                    compile();
+                }
+            }
 
+            xmlHttp.open("POST", snippetUrl + (currentSnippetToken ? "/" + currentSnippetToken : ""), true);
+            xmlHttp.setRequestHeader("Content-Type", "application/json");
+
+            var payload = {
+                vertexShader: vertexEditor.getValue(),
+                pixelShader: pixelEditor.getValue()
+            };
+
+            xmlHttp.send(JSON.stringify(payload));
+        }
+
+        // Save button
+        document.getElementById("saveButton").addEventListener("click", function () {
+            saveFunction();
+        });
+
+        // Babylon.js
         if (BABYLON.Engine.isSupported()) {
             var canvas = document.getElementById("renderCanvas");
-            engine = new BABYLON.Engine(canvas, false);
+            engine = new BABYLON.Engine(canvas, true);
             scene = new BABYLON.Scene(engine);
             var camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 12, BABYLON.Vector3.Zero(), scene);
 
             camera.attachControl(canvas, false);
-            camera.lowerRadiusLimit = camera.upperRadiusLimit = 12;
+            camera.lowerRadiusLimit = 10;
+            camera.minZ = 1.0;
 
             selectMesh();
-            selectTemplate();
+
+            if (!location.hash) {
+                selectTemplate(true);
+            }
 
             var time = 0;
             engine.runRenderLoop(function () {
-                mesh.rotation.y += 0.001;
-
                 if (shaderMaterial) {
                     shaderMaterial.setFloat("time", time);
                     time += 0.02;
@@ -168,15 +277,18 @@
         refTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
         refTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
 
-        var amigaTexture = new BABYLON.Texture("amiga.jpg", scene);
+        var mainTexture = new BABYLON.Texture("amiga.jpg", scene);
 
-        shaderMaterial.setTexture("textureSampler", amigaTexture);
+        shaderMaterial.setTexture("textureSampler", mainTexture);
         shaderMaterial.setTexture("refSampler", refTexture);
         shaderMaterial.setFloat("time", 0);
         shaderMaterial.setVector3("cameraPosition", BABYLON.Vector3.Zero());
         shaderMaterial.backFaceCulling = false;
 
-        mesh.material = shaderMaterial;
+        for (var index = 0; index < meshes.length; index++) {
+            var mesh = meshes[index];
+            mesh.material = shaderMaterial;
+        }
 
         shaderMaterial.onCompiled = function () {
             document.getElementById("errorLog").innerHTML = "<span>" + new Date().toLocaleTimeString() + ": Shaders compiled successfully</span><BR>" + document.getElementById("errorLog").innerHTML;

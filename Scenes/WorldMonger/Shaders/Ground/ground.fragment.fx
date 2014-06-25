@@ -2,7 +2,6 @@
 precision mediump float;
 #endif
 
-uniform vec3 vEyePosition;
 uniform vec3 vLimits;
 uniform vec3 vLightPosition;
 
@@ -44,18 +43,11 @@ void main(void) {
 		discard;
 #endif
 
-	vec3 viewDirectionW = normalize(vEyePosition - vPositionW);
-
 	// Light
 	vec3 lightVectorW = normalize(vLightPosition - vPositionW);
 
 	// diffuse
 	float ndl = max(0., dot(vNormalW, lightVectorW));
-
-	//// Specular
-	//vec3 angleW = normalize(viewDirectionW + lightVectorW);
-	//float specComp = dot(normalize(vNormalW), angleW);
-	//specComp = pow(specComp, 256.) * 0.8;
 
 	// Final composition
 	vec3 finalColor = vec3(0., 0., 0.);

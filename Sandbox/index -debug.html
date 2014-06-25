@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html manifest="babylon.cache">
+<head>
+    <title>BabylonJS - Sandbox</title>
+    <link href="index.css" rel="stylesheet" />
+    <script src="../hand.minified-1.2.js"></script>
+    <script src="../cannon.js"></script>
+    <script src="../Babylon/Math/babylon.math.js"></script>
+    <script src="../Babylon/Tools/babylon.database.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.tga.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.dds.js"></script>
+    <script src="../Babylon/Tools/babylon.smartArray.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.js"></script>
+    <script src="../Babylon/babylon.engine.js"></script>
+    <script src="../Babylon/babylon.node.js"></script>
+    <script src="../Babylon/Tools/babylon.filesInput.js"></script>
+    <script src="../Babylon/Collisions/babylon.pickingInfo.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingSphere.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingBox.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingInfo.js"></script>
+    <script src="../Babylon/Mesh/babylon.abstractMesh.js"></script>
+    <script src="../Babylon/Lights/babylon.light.js"></script>
+    <script src="../Babylon/Lights/babylon.pointLight.js"></script>
+    <script src="../Babylon/Lights/babylon.spotLight.js"></script>
+    <script src="../Babylon/Lights/babylon.hemisphericLight.js"></script>
+    <script src="../Babylon/Lights/babylon.directionalLight.js"></script>
+    <script src="../Babylon/Lights/Shadows/babylon.shadowGenerator.js"></script>
+    <script src="../Babylon/Collisions/babylon.collider.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.inputController.js"></script>
+    <script src="../Babylon/Cameras/babylon.camera.js"></script>
+    <script src="../Babylon/Cameras/babylon.freeCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.touchCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.arcRotateCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.deviceOrientationCamera.js"></script>
+    <script src="../Babylon/Rendering/babylon.renderingManager.js"></script>
+    <script src="../Babylon/Rendering/babylon.renderingGroup.js"></script>
+    <script src="../Babylon/babylon.scene.js"></script>
+    <script src="../Babylon/Mesh/babylon.vertexBuffer.js"></script>
+    <script src="../Babylon/Mesh/babylon.InstancedMesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.mesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.groundMesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.subMesh.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.baseTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.texture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.cubeTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.renderTargetTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.mirrorTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.dynamicTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.videoTexture.js"></script>
+    <script src="../Babylon/Materials/babylon.effect.js"></script>
+    <script src="../Babylon/Materials/babylon.material.js"></script>
+    <script src="../Babylon/Materials/babylon.standardMaterial.js"></script>
+    <script src="../Babylon/Materials/babylon.multiMaterial.js"></script>
+    <script src="../Babylon/Loading/babylon.sceneLoader.js"></script>
+    <script src="../Babylon/Loading/Plugins/babylon.babylonFileLoader.js"></script>
+    <script src="../Babylon/Sprites/babylon.spriteManager.js"></script>
+    <script src="../Babylon/Sprites/babylon.sprite.js"></script>
+    <script src="../Babylon/Layer/babylon.layer.js"></script>
+    <script src="../Babylon/Particles/babylon.particle.js"></script>
+    <script src="../Babylon/Particles/babylon.particleSystem.js"></script>
+    <script src="../Babylon/Animations/babylon.animation.js"></script>
+    <script src="../Babylon/Animations/babylon.animatable.js"></script>
+    <script src="../Babylon/Culling/Octrees/babylon.octree.js"></script>
+    <script src="../Babylon/Culling/Octrees/babylon.octreeBlock.js"></script>
+    <script src="../Babylon/Bones/babylon.bone.js"></script>
+    <script src="../Babylon/Bones/babylon.skeleton.js"></script>
+    <script src="../Babylon/Bones/babylon.skeleton.js"></script>
+    <script src="../Babylon/PostProcess/babylon.postProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.postProcessManager.js"></script>
+    <script src="../Babylon/PostProcess/babylon.passPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.blurPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.refractionPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.blackAndWhitePostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.convolutionPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.filterPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.fxaaPostProcess.js"></script>
+    <script src="../Babylon/LensFlare/babylon.lensFlare.js"></script>
+    <script src="../Babylon/LensFlare/babylon.lensFlareSystem.js"></script>
+    <script src="../Babylon/Physics/Plugins/babylon.cannonJSPlugin.js"></script>
+    <script src="../Babylon/Physics/babylon.physicsEngine.js"></script>
+    <script src="../Babylon/Tools/babylon.sceneSerializer.js"></script>
+    <script src="../Babylon/Mesh/babylon.csg.js"></script>
+    <script src="../Babylon/PostProcess/babylon.oculusDistortionCorrectionPostProcess.js"></script>
+    <script src="../Babylon/Tools/babylon.virtualJoystick.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.oculusController.js"></script>
+    <script src="../Babylon/Cameras/babylon.oculusOrientedCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.virtualJoysticksCamera.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.keyboardMoveController.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.inputCollisionFilter.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.gravityInputController.js"></script>
+    <script src="../Babylon/Cameras/Controllers/babylon.globalAxisFactorsFilter.js"></script>
+    <script src="../Babylon/Materials/babylon.shaderMaterial.js"></script>
+    <script src="../Babylon/Mesh/babylon.mesh.vertexData.js"></script>
+    <script src="../Babylon/Cameras/babylon.anaglyphCamera.js"></script>
+    <script src="../Babylon/PostProcess/babylon.anaglyphPostProcess.js"></script>
+    <script src="../Babylon/Tools/babylon.tags.js"></script>
+    <script src="../Babylon/Tools/babylon.andOrNotEvaluator.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPass.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderEffect.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPipeline.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPipelineManager.js"></script>
+    <script src="../Babylon/PostProcess/babylon.displayPassPostProcess.js"></script>
+    <script src="../Babylon/Rendering/babylon.boundingBoxRenderer.js"></script>
+    <script src="../Babylon/Actions/babylon.condition.js"></script>
+    <script src="../Babylon/Actions/babylon.action.js"></script>
+    <script src="../Babylon/Actions/babylon.actionManager.js"></script>
+    <script src="../Babylon/Actions/babylon.interpolateValueAction.js"></script>
+    <script src="../Babylon/Actions/babylon.directActions.js"></script>
+    <script src="../Babylon/Mesh/babylon.geometry.js"></script>
+    <script src="../Babylon/Tools/babylon.gamepads.js"></script>
+    <script src="../Babylon/Cameras/babylon.gamepadCamera.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="logo">
+    </div>
+    <div id="help01" class="help">
+        <span class="helpText">Press this button to open your assets' files</span>
+        <img id="helpArrow" src="./Assets/FlecheTuto.png" />
+    </div>
+    <div id="help02" class="help2">
+        <span class="helpText">Or directly drag'n'drop your files in the browser</span>
+    </div>
+    <div id="perf" class="perffooter">
+        <div class="footerLeft">
+            <div id="miscCounters"></div>
+        </div>
+        <div class="footerRight">
+            <div id="fps"></div>
+            <img id="btnDownArrow" src="./Assets/FlecheDown.png" />
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerLeft">
+            Powered by <a href="http://www.babylonjs.com/" target="_blank">Babylon.js</a><br />
+        </div>
+        <div class="footerRight">
+            <ul>
+                <li id="btnFullscreen">
+                    <img src="./Assets/BtnFullscreen.png" alt="Switch the scene to full screen" title="Switch the scene to full screen" />
+                </li>
+                <li id="btnPerf">
+                    <img src="./Assets/BtnPerf.png" alt="Display performance dashboard" title="Display performance dashboard" />
+                </li>
+                <li id="btnFiles">
+                    <div class="custom-upload" title="Open your .babylon scene from your hard drive">
+                        <input type="file" id="files" multiple />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="loadingText" class="loadingText"></div>
+</body>
+</html>

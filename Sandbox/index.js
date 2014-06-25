@@ -77,7 +77,9 @@ function startGame() {
         filesInput = new BABYLON.FilesInput(engine, null, canvas, sceneLoaded, progressCallback, additionnalRenderLoopLogic, textureLoadingCallback, startingProcessingFilesCallback);
         filesInput.monitorElementForDragNDrop(canvas);
 
-        htmlInput.addEventListener('change', filesInput.loadFiles, false);
+        htmlInput.addEventListener('change', function (event) {
+            filesInput.loadFiles(event);
+        }, false);
         btnFullScreen.addEventListener('click', function () {
             engine.switchFullscreen(true);
         }, false);

@@ -1,8 +1,11 @@
 ﻿var CreatePhysicsScene = function (engine) {
     var scene = new BABYLON.Scene(engine);
+    scene.clearColor = BABYLON.Color3.Purple();
+
     var camera = new BABYLON.FreeCamera("Camera", new BABYLON.Vector3(0, 0, -20), scene);
     camera.checkCollisions = true;
     camera.applyGravity = true;
+    camera.setTarget(new BABYLON.Vector3(0, 0, 0));
 
     var light = new BABYLON.DirectionalLight("dir02", new BABYLON.Vector3(0.2, -1, 0), scene);
     light.position = new BABYLON.Vector3(0, 80, 0);
@@ -23,7 +26,7 @@
     shadowGenerator.getShadowMap().renderList.push(box0);
 
     // Physics
-    scene.enablePhysics();
+    scene.enablePhysics(null, new BABYLON.CannonJSPlugin());
 
     // Spheres
     var y = 0;
@@ -35,7 +38,7 @@
 
         shadowGenerator.getShadowMap().renderList.push(sphere);
 
-        sphere.setPhysicsState({ impostor: BABYLON.PhysicsEngine.SphereImpostor, mass: 1 });
+        sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
 
         y += 2;
     }
@@ -50,7 +53,7 @@
 
         shadowGenerator.getShadowMap().renderList.push(sphere);
 
-        sphere.setPhysicsState({ impostor: BABYLON.PhysicsEngine.SphereImpostor, mass: 1 });
+        sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
     }
 
     for (var index = 0; index < 10; index++) {
@@ -111,11 +114,10 @@
     border3.position.z = -50.0;
     border3.checkCollisions = true;
 
-    camera.setTarget(new BABYLON.Vector3(0, 0, 0));
-
     var groundMat = new BABYLON.StandardMaterial("groundMat", scene);
     groundMat.diffuseColor = new BABYLON.Color3(0.5, 0.5, 0.5);
     groundMat.emissiveColor = new BABYLON.Color3(0.2, 0.2, 0.2);
+    groundMat.backFaceCulling = false;
     ground.material = groundMat;
     border0.material = groundMat;
     border1.material = groundMat;
@@ -124,12 +126,12 @@
     ground.receiveShadows = true;
 
     // Physics
-    box0.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 2, friction: 0.4, restitution: 0.3 });
-    ground.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 0, friction: 0.5, restitution: 0.7 });
-    border0.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 0 });
-    border1.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 0 });
-    border2.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 0 });
-    border3.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, mass: 0 });
+    box0.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 2, friction: 0.4, restitution: 0.3 });
+    ground.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0, friction: 0.5, restitution: 0.7 });
+    border0.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
+    border1.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
+    border2.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
+    border3.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
 
     scene.createCompoundImpostor({
         mass: 2, friction: 0.4, restitution: 0.3, parts: [
