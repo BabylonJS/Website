@@ -17,9 +17,9 @@
     var snippetUrl = "http://babylonjs-api.azurewebsites.net/api/snippet";
     var currentSnippetToken;
     var engine;
-    var scene;
     var fpsLabel = document.getElementById("fpsLabel");
     var scripts;
+    var zipCode;
     BABYLON.Engine.ShadersRepository = "/Babylon/Shaders/";
 
     var loadScript = function (scriptURL, title) {
@@ -46,7 +46,11 @@
     };
 
     var loadScriptFromIndex = function (index) {
-        var script = scripts[index].trim();
+        if (index == 0) {
+            index = 1;
+        }
+
+        var script = scripts[index - 1].trim();
         loadScript("scripts/" + script + ".js", script);
     }
 
@@ -70,8 +74,8 @@
                         var a = document.createElement("a");
 
                         a.href = "#";
-                        a.innerHTML = index + " - " + scripts[index];
-                        a.scriptLinkIndex = index;
+                        a.innerHTML = (index + 1) + " - " + scripts[index];
+                        a.scriptLinkIndex = index + 1;
                         a.onclick = onScriptClick;
 
                         li.appendChild(a);
@@ -106,9 +110,18 @@
     var createNewScript = function () {
         location.hash = "";
         currentSnippetToken = null;
-        jsEditor.setValue('// You can reference the following variables: scene, canvas\r\n// You must at least define a camera\r\nvar camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 12, BABYLON.Vector3.Zero(), scene);\r\ncamera.attachControl(canvas, false);');
-        jsEditor.gotoLine(0);
+        jsEditor.setValue('// You have to create a function called createScene. This function must return a BABYLON.Scene object\r\n// You can reference the following variables: scene, canvas\r\n// You must at least define a camera\r\n// More info here: https://github.com/BabylonJS/Babylon.js/wiki/The-Playground\r\n\r\nvar createScene = function() {\r\n\tvar scene = new BABYLON.Scene(engine);\r\n\tvar camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 12, BABYLON.Vector3.Zero(), scene);\r\n\tcamera.attachControl(canvas, false);\r\n\r\n\r\n\r\n\treturn scene;\r\n};');
+        jsEditor.gotoLine(11);
+        jsEditor.focus();
         compileAndRun();
+    }
+
+    var clear = function () {
+        location.hash = "";
+        currentSnippetToken = null;
+        jsEditor.setValue('');
+        jsEditor.gotoLine(0);
+        jsEditor.focus();
     }
 
     var showError = function (errorMessage) {
@@ -133,11 +146,15 @@
 
             var canvas = document.getElementById("renderCanvas");
             engine = new BABYLON.Engine(canvas, true);
-            scene = new BABYLON.Scene(engine);
 
             document.getElementById("statusBar").innerHTML = "Loading assets...Please wait";
 
             engine.runRenderLoop(function () {
+                if (engine.scenes.length == 0) {
+                    return;
+                }
+                var scene = engine.scenes[0];
+
                 if (scene.activeCamera || scene.activeCameras.length > 0) {
                     scene.render();
                 }
@@ -145,20 +162,63 @@
                 fpsLabel.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
             });
 
-            eval("runScript = function(scene, canvas) {" + jsEditor.getValue() + "}");
-            runScript(scene, canvas);
+            var code = jsEditor.getValue();
+            
+            if (code.indexOf("createScene") !== -1) { // createScene
+                eval(code);
+                var scene = createScene();
 
-            if (scene.activeCamera == null) {
-                showError("You must at least create a camera.");
+                if (!scene) {
+                    showError("createScene function must return a scene.");
+                    return;
+                }
+
+                zipCode = code + "\r\n\r\nvar scene = createScene();";
+            } else if (code.indexOf("CreateScene") !== -1) { // CreateScene
+                eval(code);
+                var scene = CreateScene();
+
+                if (!scene) {
+                    showError("CreateScene function must return a scene.");
+                    return;
+                }
+
+                zipCode = code + "\r\n\r\nvar scene = CreateScene();";
+            } else if (code.indexOf("createscene") !== -1) { // createscene
+                eval(code);
+                var scene = createscene();
+
+                if (!scene) {
+                    showError("createscene function must return a scene.");
+                    return;
+                }
+
+                zipCode = code + "\r\n\r\nvar scene = createscene();";
+            } else { // Direct code
+                var scene = new BABYLON.Scene(engine);
+                eval("runScript = function(scene, canvas) {" + code + "}");
+                runScript(scene, canvas);
+
+                zipCode = "var scene = new BABYLON.Scene(engine);\r\n\r\n" + code;
             }
+
+            if (engine.scenes.length == 0) {
+                showError("You must at least create a scene.");
+                return;
+            }
+
+            if (engine.scenes[0].activeCamera == null) {
+                showError("You must at least create a camera.");
+                return;
+            }
+
+            engine.scenes[0].executeWhenReady(function () {
+                document.getElementById("statusBar").innerHTML = "";
+            });
 
         } catch (e) {
             showError(e.message);
         }
-
-        scene.executeWhenReady(function () {
-            document.getElementById("statusBar").innerHTML = "";
-        });
     }
 
     window.addEventListener("resize", function () {
@@ -171,7 +231,7 @@
     loadScriptsList();
 
     // Zip
-    var addContentToZip = function (zip, name, url, buffer, then) {
+    var addContentToZip = function (zip, name, url, replace, buffer, then) {
         var xhr = new XMLHttpRequest();
 
         xhr.open('GET', url, true);
@@ -183,7 +243,22 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
-                    zip.file(name, buffer ? xhr.response : xhr.responseText);
+                    var text;
+                    if (!buffer) {
+                        if (replace) {
+                            var splits = replace.split("\r\n");
+                            for (var index = 0; index < splits.length; index++) {
+                                splits[index] = "        " + splits[index];
+                            }
+                            replace = splits.join("\r\n");
+
+                            text = xhr.responseText.replace("####INJECT####", replace);
+                        } else {
+                            text = xhr.responseText;
+                        }
+                    }
+
+                    zip.file(name, buffer ? xhr.response : text);
 
                     then();
                 } else { // Failed
@@ -194,15 +269,28 @@
         xhr.send(null);
     }
 
-    var addTexturesToZip = function (index, textures, folder, then) {
+    var addTexturesToZip = function (zip, index, textures, folder, then) {
         if (index == textures.length) {
             then();
             return;
         }
 
-        if (textures[index].isRenderTarget) {
-            addTexturesToZip(index + 1, textures, folder, then);
+        if (textures[index].isRenderTarget || textures[index] instanceof BABYLON.DynamicTexture) {
+            addTexturesToZip(zip, index + 1, textures, folder, then);
             return;
+        }
+
+        if (textures[index].isCube) {
+            for (var i = 0; i < 6; i++) {
+                textures.push({ name: textures[index].name + textures[index]._extensions[i] });
+            }
+            addTexturesToZip(zip, index + 1, textures, folder, then);
+            return;
+        }
+
+
+        if (folder == null) {
+            folder = zip.folder("textures");
         }
 
         var name;
@@ -216,15 +304,20 @@
 
         name = url.substr(url.lastIndexOf("/") + 1);
 
-        addContentToZip(folder, name, url, true, function () {
-            addTexturesToZip(index + 1, textures, folder, then);
+
+        addContentToZip(folder, name, url, null, true, function () {
+            addTexturesToZip(zip, index + 1, textures, folder, then);
         });
     }
 
-    var addImportedFilesToZip = function (index, importedFiles, folder, then) {
+    var addImportedFilesToZip = function (zip, index, importedFiles, folder, then) {
         if (index == importedFiles.length) {
             then();
             return;
+        }
+
+        if (!folder) {
+            folder = zip.folder("scenes");
         }
 
         var name;
@@ -232,13 +325,19 @@
 
         name = url.substr(url.lastIndexOf("/") + 1);
 
-        addContentToZip(folder, name, url, true, function () {
-            addImportedFilesToZip(index + 1, importedFiles, folder, then);
+        addContentToZip(folder, name, url, null, true, function () {
+            addImportedFilesToZip(zip, index + 1, importedFiles, folder, then);
         });
     }
 
     var getZip = function () {
+        if (engine.scenes.length == 0) {
+            return;
+        }
+
         var zip = new JSZip();
+
+        var scene = engine.scenes[0];
 
         var textures = scene.textures;
 
@@ -246,20 +345,16 @@
 
         document.getElementById("statusBar").innerHTML = "Creating archive...Please wait";
 
-        addContentToZip(zip, "index.html", "zipContent/index.html", false, function () {
-            addContentToZip(zip, "index.css", "zipContent/index.css", false, function () {
-                zip.file("index.js", "runScript = function(scene, canvas) {\r\n" + jsEditor.getValue() + "\r\n}");
+        if (zipCode.indexOf("textures/worldHeightMap.jpg") !== -1) {
+            textures.push({ name: "textures/worldHeightMap.jpg" });
+        }        
 
-                var texturesFolder = zip.folder("textures");
-                addTexturesToZip(0, textures, texturesFolder, function () {
-
-                    var scenesFolder = zip.folder("scenes");
-                    addImportedFilesToZip(0, importedFiles, scenesFolder, function () {
-
-                        var blob = zip.generate({ type: "blob" });
-                        saveAs(blob, "sample.zip");
-                        document.getElementById("statusBar").innerHTML = "";
-                    });
+        addContentToZip(zip, "index.html", "zipContent/index.html", zipCode, false, function () {
+            addTexturesToZip(zip, 0, textures, null, function () {
+                addImportedFilesToZip(zip, 0, importedFiles, null, function () {
+                    var blob = zip.generate({ type: "blob" });
+                    saveAs(blob, "sample.zip");
+                    document.getElementById("statusBar").innerHTML = "";
                 });
             });
         });
@@ -283,21 +378,26 @@
     document.getElementById("zipButton").addEventListener("click", getZip);
     document.getElementById("fullscreenButton").addEventListener("click", goFullscreen);
     document.getElementById("newButton").addEventListener("click", createNewScript);
+    document.getElementById("clearButton").addEventListener("click", clear);
 
     // Snippet
     var save = function () {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
-                var baseUrl = location.href.replace(location.hash, "");
-                var snippet = JSON.parse(xmlHttp.responseText);
-                var newUrl = baseUrl + "#" + snippet.id;
-                currentSnippetToken = snippet.id;
-                if (snippet.version != "0") {
-                    newUrl += "#" + snippet.version;
+            if (xmlHttp.readyState == 4) {
+                if (xmlHttp.status == 201) {
+                    var baseUrl = location.href.replace(location.hash, "").replace(location.search, "");
+                    var snippet = JSON.parse(xmlHttp.responseText);
+                    var newUrl = baseUrl + "#" + snippet.id;
+                    currentSnippetToken = snippet.id;
+                    if (snippet.version != "0") {
+                        newUrl += "#" + snippet.version;
+                    }
+                    location.href = newUrl;
+                    compileAndRun();
+                } else {
+                    showError("Unable to save your code. It may be too long.");
                 }
-                location.href = newUrl;
-                compileAndRun();
             }
         }
 

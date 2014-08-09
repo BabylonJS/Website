@@ -184,13 +184,17 @@ button {
 }
 
 #aboutLink {
+    cursor: pointer;
+}
+
+#tryItLink {
     position: absolute;
     top: 70px;
     right: 360px;
     z-index: 1;
 }
 
-#aboutText {
+#tryItText {
     position: absolute;
     top: 110px;
     right: 460px;

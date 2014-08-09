@@ -30,7 +30,10 @@ var onload = function () {
     // Demos
     var demos = [
         {
-            title: "ACP", url: "http://race.assassinscreedpirates.com/", screenshot: "ACP.jpg", size: "Assassin's Creed Pirates<BR>by Ubisoft", big: true, incremental: false
+            title: "V8 ENGINE", scene: "V8", screenshot: "V8.jpg", size: "15 MB", big: true, incremental: false, anchor: "V8"
+        },
+        {
+            title: "ACP", url: "http://race.assassinscreedpirates.com/", screenshot: "ACP.jpg", size: "Assassin's Creed Pirates<BR>by Ubisoft"
         },
         {
             title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", incremental: true, onload: function () {
@@ -77,9 +80,11 @@ var onload = function () {
             }
         },
         { title: "WORLDMONGER", url: "Scenes/Worldmonger/index.html", screenshot: "worldmonger.jpg", size: "8.5 MB" },
-        { title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", onload: function() {
-            scene.getMeshByName("Labels").setEnabled(false);
-        }},
+        {
+            title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", onload: function () {
+                scene.getMeshByName("Labels").setEnabled(false);
+            }
+        },
 
         {
             title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", incremental: true, onload: function () {
@@ -114,22 +119,25 @@ var onload = function () {
 
     var oculusProcessing = function () {
         var originCamera = scene.activeCamera;
-        scene.activeCamera = null;
-        scene.activeCameras = [];
         scene.autoClear = true;
-        BABYLON.OculusOrientedCamera.BuildOculusStereoCamera(scene, "Oculus", originCamera.minZ, originCamera.maxZ, originCamera.position,
-            { yaw: 3, pitch: 0, roll: 0 }, true, true, true);
+
+        scene.activeCamera = new BABYLON.OculusCamera("Oculus", originCamera.position, scene);
+        scene.activeCamera.minZ = originCamera.minZ;
+        scene.activeCamera.maxZ = originCamera.maxZ;
+        scene.activeCamera.gravity = originCamera.gravity;
+        scene.activeCamera.checkCollisions = false;
+        scene.activeCamera.applyGravity = false;
+        scene.activeCamera.attachControl(canvas);
+        scene.activeCamera.speed = originCamera.speed;
+        scene.activeCamera.rotation.copyFrom(originCamera.rotation);
+
         hideAllUI();
     };
 
     var oculusProcessingWithCollisionsAndGravity = function () {
-        var originCamera = scene.activeCamera;
-        scene.activeCamera = null;
-        scene.activeCameras = [];
-        scene.autoClear = true;
-        BABYLON.OculusOrientedCamera.BuildOculusStereoCamera(scene, "Oculus", originCamera.minZ, originCamera.maxZ, originCamera.position,
-            { yaw: 3, pitch: 0, roll: 0 }, true, false, false, originCamera.ellipsoid);
-        hideAllUI();
+        oculusProcessing();
+        scene.activeCamera.checkCollisions = true;
+        scene.activeCamera.applyGravity = true;
     };
 
     var oculusTests = [
@@ -140,7 +148,7 @@ var onload = function () {
             title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", anchor: "OCC1", onload: oculusProcessingWithCollisionsAndGravity
         },
         {
-            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", anchor: "OCC2", onload: oculusProcessingWithCollisionsAndGravity, incremental:true
+            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", anchor: "OCC2", onload: oculusProcessingWithCollisionsAndGravity, incremental: true
         },
         {
             title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", size: "28 MB", anchor: "OCC3", onload: oculusProcessingWithCollisionsAndGravity
@@ -151,6 +159,8 @@ var onload = function () {
     ];
 
     var tests = [
+        { title: "DRAG'N'DROP", id: 21, screenshot: "dragdrop.jpg", size: "1 MB", anchor: "DRAGNDROP" },
+        { title: "LINES", id: 20, screenshot: "lines.jpg", size: "1 MB", anchor: "LINES" },
         { title: "INSTANCES", id: 18, screenshot: "instances.jpg", size: "1 MB", anchor: "INSTANCES" },
         { title: "ACTIONS", id: 17, screenshot: "actions.jpg", size: "1 MB", anchor: "ACTIONS" },
         { title: "PARTICLES", id: 19, screenshot: "particles.jpg", size: "1 MB", anchor: "PARTICLES" },
@@ -353,7 +363,7 @@ var onload = function () {
     var scene;
 
     var previousPickedMesh;
-    var onPointerDown = function(evt, pickResult) {
+    var onPointerDown = function (evt, pickResult) {
         if (!panelIsClosed) {
             panelIsClosed = true;
             controlPanel.style.webkitTransform = "translateY(250px)";
@@ -518,6 +528,12 @@ var onload = function () {
                         break;
                     case 19:
                         newScene = CreateParticlesTestScene(engine);
+                        break;
+                    case 20:
+                        newScene = CreateLinesTestScene(engine);
+                        break;
+                    case 21:
+                        newScene = CreateDragDropTestScene(engine);
                         break;
                 }
                 scene = newScene;

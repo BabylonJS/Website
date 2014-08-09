@@ -12,6 +12,7 @@
     <!-- Babylon.js -->
     <script src="../hand.minified-1.2.js"></script>
     <script src="../cannon.js"></script>
+    <script src="../Oimo.js"></script>
     <script src="../Babylon/Math/babylon.math.js"></script>
     <script src="../Babylon/Tools/babylon.database.js"></script>
     <script src="../Babylon/Tools/babylon.tools.tga.js"></script>
@@ -33,7 +34,6 @@
     <script src="../Babylon/Lights/babylon.directionalLight.js"></script>
     <script src="../Babylon/Lights/Shadows/babylon.shadowGenerator.js"></script>
     <script src="../Babylon/Collisions/babylon.collider.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.inputController.js"></script>
     <script src="../Babylon/Cameras/babylon.camera.js"></script>
     <script src="../Babylon/Cameras/babylon.freeCamera.js"></script>
     <script src="../Babylon/Cameras/babylon.touchCamera.js"></script>
@@ -89,13 +89,8 @@
     <script src="../Babylon/Mesh/babylon.csg.js"></script>
     <script src="../Babylon/PostProcess/babylon.oculusDistortionCorrectionPostProcess.js"></script>
     <script src="../Babylon/Tools/babylon.virtualJoystick.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.oculusController.js"></script>
-    <script src="../Babylon/Cameras/babylon.oculusOrientedCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.oculusCamera.js"></script>
     <script src="../Babylon/Cameras/babylon.virtualJoysticksCamera.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.keyboardMoveController.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.inputCollisionFilter.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.gravityInputController.js"></script>
-    <script src="../Babylon/Cameras/Controllers/babylon.globalAxisFactorsFilter.js"></script>
     <script src="../Babylon/Materials/babylon.shaderMaterial.js"></script>
     <script src="../Babylon/Mesh/babylon.mesh.vertexData.js"></script>
     <script src="../Babylon/Cameras/babylon.anaglyphCamera.js"></script>
@@ -116,6 +111,7 @@
     <script src="../Babylon/Mesh/babylon.geometry.js"></script>
     <script src="../Babylon/Tools/babylon.gamepads.js"></script>
     <script src="../Babylon/Cameras/babylon.gamepadCamera.js"></script>
+    <script src="../Babylon/Mesh/babylon.linesMesh.js"></script>
     <link href="index.css" rel="stylesheet" />
 </head>
 <body>
@@ -126,6 +122,8 @@
                 <button class="btn" id="runButton">Run</button>
                 <button class="btn" id="saveButton">Save</button>
                 <button class="btn" id="zipButton">Get .zip</button>
+                <button class="btn" id="newButton">New</button>
+                <button class="btn" id="clearButton">Clear</button>
             </div>
             <div class="btn-group">
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">

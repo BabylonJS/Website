@@ -1,17 +1,33 @@
-﻿// Create a rotating camera
-var camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 12, BABYLON.Vector3.Zero(), scene);
+﻿var createScene = function () {
 
-// Attach it to handle user inputs (keyboard, mouse, touch)
-camera.attachControl(canvas, false);
+    // This creates a basic Babylon Scene object (non-mesh)
+    var scene = new BABYLON.Scene(engine);
 
-// Add a light
-var light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
+    // This creates and positions a free camera (non-mesh)
+    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), scene);
 
-// Create a builtin shape
-var knot = BABYLON.Mesh.CreateTorusKnot("mesh", 2, 0.5, 128, 64, 2, 3, scene);
+    // This targets the camera to scene origin
+    camera.setTarget(new BABYLON.Vector3.Zero());
 
-// Define a simple material
-var material = new BABYLON.StandardMaterial("std", scene);
-material.diffuseColor = new BABYLON.Color3(0.5, 0, 0.5);
+    // This attaches the camera to the canvas
+    camera.attachControl(canvas, false);
 
-knot.material = material;
+    // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
+    var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+
+    // Default intensity is 1. Let's dim the light a small amount
+    light.intensity = 0.7;
+
+    // Our built-in 'sphere' shape. Params: name, subdivs, size, scene
+    var sphere = BABYLON.Mesh.CreateSphere("sphere1", 16, 2, scene);
+
+    // Move the sphere upward 1/2 its height
+    sphere.position.y = 1;
+
+    // Our built-in 'ground' shape. Params: name, width, depth, subdivs, scene
+    var ground = BABYLON.Mesh.CreateGround("ground1", 6, 6, 2, scene);
+
+    // Leave this function
+    return scene;
+
+};

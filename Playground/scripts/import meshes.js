@@ -1,17 +1,23 @@
-﻿//Adding a light
-var light = new BABYLON.PointLight("Omni", new BABYLON.Vector3(20, 20, 100), scene);
+﻿var createScene = function () {
+    var scene = new BABYLON.Scene(engine);
 
-//Adding an Arc Rotate Camera
-var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 100, new BABYLON.Vector3.Zero(), scene);
-camera.attachControl(canvas, false);
+    //Adding a light
+    var light = new BABYLON.PointLight("Omni", new BABYLON.Vector3(20, 20, 100), scene);
 
-// The first parameter can be used to specify which mesh to import. Here we import all meshes
-BABYLON.SceneLoader.ImportMesh("", "scenes/", "skull.babylon", scene, function (newMeshes) {
-    // Set the target of the camera to the first imported mesh
-    camera.target = newMeshes[0];
-});
+    //Adding an Arc Rotate Camera
+    var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 100, new BABYLON.Vector3.Zero(), scene);
+    camera.attachControl(canvas, false);
 
-// Move the light with the camera
-scene.registerBeforeRender(function () {
-    light.position = camera.position;
-});
+    // The first parameter can be used to specify which mesh to import. Here we import all meshes
+    BABYLON.SceneLoader.ImportMesh("", "scenes/", "skull.babylon", scene, function (newMeshes) {
+        // Set the target of the camera to the first imported mesh
+        camera.target = newMeshes[0];
+    });
+
+    // Move the light with the camera
+    scene.registerBeforeRender(function () {
+        light.position = camera.position;
+    });
+
+    return scene;
+}

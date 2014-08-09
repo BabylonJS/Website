@@ -1,25 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <title>Babylon.js sample code</title>
-    <!-- Babylon.js -->
-    <script src="http://www.babylonjs.com/hand.minified-1.2.js"></script>
-    <script src="http://www.babylonjs.com/cannon.js"></script>
-    <script src="http://www.babylonjs.com/babylon.js"></script>
-    <link href="index.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+        <!-- Babylon.js -->
+        <script src="http://www.babylonjs.com/hand.minified-1.2.js"></script>
+        <script src="http://www.babylonjs.com/cannon.js"></script>
+        <script src="http://www.babylonjs.com/oimo.js"></script>
+        <script src="http://www.babylonjs.com/babylon.js"></script>
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
 <body>
     <canvas id="renderCanvas"></canvas>
-    <script src="index.js"></script>
     <script>
         var canvas = document.getElementById("renderCanvas");
-        engine = new BABYLON.Engine(canvas, true);
-        var scene = new BABYLON.Scene(engine);
+        var engine = new BABYLON.Engine(canvas, true);
 
-        runScript(scene, canvas);
+####INJECT####
 
         engine.runRenderLoop(function () {
             scene.render();
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
         });
     </script>
 </body>
