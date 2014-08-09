@@ -9,7 +9,7 @@
     var material3 = new BABYLON.StandardMaterial("kosh", scene);
     var planeMaterial = new BABYLON.StandardMaterial("plane material", scene);
     var box = BABYLON.Mesh.CreateBox("Box", 1.0, scene);
-    var cylinder = BABYLON.Mesh.CreateCylinder("Cylinder", 2, 0.8, 0, 32, scene);
+    var cylinder = BABYLON.Mesh.CreateCylinder("Cylinder", 2, 0.8, 0, 32, 1, scene);
     var torus = BABYLON.Mesh.CreateTorus("Torus", 1.0, 0.5, 16, scene);
     var sphere = BABYLON.Mesh.CreateSphere("Sphere", 16, 3, scene);
     var plane = BABYLON.Mesh.CreatePlane("plane", 3, scene);

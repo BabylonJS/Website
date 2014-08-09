@@ -62,8 +62,11 @@
     sphere.material = sphereMat;
     sphere.position.z += 100;
 
+    // Rotating donut
+    var donut = BABYLON.Mesh.CreateTorus("donut", 20, 8, 16, scene);
+
     // On pick interpolations
-    var prepareButton = function(mesh, color, light) {
+    var prepareButton = function (mesh, color, light) {
         var goToColorAction = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, light, "diffuse", color, 1000, null, true);
 
         mesh.actionManager = new BABYLON.ActionManager(scene);
@@ -92,7 +95,7 @@
     sphere.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnLeftPickTrigger, camera, "alpha", Math.PI, 500, condition2));
 
     // Over/Out
-    var makeOverOut = function(mesh) {
+    var makeOverOut = function (mesh) {
         mesh.actionManager.registerAction(new BABYLON.SetValueAction(BABYLON.ActionManager.OnPointerOutTrigger, mesh.material, "emissiveColor", mesh.material.emissiveColor));
         mesh.actionManager.registerAction(new BABYLON.SetValueAction(BABYLON.ActionManager.OnPointerOverTrigger, mesh.material, "emissiveColor", BABYLON.Color3.White()));
         mesh.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPointerOutTrigger, mesh, "scaling", new BABYLON.Vector3(1, 1, 1), 150));
@@ -107,13 +110,40 @@
     // scene's actions
     scene.actionManager = new BABYLON.ActionManager(scene);
 
-    var rotate = function(mesh) {
+    var rotate = function (mesh) {
         scene.actionManager.registerAction(new BABYLON.IncrementValueAction(BABYLON.ActionManager.OnEveryFrameTrigger, mesh, "rotation.y", 0.01));
     }
 
     rotate(redBox);
     rotate(greenBox);
     rotate(blueBox);
+
+    // Intersections
+    donut.actionManager = new BABYLON.ActionManager(scene);
+
+    donut.actionManager.registerAction(new BABYLON.SetValueAction(
+        { trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: sphere },
+        donut, "scaling", new BABYLON.Vector3(1.2, 1.2, 1.2)));
+
+    donut.actionManager.registerAction(new BABYLON.SetValueAction(
+        { trigger: BABYLON.ActionManager.OnIntersectionExitTrigger, parameter: sphere }
+        , donut, "scaling", new BABYLON.Vector3(1, 1, 1)));
+
+    // Keyboard
+    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(
+        { trigger: BABYLON.ActionManager.OnKeyUpTrigger, parameter: "r" },
+        function () {
+            camera.setPosition(new BABYLON.Vector3(20, 200, 400));
+        }));
+
+    // Animations
+    var alpha = 0;
+    scene.registerBeforeRender(function () {
+        donut.position.x = 100 * Math.cos(alpha);
+        donut.position.y = 5;
+        donut.position.z = 100 * Math.sin(alpha);
+        alpha += 0.01;
+    });
 
     return scene;
 };

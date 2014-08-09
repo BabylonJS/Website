@@ -4,7 +4,7 @@
     var camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 4, 40, BABYLON.Vector3.Zero(), scene);
     var light = new BABYLON.PointLight("Omni", new BABYLON.Vector3(20, 100, 2), scene);
     var sphere = BABYLON.Mesh.CreateSphere("Sphere0", 32, 3, scene);
-    var cylinder = BABYLON.Mesh.CreateCylinder("Sphere1", 5, 3, 2, 32, scene);
+    var cylinder = BABYLON.Mesh.CreateCylinder("Sphere1", 5, 3, 2, 32, 1, scene);
     var torus = BABYLON.Mesh.CreateTorus("Sphere2", 3, 1, 32, scene);
 
     var cellShadingMaterial = new BABYLON.ShaderMaterial("cellShading", scene, "./Scenes/Customs/shaders/cellShading",
