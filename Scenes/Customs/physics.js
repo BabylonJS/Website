@@ -26,11 +26,12 @@
     shadowGenerator.getShadowMap().renderList.push(box0);
 
     // Physics
-    scene.enablePhysics(null, new BABYLON.CannonJSPlugin());
+    //scene.enablePhysics(null, new BABYLON.CannonJSPlugin());
+    scene.enablePhysics(null, new BABYLON.OimoJSPlugin());
 
     // Spheres
     var y = 0;
-    for (var index = 0; index < 32; index++) {
+    for (var index = 0; index < 100; index++) {
         var sphere = BABYLON.Mesh.CreateSphere("Sphere0", 16, 3, scene);
         sphere.material = materialAmiga;
 
@@ -45,8 +46,8 @@
 
     // Link
     var spheres = [];
-    for (var index = 0; index < 10; index++) {
-        var sphere = BABYLON.Mesh.CreateSphere("Sphere0", 16, 1, scene);
+    for (index = 0; index < 10; index++) {
+        sphere = BABYLON.Mesh.CreateSphere("Sphere0", 16, 1, scene);
         spheres.push(sphere);
         sphere.material = materialAmiga2;
         sphere.position = new BABYLON.Vector3(Math.random() * 20 - 10, y, Math.random() * 10 - 5);
@@ -56,7 +57,7 @@
         sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
     }
 
-    for (var index = 0; index < 10; index++) {
+    for (index = 0; index < 10; index++) {
         spheres[index].setPhysicsLinkWith(spheres[index + 1], new BABYLON.Vector3(0, 0.5, 0), new BABYLON.Vector3(0, -0.5, 0));
     }
 

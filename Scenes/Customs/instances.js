@@ -73,7 +73,7 @@
         BABYLON.SceneLoader.ImportMesh("", "/Scenes/Tree/", "tree.babylon", scene, function(newMeshes) {
             newMeshes[0].material.opacityTexture = null;
             newMeshes[0].material.backFaceCulling = false;
-
+            newMeshes[0].isVisible = false;
             newMeshes[0].position.y = ground.getHeightAtCoordinates(0, 0); // Getting height from ground object
 
             shadowGenerator.getShadowMap().renderList.push(newMeshes[0]);
@@ -96,6 +96,7 @@
                 shadowGenerator.getShadowMap().renderList.push(newInstance);
             }
             shadowGenerator.getShadowMap().refreshRate = 0; // We need to compute it just once
+            shadowGenerator.usePoissonSampling = true;
 
             // Collisions
             camera.checkCollisions = true;

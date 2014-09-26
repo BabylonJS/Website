@@ -52,11 +52,12 @@
     var shadowGenerator = new BABYLON.ShadowGenerator(512, light);
     shadowGenerator.getShadowMap().renderList.push(torus);
     shadowGenerator.getShadowMap().renderList.push(torus2);
+    shadowGenerator.usePoissonSampling = true;
     
     var shadowGenerator2 = new BABYLON.ShadowGenerator(512, light2);
     shadowGenerator2.getShadowMap().renderList.push(torus);
     shadowGenerator2.getShadowMap().renderList.push(torus2);
-    shadowGenerator2.useVarianceShadowMap = false;
+    shadowGenerator2.useVarianceShadowMap = true;
 
     ground.receiveShadows = true;
     

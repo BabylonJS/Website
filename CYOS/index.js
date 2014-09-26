@@ -190,7 +190,7 @@
             var xmlHttp = new XMLHttpRequest();
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
-                    var baseUrl = location.href.replace(location.hash, "");
+                    var baseUrl = location.href.replace(location.hash, "").replace(location.search, "");
                     var snippet = JSON.parse(xmlHttp.responseText);
                     var newUrl = baseUrl + "#" + snippet.id;
                     currentSnippetToken = snippet.id;
