@@ -38,25 +38,25 @@ function startGame() {
             // Fix for IE, otherwise it will change the default filter for files selection after first use
             htmlInput.value = "";
             document.getElementById("logo").className = "hidden";
-            loadingText.className = "loadingText";
+            //loadingText.className = "loadingText";
         };
 
         var progressCallback = function (evt) {
-                if (evt.lengthComputable) {
-                    loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
-                } else {
-                    dlCount = evt.loaded / (1024 * 1024);
-                    loadingText.innerHTML = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
-                }
+                //if (evt.lengthComputable) {
+                //    loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
+                //} else {
+                //    dlCount = evt.loaded / (1024 * 1024);
+                //    loadingText.innerHTML = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
+                //}
         };
 
         var textureLoadingCallback = function (remainingTextures) {
-            loadingText.innerHTML = "Streaming items..." + (remainingTextures ? (remainingTextures + " remaining") : "");
+            //loadingText.innerHTML = "Streaming items..." + (remainingTextures ? (remainingTextures + " remaining") : "");
         };
 
         var startingProcessingFilesCallback = function () {
-            loadingText.className = "";
-            loadingText.innerHTML = "Loading, please wait...";
+            //loadingText.className = "";
+            //loadingText.innerHTML = "Loading, please wait...";
         };
 
         var additionnalRenderLoopLogic = function () {

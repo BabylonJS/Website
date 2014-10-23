@@ -1,4 +1,4 @@
-﻿var onload = function () {
+﻿var launch = function () {
     var canvas = document.getElementById("renderCanvas");
     var divFps = document.getElementById("fps");
     var mode = "CAMERA";

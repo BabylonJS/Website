@@ -31,7 +31,6 @@
     }
     groundMaterial.diffuseTexture.uScale = 60;
     groundMaterial.diffuseTexture.vScale = 60;
-    groundMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
     groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     ground.position.y = -2.05;
     ground.material = groundMaterial;

@@ -30,7 +30,10 @@ var onload = function () {
     // Demos
     var demos = [
         {
-            title: "V8 ENGINE", scene: "V8", screenshot: "V8.jpg", size: "15 MB", big: true, incremental: false, anchor: "V8"
+            title: "V8 ENGINE", scene: "V8", screenshot: "V8.jpg", size: "15 MB", big: true, incremental: false, doNotUseCDN: true, anchor: "V8",
+            onload: function () {
+                scene.activeCamera.minZ = 1;
+            }
         },
         {
             title: "ACP", url: "http://race.assassinscreedpirates.com/", screenshot: "ACP.jpg", size: "Assassin's Creed Pirates<BR>by Ubisoft"
@@ -46,10 +49,16 @@ var onload = function () {
             }
         },
         {
-            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB", incremental: true, onload: function () {
+            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB", binary: true, onload: function () {
                 scene.collisionsEnabled = false;
                 for (var index = 0; index < scene.cameras.length; index++) {
                     scene.cameras[index].minZ = 10;
+                }
+
+                for (index = 0; index < scene.meshes.length; index++) {
+                    var mesh = scene.meshes[index];
+
+                    mesh.isBlocker = mesh.checkCollisions;
                 }
 
                 scene.activeCamera.detachControl(canvas);
@@ -81,13 +90,13 @@ var onload = function () {
         },
         { title: "WORLDMONGER", url: "Scenes/Worldmonger/index.html", screenshot: "worldmonger.jpg", size: "8.5 MB" },
         {
-            title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", onload: function () {
+            title: "HEART", scene: "Heart", screenshot: "heart.jpg", doNotUseCDN: true, size: "14 MB", onload: function () {
                 scene.getMeshByName("Labels").setEnabled(false);
             }
         },
 
         {
-            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", incremental: true, onload: function () {
+            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", doNotUseCDN: false, binary: true, onload: function () {
                 scene.autoClear = true;
                 scene.createOrUpdateSelectionOctree();
 
@@ -95,11 +104,13 @@ var onload = function () {
             }
         },
 
-        { title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", size: "28 MB", anchor: "WCAFE" },
+        { title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", doNotUseCDN: true, size: "28 MB", anchor: "WCAFE" },
         {
             title: "FLAT 2009",
-            scene: "Flat2009",
+            scene: "flat2009",
             screenshot: "flat2009.jpg",
+            binary: true,
+            doNotUseCDN: false,
             size: "44 MB",
             onload: function () {
                 var ecran = scene.getMeshByName("Ecran");
@@ -108,7 +119,7 @@ var onload = function () {
                 scene.createOrUpdateSelectionOctree();
             }
         },
-        { title: "THE CAR", scene: "TheCar", screenshot: "thecar.jpg", size: "100 MB", incremental: true, anchor: "THECAR" },
+        { title: "THE CAR", scene: "TheCar", screenshot: "thecar.jpg", size: "100 MB", binary: true, anchor: "THECAR" },
         { title: "VIPER", scene: "Viper", screenshot: "viper.jpg", size: "18 MB" },
         { title: "SPACESHIP", scene: "Spaceship", screenshot: "spaceship.jpg", size: "1 MB" },
         {
@@ -159,6 +170,11 @@ var onload = function () {
     ];
 
     var tests = [
+        { title: "ENHANCED PARTICLES", id: 25, screenshot: "particles2.jpg", size: "1 MB", anchor: "PARTICLES2" },
+        { title: "FRESNEL", id: 23, screenshot: "fresnel.jpg", size: "1 MB", anchor: "FRESNEL" },
+        { title: "CUSTOM RENDER TARGET", id: 24, screenshot: "customRenderTarget.jpg", size: "1 MB", anchor: "CUSTOMRENDERTARGET" },
+        { title: "ASSETS MANAGER", url: "scenes/assets/index.html", screenshot: "assets.jpg", size: "1 MB", anchor: "ASSETS" },
+        { title: "DISPLACEMENT MAP (CPU)", id: 22, screenshot: "displacement.jpg", size: "1 MB", anchor: "DISPLACEMENTMAP" },
         { title: "DRAG'N'DROP", id: 21, screenshot: "dragdrop.jpg", size: "1 MB", anchor: "DRAGNDROP" },
         { title: "LINES", id: 20, screenshot: "lines.jpg", size: "1 MB", anchor: "LINES" },
         { title: "INSTANCES", id: 18, screenshot: "instances.jpg", size: "1 MB", anchor: "INSTANCES" },
@@ -189,6 +205,9 @@ var onload = function () {
     ];
 
     var thirdParties = [
+        { title: "CYBROX SUPRA", url: "http://www.3dpanacea.com/automotive_showroom/cybrox.html", screenshot: "Cybrox Supra.jpg", size: "3D Panacea" },
+        { title: "DESIGN THE 5", url: "http://designthe5.com", screenshot: "design5.jpg", size: "Realpie Media &<BR>Jumpkick Studios" },
+        { title: "Evasion", url: "http://www.castorengine.com/babylon/Evasion/index.html", screenshot: "evasion.jpg", size: "by Dad72" },
         { title: "Wanaplan", url: "http://www.wanaplan.com/en/", screenshot: "wanaplan.jpg", size: "by Wanadev" },
         { title: "DotVision Motion & Bing Maps", url: "http://live2.dotvision.com/live/virtualTour?guid=f0045a3c-6c11-4329-b881-8d8a170538fb&lang=fr&intro=true", screenshot: "myGeoLive3D.jpg", size: "by Dotvision" },
         { title: "BLUE LADY", url: "http://www.3dworlds.ca/1webgl/blady/index.html", screenshot: "lady.jpg", size: "by Gryff" },
@@ -205,7 +224,6 @@ var onload = function () {
     ];
 
     // UI
-    var opacityMask = document.getElementById("opacityMask");
     var menuPanel = document.getElementById("screen1");
     var items = document.getElementById("items");
     var testItems = document.getElementById("testItems");
@@ -218,8 +236,6 @@ var onload = function () {
     var divFps = document.getElementById("fps");
     var stats = document.getElementById("stats");
     var enableStats = document.getElementById("enableStats");
-    var loadingBack = document.getElementById("loadingBack");
-    var loadingText = document.getElementById("loadingText");
     var hardwareScalingLevel = document.getElementById("hardwareScalingLevel");
     var collisions = document.getElementById("collisions");
     var postProcess = document.getElementById("postProcess");
@@ -242,19 +258,37 @@ var onload = function () {
 
     var itemClick = function (demo) {
         return function () {
+            var sceneLocation = "Scenes/";
+
             // Check support
             if (!BABYLON.Engine.isSupported()) {
                 document.getElementById("notSupported").className = "";
-                opacityMask.className = "";
             } else {
 
                 restoreAllUI();
+
+                if (window.location.hostname.indexOf("localhost") == -1) {
+                    if (demo.doNotUseCDN) {
+                        sceneLocation = "http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/";
+                    }
+                    else{
+                        sceneLocation = "http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/";
+                    }
+                }
 
                 if (demo.url) {
                     window.location = demo.url;
                     return;
                 }
-                loadScene(demo.id !== undefined ? demo.id : demo.scene, demo.incremental ? ".incremental" : "", function () {
+                var mode = "";
+
+                if (demo.incremental) {
+                    mode = ".incremental";
+                } else if (demo.binary) {
+                    mode = ".binary";
+                }
+
+                loadScene(demo.id !== undefined ? demo.id : demo.scene, mode, sceneLocation, function () {
                     BABYLON.StandardMaterial.BumpTextureEnabled = true;
                     if (demo.collisions !== undefined) {
                         scene.collisionsEnabled = demo.collisions;
@@ -347,6 +381,10 @@ var onload = function () {
             scene.dispose();
             scene = null;
         }
+
+        if (engine) {
+            engine.hideLoadingUI();
+        }
         menuPanel.className = "";
         renderZone.className = "movedRight";
     };
@@ -419,12 +457,10 @@ var onload = function () {
     var restoreUI = function () {
         scene.onPointerDown = onPointerDown;
 
-        loadingBack.className = "loadingBack";
-        loadingText.className = "loadingText";
-        menuPanel.className = "movedLeft";
-        renderZone.className = "";
-        opacityMask.className = "hidden";
         sceneChecked = true;
+        controlPanel.className = "";
+        cameraPanel.className = "";
+        divFps.className = "";
 
         camerasList.options.length = 0;
 
@@ -442,13 +478,7 @@ var onload = function () {
         }
     };
 
-    var loadScene = function (name, incremental, then) {
-        // Cleaning
-        if (scene) {
-            scene.dispose();
-            scene = null;
-        }
-
+    var loadScene = function (name, incremental, sceneLocation, then) {
         sceneChecked = false;
 
         BABYLON.SceneLoader.ForceFullSceneLoadingForIncremental = true;
@@ -460,8 +490,13 @@ var onload = function () {
 
         // Loading
         var importScene = function () {
-            loadingBack.removeEventListener("transitionend", importScene);
-            loadingBack.removeEventListener("webkitTransitionend", importScene);
+            renderZone.removeEventListener("transitionend", importScene);
+
+            // Cleaning
+            if (scene) {
+                scene.dispose();
+                scene = null;
+            }
 
             engine.resize();
 
@@ -535,10 +570,22 @@ var onload = function () {
                     case 21:
                         newScene = CreateDragDropTestScene(engine);
                         break;
+                    case 22:
+                        newScene = CreateDisplacementTestScene(engine);
+                        break;
+                    case 23:
+                        newScene = CreateFresnelTestScene(engine);
+                        break;
+                    case 24:
+                        newScene = CreateCustomRenderTargetTestScene(engine);
+                        break;
+                    case 25:
+                        newScene = CreateParticles2TestScene(engine);
+                        break;
                 }
                 scene = newScene;
-
                 scene.executeWhenReady(function () {
+                    canvas.style.opacity = 1;
                     if (scene.activeCamera) {
                         scene.activeCamera.attachControl(canvas);
                         if (then) {
@@ -554,11 +601,10 @@ var onload = function () {
             };
 
             var dlCount = 0;
-            //BABYLON.SceneLoader.Load("http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
-            //BABYLON.SceneLoader.Load("http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
-            BABYLON.SceneLoader.Load("Scenes/" + name + "/", name + incremental + ".babylon", engine, function (newScene) {
+            BABYLON.SceneLoader.Load(sceneLocation + name + "/", name + incremental + ".babylon", engine, function (newScene) {
                 scene = newScene;
                 scene.executeWhenReady(function () {
+                    canvas.style.opacity = 1;
                     if (scene.activeCamera) {
                         scene.activeCamera.attachControl(canvas);
 
@@ -584,21 +630,22 @@ var onload = function () {
 
             }, function (evt) {
                 if (evt.lengthComputable) {
-                    loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
+                    engine.loadingUIText = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
                 } else {
                     dlCount = evt.loaded / (1024 * 1024);
-                    loadingText.innerHTML = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
+                    engine.loadingUIText= "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
                 }
             });
         };
 
-        loadingBack.addEventListener("transitionend", importScene);
-        loadingBack.addEventListener("webkitTransitionend", importScene);
+        menuPanel.className = "movedLeft";
+        renderZone.className = "";
+        controlPanel.className = "hidden";
+        cameraPanel.className = "hidden";
+        divFps.className = "hidden";
+        canvas.style.opacity = 0;
 
-        loadingBack.className = "";
-        loadingText.className = "";
-        opacityMask.className = "";
-        loadingText.innerHTML = "Loading, please wait...";
+        renderZone.addEventListener("transitionend", importScene);
     };
 
     // Render loop
@@ -610,7 +657,7 @@ var onload = function () {
         if (scene) {
             if (!sceneChecked) {
                 var remaining = scene.getWaitingItemsCount();
-                loadingText.innerHTML = "Streaming items..." + (remaining ? (remaining + " remaining") : "");
+                engine.loadingUIText = "Streaming items..." + (remaining ? (remaining + " remaining") : "");
             }
 
             scene.render();
@@ -657,7 +704,6 @@ var onload = function () {
             "Max render texture size: <b>" + caps.maxRenderTextureSize + "</b><br>";
 
     // UI
-
     var panelIsClosed = true;
     var cameraPanelIsClosed = true;
     var aboutIsClosed = true;
@@ -697,12 +743,6 @@ var onload = function () {
 
     document.getElementById("notSupported").addEventListener("click", function () {
         document.getElementById("notSupported").className = "hidden";
-        opacityMask.className = "hidden";
-    });
-
-    opacityMask.addEventListener("click", function () {
-        document.getElementById("notSupported").className = "hidden";
-        opacityMask.className = "hidden";
     });
 
     document.getElementById("aboutPanel").addEventListener("click", function (evt) {

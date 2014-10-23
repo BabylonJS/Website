@@ -6,13 +6,15 @@
     <script src="../babylon.js"></script>
     <script src="index.js"></script>
     <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="fileSaver.js"></script>
+    <script src="jszip.min.js"></script>
     <link href="index.css" rel="stylesheet" />
 </head>
 <body>
     <div id="vertexShaderCode" class="hidden"></div>
     <div id="fragmentShaderCode" class="hidden"></div>
     
-    <script type="application/shader" id="fresnelVertex">precision mediump float;
+    <script type="application/shader" id="fresnelVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -35,7 +37,7 @@ void main(void) {
 }
     </script>
 
-    <script type="application/shader" id="fresnelPixel">precision mediump float;
+    <script type="application/shader" id="fresnelPixel">precision highp float;
 
 // Lights
 varying vec3 vPositionW;
@@ -56,7 +58,7 @@ void main(void) {
     gl_FragColor = vec4(color * fresnelTerm, 1.);
 }</script>
 
-    <script type="application/shader" id="semVertex">precision mediump float;
+    <script type="application/shader" id="semVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -81,7 +83,7 @@ void main() {
 
 }</script>
 
-    <script type="application/shader" id="semPixel">precision mediump float;
+    <script type="application/shader" id="semPixel">precision highp float;
 
 uniform mat4 worldView;
 
@@ -109,7 +111,7 @@ void main(void) {
     gl_FragColor = vec4( base, 1. );
 }</script>
 
-        <script type="application/shader" id="waveVertex">precision mediump float;
+        <script type="application/shader" id="waveVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -136,7 +138,7 @@ void main(void) {
     vUV = uv;
 }</script>
 
-        <script type="application/shader" id="basicVertex">precision mediump float;
+        <script type="application/shader" id="basicVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -154,7 +156,7 @@ void main(void) {
     vUV = uv;
 }</script>
 
-        <script type="application/shader" id="basicPixel">precision mediump float;
+        <script type="application/shader" id="basicPixel">precision highp float;
 
 varying vec2 vUV;
 
@@ -164,7 +166,7 @@ void main(void) {
     gl_FragColor = texture2D(textureSampler, vUV);
 }</script>
 
-        <script type="application/shader" id="bwVertex">precision mediump float;
+        <script type="application/shader" id="bwVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -182,7 +184,7 @@ void main(void) {
     vUV = uv;
 }</script>
 
-        <script type="application/shader" id="bwPixel">precision mediump float;
+        <script type="application/shader" id="bwPixel">precision highp float;
 
 varying vec2 vUV;
 
@@ -193,7 +195,7 @@ void main(void) {
     gl_FragColor = vec4(luminance, luminance, luminance, 1.0);
 }</script>
 
-        <script type="application/shader" id="cellShadingVertex">precision mediump float;
+        <script type="application/shader" id="cellShadingVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -219,7 +221,7 @@ void main(void) {
     vUV = uv;
 }</script>
 
-        <script type="application/shader" id="cellShadingPixel">precision mediump float;
+        <script type="application/shader" id="cellShadingPixel">precision highp float;
 
 // Lights
 varying vec3 vPositionW;
@@ -277,7 +279,7 @@ void main(void) {
     gl_FragColor = vec4(color, 1.);
 }</script>
 
-        <script type="application/shader" id="phongVertex">precision mediump float;
+        <script type="application/shader" id="phongVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -301,7 +303,7 @@ void main(void) {
     vNormal = normal;
 }</script>
 
-        <script type="application/shader" id="phongPixel">precision mediump float;
+        <script type="application/shader" id="phongPixel">precision highp float;
 
 // Varying
 varying vec3 vPosition;
@@ -338,7 +340,7 @@ void main(void) {
     gl_FragColor = vec4(color * ndl + vec3(specComp), 1.);
 }</script>
 
-        <script type="application/shader" id="discardVertex">precision mediump float;
+        <script type="application/shader" id="discardVertex">precision highp float;
 
 // Attributes
 attribute vec3 position;
@@ -358,7 +360,7 @@ void main(void) {
     vUV = uv;
 }</script>
 
-        <script type="application/shader" id="discardPixel">precision mediump float;
+        <script type="application/shader" id="discardPixel">precision highp float;
 
 varying vec2 vUV;
 
@@ -377,7 +379,7 @@ void main(void) {
 
     <div id="outerContainer">
         <div id="subHeaderBackground">
-            <div id="templateDropdown" id="dropdownContainer">
+            <div id="templateDropdown" class="dropdownContainer">
                 <div class="dropdownLabel">Templates:</div>
                 <div class="dropdownSelectContainer">
                     <select id="templates">
@@ -392,20 +394,21 @@ void main(void) {
                     </select>
                 </div>
             </div>
-           <div id="meshDropdown" id="dropdownContainer">
-               <div class="dropdownLabel">Meshes:</div>
-               <div class="dropdownSelectContainer">
-                   <select id="meshes">
+            <div id="meshDropdown" class="dropdownContainer">
+                <div class="dropdownLabel">Meshes:</div>
+                <div class="dropdownSelectContainer">
+                    <select id="meshes">
                         <option>Sphere</option>
                         <option>Torus</option>
                         <option selected>Torus Knot</option>
                         <option>Ground</option>
-                   </select>
-               </div>
-           </div>    
+                    </select>
+                </div>
+            </div>    
             <div id="buttons">
                 <div id="compileButton" class="circleButton" title="Compile"></div>
                 <div id="saveButton" class="circleButton" title="Save"></div>
+                <div id="getButton" class="circleButton" title="Get"></div>
             </div>
         </div>
         <div id="shadersContainer">

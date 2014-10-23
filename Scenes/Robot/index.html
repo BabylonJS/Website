@@ -24,11 +24,11 @@
     <script src="../../hand.minified-1.2.js"></script>
     <script src="index.js"></script>
 </head>
-<body onload="onload();">
+<body>
     <canvas id="renderCanvas"></canvas>
     <div id="fps"></div>
-   
-    
+
+
     <div id="footer">
         <div id="footerLeft">
             <img class="controlButton" alt="Preview" id="preview" src="Assets/left.png">
@@ -39,14 +39,15 @@
         <div id="footerRight">
             <img class="controlButton" alt="Next" id="next" src="Assets/right.png">
         </div>
-        </div>
+    </div>
 
     <div id="notSupported" class="hidden">
         Your browser does not support WebGL :(
     </div>
     <div id="loadingBack" class="loadingBack"></div>
     <div id="loadingText" class="loadingText"></div>
-
-    
+    <script>
+        launch();
+    </script>
 </body>
 </html>

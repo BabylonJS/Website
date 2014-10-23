@@ -53,7 +53,7 @@
                 return;
         }
 
-        location.hash = "";
+        //location.hash = undefined;
 
         vertexEditor.setValue(BABYLON.Tools.GetDOMTextContent(document.getElementById(vertexId)));
         vertexEditor.gotoLine(0);
@@ -112,7 +112,7 @@
     var currentSnippetToken;
     var previousHash = "";
 
-    var checkHash = function() {
+    var checkHash = function () {
         if (location.hash) {
             if (previousHash != location.hash) {
                 cleanHash();
@@ -133,6 +133,11 @@
 
                                 pixelEditor.setValue(snippet.pixelShader);
                                 pixelEditor.gotoLine(0);
+
+                                if (snippet.meshId) {
+                                    document.getElementById("meshes").selectedIndex = snippet.meshId;
+                                    selectMesh();
+                                }
 
                                 compile();
                             }
@@ -161,8 +166,6 @@
 
         location.hash = splits.join("#");
     }
-
-
 
     function start() {
         effectiveStart();
@@ -207,7 +210,8 @@
 
             var payload = {
                 vertexShader: vertexEditor.getValue(),
-                pixelShader: pixelEditor.getValue()
+                pixelShader: pixelEditor.getValue(),
+                meshId: document.getElementById("meshes").selectedIndex
             };
 
             xmlHttp.send(JSON.stringify(payload));
@@ -218,6 +222,97 @@
             saveFunction();
         });
 
+        // Get zip
+        var addContentToZip = function (zip, name, url, replace, buffer, then) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url, true);
+
+            if (buffer) {
+                xhr.responseType = "arraybuffer";
+            }
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        var text;
+                        if (!buffer) {
+                            if (replace) {
+                                text = xhr.responseText.replace("####INJECT####", replace);
+                            } else {
+                                text = xhr.responseText;
+                            }
+                        }
+
+                        zip.file(name, buffer ? xhr.response : text);
+
+                        then();
+                    } else { // Failed
+                    }
+                }
+            };
+
+            xhr.send(null);
+        }
+
+        var stringifyShader = function (name, data) {
+            var text = "                BABYLON.Effect.ShadersStore[\"" + name + "\"]=";
+
+            var splits = data.split("\n");
+            for (var index = 0; index < splits.length; index++) {
+
+                if (splits[index] !== "") {
+                    text += "                \"" + splits[index] + "\\r\\n\"";
+
+                    if (index != splits.length - 1) {
+                        text += "+\r\n";
+                    } else {
+                        text += ";\r\n";
+                    }
+                } else {
+                    text += "\r\n";
+                }
+            }
+
+            return text;
+        }
+
+        var getZip = function () {
+            if (engine.scenes.length == 0) {
+                return;
+            }
+
+            var zip = new JSZip();
+
+            var scene = engine.scenes[0];
+
+            var textures = scene.textures;
+
+            document.getElementById("errorLog").innerHTML = "<span>" + new Date().toLocaleTimeString() + ": Creating archive...Please wait</span><BR>" + document.getElementById("errorLog").innerHTML;
+
+            var zipCode = stringifyShader("customVertexShader", vertexEditor.getValue());
+
+            zipCode += "\r\n" + stringifyShader("customFragmentShader", pixelEditor.getValue()) + "\r\n";
+            zipCode += "                selectMesh(" + document.getElementById("meshes").selectedIndex + ");\r\n"
+
+            addContentToZip(zip, "index.html", "zipContent/index.html", zipCode, false, function () {
+                addContentToZip(zip, "ref.jpg", "ref.jpg", null, true, function () {
+                    addContentToZip(zip, "heightMap.png", "heightMap.png", null, true, function () {
+                        addContentToZip(zip, "amiga.jpg", "amiga.jpg", null, true, function () {
+                            var blob = zip.generate({ type: "blob" });
+                            saveAs(blob, "sample.zip");
+                            document.getElementById("errorLog").innerHTML = "<span>" + new Date().toLocaleTimeString() + ": Archive created successfully</span><BR>" + document.getElementById("errorLog").innerHTML;
+                        });
+                    });
+                });
+            });
+        }
+
+        // Get button
+        document.getElementById("getButton").addEventListener("click", function () {
+            getZip();
+        });
+
         // Babylon.js
         if (BABYLON.Engine.isSupported()) {
             var canvas = document.getElementById("renderCanvas");
@@ -226,7 +321,7 @@
             var camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 12, BABYLON.Vector3.Zero(), scene);
 
             camera.attachControl(canvas, false);
-            camera.lowerRadiusLimit = 10;
+            camera.lowerRadiusLimit = 1;
             camera.minZ = 1.0;
 
             selectMesh();
@@ -270,7 +365,7 @@
         },
             {
                 attributes: ["position", "normal", "uv"],
-                uniforms: ["world", "worldView", "worldViewProjection"]
+                uniforms: ["world", "worldView", "worldViewProjection", "view", "projection"]
             });
 
         var refTexture = new BABYLON.Texture("ref.jpg", scene);

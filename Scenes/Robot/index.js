@@ -1,4 +1,4 @@
-﻿var onload = function () {
+﻿var launch = function () {
 
     var scene = null;
     var messages = null;

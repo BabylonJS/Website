@@ -53,8 +53,12 @@
     <script src="Scenes/Customs/actions.js"></script>
     <script src="Scenes/Customs/instances.js"></script>
     <script src="Scenes/Customs/particles.js"></script>
+    <script src="Scenes/Customs/particles2.js"></script>
     <script src="Scenes/Customs/lines.js"></script>
     <script src="Scenes/Customs/dragdrop.js"></script>
+    <script src="Scenes/Customs/displacementMap.js"></script>
+    <script src="Scenes/Customs/fresnel.js"></script>
+    <script src="Scenes/Customs/customRenderTarget.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
@@ -140,6 +144,7 @@
                                     <li>Selection octrees</li>
                                     <li>Offline mode (Assets are saved locally to prevent reloading them)</li>
                                     <li>Incremental loading</li>
+                                    <li>Binary compressed format</li>
                                     <li><b>Hardware accelerated instances</b></li>
                                 </ul>
                             </li>
@@ -160,6 +165,7 @@
                                     <li>Skybox</li>
                                     <li>Vertex color</li>
                                     <li>4 bones per vertex</li>
+                                    <li>Fresnel term for diffuse, opacity, emissive and reflection</li>
                                 </ul>
                             </li>
                             <li>
@@ -195,6 +201,9 @@
                                     <li>Virtual Joysticks camera</li>
                                     <li>Oculus Rift camera</li>
                                     <li><b>Gamepad camera</b></li>
+                                    <li><b>VR Device Oriention camera</b></li>
+                                    <li><b>WebVR camera</b></li>
+                                    <li><b>Follow camera</b></li>
                                 </ul>
                             </li>
                             <li>
@@ -213,7 +222,9 @@
                                     <li>Babylon scene file can be converted from <i>.OBJ</i>, <i>.FBX</i>, <i>.MXB</i></li>
                                     <li>Exporter for Blender</li>
                                     <li>Exporter for Cheetah3d</li>
+                                    <li><b>Exporter for 3ds max</b></li>
                                     <li>Support for drag'n'drop</li>
+                                    <li>Assets manager</li>
                                 </ul>
                             </li>
                         </ul>
@@ -223,13 +234,13 @@
             <div id="footer">
                 <a class="footerLink" id="aboutLink">about</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="footerLink" href="http://www.babylonjs.com/sandbox">sandbox</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="footerLink" href="http://www.babylonjs.com/cyos">CYOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="footerLink" href="http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js/wiki">wiki</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js">github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="footerLink" href="http://www.sokrate.fr/documentation/babylonjs/index.html">documentation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </div>
-        <div id="opacityMask" class="hidden"></div>
         <div id="renderZone" class="movedRight">
             <canvas id="renderCanvas"></canvas>
             <div id="fps"></div>
@@ -308,8 +319,6 @@
             </div>
         </div>
         <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
-        <div id="loadingBack" class="loadingBack"></div>
-        <div id="loadingText" class="loadingText"></div>
     </div>
 </body>
 </html>

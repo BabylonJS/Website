@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Babylon.js - CYOS</title>
+    <script src="hand.minified-1.2.js"></script>
+    <script src="../Babylon/Math/babylon.math.js"></script>
+    <script src="../Babylon/Tools/babylon.database.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.tga.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.dds.js"></script>
+    <script src="../Babylon/Tools/babylon.smartArray.js"></script>
+    <script src="../Babylon/Tools/babylon.tools.js"></script>
+    <script src="../Babylon/babylon.engine.js"></script>
+    <script src="../Babylon/babylon.node.js"></script>
+    <script src="../Babylon/Tools/babylon.filesInput.js"></script>
+    <script src="../Babylon/Collisions/babylon.pickingInfo.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingSphere.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingBox.js"></script>
+    <script src="../Babylon/Culling/babylon.boundingInfo.js"></script>
+    <script src="../Babylon/Mesh/babylon.abstractMesh.js"></script>
+    <script src="../Babylon/Lights/babylon.light.js"></script>
+    <script src="../Babylon/Lights/babylon.pointLight.js"></script>
+    <script src="../Babylon/Lights/babylon.spotLight.js"></script>
+    <script src="../Babylon/Lights/babylon.hemisphericLight.js"></script>
+    <script src="../Babylon/Lights/babylon.directionalLight.js"></script>
+    <script src="../Babylon/Lights/Shadows/babylon.shadowGenerator.js"></script>
+    <script src="../Babylon/Collisions/babylon.collider.js"></script>
+    <script src="../Babylon/Cameras/babylon.camera.js"></script>
+    <script src="../Babylon/Cameras/babylon.targetCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.followCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.freeCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.touchCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.arcRotateCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.deviceOrientationCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.oculusCamera.js"></script>
+    <script src="../Babylon/Rendering/babylon.renderingManager.js"></script>
+    <script src="../Babylon/Rendering/babylon.renderingGroup.js"></script>
+    <script src="../Babylon/babylon.scene.js"></script>
+    <script src="../Babylon/Mesh/babylon.vertexBuffer.js"></script>
+    <script src="../Babylon/Mesh/babylon.InstancedMesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.mesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.groundMesh.js"></script>
+    <script src="../Babylon/Mesh/babylon.subMesh.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.baseTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.texture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.cubeTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.renderTargetTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.mirrorTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.dynamicTexture.js"></script>
+    <script src="../Babylon/Materials/textures/babylon.videoTexture.js"></script>
+    <script src="../Babylon/Materials/babylon.effect.js"></script>
+    <script src="../Babylon/Materials/babylon.material.js"></script>
+    <script src="../Babylon/Materials/babylon.standardMaterial.js"></script>
+    <script src="../Babylon/Materials/babylon.multiMaterial.js"></script>
+    <script src="../Babylon/Loading/babylon.sceneLoader.js"></script>
+    <script src="../Babylon/Loading/Plugins/babylon.babylonFileLoader.js"></script>
+    <script src="../Babylon/Sprites/babylon.spriteManager.js"></script>
+    <script src="../Babylon/Sprites/babylon.sprite.js"></script>
+    <script src="../Babylon/Layer/babylon.layer.js"></script>
+    <script src="../Babylon/Particles/babylon.particle.js"></script>
+    <script src="../Babylon/Particles/babylon.particleSystem.js"></script>
+    <script src="../Babylon/Animations/babylon.animation.js"></script>
+    <script src="../Babylon/Animations/babylon.animatable.js"></script>
+    <script src="../Babylon/Culling/Octrees/babylon.octree.js"></script>
+    <script src="../Babylon/Culling/Octrees/babylon.octreeBlock.js"></script>
+    <script src="../Babylon/Bones/babylon.bone.js"></script>
+    <script src="../Babylon/Bones/babylon.skeleton.js"></script>
+    <script src="../Babylon/PostProcess/babylon.postProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.postProcessManager.js"></script>
+    <script src="../Babylon/PostProcess/babylon.passPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.blurPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.refractionPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.blackAndWhitePostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.convolutionPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.filterPostProcess.js"></script>
+    <script src="../Babylon/PostProcess/babylon.fxaaPostProcess.js"></script>
+    <script src="../Babylon/LensFlare/babylon.lensFlare.js"></script>
+    <script src="../Babylon/LensFlare/babylon.lensFlareSystem.js"></script>
+    <script src="../Babylon/Physics/Plugins/babylon.cannonJSPlugin.js"></script>
+    <script src="../Babylon/Physics/Plugins/babylon.oimoJSPlugin.js"></script>
+    <script src="../Babylon/Physics/babylon.physicsEngine.js"></script>
+    <script src="../Babylon/Tools/babylon.sceneSerializer.js"></script>
+    <script src="../Babylon/Mesh/babylon.csg.js"></script>
+    <script src="../Babylon/PostProcess/babylon.oculusDistortionCorrectionPostProcess.js"></script>
+    <script src="../Babylon/Tools/babylon.virtualJoystick.js"></script>
+    <script src="../Babylon/Cameras/babylon.virtualJoysticksCamera.js"></script>
+    <script src="../Babylon/Materials/babylon.shaderMaterial.js"></script>
+    <script src="../Babylon/Mesh/babylon.mesh.vertexData.js"></script>
+    <script src="../Babylon/Cameras/babylon.anaglyphCamera.js"></script>
+    <script src="../Babylon/PostProcess/babylon.anaglyphPostProcess.js"></script>
+    <script src="../Babylon/Tools/babylon.tags.js"></script>
+    <script src="../Babylon/Tools/babylon.andOrNotEvaluator.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPass.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderEffect.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPipeline.js"></script>
+    <script src="../Babylon/PostProcess/RenderPipeline/babylon.postProcessRenderPipelineManager.js"></script>
+    <script src="../Babylon/PostProcess/babylon.displayPassPostProcess.js"></script>
+    <script src="../Babylon/Rendering/babylon.boundingBoxRenderer.js"></script>
+    <script src="../Babylon/Actions/babylon.condition.js"></script>
+    <script src="../Babylon/Actions/babylon.action.js"></script>
+    <script src="../Babylon/Actions/babylon.actionManager.js"></script>
+    <script src="../Babylon/Actions/babylon.interpolateValueAction.js"></script>
+    <script src="../Babylon/Actions/babylon.directActions.js"></script>
+    <script src="../Babylon/Mesh/babylon.geometry.js"></script>
+    <script src="../Babylon/Tools/babylon.gamepads.js"></script>
+    <script src="../Babylon/Cameras/babylon.gamepadCamera.js"></script>
+    <script src="../Babylon/Mesh/babylon.linesMesh.js"></script>
+    <script src="../Babylon/Rendering/babylon.outlineRenderer.js"></script>
+    <script src="../Babylon/Tools/babylon.assetsManager.js"></script>
+    <script src="../Babylon/Cameras/babylon.vrDeviceOrientationCamera.js"></script>
+    <script src="../Babylon/Cameras/babylon.webVRCamera.js"></script>
+    <script src="index.js"></script>
+    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="fileSaver.js"></script>
+    <script src="jszip.min.js"></script>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="vertexShaderCode" class="hidden"></div>
+    <div id="fragmentShaderCode" class="hidden"></div>
+    
+    <script type="application/shader" id="fresnelVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+
+// Uniforms
+uniform mat4 world;
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec3 vPositionW;
+varying vec3 vNormalW;
+
+void main(void) {
+    vec4 outPosition = worldViewProjection * vec4(position, 1.0);
+    gl_Position = outPosition;
+    
+    vPositionW = vec3(world * vec4(position, 1.0));
+    vNormalW = normalize(vec3(world * vec4(normal, 0.0)));
+}
+    </script>
+
+    <script type="application/shader" id="fresnelPixel">precision highp float;
+
+// Lights
+varying vec3 vPositionW;
+varying vec3 vNormalW;
+
+// Refs
+uniform vec3 cameraPosition;
+uniform sampler2D textureSampler;
+
+void main(void) {
+    vec3 color = vec3(1., 1., 1.);
+    vec3 viewDirectionW = normalize(cameraPosition - vPositionW);
+
+    // Fresnel
+	float fresnelTerm = dot(viewDirectionW, vNormalW);
+	fresnelTerm = clamp(1.0 - fresnelTerm, 0., 1.);
+
+    gl_FragColor = vec4(color * fresnelTerm, 1.);
+}</script>
+
+    <script type="application/shader" id="semVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec4 vPosition;
+varying vec3 vNormal;
+
+void main() {
+
+    vec4 p = vec4( position, 1. );
+
+    vPosition = p;
+    vNormal = normal;
+
+    gl_Position = worldViewProjection * p;
+
+}</script>
+
+    <script type="application/shader" id="semPixel">precision highp float;
+
+uniform mat4 worldView;
+
+varying vec4 vPosition;
+varying vec3 vNormal;
+
+uniform sampler2D textureSampler;
+uniform sampler2D refSampler;
+
+void main(void) {
+
+    vec3 e = normalize( vec3( worldView * vPosition ) );
+    vec3 n = normalize( worldView * vec4(vNormal, 0.0) ).xyz;
+
+    vec3 r = reflect( e, n );
+    float m = 2. * sqrt(
+        pow( r.x, 2. ) +
+        pow( r.y, 2. ) +
+        pow( r.z + 1., 2. )
+    );
+    vec2 vN = r.xy / m + .5;
+
+    vec3 base = texture2D( refSampler, vN).rgb;
+
+    gl_FragColor = vec4( base, 1. );
+}</script>
+
+        <script type="application/shader" id="waveVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+uniform float time;
+
+// Varying
+varying vec3 vPosition;
+varying vec3 vNormal;
+varying vec2 vUV;
+
+void main(void) {
+    vec3 v = position;
+    v.x += sin(2.0 * position.y + (time)) * 0.5;
+    
+    gl_Position = worldViewProjection * vec4(v, 1.0);
+    
+    vPosition = position;
+    vNormal = normal;
+    vUV = uv;
+}</script>
+
+        <script type="application/shader" id="basicVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec2 vUV;
+
+void main(void) {
+    gl_Position = worldViewProjection * vec4(position, 1.0);
+
+    vUV = uv;
+}</script>
+
+        <script type="application/shader" id="basicPixel">precision highp float;
+
+varying vec2 vUV;
+
+uniform sampler2D textureSampler;
+
+void main(void) {
+    gl_FragColor = texture2D(textureSampler, vUV);
+}</script>
+
+        <script type="application/shader" id="bwVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec2 vUV;
+
+void main(void) {
+    gl_Position = worldViewProjection * vec4(position, 1.0);
+
+    vUV = uv;
+}</script>
+
+        <script type="application/shader" id="bwPixel">precision highp float;
+
+varying vec2 vUV;
+
+uniform sampler2D textureSampler;
+
+void main(void) {
+    float luminance = dot(texture2D(textureSampler, vUV).rgb, vec3(0.3, 0.59, 0.11));
+    gl_FragColor = vec4(luminance, luminance, luminance, 1.0);
+}</script>
+
+        <script type="application/shader" id="cellShadingVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 world;
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec3 vPositionW;
+varying vec3 vNormalW;
+varying vec2 vUV;
+
+void main(void) {
+    vec4 outPosition = worldViewProjection * vec4(position, 1.0);
+    gl_Position = outPosition;
+    
+    vPositionW = vec3(world * vec4(position, 1.0));
+    vNormalW = normalize(vec3(world * vec4(normal, 0.0)));
+    
+    vUV = uv;
+}</script>
+
+        <script type="application/shader" id="cellShadingPixel">precision highp float;
+
+// Lights
+varying vec3 vPositionW;
+varying vec3 vNormalW;
+varying vec2 vUV;
+
+// Refs
+uniform sampler2D textureSampler;
+
+void main(void) {
+    float ToonThresholds[4];
+    ToonThresholds[0] = 0.95;
+    ToonThresholds[1] = 0.5;
+    ToonThresholds[2] = 0.2;
+    ToonThresholds[3] = 0.03;
+    
+    float ToonBrightnessLevels[5];
+    ToonBrightnessLevels[0] = 1.0;
+    ToonBrightnessLevels[1] = 0.8;
+    ToonBrightnessLevels[2] = 0.6;
+    ToonBrightnessLevels[3] = 0.35;
+    ToonBrightnessLevels[4] = 0.2;
+    
+    vec3 vLightPosition = vec3(0,20,10);
+    
+    // Light
+    vec3 lightVectorW = normalize(vLightPosition - vPositionW);
+    
+    // diffuse
+    float ndl = max(0., dot(vNormalW, lightVectorW));
+    
+    vec3 color = texture2D(textureSampler, vUV).rgb;
+    
+    if (ndl > ToonThresholds[0])
+    {
+        color *= ToonBrightnessLevels[0];
+    }
+    else if (ndl > ToonThresholds[1])
+    {
+        color *= ToonBrightnessLevels[1];
+    }
+    else if (ndl > ToonThresholds[2])
+    {
+        color *= ToonBrightnessLevels[2];
+    }
+    else if (ndl > ToonThresholds[3])
+    {
+        color *= ToonBrightnessLevels[3];
+    }
+    else
+    {
+        color *= ToonBrightnessLevels[4];
+    }
+    
+    gl_FragColor = vec4(color, 1.);
+}</script>
+
+        <script type="application/shader" id="phongVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec3 vPosition;
+varying vec3 vNormal;
+varying vec2 vUV;
+
+void main(void) {
+    vec4 outPosition = worldViewProjection * vec4(position, 1.0);
+    gl_Position = outPosition;
+    
+    vUV = uv;
+    vPosition = position;
+    vNormal = normal;
+}</script>
+
+        <script type="application/shader" id="phongPixel">precision highp float;
+
+// Varying
+varying vec3 vPosition;
+varying vec3 vNormal;
+varying vec2 vUV;
+
+// Uniforms
+uniform mat4 world;
+
+// Refs
+uniform vec3 cameraPosition;
+uniform sampler2D textureSampler;
+
+void main(void) {
+    vec3 vLightPosition = vec3(0,20,10);
+    
+    // World values
+    vec3 vPositionW = vec3(world * vec4(vPosition, 1.0));
+    vec3 vNormalW = normalize(vec3(world * vec4(vNormal, 0.0)));
+    vec3 viewDirectionW = normalize(cameraPosition - vPositionW);
+    
+    // Light
+    vec3 lightVectorW = normalize(vLightPosition - vPositionW);
+    vec3 color = texture2D(textureSampler, vUV).rgb;
+    
+    // diffuse
+    float ndl = max(0., dot(vNormalW, lightVectorW));
+    
+    // Specular
+    vec3 angleW = normalize(viewDirectionW + lightVectorW);
+    float specComp = max(0., dot(vNormalW, angleW));
+    specComp = pow(specComp, max(1., 64.)) * 2.;
+    
+    gl_FragColor = vec4(color * ndl + vec3(specComp), 1.);
+}</script>
+
+        <script type="application/shader" id="discardVertex">precision highp float;
+
+// Attributes
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec2 uv;
+
+// Uniforms
+uniform mat4 worldViewProjection;
+
+// Varying
+varying vec2 vUV;
+
+void main(void) {
+    vec4 outPosition = worldViewProjection * vec4(position, 1.0);
+    gl_Position = outPosition;
+
+    vUV = uv;
+}</script>
+
+        <script type="application/shader" id="discardPixel">precision highp float;
+
+varying vec2 vUV;
+
+// Refs
+uniform sampler2D textureSampler;
+
+void main(void) {
+    vec3 color = texture2D(textureSampler, vUV).rgb;
+    
+    if (color.g > 0.5) {
+        discard;
+    }
+    
+    gl_FragColor = vec4(color, 1.);
+}</script>
+
+    <div id="outerContainer">
+        <div id="subHeaderBackground">
+            <div id="templateDropdown" id="dropdownContainer">
+                <div class="dropdownLabel">Templates:</div>
+                <div class="dropdownSelectContainer">
+                    <select id="templates">
+                        <option>Basic</option>
+                        <option>Black and white</option>
+                        <option>Cell shading</option>
+                        <option>Phong</option>
+                        <option>Discard</option>
+                        <option>Wave</option>
+                        <option selected>Spherical environment mapping</option>
+                        <option>Fresnel</option>
+                    </select>
+                </div>
+            </div>
+           <div id="meshDropdown" id="dropdownContainer">
+               <div class="dropdownLabel">Meshes:</div>
+               <div class="dropdownSelectContainer">
+                   <select id="meshes">
+                        <option>Sphere</option>
+                        <option>Torus</option>
+                        <option selected>Torus Knot</option>
+                        <option>Ground</option>
+                   </select>
+               </div>
+           </div>    
+            <div id="buttons">
+                <div id="compileButton" class="circleButton" title="Compile"></div>
+                <div id="saveButton" class="circleButton" title="Save"></div>
+                <div id="getButton" class="circleButton" title="Get"></div>
+            </div>
+        </div>
+        <div id="shadersContainer">
+            <div id="vertexRow" class="row">
+                <div class="rowHeader">
+                    <span class="headerTitle">PIXEL (FRAGMENT) SHADER</span>
+                </div>
+                <div class="rowEditor">
+                    <div class="shaderCode" id="fragmentShaderEditor"></div>
+                </div>
+            </div>
+            <div id="fragmentRow" class="row">
+                <div class="rowHeader">
+                    <span class="headerTitle">VERTEX SHADER</span>
+                </div>
+                <div class="rowEditor">
+                    <div class="shaderCode" id="vertexShaderEditor"></div>
+                </div>
+            </div>
+        </div>
+        <div id="renderContainer">
+            <div id="loading" class="hidden">Loading...</div>
+            <div id="renderCanvasContainer">
+                <canvas id="renderCanvas"></canvas>
+            </div>
+            <div id="errorLog"></div>
+        </div>
+    </div>
+</body>
+</html>
