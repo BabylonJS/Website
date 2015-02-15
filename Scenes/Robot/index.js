@@ -140,7 +140,7 @@
     // Render loop
     var renderFunction = function () {
         // Fps
-        divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+        divFps.innerHTML = engine.getFps().toFixed() + " fps";
         // Render scene
         scene.render();
     };

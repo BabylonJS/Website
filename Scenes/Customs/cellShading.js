@@ -9,8 +9,7 @@
 
     var cellShadingMaterial = new BABYLON.ShaderMaterial("cellShading", scene, "./Scenes/Customs/shaders/cellShading",
     {
-        needAlphaBlending: true,
-        uniforms: ["world", "worldViewProjection"],
+        uniforms: ["world", "viewProjection"],
         samplers: ["textureSampler"]
     });
     cellShadingMaterial.setTexture("textureSampler", new BABYLON.Texture("Scenes/Customs/Ground.jpg", scene))

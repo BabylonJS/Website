@@ -6,7 +6,6 @@
     overflow: hidden;
     position: fixed;
     font-family: "Segoe WP", "Segoe UI", "Verdana", "Arial";
-    
     touch-action: none;
     -ms-touch-action: none;
 }
@@ -38,6 +37,16 @@ a {
         -webkit-transform: scale3d(0.9, 0.9, 0.9);
     }
 
+#description {
+    position: absolute;
+    left: -10000px;
+}
+
+#optimizerFeedback {
+    font-size: 12px;
+    color: orange;
+}
+
 #footer {
     position: absolute;
     width: 100%;
@@ -55,6 +64,11 @@ a {
     .footerLink:visited {
         color: #2E7F80;
     }
+
+#enableDebug, #fullscreen {
+    width: 100px;
+    margin-left: 50px;
+}
 
 .buttonControlPanel {
     height: 3em;
@@ -93,6 +107,12 @@ button {
         transform: scale(0.98);
         -webkit-transform: scale(0.98);
     }
+
+#motto {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
 
 #title0 {
     font-size: 50px;
@@ -239,7 +259,7 @@ button {
 
 #mainTitle {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 30px;
     color: White;
 }
@@ -262,6 +282,8 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
+    /* to enable smooth scrolling on iPad */
+    -webkit-overflow-scrolling: touch;
 }
 
 #renderZone {
@@ -412,16 +434,16 @@ button {
 
 #controlPanel {
     position: absolute;
-    height: 250px;
+    height: 100px;
     bottom: 0px;
-    width: 500px;
+    width: 220px;
     left: 50%;
-    margin-left: -250px;
+    margin-left: -110px;
     z-index: 10;
     transition: transform 0.25s ease-in-out;
-    transform: translateY(250px);
+    transform: translateY(100px);
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    -webkit-transform: translateY(250px);
+    -webkit-transform: translateY(100px);
 }
 
 .tag {
@@ -445,9 +467,9 @@ button {
     height: 100%;
     background-color: #EEEEEE;
     color: #888888;
-    padding: 20px;
     border-top-left-radius: 10px 10px;
     border-top-right-radius: 10px 10px;
+    padding: 10px;
 }
 
 #cameraPanel {
@@ -498,15 +520,7 @@ button {
     left: 20px;
     top: 10px;
     height: 40%;
-    width: 30%;
-}
-
-#rightPart {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    height: 40%;
-    width: 50%;
+    width: 100%;
 }
 
 /*About*/

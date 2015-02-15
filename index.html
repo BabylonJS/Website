@@ -30,6 +30,7 @@
     </script>
     <link href="index.css" rel="stylesheet" />
     <script src="hand.minified-1.2.js"></script>
+    <script src="poly2tri.js"></script>
     <script src="cannon.js"></script>
     <script src="Oimo.js"></script>
     <script src="babylon.js"></script>
@@ -59,266 +60,251 @@
     <script src="Scenes/Customs/displacementMap.js"></script>
     <script src="Scenes/Customs/fresnel.js"></script>
     <script src="Scenes/Customs/customRenderTarget.js"></script>
+    <script src="Scenes/Customs/lod.js"></script>
+    <script src="Scenes/Customs/bones2.js"></script>
+    <script src="Scenes/Customs/polygon.js"></script>
+    <script src="Scenes/Customs/ssao.js"></script>
+    <script src="Scenes/Customs/volumetricLightScattering.js"></script>
+    <script src="Scenes/Customs/proceduralTexture.js"></script>
     <script src="index.js"></script>
 </head>
-<body>
-    <div id="rootDiv">
-        <div id="screen1">
-            <div id="menuPanel">
-                <br />
-                <div id="itemsContainer">
-                    <div class="header">
-                        DEMOS
-                    </div>
-                    <div id="items"></div>
-                    <div class="header">
-                        <br />
-                        FEATURES TESTS
-                    </div>
-                    <div id="testItems"></div>
-                    <div class="header">
-                        <br />
-                        THIRD-PARTY
-                    </div>
-                    <div id="3rdItems"></div>
-                    <div class="header">
-                        <br />
-                        OCULUS RIFT
-                    </div>
-                    <div class="warning">You must install <a href="OculusVR Driver/OculusVR Driver.zip">this driver</a> and use IE11+ to see these demos</div><br />
-                    <div id="oculusDemos"></div>
-                </div>
-            </div>
-            <img id="back" src="Assets/BandeauEmbleme.png" />
-            <img id="mainTitle" src="Assets/Logo.png" />
-
-            <div id="gradient"></div>
-
-            <div id="title0">WEBGL.</div>
-            <div id="title1">SIMPLE.</div>
-            <div id="title2">POWERFUL.</div>
-
-            <div id="downloadText">DOWNLOAD</div>
-            <a href="https://github.com/BabylonJS/Babylon.js">
-                <img id="downloadLink" src="Assets/BtnDownload.png" class="button" />
-            </a>
-            <div id="tryItText">TRY IT!</div>
-            <a href="http://www.babylonjs.com/playground">
-                <img id="tryItLink" src="Assets/BtnAbout.png" class="button" />
-            </a>
-            <div id="aboutPanel">
-                <div id="aboutParagraph">
-                    <h1>Babylon.js team</h1>
-                    <p>
-                        <i>Lead developer:</i> David <b>CATUHE</b> (<a href="http://www.twitter.com/@deltakosh">@deltakosh</a>)<br />
-                        <i>Developer:</i> David <b>ROUSSET</b> (<a href="http://www.twitter.com/@davrous">@davrous</a>)<br />
-                        <i>Developer:</i> Pierre <b>LAGARDE</b> (<a href="http://www.twitter.com/@pierlag">@pierlag</a>)<br />
-                        <i>3D Artist:</i> Michel <b>ROUSSEAU</b> (<a href="http://www.twitter.com/@rousseau_michel">@rousseau_michel</a>)<br />
-                        <br />
-                        <i>Hill Valley scene:</i> Camille <b>JOLY</b> and <a href="http://www.enozone.com/">Enozone</a><br />
-                        <i>Train scene:</i> Romuald <b>ROUHIER</b> and <a href="http://www.progiss.com/">Progiss</a><br />
-                    </p>
-                </div>
-                <div id="aboutParagraph">
-                    <h1>About babylon.js</h1>
-                    Babylon.js is a 3D engine based on <b>webgl</b> and <b>javascript</b>.
-                    It supports the following features:
-                </div>
-                <div id="features">
-                    <div id="engineFeatures">
-                        <ul>
-                            <li>Complete scene graph with lights, cameras, materials and meshes</li>
-                            <li><b>Collisions engine</b></li>
-                            <li><b>Physics engine (thanks to cannon.js)</b></li>
-                            <li>Scene picking</li>
-                            <li>Antialiasing</li>
-                            <li><b>Animations engine</b></li>
-                            <li><b>Particles Systems</b></li>
-                            <li>Sprites and 2D layers</li>
-                            <li>
-                                Optimizations engines:
-                                <ul>
-                                    <li>Frustum clipping</li>
-                                    <li>Sub-meshes clipping</li>
-                                    <li>Hardware scaling</li>
-                                    <li>Selection octrees</li>
-                                    <li>Offline mode (Assets are saved locally to prevent reloading them)</li>
-                                    <li>Incremental loading</li>
-                                    <li>Binary compressed format</li>
-                                    <li><b>Hardware accelerated instances</b></li>
-                                </ul>
-                            </li>
-                            <li>
-                                Standard material is a <b>per pixel</b> material that supports:
-                                <ul>
-                                    <li>Diffuse lightning and texture</li>
-                                    <li>Ambient lightning and texture</li>
-                                    <li>Specular lightning</li>
-                                    <li>Opacity texture</li>
-                                    <li>Reflection texture (Spheric, planar, cubic and projection)</li>
-                                    <li><b>Mirror texture</b></li>
-                                    <li><b>Emissive texture</b></li>
-                                    <li><b>Specular texture</b></li>
-                                    <li><b>Bump texture</b></li>
-                                    <li>Up to 4 lights (points, directionals, spots, hemispherics)</li>
-                                    <li>Custom materials</li>
-                                    <li>Skybox</li>
-                                    <li>Vertex color</li>
-                                    <li>4 bones per vertex</li>
-                                    <li>Fresnel term for diffuse, opacity, emissive and reflection</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Special FX
-                                <ul>
-                                    <li>Fog</li>
-                                    <li>Alpha blending</li>
-                                    <li>Alpha testing</li>
-                                    <li>Billboarding</li>
-                                    <li>Fullscreen mode</li>
-                                    <li>Shadow Maps and Variance Shadow Maps</li>
-                                    <li>Rendering layers</li>
-                                    <li><b>Post-processes (blur, refraction, black'n'white, fxaa, customs...)</b></li>
-                                    <li><b>Lens flares</b></li>
-                                    <li><b>Multi-views</b></li>
-                                </ul>
-                            </li>
-                            <li>
-                                Textures:
-                                <ul>
-                                    <li>Render target textures</li>
-                                    <li>Dynamic textures (canvas)</li>
-                                    <li>Video textures</li>
-                                    <li>Compressed (DDS) textures</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Cameras:
-                                <ul>
-                                    <li>Arc rotate camera</li>
-                                    <li>Free camera</li>
-                                    <li>Touch camera</li>
-                                    <li>Virtual Joysticks camera</li>
-                                    <li>Oculus Rift camera</li>
-                                    <li><b>Gamepad camera</b></li>
-                                    <li><b>VR Device Oriention camera</b></li>
-                                    <li><b>WebVR camera</b></li>
-                                    <li><b>Follow camera</b></li>
-                                </ul>
-                            </li>
-                            <li>
-                                Meshes:
-                                <ul>
-                                    <li>Mesh cloning</li>
-                                    <li>Dynamic meshes</li>
-                                    <li><b>Height maps</b></li>
-                                    <li>Bones</li>
-                                    <li>Constructive solid geometries</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Import:
-                                <ul>
-                                    <li>Babylon scene file can be converted from <i>.OBJ</i>, <i>.FBX</i>, <i>.MXB</i></li>
-                                    <li>Exporter for Blender</li>
-                                    <li>Exporter for Cheetah3d</li>
-                                    <li><b>Exporter for 3ds max</b></li>
-                                    <li>Support for drag'n'drop</li>
-                                    <li>Assets manager</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-                <a class="footerLink" id="aboutLink">about</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="http://www.babylonjs.com/sandbox">sandbox</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="http://www.babylonjs.com/cyos">CYOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js/wiki">wiki</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js">github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="footerLink" href="http://www.sokrate.fr/documentation/babylonjs/index.html">documentation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
+    <body>
+        <div id="description">
+            <h1>About babylon.js</h1>
+            Babylon.js is a 3D engine based on <b>webgl</b> and <b>JavaScript</b>.
+            It supports tons of cool features and it is available for free under Apache licence.
+            It is built with simplicity and performance in mind.
         </div>
-        <div id="renderZone" class="movedRight">
-            <canvas id="renderCanvas"></canvas>
-            <div id="fps"></div>
-            <div id="stats"></div>
-            <div id="status"></div>
-            <div id="controlPanel">
-                <div id="controlsZone">
-                    <div id="leftPart">
-                        <p>
-                            <label><input type="checkbox" id="wireframe" />Wireframe</label>
-                        </p>
-                        <p>
-                            <label><input type="checkbox" id="enableStats" />Statistics</label>
-                        </p>
-                        <p>
-                            <label><input type="checkbox" id="collisions" checked />Collisions</label>
-                        </p>
-                        <p>
-                            <label><input type="checkbox" id="postProcess" checked />Post-processes</label>
-                        </p>
-                        <p>
-                            <label><input type="checkbox" id="mirrors" checked />Mirrors</label>
-                        </p>
-                    </div>
-                    <div id="rightPart">
-                        <p>
-                            Hardware scaling:
-                            <select id="hardwareScalingLevel">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </p>
-                        <p id="extensions"></p>
-                        <p>
-                            <button id="fullscreen">Switch fullscreen mode</button>
-                        </p>
+        <div id="rootDiv">
+            <div id="screen1">
+                <div id="menuPanel">
+                    <br />
+                    <div id="itemsContainer">
+                        <div class="header">
+                            DEMOS
+                        </div>
+                        <div id="items"></div>
+                        <div class="header">
+                            <br />
+                            FEATURES TESTS
+                        </div>
+                        <div id="testItems"></div>
+                        <div class="header">
+                            <br />
+                            THIRD-PARTY
+                        </div>
+                        <div id="3rdItems"></div>
+                        <div class="header">
+                            <br />
+                            OCULUS RIFT
+                        </div>
+                        <div class="warning">You must install <a href="OculusVR Driver/OculusVR Driver.zip">this driver</a> and use IE11+ to see these demos</div><br />
+                        <div id="oculusDemos"></div>
                     </div>
                 </div>
-                <div class="tag">Control panel</div>
-                <div class="tag" id="clickableTag"></div>
-            </div>
-            <div id="cameraPanel">
-                <div id="cameraControlsZone">
-                    Active camera:<br>
-                    <select id="camerasList"></select>
-                    <p>
-                        Change control method:
-                        <button class="buttonControlPanel" id="touchCamera">
-                            <img src="Assets/CamTouchOff.png" class="buttonImg" />Touch camera
-                        </button>
-                        <button class="buttonControlPanel" id="deviceOrientationCamera">
-                            <img src="Assets/CamDeviceOff.png" class="buttonImg" />Device orientation camera
-                        </button>
-                        <button class="buttonControlPanel" id="gamepadCamera">
-                            <img src="Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
-                        </button>
-                        <button class="buttonControlPanel" id="virtualJoysticksCamera">
-                            <img src="Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
-                        </button>
-                        <button class="buttonControlPanel" id="anaglyphCamera">
-                            <img src="Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
-                        </button>
-                    </p>
-                    <p>
-                        Post-processes:
-                        <button class="smallButtonControlPanel" id="toggleFxaa">Toggle FXAA (antialiasing)</button>
-                        <button class="smallButtonControlPanel" id="toggleFsaa4">Toggle FSAA 4X (antialiasing)</button>
-                        <button class="smallButtonControlPanel" id="toggleBandW">Toggle Black and white</button>
-                        <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
-                    </p>
+                <img id="back" src="Assets/FondBandeau.png" />
+                <img id="mainTitle" src="Assets/Logo.png" />
+
+                <div id="gradient"></div>
+
+                <img id="motto" src="Assets/Accroche.png" />
+
+                <div id="downloadText">DOWNLOAD</div>
+                <a href="https://github.com/BabylonJS/Babylon.js">
+                    <img id="downloadLink" src="Assets/IcoDownload.png" class="button" />
+                </a>
+                <div id="tryItText">TRY IT!</div>
+                <a href="http://www.babylonjs.com/playground">
+                    <img id="tryItLink" src="Assets/IcoFAQ.PNG" class="button" />
+                </a>
+                <div id="aboutPanel">
+                    <div id="aboutParagraph">
+                        <h1>Babylon.js team</h1>
+                        <p>
+                            <i>Lead developer:</i> David <b>CATUHE</b> (<a href="http://www.twitter.com/@deltakosh">@deltakosh</a>)<br />
+                            <i>Developer:</i> David <b>ROUSSET</b> (<a href="http://www.twitter.com/@davrous">@davrous</a>)<br />
+                            <i>Developer:</i> Pierre <b>LAGARDE</b> (<a href="http://www.twitter.com/@pierlag">@pierlag</a>)<br />
+                            <i>3D Artist:</i> Michel <b>ROUSSEAU</b> (<a href="http://www.twitter.com/@rousseau_michel">@rousseau_michel</a>)<br />
+                            <br />
+                            <i>Hill Valley scene:</i> Camille <b>JOLY</b> and <a href="http://www.enozone.com/">Enozone</a><br />
+                            <i>Train scene:</i> Romuald <b>ROUHIER</b> and <a href="http://www.progiss.com/">Progiss</a><br />
+                        </p>
+                    </div>
+                    <div id="aboutParagraph">
+                        <h1>About babylon.js</h1>
+                        Babylon.js is a 3D engine based on <b>webgl</b> and <b>javascript</b>.
+                        It supports the following features:
+                    </div>
+                    <div id="features">
+                        <div id="engineFeatures">
+                            <ul>
+                                <li>Complete scene graph with lights, cameras, materials and meshes</li>
+                                <li><b>Collisions engine</b></li>
+                                <li><b>Physics engine (thanks to cannon.js)</b></li>
+                                <li>Scene picking</li>
+                                <li>Antialiasing</li>
+                                <li><b>Animations engine</b></li>
+                                <li><b>Particles Systems</b></li>
+                                <li>Sprites and 2D layers</li>
+                                <li>
+                                    Optimizations engines:
+                                    <ul>
+                                        <li>Frustum clipping</li>
+                                        <li>Sub-meshes clipping</li>
+                                        <li>Hardware scaling</li>
+                                        <li>Selection octrees</li>
+                                        <li>Offline mode (Assets are saved locally to prevent reloading them)</li>
+                                        <li>Incremental loading</li>
+                                        <li>Binary compressed format</li>
+                                        <li><b>Hardware accelerated instances</b></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Standard material is a <b>per pixel</b> material that supports:
+                                    <ul>
+                                        <li>Diffuse lightning and texture</li>
+                                        <li>Ambient lightning and texture</li>
+                                        <li>Specular lightning</li>
+                                        <li>Opacity texture</li>
+                                        <li>Reflection texture (Spheric, planar, cubic and projection)</li>
+                                        <li><b>Mirror texture</b></li>
+                                        <li><b>Emissive texture</b></li>
+                                        <li><b>Specular texture</b></li>
+                                        <li><b>Bump texture</b></li>
+                                        <li>Up to 4 lights (points, directionals, spots, hemispherics)</li>
+                                        <li>Custom materials</li>
+                                        <li>Skybox</li>
+                                        <li>Vertex color</li>
+                                        <li>4 bones per vertex</li>
+                                        <li>Fresnel term for diffuse, opacity, emissive and reflection</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Special FX
+                                    <ul>
+                                        <li>Fog</li>
+                                        <li>Alpha blending</li>
+                                        <li>Alpha testing</li>
+                                        <li>Billboarding</li>
+                                        <li>Fullscreen mode</li>
+                                        <li>Shadow Maps and Variance Shadow Maps</li>
+                                        <li>Rendering layers</li>
+                                        <li><b>Post-processes (blur, refraction, black'n'white, fxaa, customs...)</b></li>
+                                        <li><b>Lens flares</b></li>
+                                        <li><b>Multi-views</b></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Textures:
+                                    <ul>
+                                        <li>Render target textures</li>
+                                        <li>Dynamic textures (canvas)</li>
+                                        <li>Video textures</li>
+                                        <li>Compressed (DDS) textures</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Cameras:
+                                    <ul>
+                                        <li>Arc rotate camera</li>
+                                        <li>Free camera</li>
+                                        <li>Touch camera</li>
+                                        <li>Virtual Joysticks camera</li>
+                                        <li>Oculus Rift camera</li>
+                                        <li><b>Gamepad camera</b></li>
+                                        <li><b>VR Device Oriention camera</b></li>
+                                        <li><b>WebVR camera</b></li>
+                                        <li><b>Follow camera</b></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Meshes:
+                                    <ul>
+                                        <li>Mesh cloning</li>
+                                        <li>Dynamic meshes</li>
+                                        <li><b>Height maps</b></li>
+                                        <li>Bones</li>
+                                        <li>Constructive solid geometries</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Import:
+                                    <ul>
+                                        <li>Babylon scene file can be converted from <i>.OBJ</i>, <i>.FBX</i>, <i>.MXB</i></li>
+                                        <li>Exporter for Blender</li>
+                                        <li>Exporter for Cheetah3d</li>
+                                        <li><b>Exporter for 3ds max</b></li>
+                                        <li>Support for drag'n'drop</li>
+                                        <li>Assets manager</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="cameraTag"><img src="Assets/camera.png" /></div>
-                <div class="cameraTag" id="cameraClickableTag"></div>
+                <div id="footer">
+                    <a class="footerLink" id="aboutLink">about</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://www.babylonjs.com/sandbox">sandbox</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://www.babylonjs.com/cyos">CYOS</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://materialeditor.raananweber.com/">material editor</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js">github</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://doc.babylonjs.com">documentation</a>&nbsp;&nbsp;
+                    <a class="footerLink" href="http://babylonjs.uservoice.com">uservoice</a>&nbsp;&nbsp;
+                </div>
             </div>
+            <div id="renderZone" class="movedRight">
+                <canvas id="renderCanvas"></canvas>
+                <div id="fps"></div>
+                <div id="stats"></div>
+                <div id="status"></div>
+                <div id="controlPanel">
+                    <div id="controlsZone">
+                        <p>
+                            <button id="enableDebug">Debug layer</button>
+                        </p>
+                        <p>
+                            <button id="fullscreen">Fullscreen</button>
+                        </p>
+                    </div>
+                    <div class="tag">Control panel</div>
+                    <div class="tag" id="clickableTag"></div>
+                </div>
+                <div id="cameraPanel">
+                    <div id="cameraControlsZone">
+                        Active camera:<br>
+                        <select id="camerasList"></select>
+                        <p>
+                            Change control method:
+                            <button class="buttonControlPanel" id="touchCamera">
+                                <img src="Assets/CamTouchOff.png" class="buttonImg" />Touch camera
+                            </button>
+                            <button class="buttonControlPanel" id="deviceOrientationCamera">
+                                <img src="Assets/CamDeviceOff.png" class="buttonImg" />Device orientation camera
+                            </button>
+                            <button class="buttonControlPanel" id="gamepadCamera">
+                                <img src="Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
+                            </button>
+                            <button class="buttonControlPanel" id="virtualJoysticksCamera">
+                                <img src="Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
+                            </button>
+                            <button class="buttonControlPanel" id="anaglyphCamera">
+                                <img src="Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
+                            </button>
+                        </p>
+                        <p>
+                            Post-processes:
+                            <button class="smallButtonControlPanel" id="toggleFxaa">Toggle FXAA (antialiasing)</button>
+                            <button class="smallButtonControlPanel" id="toggleFsaa4">Toggle FSAA 4X (antialiasing)</button>
+                            <button class="smallButtonControlPanel" id="toggleBandW">Toggle Black and white</button>
+                            <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
+                        </p>
+                    </div>
+                    <div class="cameraTag"><img src="Assets/camera.png" /></div>
+                    <div class="cameraTag" id="cameraClickableTag"></div>
+                </div>
+            </div>
+            <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
         </div>
-        <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
-    </div>
-</body>
+    </body>
 </html>

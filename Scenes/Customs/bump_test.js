@@ -5,6 +5,7 @@
     var sphere = BABYLON.Mesh.CreateSphere("Sphere", 16, 3, scene);
     var material = new BABYLON.StandardMaterial("kosh", scene);
     material.bumpTexture = new BABYLON.Texture("Scenes/Customs/normalMap.jpg", scene);
+    material.bumpTexture.level = 1.0;
     material.diffuseColor = new BABYLON.Color3(1, 0, 0);
     
     sphere.material = material;

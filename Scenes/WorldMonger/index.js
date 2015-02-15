@@ -95,7 +95,7 @@
             camera.radius = 5;
 
         // Fps
-        divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+        divFps.innerHTML = engine.getFps().toFixed() + " fps";
 
         // Render scene
         scene.render();

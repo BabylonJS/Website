@@ -15,7 +15,7 @@ var onload = function () {
     function hideAllUI() {
         var divsToHide = document.querySelectorAll("#renderZone > div");
         for (var i = 0; i < divsToHide.length; ++i) {
-            if (divsToHide[i].id == "fps") continue;
+            if (divsToHide[i].id === "fps") continue;
             divsToHide[i].className += " hidden";
         }
     }
@@ -23,14 +23,31 @@ var onload = function () {
     function restoreAllUI() {
         var divsToHide = document.querySelectorAll("#renderZone > div");
         for (var i = 0; i < divsToHide.length; ++i) {
-            if (divsToHide[i].id == "fps") continue;
+            if (divsToHide[i].id === "fps") continue;
             divsToHide[i].className = divsToHide[i].className.replace(" hidden", "");
         }
     }
     // Demos
     var demos = [
         {
-            title: "V8 ENGINE", scene: "V8", screenshot: "V8.jpg", size: "15 MB", big: true, incremental: false, doNotUseCDN: true, anchor: "V8",
+            title: "MANSION", scene: "Mansion", big: true, screenshot: "Mansion400.jpg", size: "75 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "MANSION",
+            onload: function () {
+                var moon = scene.getMeshByName("Moon");
+                var vls = new BABYLON.VolumetricLightScatteringPostProcess('vls', 1.0, scene.activeCamera, moon, 65, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, false);
+                vls.exposure = 0.15;
+                vls.weight = 0.54;
+            }
+        },
+        {
+            title: "DINO HUNT", url: "http://dinohuntcanada.history.ca", big: false, screenshot: "dino800.jpg", size: "History Channel"
+        },
+        {
+            title: "RETAIL", scene: "Retail", screenshot: "Retail800.jpg", size: "3 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "RETAIL",
+            onload: function () {
+            }
+        },
+        {
+            title: "V8 ENGINE", scene: "V8", screenshot: "V8small.jpg", size: "15 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "V8",
             onload: function () {
                 scene.activeCamera.minZ = 1;
             }
@@ -42,6 +59,7 @@ var onload = function () {
             title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", incremental: true, onload: function () {
                 scene.collisionsEnabled = false;
                 scene.lightsEnabled = false;
+                scene.activeCamera.applyGravity = true;
                 scene.createOrUpdateSelectionOctree();
                 for (var matIndex = 0; matIndex < scene.materials.length; matIndex++) {
                     scene.materials[matIndex].checkReadyOnEveryCall = false;
@@ -49,7 +67,7 @@ var onload = function () {
             }
         },
         {
-            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB", binary: true, onload: function () {
+            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB<BR>by Romuald ROUHIER ", binary: true, onload: function () {
                 scene.collisionsEnabled = false;
                 for (var index = 0; index < scene.cameras.length; index++) {
                     scene.cameras[index].minZ = 10;
@@ -84,34 +102,36 @@ var onload = function () {
             }
         },
         {
-            title: "ROBOT", url: "Scenes/Robot/index.html", screenshot: "robot.jpg", size: "8.5 MB", onload: function () {
+            title: "ROBOT", url: "Scenes/Robot/index.html", screenshot: "robot.jpg", size: "8.5 MB<BR>by Michel Rousseau", onload: function () {
                 scene.collisionsEnabled = false;
             }
         },
         { title: "WORLDMONGER", url: "Scenes/Worldmonger/index.html", screenshot: "worldmonger.jpg", size: "8.5 MB" },
         {
-            title: "HEART", scene: "Heart", screenshot: "heart.jpg", doNotUseCDN: true, size: "14 MB", onload: function () {
+            title: "HEART", scene: "Heart", screenshot: "heart.jpg", doNotUseCDN: false, size: "14 MB<BR>by Michel Rousseau", onload: function () {
                 scene.getMeshByName("Labels").setEnabled(false);
+                scene.getMeshByName("lums").useVertexColors = false;
             }
         },
 
         {
-            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", doNotUseCDN: false, binary: true, onload: function () {
+            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB<BR>by Michel Rousseau", doNotUseCDN: false, binary: true, onload: function () {
                 scene.autoClear = true;
                 scene.createOrUpdateSelectionOctree();
+                scene.getMeshByName("Sol loin").useVertexColors = false;
 
                 var postProcess = new BABYLON.RefractionPostProcess("Refraction", "/scenes/customs/refMap.jpg", new BABYLON.Color3(1.0, 1.0, 1.0), 0.5, 0.5, 1.0, scene.cameras[1]);
             }
         },
 
-        { title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", doNotUseCDN: true, size: "28 MB", anchor: "WCAFE" },
+        { title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", doNotUseCDN: false, size: "28 MB<BR>by Michel Rousseau", anchor: "WCAFE" },
         {
             title: "FLAT 2009",
             scene: "flat2009",
             screenshot: "flat2009.jpg",
             binary: true,
             doNotUseCDN: false,
-            size: "44 MB",
+            size: "44 MB<BR>by Michel Rousseau",
             onload: function () {
                 var ecran = scene.getMeshByName("Ecran");
                 ecran.material.diffuseTexture = new BABYLON.VideoTexture("video", ["Scenes/Flat2009/babylonjs.mp4", "Scenes/Flat2009/babylonjs.webm"],
@@ -119,11 +139,16 @@ var onload = function () {
                 scene.createOrUpdateSelectionOctree();
             }
         },
-        { title: "THE CAR", scene: "TheCar", screenshot: "thecar.jpg", size: "100 MB", binary: true, anchor: "THECAR" },
+        {
+            title: "THE CAR", scene: "TheCar", screenshot: "thecar.jpg", size: "100 MB<BR>by Michel Rousseau", binary: true, anchor: "THECAR", onload: function () {
+                scene.getMeshByName("C-Max_Pneu_arrière_gauche").material.bumpTexture = null;
+                scene.getMeshByID("b73467cc-d1b0-4b8b-a767-12a95e0e28cf").alphaIndex = 0;
+            }
+        },
         { title: "VIPER", scene: "Viper", screenshot: "viper.jpg", size: "18 MB" },
         { title: "SPACESHIP", scene: "Spaceship", screenshot: "spaceship.jpg", size: "1 MB" },
         {
-            title: "OMEGA CRUSHER", scene: "SpaceDeK", screenshot: "omegacrusher.jpg", size: "10 MB", anchor: "OMEGA", onload: function () {
+            title: "OMEGA CRUSHER", scene: "SpaceDeK", screenshot: "omegacrusher.jpg", size: "10 MB<BR>by Michel Rousseau", anchor: "OMEGA", onload: function () {
                 scene.collisionsEnabled = false;
             }
         }];
@@ -132,7 +157,7 @@ var onload = function () {
         var originCamera = scene.activeCamera;
         scene.autoClear = true;
 
-        scene.activeCamera = new BABYLON.OculusCamera("Oculus", originCamera.position, scene);
+        scene.activeCamera = new BABYLON.OculusGamepadCamera("Oculus", originCamera.position, scene);
         scene.activeCamera.minZ = originCamera.minZ;
         scene.activeCamera.maxZ = originCamera.maxZ;
         scene.activeCamera.gravity = originCamera.gravity;
@@ -170,6 +195,12 @@ var onload = function () {
     ];
 
     var tests = [
+		{ title: "VOLUMETRIC LIGHT SCATTERING", id: 31, screenshot: "volumetriclightscattering.jpg", size: "10 MB", anchor: "VOLUMETRICLIGHTSCATTERING" },
+        { title: "SSAO", id: 30, screenshot: "ssao.jpg", size: "10 MB", anchor: "SSAO" },
+        { title: "POLYGON MESH", id: 29, screenshot: "polygon.jpg", size: "1 MB", anchor: "POLYGON" },
+        { title: "INSTANCED BONES", id: 28, screenshot: "bones2.jpg", size: "10 MB", anchor: "INSTANCEDBONES" },
+        { title: "LEVEL OF DETAIL", id: 27, screenshot: "lod.jpg", size: "1 MB", anchor: "LOD" },
+        { title: "PROCEDURAL TEXTURES", id: 26, screenshot: "ProceduralTextures.png", size: "5 MB", anchor: "PROCEDURAL" },
         { title: "ENHANCED PARTICLES", id: 25, screenshot: "particles2.jpg", size: "1 MB", anchor: "PARTICLES2" },
         { title: "FRESNEL", id: 23, screenshot: "fresnel.jpg", size: "1 MB", anchor: "FRESNEL" },
         { title: "CUSTOM RENDER TARGET", id: 24, screenshot: "customRenderTarget.jpg", size: "1 MB", anchor: "CUSTOMRENDERTARGET" },
@@ -205,6 +236,28 @@ var onload = function () {
     ];
 
     var thirdParties = [
+        { title: "CHARACTER STUDY", url: "http://www.visualiser.fr/Babylon/character/default.htm", screenshot: "characterstudy.jpg", size: "Samuel Girardin" },
+        {
+            title: "DANCE MOVES", scene: "DanceMoves", screenshot: "mixamo.jpg", size: "MIXAMO &<BR>Jerry Richards", anchor: "DANCEMOVES", onload: function () {
+
+                var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
+                groundMaterial.reflectionTexture = new BABYLON.MirrorTexture("mirror", 1024, scene, true);
+                groundMaterial.reflectionTexture.mirrorPlane = new BABYLON.Plane(0, -1.0, 0, 0);
+                groundMaterial.reflectionTexture.renderList = [scene.meshes[0], scene.meshes[1]];
+                groundMaterial.reflectionTexture.level = 0.5;
+
+                // Ground
+                var ground = BABYLON.Mesh.CreateGround("ground", 1000, 1000, 1, scene, false);
+
+                groundMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+                groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+                ground.material = groundMaterial;
+                ground.receiveShadows = true;
+
+                scene.beginAnimation(scene.skeletons[0], 2, 100, true, 0.05);
+            }
+        },
         { title: "CYBROX SUPRA", url: "http://www.3dpanacea.com/automotive_showroom/cybrox.html", screenshot: "Cybrox Supra.jpg", size: "3D Panacea" },
         { title: "DESIGN THE 5", url: "http://designthe5.com", screenshot: "design5.jpg", size: "Realpie Media &<BR>Jumpkick Studios" },
         { title: "Evasion", url: "http://www.castorengine.com/babylon/Evasion/index.html", screenshot: "evasion.jpg", size: "by Dad72" },
@@ -232,14 +285,9 @@ var onload = function () {
     var renderZone = document.getElementById("renderZone");
     var controlPanel = document.getElementById("controlPanel");
     var cameraPanel = document.getElementById("cameraPanel");
-    var wireframe = document.getElementById("wireframe");
     var divFps = document.getElementById("fps");
-    var stats = document.getElementById("stats");
-    var enableStats = document.getElementById("enableStats");
-    var hardwareScalingLevel = document.getElementById("hardwareScalingLevel");
-    var collisions = document.getElementById("collisions");
-    var postProcess = document.getElementById("postProcess");
-    var mirrors = document.getElementById("mirrors");
+    var aboutPanel = document.getElementById("aboutPanel");
+    var enableDebug = document.getElementById("enableDebug");
     var status = document.getElementById("status");
     var fullscreen = document.getElementById("fullscreen");
     var touchCamera = document.getElementById("touchCamera");
@@ -252,7 +300,6 @@ var onload = function () {
     var toggleFxaa = document.getElementById("toggleFxaa");
     var toggleBandW = document.getElementById("toggleBandW");
     var toggleSepia = document.getElementById("toggleSepia");
-
 
     var sceneChecked;
 
@@ -267,11 +314,11 @@ var onload = function () {
 
                 restoreAllUI();
 
-                if (window.location.hostname.indexOf("localhost") == -1) {
+                if (window.location.hostname.indexOf("localhost") === -1) {
                     if (demo.doNotUseCDN) {
                         sceneLocation = "http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/";
                     }
-                    else{
+                    else {
                         sceneLocation = "http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/";
                     }
                 }
@@ -320,7 +367,7 @@ var onload = function () {
             var newText = document.createElement("div");
             newImg.id = "newImg";
             newImg.src = "Assets/SpotLast.png";
-            newText.innerHTML = "LAST<br>UPDATE";
+            newText.innerHTML = "LATEST<br>UPDATE";
             newText.id = "newText";
             span.appendChild(newImg);
             span.appendChild(newText);
@@ -370,7 +417,7 @@ var onload = function () {
     if (oculusDemosElem) {
         removeChildren(oculusDemosElem);
         for (index = 0; index < oculusTests.length; ++index) {
-            var test = oculusTests[index];
+             test = oculusTests[index];
             createItem(test, oculusDemosElem);
         }
     }
@@ -404,8 +451,8 @@ var onload = function () {
     var onPointerDown = function (evt, pickResult) {
         if (!panelIsClosed) {
             panelIsClosed = true;
-            controlPanel.style.webkitTransform = "translateY(250px)";
-            controlPanel.style.transform = "translateY(250px)";
+            controlPanel.style.webkitTransform = "translateY(100px)";
+            controlPanel.style.transform = "translateY(100px)";
         }
 
         if (pickResult.hit) {
@@ -470,7 +517,7 @@ var onload = function () {
             option.text = camera.name;
             option.value = camera;
 
-            if (camera == scene.activeCamera) {
+            if (camera === scene.activeCamera) {
                 option.selected = true;
             }
 
@@ -582,6 +629,24 @@ var onload = function () {
                     case 25:
                         newScene = CreateParticles2TestScene(engine);
                         break;
+                    case 26:
+                        newScene = CreateProceduralTextureTestScene(engine);
+                        break;
+                    case 27:
+                        newScene = CreateLODTestScene(engine);
+                        break;
+                    case 28:
+                        newScene = CreateBones2TestScene(engine);
+                        break;
+                    case 29:
+                        newScene = CreatePolygonScene(engine);
+                        break;
+                    case 30:
+                        newScene = CreateSSAOScene(engine);
+                        break;
+                	case 31:
+                		newScene = CreateVolumetricLightScatteringScene(engine);
+                		break;
                 }
                 scene = newScene;
                 scene.executeWhenReady(function () {
@@ -633,7 +698,7 @@ var onload = function () {
                     engine.loadingUIText = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
                 } else {
                     dlCount = evt.loaded / (1024 * 1024);
-                    engine.loadingUIText= "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
+                    engine.loadingUIText = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
                 }
             });
         };
@@ -651,7 +716,7 @@ var onload = function () {
     // Render loop
     var renderFunction = function () {
         // Fps
-        divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
+        divFps.innerHTML = engine.getFps().toFixed() + " fps";
 
         // Render scene
         if (scene) {
@@ -661,19 +726,6 @@ var onload = function () {
             }
 
             scene.render();
-
-            // Stats
-            if (enableStats.checked) {
-                stats.innerHTML = "Total vertices: " + scene.getTotalVertices() + "<br>"
-                    + "Active vertices: " + scene.getActiveVertices() + "<br>"
-                    + "Active particles: " + scene.getActiveParticles() + "<br><br><br>"
-                    + "Frame duration: " + scene.getLastFrameDuration() + " ms<br><br>"
-                    + "<i>Evaluate Active Meshes duration:</i> " + scene.getEvaluateActiveMeshesDuration() + " ms<br>"
-                    + "<i>Render Targets duration:</i> " + scene.getRenderTargetsDuration() + " ms<br>"
-                    + "<i>Particles duration:</i> " + scene.getParticlesDuration() + " ms<br>"
-                    + "<i>Sprites duration:</i> " + scene.getSpritesDuration() + " ms<br>"
-                    + "<i>Render duration:</i> " + scene.getRenderDuration() + " ms";
-            }
 
             // Streams
             if (scene.useDelayedTextureLoading) {
@@ -695,14 +747,6 @@ var onload = function () {
         engine.resize();
     });
 
-    // Caps
-    var caps = engine.getCaps();
-    document.getElementById("extensions").innerHTML =
-            "Max textures image units: <b>" + caps.maxTexturesImageUnits + "</b><br>" +
-            "Max texture size: <b>" + caps.maxTextureSize + "</b><br>" +
-            "Max cubemap texture size: <b>" + caps.maxCubemapTextureSize + "</b><br>" +
-            "Max render texture size: <b>" + caps.maxRenderTextureSize + "</b><br>";
-
     // UI
     var panelIsClosed = true;
     var cameraPanelIsClosed = true;
@@ -714,8 +758,8 @@ var onload = function () {
             controlPanel.style.transform = "translateY(0px)";
         } else {
             panelIsClosed = true;
-            controlPanel.style.webkitTransform = "translateY(250px)";
-            controlPanel.style.transform = "translateY(250px)";
+            controlPanel.style.webkitTransform = "translateY(100px)";
+            controlPanel.style.transform = "translateY(100px)";
         }
     });
 
@@ -755,7 +799,7 @@ var onload = function () {
         cameraPanel.style.transform = "translateX(17em)";
     };
 
-    document.getElementById("menuPanel").addEventListener("click", function (evt) {
+    document.getElementById("menuPanel").addEventListener("click", function () {
         if (!aboutIsClosed) {
             aboutIsClosed = true;
             aboutPanel.style.webkitTransform = "translateX(-120%)";
@@ -765,14 +809,14 @@ var onload = function () {
         }
     });
 
-    wireframe.addEventListener("change", function () {
-        if (engine) {
-            engine.forceWireframe = wireframe.checked;
+    enableDebug.addEventListener("click", function () {
+        if (scene) {
+        	if (scene.debugLayer.isVisible()) {
+        		scene.debugLayer.hide();
+            } else {
+                scene.debugLayer.show();
+            }
         }
-    });
-
-    enableStats.addEventListener("change", function () {
-        stats.className = enableStats.checked ? "" : "hidden";
     });
 
     fullscreen.addEventListener("click", function () {
@@ -879,30 +923,6 @@ var onload = function () {
         switchCamera(camera);
     });
 
-    hardwareScalingLevel.addEventListener("change", function () {
-        if (!engine)
-            return;
-        engine.setHardwareScalingLevel(hardwareScalingLevel.selectedIndex + 1);
-    });
-
-    collisions.addEventListener("change", function () {
-        if (scene) {
-            scene.collisionsEnabled = collisions.checked;
-        }
-    });
-
-    postProcess.addEventListener("change", function () {
-        if (scene) {
-            scene.postProcessesEnabled = postProcess.checked;
-        }
-    });
-
-    mirrors.addEventListener("change", function () {
-        if (scene) {
-            scene.renderTargetsEnabled = mirrors.checked;
-        }
-    });
-
     toggleBandW.addEventListener("click", function () {
         if (scene && scene.activeCamera) {
             if (scene.activeCamera.__bandw_cookie) {
@@ -965,7 +985,7 @@ var onload = function () {
 
 
     // Cameras
-    camerasList.addEventListener("change", function (ev) {
+    camerasList.addEventListener("change", function () {
         scene.activeCamera.detachControl(canvas);
         scene.activeCamera = scene.cameras[camerasList.selectedIndex];
         scene.activeCamera.attachControl(canvas);
@@ -976,7 +996,7 @@ var onload = function () {
 
     if (queryString) {
         var query = queryString.replace("?", "");
-        var index = parseInt(query);
+        index = parseInt(query);
 
         if (!isNaN(index)) {
             if (index >= demos.length) {
@@ -994,6 +1014,12 @@ var onload = function () {
             for (index = 0; index < tests.length; index++) {
                 if (tests[index].anchor && tests[index].anchor === query || tests[index].title === query) {
                     itemClick(tests[index])();
+                    return;
+                }
+            }
+            for (index = 0; index < thirdParties.length; index++) {
+                if (thirdParties[index].anchor && thirdParties[index].anchor === query || thirdParties[index].title === query) {
+                    itemClick(thirdParties[index])();
                     return;
                 }
             }
