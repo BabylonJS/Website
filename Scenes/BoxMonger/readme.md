@@ -1,4 +1,4 @@
-Welcome to this Babylon.JS sample.
+Welcome to this Babylon.JS Minecraft-like sample
 ---------
 
 This is a technical demonstration of how you can recreate a Minecraft-like experience using WebGL.
