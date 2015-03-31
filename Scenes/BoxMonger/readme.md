@@ -11,8 +11,14 @@ I will soon write a blog article explaining this more in details.
 
 Do not hesitate to contact me on twitter to talk about this (http://www.twitter.com/meulta) or on the forum (http://www.html5gamedevs.com/forum/16-babylonjs/)
 
-How to use :
+How to use / test
 ----------
+
+1. Get the files
+2. Launch index.html :) (and wait a bit until everything initiate)
+
+How to contribute
+-------
 
 The main code is written in Typescript (www.typescriptlang.org) and you have to run a Gulp workflow to translate it into Javascript.
 
@@ -24,6 +30,4 @@ You just need nodejs and npm installed on your machine.
 3. Run : **npm install gulp**
 4. Run : **npm update**
 5. Run : **gulp**
-
-Launch index.html :) (and wait a bit until everything initiate)
-
+6. Launch index.html :) (and wait a bit until everything initiate)
