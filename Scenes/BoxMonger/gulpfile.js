@@ -37,7 +37,7 @@ gulp.task('typescript-declaration', ['typescript-to-js'], function() {
                        }));
 
     return tsResult.dts.pipe(concat('boxmonger.d.ts'))
-	.pipe(gulp.dest('release/'));
+	.pipe(gulp.dest('.'));
 });
 
 gulp.task('default', function() {
