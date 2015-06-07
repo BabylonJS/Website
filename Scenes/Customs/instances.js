@@ -59,6 +59,7 @@
     groundMaterial.diffuseTexture.uScale = 6;
     groundMaterial.diffuseTexture.vScale = 6;
     groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+    groundMaterial.emissiveColor = new BABYLON.Color3(0.3, 0.3, 0.3);
     ground.material = groundMaterial;
     ground.receiveShadows = true;
     ground.checkCollisions = true;

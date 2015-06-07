@@ -54,6 +54,7 @@ var BOXMONGER;
             vertexData.uvs = [];
             vertexData.normals = [];
             for (var cubeIndex = 0; cubeIndex < this._capacity; cubeIndex++) {
+                // Create each face in turn.
                 for (var index = 0; index < this._normalsSource.length; index++) {
                     var normal = this._normalsSource[index];
                     // Get two vectors perpendicular to the face normal and to each other.
@@ -143,6 +144,7 @@ var BOXMONGER;
             var positionsWriteStart = writePosition / 3 * 72;
             var indicesWriteStart = writePosition / 3 * 36;
             var positionInVerticeCache = 0;
+            // Create each face in turn.
             for (var index = 0; index < 6; index++) {
                 // Four vertices per face.
                 var vertex = this._cubeVerticeCache[positionInVerticeCache++];
@@ -201,6 +203,7 @@ var BOXMONGER;
             var positionsWriteStart = writePosition / 3 * 72;
             var indicesWriteStart = writePosition / 3 * 36;
             var positionInVerticeCache = 0;
+            // Create each face in turn.
             for (var index = 0; index < 6; index++) {
                 // Six indices (two triangles) per face.
                 var verticesLength = positionsWriteStart / 3;
@@ -321,5 +324,4 @@ var BOXMONGER;
     })();
     BOXMONGER.BoxMesh = BoxMesh;
 })(BOXMONGER || (BOXMONGER = {}));
-
 //# sourceMappingURL=boxmonger.boxmesh.js.map

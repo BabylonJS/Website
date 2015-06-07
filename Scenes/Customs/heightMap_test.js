@@ -9,16 +9,16 @@
     var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, scene);
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
     skyboxMaterial.backFaceCulling = false;
-    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/skybox", scene);
+    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/skybox", scene);
     skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
     skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
     skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     skybox.material = skyboxMaterial;
     
     // Ground
-    var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "Scenes/Customs/heightMap.png", 100, 100, 100, 0, 10, scene, false);
+    var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "/Scenes/Customs/heightMap.png", 100, 100, 100, 0, 10, scene, false);
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-    groundMaterial.diffuseTexture = new BABYLON.Texture("Scenes/Customs/ground.jpg", scene);
+    groundMaterial.diffuseTexture = new BABYLON.Texture("/Scenes/Customs/ground.jpg", scene);
 
     groundMaterial.diffuseTexture.uScale = 6;
     groundMaterial.diffuseTexture.vScale = 6;

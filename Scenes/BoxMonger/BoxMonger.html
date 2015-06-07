@@ -19,14 +19,14 @@
         }
     </style>
 
-    <script type="text/javascript" src="./babylonjs/babylon.max.js"></script>
+    <script type="text/javascript" src="..\..\babylon.max.js"></script>
     <script type="text/javascript" src="boxmonger.boxmesh.js"></script>
     <script type="text/javascript" src="boxmonger.worldmanager.js"></script>
 </head>
 <body>
     <canvas id="renderCanvas"></canvas>
     <script type="text/javascript">
-        ///<reference path="./babylonjs/babylon.max.js" />
+        ///<reference path="../../babylon.max.js" />
         ///<reference path="boxmonger.boxmesh.js" />
         ///<reference path="boxmonger.worldmanager.js" />
 
@@ -88,11 +88,11 @@
 
         function getChar(event) {
             if (event.which == null) {
-                return String.fromCharCode(event.keyCode); // IE
-            } else if (event.which !== 0 && event.charCode !== 0) {
-                return String.fromCharCode(event.which); // the rest
+                return String.fromCharCode(event.keyCode) // IE
+            } else if (event.which!=0 && event.charCode!=0) {
+                return String.fromCharCode(event.which)   // the rest
             } else {
-                return null; // special key
+                return null // special key
             }
         }
 

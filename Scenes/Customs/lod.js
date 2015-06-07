@@ -10,7 +10,7 @@
 
     // Materials
     var materialAmiga = new BABYLON.StandardMaterial("amiga", scene);
-    materialAmiga.diffuseTexture = new BABYLON.Texture("assets/amiga.jpg", scene);
+    materialAmiga.diffuseTexture = new BABYLON.Texture("/assets/amiga.jpg", scene);
     materialAmiga.emissiveColor = new BABYLON.Color3(0.5, 0.5, 0.5);
     materialAmiga.diffuseTexture.uScale = 5;
     materialAmiga.diffuseTexture.vScale = 5;

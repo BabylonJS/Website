@@ -4,6 +4,7 @@
     var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, new BABYLON.Vector3(0, 30, 0), scene);
     camera.setPosition(new BABYLON.Vector3(20, 70, 120));
     light.position = new BABYLON.Vector3(50, 250, 200);
+	light.shadowOrthoScale = 2.0;
     camera.minZ = 1.0;
 
     scene.ambientColor = new BABYLON.Color3(0.3, 0.3, 0.3);
@@ -18,9 +19,10 @@
 
     // Shadows
     var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
+	shadowGenerator.usePoissonSampling = true;
 
     // Dude
-    BABYLON.SceneLoader.ImportMesh("him", "Scenes/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
+    BABYLON.SceneLoader.ImportMesh("him", "/Scenes/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
         var dude = newMeshes2[0];
 
         for (var index = 1; index < newMeshes2.length; index++) {

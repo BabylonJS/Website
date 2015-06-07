@@ -9,20 +9,18 @@
     camera.minZ = 1.0;
     camera.maxZ = 120.0;
 
-    engine.displayLoadingUI();
-
     // Skybox
     var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, scene);
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
     skyboxMaterial.backFaceCulling = false;
-    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/TropicalSunnyDay", scene);
+    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/TropicalSunnyDay", scene);
     skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
     skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
     skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     skybox.material = skyboxMaterial;
 
     // depth material
-    BABYLON.Effect.ShadersStore["depthVertexShader"] = 
+    BABYLON.Effect.ShadersStore["customDepthVertexShader"] = 
         "#ifdef GL_ES\n" +
         "precision highp float;\n" +
         "#endif\n" +
@@ -31,7 +29,7 @@
         "void main(void) {\n" +
         "gl_Position = worldViewProjection * vec4(position, 1.0);\n" +
         "}";
-    BABYLON.Effect.ShadersStore["depthPixelShader"] =
+    BABYLON.Effect.ShadersStore["customDepthPixelShader"] =
         "#ifdef GL_ES\n" +
         "precision highp float;\n" +
         "#endif\n" +
@@ -42,7 +40,7 @@
         "}\n" +
         "";
 
-    var depthMaterial = new BABYLON.ShaderMaterial("depth", scene, "depth",
+    var depthMaterial = new BABYLON.ShaderMaterial("customDepth", scene, "customDepth",
         {
             attributes: ["position"],
             uniforms: ["worldViewProjection"]
@@ -96,16 +94,9 @@
 
     plane.material = mat;
 
-
     // Animations
-    var isReady = false;
     scene.registerBeforeRender(function () {
         camera.alpha += 0.01 * scene.getAnimationRatio();
-
-        if (!isReady && scene.isReady()) {
-            isReady = true;
-            engine.hideLoadingUI();
-        }
     });
 
     return scene;

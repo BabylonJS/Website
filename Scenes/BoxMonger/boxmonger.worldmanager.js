@@ -75,6 +75,7 @@ var BOXMONGER;
             var boxType;
             if (this._displayer != undefined) {
                 if (!this._displayer.isInitialized) {
+                    //init boxes
                     for (var x = 0; x < this._width; x++) {
                         for (var y = 0; y <= this._realHeight; y++) {
                             for (var z = 0; z < this._depth; z++) {
@@ -96,6 +97,7 @@ var BOXMONGER;
                     this._displayer.isInitialized = true;
                 }
                 else {
+                    //update boxes
                     for (var meshId = 0; meshId < BlocTypes.Types.length; meshId++) {
                         while (this._boxToDraw[meshId].length > 0) {
                             var x = this._boxToDraw[meshId].pop();
@@ -404,6 +406,7 @@ var BOXMONGER;
                     this._playerPosition.x = x;
                     this._playerPosition.y = y;
                     this._playerPosition.z = z;
+                    // Libérer les chunks à virer
                     for (var x = oldChunkBoundingBoxXMin; x <= oldChunkBoundingBoxXMax; x++) {
                         for (var y = oldChunkBoundingBoxYMin; y <= oldChunkBoundingBoxYMax; y++) {
                             if (x < newChunkBoundingBoxXMin || x > newChunkBoundingBoxXMax || y < newChunkBoundingBoxYMin || y > newChunkBoundingBoxYMax) {
@@ -415,6 +418,7 @@ var BOXMONGER;
                             }
                         }
                     }
+                    // Afficher les chunks à afficher
                     for (var x = newChunkBoundingBoxXMin; x <= newChunkBoundingBoxXMax; x++) {
                         for (var y = newChunkBoundingBoxYMin; y <= newChunkBoundingBoxYMax; y++) {
                             if (x < oldChunkBoundingBoxXMin || x > oldChunkBoundingBoxXMax || y < oldChunkBoundingBoxYMin || y > oldChunkBoundingBoxYMax) {
@@ -431,5 +435,4 @@ var BOXMONGER;
     })();
     BOXMONGER.WordManager = WordManager;
 })(BOXMONGER || (BOXMONGER = {}));
-
 //# sourceMappingURL=boxmonger.worldmanager.js.map

@@ -1,0 +1,67 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    background: url("LogoV3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: 2px solid black;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 30px;
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+    width:100%;
+    order: 1;
+}
+
+.renderCanvas {
+    position:absolute;
+    transform: translateX(-600px);
+    width: 600px;
+    height: 400px;
+}
+
+.renderImage {
+    width: 600px;
+    height: 400px;
+    order: 2;
+}
+
+.result {
+    color:green;
+    font-size: 80px;
+    order: 3;
+    width: 300px;
+    text-align: center;
+}
+
+.result.failed {
+    color:red;
+}
+
+.resultImage {
+    width: 600px;
+    height: 400px;
+    order: 4;
+}

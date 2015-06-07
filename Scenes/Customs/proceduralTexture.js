@@ -1,6 +1,4 @@
-﻿///<reference path="../../babylon.max.js" />
-
-var CreateProceduralTextureTestScene = function (engine) {
+﻿var CreateProceduralTextureTestScene = function (engine) {
     //Let's create some helpers
     var CreateBosquet = function (name, x, y, z, scene, shadowGenerator, woodMaterial, grassMaterial) {
         var bosquet = BABYLON.Mesh.CreateBox(name, 2, scene);
@@ -115,13 +113,14 @@ var CreateProceduralTextureTestScene = function (engine) {
     var square = BABYLON.Mesh.CreateGround("square", 20, 20, 2, scene);
     square.position = new BABYLON.Vector3(0, 0, 0);
     var customMaterial = new BABYLON.StandardMaterial("custommat", scene);
-    var customProcText = new BABYLON.CustomProceduralTexture("customtext", "./Scenes/Customs/customProceduralTextures/land", 1024, scene);
+    var customProcText = new BABYLON.CustomProceduralTexture("customtext", "/Scenes/Customs/customProceduralTextures/land", 1024, scene);
     customMaterial.ambientTexture = customProcText;
     square.material = customMaterial;
 
     //Applying some shadows
     var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
-	shadowGenerator.usePoissonSampling = true;
+    shadowGenerator.usePoissonSampling = true;
+	shadowGenerator.bias = 0;
     square.receiveShadows = true;
 
     //Creating 4 bosquets

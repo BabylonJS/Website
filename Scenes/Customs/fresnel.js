@@ -11,15 +11,13 @@
 
     camera.setPosition(new BABYLON.Vector3(-15, 3, 0));
 
-    engine.displayLoadingUI();
-
     sphere2.position.z -= 5;
     sphere3.position.z += 5;
     sphere4.position.x += 5;
     sphere5.position.x -= 5;
 
     // Sphere1 material
-    material.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/TropicalSunnyDay", scene);
+    material.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/TropicalSunnyDay", scene);
     material.diffuseColor = new BABYLON.Color3(0, 0, 0);
     material.emissiveColor = new BABYLON.Color3(0.5, 0.5, 0.5);
     material.alpha = 0.2;
@@ -43,7 +41,7 @@
 
     // Sphere2 material
     material = new BABYLON.StandardMaterial("kosh2", scene);
-    material.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/TropicalSunnyDay", scene);
+    material.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/TropicalSunnyDay", scene);
     material.diffuseColor = new BABYLON.Color3(0, 0, 0);
     material.emissiveColor = new BABYLON.Color3(0.5, 0.5, 0.5);
     material.specularPower = 32;
@@ -101,7 +99,7 @@
     // Sphere5 material
     material = new BABYLON.StandardMaterial("kosh5", scene);
     material.diffuseColor = new BABYLON.Color3(0, 0, 0);
-    material.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/TropicalSunnyDay", scene);
+    material.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/TropicalSunnyDay", scene);
     material.reflectionTexture.level = 0.5;
     material.specularPower = 64;
     material.emissiveColor = new BABYLON.Color3(0.2, 0.2, 0.2);
@@ -120,7 +118,7 @@
     var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, scene);
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
     skyboxMaterial.backFaceCulling = false;
-    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Scenes/Customs/skybox/TropicalSunnyDay", scene);
+    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/Scenes/Customs/skybox/TropicalSunnyDay", scene);
     skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
     skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
     skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
@@ -128,22 +126,16 @@
 
     // Lens flares
     var lensFlareSystem = new BABYLON.LensFlareSystem("lensFlareSystem", light, scene);
-    var flare00 = new BABYLON.LensFlare(0.2, 0, new BABYLON.Color3(1, 1, 1), "Assets/Flare.png", lensFlareSystem);
-    var flare01 = new BABYLON.LensFlare(0.5, 0.2, new BABYLON.Color3(0.5, 0.5, 1), "Assets/Flare.png", lensFlareSystem);
-    var flare02 = new BABYLON.LensFlare(0.2, 1.0, new BABYLON.Color3(1, 1, 1), "Assets/Flare.png", lensFlareSystem);
-    var flare03 = new BABYLON.LensFlare(0.4, 0.4, new BABYLON.Color3(1, 0.5, 1), "Assets/Flare.png", lensFlareSystem);
-    var flare04 = new BABYLON.LensFlare(0.1, 0.6, new BABYLON.Color3(1, 1, 1), "Assets/Flare.png", lensFlareSystem);
-    var flare05 = new BABYLON.LensFlare(0.3, 0.8, new BABYLON.Color3(1, 1, 1), "Assets/Flare.png", lensFlareSystem);
+    var flare00 = new BABYLON.LensFlare(0.2, 0, new BABYLON.Color3(1, 1, 1), "/Assets/Flare.png", lensFlareSystem);
+    var flare01 = new BABYLON.LensFlare(0.5, 0.2, new BABYLON.Color3(0.5, 0.5, 1), "/Assets/Flare.png", lensFlareSystem);
+    var flare02 = new BABYLON.LensFlare(0.2, 1.0, new BABYLON.Color3(1, 1, 1), "/Assets/Flare.png", lensFlareSystem);
+    var flare03 = new BABYLON.LensFlare(0.4, 0.4, new BABYLON.Color3(1, 0.5, 1), "/Assets/Flare.png", lensFlareSystem);
+    var flare04 = new BABYLON.LensFlare(0.1, 0.6, new BABYLON.Color3(1, 1, 1), "/Assets/Flare.png", lensFlareSystem);
+    var flare05 = new BABYLON.LensFlare(0.3, 0.8, new BABYLON.Color3(1, 1, 1), "/Assets/Flare.png", lensFlareSystem);
 
     // Animations
-    var isReady = false;
     scene.registerBeforeRender(function() {
         camera.alpha += 0.01 * scene.getAnimationRatio();
-
-        if (!isReady && scene.isReady()) {
-            isReady = true;
-            engine.hideLoadingUI();
-        }
     });
 
     return scene;

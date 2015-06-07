@@ -54,6 +54,7 @@
     //background.material.reflectionTexture.renderList.push(ground);
     
     var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
+	shadowGenerator.usePoissonSampling = true;
     
     var createSeries = function (series) {
         var margin = 2;

@@ -1,0 +1,311 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon - Basic scene</title>
+
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+
+    <script type="text/javascript" src="..\..\babylon.max.js"></script>
+    <script type="text/javascript" src="boxmonger.boxmesh.js"></script>
+    <script type="text/javascript" src="c4f.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script type="text/javascript">
+        ///<reference path="../../babylon.max.js" />
+        ///<reference path="boxmonger.boxmesh.js" />
+        ///<reference path="c4f.js" />
+
+        var canvas = document.getElementById("renderCanvas");
+        var engine = new BABYLON.Engine(canvas, true);
+        var startPoint = new BABYLON.Vector3(0, 0, 0);
+        var camera;
+        var boundingboxDimensions = new BABYLON.Vector3(100, 20, 100);
+        var worldSize = 80;
+        var finishAfter = 125000;
+
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+
+            camera = new BABYLON.ArcRotateCamera("rotateCamera", Math.PI / 4.8, Math.PI / 2.5, 60, new BABYLON.Vector3(worldSize / 2, 4, worldSize / 2), scene);
+            camera.upperBetaLimit = Math.PI / 2;
+            camera.attachControl(canvas, false);
+            camera.keysUp.push(90);
+            camera.keysDown.push(83);
+            camera.keysRight.push(68);
+            camera.keysLeft.push(81);
+            camera.speed = 1;
+
+            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 25, 0), scene);
+            light.intensity = 1.0;
+            
+            // Skybox
+            var skybox = BABYLON.Mesh.CreateBox("skyBox", 200.0, scene);
+            skybox.position = new BABYLON.Vector3(worldSize / 2, 0, worldSize / 2);
+            var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
+            skyboxMaterial.backFaceCulling = false;
+            skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Assets/Textures/TropicalSunnyDay", scene);
+            skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+            skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+            skybox.material = skyboxMaterial;
+
+            return scene;
+        };
+
+        var createAnimations = function (scene, camera) {
+            var animationLoop = new BABYLON.Animation("animationCamera", "alpha", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            // Animation keys
+            var keys = [];
+            keys.push({
+                frame: 0,
+                value: 0
+            });
+            var rotationFrames = 900;
+            keys.push({
+                frame: rotationFrames,
+                value: Math.PI * 2
+            });
+            animationLoop.setKeys(keys);
+            camera.animations.push(animationLoop);
+
+            var animationUpAndDown = new BABYLON.Animation("animationUpAndDown", "beta", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            // Animation keys
+            var keys = [];
+            keys.push({
+                frame: 0,
+                value: Math.PI / 20 * 9.5
+            });
+            keys.push({
+                frame: rotationFrames / 6,
+                value: Math.PI / 20 * 6
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 2,
+                value: Math.PI / 20 * 6
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 3,
+                value: Math.PI / 20 * 9.5
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 4,
+                value: Math.PI / 20 * 9.5
+            });
+            animationUpAndDown.setKeys(keys);
+            camera.animations.push(animationUpAndDown);
+
+            var animationFarAndNear = new BABYLON.Animation("animationFarAndNear", "radius", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            // Animation keys
+            var keys = [];
+            keys.push({
+                frame: 0,
+                value: 50
+            });
+            keys.push({
+                frame: rotationFrames / 6,
+                value: 80
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 2,
+                value: 80
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 3,
+                value: 50
+            });
+            keys.push({
+                frame: rotationFrames / 6 * 4,
+                value: 50
+            });
+            animationFarAndNear.setKeys(keys);
+            camera.animations.push(animationFarAndNear);
+
+            scene.beginAnimation(camera, 0, rotationFrames, true);
+        };
+
+        var launchFinalAnimation = function (scene, camera) {
+            scene.stopAnimation(camera);
+            camera.animations = [];
+
+            var animationLoop = new BABYLON.Animation("animationCamera", "alpha", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+            // Animation keys
+            var keys = [];
+            var rotationFrames = 600;
+            keys.push({
+                frame: 0,
+                value: camera.alpha
+            });
+            keys.push({
+                frame: rotationFrames,
+                value: 0
+            });
+            animationLoop.setKeys(keys);
+            camera.animations.push(animationLoop);
+
+            var animationUpAndDown = new BABYLON.Animation("animationUpAndDown", "beta", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+            // Animation keys
+            var keys = [];
+            keys.push({
+                frame: 0,
+                value: camera.beta
+            });
+            keys.push({
+                frame: rotationFrames,
+                value: Math.PI / 20 * 2
+            });
+            animationUpAndDown.setKeys(keys);
+            camera.animations.push(animationUpAndDown);
+
+            var animationFarAndNear = new BABYLON.Animation("animationFarAndNear", "radius", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+            // Animation keys
+            var keys = [];
+            keys.push({
+                frame: 0,
+                value: camera.radius
+            });
+            keys.push({
+                frame: rotationFrames,
+                value: 70
+            });
+            animationFarAndNear.setKeys(keys);
+            camera.animations.push(animationFarAndNear);
+
+            scene.beginAnimation(camera, 0, rotationFrames, true);
+        };
+
+        var createWorldManager = function (scene) {
+            var worldManager = new BOXMONGER.C4fWorldManager(worldSize, 1, scene);
+            return worldManager;
+        };
+
+        var scene = createScene();
+        createAnimations(scene, camera);
+        //scene.debugLayer.show();
+        var worldManager = createWorldManager(scene);
+
+        engine.runRenderLoop(function () {
+           // camera.alpha += 0.003 * scene.getAnimationRatio();
+            scene.render();
+        });
+
+        worldManager.initPlane();
+        worldManager.Update();
+
+        var frames = 0;
+        var phase = -1;
+        var distanceFromCenter = 24;
+
+        scene.registerBeforeRender(function () {
+            if (phase === 0) {
+                if (frames++ % Math.floor(engine.getFps() / 5) === 0) {
+                    worldManager.moveSquare(true, distanceFromCenter--);
+                    worldManager.Update();
+                    if (distanceFromCenter < 0) {
+                        distanceFromCenter = 24;
+                        phase = -1;
+                        setTimeout(function () {
+                            launchphase1();
+                        }, 1000);
+                    }
+                }
+            }
+            else if (phase === 1) {
+                if (frames++ % Math.floor(engine.getFps() / 20) === 0) {
+                    worldManager.waveFromSound();
+                    worldManager.Update();
+                }
+            }
+            else if (phase === 2) {
+                if (frames++ % Math.floor(engine.getFps() / 5) === 0) {
+                    worldManager.stopSounds();
+                    worldManager.moveSquare(false, distanceFromCenter--);
+                    worldManager.Update();
+                    if (distanceFromCenter < 0) {
+                        phase = -1;
+                        setTimeout(function () {
+                            phase = 3;
+                            worldManager.startFinish();
+                            launchFinalAnimation(scene, camera);
+                        }, 1000);
+                    }
+                }
+            }
+            else if (phase === 3) {
+                if (frames++ % Math.floor(engine.getFps() / 17) === 0) {
+                    var more = worldManager.deleteNextForLogo();
+                    worldManager.Update();
+                    if (!more) {
+                        phase = 4;
+                    }
+                }
+            }
+        });
+
+        setTimeout(function () {
+            launchphase0();
+            setTimeout(function () {
+                stopphase1();
+                launchphase2();
+            }, finishAfter);
+        }, 3000);
+
+        var launchphase0 = function () {
+            phase = 0;
+        }
+
+        var loadtweetsIntervalId;
+        var nextStepIntervalId;
+
+        var launchphase1 = function () {
+            phase = 1;
+            worldManager.startSounds();
+            worldManager.loadNextTweets();
+
+            loadtweetsIntervalId = setInterval(function () {
+                if (phase === 1) {
+                    worldManager.loadNextTweets();
+                }
+            }, 3000);
+
+            nextStepIntervalId = setInterval(function () {
+                if (phase === 1) {
+                    worldManager.nextStep();
+                }
+            }, 15000);
+        }
+
+        var stopphase1 = function () {
+            clearInterval(loadtweetsIntervalId);
+            clearInterval(nextStepIntervalId);
+        }
+
+        var launchphase2 = function () {
+            worldManager.stopSounds();
+            worldManager.playSratch();
+            phase = -1;
+            setTimeout(function () {
+                phase = 2;
+            }, 1000);
+        }
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>

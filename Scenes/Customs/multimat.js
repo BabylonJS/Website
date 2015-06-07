@@ -6,7 +6,7 @@
 
     var material0 = new BABYLON.StandardMaterial("mat0", scene);
     material0.diffuseColor = new BABYLON.Color3(1, 0, 0);
-    material0.bumpTexture = new BABYLON.Texture("Scenes/Customs/normalMap.jpg", scene);
+    material0.bumpTexture = new BABYLON.Texture("/Scenes/Customs/normalMap.jpg", scene);
     
     var material1 = new BABYLON.StandardMaterial("mat1", scene);
     material1.diffuseColor = new BABYLON.Color3(0, 0, 1);

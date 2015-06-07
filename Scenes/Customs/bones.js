@@ -20,7 +20,7 @@
     var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
 
     // Meshes
-    BABYLON.SceneLoader.ImportMesh("Rabbit", "Scenes/Rabbit/", "Rabbit.babylon", scene, function (newMeshes, particleSystems, skeletons) {
+    BABYLON.SceneLoader.ImportMesh("Rabbit", "/Scenes/Rabbit/", "Rabbit.babylon", scene, function (newMeshes, particleSystems, skeletons) {
         var rabbit = newMeshes[1];
         
         rabbit.scaling = new BABYLON.Vector3(0.4, 0.4, 0.4);
@@ -43,7 +43,7 @@
         scene.beginAnimation(rabbit3.skeleton, 0, 72, true, 0.8);
         
         // Dude
-        BABYLON.SceneLoader.ImportMesh("him", "Scenes/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
+        BABYLON.SceneLoader.ImportMesh("him", "/Scenes/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
             var dude = newMeshes2[0];
             
             for (var index = 0; index < newMeshes2.length; index++) {

@@ -1,0 +1,204 @@
+﻿{
+  "root": "",
+  "tests": [
+    {
+      "title": "Windows cafe",
+      "sceneFolder": "/Scenes/WCafe/",
+      "sceneFilename": "WCafe.babylon",
+      "referenceImage": "WCafe.png"
+    },
+    {
+      "title": "Espilit",
+      "sceneFolder": "/Scenes/Espilit/",
+      "sceneFilename": "Espilit.binary.babylon",
+      "referenceImage": "Espilit.png"
+    },
+    {
+      "title": "The car",
+      "sceneFolder": "/Scenes/TheCar/",
+      "sceneFilename": "TheCar.binary.babylon",
+      "referenceImage": "TheCar.png"
+    },
+    {
+      "title": "Viper",
+      "sceneFolder": "/Scenes/Viper/",
+      "sceneFilename": "Viper.babylon",
+      "referenceImage": "Viper.png"
+    },
+    {
+      "title": "Retail",
+      "sceneFolder": "/Scenes/Retail/",
+      "sceneFilename": "Retail.babylon",
+      "referenceImage": "Retail.png"
+    },
+    {
+      "title": "Hill Valley",
+      "sceneFolder": "/Scenes/HillValley/",
+      "sceneFilename": "HillValley.incremental.babylon",
+      "referenceImage": "HillValley.png"
+    },
+    {
+      "title": "Heart",
+      "sceneFolder": "/Scenes/Heart/",
+      "sceneFilename": "Heart.babylon",
+      "referenceImage": "heart.png"
+    },
+    {
+      "title": "Train",
+      "sceneFolder": "/Scenes/Train/",
+      "sceneFilename": "Train.binary.babylon",
+      "referenceImage": "train.png"
+    },
+    {
+      "title": "SpaceDeK",
+      "sceneFolder": "/Scenes/SpaceDeK/",
+      "sceneFilename": "SpaceDeK.babylon",
+      "referenceImage": "SpaceDeK.png"
+    },
+    {
+      "title": "Flat2009",
+      "sceneFolder": "/Scenes/Flat2009/",
+      "sceneFilename": "Flat2009.binary.babylon",
+      "referenceImage": "Flat2009.png"
+    },
+    {
+      "title": "CSG",
+      "scriptToRun": "/Scenes/Customs/csg.js",
+      "functionToCall": "CreateCSGTestScene",
+      "referenceImage": "csg.png"
+    },
+    {
+      "title": "Advanced Shadows",
+      "scriptToRun": "/Scenes/Customs/advancedShadows.js",
+      "functionToCall": "CreateAdvancedShadowsTestScene",
+      "referenceImage": "advancedShadows.png"
+    },
+    {
+      "title": "Bump",
+      "scriptToRun": "/Scenes/Customs/bump_test.js",
+      "functionToCall": "CreateBumpScene",
+      "referenceImage": "bump.png"
+    },
+    {
+      "title": "Cell Shading",
+      "scriptToRun": "/Scenes/Customs/cellShading.js",
+      "functionToCall": "CreateCellShadingScene",
+      "referenceImage": "cellShading.png"
+    },
+    {
+      "title": "Charting",
+      "scriptToRun": "/Scenes/Customs/charting.js",
+      "functionToCall": "CreateChartingTestScene",
+      "referenceImage": "charting.png"
+    },
+    {
+      "title": "Custom render target",
+      "scriptToRun": "/Scenes/Customs/customRenderTarget.js",
+      "functionToCall": "CreateCustomRenderTargetTestScene",
+      "referenceImage": "customRenderTarget.png"
+    },
+    {
+      "title": "Displacement map",
+      "scriptToRun": "/Scenes/Customs/displacementMap.js",
+      "functionToCall": "CreateDisplacementTestScene",
+      "referenceImage": "displacementMap.png"
+    },
+    {
+      "title": "Fog",
+      "scriptToRun": "/Scenes/Customs/fog_test.js",
+      "functionToCall": "CreateFogScene",
+      "referenceImage": "fog.png"
+    },
+    {
+      "title": "Fresnel",
+      "scriptToRun": "/Scenes/Customs/fresnel.js",
+      "functionToCall": "CreateFresnelTestScene",
+      "referenceImage": "fresnel.png"
+    },
+    {
+      "title": "Height map",
+      "scriptToRun": "/Scenes/Customs/heightMap_test.js",
+      "functionToCall": "CreateHeightMapTestScene",
+      "referenceImage": "heightMap.png"
+    },
+    {
+      "title": "Lens flares",
+      "scriptToRun": "/Scenes/Customs/lensFlares.js",
+      "functionToCall": "CreateLensFlaresTestScene",
+      "referenceImage": "lensFlares.png"
+    },
+    {
+      "title": "Lights",
+      "scriptToRun": "/Scenes/Customs/lights_test.js",
+      "functionToCall": "CreateLightsTestScene",
+      "referenceImage": "lights.png"
+    },
+    {
+      "title": "Lines",
+      "scriptToRun": "/Scenes/Customs/Lines.js",
+      "functionToCall": "CreateLinesTestScene",
+      "referenceImage": "lines.png"
+    },
+    {
+      "title": "LOD",
+      "scriptToRun": "/Scenes/Customs/lod.js",
+      "functionToCall": "CreateLODTestScene",
+      "referenceImage": "lod.png"
+    },
+    {
+      "title": "Multi materials",
+      "scriptToRun": "/Scenes/Customs/multimat.js",
+      "functionToCall": "CreateMultiMaterialScene",
+      "referenceImage": "multimat.png"
+    },
+    {
+      "title": "Polygon",
+      "scriptToRun": "/Scenes/Customs/polygon.js",
+      "functionToCall": "CreatePolygonScene",
+      "referenceImage": "polygon.png"
+    },
+    {
+      "title": "Post-process: Bloom",
+      "scriptToRun": "/Scenes/Customs/postprocessBloom.js",
+      "functionToCall": "CreatePostProcessBloomTestScene",
+      "referenceImage": "ppbloom.png"
+    },
+    {
+      "title": "Post-process: Convolution",
+      "scriptToRun": "/Scenes/Customs/postprocessConvolution.js",
+      "functionToCall": "CreateConvolutionTestScene",
+      "referenceImage": "convolution.png"
+    },
+    {
+      "title": "Procedural textures",
+      "scriptToRun": "/Scenes/Customs/proceduralTexture.js",
+      "functionToCall": "CreateProceduralTextureTestScene",
+      "referenceImage": "procedural.png"
+    },
+    {
+      "title": "Bones",
+      "scriptToRun": "/Scenes/Customs/bones.js",
+      "functionToCall": "CreateBonesTestScene",
+      "referenceImage": "bones.png"
+    },
+    {
+      "title": "Shadows",
+      "scriptToRun": "/Scenes/Customs/shadows.js",
+      "functionToCall": "CreateShadowsTestScene",
+      "referenceImage": "shadows.png"
+    },
+    {
+      "title": "Soft shadows",
+      "scriptToRun": "/Scenes/Customs/softShadows.js",
+      "functionToCall": "CreateSoftShadowsTestScene",
+      "referenceImage": "softshadows.png"
+    },
+    {
+      "title": "Volumetric light scattering",
+      "renderCount": 2,
+      "scriptToRun": "/Scenes/Customs/volumetricLightScattering.js",
+      "functionToCall": "CreateVolumetricLightScatteringScene",
+      "referenceImage": "vls.png"
+    }
+  ]
+}

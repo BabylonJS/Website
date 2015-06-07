@@ -66,6 +66,11 @@
     <script src="Scenes/Customs/ssao.js"></script>
     <script src="Scenes/Customs/volumetricLightScattering.js"></script>
     <script src="Scenes/Customs/proceduralTexture.js"></script>
+    <script src="Scenes/Customs/advancedShadows.js"></script>
+    <script src="Scenes/Customs/softShadows.js"></script>
+    <script src="Scenes/Customs/decals.js"></script>
+	<script src="Scenes/Customs/ribbons.js"></script>
+	<script src="Scenes/Customs/dof.js"></script>
     <script src="index.js"></script>
 </head>
     <body>
@@ -94,12 +99,6 @@
                             THIRD-PARTY
                         </div>
                         <div id="3rdItems"></div>
-                        <div class="header">
-                            <br />
-                            OCULUS RIFT
-                        </div>
-                        <div class="warning">You must install <a href="OculusVR Driver/OculusVR Driver.zip">this driver</a> and use IE11+ to see these demos</div><br />
-                        <div id="oculusDemos"></div>
                     </div>
                 </div>
                 <img id="back" src="Assets/FondBandeau.png" />
@@ -210,7 +209,6 @@
                                         <li>Free camera</li>
                                         <li>Touch camera</li>
                                         <li>Virtual Joysticks camera</li>
-                                        <li>Oculus Rift camera</li>
                                         <li><b>Gamepad camera</b></li>
                                         <li><b>VR Device Oriention camera</b></li>
                                         <li><b>WebVR camera</b></li>
@@ -280,7 +278,7 @@
                                 <img src="Assets/CamTouchOff.png" class="buttonImg" />Touch camera
                             </button>
                             <button class="buttonControlPanel" id="deviceOrientationCamera">
-                                <img src="Assets/CamDeviceOff.png" class="buttonImg" />Device orientation camera
+                                <img src="Assets/CamDeviceOff.png" class="buttonImg" />VR Device orientation camera
                             </button>
                             <button class="buttonControlPanel" id="gamepadCamera">
                                 <img src="Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera

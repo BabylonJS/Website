@@ -33,10 +33,16 @@ var onload = function () {
             title: "MANSION", scene: "Mansion", big: true, screenshot: "Mansion400.jpg", size: "75 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "MANSION",
             onload: function () {
                 var moon = scene.getMeshByName("Moon");
+
                 var vls = new BABYLON.VolumetricLightScatteringPostProcess('vls', 1.0, scene.activeCamera, moon, 65, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, false);
                 vls.exposure = 0.15;
                 vls.weight = 0.54;
+
+                scene.gravity.scaleInPlace(0.2);
             }
+        },
+        {
+            title: "FLIGHT ARCADE", url: "http://flightarcade.com", big: false, screenshot: "flightarcade.jpg", size: "Microsoft Edge"
         },
         {
             title: "DINO HUNT", url: "http://dinohuntcanada.history.ca", big: false, screenshot: "dino800.jpg", size: "History Channel"
@@ -50,6 +56,8 @@ var onload = function () {
             title: "V8 ENGINE", scene: "V8", screenshot: "V8small.jpg", size: "15 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "V8",
             onload: function () {
                 scene.activeCamera.minZ = 1;
+                scene.lights[0].getShadowGenerator().usePoissonSampling = true;
+                scene.lights[0].getShadowGenerator().bias *= 2;
             }
         },
         {
@@ -111,6 +119,7 @@ var onload = function () {
             title: "HEART", scene: "Heart", screenshot: "heart.jpg", doNotUseCDN: false, size: "14 MB<BR>by Michel Rousseau", onload: function () {
                 scene.getMeshByName("Labels").setEnabled(false);
                 scene.getMeshByName("lums").useVertexColors = false;
+                scene.gravity.scaleInPlace(0.5);
             }
         },
 
@@ -119,6 +128,7 @@ var onload = function () {
                 scene.autoClear = true;
                 scene.createOrUpdateSelectionOctree();
                 scene.getMeshByName("Sol loin").useVertexColors = false;
+                scene.gravity.scaleInPlace(0.5);
 
                 var postProcess = new BABYLON.RefractionPostProcess("Refraction", "/scenes/customs/refMap.jpg", new BABYLON.Color3(1.0, 1.0, 1.0), 0.5, 0.5, 1.0, scene.cameras[1]);
             }
@@ -134,9 +144,9 @@ var onload = function () {
             size: "44 MB<BR>by Michel Rousseau",
             onload: function () {
                 var ecran = scene.getMeshByName("Ecran");
-                ecran.material.diffuseTexture = new BABYLON.VideoTexture("video", ["Scenes/Flat2009/babylonjs.mp4", "Scenes/Flat2009/babylonjs.webm"],
-                    { width: 1024, height: 512 }, scene, true, true);
+                ecran.material.diffuseTexture = new BABYLON.VideoTexture("video", ["Scenes/Flat2009/babylonjs.mp4", "Scenes/Flat2009/babylonjs.webm"], scene, true, true);
                 scene.createOrUpdateSelectionOctree();
+                scene.gravity.scaleInPlace(0.5);
             }
         },
         {
@@ -153,48 +163,13 @@ var onload = function () {
             }
         }];
 
-    var oculusProcessing = function () {
-        var originCamera = scene.activeCamera;
-        scene.autoClear = true;
-
-        scene.activeCamera = new BABYLON.OculusGamepadCamera("Oculus", originCamera.position, scene);
-        scene.activeCamera.minZ = originCamera.minZ;
-        scene.activeCamera.maxZ = originCamera.maxZ;
-        scene.activeCamera.gravity = originCamera.gravity;
-        scene.activeCamera.checkCollisions = false;
-        scene.activeCamera.applyGravity = false;
-        scene.activeCamera.attachControl(canvas);
-        scene.activeCamera.speed = originCamera.speed;
-        scene.activeCamera.rotation.copyFrom(originCamera.rotation);
-
-        hideAllUI();
-    };
-
-    var oculusProcessingWithCollisionsAndGravity = function () {
-        oculusProcessing();
-        scene.activeCamera.checkCollisions = true;
-        scene.activeCamera.applyGravity = true;
-    };
-
-    var oculusTests = [
-        {
-            title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB", anchor: "OCC0", onload: oculusProcessing, incremental: true
-        },
-        {
-            title: "HEART", scene: "Heart", screenshot: "heart.jpg", size: "14 MB", anchor: "OCC1", onload: oculusProcessingWithCollisionsAndGravity
-        },
-        {
-            title: "ESPILIT", scene: "Espilit", screenshot: "espilit.jpg", size: "50 MB", anchor: "OCC2", onload: oculusProcessingWithCollisionsAndGravity, incremental: true
-        },
-        {
-            title: "WINDOWS CAFE", scene: "WCafe", screenshot: "wcafe.jpg", size: "28 MB", anchor: "OCC3", onload: oculusProcessingWithCollisionsAndGravity
-        },
-        {
-            title: "Flat 2009", scene: "Flat2009", screenshot: "Flat2009.jpg", size: "44 MB", anchor: "OCC4", onload: oculusProcessingWithCollisionsAndGravity
-        }
-    ];
-
     var tests = [
+        { title: "DEPTH OF FIELD / LENS", id: 36, screenshot: "dof.jpg", size: "30 MB", anchor: "DOF" },
+        { title: "SIMD.JS", url: "http://www.babylonjs.com/scenes/simd.html", screenshot: "simd.jpg", size: "60 MB", anchor: "SIMD" },
+        { title: "RIBBONS", id: 35, screenshot: "ribbons.jpg", size: "1 MB", anchor: "RIBBONS" },
+		{ title: "DECALS", id: 34, screenshot: "decals.jpg", size: "1 MB", anchor: "DECALS" },
+		{ title: "SOFT SHADOWS", id: 33, screenshot: "softShadows.jpg", size: "1 MB", anchor: "SOFTSHADOWS" },
+		{ title: "ADVANCED SHADOWS", id: 32, screenshot: "advancedShadows.jpg", size: "1 MB", anchor: "ADVANCEDSHADOWS" },
 		{ title: "VOLUMETRIC LIGHT SCATTERING", id: 31, screenshot: "volumetriclightscattering.jpg", size: "10 MB", anchor: "VOLUMETRICLIGHTSCATTERING" },
         { title: "SSAO", id: 30, screenshot: "ssao.jpg", size: "10 MB", anchor: "SSAO" },
         { title: "POLYGON MESH", id: 29, screenshot: "polygon.jpg", size: "1 MB", anchor: "POLYGON" },
@@ -258,6 +233,7 @@ var onload = function () {
                 scene.beginAnimation(scene.skeletons[0], 2, 100, true, 0.05);
             }
         },
+        { title: "SHINOBOMB", url: "http://www.pixelcodr.com/games/shinobomb/index.html", screenshot: "shinobomb.jpg", size: "by Jb. Bledowski &<BR> J. Chenard" },
         { title: "CYBROX SUPRA", url: "http://www.3dpanacea.com/automotive_showroom/cybrox.html", screenshot: "Cybrox Supra.jpg", size: "3D Panacea" },
         { title: "DESIGN THE 5", url: "http://designthe5.com", screenshot: "design5.jpg", size: "Realpie Media &<BR>Jumpkick Studios" },
         { title: "Evasion", url: "http://www.castorengine.com/babylon/Evasion/index.html", screenshot: "evasion.jpg", size: "by Dad72" },
@@ -281,7 +257,6 @@ var onload = function () {
     var items = document.getElementById("items");
     var testItems = document.getElementById("testItems");
     var _3rdItems = document.getElementById("3rdItems");
-    var oculusDemosElem = document.getElementById("oculusDemos");
     var renderZone = document.getElementById("renderZone");
     var controlPanel = document.getElementById("controlPanel");
     var cameraPanel = document.getElementById("cameraPanel");
@@ -412,14 +387,6 @@ var onload = function () {
     for (index = 0; index < thirdParties.length; index++) {
         var thirdParty = thirdParties[index];
         createItem(thirdParty, _3rdItems);
-    }
-
-    if (oculusDemosElem) {
-        removeChildren(oculusDemosElem);
-        for (index = 0; index < oculusTests.length; ++index) {
-             test = oculusTests[index];
-            createItem(test, oculusDemosElem);
-        }
     }
 
     // Go Back
@@ -647,6 +614,21 @@ var onload = function () {
                 	case 31:
                 		newScene = CreateVolumetricLightScatteringScene(engine);
                 		break;
+                	case 32:
+                		newScene = CreateAdvancedShadowsTestScene(engine);
+                		break;
+                	case 33:
+                		newScene = CreateSoftShadowsTestScene(engine);
+                		break;
+                	case 34:
+                		newScene = CreateDecalsTestScene(engine);
+                		break;
+                    case 35:
+                        newScene = CreateRibbonsTestScene(engine);
+                        break;
+                    case 36:
+                        newScene = CreateDOFTestScene(engine);
+                        break;
                 }
                 scene = newScene;
                 scene.executeWhenReady(function () {
@@ -914,11 +896,11 @@ var onload = function () {
             return;
         }
 
-        if (scene.activeCamera instanceof BABYLON.DeviceOrientationCamera) {
+        if (scene.activeCamera instanceof BABYLON.VRDeviceOrientationFreeCamera) {
             return;
         }
 
-        var camera = new BABYLON.DeviceOrientationCamera("deviceOrientationCamera", scene.activeCamera.position, scene);
+        var camera = new BABYLON.VRDeviceOrientationFreeCamera("deviceOrientationCamera", scene.activeCamera.position, scene);
 
         switchCamera(camera);
     });
@@ -986,9 +968,11 @@ var onload = function () {
 
     // Cameras
     camerasList.addEventListener("change", function () {
-        scene.activeCamera.detachControl(canvas);
-        scene.activeCamera = scene.cameras[camerasList.selectedIndex];
-        scene.activeCamera.attachControl(canvas);
+        if (scene) {
+            scene.activeCamera.detachControl(canvas);
+            scene.activeCamera = scene.cameras[camerasList.selectedIndex];
+            scene.activeCamera.attachControl(canvas);
+        }
     });
 
     // Query string
@@ -1020,12 +1004,6 @@ var onload = function () {
             for (index = 0; index < thirdParties.length; index++) {
                 if (thirdParties[index].anchor && thirdParties[index].anchor === query || thirdParties[index].title === query) {
                     itemClick(thirdParties[index])();
-                    return;
-                }
-            }
-            for (index = 0; index < oculusTests.length; index++) {
-                if (oculusTests[index].anchor && oculusTests[index].anchor === query || oculusTests[index].title === query) {
-                    itemClick(oculusTests[index])();
                     return;
                 }
             }

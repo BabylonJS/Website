@@ -3,7 +3,7 @@
 	var camera = new BABYLON.ArcRotateCamera("Camera", -2.5, 1.0, 200, new BABYLON.Vector3(0, 0, 0), scene);
 
 	// The first parameter can be used to specify which mesh to import. Here we import all meshes
-	BABYLON.SceneLoader.Append("scenes/assets/", "SSAOcat.babylon", scene, function () {
+	BABYLON.SceneLoader.Append("/scenes/assets/", "SSAOcat.babylon", scene, function () {
 
 		scene.activeCamera = camera;
 		camera.attachControl(engine.getRenderingCanvas(), false);
