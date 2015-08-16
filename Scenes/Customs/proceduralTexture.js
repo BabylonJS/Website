@@ -74,7 +74,7 @@
     var scene = new BABYLON.Scene(engine);
     var camera = new BABYLON.ArcRotateCamera("Camera", 1, 1.2, 25, new BABYLON.Vector3(10, 0, 0), scene);
     camera.upperBetaLimit = 1.2;
-
+    camera.attachControl(canvas, true);
     //Material declaration
     var woodMaterial = new BABYLON.StandardMaterial(name, scene);
     var woodTexture = new BABYLON.WoodProceduralTexture(name + "text", 1024, scene);
