@@ -29,16 +29,17 @@ var onload = function () {
     }
     // Demos
     var demos = [
+        { title: "ACTION BUILDER", scene: "ActionBuilder", big: true, screenshot: "ab.jpg", size: "6 MB<BR>by Michel Rousseau", anchor: "AB", forceLocal: true },
+        { title: "CZECH STARTUPS", url: "http://czechstartups.org/#3Dmap", screenshot: "czech.jpg", size: "EPK Technologies" },
+        { title: "DOLBY EXPERIMENT", url: "http://audioexperience.dolby.com/", screenshot: "dolby.jpg", size: "DOLBY AUDIO" },
         {
-            title: "MANSION", scene: "Mansion", big: true, screenshot: "Mansion400.jpg", size: "75 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "MANSION",
+            title: "MANSION", scene: "Mansion", big: false, screenshot: "Mansion400.jpg", size: "75 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: true, anchor: "MANSION",
             onload: function () {
-                var moon = scene.getMeshByName("Moon");
+                //var moon = scene.getMeshByName("Moon");
 
-                var vls = new BABYLON.VolumetricLightScatteringPostProcess('vls', 1.0, scene.activeCamera, moon, 65, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, false);
-                vls.exposure = 0.15;
-                vls.weight = 0.54;
-
-                scene.gravity.scaleInPlace(0.2);
+                //var vls = new BABYLON.VolumetricLightScatteringPostProcess('vls', 1.0, scene.activeCamera, moon, 65, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, false);
+                //vls.exposure = 0.15;
+                //vls.weight = 0.54;
             }
         },
         {
@@ -53,7 +54,7 @@ var onload = function () {
             }
         },
         {
-            title: "V8 ENGINE", scene: "V8", screenshot: "V8small.jpg", size: "15 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: false, anchor: "V8",
+            title: "V8 ENGINE", scene: "V8", screenshot: "V8small.jpg", size: "15 MB<BR>by Michel Rousseau", incremental: false, doNotUseCDN: true, anchor: "V8",
             onload: function () {
                 scene.activeCamera.minZ = 1;
                 scene.lights[0].getShadowGenerator().usePoissonSampling = true;
@@ -64,7 +65,7 @@ var onload = function () {
             title: "ACP", url: "http://race.assassinscreedpirates.com/", screenshot: "ACP.jpg", size: "Assassin's Creed Pirates<BR>by Ubisoft"
         },
         {
-            title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", incremental: true, onload: function () {
+            title: "HILLVALLEY", scene: "HillValley", screenshot: "hill2.jpg", size: "70 MB - Original by Camille JOLY<BR>Optimized by Michel ROUSSEAU", doNotUseCDN: true, incremental: true, onload: function () {
                 scene.collisionsEnabled = false;
                 scene.lightsEnabled = false;
                 scene.activeCamera.applyGravity = true;
@@ -75,7 +76,7 @@ var onload = function () {
             }
         },
         {
-            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB<BR>by Romuald ROUHIER ", binary: true, onload: function () {
+            title: "TRAIN", scene: "Train", screenshot: "train.jpg", size: "70 MB<BR>by Romuald ROUHIER ", binary: true, doNotUseCDN: true, onload: function () {
                 scene.collisionsEnabled = false;
                 for (var index = 0; index < scene.cameras.length; index++) {
                     scene.cameras[index].minZ = 10;
@@ -164,56 +165,56 @@ var onload = function () {
         }];
 
     var tests = [
-        { title: "DEPTH OF FIELD / LENS", id: 36, screenshot: "dof.jpg", size: "30 MB", anchor: "DOF" },
-        { title: "SIMD.JS", url: "http://www.babylonjs.com/scenes/simd.html", screenshot: "simd.jpg", size: "60 MB", anchor: "SIMD" },
-        { title: "RIBBONS", id: 35, screenshot: "ribbons.jpg", size: "1 MB", anchor: "RIBBONS" },
-		{ title: "DECALS", id: 34, screenshot: "decals.jpg", size: "1 MB", anchor: "DECALS" },
-		{ title: "SOFT SHADOWS", id: 33, screenshot: "softShadows.jpg", size: "1 MB", anchor: "SOFTSHADOWS" },
-		{ title: "ADVANCED SHADOWS", id: 32, screenshot: "advancedShadows.jpg", size: "1 MB", anchor: "ADVANCEDSHADOWS" },
-		{ title: "VOLUMETRIC LIGHT SCATTERING", id: 31, screenshot: "volumetriclightscattering.jpg", size: "10 MB", anchor: "VOLUMETRICLIGHTSCATTERING" },
-        { title: "SSAO", id: 30, screenshot: "ssao.jpg", size: "10 MB", anchor: "SSAO" },
-        { title: "POLYGON MESH", id: 29, screenshot: "polygon.jpg", size: "1 MB", anchor: "POLYGON" },
-        { title: "INSTANCED BONES", id: 28, screenshot: "bones2.jpg", size: "10 MB", anchor: "INSTANCEDBONES" },
-        { title: "LEVEL OF DETAIL", id: 27, screenshot: "lod.jpg", size: "1 MB", anchor: "LOD" },
-        { title: "PROCEDURAL TEXTURES", id: 26, screenshot: "ProceduralTextures.png", size: "5 MB", anchor: "PROCEDURAL" },
-        { title: "ENHANCED PARTICLES", id: 25, screenshot: "particles2.jpg", size: "1 MB", anchor: "PARTICLES2" },
-        { title: "FRESNEL", id: 23, screenshot: "fresnel.jpg", size: "1 MB", anchor: "FRESNEL" },
-        { title: "CUSTOM RENDER TARGET", id: 24, screenshot: "customRenderTarget.jpg", size: "1 MB", anchor: "CUSTOMRENDERTARGET" },
-        { title: "ASSETS MANAGER", url: "scenes/assets/index.html", screenshot: "assets.jpg", size: "1 MB", anchor: "ASSETS" },
-        { title: "DISPLACEMENT MAP (CPU)", id: 22, screenshot: "displacement.jpg", size: "1 MB", anchor: "DISPLACEMENTMAP" },
-        { title: "DRAG'N'DROP", id: 21, screenshot: "dragdrop.jpg", size: "1 MB", anchor: "DRAGNDROP" },
-        { title: "LINES", id: 20, screenshot: "lines.jpg", size: "1 MB", anchor: "LINES" },
-        { title: "INSTANCES", id: 18, screenshot: "instances.jpg", size: "1 MB", anchor: "INSTANCES" },
-        { title: "ACTIONS", id: 17, screenshot: "actions.jpg", size: "1 MB", anchor: "ACTIONS" },
-        { title: "PARTICLES", id: 19, screenshot: "particles.jpg", size: "1 MB", anchor: "PARTICLES" },
-        { title: "CREATE YOUR OWN SHADER", url: "CYOS", screenshot: "cyos.jpg", size: "1 MB", anchor: "CYOS" },
-        { title: "VERTEXDATA", url: "Scenes/Clouds/index.html", screenshot: "clouds.jpg", size: "1 MB", anchor: "CLOUDS" },
-        { title: "POSTPROCESS - CONVOLUTION", id: 16, screenshot: "convolution.jpg", size: "1 MB", anchor: "PPCONVOLUTION" },
-        { title: "CONSTRUCTIVE SOLID GEOMETRIES", id: 15, screenshot: "csg.jpg", size: "1 MB", anchor: "CSG" },
-        { title: "CUSTOM SHADER - CELL SHADING", id: 14, screenshot: "cellshading.jpg", size: "1 MB", anchor: "CUSTOMSHADER" },
-        { title: "EDITOR", url: "http://www.babylonjs.com/editor", screenshot: "editor.jpg", size: "1 MB" },
-        { title: "PHYSICS", id: 13, screenshot: "physics.jpg", size: "1.0 MB", anchor: "PHYSICS" },
-        { title: "LENS FLARES", id: 12, screenshot: "lens.jpg", size: "1.0 MB", anchor: "LENS" },
-        { title: "POSTPROCESS - REFRACTION", id: 11, screenshot: "postprocessRefraction.jpg", size: "1.0 MB", anchor: "PPREF" },
-        { title: "POSTPROCESS - BLOOM", id: 10, screenshot: "postprocessBloom.jpg", size: "1.0 MB", anchor: "PPBLOOM" },
-        { title: "OCTREE - 8000 spheres", id: 8, screenshot: "octree.jpg", size: "0.1 MB", anchor: "OCTREE" },
-        { title: "BONES", id: 9, screenshot: "bones.jpg", size: "10 MB" },
-
-        { title: "CHARTING", id: 7, screenshot: "charting.jpg", size: "0.1 MB" },
-        { title: "SHADOWS", id: 6, screenshot: "shadows.jpg", size: "1.0 MB" },
-        { title: "HEIGHTMAP", id: 5, screenshot: "heightmap.jpg", size: "1.0 MB" },
-        { title: "LIGHTS", id: 1, screenshot: "testlight.jpg", size: "0.1 MB" },
-        { title: "BUMP", id: 2, screenshot: "bump.jpg", size: "0.1 MB" },
-        { title: "FOG", id: 3, screenshot: "fog.jpg", size: "0.1 MB" },
-        { title: "MULTIMATERIAL", id: 4, screenshot: "multimat.jpg", size: "0.1 MB" },
-        { title: "BLENDER", scene: "blender", screenshot: "blender.jpg", size: "0.2 MB", incremental: true },
-        { title: "SCENE #1", id: 0, screenshot: "testscene.jpg", size: "10 MB" }
+        { title: "REFLECTION PROBE", id: 37, screenshot: "reflectionProbe.jpg", size: "1 MB", anchor: "REFPROBE", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/reflectionProbe.js" },
+        { title: "DEPTH OF FIELD / LENS", id: 36, screenshot: "dof.jpg", size: "30 MB", anchor: "DOF", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/dof.js" },
+        { title: "SIMD.JS", url: "http://www.babylonjs.com/scenes/simd.html", screenshot: "simd.jpg", size: "60 MB", anchor: "SIMD", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/simd.html" },
+        { title: "RIBBONS", id: 35, screenshot: "ribbons.jpg", size: "1 MB", anchor: "RIBBONS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/ribbons.js" },
+		{ title: "DECALS", id: 34, screenshot: "decals.jpg", size: "1 MB", anchor: "DECALS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/decals.js" },
+		{ title: "SOFT SHADOWS", id: 33, screenshot: "softShadows.jpg", size: "1 MB", anchor: "SOFTSHADOWS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/softShadows.js" },
+		{ title: "ADVANCED SHADOWS", id: 32, screenshot: "advancedShadows.jpg", size: "1 MB", anchor: "ADVANCEDSHADOWS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/advancedShadows.js" },
+		{ title: "VOLUMETRIC LIGHT SCATTERING", id: 31, screenshot: "volumetriclightscattering.jpg", size: "10 MB", anchor: "VOLUMETRICLIGHTSCATTERING", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/volumetricLightScattering.js" },
+        { title: "SSAO", id: 30, screenshot: "ssao.jpg", size: "10 MB", anchor: "SSAO", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/ssao.js" },
+        { title: "POLYGON MESH", id: 29, screenshot: "polygon.jpg", size: "1 MB", anchor: "POLYGON", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/polygon.js" },
+        { title: "INSTANCED BONES", id: 28, screenshot: "bones2.jpg", size: "10 MB", anchor: "INSTANCEDBONES", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/bones2.js" },
+        { title: "LEVEL OF DETAIL", id: 27, screenshot: "lod.jpg", size: "1 MB", anchor: "LOD", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/lod.js" },
+        { title: "PROCEDURAL TEXTURES", id: 26, screenshot: "ProceduralTextures.png", size: "5 MB", anchor: "PROCEDURAL", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/proceduralTexture.js" },
+        { title: "ENHANCED PARTICLES", id: 25, screenshot: "particles2.jpg", size: "1 MB", anchor: "PARTICLES2", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/particles2.js" },
+        { title: "FRESNEL", id: 23, screenshot: "fresnel.jpg", size: "1 MB", anchor: "FRESNEL", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/fresnel.js" },
+        { title: "CUSTOM RENDER TARGET", id: 24, screenshot: "customRenderTarget.jpg", size: "1 MB", anchor: "CUSTOMRENDERTARGET", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/customRenderTarget.js" },
+        { title: "ASSETS MANAGER", url: "scenes/assets/index.html", screenshot: "assets.jpg", size: "1 MB", anchor: "ASSETS", github: "https://github.com/BabylonJS/Samples/tree/master/Scenes/Assets" },
+        { title: "DISPLACEMENT MAP (CPU)", id: 22, screenshot: "displacement.jpg", size: "1 MB", anchor: "DISPLACEMENTMAP", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/displacementMap.js" },
+        { title: "DRAG'N'DROP", id: 21, screenshot: "dragdrop.jpg", size: "1 MB", anchor: "DRAGNDROP", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/dragdrop.js" },
+        { title: "LINES", id: 20, screenshot: "lines.jpg", size: "1 MB", anchor: "LINES", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/lines.js" },
+        { title: "INSTANCES", id: 18, screenshot: "instances.jpg", size: "1 MB", anchor: "INSTANCES", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/instances.js" },
+        { title: "ACTIONS", id: 17, screenshot: "actions.jpg", size: "1 MB", anchor: "ACTIONS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/actions.js" },
+        { title: "PARTICLES", id: 19, screenshot: "particles.jpg", size: "1 MB", anchor: "PARTICLES", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/particles.js" },
+        { title: "CREATE YOUR OWN SHADER", url: "CYOS", screenshot: "cyos.jpg", size: "1 MB", anchor: "CYOS", github: "https://github.com/BabylonJS/Samples/tree/master/CYOS" },
+        { title: "VERTEXDATA", url: "Scenes/Clouds/index.html", screenshot: "clouds.jpg", size: "1 MB", anchor: "CLOUDS", github: "https://github.com/BabylonJS/Samples/tree/master/Scenes/Clouds" },
+        { title: "POSTPROCESS - CONVOLUTION", id: 16, screenshot: "convolution.jpg", size: "1 MB", anchor: "PPCONVOLUTION", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/postprocessConvolution.js" },
+        { title: "CONSTRUCTIVE SOLID GEOMETRIES", id: 15, screenshot: "csg.jpg", size: "1 MB", anchor: "CSG", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/csg.js" },
+        { title: "CUSTOM SHADER - CELL SHADING", id: 14, screenshot: "cellshading.jpg", size: "1 MB", anchor: "CUSTOMSHADER", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/cellShading.js" },
+        { title: "PHYSICS", id: 13, screenshot: "physics.jpg", size: "1.0 MB", anchor: "PHYSICS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/physics.js" },
+        { title: "LENS FLARES", id: 12, screenshot: "lens.jpg", size: "1.0 MB", anchor: "LENS", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/lensFlares.js" },
+        { title: "POSTPROCESS - REFRACTION", id: 11, screenshot: "postprocessRefraction.jpg", size: "1.0 MB", anchor: "PPREF", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/postprocessRefraction.js" },
+        { title: "POSTPROCESS - BLOOM", id: 10, screenshot: "postprocessBloom.jpg", size: "1.0 MB", anchor: "PPBLOOM", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/postprocessBloom.js" },
+        { title: "OCTREE - 8000 spheres", id: 8, screenshot: "octree.jpg", size: "0.1 MB", anchor: "OCTREE", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/octree.js" },
+        { title: "BONES", id: 9, screenshot: "bones.jpg", size: "10 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/bones.js" },
+        { title: "CHARTING", id: 7, screenshot: "charting.jpg", size: "0.1 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/charting.js" },
+        { title: "SHADOWS", id: 6, screenshot: "shadows.jpg", size: "1.0 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/shadows.js" },
+        { title: "HEIGHTMAP", id: 5, screenshot: "heightmap.jpg", size: "1.0 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/heightMap_test.js" },
+        { title: "LIGHTS", id: 1, screenshot: "testlight.jpg", size: "0.1 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/lights_test.js" },
+        { title: "BUMP", id: 2, screenshot: "bump.jpg", size: "0.1 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/bump_test.js" },
+        { title: "FOG", id: 3, screenshot: "fog.jpg", size: "0.1 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/fog_test.js" },
+        { title: "MULTIMATERIAL", id: 4, screenshot: "multimat.jpg", size: "0.1 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/multimat.js" },
+        { title: "BLENDER", scene: "blender", screenshot: "blender.jpg", size: "0.2 MB", incremental: true, github: "https://github.com/BabylonJS/Samples/tree/master/Scenes/Blender" },
+        { title: "SCENE #1", id: 0, screenshot: "testscene.jpg", size: "10 MB", github: "https://github.com/BabylonJS/Samples/blob/master/Scenes/Customs/test.js" }
     ];
 
     var thirdParties = [
-        { title: "CHARACTER STUDY", url: "http://www.visualiser.fr/Babylon/character/default.htm", screenshot: "characterstudy.jpg", size: "Samuel Girardin" },
+        { title: "SURVIVAL", url: "http://www.castorengine.com/babylon/Survival/index.php", screenshot: "survival.jpg", size: "by Dad72" },
+        { title: "CHARACTER STUDY", url: "http://www.visualiser.fr/Babylon/character/default.htm", screenshot: "characterstudy.jpg", size: "by Samuel Girardin" },
         {
-            title: "DANCE MOVES", scene: "DanceMoves", screenshot: "mixamo.jpg", size: "MIXAMO &<BR>Jerry Richards", anchor: "DANCEMOVES", onload: function () {
+            title: "DANCE MOVES", scene: "DanceMoves", screenshot: "mixamo.jpg", size: "by MIXAMO &<BR>Jerry Richards", anchor: "DANCEMOVES", onload: function () {
 
                 var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
                 groundMaterial.reflectionTexture = new BABYLON.MirrorTexture("mirror", 1024, scene, true);
@@ -289,12 +290,12 @@ var onload = function () {
 
                 restoreAllUI();
 
-                if (window.location.hostname.indexOf("localhost") === -1) {
+                if (window.location.hostname.indexOf("localhost") === -1 && ! demo.forceLocal) {
                     if (demo.doNotUseCDN) {
                         sceneLocation = "http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/";
                     }
                     else {
-                        sceneLocation = "http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/";
+                        sceneLocation = "http://cdn.babylonjs.com/wwwbabylonjs/Scenes/";
                     }
                 }
 
@@ -362,7 +363,16 @@ var onload = function () {
         label2.innerHTML = item.size;
         span.appendChild(label2);
 
-        span.onclick = itemClick(item);
+        if (item.github) {
+            var a = document.createElement("a");
+            a.href = item.github;
+            a.innerHTML = "github";
+            a.target = "blank";
+            a.className = "item-text-sub-right";
+            span.appendChild(a);
+        }
+
+        img.onclick = itemClick(item);
 
         root.appendChild(span);
     };
@@ -517,132 +527,142 @@ var onload = function () {
             if (typeof name == "number") {
                 var newScene;
 
-                switch (name) {
-                    case 0:
-                        newScene = CreateTestScene(engine);
-                        break;
-                    case 1:
-                        newScene = CreateLightsTestScene(engine);
-                        break;
-                    case 2:
-                        newScene = CreateBumpScene(engine);
-                        break;
-                    case 3:
-                        newScene = CreateFogScene(engine);
-                        break;
-                    case 4:
-                        newScene = CreateMultiMaterialScene(engine);
-                        break;
-                    case 5:
-                        newScene = CreateHeightMapTestScene(engine);
-                        break;
-                    case 6:
-                        newScene = CreateShadowsTestScene(engine);
-                        break;
-                    case 7:
-                        newScene = CreateChartingTestScene(engine);
-                        break;
-                    case 8:
-                        newScene = CreateOctreeTestScene(engine);
-                        break;
-                    case 9:
-                        newScene = CreateBonesTestScene(engine);
-                        break;
-                    case 10:
-                        newScene = CreatePostProcessBloomTestScene(engine);
-                        break;
-                    case 11:
-                        newScene = CreatePostProcessRefractionTestScene(engine);
-                        break;
-                    case 12:
-                        newScene = CreateLensFlaresTestScene(engine);
-                        break;
-                    case 13:
-                        newScene = CreatePhysicsScene(engine);
-                        break;
-                    case 14:
-                        newScene = CreateCellShadingScene(engine);
-                        break;
-                    case 15:
-                        newScene = CreateCSGTestScene(engine);
-                        break;
-                    case 16:
-                        newScene = CreateConvolutionTestScene(engine);
-                        break;
-                    case 17:
-                        newScene = CreateActionsTestScene(engine);
-                        break;
-                    case 18:
-                        newScene = CreateInstancesTestScene(engine);
-                        break;
-                    case 19:
-                        newScene = CreateParticlesTestScene(engine);
-                        break;
-                    case 20:
-                        newScene = CreateLinesTestScene(engine);
-                        break;
-                    case 21:
-                        newScene = CreateDragDropTestScene(engine);
-                        break;
-                    case 22:
-                        newScene = CreateDisplacementTestScene(engine);
-                        break;
-                    case 23:
-                        newScene = CreateFresnelTestScene(engine);
-                        break;
-                    case 24:
-                        newScene = CreateCustomRenderTargetTestScene(engine);
-                        break;
-                    case 25:
-                        newScene = CreateParticles2TestScene(engine);
-                        break;
-                    case 26:
-                        newScene = CreateProceduralTextureTestScene(engine);
-                        break;
-                    case 27:
-                        newScene = CreateLODTestScene(engine);
-                        break;
-                    case 28:
-                        newScene = CreateBones2TestScene(engine);
-                        break;
-                    case 29:
-                        newScene = CreatePolygonScene(engine);
-                        break;
-                    case 30:
-                        newScene = CreateSSAOScene(engine);
-                        break;
-                	case 31:
-                		newScene = CreateVolumetricLightScatteringScene(engine);
-                		break;
-                	case 32:
-                		newScene = CreateAdvancedShadowsTestScene(engine);
-                		break;
-                	case 33:
-                		newScene = CreateSoftShadowsTestScene(engine);
-                		break;
-                	case 34:
-                		newScene = CreateDecalsTestScene(engine);
-                		break;
-                    case 35:
-                        newScene = CreateRibbonsTestScene(engine);
-                        break;
-                    case 36:
-                        newScene = CreateDOFTestScene(engine);
-                        break;
-                }
-                scene = newScene;
-                scene.executeWhenReady(function () {
-                    canvas.style.opacity = 1;
-                    if (scene.activeCamera) {
-                        scene.activeCamera.attachControl(canvas);
-                        if (then) {
-                            then();
-                        }
-                    }
+                BABYLON.SceneLoader.ShowLoadingScreen = false;
+                engine.displayLoadingUI();
 
-                    // UI
-                    restoreUI();
-                });
+                setTimeout(function () {
+                    switch (name) {
+                        case 0:
+                            newScene = CreateTestScene(engine);
+                            break;
+                        case 1:
+                            newScene = CreateLightsTestScene(engine);
+                            break;
+                        case 2:
+                            newScene = CreateBumpScene(engine);
+                            break;
+                        case 3:
+                            newScene = CreateFogScene(engine);
+                            break;
+                        case 4:
+                            newScene = CreateMultiMaterialScene(engine);
+                            break;
+                        case 5:
+                            newScene = CreateHeightMapTestScene(engine);
+                            break;
+                        case 6:
+                            newScene = CreateShadowsTestScene(engine);
+                            break;
+                        case 7:
+                            newScene = CreateChartingTestScene(engine);
+                            break;
+                        case 8:
+                            newScene = CreateOctreeTestScene(engine);
+                            break;
+                        case 9:
+                            newScene = CreateBonesTestScene(engine);
+                            break;
+                        case 10:
+                            newScene = CreatePostProcessBloomTestScene(engine);
+                            break;
+                        case 11:
+                            newScene = CreatePostProcessRefractionTestScene(engine);
+                            break;
+                        case 12:
+                            newScene = CreateLensFlaresTestScene(engine);
+                            break;
+                        case 13:
+                            newScene = CreatePhysicsScene(engine);
+                            break;
+                        case 14:
+                            newScene = CreateCellShadingScene(engine);
+                            break;
+                        case 15:
+                            newScene = CreateCSGTestScene(engine);
+                            break;
+                        case 16:
+                            newScene = CreateConvolutionTestScene(engine);
+                            break;
+                        case 17:
+                            newScene = CreateActionsTestScene(engine);
+                            break;
+                        case 18:
+                            newScene = CreateInstancesTestScene(engine);
+                            break;
+                        case 19:
+                            newScene = CreateParticlesTestScene(engine);
+                            break;
+                        case 20:
+                            newScene = CreateLinesTestScene(engine);
+                            break;
+                        case 21:
+                            newScene = CreateDragDropTestScene(engine);
+                            break;
+                        case 22:
+                            newScene = CreateDisplacementTestScene(engine);
+                            break;
+                        case 23:
+                            newScene = CreateFresnelTestScene(engine);
+                            break;
+                        case 24:
+                            newScene = CreateCustomRenderTargetTestScene(engine);
+                            break;
+                        case 25:
+                            newScene = CreateParticles2TestScene(engine);
+                            break;
+                        case 26:
+                            newScene = CreateProceduralTextureTestScene(engine);
+                            break;
+                        case 27:
+                            newScene = CreateLODTestScene(engine);
+                            break;
+                        case 28:
+                            newScene = CreateBones2TestScene(engine);
+                            break;
+                        case 29:
+                            newScene = CreatePolygonScene(engine);
+                            break;
+                        case 30:
+                            newScene = CreateSSAOScene(engine);
+                            break;
+                        case 31:
+                            newScene = CreateVolumetricLightScatteringScene(engine);
+                            break;
+                        case 32:
+                            newScene = CreateAdvancedShadowsTestScene(engine);
+                            break;
+                        case 33:
+                            newScene = CreateSoftShadowsTestScene(engine);
+                            break;
+                        case 34:
+                            newScene = CreateDecalsTestScene(engine);
+                            break;
+                        case 35:
+                            newScene = CreateRibbonsTestScene(engine);
+                            break;
+                        case 36:
+                            newScene = CreateDOFTestScene(engine);
+                            break;
+                        case 37:
+                            newScene = CreateReflectionProbeTestScene(engine);
+                            break;
+                    }
+                    scene = newScene;
+                    scene.executeWhenReady(function () {
+                        canvas.style.opacity = 1;
+                        engine.hideLoadingUI();
+                        BABYLON.SceneLoader.ShowLoadingScreen = true;
+                        if (scene.activeCamera) {
+                            scene.activeCamera.attachControl(canvas);
+                            if (then) {
+                                then();
+                            }
+                        }
+
+                        // UI
+                        restoreUI();
+                    });
+                }, 15);
 
                 return;
             };
@@ -793,8 +813,8 @@ var onload = function () {
 
     enableDebug.addEventListener("click", function () {
         if (scene) {
-        	if (scene.debugLayer.isVisible()) {
-        		scene.debugLayer.hide();
+            if (scene.debugLayer.isVisible()) {
+                scene.debugLayer.hide();
             } else {
                 scene.debugLayer.show();
             }

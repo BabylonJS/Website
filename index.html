@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Babylon.js</title>
+	<title>Babylon.js</title>
+	<script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
     <script>
         function writeViewPort() {
             var ua = navigator.userAgent;
@@ -29,7 +30,7 @@
 
     </script>
     <link href="index.css" rel="stylesheet" />
-    <script src="hand.minified-1.2.js"></script>
+    <script src="http://code.jquery.com/pep/0.3.0/pep.js"></script>
     <script src="poly2tri.js"></script>
     <script src="cannon.js"></script>
     <script src="Oimo.js"></script>
@@ -71,6 +72,7 @@
     <script src="Scenes/Customs/decals.js"></script>
 	<script src="Scenes/Customs/ribbons.js"></script>
 	<script src="Scenes/Customs/dof.js"></script>
+	<script src="Scenes/Customs/reflectionProbe.js"></script>
     <script src="index.js"></script>
 </head>
     <body>
@@ -132,112 +134,7 @@
                     <div id="aboutParagraph">
                         <h1>About babylon.js</h1>
                         Babylon.js is a 3D engine based on <b>webgl</b> and <b>javascript</b>.
-                        It supports the following features:
-                    </div>
-                    <div id="features">
-                        <div id="engineFeatures">
-                            <ul>
-                                <li>Complete scene graph with lights, cameras, materials and meshes</li>
-                                <li><b>Collisions engine</b></li>
-                                <li><b>Physics engine (thanks to cannon.js)</b></li>
-                                <li>Scene picking</li>
-                                <li>Antialiasing</li>
-                                <li><b>Animations engine</b></li>
-                                <li><b>Particles Systems</b></li>
-                                <li>Sprites and 2D layers</li>
-                                <li>
-                                    Optimizations engines:
-                                    <ul>
-                                        <li>Frustum clipping</li>
-                                        <li>Sub-meshes clipping</li>
-                                        <li>Hardware scaling</li>
-                                        <li>Selection octrees</li>
-                                        <li>Offline mode (Assets are saved locally to prevent reloading them)</li>
-                                        <li>Incremental loading</li>
-                                        <li>Binary compressed format</li>
-                                        <li><b>Hardware accelerated instances</b></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Standard material is a <b>per pixel</b> material that supports:
-                                    <ul>
-                                        <li>Diffuse lightning and texture</li>
-                                        <li>Ambient lightning and texture</li>
-                                        <li>Specular lightning</li>
-                                        <li>Opacity texture</li>
-                                        <li>Reflection texture (Spheric, planar, cubic and projection)</li>
-                                        <li><b>Mirror texture</b></li>
-                                        <li><b>Emissive texture</b></li>
-                                        <li><b>Specular texture</b></li>
-                                        <li><b>Bump texture</b></li>
-                                        <li>Up to 4 lights (points, directionals, spots, hemispherics)</li>
-                                        <li>Custom materials</li>
-                                        <li>Skybox</li>
-                                        <li>Vertex color</li>
-                                        <li>4 bones per vertex</li>
-                                        <li>Fresnel term for diffuse, opacity, emissive and reflection</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Special FX
-                                    <ul>
-                                        <li>Fog</li>
-                                        <li>Alpha blending</li>
-                                        <li>Alpha testing</li>
-                                        <li>Billboarding</li>
-                                        <li>Fullscreen mode</li>
-                                        <li>Shadow Maps and Variance Shadow Maps</li>
-                                        <li>Rendering layers</li>
-                                        <li><b>Post-processes (blur, refraction, black'n'white, fxaa, customs...)</b></li>
-                                        <li><b>Lens flares</b></li>
-                                        <li><b>Multi-views</b></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Textures:
-                                    <ul>
-                                        <li>Render target textures</li>
-                                        <li>Dynamic textures (canvas)</li>
-                                        <li>Video textures</li>
-                                        <li>Compressed (DDS) textures</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Cameras:
-                                    <ul>
-                                        <li>Arc rotate camera</li>
-                                        <li>Free camera</li>
-                                        <li>Touch camera</li>
-                                        <li>Virtual Joysticks camera</li>
-                                        <li><b>Gamepad camera</b></li>
-                                        <li><b>VR Device Oriention camera</b></li>
-                                        <li><b>WebVR camera</b></li>
-                                        <li><b>Follow camera</b></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Meshes:
-                                    <ul>
-                                        <li>Mesh cloning</li>
-                                        <li>Dynamic meshes</li>
-                                        <li><b>Height maps</b></li>
-                                        <li>Bones</li>
-                                        <li>Constructive solid geometries</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Import:
-                                    <ul>
-                                        <li>Babylon scene file can be converted from <i>.OBJ</i>, <i>.FBX</i>, <i>.MXB</i></li>
-                                        <li>Exporter for Blender</li>
-                                        <li>Exporter for Cheetah3d</li>
-                                        <li><b>Exporter for 3ds max</b></li>
-                                        <li>Support for drag'n'drop</li>
-                                        <li>Assets manager</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        For a complete list of features please visit our <a href="https://github.com/BabylonJS/Babylon.js/edit/master/readme.md">repo</a>
                     </div>
                 </div>
                 <div id="footer">
@@ -252,7 +149,7 @@
                 </div>
             </div>
             <div id="renderZone" class="movedRight">
-                <canvas id="renderCanvas"></canvas>
+                <canvas id="renderCanvas" touch-action="none"></canvas>
                 <div id="fps"></div>
                 <div id="stats"></div>
                 <div id="status"></div>
