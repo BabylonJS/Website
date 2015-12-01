@@ -19,11 +19,11 @@ function startGame() {
         var filesInput;
         var currentHelpCounter;
         var currentScene;
-        var perffooterEnable = false;
+        var enableDebugLayer = false;
 
         currentHelpCounter = localStorage.getItem("helpcounter");
 
-        BABYLON.Engine.ShadersRepository = "/Babylon/Shaders/";
+        BABYLON.Engine.ShadersRepository = "/src/Shaders/";
 
         if (!currentHelpCounter) currentHelpCounter = 0;
 
@@ -33,50 +33,56 @@ function startGame() {
         });
 
         var sceneLoaded = function (sceneFile, babylonScene) {
+            function displayDebugLayerAndLogs() {
+                currentScene.debugLayer._displayLogs = true;
+                enableDebugLayer = true;
+                currentScene.debugLayer.show();
+            };
+            function hideDebugLayerAndLogs() {
+                currentScene.debugLayer._displayLogs = false;
+                enableDebugLayer = false;
+                currentScene.debugLayer.hide();
+            };
+            if (enableDebugLayer) {
+                hideDebugLayerAndLogs();
+            }
             currentScene = babylonScene;
             document.title = "BabylonJS - " + sceneFile.name;
             // Fix for IE, otherwise it will change the default filter for files selection after first use
             htmlInput.value = "";
-            document.getElementById("logo").className = "hidden";
-            //loadingText.className = "loadingText";
-        };
-
-        var progressCallback = function (evt) {
-                //if (evt.lengthComputable) {
-                //    loadingText.innerHTML = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
-                //} else {
-                //    dlCount = evt.loaded / (1024 * 1024);
-                //    loadingText.innerHTML = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
-                //}
-        };
-
-        var textureLoadingCallback = function (remainingTextures) {
-            //loadingText.innerHTML = "Streaming items..." + (remainingTextures ? (remainingTextures + " remaining") : "");
-        };
-
-        var startingProcessingFilesCallback = function () {
-            //loadingText.className = "";
-            //loadingText.innerHTML = "Loading, please wait...";
-        };
-
-        var additionnalRenderLoopLogic = function () {
-            divFps.innerHTML = BABYLON.Tools.GetFps().toFixed() + " fps";
-            if (currentScene) {
-                miscCounters.innerHTML = "Total vertices: " + currentScene.getTotalVertices() + " <br />"
-                    + "Active vertices: " + currentScene.getActiveVertices() + " <br />"
-                    + "Active particles: " + currentScene.getActiveParticles() + " <br />"
-                    + "Frame duration: " + currentScene.getLastFrameDuration() + " ms" + " <br />"
-                    + "Evaluate Active Meshes duration: " + currentScene.getEvaluateActiveMeshesDuration() + " ms" + " <br />"
-                    + "Render Targets duration: " + currentScene.getRenderTargetsDuration() + " ms" + " <br />"
-                    + "Particles duration: " + currentScene.getParticlesDuration() + " ms" + " <br />"
-                    + "Sprites duration: " + currentScene.getSpritesDuration() + " ms" + " <br />"
-                    + "Render duration: " + currentScene.getRenderDuration() + " ms";
+            // In case of error during loading, meshes will be empty and clearColor is set to red
+            if (currentScene.meshes.length === 0 && currentScene.clearColor.r === 1 && currentScene.clearColor.g === 0 && currentScene.clearColor.b === 0) {
+                document.getElementById("logo").className = "";
+                canvas.style.opacity = 0;
+                displayDebugLayerAndLogs();
+            }
+            else {
+                if (BABYLON.Tools.errorsCount > 0) {
+                    displayDebugLayerAndLogs();
+                }
+                document.getElementById("logo").className = "hidden";
+                canvas.style.opacity = 1;
+                if (currentScene.activeCamera.keysUp) {
+                    currentScene.activeCamera.keysUp.push(90); // Z
+                    currentScene.activeCamera.keysUp.push(87); // W
+                    currentScene.activeCamera.keysDown.push(83); // S
+                    currentScene.activeCamera.keysLeft.push(65); // A
+                    currentScene.activeCamera.keysLeft.push(81); // Q
+                    currentScene.activeCamera.keysRight.push(69); // E
+                    currentScene.activeCamera.keysRight.push(68); // D
+                }
             }
         };
 
-        filesInput = new BABYLON.FilesInput(engine, null, canvas, sceneLoaded, progressCallback, additionnalRenderLoopLogic, textureLoadingCallback, startingProcessingFilesCallback);
+        filesInput = new BABYLON.FilesInput(engine, null, canvas, sceneLoaded);
         filesInput.monitorElementForDragNDrop(canvas);
 
+        window.addEventListener("keydown", function (evt) {
+            // Press R to reload
+            if (evt.keyCode === 82) {
+                filesInput.reload();
+            }
+        });
         htmlInput.addEventListener('change', function (event) {
             filesInput.loadFiles(event);
         }, false);
@@ -84,10 +90,16 @@ function startGame() {
             engine.switchFullscreen(true);
         }, false);
         btnPerf.addEventListener('click', function () {
-            perffooter.className = "perffooter shown";
-        }, false);
-        btnDownArrow.addEventListener('click', function () {
-            perffooter.className = "perffooter";
+            if (currentScene) {
+                if (!enableDebugLayer) {
+                    currentScene.debugLayer.show();
+                    enableDebugLayer = true;
+
+                } else {
+                    currentScene.debugLayer.hide();
+                    enableDebugLayer = false;
+                }
+            }
         }, false);
 
         // The help tips will be displayed only 5 times

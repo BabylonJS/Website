@@ -1,205 +1,1393 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Babylon.js</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript</title>
+	<meta name="description" content="A complete JavaScript framework for building 3D games with HTML5, WebGL and Web Audio">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/img/favicon/manifest.json">
+	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="author" href="humans.txt" />
+	<meta name="msapplication-TileColor" content="#555555">
+	<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- FB -->
+	<meta property="og:title" content="Babylon.js demos & documentation" />
+	<meta property="og:site_name" content="Babylon.js" />
+	<meta property="og:url"
+		  content="http://www.babylonjs.com" />
+	<meta property="og:description"
+		  content="Babylon.js is an open-source 3D gaming framework using WebGL, Web Audio and other API like Gamepad. Models can be exported from Blender, 3DS Max & Unity. It supports PBR." />
+	<meta property="fb:app_id" content="1673000116277273" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://www.babylonjs.com/assets/Logo.png" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="article:author" content="https://www.facebook.com/davrous" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@davrous" />
+	<meta name="twitter:creator" content="@davrous" />
+	<meta name="twitter:url" content="http://www.babylonjs.com" />
+	<meta name="twitter:title" content="Babylon.js demos & documentation" />
+	<meta name="twitter:description" content="Babylon.js is an open-source 3D gaming framework using WebGL, Web Audio and other API like Gamepad. Models can be exported from Blender, 3DS Max & Unity. It supports PBR." />
+	<meta name="twitter:image" content="http://www.babylonjs.com/assets/Logo.png" />
+
+	<link rel=" stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:700">
+	<link rel="stylesheet" href="scss/main.css">
 	<script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
-    <script>
-        function writeViewPort() {
-            var ua = navigator.userAgent;
-            if (ua.indexOf("Android") >= 0 && ua.indexOf("AppleWebKit") >= 0) {
-                var webkitVersion = parseFloat(ua.slice(ua.indexOf("AppleWebKit") + 12));
-                // targets android browser, not chrome browser (http://jimbergman.net/webkit-version-in-android-version/)
-                if (webkitVersion < 535) {
-                    document.write('<meta name="viewport" content="initial-scale=1" />');
-                }
-            }
-        }
-
-        writeViewPort();
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-41767310-1', 'babylonjs.com');
-        ga('send', 'pageview');
-
-    </script>
-    <link href="index.css" rel="stylesheet" />
-    <script src="http://code.jquery.com/pep/0.3.0/pep.js"></script>
-    <script src="poly2tri.js"></script>
-    <script src="cannon.js"></script>
-    <script src="Oimo.js"></script>
-    <script src="babylon.js"></script>
-    <script src="Scenes/Customs/test.js"></script>
-    <script src="Scenes/Customs/lights_test.js"></script>
-    <script src="Scenes/Customs/bump_test.js"></script>
-    <script src="Scenes/Customs/fog_test.js"></script>
-    <script src="Scenes/Customs/multimat.js"></script>
-    <script src="Scenes/Customs/heightMap_test.js"></script>
-    <script src="Scenes/Customs/shadows.js"></script>
-    <script src="Scenes/Customs/charting.js"></script>
-    <script src="Scenes/Customs/octree.js"></script>
-    <script src="Scenes/Customs/bones.js"></script>
-    <script src="Scenes/Customs/postprocessBloom.js"></script>
-    <script src="Scenes/Customs/postprocessRefraction.js"></script>
-    <script src="Scenes/Customs/lensFlares.js"></script>
-    <script src="Scenes/Customs/physics.js"></script>
-    <script src="Scenes/Customs/cellShading.js"></script>
-    <script src="Scenes/Customs/csg.js"></script>
-    <script src="Scenes/Customs/postprocessConvolution.js"></script>
-    <script src="Scenes/Customs/actions.js"></script>
-    <script src="Scenes/Customs/instances.js"></script>
-    <script src="Scenes/Customs/particles.js"></script>
-    <script src="Scenes/Customs/particles2.js"></script>
-    <script src="Scenes/Customs/lines.js"></script>
-    <script src="Scenes/Customs/dragdrop.js"></script>
-    <script src="Scenes/Customs/displacementMap.js"></script>
-    <script src="Scenes/Customs/fresnel.js"></script>
-    <script src="Scenes/Customs/customRenderTarget.js"></script>
-    <script src="Scenes/Customs/lod.js"></script>
-    <script src="Scenes/Customs/bones2.js"></script>
-    <script src="Scenes/Customs/polygon.js"></script>
-    <script src="Scenes/Customs/ssao.js"></script>
-    <script src="Scenes/Customs/volumetricLightScattering.js"></script>
-    <script src="Scenes/Customs/proceduralTexture.js"></script>
-    <script src="Scenes/Customs/advancedShadows.js"></script>
-    <script src="Scenes/Customs/softShadows.js"></script>
-    <script src="Scenes/Customs/decals.js"></script>
-	<script src="Scenes/Customs/ribbons.js"></script>
-	<script src="Scenes/Customs/dof.js"></script>
-	<script src="Scenes/Customs/reflectionProbe.js"></script>
-    <script src="index.js"></script>
 </head>
-    <body>
-        <div id="description">
-            <h1>About babylon.js</h1>
-            Babylon.js is a 3D engine based on <b>webgl</b> and <b>JavaScript</b>.
-            It supports tons of cool features and it is available for free under Apache licence.
-            It is built with simplicity and performance in mind.
-        </div>
-        <div id="rootDiv">
-            <div id="screen1">
-                <div id="menuPanel">
-                    <br />
-                    <div id="itemsContainer">
-                        <div class="header">
-                            DEMOS
-                        </div>
-                        <div id="items"></div>
-                        <div class="header">
-                            <br />
-                            FEATURES TESTS
-                        </div>
-                        <div id="testItems"></div>
-                        <div class="header">
-                            <br />
-                            THIRD-PARTY
-                        </div>
-                        <div id="3rdItems"></div>
-                    </div>
-                </div>
-                <img id="back" src="Assets/FondBandeau.png" />
-                <img id="mainTitle" src="Assets/Logo.png" />
+<body>
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1673000116277273',
+				xfbml: true,
+				version: 'v2.5'
+			});
+		};
 
-                <div id="gradient"></div>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-                <img id="motto" src="Assets/Accroche.png" />
+	<header class="page-title">
+		<div class="wrapper">
+			<div class="banner">
+				<div class="banner-item">
+					<h1><img src="img/layout/logo-babylonjs.svg" alt="BabylonJS"></h1>
+				</div>
+				<div class="banner-item"></div>
+				<div class="banner-item">
+					<h2><i>WebGL.</i> <i>Simple.</i> <i>Powerful.</i></h2>
+					<p>A complete JavaScript framework for building 3D games with HTML5, WebGL and Web Audio</p>
+				</div>
+			</div>
+		</div>
+	</header>
 
-                <div id="downloadText">DOWNLOAD</div>
-                <a href="https://github.com/BabylonJS/Babylon.js">
-                    <img id="downloadLink" src="Assets/IcoDownload.png" class="button" />
-                </a>
-                <div id="tryItText">TRY IT!</div>
-                <a href="http://www.babylonjs.com/playground">
-                    <img id="tryItLink" src="Assets/IcoFAQ.PNG" class="button" />
-                </a>
-                <div id="aboutPanel">
-                    <div id="aboutParagraph">
-                        <h1>Babylon.js team</h1>
-                        <p>
-                            <i>Lead developer:</i> David <b>CATUHE</b> (<a href="http://www.twitter.com/@deltakosh">@deltakosh</a>)<br />
-                            <i>Developer:</i> David <b>ROUSSET</b> (<a href="http://www.twitter.com/@davrous">@davrous</a>)<br />
-                            <i>Developer:</i> Pierre <b>LAGARDE</b> (<a href="http://www.twitter.com/@pierlag">@pierlag</a>)<br />
-                            <i>3D Artist:</i> Michel <b>ROUSSEAU</b> (<a href="http://www.twitter.com/@rousseau_michel">@rousseau_michel</a>)<br />
-                            <br />
-                            <i>Hill Valley scene:</i> Camille <b>JOLY</b> and <a href="http://www.enozone.com/">Enozone</a><br />
-                            <i>Train scene:</i> Romuald <b>ROUHIER</b> and <a href="http://www.progiss.com/">Progiss</a><br />
-                        </p>
-                    </div>
-                    <div id="aboutParagraph">
-                        <h1>About babylon.js</h1>
-                        Babylon.js is a 3D engine based on <b>webgl</b> and <b>javascript</b>.
-                        For a complete list of features please visit our <a href="https://github.com/BabylonJS/Babylon.js/edit/master/readme.md">repo</a>
-                    </div>
-                </div>
-                <div id="footer">
-                    <a class="footerLink" id="aboutLink">about</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://www.babylonjs.com/sandbox">sandbox</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://www.babylonjs.com/cyos">CYOS</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://materialeditor.raananweber.com/">material editor</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="https://github.com/BabylonJS/Babylon.js">github</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://doc.babylonjs.com">documentation</a>&nbsp;&nbsp;
-                    <a class="footerLink" href="http://babylonjs.uservoice.com">uservoice</a>&nbsp;&nbsp;
-                </div>
-            </div>
-            <div id="renderZone" class="movedRight">
-                <canvas id="renderCanvas" touch-action="none"></canvas>
-                <div id="fps"></div>
-                <div id="stats"></div>
-                <div id="status"></div>
-                <div id="controlPanel">
-                    <div id="controlsZone">
-                        <p>
-                            <button id="enableDebug">Debug layer</button>
-                        </p>
-                        <p>
-                            <button id="fullscreen">Fullscreen</button>
-                        </p>
-                    </div>
-                    <div class="tag">Control panel</div>
-                    <div class="tag" id="clickableTag"></div>
-                </div>
-                <div id="cameraPanel">
-                    <div id="cameraControlsZone">
-                        Active camera:<br>
-                        <select id="camerasList"></select>
-                        <p>
-                            Change control method:
-                            <button class="buttonControlPanel" id="touchCamera">
-                                <img src="Assets/CamTouchOff.png" class="buttonImg" />Touch camera
-                            </button>
-                            <button class="buttonControlPanel" id="deviceOrientationCamera">
-                                <img src="Assets/CamDeviceOff.png" class="buttonImg" />VR Device orientation camera
-                            </button>
-                            <button class="buttonControlPanel" id="gamepadCamera">
-                                <img src="Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
-                            </button>
-                            <button class="buttonControlPanel" id="virtualJoysticksCamera">
-                                <img src="Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
-                            </button>
-                            <button class="buttonControlPanel" id="anaglyphCamera">
-                                <img src="Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
-                            </button>
-                        </p>
-                        <p>
-                            Post-processes:
-                            <button class="smallButtonControlPanel" id="toggleFxaa">Toggle FXAA (antialiasing)</button>
-                            <button class="smallButtonControlPanel" id="toggleFsaa4">Toggle FSAA 4X (antialiasing)</button>
-                            <button class="smallButtonControlPanel" id="toggleBandW">Toggle Black and white</button>
-                            <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
-                        </p>
-                    </div>
-                    <div class="cameraTag"><img src="Assets/camera.png" /></div>
-                    <div class="cameraTag" id="cameraClickableTag"></div>
-                </div>
-            </div>
-            <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
-        </div>
-    </body>
+	<div class="download-bar">
+		<div class="wrapper">
+			<a class="button-red" href="/playground" title="Try BabylonJS">Try BabylonJS</a>
+			<a class="button-blue" href="https://github.com/BabylonJS/Babylon.js" title="Download BabylonJS">Download on GitHub</a>
+		</div>
+	</div>
+
+	<nav class="navigation">
+		<div class="wrapper">
+			<a href="#featuresdemossection">Features</a>
+			<a href="#thirdpartydemossection">Third-party</a>
+			<a href="#specifications">Specifications</a>
+			<a href="https://github.com/BabylonJS/Babylon.js">GitHub</a>
+			<a href="http://doc.babylonjs.com">Documentation</a>
+			<a href="http://www.html5gamedevs.com/forum/16-babylonjs/">Forum</a>
+			<a href="http://www.babylonjs.com/sandbox">Sandbox</a>
+			<a href="http://www.babylonjs.com/cyos">CYOS</a>
+			<a href="http://babylonjs.uservoice.com">Uservoice</a>
+			<a href="http://materialeditor.raananweber.com/">Material editor</a>
+		</div>
+	</nav>
+
+	<main>
+		<section id="maindemossection">
+			<div class="wrapper">
+				<h2>Demos</h2>
+				<div class="gallery">
+                    <article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+                        <a title="Babylonyzer" class="gallery-item-link" href="http://synergy-development.fr/babylonyzer/"
+                           target="blank" itemprop="url">
+                            <img class="gallery-item-img" alt="WebGL scene for MOLVWR" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/babylonyzer.jpg"
+                                 itemprop="image">
+                            <div class="gallery-item-infos">
+                                <h3 class="gallery-item-title" itemprop="name">BABYLONYZER</h3>
+                                <div class="gallery-item-others">
+                                    <div class="gallery-item-author">by <span itemprop="author">Steve 'Stv' Duran & Kohai</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ACTION BUILDER" class="gallery-item-link" href="./Demos/ActionBuilder" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ACTION BUILDER" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/absmall.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ACTION BUILDER</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">6 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="MOLVWR" class="gallery-item-link" href="http://gleborgne.github.io/molvwr/#1GCN"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for MOLVWR" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/molecule.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">MOLVWR</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Guillaume Leborgne</span></div>
+
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CZECH STARTUPS" class="gallery-item-link" href="http://czechstartups.org/#3Dmap" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CZECH STARTUPS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/czech.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CZECH STARTUPS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">EPK Technologies</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DOLBY EXPERIMENT" class="gallery-item-link" href="http://audioexperience.dolby.com/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DOLBY EXPERIMENT" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/dolby.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DOLBY EXPERIMENT</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">DOLBY AUDIO</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="MANSION" class="gallery-item-link" href="./Demos/MANSION" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for MANSION" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/Mansion400.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">MANSION</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">75 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="FLIGHT ARCADE" class="gallery-item-link" href="http://flightarcade.com" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for FLIGHT ARCADE" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/flightarcade.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">FLIGHT ARCADE</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Microsoft Edge</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DINO HUNT" class="gallery-item-link" href="http://dinohuntcanada.history.ca" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DINO HUNT" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/dino800.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DINO HUNT</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">History Channel</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="RETAIL" class="gallery-item-link" href="./Demos/Retail" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for RETAIL" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/retail.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">RETAIL</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">3 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="V8 ENGINE" class="gallery-item-link" href="./Demos/V8" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for V8 ENGINE" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/v8small.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">V8 ENGINE</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">15 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ACP" class="gallery-item-link" href="http://race.assassinscreedpirates.com/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ACP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/ACP.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ACP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">Assassin's Creed Pirates</div>
+									<div class="gallery-item-author">by <span itemprop="author">Ubisoft</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="HILLVALLEY" class="gallery-item-link" href="./Demos/HillValley" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for HILLVALLEY" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/hill2.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">HILLVALLEY</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">70 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Camille JOLY &amp; Michel ROUSSEAU</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="TRAIN" class="gallery-item-link" href="./Demos/Train" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for TRAIN" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/train.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">TRAIN</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">70 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Romuald ROUHIER </span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ROBOT" class="gallery-item-link" href="/Scenes/Robot/index.html" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ROBOT" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/robot.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ROBOT</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">8.5 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="WORLDMONGER" class="gallery-item-link" href="/Scenes/Worldmonger/index.html" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for WORLDMONGER" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/worldmonger.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">WORLDMONGER</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">8.5 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">David Catuhe</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="HEART" class="gallery-item-link" href="./Demos/Heart" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for HEART" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/heart.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">HEART</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">14 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ESPILIT" class="gallery-item-link" href="./Demos/Espilit" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ESPILIT" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/espilit.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ESPILIT</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">50 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="WINDOWS CAFE" class="gallery-item-link" href="./Demos/WCafe" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for WINDOWS CAFE" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/wcafe.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">WINDOWS CAFE</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">28 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="FLAT 2009" class="gallery-item-link" href="./Demos/Flat2009" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for FLAT 2009" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/flat2009.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">FLAT 2009</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">
+										44 MB
+										<br>by Michel Rousseau
+									</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="THE CAR" class="gallery-item-link" href="./Demos/TheCar" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for THE CAR" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/thecar.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">THE CAR</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">100 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="VIPER" class="gallery-item-link" href="./Demos/Viper" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for VIPER" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/viper.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">VIPER</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">18 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SPACESHIP" class="gallery-item-link" href="./Demos/Spaceship" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SPACESHIP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/spaceship.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SPACESHIP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="OMEGA CRUSHER" class="gallery-item-link" href="./Demos/SpaceDeK" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for OMEGA CRUSHER" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/omegacrusher.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">OMEGA CRUSHER</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">10 MB</div>
+									<div class="gallery-item-author">by <span itemprop="author">Michel Rousseau</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<hr class="margin">
+
+		<section id="featuresdemossection">
+			<div class="wrapper">
+				<h2>Features <a class="upper-link" href="#maindemossection">⇪</a></h2>
+				<div class="gallery">
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="POINT LIGHT SHADOW MAP" class="gallery-item-link" href="./Demos/PointLightShadowMap/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for POINT LIGHT SHADOW MAP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/pointLightShadow.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">POINT LIGHT SHADOW MAP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="REFLECTION PROBE" class="gallery-item-link" href="./Demos/RefProbe/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for REFLECTION PROBE" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/reflectionProbe.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">REFLECTION PROBE</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DEPTH OF FIELD / LENS" class="gallery-item-link" href="./Demos/DOF/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DEPTH OF FIELD / LENS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/dof.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DEPTH OF FIELD / LENS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">30 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SIMD.JS" class="gallery-item-link" href="./Demos/SIMD/"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SIMD.JS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/simd.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SIMD.JS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">60 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="RIBBONS" class="gallery-item-link" href="./Demos/Ribbons/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for RIBBONS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/ribbons.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">RIBBONS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DECALS" class="gallery-item-link" href="./Demos/Decals/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DECALS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/decals.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DECALS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SOFT SHADOWS" class="gallery-item-link" href="./Demos/SoftShadows/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SOFT SHADOWS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/softShadows.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SOFT SHADOWS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ADVANCED SHADOWS" class="gallery-item-link" href="./Demos/AdvancedShadows/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ADVANCED SHADOWS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/advancedShadows.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ADVANCED SHADOWS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="VOLUMETRIC LIGHT SCATTERING" class="gallery-item-link" href="./Demos/VolumetricLightScattering/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for VOLUMETRIC LIGHT SCATTERING" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/volumetriclightscattering.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">VOLUMETRIC LIGHT SCATTERING</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">10 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SSAO" class="gallery-item-link" href="./Demos/SSAO/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SSAO" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/ssao.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SSAO</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">10 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="POLYGON MESH" class="gallery-item-link" href="./Demos/Polygon/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for POLYGON MESH" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/polygon.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">POLYGON MESH</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="INSTANCED BONES" class="gallery-item-link" href="./Demos/InstancedBones/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for INSTANCED BONES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/bones2.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">INSTANCED BONES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">10 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="LEVEL OF DETAIL" class="gallery-item-link" href="./Demos/LOD/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for LEVEL OF DETAIL" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/lod.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">LEVEL OF DETAIL</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="PROCEDURAL TEXTURES" class="gallery-item-link" href="./Demos/Procedural/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for PROCEDURAL TEXTURES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/ProceduralTextures.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">PROCEDURAL TEXTURES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">5 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ENHANCED PARTICLES" class="gallery-item-link" href="./Demos/Particles2/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ENHANCED PARTICLES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/particles2.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ENHANCED PARTICLES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="FRESNEL" class="gallery-item-link" href="./Demos/Fresnel/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for FRESNEL" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/fresnel.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">FRESNEL</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CUSTOM RENDER TARGET" class="gallery-item-link" href="./Demos/CustomRenderTarget/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CUSTOM RENDER TARGET" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/customRenderTarget.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CUSTOM RENDER TARGET</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ASSETS MANAGER" class="gallery-item-link" href="./Demos/AssetsManager/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ASSETS MANAGER" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/assets.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ASSETS MANAGER</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DISPLACEMENT MAP (CPU)" class="gallery-item-link" href="./Demos/DisplacementMap/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DISPLACEMENT MAP (CPU)" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/displacement.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DISPLACEMENT MAP (CPU)</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DRAG'N'DROP" class="gallery-item-link" href="./Demos/DragNDrop/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DRAG'N'DROP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/dragdrop.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DRAG'N'DROP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="LINES" class="gallery-item-link" href="./Demos/Lines/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for LINES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/lines.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">LINES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="INSTANCES" class="gallery-item-link" href="./Demos/Instances/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for INSTANCES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/instances.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">INSTANCES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="ACTIONS" class="gallery-item-link" href="./Demos/Actions/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for ACTIONS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/actions.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">ACTIONS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="PARTICLES" class="gallery-item-link" href="./Demos/Particles/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for PARTICLES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/particles.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">PARTICLES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="VERTEXDATA" class="gallery-item-link" href="./Demos/VertexData/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for VERTEXDATA" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/clouds.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">VERTEXDATA</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="POSTPROCESS - CONVOLUTION" class="gallery-item-link" href="./Demos/PPConvolution/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for POSTPROCESS - CONVOLUTION" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/convolution.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">POSTPROCESS - CONVOLUTION</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CONSTRUCTIVE SOLID GEOMETRIES" class="gallery-item-link" href="./Demos/CSG/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CONSTRUCTIVE SOLID GEOMETRIES"
+								 src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/csg.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CONSTRUCTIVE SOLID GEOMETRIES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CUSTOM SHADER - CELL SHADING" class="gallery-item-link" href="./Demos/CustomShader/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CUSTOM SHADER - CELL SHADING"
+								 src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/cellshading.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CUSTOM SHADER - CELL SHADING</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="PHYSICS" class="gallery-item-link" href="./Demos/Physics/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for PHYSICS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/physics.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">PHYSICS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="LENS FLARES" class="gallery-item-link" href="./Demos/Lens/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for LENS FLARES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/lens.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">LENS FLARES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="POSTPROCESS - REFRACTION" class="gallery-item-link" href="./Demos/PPRef/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for POSTPROCESS - REFRACTION" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/postprocessRefraction.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">POSTPROCESS - REFRACTION</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="POSTPROCESS - BLOOM" class="gallery-item-link" href="./Demos/PPBloom/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for POSTPROCESS - BLOOM" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/postprocessBloom.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">POSTPROCESS - BLOOM</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="OCTREE - 8000 spheres" class="gallery-item-link" href="./Demos/Octree/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for OCTREE - 8000 spheres" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/octree.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">OCTREE - 8000 spheres</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="BONES" class="gallery-item-link" href="./Demos/Bones/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for BONES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/bones.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">BONES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">10 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CHARTING" class="gallery-item-link" href="./Demos/Charting/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CHARTING" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/charting.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CHARTING</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SHADOWS" class="gallery-item-link" href="./Demos/Shadows/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SHADOWS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/shadows.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SHADOWS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="HEIGHTMAP" class="gallery-item-link" href="./Demos/Heightmap/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for HEIGHTMAP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/heightmap.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">HEIGHTMAP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">1.0 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="LIGHTS" class="gallery-item-link" href="./Demos/Lights/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for LIGHTS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/testlight.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">LIGHTS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="BUMP" class="gallery-item-link" href="./Demos/Bump/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for BUMP" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/bump.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">BUMP</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="FOG" class="gallery-item-link" href="./Demos/Fog/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for FOG" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/fog.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">FOG</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="MULTIMATERIAL" class="gallery-item-link" href="./Demos/Multimaterial/" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for MULTIMATERIAL" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/multimat.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">MULTIMATERIAL</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-size">0.1 MB</div>
+								</div>
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<hr class="margin">
+
+		<section id="thirdpartydemossection">
+			<div class="wrapper">
+				<h2>Third-party <a class="upper-link" href="#featuresdemossection">⇪</a></h2>
+				<div class="gallery">
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="360 Panorama Viewer" class="gallery-item-link" href="http://www.villa-aesculap.de/unser-haus/360-panoramen/"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for 360 Panorama Viewer" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/pano.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">360 Panorama Viewer</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Mediatack</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SURVIVAL" class="gallery-item-link" href="http://www.castorengine.com/babylon/Survival/index.php"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SURVIVAL" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/survival.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SURVIVAL</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Dad72</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CHARACTER STUDY" class="gallery-item-link" href="http://www.visualiser.fr/Babylon/character/default.htm"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CHARACTER STUDY" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/characterstudy.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CHARACTER STUDY</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Samuel Girardin</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DANCE MOVES" class="gallery-item-link" href="undefined" target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DANCE MOVES" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/mixamo.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DANCE MOVES</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">MIXAMO &amp;<br>Jerry Richards</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="SHINOBOMB" class="gallery-item-link" href="http://www.pixelcodr.com/games/shinobomb/index.html"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for SHINOBOMB" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/shinobomb.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">SHINOBOMB</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Jb. Bledowski &amp;<br>J. Chenard</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CYBROX SUPRA" class="gallery-item-link" href="http://www.3dpanacea.com/automotive_showroom/cybrox.html"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CYBROX SUPRA" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/Cybrox Supra.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CYBROX SUPRA</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">3D Panacea</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DESIGN THE 5" class="gallery-item-link" href="http://designthe5.com" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DESIGN THE 5" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/design5.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DESIGN THE 5</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Realpie Media &amp;<br>Jumpkick Studios</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="Evasion" class="gallery-item-link" href="http://www.castorengine.com/babylon/Evasion/index.html"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for Evasion" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/evasion.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">Evasion</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Dad72</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="Wanaplan" class="gallery-item-link" href="http://www.wanaplan.com/en/" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for Wanaplan" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/wanaplan.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">Wanaplan</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Wanadev</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DotVision Motion &amp; Bing Maps" class="gallery-item-link" href="http://live2.dotvision.com/live/virtualTour?guid=f0045a3c-6c11-4329-b881-8d8a170538fb&amp;lang=fr&amp;intro=true"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DotVision Motion &amp; Bing Maps"
+								 src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/myGeoLive3D.jpg" itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DotVision Motion &amp; Bing Maps</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Dotvision</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="BLUE LADY" class="gallery-item-link" href="http://www.3dworlds.ca/1webgl/blady/index.html"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for BLUE LADY" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/lady.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">BLUE LADY</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Gryff</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="LIGHT SPEED READY" class="gallery-item-link" href="http://xanmia.github.io/Light-Speed-Ready/game.html"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for LIGHT SPEED READY" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/Light Speed Ready.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">LIGHT SPEED READY</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Xanmia</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="DRIFT" class="gallery-item-link" href="http://www.visualiser.fr/Babylon/Drift/default.htm"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for DRIFT" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/Drift.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">DRIFT</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">S. Girardin</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="BING 3D MAPS" class="gallery-item-link" href="http://babylonbing.azurewebsites.net/"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for BING 3D MAPS" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/bing3D.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">BING 3D MAPS</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">A. Beaulieu</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CAR GAME" class="gallery-item-link" href="http://babylon.azurewebsites.net" target="blank"
+						   itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CAR GAME" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/car.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CAR GAME</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">G. Carlander</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="CYCLE GAME" class="gallery-item-link" href="http://tronbabylon.azurewebsites.net/"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for CYCLE GAME" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/tron.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">CYCLE GAME</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">G. Carlander</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="GALLERY" class="gallery-item-link" href="http://guillaume.carlander.fr/Babylon/Gallery/"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for GALLERY" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/gallery.png"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">GALLERY</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">G. Carlander</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+					<article class="gallery-item" itemscope="" itemtype="http://schema.org/CreativeWork">
+						<a title="3delyvisions SKYBOX TOUR" class="gallery-item-link" href="http://urbanproductions.com/wingy/babylon/skyboxes/skybox_tour.htm"
+						   target="blank" itemprop="url">
+							<img class="gallery-item-img" alt="WebGL scene for 3delyvisions SKYBOX TOUR" src="http://cdn.babylonjs.com/wwwbabylonjs/Screenshots/tour.jpg"
+								 itemprop="image">
+							<div class="gallery-item-infos">
+								<h3 class="gallery-item-title" itemprop="name">3delyvisions SKYBOX TOUR</h3>
+								<div class="gallery-item-others">
+									<div class="gallery-item-author">by <span itemprop="author">Wingnut</span></div>
+								</div>
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<hr class="margin">
+
+		<section class="about" id="specifications">
+			<div class="wrapper">
+				<h2>Specifications <a class="upper-link" href="#thirdpartydemossection">⇪</a></h2>
+				<div class="columnize">
+					<h3>Main features</h3>
+					<ul>
+						<li><a href="http://doc.babylonjs.com/generals/File_Format_Map_(.babylon)" target="_blank">Complete scene graph</a>                                                with lights, cameras, materials, meshes, animations, audio &amp; actions</li>
+						<li>
+							Native <a href="http://doc.babylonjs.com/tutorials/09._Cameras,_Mesh_Collisions_and_Gravity"
+							   target="_blank">collisions</a> engine
+						</li>
+                        <li>
+                            <a href="http://blogs.msdn.com/b/davrous/archive/2014/11/18/understanding-collisions-amp-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js.aspx"
+                               target="_blank">Physics engine</a> (thanks to <a href="https://github.com/lo-th/Oimo.js/"
+                                                                                target="_blank">oimo.js</a> &amp; <a href="http://www.cannonjs.org/" target="_blank">cannon.js</a>
+                        </li>
+						<li>Scene picking</li>
+						<li>Antialiasing</li>
+						<li><a href="http://doc.babylonjs.com/tutorials/07._Animations" target="_blank">Animations</a>                                                engine</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/12._Particles" target="_blank">Particles</a>                                                &amp; <a href="http://doc.babylonjs.com/tutorials/Solid_Particle_System"
+																																						target="_blank">Solid Particles</a> Systems
+						</li>
+						<li><a href="http://doc.babylonjs.com/tutorials/08._Sprites" target="_blank">Sprites</a> and 2D layers</li>
+						<li>Complete <a href="http://doc.babylonjs.com/tutorials/16._Playing_sounds_and_music" target="_blank">audio engine</a> based on Web Audio</li>
+					</ul>
+					<h3>Optimizations</h3>
+					<ul>
+						<li>Frustum clipping</li>
+						<li>Sub-meshes clipping</li>
+						<li>Hardware scaling</li>
+						<li>
+							Selection <a href="http://doc.babylonjs.com/tutorials/Optimizing_Your_Scene_with_Octrees"
+								  target="_blank">octrees</a>
+						</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/07._Caching_Resources_in_IndexedDB"
+							   target="_blank">Offline mode</a> (Assets saved in IndexedDB)
+						</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/09._Using_the_Incremental_Loading_System"
+							   target="_blank">Incremental loading</a>
+						</li>
+						<li>Binary compressed format</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/How_to_use_Instances"
+							   target="_blank">Hardware accelerated instances</a>
+						</li>
+						<li>Automatic <a href="http://doc.babylonjs.com/tutorials/How_to_use_SceneOptimizer">scene optimizer</a></li>
+                        <li>LOD (Level Of Details)</li>
+                        <li>SIMD.js</li>
+                        <li>Collisions on Web Workers</li>
+                        <li><a href="http://doc.babylonjs.com/tutorials/How_to_Merge_Meshes" target="_blank">Merge mershing</a></li>
+					</ul>
+
+					<h3>Shaders / Rendering</h3>
+					<ul>
+						<li>
+							<a href="http://doc.babylonjs.com/extensions/Physically_Based_Rendering" target="_blank">Physically Based Rendering (PBR)</a>
+						</li>
+						<br />
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/04._Materials" target="_blank">Standard material</a> is a per pixel material that supports:
+							<ul>
+								<li>Diffuse lightning and texture</li>
+								<li>Ambient lightning and texture</li>
+								<li>Specular lightning</li>
+								<li>Opacity texture</li>
+								<li>Reflection texture (Spheric, planar, cubic, projection and equirectangular)</li>
+								<li>Mirror texture</li>
+								<li>Emissive texture</li>
+								<li>Specular texture</li>
+								<li>Bump texture</li>
+								<li>Lightmap texture</li>
+								<li>Up to 4 lights (points, directionals, spots, hemispherics)</li>
+								<li>Custom materials</li>
+                                <li>Custom shaders</li>
+								<li><a href="http://doc.babylonjs.com/tutorials/13._Environment" target="_blank">Skybox</a></li>
+								<li>Vertex color</li>
+								<li>4 bones per vertex</li>
+								<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_FresnelParameters" target="_blank">Fresnel</a> term for diffuse, opacity, emissive and reflection</li>
+							</ul>
+						</li>
+						<br />
+						<li><a href="https://github.com/BabylonJS/Babylon.js/tree/master/proceduralTexturesLibrary" target="_blank">Procedural textures library</a></li>
+						<li><a href="https://github.com/BabylonJS/Babylon.js/tree/master/materialsLibrary" target="_blank">Materials library</a></li>
+					</ul>
+					<h3>Special FX</h3>
+					<ul>
+						<li><a href="http://doc.babylonjs.com/tutorials/13._Environment" target="_blank">Fog</a></li>
+						<li>Alpha blending</li>
+						<li>Alpha testing</li>
+						<li>Billboarding</li>
+						<li>Fullscreen mode</li>
+						<li><a href="http://doc.babylonjs.com/tutorials/15._Shadows" target="_blank">Shadow Maps and Variance Shadow Maps</a></li>
+						<li>Rendering layers</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline" target="_blank">Post-processes</a> (blur, refraction, black'n'white, fxaa,
+							<a href="http://doc.babylonjs.com/tutorials/Using_the_SSAO_rendering_pipeline" target="_blank">SSAO</a>,
+							<a href="http://doc.babylonjs.com/tutorials/Using_the_Volumetric_LightScattering_post-process" target="_blank">God Rays (VLS)</a>,
+							<a href="http://doc.babylonjs.com/tutorials/Using_the_HDR_Rendering_Pipeline" target="_blank">HDR</a>, DOF (Depth Of Field), customs...)
+						</li>
+						<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_Lens_Flares" target="_blank">Lens flares</a></li>
+						<li><a href="Shadow Maps and Blur Variance Shadow Maps" target="_blank">Reflection Probes</a></li>
+						<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_Multi-Views" target="_blank">Multi-views</a></li>
+                        <li>Edges renderer</li>
+					</ul>
+					<h3>Textures</h3>
+					<ul>
+						<li>Render target textures</li>
+						<li>Dynamic textures (2D canvas)</li>
+						<li>Video textures</li>
+						<li>Compressed (DDS) textures & TGA</li>
+					</ul>
+					<h3>Cameras</h3>
+					<ul>
+						<li>Arc rotate camera</li>
+						<li>Free camera</li>
+						<li>Touch camera</li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/How_to_use_VirtualJoysticksCamera"
+							   target="_blank">Virtual Joysticks camera</a>
+						</li>
+                        <li>Gamepad camera</li>
+						<li>Oculus Rift camera</li>
+						<li>VR Device Oriention camera</li>
+						<li>WebVR camera</li>
+                        <li>Anaglyph camera</li>
+						<li>Follow camera</li>
+					</ul>
+					<br />
+					<a href="http://doc.babylonjs.com/tutorials/05._Cameras" target="_blank">Extremely simple to use!</a>
+					<h3>Meshes</h3>
+					<ul>
+						<li>Mesh cloning</li>
+						<li>Dynamic meshes</li>
+						<li><a href="http://doc.babylonjs.com/tutorials/14._Height_Map" target="_blank">Height maps</a></li>
+						<li>
+							<a href="http://doc.babylonjs.com/tutorials/How_to_use_Bones_and_Skeletons"
+							   target="_blank">Bones</a>
+						</li>
+						<li>Constructive Solid Geometries</li>
+                        <li><a href="http://doc.babylonjs.com/tutorials/Parametric_Shapes" target="_blank">Parametric shapes</a> (Ribbon, tubes, etc.)</li>
+                    </ul>
+					<h3>Exporters & Tooling</h3>
+					<a href="https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Blender"
+					   target="_blank">
+						<img title="Blender exporter" height="40" alt="Blender 3D logo" src="../Assets/blender-logo.svg">
+					</a>
+					<br />
+					<a href="https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Unity%205"
+					   target="_blank">
+						<img title="Unity exporter" height="40" alt="Unity 3D logo" src="../Assets/unity-logo.svg">
+					</a>
+					<br />
+					<a href="https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max"
+					   target="_blank">
+						<img title="3DS Max exporter" height="40" alt="Autodesk 3DS Max logo" src="../Assets/3ds-max-logo.svg">
+					</a>
+					<br />
+					<ul>
+						<li>Exporters for OBJ, FBX & STL</li>
+						<li>Importers for <a href="http://doc.babylonjs.com/extensions/glTF" target="_blank">glTF</a>, STL & OBJ</li>
+                        <li>Support for <a href="http://www.babylonjs.com/sandbox" target="_blank">drag'n'drop</a></li>
+                        <li><a href="http://doc.babylonjs.com/tutorials/Using_the_Debug_Layer" target="_blank">Debug layer</a></li>
+						<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_AssetsManager" target="_blank">Assets manager</a></li>
+						<li><a href="https://medium.com/babylon-js/actions-builder-b05e72aa541a" target="_blank">Actions Builder</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<hr class="margin">	
+	<footer>
+		<div class="wrapper">
+			<p>
+				Lead developers: <a href="https://twitter.com/deltakosh">David Catuhe</a> - <a href="https://twitter.com/davrous">David Rousset</a>
+			</p>
+			<p>
+				Core contributors: <a href="https://twitter.com/Temechon">Julian Chenard</a> -
+				<a href="https://twitter.com/meulta">Etienne Margraff</a> - <a href="https://twitter.com/RaananW">Raanan Weber</a>
+			</p>
+			<p>
+				3D Artist: <a href="https://twitter.com/rousseau_michel">Michel Rousseau</a>
+			</p>
+			<p>
+				Hill Valley scene: Camille Joly and Enozone - Train scene: Romuald Rouhier and Progiss
+			</p>
+			<div class="fb-like"
+				 data-share="true"
+				 data-width="450"
+				 data-show-faces="true">
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-41767310-1', 'babylonjs.com');
+		ga('send', 'pageview');
+
+	</script>
+</body>
 </html>

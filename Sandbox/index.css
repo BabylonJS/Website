@@ -7,6 +7,38 @@
     font-family: "Segoe WP", "Segoe UI", "Verdana", "Arial";
 }
 
+#DebugLayerLogs {
+    height: 100px !important;   
+}
+
+    #DebugLayerLogs > div:first-child {
+        background-color: #988DB5 !important;
+    }
+
+#DebugLayerStats {
+    margin-top: 2px !important;
+}
+
+#DebugLayerStats div:nth-child(2) {
+    max-height: 180px !important;
+}
+
+    #DebugLayerStats > div:first-child {
+        background-color: #988DB5 !important;
+    }
+
+#DebugLayerOptions {
+    overflow-y: hidden !important;
+}
+
+#DebugLayerOptions > div:first-child {
+    background-color: #988DB5 !important;
+}
+
+#DebugLayerTree > div:first-child {
+    background-color: #988DB5 !important;
+}
+
 a {
     color: white;
 }

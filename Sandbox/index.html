@@ -7,6 +7,9 @@
     <script src="../cannon.js"></script>
     <script src="../Oimo.js"></script>
     <script src="../babylon.js"></script>
+    <script src="../poly2tri.js"></script>
+	<script src="babylon.stlFileLoader.js"></script>
+	<script src="babylon.objFileLoader.js"></script>
   <script src="index.js"></script>
 </head>
 <body>
@@ -20,15 +23,6 @@
     <div id="help02" class="help2">
         <span class="helpText">Or directly drag'n'drop your files in the browser</span>
     </div>
-    <div id="perf" class="perffooter">
-        <div class="footerLeft">
-            <div id="miscCounters"></div>
-        </div>
-        <div class="footerRight">
-            <div id="fps"></div>
-            <img id="btnDownArrow" src="./Assets/FlecheDown.png" />
-        </div>
-    </div>
     <div class="footer">
         <div class="footerLeft">
             Powered by <a href="http://www.babylonjs.com/" target="_blank">Babylon.js</a><br />
@@ -39,7 +33,7 @@
                     <img src="./Assets/BtnFullscreen.png" alt="Switch the scene to full screen" title="Switch the scene to full screen" />
                 </li>
                 <li id="btnPerf">
-                    <img src="./Assets/BtnPerf.png" alt="Display performance dashboard" title="Display performance dashboard" />
+                    <img src="./Assets/BtnPerf.png" alt="Display debug & performance layer" title="Display debug & performance layer" />
                 </li>
                 <li id="btnFiles">
                     <div class="custom-upload" title="Open your .babylon scene from your hard drive">
