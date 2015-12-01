@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Webmaster: David Rousset
+	Contact: davrous [at] microsoft.com
+	Twitter: @davrous
+	From: Paris, France
+
+	Webmaster: David Catuhe
+	Contact: davca [at] microsoft.com
+	Twitter: @deltakosh
+	From: Seattle, USA
+
+# THANKS
+
+    Site template: Matthieu Bué
+	Twitter: @Twikito
+	From: France
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, WebGL, Web Audio, CSS Filter, SVG
+    jQuery, Normalize.css

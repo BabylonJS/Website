@@ -1,0 +1,25 @@
+$red   : #be1e2d;
+$green : #8dc63f;
+$blue  : #00aeef;
+
+$bg    : #ecf0f1;
+
+$buttons: (
+	'red'  : $red,
+	'green': $green,
+	'blue' : $blue
+);
+
+$default-easing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$font-texts  : 'Roboto', sans-serif;
+$font-titles : 'Roboto Condensed', sans-serif;
+
+$wrapper-width: 80em;
+
+$sections-margin: 6%;
+
+$sm: 30em;
+$md: 48em;
+$lg: 60em;
+$vlg: 77em;

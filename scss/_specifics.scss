@@ -1,0 +1,23 @@
+/// <reference path="./_variables.scss" />
+
+main {
+	display: flex;
+	flex-direction: column;
+	& > * {
+		order: 1;
+	}
+	.about {
+		margin-top: $sections-margin;
+		order: 42; // GOOD ANSWER!
+		& + hr.margin {
+			margin: 0;
+		}
+		@media (min-width: $lg) {
+			margin-top: 0;
+			order: 2;
+			& + hr.margin {
+				margin: $sections-margin/2 0;
+			}
+		}
+	}
+}

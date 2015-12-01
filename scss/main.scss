@@ -1,0 +1,26 @@
+@import "variables";
+@import "vendor/normalize/_normalize";
+
+/* ==========================================================================
+   Project imports
+
+   Declaration chart:
+   foo {
+       line 1: box styles;
+       line 2: flex styles;
+       line 3: transform styles;
+       line 4: border styles;
+       line 5: background styles;
+       line 6: text styles;
+       line 7: other styles;
+       line 8: animation and transition styles;
+   }
+   ========================================================================== */
+
+// Core CSS
+@import "typo";
+@import "buttons";
+
+// Main CSS
+@import "theme";
+@import "specifics";
