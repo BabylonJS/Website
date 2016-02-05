@@ -1,0 +1,194 @@
+﻿body, html {
+    background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+#sponzaLoader {
+    height: 100%;
+    width: 100%;
+}
+
+#backgroundImage {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: url('SponzaBackgroundLoader.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#loadingDetails {
+    width: 40%;
+    height: 60%;
+    position: fixed;
+    bottom: 0px;
+    left: 30%;
+}
+
+#loadingTitle {
+    position: absolute;
+    top: 6%;
+    left: 23.5%;
+    color: white;
+    font-family: Century;
+    font-size: 3vw;
+}
+
+#teamText {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    color: rgba(201, 201, 201, 1);
+    font-family: Arial;
+    font-size: 1.25vw;
+}
+
+#loadingDetailsBackground {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+}
+
+#loadingPercentage {
+    position: absolute;
+    top: 7.5%;
+    color: #686867;
+    font-family: "Arial Black",Gadget,Arial,sans-serif;
+    font-weight: 900;
+    font-size: 10vw;
+    text-align: center;
+    width: 100%;
+}
+
+#progressContainer {
+    position: absolute;
+    bottom: 0px;
+    left: 22.75%;
+    width: 55%;
+    height: 9%;
+    background-color: black;
+    bottom: 19%;
+}
+
+#loadingProgress {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 20%;
+}
+
+progress::-moz-progress-bar {
+    background: red;
+}
+
+progress::-webkit-progress-value {
+    background: red;
+}
+
+#streamingText {
+    position: absolute;
+    top: 78%;
+    right: 22%;
+    color: white;
+    font-family: Arial;
+    font-size: 1.2vw;
+}
+
+#iOSTouchToStart {
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    color: white;
+    font-family: Arial;
+    font-size: 3.7vw;
+    animation: bounce 1.5s ease-in-out infinite;
+    -webkit-animation: bounce 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes bounce {
+     0% {
+         transform: scale(1);
+         opacity: 1;
+     }
+     50%  {
+         transform: scale(0.9); 
+         opacity: 0.5;
+     }
+     100%   {
+         transform: scale(1);
+         opacity: 1;
+     }
+}
+
+@keyframes bounce {
+     0% {transform: scale(1);opacity: 1;}
+     50%  {transform: scale(0.9);opacity: 0.5;}
+     100%   {transform: scale(1);opacity: 1;}
+}
+
+progress {
+    background-color: white;
+    border: 0;
+    height: 40%;
+    color: red;
+}
+
+#controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.uiButton {
+    width: 40px;
+    height: 40px;
+    border-width: 0px;
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.uiButton:hover {
+    opacity: 1.0;
+    transform: scale(1.0);
+}
+
+#soundButton {
+    background: url("volume.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#cameraButton {
+    background: url("camera.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#fullscreenButton {
+    background: url("fullscreen.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#speakersButton {
+    background: url("speaker.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#gamepadButton {
+    background: url("gamepad.png") no-repeat center center;
+    background-size: 100%;
+}
+
+#renderingZone {
+    width: 100%;
+    height: 100%;
+}
+
+button:focus {outline:0;}
+
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+ } 

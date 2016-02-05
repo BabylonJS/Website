@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DiStraction</title>
+
+    <link rel="stylesheet" href="./css/index.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./lib/icheck.skins/flat/blue.css" type="text/css" media="screen" />
+
+    <script src="lib/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="start_btn" class="btn">Start</div>
+
+        <div id="title"><span>D</span>i<span>S</span>traction</div>
+        <div id="subtitle">javascript driving game demo</div>
+        <div id="pics">
+            <div id="pic1"></div>
+            <div id="pic2"></div>
+            <div id="pic3"></div>
+        </div>
+        <div id="text">
+            DiStraction is a JavaScript/WebGL demo that will let you play with a DS3 in a very simplified world. Of course, it requires a (somewhat) recent browser to support WebGL, and a graphics card... Contact regarding this demo: I am <a href="http://www.html5gamedevs.com/user/12697-lerige/">Lerige at Babylon.js forum</a>
+            <h2>How to play</h2> You can choose to drive freely, or try to catch all the checkpoints scattered over the map as fast as possible.
+            <p>The keys to control the car:</p>
+            <ul>
+                <li>Use the arrow keys to accelerate, brake and turn.</li>
+                <li>Use "shift" to toggle forward/reverse gear. Your speed should be enough low.</li>
+                <li>Use "space" to go back to the starting place (in case you are stuck somewhere). Your speed should be enough low.</li>
+                <li>Use "escape" to leave the game.</li>
+            </ul>
+            <h1>Resources and credits</h1>
+            <p>This demo has been made with free tools and resources.</p>
+            <h2>API and code</h2>
+            <p>The 3D library is <a href="http://www.babylonjs.com/">Babylon.js</a> written by David Catuhe, David Rousset and <a href="https://github.com/BabylonJS/Babylon.js/graphs/contributors">plenty of other developers</a>.</p>
+            <p>The physics engine <a href="http://www.cannonjs.org/">Cannon.js</a> is by Stefan Hedman.</p>
+            <p>For the tree generator, I've reused Julian Chenard excellent code at <a href="http://www.pixelcodr.com/tutos/trees/trees.html">pixelcodr.com</a>.</p>
+            <p>Some UI elements are made with iCheck and FPSMeter.</p>
+            <h2>3D models</h2>
+            <p>The car is a <a href="http://archive3d.net/?a=download&amp;id=a8b97687">Citroën DS3</a> from <a href="http://archive3d.net">archive3d.net</a>.</p>
+            <p>Paris significant buildings come from <a href="http://www.references3d.com">references3d.com</a> website:</p>
+            <ul>
+                <li><a href="http://www.references3d.com/fichier/tour-eiffel-mini">La Tour Eiffel</a></li>
+                <li><a href="http://www.references3d.com/fichier/arc-triomphe">L'Arc de Triomphe</a></li>
+                <li><a href="http://www.references3d.com/fichier/basilique-du-sacre-coeur">La basilique du Sacré C&oelig;ur</a></li>
+                <li><a href="http://www.references3d.com/fichier/madeleine">La Madeleine</a></li>
+                <li><a href="http://www.references3d.com/fichier/notre-dame-paris">Notre Dame</a></li>
+            </ul>
+            <h2>Tools</h2>
+            <p>Extra buildings and ground have been made with <a href="http://blender.org">Blender</a>.</p>
+            <p>Sky and ground textures were designed with <a href="http://gimp.org">Gimp</a>.</p>
+            <p>Finally, the code was written with <a href="http://brackets.io/">Brackets</a>.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#start_btn").click(function () {
+            document.location.href = "./distraction.html";
+        })
+    </script>
+</body>
+
+</html>
