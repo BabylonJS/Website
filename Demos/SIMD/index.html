@@ -68,7 +68,7 @@
 			var addDancer = function () {
 				var newOne = dancer.clone("clone" + total);
 				newOne.skeleton = dancer.skeleton.clone("skeleton" + total);
-		
+				newOne.material.freeze();
 				newOne.position.x = 250 - Math.random() * 500;
 				newOne.position.z = 250 - Math.random() * 500;
 				groundMaterial.reflectionTexture.renderList.push(newOne);
