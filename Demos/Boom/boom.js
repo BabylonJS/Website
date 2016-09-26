@@ -1,4 +1,4 @@
-﻿var CreateBoomScene = function (engine) {
+var CreateBoomScene = function (engine) {
 
     //  Particle parameters
     var size = 10;                      // particle size
@@ -43,7 +43,7 @@
     // Text
     var text = "BabylonJS Roxxx";
     var font = "bold 56px Arial";
-    var tx = new BABYLON.DynamicTexture("dt", { width: 500, height: 40 }, scene);
+    var tx = new BABYLON.DynamicTexture("dt", { width: 500, height: 65 }, scene);
     tx.hasAlpha = true;
     //var clearColor = "transparent";
     var clearColor = "red";
