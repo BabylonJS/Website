@@ -1,4 +1,4 @@
-var CreateBoomScene = function (engine) {
+﻿var CreateBoomScene = function (engine) {
 
     //  Particle parameters
     var size = 10;                      // particle size
