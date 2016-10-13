@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>url JS Generator</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<script src="jquery/jquery-3.1.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">BabylonJS JS Generator</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<h1>Babylon JS</h1>
+			<p>Generate your BabylonJS script using your favorite components.</p>
+			<p>Select your options below and Generate your favorite Library</p>
+			<p>
+				<a id="generate" class="btn btn-primary">Generate Library</a>
+			</p>
+		</div>
+
+		<div class="row">
+			<div id="options" class="col-md-3">
+				<div>
+					<Label>Babylon Release <span id="stableVersion"></span></Label>
+				</div>
+				<div>
+					<div id="optionsVersion" class="btn-group">
+						<div class='checkbox'>
+							<label><input type="checkbox" id="preview">Preview <span id="previewVersion"></span></label>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<Label>Minification</Label>
+				</div>
+				<div>
+					<div id="optionsMinification" class="btn-group">
+						<div class='checkbox'>
+							<label><input type="checkbox" id="unminified">Unminified</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-9" id="components">
+				<div>
+					<Label>Components</Label>
+				</div>
+				<div class="form-group">
+					<ul id="componentsList" class="list-unstyled list-inline">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
