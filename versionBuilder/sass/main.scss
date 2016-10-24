@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
+$font-title:'Oswald' sans-serif;
+$font:'Roboto' sans-serif;
+
+$color-text:#555;
+$color1:#BE1E2D; // red
+$color2:#8DC63F;
+$color3:#00AEEF;
+
+@import "structure";
+@import "button";
+@import "block";
+
+html, body {
+    margin:0;
+    padding:0;
+    font-family: $font;
+    color:$color-text;
+    width:100%;
+}
+
+h1 {
+    font-family: $font-title;
+    font-size:1.6em;
+}
+
+.wrapper {
+    width:80%;
+    margin:auto;
+}
+
+header {        
+    // Title + logo
+    .banner {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        height:125px;
+        
+        .logo {
+            position:absolute;
+            top:0;
+            left:40px;
+        }
+        
+        .title {
+            text-transform: uppercase;
+            font-family: $font-title;
+            font-size:3em;
+        }
+    }
+    .subtitle {
+        padding:20px;
+        font-size:1.2em;
+        text-align:center;
+    }
+}
+ 

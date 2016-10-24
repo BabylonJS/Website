@@ -3,77 +3,67 @@
 
 <head>
 	<title>url JS Generator</title>
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-	<script src="jquery/jquery-3.1.1.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://livejs.com/live.js"></script>
 </head>
 
 <body>
-	<!-- Fixed navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">BabylonJS JS Generator</a>
-			</div>
-
-		</div>
-	</nav>
-
-	<div class="container theme-showcase" role="main">
-		<div class="jumbotron">
-			<h1>Babylon JS</h1>
-			<p>Generate your BabylonJS script using your favorite components.</p>
-			<p>Select your options below and Generate your favorite Library</p>
-			<p>
-				<a id="generate" class="btn btn-primary">Generate Library</a>
-			</p>
-		</div>
-
-		<div class="row">
-			<div id="options" class="col-md-3">
-				<div>
-					<Label>Babylon Release <span id="stableVersion"></span></Label>
+	<div class="wrapper">
+		<header>
+			<div class="banner">
+				<div class="logo">
+					<img src="img/logo-babylonjs.png">
 				</div>
-				<div>
-					<div id="optionsVersion" class="btn-group">
-						<div class='checkbox'>
-							<label><input type="checkbox" id="preview">Preview <span id="previewVersion"></span></label>
+				<div class="title">
+					Babylon.js Generator
+				</div>
+			</div>
+			<div class="subtitle">
+				Generate your Babylon.js script using your components :  <br/>
+				select your options below and generate your favorite library!
+				</div>
+		</header>
+		
+		<section class="content">
+			
+			<h1>1. Components</h1>
+				<section class="component red" id='components'>
+					
+					
+				</section>
+			<h1>2. Options</h1>
+				<section class="component green">
+					
+					
+					<div class="block">
+						<div class="title">Release</div>
+						<div class="choices">
+							<ul>
+								<li>v2.4 stable</li>
+								<li>v2.5 preview</li>
+							</ul>
 						</div>
 					</div>
-				</div>
-
-				<div>
-					<Label>Minification</Label>
-				</div>
-				<div>
-					<div id="optionsMinification" class="btn-group">
-						<div class='checkbox'>
-							<label><input type="checkbox" id="unminified">Unminified</label>
+					
+					
+					<div class="block">
+						<div class="title">Physics</div>
+						<div class="choices">
+							<ul>
+								<li>Oimo.js</li>
+								<li>Cannon.js</li>
+							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
-
-
-			<div class="col-md-9" id="components">
-				<div>
-					<Label>Components</Label>
-				</div>
-				<div class="form-group">
-					<ul id="componentsList" class="list-unstyled list-inline">
-					</ul>
-				</div>
-			</div>
-		</div>
+					
+				</section>
+			
+			<div class="button">Generate</div>
+			
+		</section>
 	</div>
+	
 
 	<script src="index.js"></script>
 </body>
