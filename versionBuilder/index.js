@@ -1,43 +1,82 @@
 var componentListURL = "http://babyloncomponentselector.azurewebsites.net/api/componentlist";
 var generateURL = "http://babyloncomponentselector.azurewebsites.net/api/buildbabylon";
 
-var componentsList = $("#componentsList");
-var optionsVersion = $("#optionsVersion");
-var optionsMinification = $("#optionsMinification");
-var generateUrlButton = $("#generate");
 
-var stableVersion = $("#stableVersion");
-var previewVersion = $("#previewVersion");
-var previewCheckbox = $("#preview");
-var unminifiedCheckbox = $("#unminified");
+// Dirty ugly mapping between component ID and group ID
+var dirtyMapping = {
+    'Physics'               : [0, 1],                           // Group 0 : Oimo.js -  Cannon.js
+    'GUI'                   : [2],                              // Group 1 : Canvas2D
+    'Collisions'            : [3],                              // Group 2 : Collisions
+    'Loaders'               : [4,5,6],                          // Group 3 : Loaders             
+    'Post-Process'          : [17,18],                          // Group 5 : PP
+    'Materials'             : [7,8,9,10,11,12,13,14,15,16],     // Group 4 : Materials     
+    'Procedural Textures'   : [19, 20, 21, 22, 23, 24, 25, 26]  // Group 6 : Textures
+};
+
+var componentsSorted = [];
+
+/** Build a block of options */
+var buildBlock = function(title, comps) {
+    var ul = $('<ul>'); // list of choices
+    
+    var block = $('<div>').addClass('block').append(
+        $('<div>').addClass('title').text(title) // title
+    ).append(
+        $('<div>').addClass('choices').append(ul) // choices
+    )
+    Ps.initialize(block.get(0));
+    
+    for (var c of comps) {
+        ul.append(
+            buildOption(componentsSorted[c].label, componentsSorted[c].id)
+        )
+    }
+    return block;
+}
+
+/** Build a component line :
+ *  <li><input type='checkbox' id=0 />Oimo.js</li>
+ */
+var buildOption = function(label, id) {
+    return $('<li>').append(
+            $('<input>').attr('type', 'checkbox').attr('id', id)
+        ).append(
+            $('<span>').text(label)
+        );
+}
 
 $.getJSON(componentListURL, function (data) {
     var components = [];
     var versions = [];
 
-    // Versions.
-    stableVersion.html(data.stable);
-    previewVersion.html(data.dev);
-
     // Components.
     $.each(data.components, function (key, val) {
-        components.push("<li><div class='checkbox'><label><input type='checkbox' id='" + val.id + "'>" + val.label + "</label><div></li>");
+        let id = Number.parseInt(val.id);
+        componentsSorted[id] = val;
     });
-
-    // Update View.
-    componentsList.html(components.join(""));
-
+    
+    // For each group, build block
+    for (var g in dirtyMapping) {
+        $('#components').append(buildBlock(g, dirtyMapping[g]));
+    }
     // Generate Button.
-    generateUrlButton.click(function () {
+    $('#generateButton').click(function () {
         var url = generateUrl();
-        window.open(url, "blank");
+        var downloadLink = document.createElement("a");
+        downloadLink.href = url;
+        // downloadLink.download = "babylon.custom.js";
+
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
     });
+    
 });
 
 function generateUrl() {
     var url = generateURL + "?";
-    var preview = previewCheckbox[0].checked;
-    var unminified = unminifiedCheckbox[0].checked;
+    var preview = $('#preview').is(':checked');
+    var unminified = $('#unminified').is(':checked');
 
     // Version
     url += "stable="
@@ -55,6 +94,5 @@ function generateUrl() {
         });
         url = url.substring(0, url.length - 1);
     }
-
     return url;
 }

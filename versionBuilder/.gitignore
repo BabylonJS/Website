@@ -1,0 +1,7 @@
+.idea
+node_modules
+.tmp
+*.map
+.tscache
+.history
+.vscode

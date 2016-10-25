@@ -9,8 +9,16 @@
   "readme": "https://github.com/BabylonJS/Babylon.js/edit/master/readme.md",
   "license": "(Apache-2.0)",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-uglify": "~1.4.2",
-    "gulp-webserver": "^0.9.1"
+    "autoprefixer": "latest",
+    "cssnano": "latest",
+    "grunt": "latest",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "latest",
+    "grunt-open": "latest",
+    "grunt-postcss": "latest",
+    "grunt-sass": "latest",
+    "jit-grunt": "latest",
+    "time-grunt": "latest"
   }
 }

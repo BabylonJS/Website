@@ -1,0 +1,23 @@
+.content {
+    width:80%;
+    margin:auto;
+    
+    .component {
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap:wrap;
+        
+        &.red > .block {
+            background-color: $color1;   
+        }
+        
+        &.green {
+            justify-content: center;
+            & > .block {
+                background-color: $color2;  
+            }
+        }
+        
+    }
+}
