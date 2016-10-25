@@ -1,7 +1,10 @@
  .block {
     width:260px;
+    height:200px;
+    overflow-y:auto;
     margin:15px;
     color:#eee;
+    position:relative ; // for perfect scrollbar
     
     .title {
         background-color: rgba(0,0,0,0.4);

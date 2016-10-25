@@ -5,6 +5,9 @@
 	<title>url JS Generator</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="main.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.13/js/perfect-scrollbar.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.13/css/perfect-scrollbar.min.css">
 	<script src="http://livejs.com/live.js"></script>
 </head>
 
@@ -40,26 +43,26 @@
 						<div class="title">Release</div>
 						<div class="choices">
 							<ul>
-								<li>v2.4 stable</li>
-								<li>v2.5 preview</li>
+								<li><input type="radio" name='release' id="stable" checked>v2.4 stable</li>
+								<li><input type="radio" name='release' id="preview">v2.5 preview</li>
 							</ul>
 						</div>
 					</div>
 					
 					
 					<div class="block">
-						<div class="title">Physics</div>
+						<div class="title">Minification</div>
 						<div class="choices">
-							<ul>
-								<li>Oimo.js</li>
-								<li>Cannon.js</li>
+							<ul> 
+								<li><input type="radio" name='minification' id="minified" checked>Minified</li>
+								<li><input type="radio" name='minification' id="unminified">Unminified</li>
 							</ul>
 						</div>
 					</div>
 					
 				</section>
 			
-			<div class="button">Generate</div>
+			<div id="generateButton" class="button">Generate</div>
 			
 		</section>
 	</div>

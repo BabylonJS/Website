@@ -15,6 +15,7 @@ var dirtyMapping = {
 
 var componentsSorted = [];
 
+/** Build a block of options */
 var buildBlock = function(title, comps) {
     var ul = $('<ul>'); // list of choices
     
@@ -23,19 +24,22 @@ var buildBlock = function(title, comps) {
     ).append(
         $('<div>').addClass('choices').append(ul) // choices
     )
+    Ps.initialize(block.get(0));
     
     for (var c of comps) {
         ul.append(
-            buildOption(componentsSorted[c].label)
+            buildOption(componentsSorted[c].label, componentsSorted[c].id)
         )
     }
     return block;
 }
 
-//  <li><input type='checkbox' />Oimo.js</li>
-var buildOption = function(label) {
+/** Build a component line :
+ *  <li><input type='checkbox' id=0 />Oimo.js</li>
+ */
+var buildOption = function(label, id) {
     return $('<li>').append(
-            $('<input>').attr('type', 'checkbox')
+            $('<input>').attr('type', 'checkbox').attr('id', id)
         ).append(
             $('<span>').text(label)
         );
@@ -55,21 +59,24 @@ $.getJSON(componentListURL, function (data) {
     for (var g in dirtyMapping) {
         $('#components').append(buildBlock(g, dirtyMapping[g]));
     }
+    // Generate Button.
+    $('#generateButton').click(function () {
+        var url = generateUrl();
+        var downloadLink = document.createElement("a");
+        downloadLink.href = url;
+        // downloadLink.download = "babylon.custom.js";
 
-    // // Update View.
-    // componentsList.html(components.join(""));
-
-    // // Generate Button.
-    // generateUrlButton.click(function () {
-    //     var url = generateUrl();
-    //     window.open(url, "blank");
-    // });
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    });
+    
 });
 
 function generateUrl() {
     var url = generateURL + "?";
-    var preview = previewCheckbox[0].checked;
-    var unminified = unminifiedCheckbox[0].checked;
+    var preview = $('#preview').is(':checked');
+    var unminified = $('#unminified').is(':checked');
 
     // Version
     url += "stable="
@@ -87,6 +94,5 @@ function generateUrl() {
         });
         url = url.substring(0, url.length - 1);
     }
-
     return url;
 }

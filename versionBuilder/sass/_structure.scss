@@ -12,8 +12,12 @@
             background-color: $color1;   
         }
         
-        &.green > .block {
-            background-color: $color2;   
-        }       
+        &.green {
+            justify-content: center;
+            & > .block {
+                background-color: $color2;  
+            }
+        }
+        
     }
 }
