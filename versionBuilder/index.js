@@ -3,17 +3,19 @@ var generateURL = "http://babyloncomponentselector.azurewebsites.net/api/buildba
 
 
 // Dirty ugly mapping between component ID and group ID
-var dirtyMapping = {
-    'Physics'               : [0, 1],                           // Group 0 : Oimo.js -  Cannon.js
-    'GUI'                   : [2],                              // Group 1 : Canvas2D
-    'Collisions'            : [3],                              // Group 2 : Collisions
-    'Loaders'               : [4,5,6],                          // Group 3 : Loaders             
-    'Post-Process'          : [17,18],                          // Group 5 : PP
-    'Materials'             : [7,8,9,10,11,12,13,14,15,16],     // Group 4 : Materials     
-    'Procedural Textures'   : [19, 20, 21, 22, 23, 24, 25, 26]  // Group 6 : Textures
-};
+// var dirtyMapping = {
+//     'Physics'               : [0, 1],                           // Group 0 : Oimo.js -  Cannon.js
+//     'GUI'                   : [2],                              // Group 1 : Canvas2D
+//     'Collisions'            : [3],                              // Group 2 : Collisions
+//     'Loaders'               : [4,5,6],                          // Group 3 : Loaders             
+//     'Post-Process'          : [17,18],                          // Group 5 : PP
+//     'Materials'             : [7,8,9,10,11,12,13,14,15,16],     // Group 4 : Materials     
+//     'Procedural Textures'   : [19, 20, 21, 22, 23, 24, 25, 26]  // Group 6 : Textures
+// };
 
-var componentsSorted = [];
+var dirtyMapping = [];
+var componentsSorted    = [];
+var groupsSorted        = [];
 
 /** Build a block of options */
 var buildBlock = function(title, comps) {
@@ -48,11 +50,24 @@ var buildOption = function(label, id) {
 $.getJSON(componentListURL, function (data) {
     var components = [];
     var versions = [];
+    
+    
+    // Groups
+    $.each(data.componentGroups, function (key, val) {
+        var id = Number.parseInt(val.id);
+        var name = val.name;
+        groupsSorted[id] = val;
+        
+        dirtyMapping[name] = [];
+    });
 
     // Components.
     $.each(data.components, function (key, val) {
-        let id = Number.parseInt(val.id);
+        var id = Number.parseInt(val.id);
+        var groupId = Number.parseInt(val.groupid);
         componentsSorted[id] = val;
+        
+        dirtyMapping[groupsSorted[groupId].name].push(id);
     });
     
     // For each group, build block
