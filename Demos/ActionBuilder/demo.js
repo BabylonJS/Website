@@ -5,6 +5,7 @@
     doNotUseCDN: false,
     collisions: true,
     offline: false,
+    freeze: false,
     onload: function () {
         // Additionnal tuning options
     }

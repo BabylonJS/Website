@@ -2,7 +2,7 @@
     scene: "Mansion",
     incremental: false,
     binary: false,
-    doNotUseCDN: false,
+    doNotUseCDN: true,
     collisions: true,
     offline: false,
     onload: function () {

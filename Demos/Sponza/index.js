@@ -9,7 +9,7 @@ var camBtn = document.getElementById("cameraButton");
 var speakersBtn = document.getElementById("speakersButton");
 
 // Babylon
-var engine = new BABYLON.Engine(canvas, true);
+var engine = new BABYLON.Engine(canvas, true, { limitDeviceRatio: 2 }, true);
 engine.enableOfflineSupport = true;
 
 function togglerDebugLayer() {

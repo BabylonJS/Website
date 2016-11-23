@@ -5,6 +5,8 @@
     camera.lowerRadiusLimit = 5;
     camera.upperRadiusLimit = 40;
 
+    camera.attachControl(engine.getRenderingCanvas());
+
     var light = new BABYLON.PointLight("light1", new BABYLON.Vector3(0, 0, 0), scene);
     light.intensity = 0.7;
 

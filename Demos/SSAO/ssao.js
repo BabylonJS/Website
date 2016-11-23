@@ -3,7 +3,7 @@
 	var camera = new BABYLON.ArcRotateCamera("Camera", -2.5, 1.0, 200, new BABYLON.Vector3(0, 0, 0), scene);
 
 	// The first parameter can be used to specify which mesh to import. Here we import all meshes
-	BABYLON.SceneLoader.Append("/scenes/assets/", "SSAOcat.babylon", scene, function () {
+	BABYLON.SceneLoader.Append("/assets/cat/", "cat.babylon", scene, function () {
 
 		scene.activeCamera = camera;
 
@@ -12,18 +12,17 @@
 		SSAO is a rendering pipeline, so we have to attach it to cameras
 		The ratio is used by SSAO & Blur post-processes before adding to the
 		original scene color to save performances. It is advised to use a ratio
-		between 0.5 and 0.75 for good results and performances.
+		between 0.5 or 0.25 for enough good results and performances.
 		You can also attach cameras directly by passing an array of Camera to the
 		last parameter.
 		*/
 
 		var ssao = new BABYLON.SSAORenderingPipeline('ssaopipeline', scene, { ssaoRatio: 0.5, combineRatio: 1.0 });
 		ssao.fallOff = 0.000001;
-		ssao.area = 0.075;
-		ssao.radius = 0.0002;
-		ssao.totalStrength = 1.0;
-		ssao.getBlurVPostProcess().blurWidth = 2;
-		ssao.getBlurHPostProcess().blurWidth = 2;
+		ssao.area = 1.0;
+		ssao.radius = 0.00023;
+		ssao.totalStrength = 2.0;
+		ssao.base = 1.3;
 
 		scene.postProcessRenderPipelineManager.attachCamerasToRenderPipeline("ssaopipeline", camera);
 

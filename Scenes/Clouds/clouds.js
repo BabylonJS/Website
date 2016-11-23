@@ -36,7 +36,7 @@ function startGame() {
 
         var cloudMaterial = new BABYLON.ShaderMaterial("cloud", scene, {
             vertexElement: "vertexShaderCode",
-            fragmentElement: "fragmentShaderCode",
+            fragmentElement: "fragmentShaderCode"
         },
         {
             needAlphaBlending: true,
@@ -56,7 +56,7 @@ function startGame() {
         var globalVertexData = new BABYLON.VertexData();
 
         for (var i = 0; i < count; i++) {
-            var planeVertexData = BABYLON.VertexData.CreatePlane(128);
+            var planeVertexData = BABYLON.VertexData.CreatePlane({ size: 128 });
 
             delete planeVertexData.normals; // We do not need normals
 

@@ -113,7 +113,7 @@
                     index++;
                 }
             }
-            mesh = BABYLON.Mesh.CreateRibbon(null, paths, null, null, null, null, null, null, mesh);
+            mesh = BABYLON.Mesh.CreateRibbon(null, paths, null, null, null, scene, null, null, mesh);
             // update colors
             for (var c = 0; c < colors.length; c++) {
                 colors[c] = colors[c].add(deltaColors[c]);

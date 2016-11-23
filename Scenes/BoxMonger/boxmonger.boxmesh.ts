@@ -73,47 +73,49 @@
                     var side2 = BABYLON.Vector3.Cross(normal, side1);
 
                     // Four vertices per face.
-                    vertexData.normals.push(normal.x, normal.y, normal.z);
-                    vertexData.normals.push(normal.x, normal.y, normal.z);
-                    vertexData.normals.push(normal.x, normal.y, normal.z);
-                    vertexData.normals.push(normal.x, normal.y, normal.z);
+                    var normals = <any>vertexData.normals;
+                    normals.push(normal.x, normal.y, normal.z);
+                    normals.push(normal.x, normal.y, normal.z);
+                    normals.push(normal.x, normal.y, normal.z);
+                    normals.push(normal.x, normal.y, normal.z);
 
                     //Configuring uvs
+                    var uvs = <any>vertexData.uvs;
                     if (normal.x === -1) {
-                        vertexData.uvs.push(0.0, 0.66);
-                        vertexData.uvs.push(0.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.66);
+                        uvs.push(0.0, 0.66);
+                        uvs.push(0.0, 0.33);
+                        uvs.push(1.0, 0.33);
+                        uvs.push(1.0, 0.66);
                     }
                     else if (normal.z === -1) {
-                        vertexData.uvs.push(1.0, 0.66);
-                        vertexData.uvs.push(0.0, 0.66);
-                        vertexData.uvs.push(0.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.33);
+                        uvs.push(1.0, 0.66);
+                        uvs.push(0.0, 0.66);
+                        uvs.push(0.0, 0.33);
+                        uvs.push(1.0, 0.33);
                     }
                     else if (normal.x === 1) {
-                        vertexData.uvs.push(0.0, 0.66);
-                        vertexData.uvs.push(0.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.66);
+                        uvs.push(0.0, 0.66);
+                        uvs.push(0.0, 0.33);
+                        uvs.push(1.0, 0.33);
+                        uvs.push(1.0, 0.66);
                     }
                     else if (normal.z === 1) {
-                        vertexData.uvs.push(0.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.33);
-                        vertexData.uvs.push(1.0, 0.66);
-                        vertexData.uvs.push(0.0, 0.66);
+                        uvs.push(0.0, 0.33);
+                        uvs.push(1.0, 0.33);
+                        uvs.push(1.0, 0.66);
+                        uvs.push(0.0, 0.66);
                     }
                     else if (normal.y === 1) {
-                        vertexData.uvs.push(1.0, 1.0);
-                        vertexData.uvs.push(0.0, 1.0);
-                        vertexData.uvs.push(0.0, 0.6666);
-                        vertexData.uvs.push(1.0, 0.6666);
+                        uvs.push(1.0, 1.0);
+                        uvs.push(0.0, 1.0);
+                        uvs.push(0.0, 0.6666);
+                        uvs.push(1.0, 0.6666);
                     }
                     else {
-                        vertexData.uvs.push(1.0, 0.33);
-                        vertexData.uvs.push(0.0, 0.33);
-                        vertexData.uvs.push(0.0, 0.0);
-                        vertexData.uvs.push(1.0, 0.0);
+                        uvs.push(1.0, 0.33);
+                        uvs.push(0.0, 0.33);
+                        uvs.push(0.0, 0.0);
+                        uvs.push(1.0, 0.0);
                     }
                 }
             }
@@ -125,7 +127,7 @@
             //push to the gpu
             vertexData.applyToMesh(this._mesh, true);
             this._positions = new Float32Array(this._mesh.getVerticesData(BABYLON.VertexBuffer.PositionKind));
-            this._indices = this._mesh.getIndices();
+            this._indices = <any>this._mesh.getIndices();
         }
 
         //Add single box
@@ -205,7 +207,7 @@
                 if (positionInArray != -1) {
                     this._setCubePosition(positions[i], positions[i + 1], positions[i + 2], -1);
                     this._nextWritablePositions.push(positionInArray);
-                    cubesToClean.set([positionInArray / 3], i);
+                    cubesToClean.set(positionInArray / 3, i);
                     this._numberofCubes--;
                 }
             }
@@ -374,7 +376,7 @@
             for (var i = 0; i < cubes.length; i++) {
                 var cubeIndex = cubes[i] * 72;
                 this._positions.set(
-                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                   new Float32Array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
                     cubeIndex
                     );
             }

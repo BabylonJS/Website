@@ -32,7 +32,7 @@ var BOXMONGER;
         EqData.GRASS = 2;
         EqData.SNOW = 3;
         return EqData;
-    })();
+    }());
     BOXMONGER.EqData = EqData;
     var C4fWorldManager = (function () {
         function C4fWorldManager(edgeSize, unitBoxSize, scene) {
@@ -827,7 +827,7 @@ var BOXMONGER;
             }
         };
         return C4fWorldManager;
-    })();
+    }());
     BOXMONGER.C4fWorldManager = C4fWorldManager;
 })(BOXMONGER || (BOXMONGER = {}));
 //# sourceMappingURL=c4F.js.map

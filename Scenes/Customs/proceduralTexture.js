@@ -35,7 +35,7 @@
         fontainGround.position = new BABYLON.Vector3(x, y - 2, z);
         fontainGround.material = marbleMaterial;
 
-        var fontainSculptur1 = BABYLON.Mesh.CreateCylinder("fontainSculptur1", 2, 2, 1, 10, scene);
+        var fontainSculptur1 = BABYLON.Mesh.CreateCylinder("fontainSculptur1", 2, 2, 1, 10, 1, scene);
         fontainSculptur1.position = new BABYLON.Vector3(x, y, z);
         fontainSculptur1.material = marbleMaterial;
 
@@ -74,7 +74,7 @@
     var scene = new BABYLON.Scene(engine);
     var camera = new BABYLON.ArcRotateCamera("Camera", 1, 1.2, 25, new BABYLON.Vector3(10, 0, 0), scene);
     camera.upperBetaLimit = 1.2;
-    camera.attachControl(canvas, true);
+
     //Material declaration
     var woodMaterial = new BABYLON.StandardMaterial(name, scene);
     var woodTexture = new BABYLON.WoodProceduralTexture(name + "text", 1024, scene);

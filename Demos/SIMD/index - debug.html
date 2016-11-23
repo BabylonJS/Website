@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width">
+	<title>Using babylon.js adn SIMD.js</title>
+	<script src="../../src/Math/babylon.math.js"></script>
+	<script src="../../src/Tools/babylon.database.js"></script>
+	<script src="../../src/Tools/babylon.tools.tga.js"></script>
+	<script src="../../src/Tools/babylon.tools.dds.js"></script>
+	<script src="../../src/Tools/babylon.smartArray.js"></script>
+	<script src="../../src/Tools/babylon.tools.js"></script>
+	<script src="../../src/babylon.engine.js"></script>
+	<script src="../../src/babylon.node.js"></script>
+	<script src="../../src/Tools/babylon.filesInput.js"></script>
+	<script src="../../src/Collisions/babylon.pickingInfo.js"></script>
+	<script src="../../src/Culling/babylon.boundingSphere.js"></script>
+	<script src="../../src/Culling/babylon.boundingBox.js"></script>
+	<script src="../../src/Culling/babylon.boundingInfo.js"></script>
+	<script src="../../src/Mesh/babylon.abstractMesh.js"></script>
+	<script src="../../src/Lights/babylon.light.js"></script>
+	<script src="../../src/Lights/babylon.pointLight.js"></script>
+	<script src="../../src/Lights/babylon.spotLight.js"></script>
+	<script src="../../src/Lights/babylon.hemisphericLight.js"></script>
+	<script src="../../src/Lights/babylon.directionalLight.js"></script>
+	<script src="../../src/Lights/Shadows/babylon.shadowGenerator.js"></script>
+	<script src="../../src/Collisions/babylon.collider.js"></script>
+	<script src="../../src/Collisions/babylon.collisionCoordinator.js"></script>
+	<script src="../../src/Collisions/babylon.collisionWorker.js"></script>
+	<script src="../../src/Cameras/babylon.camera.js"></script>
+	<script src="../../src/Cameras/babylon.targetCamera.js"></script>
+	<script src="../../src/Cameras/babylon.followCamera.js"></script>
+	<script src="../../src/Cameras/babylon.freeCamera.js"></script>
+	<script src="../../src/Cameras/babylon.touchCamera.js"></script>
+	<script src="../../src/Cameras/babylon.arcRotateCamera.js"></script>
+	<script src="../../src/Cameras/babylon.deviceOrientationCamera.js"></script>
+	<script src="../../src/Tools/babylon.gamepads.js"></script>
+	<script src="../../src/Cameras/babylon.gamepadCamera.js"></script>
+	<script src="../../src/Rendering/babylon.renderingManager.js"></script>
+	<script src="../../src/Rendering/babylon.renderingGroup.js"></script>
+	<script src="../../src/babylon.scene.js"></script>
+	<script src="../../src/Mesh/babylon.vertexBuffer.js"></script>
+	<script src="../../src/Mesh/babylon.InstancedMesh.js"></script>
+	<script src="../../src/Mesh/babylon.mesh.js"></script>
+	<script src="../../src/Mesh/babylon.groundMesh.js"></script>
+	<script src="../../src/Mesh/babylon.subMesh.js"></script>
+	<script src="../../src/Mesh/babylon.meshBuilder.js"></script>
+	<script src="../../src/Materials/textures/babylon.baseTexture.js"></script>
+	<script src="../../src/Materials/textures/babylon.texture.js"></script>
+	<script src="../../src/Materials/textures/babylon.cubeTexture.js"></script>
+	<script src="../../src/Materials/textures/babylon.renderTargetTexture.js"></script>
+	<script src="../../src/Materials/textures/babylon.mirrorTexture.js"></script>
+	<script src="../../src/Materials/textures/babylon.dynamicTexture.js"></script>
+	<script src="../../src/Materials/textures/babylon.videoTexture.js"></script>
+	<script src="../../src/Materials/babylon.effect.js"></script>
+	<script src="../../src/Materials/babylon.material.js"></script>
+	<script src="../../src/Materials/babylon.standardMaterial.js"></script>
+	<script src="../../src/Materials/babylon.multiMaterial.js"></script>
+	<script src="../../src/Materials/textures/procedurals/babylon.proceduralTexture.js"></script>
+	<script src="../../src/Materials/textures/procedurals/babylon.standardProceduralTexture.js"></script>
+	<script src="../../src/Materials/textures/procedurals/babylon.customProceduralTexture.js"></script>
+	<script src="../../src/Loading/babylon.sceneLoader.js"></script>
+	<script src="../../src/Loading/Plugins/babylon.babylonFileLoader.js"></script>
+	<script src="../../src/Sprites/babylon.spriteManager.js"></script>
+	<script src="../../src/Sprites/babylon.sprite.js"></script>
+	<script src="../../src/Layer/babylon.layer.js"></script>
+	<script src="../../src/Particles/babylon.particle.js"></script>
+	<script src="../../src/Particles/babylon.particleSystem.js"></script>
+	<script src="../../src/Animations/babylon.animation.js"></script>
+	<script src="../../src/Animations/babylon.animatable.js"></script>
+	<script src="../../src/Animations/babylon.easing.js"></script>
+	<script src="../../src/Culling/Octrees/babylon.octree.js"></script>
+	<script src="../../src/Culling/Octrees/babylon.octreeBlock.js"></script>
+	<script src="../../src/Bones/babylon.bone.js"></script>
+	<script src="../../src/Bones/babylon.skeleton.js"></script>
+	<script src="../../src/Bones/babylon.skeleton.js"></script>
+	<script src="../../src/PostProcess/babylon.postProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.postProcessManager.js"></script>
+	<script src="../../src/PostProcess/babylon.passPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.blurPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.refractionPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.blackAndWhitePostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.convolutionPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.filterPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.fxaaPostProcess.js"></script>
+	<script src="../../src/LensFlare/babylon.lensFlare.js"></script>
+	<script src="../../src/LensFlare/babylon.lensFlareSystem.js"></script>
+	<script src="../../src/Physics/Plugins/babylon.cannonJSPlugin.js"></script>
+	<script src="../../src/Physics/Plugins/babylon.oimoJSPlugin.js"></script>
+	<script src="../../src/Physics/babylon.physicsEngine.js"></script>
+	<script src="../../src/Tools/babylon.sceneSerializer.js"></script>
+	<script src="../../src/Mesh/babylon.csg.js"></script>
+	<script src="../../src/PostProcess/babylon.vrDistortionCorrectionPostProcess.js"></script>
+	<script src="../../src/Tools/babylon.virtualJoystick.js"></script>
+	<script src="../../src/Cameras/babylon.virtualJoysticksCamera.js"></script>
+	<script src="../../src/Materials/babylon.shaderMaterial.js"></script>
+	<script src="../../src/Mesh/babylon.mesh.vertexData.js"></script>
+	<script src="../../src/PostProcess/babylon.anaglyphPostProcess.js"></script>
+	<script src="../../src/Tools/babylon.tags.js"></script>
+	<script src="../../src/Tools/babylon.andOrNotEvaluator.js"></script>
+	<script src="../../src/PostProcess/RenderPipeline/babylon.postProcessRenderPass.js"></script>
+	<script src="../../src/PostProcess/RenderPipeline/babylon.postProcessRenderEffect.js"></script>
+	<script src="../../src/PostProcess/RenderPipeline/babylon.postProcessRenderPipeline.js"></script>
+	<script src="../../src/PostProcess/RenderPipeline/babylon.postProcessRenderPipelineManager.js"></script>
+	<script src="../../src/PostProcess/babylon.displayPassPostProcess.js"></script>
+	<script src="../../src/Rendering/babylon.boundingBoxRenderer.js"></script>
+	<script src="../../src/Actions/babylon.condition.js"></script>
+	<script src="../../src/Actions/babylon.action.js"></script>
+	<script src="../../src/Actions/babylon.actionManager.js"></script>
+	<script src="../../src/Actions/babylon.interpolateValueAction.js"></script>
+	<script src="../../src/Actions/babylon.directActions.js"></script>
+	<script src="../../src/Mesh/babylon.geometry.js"></script>
+	<script src="../../src/Mesh/babylon.linesMesh.js"></script>
+	<script src="../../src/Rendering/babylon.outlineRenderer.js"></script>
+	<script src="../../src/Tools/babylon.assetsManager.js"></script>
+	<script src="../../src/Cameras/VR/babylon.vrDeviceOrientationCamera.js"></script>
+	<script src="../../src/Cameras/VR/babylon.webVRCamera.js"></script>
+	<script src="../../src/Tools/babylon.sceneOptimizer.js"></script>
+	<script src="../../src/Mesh/babylon.meshLODLevel.js"></script>
+	<script src="../../src/Audio/babylon.audioengine.js"></script>
+	<script src="../../src/Audio/babylon.sound.js"></script>
+	<script src="../../src/Audio/babylon.analyser.js"></script>
+	<script src="../../src/Debug/babylon.debugLayer.js"></script>
+	<script src="../../src/Audio/babylon.soundtrack.js"></script>
+	<script src="../../src/Materials/Textures/babylon.rawTexture.js"></script>
+	<script src="../../src/Mesh/babylon.polygonMesh.js"></script>
+	<script src="../../src/Mesh/babylon.meshSimplification.js"></script>
+	<script src="../../src/Rendering/babylon.depthRenderer.js"></script>
+	<script src="../../src/PostProcess/babylon.ssaoRenderingPipeline.js"></script>
+	<script src="../../src/PostProcess/babylon.volumetricLightScatteringPostProcess.js"></script>
+	<script src="../../src/PostProcess/babylon.lensRenderingPipeline.js"></script>
+	<script src="../../src/PostProcess/babylon.colorCorrectionPostProcess.js"></script>
+	<script src="../../src/Tools/babylon.smartCollection.js"></script>
+	<script src="../../src/PostProcess/babylon.stereoscopicInterlacePostProcess.js"></script>
+	<script src="../../src/Cameras/babylon.stereoscopicCameras.js"></script>
+	<script src="../../src/PostProcess/babylon.hdrRenderingPipeline.js"></script>
+	<script src="../../src/Rendering/babylon.edgesRenderer.js"></script>
+	<script src="../../src/PostProcess/babylon.tonemapPostProcess.js"></script>
+	<script src="../../src/Tools/babylon.loadingScreen.js"></script>
+	<script src="../../src/Materials/babylon.pbrMaterial.js"></script>
+	<script src="../../src/Probes/babylon.reflectionProbe.js"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#renderCanvas {
+			width: 100%;
+			height: 100%;
+		}
+
+		#infos {
+			position: absolute;
+			right: calc(50% - 150px);
+			top: 1px;
+			height: 110px;
+			width: 300px;
+			border: 1px solid black;
+			color: white;
+			background: rgba(0, 0, 0, 0.5);
+			font-family: "Segoe WP", Arial;
+			font-size: 40px;
+			text-align: center;
+		}
+
+		#simd {
+			position: absolute;
+			right: 215px;
+			top: 120px;
+			color: white;
+			font-family: "Segoe WP", Arial;
+		}
+	</style>
+	<script src="dat.gui.min.js"></script>
+</head>
+<body>
+	<canvas id="renderCanvas"></canvas>
+	<div id="infos"></div>
+	<script>
+		var configObject = {
+			targetFPS: 50,
+			useSIMD: false
+		}
+
+		if (BABYLON.Engine.isSupported()) {
+			var SIMDCheck = document.getElementById("SIMDCheck");
+			var canvas = document.getElementById("renderCanvas");
+			var engine = new BABYLON.Engine(canvas, true);
+			var total = 1;
+			var infos = document.getElementById("infos");
+			var dancer;
+			var scene;
+			var groundMaterial;
+			var dancers = [];
+
+			window.addEventListener("resize", function () {
+				engine.resize();
+			});
+
+			var addDancer = function () {
+				var newOne = dancer.clone("clone" + total);
+				newOne.skeleton = dancer.skeleton.clone("skeleton" + total);
+		
+				newOne.position.x = 250 - Math.random() * 500;
+				newOne.position.z = 250 - Math.random() * 500;
+				groundMaterial.reflectionTexture.renderList.push(newOne);
+				scene.beginAnimation(newOne.skeleton, 2, 100, true, 0.05);
+
+				dancers.push(newOne);
+
+				total++;
+			}
+
+			var removeDancer = function () {
+				if (dancers.length === 0) {
+					return;
+				}
+
+				var dancer = dancers[0];
+				scene.stopAnimation(dancer);
+				dancer.dispose();
+
+				dancers.splice(0, 1);
+
+				total--;
+			}
+			BABYLON.Engine.ShadersRepository = "../../src/Shaders/";
+			BABYLON.SceneLoader.Load("http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/DanceMoves/", "DanceMoves.babylon", engine, function (newScene) {
+				scene = newScene;
+				newScene.activeCamera.maxZ = 10000.0;
+				newScene.activeCamera.position.z = 600.0;
+
+				// Mirror
+				groundMaterial = new BABYLON.StandardMaterial("ground", newScene);
+				groundMaterial.reflectionTexture = new BABYLON.MirrorTexture("mirror", 1024, newScene, true);
+				groundMaterial.reflectionTexture.mirrorPlane = new BABYLON.Plane(0, -1.0, 0, 0);
+				groundMaterial.reflectionTexture.level = 0.5;
+
+				// Ground
+				var ground = BABYLON.Mesh.CreateGround("ground", 1000, 1000, 1, newScene, false);
+
+				groundMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+				groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+				ground.material = groundMaterial;
+
+				dancer = newScene.meshes[1];
+				dancer.computeBonesUsingShaders = false;
+
+				addDancer();
+
+				groundMaterial.reflectionTexture.renderList.push(dancer);
+				newScene.beginAnimation(dancer.skeleton, 2, 100, true, 0.05);
+
+				newScene.executeWhenReady(function () {
+					newScene.activeCamera.attachControl(canvas);
+
+					engine.runRenderLoop(function () {
+						newScene.render();
+					});
+				});
+
+				//// SIMD
+				//configObject.useSIMD = BABYLON.SIMDHelper.IsEnabled;
+
+				//// GUI
+				//var gui = new dat.GUI();
+				//gui.add(configObject, 'targetFPS', 10, 60);
+				//gui.add(configObject, 'useSIMD').onChange(function () {
+				//	if (BABYLON.SIMDHelper.IsEnabled) {
+				//		BABYLON.SIMDHelper.DisableSIMD();
+				//	} else {
+				//		BABYLON.SIMDHelper.EnableSIMD();
+				//	}
+
+				//	configObject.useSIMD = BABYLON.SIMDHelper.IsEnabled;
+				//});
+
+
+				// Let's start the cloning galore!
+				//var downCounter = 0;
+				//setInterval(function () {
+				//	var fps = Math.floor(engine.getFps());
+
+				//	if (fps >= configObject.targetFPS) {
+				//		downCounter = 0;
+				//		addDancer();
+				//	} else {
+				//		downCounter++;
+
+				//		if (downCounter === 3) { // FPS down for 3s ?
+				//			removeDancer();
+				//			downCounter = 0;
+				//		}
+				//	}
+
+				//	infos.innerHTML = total + " dancers<BR>" + fps + " fps";
+				//}, 1000);
+			}, function (evt) {
+				if (evt.lengthComputable) {
+					engine.loadingUIText = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
+				} else {
+					dlCount = evt.loaded / (1024 * 1024);
+					engine.loadingUIText = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
+				}
+			});
+		}
+	</script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     doNotUseCDN: false,
     collisions: true,
     offline: false,
+    freeze: true,
     onload: function () {
 
     }

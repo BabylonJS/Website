@@ -17,7 +17,7 @@ var BOXMONGER;
         ];
         BlocTypes.Materials = new Array(BlocTypes.Types.length);
         return BlocTypes;
-    })();
+    }());
     BOXMONGER.BlocTypes = BlocTypes;
     var Chunk = (function () {
         function Chunk(positionInWorld) {
@@ -159,7 +159,7 @@ var BOXMONGER;
         Chunk.CHUNKWIDTH = 24;
         Chunk.CHUNKDEPTH = 24;
         return Chunk;
-    })();
+    }());
     BOXMONGER.Chunk = Chunk;
     var ChunkDisplayer = (function () {
         function ChunkDisplayer(unitBoxSize, positionInWorld, scene) {
@@ -229,7 +229,7 @@ var BOXMONGER;
             configurable: true
         });
         return ChunkDisplayer;
-    })();
+    }());
     BOXMONGER.ChunkDisplayer = ChunkDisplayer;
     var WordManager = (function () {
         function WordManager(width, depth, unitBoxSize, scene) {
@@ -432,7 +432,7 @@ var BOXMONGER;
             }
         };
         return WordManager;
-    })();
+    }());
     BOXMONGER.WordManager = WordManager;
 })(BOXMONGER || (BOXMONGER = {}));
 //# sourceMappingURL=boxmonger.worldmanager.js.map

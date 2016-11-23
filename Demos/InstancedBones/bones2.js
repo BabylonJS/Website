@@ -19,7 +19,7 @@
 
     // Shadows
     var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
-	shadowGenerator.usePoissonSampling = true;
+    shadowGenerator.useBlurVarianceShadowMap = true;
 
     // Dude
     BABYLON.SceneLoader.ImportMesh("him", "../../Assets/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
@@ -34,6 +34,8 @@
             var offsetZ = 200 * Math.random() - 100;
             for (index = 1; index < newMeshes2.length; index++) {
                 var instance = newMeshes2[index].createInstance("instance" + count);
+
+                shadowGenerator.getShadowMap().renderList.push(instance);
 
                 instance.parent = newMeshes2[index].parent;
                 instance.position = newMeshes2[index].position.clone();

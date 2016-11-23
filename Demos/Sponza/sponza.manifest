@@ -1,15 +1,15 @@
 CACHE MANIFEST
  
-# Version 1.1
+# Version 1.2
 
 CACHE:
-http://babylonjs.com/css/index.css 
+http://www.babylonjs.com/css/index.css 
 index.html
 index.css
 index.js
 demo.json
 http://code.jquery.com/pep/0.4.0/pep.min.js
-http://babylonjs.com/babylon.js
+http://www.babylonjs.com/babylon.js
 babylon.demo.js
 camera.png
 volume.png

@@ -6,6 +6,7 @@
     collisions: true,
     offline: true,
     onload: function () {
+        var canvas = scene.getEngine().getRenderingCanvas();
         scene.collisionsEnabled = false;
         for (var index = 0; index < scene.cameras.length; index++) {
             scene.cameras[index].minZ = 10;

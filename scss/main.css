@@ -395,15 +395,18 @@ h3 {
 
 .button-red {
   background: #be1e2d;
-  color: white; }
+  color: white;
+  width: 100px; }
 
 .button-green {
   background: #8dc63f;
-  color: white; }
+  color: white;
+  width: 100px; }
 
 .button-blue {
   background: #00aeef;
-  color: white; }
+  color: white;
+  width: 100px; }
 
 /* ==========================================================================
    Main layout
@@ -523,8 +526,8 @@ hr.margin {
   margin: 0 -.5em;
   flex-flow: row wrap; }
   .gallery:hover .gallery-item-link .gallery-item-img, .gallery:focus .gallery-item-link .gallery-item-img {
-    -webkit-filter: blur(1px) sepia(80%);
-    filter: blur(1px) sepia(80%); }
+    /*-webkit-filter: opacity(0.9);  
+            filter: opacity(0.9);*/ }
   .gallery .gallery-item {
     flex: 0 1 100%; }
     @media (min-width: 30em) {
@@ -570,12 +573,19 @@ hr.margin {
     color: white; }
     .gallery .gallery-item-link:hover .gallery-item-img, .gallery .gallery-item-link:focus .gallery-item-img {
       transform: scale(1.1) rotate(-2deg); }
+    .gallery .gallery-item-link:hover .gallery-item-vid, .gallery .gallery-item-link:focus .gallery-item-vid {
+      transform: scale(1.3) rotate(-2deg); }
     .gallery .gallery-item-link:hover .gallery-item-infos, .gallery .gallery-item-link:focus .gallery-item-infos {
       padding: 5% 2.5%;
       background: rgba(0, 0, 0, 0.75); }
     .gallery .gallery-item-link:hover .gallery-item-img {
-      -webkit-filter: sepia(0%);
-      filter: sepia(0%); }
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+  .gallery .gallery-item-vid {
+    display: block;
+    width: 100%;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: scale(1.15) rotate(0); }
   .gallery .gallery-item-img {
     display: block;
     width: 100%;
@@ -672,6 +682,18 @@ footer {
   animation-name: filteredscrolling;
   animation-duration: 1s;
   animation-iteration-count: 1; }
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none; }
+
+video::--webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none; }
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none; }
 
 main {
   display: flex;

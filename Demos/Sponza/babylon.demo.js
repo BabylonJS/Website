@@ -173,7 +173,7 @@ var BABYLON;
                 }
                 return result;
             };
-            Scheduler.prototype.run = function (configurationFile, engine) {
+            Scheduler.prototype.run = function (configurationFile, engine, onload) {
                 var _this = this;
                 this.engine = engine;
                 // Resize
@@ -253,6 +253,9 @@ var BABYLON;
                                     document.getElementById("controls").className = "";
                                     _this.restart();
                                 };
+                            }
+                            if (onload) {
+                                onload(scene);
                             }
                             // Render loop
                             var renderFunction = function () {

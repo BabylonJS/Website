@@ -20,7 +20,7 @@
     var keys = [];
     var previous = null;
     for (var i = 0; i < 20; i++) {
-        var rand = BABYLON.Tools.Clamp(Math.random(), 0.5, 1.0);
+        var rand = BABYLON.MathTools.Clamp(Math.random(), 0.5, 1.0);
 
         if (previous) {
             if (Math.abs(rand - previous) < 0.1) {

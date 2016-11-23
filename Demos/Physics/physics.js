@@ -57,7 +57,7 @@
         sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
     }
 
-    for (index = 0; index < 10; index++) {
+    for (index = 0; index < 9; index++) {
         spheres[index].setPhysicsLinkWith(spheres[index + 1], new BABYLON.Vector3(0, 0.5, 0), new BABYLON.Vector3(0, -0.5, 0));
     }
 

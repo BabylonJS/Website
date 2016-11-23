@@ -49,10 +49,10 @@
 
 
 	// --------- SPOTS -------------
-	var light00 = new BABYLON.SpotLight("*spot00", new BABYLON.Vector3(-30, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 1.5, scene);
-	var light01 = new BABYLON.SpotLight("*spot01", new BABYLON.Vector3(0, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 1.5, scene);
-	var light02 = new BABYLON.SpotLight("*spot02", new BABYLON.Vector3(30, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 1.5, scene);
-	var light03 = new BABYLON.SpotLight("*spot03", new BABYLON.Vector3(60, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 1.5, scene);
+	var light00 = new BABYLON.SpotLight("*spot00", new BABYLON.Vector3(-30, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 24, scene);
+	var light01 = new BABYLON.SpotLight("*spot01", new BABYLON.Vector3(0, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 24, scene);
+	var light02 = new BABYLON.SpotLight("*spot02", new BABYLON.Vector3(30, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 24, scene);
+	var light03 = new BABYLON.SpotLight("*spot03", new BABYLON.Vector3(60, 20, -10), new BABYLON.Vector3(0, -1, 0.3), 1.2, 24, scene);
 
 	// Boxes
     var box00 = BABYLON.Mesh.CreateBox("*box00", 5, scene, false);

@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width">
     <title>Babylon.js - Spaceship demo</title>
-    <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    <script src="http://cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -16,7 +17,7 @@
 
     </script>
     <link href="../../css/index.css" rel="stylesheet" />
-    <script src="http://code.jquery.com/pep/0.4.0/pep.min.js"></script>
+    <!--<script src="http://code.jquery.com/pep/0.4.0/pep.min.js"></script>-->
     <script src="../../babylon.js"></script>
     <script src="demo.js"></script>
 </head>
@@ -44,19 +45,19 @@
             <p>
                 Change control method:
                 <button class="buttonControlPanel" id="touchCamera">
-                    <img src="../../../Assets/CamTouchOff.png" class="buttonImg" />Touch camera
+                    <img src="../../Assets/CamTouchOff.png" class="buttonImg" />Touch camera
                 </button>
                 <button class="buttonControlPanel" id="deviceOrientationCamera">
-                    <img src="../../../Assets/CamDeviceOff.png" class="buttonImg" />VR Device orientation camera
+                    <img src="../../Assets/CamDeviceOff.png" class="buttonImg" />VR Device orientation camera
                 </button>
                 <button class="buttonControlPanel" id="gamepadCamera">
-                    <img src="../../../../Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
+                    <img src="../../../Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
                 </button>
                 <button class="buttonControlPanel" id="virtualJoysticksCamera">
-                    <img src="../../../Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
+                    <img src="../../Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
                 </button>
                 <button class="buttonControlPanel" id="anaglyphCamera">
-                    <img src="../../../Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
+                    <img src="../../Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
                 </button>
             </p>
             <p>
@@ -67,7 +68,7 @@
                 <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
             </p>
         </div>
-        <div class="cameraTag"><img src="../../../Assets/camera.png" /></div>
+        <div class="cameraTag"><img src="../../Assets/camera.png" /></div>
         <div class="cameraTag" id="cameraClickableTag"></div>
     </div>
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>

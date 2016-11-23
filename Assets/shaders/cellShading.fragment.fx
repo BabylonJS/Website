@@ -1,4 +1,8 @@
-﻿// Lights
+﻿#ifdef GL_ES
+precision highp float;
+#endif
+
+// Lights
 varying vec3 vPositionW;
 varying vec3 vNormalW;
 varying vec2 vUV;

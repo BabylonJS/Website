@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Haunted mansion</title>
-    <script src="Babylon.js"></script>
+    <script src="../../Babylon.js"></script>
     <style>
         html, body {
             width: 100%;
@@ -34,7 +34,7 @@
         var canvas = document.getElementById("renderCanvas");
         var engine = new BABYLON.Engine(canvas, true);
         BABYLON.SceneLoader.ForceFullSceneLoadingForIncremental = true;
-        BABYLON.SceneLoader.Load("", "Manoir.binary.babylon", engine, function (scene) {
+        BABYLON.SceneLoader.Load("", "Manoir.babylon", engine, function (scene) {
 
             scene.activeCamera.attachControl(canvas);
 
