@@ -26,7 +26,6 @@ var buildBlock = function(title, comps) {
     ).append(
         $('<div>').addClass('choices').append(ul) // choices
     )
-    Ps.initialize(block.get(0));
     
     for (var c of comps) {
         ul.append(
