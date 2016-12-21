@@ -182,16 +182,6 @@
     	box07.rotation.x += 0.01;
     	box07.rotation.z += 0.02;
     });
-
-    scene.debugLayer.show(false);
-
-    scene.debugLayer.shouldDisplayLabel = function (node) {
-    	return node.name.indexOf("*") === -1;
-    }
-
-    scene.debugLayer.shouldDisplayAxis = function (node) {
-    	return false;
-    }
     
     return scene;
 };

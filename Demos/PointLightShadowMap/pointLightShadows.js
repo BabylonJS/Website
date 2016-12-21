@@ -4,6 +4,7 @@
     var camera = new BABYLON.ArcRotateCamera("Camera", 3 * Math.PI / 2, Math.PI / 8, 30, BABYLON.Vector3.Zero(), scene);
     camera.lowerRadiusLimit = 5;
     camera.upperRadiusLimit = 40;
+    camera.minZ = 0;
 
     camera.attachControl(engine.getRenderingCanvas());
 
@@ -42,6 +43,7 @@
     shadowGenerator.getShadowMap().renderList.push(knot, torus);
     shadowGenerator.setDarkness(0.5);
     shadowGenerator.usePoissonSampling = true;
+    shadowGenerator.bias = 0;
 
     container.receiveShadows = true;
     torus.receiveShadows = true;
