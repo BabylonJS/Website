@@ -5,13 +5,13 @@
     // Ground
     var ground01 = BABYLON.Mesh.CreateGround("Spotlight Hard Shadows", 24, 60, 1, scene, false);
     var ground02 = BABYLON.Mesh.CreateGround("Spotlight Poisson Sampling", 24, 60, 1, scene, false);
-    var ground03 = BABYLON.Mesh.CreateGround("Spotlight VSM", 24, 60, 1, scene, false);
-    var ground04 = BABYLON.Mesh.CreateGround("Spotlight Blur VSM", 24, 60, 1, scene, false);
+    var ground03 = BABYLON.Mesh.CreateGround("Spotlight ESM", 24, 60, 1, scene, false);
+    var ground04 = BABYLON.Mesh.CreateGround("Spotlight Blur ESM", 24, 60, 1, scene, false);
 
     var ground11 = BABYLON.Mesh.CreateGround("Directional Hard Shadows", 24, 60, 1, scene, false);
     var ground12 = BABYLON.Mesh.CreateGround("Directional Poisson Sampling", 24, 60, 1, scene, false);
-    var ground13 = BABYLON.Mesh.CreateGround("Directional VSM", 24, 60, 1, scene, false);
-    var ground14 = BABYLON.Mesh.CreateGround("Directional Blur VSM", 24, 60, 1, scene, false);
+    var ground13 = BABYLON.Mesh.CreateGround("Directional ESM", 24, 60, 1, scene, false);
+    var ground14 = BABYLON.Mesh.CreateGround("Directional Blur ESM", 24, 60, 1, scene, false);
 
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
     groundMaterial.diffuseTexture = new BABYLON.Texture("../../assets/ground.jpg", scene);
@@ -95,11 +95,11 @@
 
     var shadowGenerator02 = new BABYLON.ShadowGenerator(512, light02);
     shadowGenerator02.getShadowMap().renderList.push(box02);
-    shadowGenerator02.useVarianceShadowMap = true;
+    shadowGenerator02.useExponentialShadowMap = true;
 
     var shadowGenerator03 = new BABYLON.ShadowGenerator(512, light03);
     shadowGenerator03.getShadowMap().renderList.push(box03);
-    shadowGenerator03.useBlurVarianceShadowMap = true;
+    shadowGenerator03.useBlurExponentialShadowMap = true;
     shadowGenerator03.blurBoxOffset = 2.0;
 
 	// --------- DIRECTIONALS -------------
@@ -150,11 +150,11 @@
 
     var shadowGenerator06 = new BABYLON.ShadowGenerator(512, light06);
     shadowGenerator06.getShadowMap().renderList.push(box06);
-    shadowGenerator06.useVarianceShadowMap = true;
+    shadowGenerator06.useExponentialShadowMap = true;
 
     var shadowGenerator07 = new BABYLON.ShadowGenerator(512, light07);
     shadowGenerator07.getShadowMap().renderList.push(box07);
-    shadowGenerator07.useBlurVarianceShadowMap = true;
+    shadowGenerator07.useBlurExponentialShadowMap = true;
        
     // Animations
     scene.registerBeforeRender(function () {
@@ -182,16 +182,6 @@
     	box07.rotation.x += 0.01;
     	box07.rotation.z += 0.02;
     });
-
-    scene.debugLayer.show(false);
-
-    scene.debugLayer.shouldDisplayLabel = function (node) {
-    	return node.name.indexOf("*") === -1;
-    }
-
-    scene.debugLayer.shouldDisplayAxis = function (node) {
-    	return false;
-    }
     
     return scene;
 };
