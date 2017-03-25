@@ -26,17 +26,17 @@
 		// Shadows
 		var generator = new BABYLON.ShadowGenerator(512, light);
 		generator.getShadowMap().renderList.push(cat);
-		generator.useBlurVarianceShadowMap = true;
+		generator.useBlurExponentialShadowMap = true;
 		generator.blurBoxOffset = 2.0;
 
 		var generator2 = new BABYLON.ShadowGenerator(512, light2);
 		generator2.getShadowMap().renderList.push(cat);
-		generator2.useBlurVarianceShadowMap = true;
+		generator2.useBlurExponentialShadowMap = true;
 		generator2.blurBoxOffset = 2.0;
 
 		var generator3 = new BABYLON.ShadowGenerator(512, light3);
 		generator3.getShadowMap().renderList.push(cat);
-		generator3.useBlurVarianceShadowMap = true;
+		generator3.useBlurExponentialShadowMap = true;
 		generator3.blurBoxOffset = 2.0;
 
 		// Animations
