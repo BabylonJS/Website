@@ -16,7 +16,7 @@
     var ground14 = BABYLON.Mesh.CreateGround("Directional Blur ESM", 24, 60, 1, scene, false);
 
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-    groundMaterial.diffuseTexture = new BABYLON.Texture("/textures/ground.jpg", scene);
+    groundMaterial.diffuseTexture = new BABYLON.Texture("/assets/ground.jpg", scene);
     groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     groundMaterial.emissiveColor = new BABYLON.Color3(0.2, 0.2, 0.2);
 
@@ -97,11 +97,11 @@
 
     var shadowGenerator02 = new BABYLON.ShadowGenerator(512, light02);
     shadowGenerator02.getShadowMap().renderList.push(box02);
-    shadowGenerator02.useVarianceShadowMap = true;
+    shadowGenerator02.useExponentialShadowMap = true;
 
     var shadowGenerator03 = new BABYLON.ShadowGenerator(512, light03);
     shadowGenerator03.getShadowMap().renderList.push(box03);
-    shadowGenerator03.useBlurVarianceShadowMap = true;
+    shadowGenerator03.useBlurExponentialShadowMap = true;
     shadowGenerator03.blurBoxOffset = 2.0;
 
 	// --------- DIRECTIONALS -------------
@@ -152,11 +152,11 @@
 
     var shadowGenerator06 = new BABYLON.ShadowGenerator(512, light06);
     shadowGenerator06.getShadowMap().renderList.push(box06);
-    shadowGenerator06.useVarianceShadowMap = true;
+    shadowGenerator06.useExponentialShadowMap = true;
 
     var shadowGenerator07 = new BABYLON.ShadowGenerator(512, light07);
     shadowGenerator07.getShadowMap().renderList.push(box07);
-    shadowGenerator07.useBlurVarianceShadowMap = true;
+    shadowGenerator07.useBlurExponentialShadowMap = true;
        
     // Animations
     scene.registerBeforeRender(function () {
