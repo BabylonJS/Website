@@ -39,8 +39,8 @@
 
         shadowGenerator.getShadowMap().renderList.push(sphere);
 
-        sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
-
+        sphere.physicsImpostor = new BABYLON.PhysicsImpostor(sphere, BABYLON.PhysicsImpostor.SphereImpostor, { mass: 1 }, scene);
+ 
         y += 2;
     }
 
@@ -54,7 +54,7 @@
 
         shadowGenerator.getShadowMap().renderList.push(sphere);
 
-        sphere.setPhysicsState(BABYLON.PhysicsEngine.SphereImpostor, { mass: 1 });
+        sphere.physicsImpostor = new BABYLON.PhysicsImpostor(sphere, BABYLON.PhysicsImpostor.SphereImpostor, { mass: 1 }, scene);
     }
 
     for (index = 0; index < 9; index++) {
@@ -127,18 +127,14 @@
     ground.receiveShadows = true;
 
     // Physics
-    box0.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 2, friction: 0.4, restitution: 0.3 });
-    ground.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0, friction: 0.5, restitution: 0.7 });
-    border0.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
-    border1.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
-    border2.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
-    border3.setPhysicsState(BABYLON.PhysicsEngine.BoxImpostor, { mass: 0 });
+    box0.physicsImpostor = new BABYLON.PhysicsImpostor(box0, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 2, friction: 0.4, restitution: 0.3 }, scene);
+    ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0.5, restitution: 0.7 }, scene);
+    border0.physicsImpostor = new BABYLON.PhysicsImpostor(border0, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0 }, scene);
+    border1.physicsImpostor = new BABYLON.PhysicsImpostor(border1, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0 }, scene);
+    border2.physicsImpostor = new BABYLON.PhysicsImpostor(border2, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0 }, scene);
+    border3.physicsImpostor = new BABYLON.PhysicsImpostor(border3, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0 }, scene);
 
-    scene.createCompoundImpostor({
-        mass: 2, friction: 0.4, restitution: 0.3, parts: [
-        { mesh: part0, impostor: BABYLON.PhysicsEngine.BoxImpostor },
-        { mesh: part1, impostor: BABYLON.PhysicsEngine.BoxImpostor }]
-    });
+    part0.physicsImpostor = new BABYLON.PhysicsImpostor(part0, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 2, friction: 0.4, restitution: 0.3 }, scene);
 
     return scene;
 };
