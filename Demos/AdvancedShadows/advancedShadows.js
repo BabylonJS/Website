@@ -2,19 +2,21 @@
     var scene = new BABYLON.Scene(engine);
     var camera = new BABYLON.FreeCamera("Camera", new BABYLON.Vector3(20, 30, -100), scene);
 
+    camera.attachControl(canvas, true);
+
     // Ground
     var ground01 = BABYLON.Mesh.CreateGround("Spotlight Hard Shadows", 24, 60, 1, scene, false);
     var ground02 = BABYLON.Mesh.CreateGround("Spotlight Poisson Sampling", 24, 60, 1, scene, false);
-    var ground03 = BABYLON.Mesh.CreateGround("Spotlight VSM", 24, 60, 1, scene, false);
-    var ground04 = BABYLON.Mesh.CreateGround("Spotlight Blur VSM", 24, 60, 1, scene, false);
+    var ground03 = BABYLON.Mesh.CreateGround("Spotlight ESM", 24, 60, 1, scene, false);
+    var ground04 = BABYLON.Mesh.CreateGround("Spotlight Blur ESM", 24, 60, 1, scene, false);
 
     var ground11 = BABYLON.Mesh.CreateGround("Directional Hard Shadows", 24, 60, 1, scene, false);
     var ground12 = BABYLON.Mesh.CreateGround("Directional Poisson Sampling", 24, 60, 1, scene, false);
-    var ground13 = BABYLON.Mesh.CreateGround("Directional VSM", 24, 60, 1, scene, false);
-    var ground14 = BABYLON.Mesh.CreateGround("Directional Blur VSM", 24, 60, 1, scene, false);
+    var ground13 = BABYLON.Mesh.CreateGround("Directional ESM", 24, 60, 1, scene, false);
+    var ground14 = BABYLON.Mesh.CreateGround("Directional Blur ESM", 24, 60, 1, scene, false);
 
     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-    groundMaterial.diffuseTexture = new BABYLON.Texture("../../assets/ground.jpg", scene);
+    groundMaterial.diffuseTexture = new BABYLON.Texture("/assets/ground.jpg", scene);
     groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     groundMaterial.emissiveColor = new BABYLON.Color3(0.2, 0.2, 0.2);
 
@@ -95,11 +97,11 @@
 
     var shadowGenerator02 = new BABYLON.ShadowGenerator(512, light02);
     shadowGenerator02.getShadowMap().renderList.push(box02);
-    shadowGenerator02.useVarianceShadowMap = true;
+    shadowGenerator02.useExponentialShadowMap = true;
 
     var shadowGenerator03 = new BABYLON.ShadowGenerator(512, light03);
     shadowGenerator03.getShadowMap().renderList.push(box03);
-    shadowGenerator03.useBlurVarianceShadowMap = true;
+    shadowGenerator03.useBlurExponentialShadowMap = true;
     shadowGenerator03.blurBoxOffset = 2.0;
 
 	// --------- DIRECTIONALS -------------
@@ -150,11 +152,11 @@
 
     var shadowGenerator06 = new BABYLON.ShadowGenerator(512, light06);
     shadowGenerator06.getShadowMap().renderList.push(box06);
-    shadowGenerator06.useVarianceShadowMap = true;
+    shadowGenerator06.useExponentialShadowMap = true;
 
     var shadowGenerator07 = new BABYLON.ShadowGenerator(512, light07);
     shadowGenerator07.getShadowMap().renderList.push(box07);
-    shadowGenerator07.useBlurVarianceShadowMap = true;
+    shadowGenerator07.useBlurExponentialShadowMap = true;
        
     // Animations
     scene.registerBeforeRender(function () {
@@ -182,6 +184,29 @@
     	box07.rotation.x += 0.01;
     	box07.rotation.z += 0.02;
     });
+
+    // Adding labels
+    var canvas2d = new BABYLON.ScreenSpaceCanvas2D(scene, {
+        id: "ScreenCanvas"
+    });
+
+    var addLabel = function(lights) {
+        for (var i = 0; i < lights.length; i++) {
+            var light = lights[i];
+            new BABYLON.Group2D({
+                parent: canvas2d, id: "#" + i, width: 200, height: 30, trackNode: light, origin: BABYLON.Vector2.Zero(),
+                children: [
+                    new BABYLON.Rectangle2D({ id: "firstRect", width: 200, height: 26, x: -100, y: 100, origin: BABYLON.Vector2.Zero(), border: "#FFFFFFFF", fill: "#808080FF", children: [
+                            new BABYLON.Text2D(light.name, { marginAlignment: "h: center, v:center", fontName: "bold 12px Arial" })
+                        ]
+                    })
+                ]
+            });
+        }
+    }
+
+    addLabel([ground01, ground02, ground03, ground04, ground11, ground12, ground13, ground14]);
+    
     
     return scene;
 };
