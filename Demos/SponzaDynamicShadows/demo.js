@@ -49,5 +49,13 @@
         var shadowGenerator = scene.getLightByName("Omni002").getShadowGenerator();
 
         shadowGenerator.getShadowMap().refreshRate = 0;
+        shadowGenerator.forceBackFacesOnly = true;
+        shadowGenerator.bias = 0.01;
+
+        shadowGenerator = scene.getLightByName("Omni001").getShadowGenerator();
+
+        shadowGenerator.forceBackFacesOnly = true;
+        shadowGenerator.bias = 0.01;
+
     }
 };
