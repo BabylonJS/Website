@@ -52,10 +52,8 @@
         shadowGenerator.forceBackFacesOnly = true;
         shadowGenerator.bias = 0.01;
 
-        shadowGenerator = scene.getLightByName("Omni001").getShadowGenerator();
-
+        shadowGenerator = scene.getLightByName("Omni001").getShadowGenerator();        
         shadowGenerator.forceBackFacesOnly = true;
         shadowGenerator.bias = 0.01;
-
     }
 };
