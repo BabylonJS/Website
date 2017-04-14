@@ -31,7 +31,7 @@
             positionData[index * 3 + 1] = heightRange * Math.sin(alpha + index * 0.1);
         }
 
-        whirlpool.updateVerticesDataDirectly(BABYLON.VertexBuffer.PositionKind, positionData);
+        whirlpool.updateVerticesData(BABYLON.VertexBuffer.PositionKind, positionData);
 
         alpha += 0.05 * scene.getAnimationRatio();
     });
