@@ -1,5 +1,5 @@
-var componentListURL = "http://babyloncomponentselector.azurewebsites.net/api/componentlist";
-var generateURL = "http://babyloncomponentselector.azurewebsites.net/api/buildbabylon";
+var componentListURL = "https://babyloncomponentselector.azurewebsites.net/api/componentlist";
+var generateURL = "https://babyloncomponentselector.azurewebsites.net/api/buildbabylon";
 
 
 // Dirty ugly mapping between component ID and group ID
