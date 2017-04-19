@@ -387,10 +387,10 @@ if (!BABYLON.Engine.isSupported()) {
 } else {
     if (window.location.hostname.indexOf("localhost") === -1 && !demo.forceLocal) {
         if (demo.doNotUseCDN) {
-            sceneLocation = "https://www.babylonjs.com/Scenes/";
+            sceneLocation = "/Scenes/";
         }
         else {
-            sceneLocation = "https://www.babylonjs.com/Scenes/";
+            sceneLocation = "/Scenes/";
         }
     }
 
