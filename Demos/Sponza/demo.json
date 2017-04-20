@@ -1,9 +1,8 @@
 ﻿{
   "sceneName": "Sponza.babylon",
-  "scenePath": "http://cdn.babylonjs.com/wwwbabylonjs/Scenes/Sponza/",
+  "scenePath": "/Scenes/Sponza/",
   "startCameraIndex": 1,
   "tracks": [
-
     {
       "name": "fades",
       "effects": [
