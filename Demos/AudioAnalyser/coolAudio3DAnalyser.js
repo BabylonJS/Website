@@ -3,8 +3,8 @@
 	by Steve 'Stv' Duran for BabylonJS featured demos on 06.12.2015
 */
 var bar = [];
-var square = "http://cdn.babylonjs.com/wwwbabylonjs/assetsdemos/3danalyser/square.jpg";
-var bjs = "http://cdn.babylonjs.com/wwwbabylonjs/assetsdemos/3danalyser/metal.png";
+var square = "/demos/AudioAnalyser/square.jpg";
+var bjs = "/demos/AudioAnalyser/metal.png";
 var fft;
 
 // Better random function
@@ -21,7 +21,7 @@ function createRingcubes(r, nb, scene) {
     // Create a really cool metal material with bump :)
     var m1 = new BABYLON.StandardMaterial("m", scene);
     m1.diffuseTexture = new BABYLON.Texture(square, scene);
-    m1.bumpTexture = new BABYLON.Texture("http://cdn.babylonjs.com/wwwbabylonjs/assetsdemos/3danalyser/grained_uv.png", scene);
+    m1.bumpTexture = new BABYLON.Texture("/demos/AudioAnalyser/grained_uv.png", scene);
     m1.reflectionTexture = new BABYLON.Texture(bjs, scene);
     m1.reflectionTexture.level = 0.8;
     m1.reflectionTexture.coordinatesMode = BABYLON.Texture.SPHERICAL_MODE;
@@ -61,7 +61,7 @@ var CreateCoolAudio3DAnalyser = function (engine) {
     var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
 
     // Streaming sound using HTML5 Audio element
-    var music = new BABYLON.Sound("Music", "http://cdn.babylonjs.com/wwwbabylonjs/assetsdemos/3danalyser/cosmosis.mp3",
+    var music = new BABYLON.Sound("Music", "/demos/AudioAnalyser/cosmosis.mp3",
         scene, null, { streaming: true, autoplay: true });
 
     // Here we go !
@@ -70,7 +70,7 @@ var CreateCoolAudio3DAnalyser = function (engine) {
     // Create some cool material.
     var mball = new BABYLON.StandardMaterial("m", scene);
     mball.backFaceCulling = false;
-    mball.bumpTexture = new BABYLON.Texture("http://cdn.babylonjs.com/wwwbabylonjs/assetsdemos/3danalyser/grained_uv.png", scene);
+    mball.bumpTexture = new BABYLON.Texture("/demos/AudioAnalyser/grained_uv.png", scene);
     mball.reflectionTexture = new BABYLON.Texture(bjs, scene);
     mball.reflectionTexture.level = 0.8;
     mball.reflectionTexture.coordinatesMode = BABYLON.Texture.SPHERICAL_MODE;

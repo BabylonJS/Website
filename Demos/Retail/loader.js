@@ -362,10 +362,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         if (window.location.hostname.indexOf("localhost") === -1 && !demo.forceLocal) {
             if (demo.doNotUseCDN) {
-                sceneLocation = "http://yoda.blob.core.windows.net/wwwbabylonjs/Scenes/";
+                sceneLocation = "/Scenes/";
             }
             else {
-                sceneLocation = "http://cdn.babylonjs.com/wwwbabylonjs/Scenes/";
+                sceneLocation = "/Scenes/";
             }
         }
 
