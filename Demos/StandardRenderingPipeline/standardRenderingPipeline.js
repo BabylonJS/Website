@@ -47,9 +47,9 @@
 
     // Create rendering pipeline
     var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0, null, [camera]);
-    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("lensdirt.jpg", scene);
-    pipeline.lensStarTexture = new BABYLON.Texture("lensstar.png", scene);
-    pipeline.lensColorTexture = new BABYLON.Texture("lenscolor.png", scene);
+    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("/assets/lensdirt.jpg", scene);
+    pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
+    pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
     pipeline.depthOfFieldDistance = 20;
     pipeline.LensFlareEnabled = false;
