@@ -54,6 +54,8 @@
     pipeline.depthOfFieldDistance = 20;
     pipeline.LensFlareEnabled = false;
     pipeline.lensFlareStength = 5;
+    pipeline.motionStrength = 0.1;
+    pipeline.motionBlurSamples = 32;
 
     // GUI
     var gui = new dat.GUI();
@@ -78,8 +80,16 @@
     luminance.add(pipeline, "hdrDecreaseRate").min(0).max(2);
     luminance.add(pipeline, "hdrIncreaseRate").min(0).max(2);
 
-    gui.add(pipeline, "DepthOfFieldEnabled");
-    gui.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+    var depthOfField = gui.addFolder("Depth Of Field");
+    depthOfField.open();
+    depthOfField.add(pipeline, "DepthOfFieldEnabled");
+    depthOfField.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+
+    var motionBlur = gui.addFolder("Motion Blur");
+    motionBlur.open();
+    motionBlur.add(pipeline, "MotionBlurEnabled");
+    motionBlur.add(pipeline, "motionStrength").min(0).max(10);
+    motionBlur.add(pipeline, "motionBlurSamples").step(1).min(1).max(64);
 
     gui.width = 400;
 
