@@ -46,29 +46,50 @@
     woodPlank.material = wood;
 
     // Create rendering pipeline
-    var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0 / devicePixelRatio, null, [camera]);
-    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("lensdirt.jpg", scene);
-    pipeline.lensStarTexture = new BABYLON.Texture("lensstar.png", scene);
-    pipeline.lensColorTexture = new BABYLON.Texture("lenscolor.png", scene);
+    var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0, null, [camera]);
+    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("/assets/lensdirt.jpg", scene);
+    pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
+    pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
     pipeline.depthOfFieldDistance = 20;
     pipeline.LensFlareEnabled = false;
     pipeline.lensFlareStength = 5;
+    pipeline.motionStrength = 0.1;
+    pipeline.motionBlurSamples = 32;
 
     // GUI
     var gui = new dat.GUI();
     gui.add(pipeline, "brightThreshold").min(0.0).max(2.0).step(0.01);
     gui.add(pipeline, "gaussianCoefficient").min(0.0).max(0.5).step(0.01);
     gui.add(pipeline, "exposure").min(0.0).max(10.0).step(0.1);
+    gui.add(pipeline, "blurWidth").min(0).max(5).step(0.01);
+    gui.add(pipeline, "horizontalBlur");
 
-    gui.add(pipeline, "LensFlareEnabled");
-    gui.add(pipeline, "lensFlareStrength").min(0).max(10).step(0.01);
-    gui.add(pipeline, "lensFlareHaloWidth").min(0).max(10).step(0.01);
-    gui.add(pipeline, "lensFlareGhostDispersal").min(0).max(100).step(0.1);
-    gui.add(pipeline, "lensFlareDistortionStrength").min(0).max(100).step(0.1);
+    var lensFlare = gui.addFolder("Lens Flare");
+    lensFlare.open();
+    lensFlare.add(pipeline, "LensFlareEnabled");
+    lensFlare.add(pipeline, "lensFlareStrength").min(0).max(50).step(0.01);
+    lensFlare.add(pipeline, "lensFlareHaloWidth").min(0).max(10).step(0.01);
+    lensFlare.add(pipeline, "lensFlareGhostDispersal").min(0).max(100).step(0.1);
+    lensFlare.add(pipeline, "lensFlareDistortionStrength").min(0).max(100).step(0.1);
 
-    gui.add(pipeline, "DepthOfFieldEnabled");
-    gui.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+    var luminance = gui.addFolder("Luminance Adaptation");
+    luminance.open();
+    luminance.add(pipeline, "HDREnabled");
+    luminance.add(pipeline, "hdrMinimumLuminance").min(0).max(2);
+    luminance.add(pipeline, "hdrDecreaseRate").min(0).max(2);
+    luminance.add(pipeline, "hdrIncreaseRate").min(0).max(2);
+
+    var depthOfField = gui.addFolder("Depth Of Field");
+    depthOfField.open();
+    depthOfField.add(pipeline, "DepthOfFieldEnabled");
+    depthOfField.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+
+    var motionBlur = gui.addFolder("Motion Blur");
+    motionBlur.open();
+    motionBlur.add(pipeline, "MotionBlurEnabled");
+    motionBlur.add(pipeline, "motionStrength").min(0).max(10);
+    motionBlur.add(pipeline, "motionBlurSamples").step(1).min(1).max(64);
 
     gui.width = 400;
 
