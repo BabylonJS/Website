@@ -47,13 +47,15 @@
 
     // Create rendering pipeline
     var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0, null, [camera]);
-    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("lensdirt.jpg", scene);
-    pipeline.lensStarTexture = new BABYLON.Texture("lensstar.png", scene);
-    pipeline.lensColorTexture = new BABYLON.Texture("lenscolor.png", scene);
+    pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("/assets/lensdirt.jpg", scene);
+    pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
+    pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
     pipeline.depthOfFieldDistance = 20;
     pipeline.LensFlareEnabled = false;
     pipeline.lensFlareStength = 5;
+    pipeline.motionStrength = 0.1;
+    pipeline.motionBlurSamples = 32;
 
     // GUI
     var gui = new dat.GUI();
@@ -78,8 +80,16 @@
     luminance.add(pipeline, "hdrDecreaseRate").min(0).max(2);
     luminance.add(pipeline, "hdrIncreaseRate").min(0).max(2);
 
-    gui.add(pipeline, "DepthOfFieldEnabled");
-    gui.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+    var depthOfField = gui.addFolder("Depth Of Field");
+    depthOfField.open();
+    depthOfField.add(pipeline, "DepthOfFieldEnabled");
+    depthOfField.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+
+    var motionBlur = gui.addFolder("Motion Blur");
+    motionBlur.open();
+    motionBlur.add(pipeline, "MotionBlurEnabled");
+    motionBlur.add(pipeline, "motionStrength").min(0).max(10);
+    motionBlur.add(pipeline, "motionBlurSamples").step(1).min(1).max(64);
 
     gui.width = 400;
 
