@@ -712,3 +712,8 @@ main {
         main .about + hr.margin {
           margin: 3% 0; } }
 
+.netlifyLogo {
+  width: 30px;
+  height: 20px;
+  transform: translateY(5px);
+}

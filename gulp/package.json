@@ -1,0 +1,12 @@
+{
+  "name": "babylonjswebsite",
+  "version": "1.0.0",
+  "main": "",
+  "repository": { "url": "https://github.com/BabylonJS/Website/" },
+  "readme": "https://github.com/BabylonJS/Website/blob/master/README.md",
+  "license": "(Apache-2.0)",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-webserver": "^0.9.1"
+  }
+}

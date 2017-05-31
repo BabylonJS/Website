@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html manifest="sponza.manifest">
+<html>
 <head>
     <title>Babylon.js - Sponza demo</title>
     <meta name="description" content="Sponza by Babylon.js demo using WebGL, Web Audio, touch & gamepad on desktop, mobile & xbox one devices">
@@ -48,7 +48,6 @@
     <meta name="twitter:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline." />
     <meta name="twitter:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaTwitter.jpg" />
 
-    <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -60,10 +59,11 @@
         ga('create', 'UA-41767310-1', 'babylonjs.com');
         ga('send', 'pageview');
     </script>
+    <script src="register-sw.js"></script>
     <link href="../../css/index.css" rel="stylesheet" />
 	<link href="index.css" rel="stylesheet" />
-    <script src="http://code.jquery.com/pep/0.4.0/pep.min.js"></script>
-    <script src="../../babylon.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
+    <script src="//preview.babylonjs.com/babylon.js"></script>
 	<script src="babylon.demo.js"></script>
 </head>
 <body>

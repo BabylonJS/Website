@@ -1,0 +1,34 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif; }
+
+#game-canvas {
+  width: 100%;
+  height: 100%; }
+
+.loader {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #000;
+  font-size: 40pt;
+  font-family: "Arial Black";
+  color: #eee;
+  letter-spacing: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+#pleasewait {
+  font-size: 22pt;
+  font-family: "Arial"; }

@@ -222,13 +222,13 @@ var DEMO;
             }
         };
 
-        BABYLON.SceneLoader.Load("http://cdn.babylonjs.com/wwwbabylonjs/Scenes/Ruins/", "ruins.babylon", engine, function (newscene) {
+        BABYLON.SceneLoader.Load("/Scenes/Ruins/", "ruins.babylon", engine, function (newscene) {
             scene = newscene;
 
             if (engine.getCaps().textureFloatRender) {
                 // Post-processes
                 standardPipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0 / devicePixelRatio, null, [scene.activeCamera]);
-                standardPipeline.lensTexture = new BABYLON.Texture("http://cdn.babylonjs.com/wwwbabylonjs/Scenes/Ruins/lensdirt.jpg", scene);
+                standardPipeline.lensTexture = new BABYLON.Texture("/Scenes/Ruins/lensdirt.jpg", scene);
 
                 var demoPostProcess = new BABYLON.PostProcess("DemoPostProcess", "Demo", ["strength"], [], 1.0 / devicePixelRatio, scene.activeCamera, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, false, "", BABYLON.Engine.TEXTURETYPE_FLOAT);
                 demoPostProcess.onApply = function (effect) {

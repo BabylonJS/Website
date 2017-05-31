@@ -186,22 +186,28 @@
     });
 
     // Adding labels
-    var canvas2d = new BABYLON.ScreenSpaceCanvas2D(scene, {
-        id: "ScreenCanvas"
-    });
+    var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
 
     var addLabel = function(lights) {
         for (var i = 0; i < lights.length; i++) {
             var light = lights[i];
-            new BABYLON.Group2D({
-                parent: canvas2d, id: "#" + i, width: 200, height: 30, trackNode: light, origin: BABYLON.Vector2.Zero(),
-                children: [
-                    new BABYLON.Rectangle2D({ id: "firstRect", width: 200, height: 26, x: -100, y: 100, origin: BABYLON.Vector2.Zero(), border: "#FFFFFFFF", fill: "#808080FF", children: [
-                            new BABYLON.Text2D(light.name, { marginAlignment: "h: center, v:center", fontName: "bold 12px Arial" })
-                        ]
-                    })
-                ]
-            });
+
+            var rect1 = new BABYLON.GUI.Rectangle();
+            rect1.width = "120px";
+            rect1.height = "40px";
+            rect1.color = "white";
+            rect1.fontSize = 12;
+            rect1.thickness = 2;
+            rect1.background = "Black";
+            rect1.linkOffsetY = -50;
+            advancedTexture.addControl(rect1);
+            rect1.linkWithMesh(light);   
+
+            var label = new BABYLON.GUI.TextBlock();
+            label.text = light.name;
+            label.textWrapping = true;
+            rect1.addControl(label);
         }
     }
 
