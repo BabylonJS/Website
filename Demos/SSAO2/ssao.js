@@ -12,7 +12,7 @@
 		// Create SSAO and configure all properties (for the example)
 		var ssaoRatio = {
 		    ssaoRatio: 0.5, // Ratio of the SSAO post-process, in a lower resolution
-		    blurRatio: 0.5 // Ratio of the combine post-process (combines the SSAO and the scene)
+		    blurRatio: 1.0 // Ratio of the combine post-process (combines the SSAO and the scene)
 		};
 
 		var ssao = new BABYLON.SSAO2RenderingPipeline("ssao", scene, ssaoRatio);
@@ -43,7 +43,12 @@
 			}
 		});
 
-		var gui = new dat.GUI();
+		var gui = new dat.GUI({ autoPlace : false});
+		var elt = document.getElementById("gui");
+		elt.style.position = "absolute";
+		elt.style.right = "0px";
+		elt.style.bottom = "0px";
+		elt.appendChild(gui.domElement);
 		gui.add(ssao, "radius", 1.0, 150.0);
 		gui.add(ssao, "totalStrength", 0.1, 10);
 		gui.add(ssao, "base", 0.0, 1.0);
@@ -51,7 +56,7 @@
 		gui.add(ssao, "expensiveBlur");
 
 		ssao.ssaoRatio = 0.5;
-		ssao.blurRatio = 0.5;
+		ssao.blurRatio = 1.0;
 		var ssaoRatio = gui.add(ssao, "ssaoRatio", { Quarter: 0.25, Half: 0.5, Full: 1 });
 		var blurRatio = gui.add(ssao, "blurRatio", { Quarter: 0.25, Half: 0.5, Full: 1 });
 
