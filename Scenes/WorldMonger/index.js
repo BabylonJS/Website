@@ -59,7 +59,7 @@
     var elevationControl = new WORLDMONGER.ElevationControl(ground);
     
     // Bloom
-    var blurWidth = 2.0;
+    var blurWidth = 16.0;
 
     var postProcess0 = new BABYLON.PassPostProcess("Scene copy", 1.0, camera);
     var postProcess1 = new BABYLON.PostProcess("Down sample", "./postprocesses/downsample", ["screenSize", "highlightThreshold"], null, 0.5, camera, BABYLON.Texture.DEFAULT_SAMPLINGMODE);
