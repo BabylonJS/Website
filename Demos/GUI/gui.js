@@ -97,7 +97,7 @@
     label.cornerRadius = 20;
     label.thickness = 1;
     label.linkOffsetY = 30;
-    label.top = 0.1;
+    label.top = "10%";
     label.zIndex = 5;
     label.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;    
     advancedTexture.addControl(label); 
