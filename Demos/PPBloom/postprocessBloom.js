@@ -43,7 +43,7 @@
     cube.material.emissiveColor = new BABYLON.Color3(1.0, 0, 0);
        
     // Post-process
-    var blurWidth = 1.0;
+    var blurWidth = 10.0;
     
     var postProcess0 = new BABYLON.PassPostProcess("Scene copy", 1.0, camera);
     var postProcess1 = new BABYLON.PostProcess("Down sample", "../../Assets/postprocesses/downsample", ["screenSize", "highlightThreshold"], null, 0.25, camera, BABYLON.Texture.BILINEAR_SAMPLINGMODE);
