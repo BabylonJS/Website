@@ -146,5 +146,46 @@
         panel.rotation += 0.01;
     });
 
+    // Another GUI on the right
+  var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+    advancedTexture.layer.layerMask = 2;
+
+    var panel3 = new BABYLON.GUI.StackPanel();
+    panel3.width = "220px";
+    panel3.fontSize = "14px";
+    panel3.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+    panel3.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+    advancedTexture.addControl(panel3);
+
+    var checkbox = new BABYLON.GUI.Checkbox();
+    checkbox.width = "20px";
+    checkbox.height = "20px";
+    checkbox.isChecked = true;
+    checkbox.color = "green";
+
+    var panelForCheckbox = BABYLON.GUI.Control.AddHeader(checkbox, "checkbox", "180px", { isHorizontal: true, controlFirst: true});
+    panelForCheckbox.color = "white";
+    panelForCheckbox.height = "20px";
+    panelForCheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+    panel3.addControl(panelForCheckbox); 
+
+    var header = new BABYLON.GUI.TextBlock();
+    header.text = "Slider:";
+    header.height = "40px";
+    header.color = "white";
+    header.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+    header.marginTop = "10px";
+    panel3.addControl(header); 
+
+    var slider = new BABYLON.GUI.Slider();
+    slider.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+    slider.minimum = 0;
+    slider.maximum = 2 * Math.PI;
+    slider.color = "green";
+    slider.value = 0;
+    slider.height = "20px";
+    slider.width = "200px";
+    panel3.addControl(slider);    
+
     return scene;
 };
