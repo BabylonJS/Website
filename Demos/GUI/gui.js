@@ -50,8 +50,8 @@
     circle.color = "white";
     circle.thickness = 5;
     circle.height = "50px";
-    circle.marginTop = "2px";
-    circle.marginBottom = "2px";
+    circle.paddingTop = "2px";
+    circle.paddingBottom = "2px";
     panel.addControl(circle);
 
     var button2 = BABYLON.GUI.Button.CreateSimpleButton("but2", "Click Me 2");
@@ -174,7 +174,7 @@
     header.height = "40px";
     header.color = "white";
     header.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
-    header.marginTop = "10px";
+    header.paddingTop = "10px";
     panel3.addControl(header); 
 
     var slider = new BABYLON.GUI.Slider();
