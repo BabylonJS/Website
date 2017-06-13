@@ -45,14 +45,16 @@
         node.rotation = new BABYLON.Vector3(0, 0, 0);
         node.rotationQuaternion = new BABYLON.Quaternion(0, 0, 0, -1);
         node.scaling = new BABYLON.Vector3(1, 1, 1);
+        
+        scene.getLightByName("Omni002").direction = null;
+        scene.getLightByName("Omni001").direction = null;
 
         var shadowGenerator = scene.getLightByName("Omni002").getShadowGenerator();
-
         shadowGenerator.getShadowMap().refreshRate = 0;
         shadowGenerator.forceBackFacesOnly = true;
         shadowGenerator.bias = 0.01;
 
-        shadowGenerator = scene.getLightByName("Omni001").getShadowGenerator();        
+        shadowGenerator = scene.getLightByName("Omni001").getShadowGenerator();
         shadowGenerator.forceBackFacesOnly = true;
         shadowGenerator.bias = 0.01;
     }
