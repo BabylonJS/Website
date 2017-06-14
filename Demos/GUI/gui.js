@@ -143,15 +143,53 @@
     var advancedTexture2 = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane);
 
     var panel2 = new BABYLON.GUI.StackPanel();  
+    panel2.top = "100px";
     advancedTexture2.addControl(panel2);    
 
     var button1 = BABYLON.GUI.Button.CreateSimpleButton("but1", "Click Me");
     button1.width = 1;
-    button1.height = 0.4;
+    button1.height = "100px";
     button1.color = "white";
     button1.fontSize = 50;
     button1.background = "green";
     panel2.addControl(button1);
+
+    var textblock = new BABYLON.GUI.TextBlock();
+    textblock.height = "150px";
+    textblock.fontSize = 100;
+    textblock.text = "please pick an option:";
+    panel2.addControl(textblock);   
+
+    var addRadio = function(text, parent) {
+
+        var button = new BABYLON.GUI.RadioButton();
+        button.width = "40px";
+        button.height = "40px";
+        button.color = "white";
+        button.background = "green";     
+
+        button.onIsCheckedChangedObservable.add(function(state) {
+            if (state) {
+                textblock.text = "You selected " + text;
+            }
+        }); 
+
+        var header = BABYLON.GUI.Control.AddHeader(button, text, "400px", { isHorizontal: true, controlFirst: true });
+        header.height = "100px";
+        header.children[1].fontSize = 80;
+        header.children[1].onPointerDownObservable.add(function() {
+            button.isChecked = !button.isChecked;
+        });
+
+        parent.addControl(header);    
+    }
+
+
+    addRadio("option 1", panel2);
+    addRadio("option 2", panel2);
+    addRadio("option 3", panel2);
+    addRadio("option 4", panel2);
+    addRadio("option 5", panel2);    
 
     scene.registerBeforeRender(function() {
         panel.rotation += 0.01;
