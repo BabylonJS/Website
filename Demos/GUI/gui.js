@@ -7,6 +7,8 @@
 
     var hemi = new BABYLON.HemisphericLight("toto");
 
+    var sphereMaterial = new BABYLON.StandardMaterial();
+
     //Creation of 6 spheres
     var sphere1 = BABYLON.Mesh.CreateSphere("Sphere1", 10.0, 9.0, scene);
     var sphere2 = BABYLON.Mesh.CreateSphere("Sphere2", 2.0, 9.0, scene);//Only two segments
@@ -24,6 +26,15 @@
     sphere5.position.x = 10;
     sphere6.position.x = 20;
     sphere7.position.x = 30;
+
+    // Material
+    sphere1.material = sphereMaterial;
+    sphere2.material = sphereMaterial;
+    sphere3.material = sphereMaterial;
+    sphere4.material = sphereMaterial;
+    sphere5.material = sphereMaterial;
+    sphere6.material = sphereMaterial;
+    sphere7.material = sphereMaterial;
 
     // GUI
     var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("ui1");
@@ -185,7 +196,25 @@
     slider.value = 0;
     slider.height = "20px";
     slider.width = "200px";
-    panel3.addControl(slider);    
+    panel3.addControl(slider);   
+
+    header = new BABYLON.GUI.TextBlock();
+    header.text = "Sphere diffuse:";
+    header.height = "40px";
+    header.color = "white";
+    header.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+    header.paddingTop = "10px";
+    panel3.addControl(header);      
+
+    var picker = new BABYLON.GUI.ColorPicker();
+    picker.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+    picker.value = sphereMaterial.diffuseColor;
+    picker.height = "150px";
+    picker.width = "150px";
+    picker.onValueChangedObservable.add(function(value) { // value is a color3
+        sphereMaterial.diffuseColor = value;
+    });    
+    panel3.addControl(picker);  
 
     return scene;
 };
