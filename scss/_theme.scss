@@ -43,12 +43,11 @@ hr.margin {
             margin: 1em 0;
    }
    img {
-            height: 4.5em;
+            height: 4em;
 	    }
 	@media (min-width: $sm) {
         img {
-            height:4.5em;
-			max-width: 80%;
+            height:4em;
 	    }
     }
     @media (min-width: $md) {
