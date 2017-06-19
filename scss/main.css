@@ -458,7 +458,7 @@ hr.margin {
     .page-title img {
       height: auto;
       width: auto;
-      max-width: 100%; } }
+      max-width: 80%; } }
   .page-title h2 {
     margin: 0;
     font-family: "Roboto", sans-serif;
