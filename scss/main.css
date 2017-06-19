@@ -450,15 +450,15 @@ hr.margin {
   .page-title h1 {
     margin: 1em 0; }
   .page-title img {
-    height: 4em; }
+    height: 3.8em; }
   @media (min-width: 30em) {
     .page-title img {
-      height: 4em; } }
+      height: 3.8em; } }
   @media (min-width: 48em) {
     .page-title img {
       height: auto;
       width: auto;
-      max-width: 100%; } }
+      max-width: 80%; } }
   .page-title h2 {
     margin: 0;
     font-family: "Roboto", sans-serif;
