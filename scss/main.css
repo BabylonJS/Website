@@ -1,4 +1,4 @@
-﻿/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -394,17 +394,17 @@ h3 {
     opacity: .75; }
 
 .button-red {
-  background: #be1e2d;
+  background: #E12227;
   color: white;
   width: 100px; }
 
 .button-green {
-  background: #8dc63f;
+  background: #2DB14B;
   color: white;
   width: 100px; }
 
 .button-blue {
-  background: #00aeef;
+  background: #3B789A;
   color: white;
   width: 100px; }
 
@@ -438,7 +438,7 @@ a {
   text-decoration: underline; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #be1e2d; }
+    color: #E12227; }
 
 hr.margin {
   display: block;
@@ -458,7 +458,7 @@ hr.margin {
     .page-title img {
       height: auto;
       width: auto;
-      max-width: 80%; } }
+      max-width: 100%; } }
   .page-title h2 {
     margin: 0;
     font-family: "Roboto", sans-serif;
@@ -469,11 +469,11 @@ hr.margin {
     .page-title h2 i {
       font-style: normal; }
     .page-title h2 i:nth-child(1) {
-      color: #be1e2d; }
+      color: #E12227; }
     .page-title h2 i:nth-child(2) {
-      color: #8dc63f; }
+      color: #2DB14B; }
     .page-title h2 i:nth-child(3) {
-      color: #00aeef; }
+      color: #3B789A; }
   .page-title p {
     margin: 0; }
 
@@ -715,5 +715,4 @@ main {
 .netlifyLogo {
   width: 30px;
   height: 20px;
-  transform: translateY(5px);
-}
+  transform: translateY(5px); }
