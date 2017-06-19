@@ -453,7 +453,8 @@ hr.margin {
     height: 4.5em; }
   @media (min-width: 30em) {
     .page-title img {
-      height: 4.5em; } }
+      height: 4.5em;
+      max-width: 80%; } }
   @media (min-width: 48em) {
     .page-title img {
       height: auto;
