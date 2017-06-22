@@ -16,7 +16,7 @@
     torus2.position.x = 5;
 
     // Shadows
-    var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
+    var shadowGenerator = new BABYLON.ShadowGenerator(1024, light, true);
     shadowGenerator.getShadowMap().renderList.push(torus);
     shadowGenerator.useBlurExponentialShadowMap = true;
     light.shadowMinZ = 1;
