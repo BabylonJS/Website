@@ -51,7 +51,7 @@
     pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
     pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
-    pipeline.depthOfFieldDistance = 20;
+    pipeline.depthOfFieldDistance = 0.01;
     pipeline.LensFlareEnabled = false;
     pipeline.lensFlareStength = 5;
     pipeline.motionStrength = 0.1;
@@ -60,9 +60,8 @@
     // GUI
     var gui = new dat.GUI();
     gui.add(pipeline, "brightThreshold").min(0.0).max(2.0).step(0.01);
-    gui.add(pipeline, "gaussianCoefficient").min(0.0).max(0.5).step(0.01);
     gui.add(pipeline, "exposure").min(0.0).max(10.0).step(0.1);
-    gui.add(pipeline, "blurWidth").min(0).max(5).step(0.01);
+    gui.add(pipeline, "blurWidth").min(0).max(512).step(0.01);
     gui.add(pipeline, "horizontalBlur");
 
     var lensFlare = gui.addFolder("Lens Flare");
@@ -83,7 +82,7 @@
     var depthOfField = gui.addFolder("Depth Of Field");
     depthOfField.open();
     depthOfField.add(pipeline, "DepthOfFieldEnabled");
-    depthOfField.add(pipeline, "depthOfFieldDistance").min(0).max(100);
+    depthOfField.add(pipeline, "depthOfFieldDistance").min(0).max(1).step(0.01);
 
     var motionBlur = gui.addFolder("Motion Blur");
     motionBlur.open();
