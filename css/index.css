@@ -107,6 +107,32 @@ button {
     text-shadow: 2px 2px 0 black;
 }
 
+#attribution {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+#attribution a {
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+#attribution a:hover {
+    font-size: 15px;
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+#attribution a:visited {
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
 #stats {
     position: absolute;
     right: 20px;
