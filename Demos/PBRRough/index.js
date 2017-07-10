@@ -33,7 +33,8 @@
 	    generator.blurScale = 1.0;
 	    generator.blurKernel = 10.0;
 
-	    for (var m of scene.meshes) {
+	    for (var index = 0; index < scene.meshes.length; index++) {
+			var m = scene.meshes[index];
 	        if (m === sky) {
 	            continue;
 	        }
