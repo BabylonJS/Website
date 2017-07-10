@@ -5,14 +5,12 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	var hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
+	var hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment_night.dds", scene);
 	hdrTexture.gammaSpace = false;
-	scene.environmentTexture = hdrTexture;
-
-	var layer = new BABYLON.Layer("bg", "/Assets/background.png", scene, true);
 
     BABYLON.SceneLoader.Append("/Assets/DamagedHelmet/glTF/", "DamagedHelmet.gltf", scene, function () {
 	    scene.createDefaultCameraOrLight(true, true, true);
+		scene.createDefaultSkybox(hdrTexture, true, 100, 1.0);
 	});
 
 	return scene;
