@@ -80,7 +80,9 @@ var renderFunction = function () {
             engine.loadingUIText = "Streaming items..." + (remaining ? (remaining + " remaining") : "");
         }
 
-        scene.render();
+        if (scene.activeCamera) {
+            scene.render();
+        }
 
         // Streams
         if (scene.useDelayedTextureLoading) {
