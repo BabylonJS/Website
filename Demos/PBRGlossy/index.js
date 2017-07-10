@@ -5,7 +5,7 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	var hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment_night.dds", scene);
+	var hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
 	hdrTexture.gammaSpace = false;
 
     BABYLON.SceneLoader.Append("/Assets/DamagedHelmet/glTF/", "DamagedHelmet.gltf", scene, function () {
