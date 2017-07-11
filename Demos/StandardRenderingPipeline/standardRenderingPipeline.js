@@ -5,13 +5,12 @@
     var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 2.5, 200, BABYLON.Vector3.Zero(), scene);
     camera.attachControl(canvas, true, false);
     camera.minZ = 0.1;
-    camera.maxZ = 1000;
 
     // Light
     new BABYLON.PointLight("point", new BABYLON.Vector3(0, 40, 0), scene);
 
     // Environment Texture
-    var hdrTexture = new BABYLON.HDRCubeTexture("/assets/environment.babylon.hdr", scene);
+    var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/assets/environment.dds", scene);
 
     // Skybox
     var hdrSkybox = BABYLON.Mesh.CreateBox("hdrSkyBox", 1000.0, scene);
@@ -52,7 +51,6 @@
     pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
     pipeline.depthOfFieldDistance = 0.01;
-    pipeline.LensFlareEnabled = false;
     pipeline.lensFlareStength = 5;
     pipeline.motionStrength = 0.1;
     pipeline.motionBlurSamples = 32;
