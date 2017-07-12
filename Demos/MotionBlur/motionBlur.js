@@ -89,7 +89,7 @@
     woodPlank.material = wood;
 
     // Create rendering pipeline
-    var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0 / devicePixelRatio, null, [camera]);
+    var pipeline = new BABYLON.StandardRenderingPipeline("standard", scene, 1.0, null, [camera]);
     pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("/assets/lensdirt.jpg", scene);
     pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
     pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
