@@ -4,7 +4,7 @@
 	scene.imageProcessingConfiguration.contrast = 1.6;
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
-	scene.imageProcessingConfiguration.vignetteWeight = 2;
+	scene.imageProcessingConfiguration.vignetteWeight = 4;
     scene.imageProcessingConfiguration.vignetteColor = new BABYLON.Color4(0, 0, 0, 0);
     scene.imageProcessingConfiguration.vignetteEnabled = true;
 
