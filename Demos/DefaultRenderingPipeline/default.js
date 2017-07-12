@@ -111,25 +111,41 @@
         panel.addControl(colorPicker);  
     }
 
-    var cameraToneMappingEnabled = defaultPipeline.imageProcessing.cameraToneMappingEnabled;
+    var toneMappingEnabled = defaultPipeline.imageProcessing.toneMappingEnabled;
     var vignetteEnabled = defaultPipeline.imageProcessing.vignetteEnabled;
     var vignetteColor = defaultPipeline.imageProcessing.vignetteColor;
     var vignetteWeight = defaultPipeline.imageProcessing.vignetteWeight;
     var vignetteBlendMode = defaultPipeline.imageProcessing.vignetteBlendMode;
     var colorCurvesEnabled = defaultPipeline.imageProcessing.colorCurvesEnabled;
-    var cameraContrast = defaultPipeline.imageProcessing.cameraContrast;
-    var cameraExposure = defaultPipeline.imageProcessing.cameraExposure;
+    var contrast = defaultPipeline.imageProcessing.contrast;
+    var exposure = defaultPipeline.imageProcessing.exposure;
+
+    var curve = new BABYLON.ColorCurves();
+    curve.globalHue = 200;
+    curve.globalDensity = 80;
+    curve.globalSaturation = 80;
+
+    curve.highlightsHue = 20;
+    curve.highlightsDensity = 80;
+    curve.highlightsSaturation = -80;
+
+    curve.shadowsHue = 2;
+    curve.shadowsDensity = 80;
+    curve.shadowsSaturation = 40;
+    
+    defaultPipeline.imageProcessing.colorCurves = curve;     
 
     var rebindValues = function() {
         if (defaultPipeline.imageProcessing) {
-            defaultPipeline.imageProcessing.cameraToneMappingEnabled = cameraToneMappingEnabled;
+            defaultPipeline.imageProcessing.toneMappingEnabled = toneMappingEnabled;
             defaultPipeline.imageProcessing.vignetteEnabled = vignetteEnabled;
             defaultPipeline.imageProcessing.vignetteWeight = vignetteWeight;
             defaultPipeline.imageProcessing.vignetteColor = vignetteColor;
             defaultPipeline.imageProcessing.vignetteBlendMode = vignetteBlendMode;
             defaultPipeline.imageProcessing.colorCurvesEnabled = colorCurvesEnabled;
-            defaultPipeline.imageProcessing.cameraContrast = cameraContrast;
-            defaultPipeline.imageProcessing.cameraExposure = cameraExposure;
+            defaultPipeline.imageProcessing.contrast = contrast;
+            defaultPipeline.imageProcessing.exposure = exposure;
+            defaultPipeline.imageProcessing.colorCurves = curve;            
         }
     }
 
@@ -152,10 +168,10 @@
         rebindValues();
     }, defaultPipeline.imageProcessingEnabled);
 
-    addCheckbox("cameraToneMapping", function(value) {
-        defaultPipeline.imageProcessing.cameraToneMappingEnabled = value;
-        cameraToneMappingEnabled = value;
-    }, cameraToneMappingEnabled, "20px");      
+    addCheckbox("tone mapping", function(value) {
+        defaultPipeline.imageProcessing.toneMappingEnabled = value;
+        toneMappingEnabled = value;
+    }, toneMappingEnabled, "20px");      
 
     addCheckbox("vignette", function(value) {
         defaultPipeline.imageProcessing.vignetteEnabled = value;
@@ -163,10 +179,10 @@
     }, vignetteEnabled, "20px");     
 
     addCheckbox("vignette multiply", function(value) {
-        var blendMode = value ? BABYLON.ImageProcessingPostProcess.VIGNETTEMODE_MULTIPLY : BABYLON.ImageProcessingPostProcess.VIGNETTEMODE_OPAQUE;
+        var blendMode = value ? BABYLON.ImageProcessingConfiguration.VIGNETTEMODE_MULTIPLY : BABYLON.ImageProcessingConfiguration.VIGNETTEMODE_OPAQUE;
         defaultPipeline.imageProcessing.vignetteBlendMode = blendMode;
         vignetteBlendMode = blendMode;
-    }, vignetteBlendMode === BABYLON.ImageProcessingPostProcess.VIGNETTEMODE_MULTIPLY, "40px");     
+    }, vignetteBlendMode === BABYLON.ImageProcessingConfiguration.VIGNETTEMODE_MULTIPLY, "40px");     
 
     addColorPicker("vignette color", function(value) {
         defaultPipeline.imageProcessing.vignetteColor = value;
@@ -184,15 +200,15 @@
     }, colorCurvesEnabled, "20px");    
 
     addSlider("camera contrast", function(value) {
-        defaultPipeline.imageProcessing.cameraContrast = value;
-        cameraContrast = value;
-    }, cameraContrast, 0, 4, "20px");  
+        defaultPipeline.imageProcessing.contrast = value;
+        contrast = value;
+    }, contrast, 0, 4, "20px");  
 
     addSlider("camera exposure", function(value) {
-        defaultPipeline.imageProcessing.cameraExposure = value;
-        cameraExposure = value;
+        defaultPipeline.imageProcessing.exposure = value;
+        exposure = value;
         console.log(value);
-    }, cameraExposure, 0, 4, "20px");      
+    }, exposure, 0, 4, "20px");      
     
     scene.activeCameras = [camera, bgCamera];
            
