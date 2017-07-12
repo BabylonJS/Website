@@ -1982,6 +1982,7 @@
 						</li>
 						<li><a href="http://doc.babylonjs.com/tutorials/Sprites" target="_blank">Sprites</a> and 2D layers</li>
 						<li>Complete <a href="http://doc.babylonjs.com/overviews/Playing_sounds_and_music" target="_blank">audio engine</a> based on Web Audio</li>
+						<li>Hardware accelerated <a href="http://doc.babylonjs.com/overviews/gui" target="_blank">GUI</a></li>
 					    <br/>Works on <strong>all WebGL platforms</strong> via a specific <strong>modern shader architecture</strong> and native touch support: IE11/MS Edge, Chrome, Firefox, Opera, Safari, iOS (iPad/iPhone), Android, Windows Phone 8.1/Mobile 10, Firefox OS, Xbox One
                     </ul>
 					<h3>Optimizations</h3>
@@ -2032,12 +2033,13 @@
 								<li>Specular texture</li>
 								<li>Bump texture</li>
 								<li>Lightmap texture</li>
-								<li>Up to 4 lights (points, directionals, spots, hemispherics)</li>
+								<li>Unlimited lights (points, directionals, spots, hemispherics)</li>
 								<li>Custom materials</li>
                                 <li>Custom shaders</li>
 								<li><a href="http://doc.babylonjs.com/tutorials/Environment" target="_blank">Skybox</a></li>
 								<li>Vertex color</li>
-								<li>4 bones per vertex</li>
+								<li>Up to 8 bones per vertex</li>
+								<li>Morphing</li>
 								<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_FresnelParameters" target="_blank">Fresnel</a> term for diffuse, opacity, emissive and reflection</li>
 							</ul>
 						</li>
@@ -2052,13 +2054,14 @@
 						<li>Alpha testing</li>
 						<li>Billboarding</li>
 						<li>Fullscreen mode</li>
-						<li><a href="http://doc.babylonjs.com/tutorials/Shadows" target="_blank">Shadow Maps and Variance Shadow Maps</a></li>
+						<li><a href="http://doc.babylonjs.com/tutorials/Shadows" target="_blank">Shadow Maps and Exponentatial Shadow Maps (including soft shadows)</a></li>
 						<li>Rendering layers</li>
 						<li>
-							<a href="http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline" target="_blank">Post-processes</a> (blur, refraction, black'n'white, fxaa,
-							<a href="http://doc.babylonjs.com/tutorials/Using_the_SSAO_rendering_pipeline" target="_blank">SSAO</a>,
+							<a href="http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline" target="_blank">Post-processes</a> (blur, refraction, black'n'white, color correction, fxaa,
+							<a href="http://doc.babylonjs.com/tutorials/Using_the_SSAO_rendering_pipeline" target="_blank">SSAO (including WebGL2 version)</a>,
 							<a href="http://doc.babylonjs.com/tutorials/Using_the_Volumetric_LightScattering_post-process" target="_blank">God Rays (VLS)</a>,
-							<a href="http://doc.babylonjs.com/tutorials/Using_the_HDR_Rendering_Pipeline" target="_blank">HDR</a>, DOF (Depth Of Field), customs...)
+							<a href="http://doc.babylonjs.com/tutorials/Using_the_HDR_Rendering_Pipeline" target="_blank">HDR</a>, DOF (Depth Of Field), tonemapping, 
+							<a href="http://doc.babylonjs.com/tutorials/how_to_use_postprocesses#imageprocessing" target="_blank">Image processing</a>, customs...)
 						</li>
 						<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_Lens_Flares" target="_blank">Lens flares</a></li>
 						<li><a href="http://doc.babylonjs.com/tutorials/How_to_use_Reflection_probes" target="_blank">Reflection Probes</a></li>
@@ -2070,8 +2073,8 @@
 					<ul>
 						<li>Render target textures</li>
 						<li>Dynamic textures (2D canvas)</li>
-						<li>Video textures</li>
-						<li>Compressed (DDS) textures & TGA</li>
+						<li>Video textures (including from webcam)</li>
+						<li>Compressed (DDS, KTX) textures & TGA</li>
 					</ul>
 					<h3>Cameras</h3>
 					<ul>
@@ -2086,7 +2089,7 @@
                         <li>Gamepad camera</li>
 						<li>VR Device Oriention camera for Cardboard</li>
 						<li><a href="http://doc.babylonjs.com/overviews/webvr_camera"
-							   target="_blank">WebVR camera</a></li>
+							   target="_blank">WebVR camera (WebVR 1.0 & 1.1)</a></li>
                         <li>Anaglyph camera</li>
 						<li>Follow camera</li>
 					</ul>
