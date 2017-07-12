@@ -93,7 +93,6 @@
     pipeline.lensTexture = pipeline.lensFlareDirtTexture = new BABYLON.Texture("/assets/lensdirt.jpg", scene);
     pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
     pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
-    pipeline.blurWidth = 5;
     pipeline.MotionBlurEnabled = true;
     pipeline.motionStrength = 0.2;
     pipeline.motionBlurSamples = 32;
