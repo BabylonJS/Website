@@ -1,11 +1,11 @@
-﻿var CreatePBRTestScene  = function () {
+﻿var CreatePBRTestScene = function () {
     var scene = new BABYLON.Scene(engine);
     var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 2.5, 200, BABYLON.Vector3.Zero(), scene);
     camera.attachControl(canvas, true);
     camera.minZ = 0.1;
     
     // Environment Texture
-    var hdrTexture = new BABYLON.HDRCubeTexture("/assets/room.hdr", scene, 512);
+    var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
 
     scene.imageProcessingConfiguration.exposure = 0.6;
     scene.imageProcessingConfiguration.contrast = 1.6;
