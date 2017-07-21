@@ -137,6 +137,10 @@ var renderFunction = function () {
         if (!sceneChecked) {
             var remaining = scene.getWaitingItemsCount();
             engine.loadingUIText = "Streaming items..." + (remaining ? (remaining + " remaining") : "");
+
+            if (remaining === 0) {
+                sceneChecked = true;
+            }            
         }
 
         scene.render();
