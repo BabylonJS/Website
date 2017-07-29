@@ -1,7 +1,7 @@
 ﻿var demo = {
     scene: "flat2009",
     incremental: false,
-    binary: true,
+    binary: false,
     doNotUseCDN: false,
     collisions: true,
     offline: true,
