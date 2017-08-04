@@ -7,7 +7,7 @@
     // Light
     var light = new BABYLON.SpotLight("light", new BABYLON.Vector3(8, 16, 8), new BABYLON.Vector3(-1, -2, -1), 3, 1, scene);
     var shadowGenerator = new BABYLON.ShadowGenerator(512, light);
-    shadowGenerator.useBlurVarianceShadowMap = true;
+    shadowGenerator.useBlurExponentialShadowMap = true;
     shadowGenerator.blurBoxOffset = 1;
     shadowGenerator.blurScale = 1.0;
     shadowGenerator.setDarkness(0.0);
@@ -20,7 +20,7 @@
     var keys = [];
     var previous = null;
     for (var i = 0; i < 20; i++) {
-        var rand = BABYLON.MathTools.Clamp(Math.random(), 0.5, 1.0);
+        var rand = BABYLON.Scalar.Clamp(Math.random(), 0.5, 1.0);
 
         if (previous) {
             if (Math.abs(rand - previous) < 0.1) {
