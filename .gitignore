@@ -1,1 +1,2 @@
-*.blend1
+.tempChromeProfileForDebug
+node_modules
