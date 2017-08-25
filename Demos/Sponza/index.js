@@ -1,5 +1,4 @@
-﻿/// <reference path="../../babylon.max.js" />
-/// <reference path="babylon.demo.js" />
+﻿/// <reference path="babylon.demo.js" />
 
 // Wind.mp3 Recorded by Mark DiAngelo 
 
@@ -40,14 +39,13 @@ function onNewGamepadConnected(gamepad) {
     });
 }
 
-var gamepads = new BABYLON.Gamepads(function (gamepad) { onNewGamepadConnected(gamepad); });
-
 // Demo
 var demoScheduler = new BABYLON.DEMO.Scheduler();
 demoScheduler.onInteractive = function () {
     if (!soundsInitialized) {
         getSoundsFromScene();
         soundsInitialized = true;
+        engine.scenes[0].gamepadManager.onGamepadConnectedObservable.add(onNewGamepadConnected);        
     }
     playSounds();
 }
