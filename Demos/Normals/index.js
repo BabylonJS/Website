@@ -38,10 +38,10 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
 
     if (tangents) {
         vertexData.tangents = [
-            -1, 0, 0, 1,
-            -1, 0, 0, 1,
-            -1, 0, 0, 1,
-            -1, 0, 0, 1
+            1, 0, 0, -1,
+            1, 0, 0, -1,
+            1, 0, 0, -1,
+            1, 0, 0, -1
         ];
     }
 
@@ -56,6 +56,7 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
 
         if (vertexData.tangents) {
             for (var i = 0; i < vertexData.tangents.length; i += 4) {
+                vertexData.tangents[i + 2] = -vertexData.tangents[i + 2];
                 vertexData.tangents[i + 3] = -vertexData.tangents[i + 3];
             }
         }
