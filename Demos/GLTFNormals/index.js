@@ -12,13 +12,14 @@ function createScene(engine) {
     camera.wheelPrecision = 100;
     camera.attachControl(scene.getEngine().getRenderingCanvas());
 
-    loadModel(scene, "TestCube.gltf", new BABYLON.Vector3(-1, -0.5, 0));
-    loadModel(scene, "TestCubeNoTangents.gltf", new BABYLON.Vector3(1, -0.5, 0));
+    loadModel(scene, "TestCube1.gltf", new BABYLON.Vector3(-2, -0.5, 0), "Normals + Tangents");
+    loadModel(scene, "TestCube2.gltf", new BABYLON.Vector3(+0, -0.5, 0), "Normals Only");
+    loadModel(scene, "TestCube3.gltf", new BABYLON.Vector3(+2, -0.5, 0), "No Normals/Tangents");
 
     return scene;
 }
 
-function loadModel(scene, name, center) {
+function loadModel(scene, name, center, caption) {
     BABYLON.SceneLoader.ImportMesh("", "/Assets/TestCube/", name, scene, function (meshes) {
         var root = new BABYLON.Mesh("root", scene);
         meshes.forEach(mesh => {
@@ -29,5 +30,22 @@ function loadModel(scene, name, center) {
 
         root.position = center;
         root.rotation = new BABYLON.Vector3(Math.PI / 4, Math.PI / 4, 0);
+
+        var label = createLabel(scene, caption);
+        label.position = center.clone();
+        label.position.y -= 1;
     });
+}
+
+function createLabel(scene, text) {
+    var dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", 512, scene, true);
+    dynamicTexture.hasAlpha = true;
+    dynamicTexture.drawText(text, null, null, "36px Arial", "white", "transparent");
+    var plane = BABYLON.Mesh.CreatePlane("TextPlane", 2, scene);
+    plane.material = new BABYLON.StandardMaterial("TextPlaneMaterial", scene);
+    plane.material.backFaceCulling = false;
+    plane.material.specularColor = BABYLON.Color3.Black();
+    plane.material.diffuseTexture = dynamicTexture;
+    plane.material.useAlphaFromDiffuseTexture = true;
+    return plane;
 }
