@@ -7,25 +7,31 @@ function createScene(engine) {
     material.bumpTexture = new BABYLON.Texture("/Assets/normal.png", scene, false, false);
     material.invertNormalMapX = true;
 
-    createPlane("planeWithTangentsLH", scene, material, new BABYLON.Vector3(-1.1, +1.1, 0), true, true, false);
-    createPlane("planeWithoutTangentsLH", scene, material, new BABYLON.Vector3(-1.1, -1.1, 0), true, false, false);
-    createPlane("planeWithTangentsRH", scene, material, new BABYLON.Vector3(+1.1, +1.1, 0), true, true, true);
-    createPlane("planeWithoutTangentsRH", scene, material, new BABYLON.Vector3(+1.1, -1.1, 0), true, false, true);
+    // Left-handed meshes
+    createPlane("plane1", scene, material, new BABYLON.Vector3(-2.2, +1.2, 0),  true,  true, false, "Normals + Tangents (LH)");
+    createPlane("plane2", scene, material, new BABYLON.Vector3(+0.0, +1.2, 0),  true, false, false, "Normals Only (LH)");
+    createPlane("plane3", scene, material, new BABYLON.Vector3(+2.2, +1.2, 0), false, false, false, "No Normals/Tangents (LH)");
+
+    // Right-handed meshes
+    createPlane("plane4", scene, material, new BABYLON.Vector3(-2.2, -1.2, 0),  true,  true,  true, "Normals + Tangents (RH)");
+    createPlane("plane5", scene, material, new BABYLON.Vector3(+0.0, -1.2, 0),  true, false,  true, "Normals Only (RH)");
+    createPlane("plane6", scene, material, new BABYLON.Vector3(+2.2, -1.2, 0), false, false,  true, "No Normals/Tangents (RH)");
 
     var light = new BABYLON.DirectionalLight("light", new BABYLON.Vector3(1, -1, 1), scene);
 
-    var sphere = BABYLON.Mesh.CreateSphere("sphere", 16, 0.1, scene);
+    var sphere = BABYLON.Mesh.CreateSphere("sphere", 16, 0.2, scene);
     sphere.material = new BABYLON.PBRMaterial("spherMaterial", scene);
     sphere.material.metallic = 0;
+    sphere.position.x = -3.5;
 
-    var camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2, 6);
+    var camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2, 7);
     camera.wheelPrecision = 100;
     camera.attachControl(scene.getEngine().getRenderingCanvas());
 
     return scene;
 }
 
-function createPlane(name, scene, material, center, normals, tangents, rightHanded) {
+function createPlane(name, scene, material, center, normals, tangents, rightHanded, caption) {
     var plane = new BABYLON.Mesh(name, scene);
     plane.material = material.clone();
     plane.position.addInPlace(center);
@@ -36,12 +42,16 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
         vertexData.uvs[i + 1] = 1 - vertexData.uvs[i + 1];
     }
 
+    if (!normals) {
+        vertexData.normals = undefined;
+    }
+
     if (tangents) {
         vertexData.tangents = [
-            -1, 0, 0, 1,
-            -1, 0, 0, 1,
-            -1, 0, 0, 1,
-            -1, 0, 0, 1
+            1, 0, 0, -1,
+            1, 0, 0, -1,
+            1, 0, 0, -1,
+            1, 0, 0, -1
         ];
     }
 
@@ -50,12 +60,15 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
             vertexData.positions[i + 2] = -vertexData.positions[i + 2];
         }
 
-        for (var i = 0; i < vertexData.normals.length; i += 3) {
-            vertexData.normals[i + 2] = -vertexData.normals[i + 2];
+        if (vertexData.normals) {
+            for (var i = 0; i < vertexData.normals.length; i += 3) {
+                vertexData.normals[i + 2] = -vertexData.normals[i + 2];
+            }
         }
 
         if (vertexData.tangents) {
             for (var i = 0; i < vertexData.tangents.length; i += 4) {
+                vertexData.tangents[i + 2] = -vertexData.tangents[i + 2];
                 vertexData.tangents[i + 3] = -vertexData.tangents[i + 3];
             }
         }
@@ -66,6 +79,10 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
     }
 
     vertexData.applyToMesh(plane);
+
+    var label = createLabel(scene, caption);
+    label.position = center.clone();
+    label.position.y -= 1.1;
 
     addLines(scene, plane);
 }
@@ -119,4 +136,17 @@ function addLines(scene, mesh) {
         lines.bitangents.color = new BABYLON.Color3(0, 1, 0);
         lines.bitangents.parent = mesh;
     }
+}
+
+function createLabel(scene, text) {
+    var dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", 512, scene, true);
+    dynamicTexture.hasAlpha = true;
+    dynamicTexture.drawText(text, null, null, "36px Arial", "white", "transparent");
+    var plane = BABYLON.Mesh.CreatePlane("TextPlane", 2, scene);
+    plane.material = new BABYLON.StandardMaterial("TextPlaneMaterial", scene);
+    plane.material.backFaceCulling = false;
+    plane.material.specularColor = BABYLON.Color3.Black();
+    plane.material.diffuseTexture = dynamicTexture;
+    plane.material.useAlphaFromDiffuseTexture = true;
+    return plane;
 }
