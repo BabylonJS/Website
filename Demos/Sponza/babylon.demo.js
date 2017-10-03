@@ -1,8 +1,18 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+/// <reference path="babylon.d.ts" /> 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var divFps;
+var LeftViveWand;
+var RightViveWand;
+var vrCamera;
 var BABYLON;
 (function (BABYLON) {
     var DEMO;
@@ -18,7 +28,7 @@ var BABYLON;
             Trigger.prototype.disengage = function () {
             };
             return Trigger;
-        })();
+        }());
         DEMO.Trigger = Trigger;
         var Effect = (function () {
             function Effect() {
@@ -26,25 +36,25 @@ var BABYLON;
             Effect.prototype.start = function () {
             };
             return Effect;
-        })();
+        }());
         DEMO.Effect = Effect;
         var Track = (function () {
             function Track() {
             }
             return Track;
-        })();
+        }());
         DEMO.Track = Track;
         var DemoConfiguration = (function () {
             function DemoConfiguration() {
                 this.startCameraIndex = 0;
             }
             return DemoConfiguration;
-        })();
+        }());
         DEMO.DemoConfiguration = DemoConfiguration;
         var TimeTrigger = (function (_super) {
             __extends(TimeTrigger, _super);
             function TimeTrigger() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             TimeTrigger.prototype.engage = function (effect) {
                 this.handler = setTimeout(function () {
@@ -55,12 +65,12 @@ var BABYLON;
                 clearTimeout(this.handler);
             };
             return TimeTrigger;
-        })(Trigger);
+        }(Trigger));
         DEMO.TimeTrigger = TimeTrigger;
         var FadePostProcessEffect = (function (_super) {
             __extends(FadePostProcessEffect, _super);
             function FadePostProcessEffect() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             FadePostProcessEffect.prototype.start = function () {
                 var _this = this;
@@ -89,13 +99,14 @@ var BABYLON;
                 }, this.duration);
             };
             return FadePostProcessEffect;
-        })(Effect);
+        }(Effect));
         DEMO.FadePostProcessEffect = FadePostProcessEffect;
         var SwitchCameraEffect = (function (_super) {
             __extends(SwitchCameraEffect, _super);
             function SwitchCameraEffect(scheduler) {
-                _super.call(this);
-                this.scheduler = scheduler;
+                var _this = _super.call(this) || this;
+                _this.scheduler = scheduler;
+                return _this;
             }
             SwitchCameraEffect.prototype.start = function () {
                 this.scene.activeCamera = this.scene.cameras[this.cameraIndex];
@@ -105,12 +116,12 @@ var BABYLON;
                 }
             };
             return SwitchCameraEffect;
-        })(Effect);
+        }(Effect));
         DEMO.SwitchCameraEffect = SwitchCameraEffect;
         var TextEffect = (function (_super) {
             __extends(TextEffect, _super);
             function TextEffect() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             TextEffect.prototype.start = function () {
                 var _this = this;
@@ -144,13 +155,24 @@ var BABYLON;
                 }, this.exitDuration);
             };
             return TextEffect;
-        })(Effect);
+        }(Effect));
         DEMO.TextEffect = TextEffect;
         var Scheduler = (function () {
             function Scheduler() {
                 this.triggers = [];
                 this._interactive = false;
+                this._vrEnabled = false;
             }
+            Object.defineProperty(Scheduler.prototype, "vrEnabled", {
+                get: function () {
+                    return this._vrEnabled;
+                },
+                set: function (value) {
+                    this._vrEnabled = value;
+                },
+                enumerable: true,
+                configurable: true
+            });
             Object.defineProperty(Scheduler.prototype, "interactive", {
                 get: function () {
                     return this._interactive;
@@ -242,6 +264,14 @@ var BABYLON;
                                 canvas.msRequestFullscreen != undefined) {
                                 document.getElementById("fullscreenButton").classList.remove("hidden");
                             }
+                            if (navigator.getVRDisplays) {
+                                vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0], false, { trackPosition: true });
+                                vrCamera.deviceScaleFactor = 1;
+                                //engine.disableVR();
+                            }
+                            else {
+                                vrCamera = new BABYLON.VRDeviceOrientationFreeCamera("vrCam", new BABYLON.Vector3(-0.8980848729619885, 2, 0.4818257550471734), engine.scenes[0]);
+                            }
                             if (!BABYLON.Engine.audioEngine.unlocked) {
                                 streamingText.className = "hidden";
                                 textPercentage.className = "hidden";
@@ -251,7 +281,10 @@ var BABYLON;
                                 BABYLON.Engine.audioEngine.onAudioUnlocked = function () {
                                     document.getElementById("sponzaLoader").className = "hidden";
                                     document.getElementById("controls").className = "";
-                                    _this.restart();
+                                    //this.restart();
+                                    engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                                    engine.scenes[0].activeCamera.attachControl(canvas);
+                                    _this.interactive = true;
                                 };
                             }
                             if (onload) {
@@ -259,6 +292,7 @@ var BABYLON;
                             }
                             // Render loop
                             var renderFunction = function () {
+                                divFps.innerHTML = engine.getFps().toFixed() + " fps";
                                 // Render scene
                                 scene.render();
                             };
@@ -403,7 +437,10 @@ var BABYLON;
                             if (BABYLON.Engine.audioEngine.unlocked) {
                                 document.getElementById("sponzaLoader").className = "hidden";
                                 document.getElementById("controls").className = "";
-                                _this.restart();
+                                //this.restart();
+                                engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                                engine.scenes[0].activeCamera.attachControl(canvas);
+                                _this.interactive = true;
                             }
                         });
                     }, function (evt) {
@@ -469,8 +506,7 @@ var BABYLON;
                 }
             };
             return Scheduler;
-        })();
+        }());
         DEMO.Scheduler = Scheduler;
     })(DEMO = BABYLON.DEMO || (BABYLON.DEMO = {}));
 })(BABYLON || (BABYLON = {}));
-//# sourceMappingURL=babylon.demo.js.map
