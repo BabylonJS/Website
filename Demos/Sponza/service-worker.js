@@ -21,6 +21,7 @@ self.addEventListener('activate', function(event) {
         '/Demos/Sponza/fullscreen.png',
         '/Demos/Sponza/speaker.png',
         '/Demos/Sponza/mute.png',
+        '/Demos/Sponza/vricon.svg',
         '/Demos/Sponza/SponzaBackgroundLoader.jpg'
       ]);
     })

@@ -5,6 +5,10 @@
     <meta name="description" content="Sponza by Babylon.js demo using WebGL, Web Audio, touch & gamepad on desktop, mobile & xbox one devices">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+    <!-- W3C manifest -->
+    <link rel="manifest" href="manifest.json"></link>
+
+    <link rel="apple-touch-startup-image" href="img/splash/iOSStartup.jpg">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -18,7 +22,7 @@
     <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="img/favicon/manifest.json">
+
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <link rel="author" href="humans.txt" />
     <meta name="msapplication-TileColor" content="#555555">
@@ -48,6 +52,7 @@
     <meta name="twitter:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline." />
     <meta name="twitter:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaTwitter.jpg" />
 
+    <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -60,10 +65,10 @@
         ga('send', 'pageview');
     </script>
     <script src="register-sw.js"></script>
-    <link href="../../css/index.css" rel="stylesheet" />
+    <link href="https://www.babylonjs.com/css/index.css" rel="stylesheet" />
 	<link href="index.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
-    <script src="//preview.babylonjs.com/babylon.js"></script>
+    <script src="//code.jquery.com/pep/0.4.0/pep.min.js"></script>
+    <script src="//preview.babylonjs.com/babylon.max.js"></script>
 	<script src="babylon.demo.js"></script>
 </head>
 <body>
@@ -87,20 +92,26 @@
         <canvas id="renderCanvas" touch-action="none"></canvas>
     </div>
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
-	<ul id="controls" class="hidden">
-        <li>
+	<div id="controls" class="hidden">
+        <div>
             <button onclick="switchSound();" id="soundButton" class="uiButton" title="Turn off the volume"></button>
-        </li>
-        <li>
-            <button onclick="switchCamera();" id="cameraButton" class="uiButton" title="Switch to interactive mode"></button>
-        </li>
-        <li>
+        </div>
+        <div>
+            <div id="cameraHelper">click to switch between interative/cinematic mode -></div>
+            <button onclick="switchCamera();" id="cameraButton" class="uiButton" title="Switch to demo mode"></button>
+        </div>
+        <div>
             <button onclick="switchFullscreen();" id="fullscreenButton" class="uiButton hidden" title="Switch to fullscreen"></button>
-        </li>
-        <li>
+        </div>
+        <div>
             <button onclick="switchSpeakerType();" id="speakersButton" class="uiButton" title="Switch to headphone mode"></button>
-        </li>
-</ul>
+        </div>
+        <div>
+            <div id="vrHelper">click to enter VR -></div>
+            <button onclick="switchToVR();" id="vrButton" class="uiButton" title="Switch to VR mode"></button>
+        </div>
+</div>
+    <div id="fps"></div>
 	<script src="index.js"></script>
 </body>
 </html>

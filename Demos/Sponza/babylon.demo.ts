@@ -1,4 +1,12 @@
-﻿module BABYLON.DEMO {
+﻿/// <reference path="babylon.d.ts" /> 
+
+var divFps;
+
+var LeftViveWand;
+var RightViveWand;
+var vrCamera;
+
+module BABYLON.DEMO {
     // Size of Sponza.babylon scene is 29 MB approx.
     const SCENESIZE = 29.351353645324707;
     const ITEMSTOSTREAM = 78;
@@ -167,6 +175,15 @@
         private _interactive: boolean = false;
         public onInteractive: () => any;
 
+        private _vrEnabled: boolean = false;
+        public get vrEnabled(): boolean {
+            return this._vrEnabled;
+        }
+
+        public set vrEnabled(value: boolean) {
+            this._vrEnabled = value;
+        }
+
         public get interactive(): boolean {
             return this._interactive;
         }
@@ -189,7 +206,7 @@
             return result;
         }
 
-        public run(configurationFile: string, engine: Engine): void {
+        public run(configurationFile: string, engine: Engine, onload?: (Scene: Scene) => void): void {
             this.engine = engine;
 
             // Resize
@@ -272,6 +289,15 @@
                             document.getElementById("fullscreenButton").classList.remove("hidden");
                         }
 
+                        if (navigator.getVRDisplays) {
+                            vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0], false, { trackPosition: true });
+                            vrCamera.deviceScaleFactor = 1;
+                            //engine.disableVR();
+                        }
+                        else {
+                            vrCamera = new BABYLON.VRDeviceOrientationFreeCamera("vrCam", new BABYLON.Vector3(-0.8980848729619885, 2, 0.4818257550471734), engine.scenes[0]);
+                        }
+
                         if (!BABYLON.Engine.audioEngine.unlocked) {
                             streamingText.className = "hidden";
                             textPercentage.className = "hidden";
@@ -281,12 +307,20 @@
                             BABYLON.Engine.audioEngine.onAudioUnlocked = () => {
                                 document.getElementById("sponzaLoader").className = "hidden";
                                 document.getElementById("controls").className = "";
-                                this.restart();
+                                //this.restart();
+                                engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                                engine.scenes[0].activeCamera.attachControl(canvas);
+                                this.interactive = true;
                             };
+                        }
+
+                        if (onload) {
+                            onload(scene);
                         }
 
                         // Render loop
                         var renderFunction = function () {
+                            divFps.innerHTML = engine.getFps().toFixed() + " fps";
                             // Render scene
                             scene.render();
                         };
@@ -437,7 +471,10 @@
                         if (BABYLON.Engine.audioEngine.unlocked) {
                             document.getElementById("sponzaLoader").className = "hidden";
                             document.getElementById("controls").className = "";
-                            this.restart();
+                            //this.restart();
+                            engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                            engine.scenes[0].activeCamera.attachControl(canvas);
+                            this.interactive = true;
                         }
                     });
 
