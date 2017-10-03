@@ -1,7 +1,7 @@
 {
     "name": "Sponza by babylon.js",
     "short_name": "Sponza",
-    "start_url": "https://david.blob.core.windows.net/babylonjs/SponzaVR/index.html",
+    "start_url": "https://www.babylonjs.com/demos/sponza/index.html",
     "display": "standalone",
     "background_color": "#686867",
     "icons": [
