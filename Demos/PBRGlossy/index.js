@@ -5,6 +5,8 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
+	engine.setHardwareScalingLevel(0.5);
+
 	var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
 	hdrTexture.gammaSpace = false;
 
