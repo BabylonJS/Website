@@ -19,9 +19,9 @@
 
 		var ssao = new BABYLON.SSAORenderingPipeline('ssaopipeline', scene, { ssaoRatio: 0.5, combineRatio: 1.0 });
 		ssao.fallOff = 0.000001;
-		ssao.area = 1.0;
-		ssao.radius = 0.00023;
-		ssao.totalStrength = 2.0;
+		ssao.area = 1;
+		ssao.radius = 0.0004;
+		ssao.totalStrength = 2;
 		ssao.base = 1.3;
 
 		scene.postProcessRenderPipelineManager.attachCamerasToRenderPipeline("ssaopipeline", camera);
