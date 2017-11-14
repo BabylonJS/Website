@@ -1,0 +1,22 @@
+{
+    "tests": {
+        "Material": {
+            "url": "?test=Material&count=8&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+        },
+        "Material_Alpha": {
+            "url": "?test=Material_Alpha&count=11&width=5&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Material_MetallicRoughness": {
+            "url": "?test=Material_MetallicRoughness&count=11&width=5&position=[-2.5,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        },
+        "Material_SpecularGlossiness": {
+            "url": "?test=Material_SpecularGlossiness&count=11&width=5&position=[-2.5,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        },
+        "Primitive_Attribute": {
+            "url": "?test=Primitive_Attribute&count=18&width=6&position=[-3.0,1.4,0.0]&radius=6&flip=false&showMenu=true"
+        },
+        "Texture_Sampler": {
+            "url": "?test=Texture_Sampler&count=14&width=6&position=[-3.0,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        }
+    }
+}
