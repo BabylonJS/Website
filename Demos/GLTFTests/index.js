@@ -6,7 +6,7 @@ function createScene(engine) {
     var glTFParameters = getURLParameters();
 
     var scene = loadScene(engine, glTFParameters);
-   
+
     return scene;
 }
 
@@ -306,7 +306,7 @@ function loadGLTF(scene, rootUrl, sceneFileName, name, position, caption, flip) 
 
         for (var i = 0; i < length; ++i) {
             if (!meshes[i].parent) {
-                meshes[i].setParent(root);
+                meshes[i].parent = root;
             }
         }
 
