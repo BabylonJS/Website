@@ -8,14 +8,14 @@ function createScene(engine) {
     material.invertNormalMapX = true;
 
     // Left-handed meshes
-    createPlane("plane1", scene, material, new BABYLON.Vector3(-2.2, +1.2, 0),  true,  true, false, "Normals + Tangents (LH)");
-    createPlane("plane2", scene, material, new BABYLON.Vector3(+0.0, +1.2, 0),  true, false, false, "Normals Only (LH)");
+    createPlane("plane1", scene, material, new BABYLON.Vector3(-2.2, +1.2, 0), true, true, false, "Normals + Tangents (LH)");
+    createPlane("plane2", scene, material, new BABYLON.Vector3(+0.0, +1.2, 0), true, false, false, "Normals Only (LH)");
     createPlane("plane3", scene, material, new BABYLON.Vector3(+2.2, +1.2, 0), false, false, false, "No Normals/Tangents (LH)");
 
     // Right-handed meshes
-    createPlane("plane4", scene, material, new BABYLON.Vector3(-2.2, -1.2, 0),  true,  true,  true, "Normals + Tangents (RH)");
-    createPlane("plane5", scene, material, new BABYLON.Vector3(+0.0, -1.2, 0),  true, false,  true, "Normals Only (RH)");
-    createPlane("plane6", scene, material, new BABYLON.Vector3(+2.2, -1.2, 0), false, false,  true, "No Normals/Tangents (RH)");
+    createPlane("plane4", scene, material, new BABYLON.Vector3(-2.2, -1.2, 0), true, true, true, "Normals + Tangents (RH)");
+    createPlane("plane5", scene, material, new BABYLON.Vector3(+0.0, -1.2, 0), true, false, true, "Normals Only (RH)");
+    createPlane("plane6", scene, material, new BABYLON.Vector3(+2.2, -1.2, 0), false, false, true, "No Normals/Tangents (RH)");
 
     var light = new BABYLON.DirectionalLight("light", new BABYLON.Vector3(1, -1, 1), scene);
 
@@ -75,7 +75,7 @@ function createPlane(name, scene, material, center, normals, tangents, rightHand
 
         var root = new BABYLON.Mesh("root", scene);
         root.scaling.z = -1;
-        plane.setParent(root);
+        plane.parent = root;
     }
 
     vertexData.applyToMesh(plane);
