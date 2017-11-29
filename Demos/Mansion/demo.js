@@ -6,6 +6,9 @@
     collisions: true,
     offline: false,
     onload: function () {
-        // Additionnal tuning options
+        var VRHelper = scene.createDefaultVRExperience();
+        VRHelper.enableTeleportation({
+            floorMeshName: "Allée"
+        });
     }
 };
