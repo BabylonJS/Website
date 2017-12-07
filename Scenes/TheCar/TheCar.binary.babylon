@@ -20572,7 +20572,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#0",
+      "name": "beige0",
       "normals": null,
       "parentId": "",
       "position": [
@@ -20597,7 +20597,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%230.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige0.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.7141044,
         -0.49150908,
@@ -20683,7 +20683,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#1",
+      "name": "beige1",
       "normals": null,
       "parentId": "",
       "position": [
@@ -20708,7 +20708,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%231.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige1.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.713238955,
         -0.491508365,
@@ -20794,7 +20794,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#2",
+      "name": "beige2",
       "normals": null,
       "parentId": "",
       "position": [
@@ -20819,7 +20819,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%232.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige2.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.716656,
         -0.492817968,
@@ -20905,7 +20905,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#3",
+      "name": "beige3",
       "normals": null,
       "parentId": "",
       "position": [
@@ -20930,7 +20930,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%233.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige3.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.716656,
         -0.491508424,
@@ -21016,7 +21016,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#4",
+      "name": "beige4",
       "normals": null,
       "parentId": "",
       "position": [
@@ -21041,7 +21041,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%234.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige4.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.7141044,
         -0.491508842,
@@ -21127,7 +21127,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#5",
+      "name": "beige5",
       "normals": null,
       "parentId": "",
       "position": [
@@ -21152,7 +21152,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%235.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige5.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.7108621,
         -0.493740737,
@@ -21238,7 +21238,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#6",
+      "name": "beige6",
       "normals": null,
       "parentId": "",
       "position": [
@@ -21263,7 +21263,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%236.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige6.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.7133893,
         -0.4915098,
@@ -21349,7 +21349,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#7",
+      "name": "beige7",
       "normals": null,
       "parentId": "",
       "position": [
@@ -21374,7 +21374,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%237.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige7.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.716656,
         -0.494355917,
@@ -21460,7 +21460,7 @@
       "materialId": "33cb9a4d-2d2c-4483-90d1-54ac1f711789",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "beige#8",
+      "name": "beige8",
       "normals": null,
       "parentId": "",
       "position": [
@@ -21485,7 +21485,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.beige%238.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.beige8.f5a51874-79ea-415b-bf16-2a70593f47db.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.716656,
         -0.494355917,
@@ -22112,7 +22112,7 @@
       "materialId": "270e015a-fd6b-43ba-833d-d21e45b56d84",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "C-Max_accoudoir_arrière_droite#0",
+      "name": "C-Max_accoudoir_arrière_droite0",
       "normals": null,
       "parentId": "",
       "position": [
@@ -22137,7 +22137,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite%230.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite0.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -1.61155713,
         -0.09963856,
@@ -22223,7 +22223,7 @@
       "materialId": "270e015a-fd6b-43ba-833d-d21e45b56d84",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "C-Max_accoudoir_arrière_droite#1",
+      "name": "C-Max_accoudoir_arrière_droite1",
       "normals": null,
       "parentId": "",
       "position": [
@@ -22248,7 +22248,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite%231.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite1.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -1.55380607,
         -0.00163144118,
@@ -22334,7 +22334,7 @@
       "materialId": "270e015a-fd6b-43ba-833d-d21e45b56d84",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "C-Max_accoudoir_arrière_droite#2",
+      "name": "C-Max_accoudoir_arrière_droite2",
       "normals": null,
       "parentId": "",
       "position": [
@@ -22359,7 +22359,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite%232.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.C-Max_accoudoir_arri%C3%A8re_droite2.3339968f-8630-424a-b125-5ff5cfecda6b.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -1.55259943,
         0.106093585,
@@ -23552,7 +23552,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie01#0",
+      "name": "Carrosserie010",
       "normals": null,
       "parentId": "",
       "position": [
@@ -23577,7 +23577,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie01%230.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie010.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.124218628,
         -0.8428676,
@@ -23663,7 +23663,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie01#1",
+      "name": "Carrosserie011",
       "normals": null,
       "parentId": "",
       "position": [
@@ -23688,7 +23688,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie01%231.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie011.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.00120792654,
         -0.8424312,
@@ -23774,7 +23774,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie01#2",
+      "name": "Carrosserie012",
       "normals": null,
       "parentId": "",
       "position": [
@@ -23799,7 +23799,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie01%232.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie012.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         0.00062329747,
         -0.7605777,
@@ -23885,7 +23885,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie01#3",
+      "name": "Carrosserie013",
       "normals": null,
       "parentId": "",
       "position": [
@@ -23910,7 +23910,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie01%233.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie013.5e09170e-e808-4150-a9a3-f1f7635248fd.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.000796529232,
         -0.758718967,
@@ -24315,7 +24315,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie#0",
+      "name": "Carrosserie0",
       "normals": null,
       "parentId": "",
       "position": [
@@ -24340,7 +24340,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie%230.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie0.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.124218628,
         -0.8428676,
@@ -24426,7 +24426,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie#1",
+      "name": "Carrosserie1",
       "normals": null,
       "parentId": "",
       "position": [
@@ -24451,7 +24451,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie%231.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie1.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.00120792654,
         -0.8424312,
@@ -24537,7 +24537,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie#2",
+      "name": "Carrosserie2",
       "normals": null,
       "parentId": "",
       "position": [
@@ -24562,7 +24562,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie%232.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie2.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         0.00062329747,
         -0.7605777,
@@ -24648,7 +24648,7 @@
       "materialId": "959a5d50-d34f-4ea6-b5c4-20145a76c9d6",
       "matricesIndices": null,
       "matricesWeights": null,
-      "name": "Carrosserie#3",
+      "name": "Carrosserie3",
       "normals": null,
       "parentId": "",
       "position": [
@@ -24673,7 +24673,7 @@
       "uvs": null,
       "uvs2": null,
       "visibility": 1,
-      "delayLoadingFile": "TheCar.Carrosserie%233.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
+      "delayLoadingFile": "TheCar.Carrosserie3.c3cd7078-532a-4051-8643-8597b746cc5c.babylonbinarymeshdata",
       "boundingBoxMinimum": [
         -0.000796529232,
         -0.758718967,
