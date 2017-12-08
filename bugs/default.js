@@ -79,14 +79,14 @@ var vertices = [
 ];
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-// UBO
-var bufferData0 = new Float32Array([1, 0, 0]);
+// UBOdefa
+var bufferData0 = new Float32Array([1, 0, 0, 0]);
 var ubo0 = gl.createBuffer();
 gl.bindBuffer(gl.UNIFORM_BUFFER, ubo0);
 gl.bufferData(gl.UNIFORM_BUFFER, bufferData0, gl.STATIC_DRAW);
 gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
-var bufferData1 = new Float32Array([0, 1, 0]);
+var bufferData1 = new Float32Array([0, 1, 0, 0]);
 var ubo1 = gl.createBuffer();
 gl.bindBuffer(gl.UNIFORM_BUFFER, ubo1);
 gl.bufferData(gl.UNIFORM_BUFFER, bufferData1, gl.STATIC_DRAW);
