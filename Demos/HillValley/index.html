@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width">
     <title>Babylon.js - Hill Valley demo</title>
@@ -9,7 +10,7 @@
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-41767310-1', 'babylonjs.com');
@@ -19,8 +20,10 @@
     <link href="../../css/index.css" rel="stylesheet" />
     <script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
     <script src="//preview.babylonjs.com/babylon.js"></script>
+    <script src="//preview.babylonjs.com/loaders/babylon.glTFFileLoader.js"></script>
     <script src="demo.js"></script>
 </head>
+
 <body>
     <canvas id="renderCanvas" touch-action="none"></canvas>
     <div id="fps"></div>
@@ -40,7 +43,8 @@
     </div>
     <div id="cameraPanel">
         <div id="cameraControlsZone">
-            Active camera:<br>
+            Active camera:
+            <br>
             <select id="camerasList"></select>
             <p>
                 Change control method:
@@ -68,10 +72,13 @@
                 <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
             </p>
         </div>
-        <div class="cameraTag"><img src="../../../Assets/camera.png" /></div>
+        <div class="cameraTag">
+            <img src="../../../Assets/camera.png" />
+        </div>
         <div class="cameraTag" id="cameraClickableTag"></div>
     </div>
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
     <script src="../../js/loader.js"></script>
 </body>
+
 </html>
