@@ -225,6 +225,12 @@ hr.margin {
 	.gallery-item-others {
 		font-size: .75em; text-align: right;
 	}
+	.gallery-item-sticker {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 20%;
+	}
 }
 
 .banner {

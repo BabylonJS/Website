@@ -243,7 +243,7 @@ module BABYLON.DEMO {
             }
 
             BABYLON.Tools.LoadFile(configurationFile, (result) => {
-                var configuration = <DemoConfiguration>JSON.parse(result);
+                var configuration = <DemoConfiguration>JSON.parse(<string>result);
                 this.configuration = configuration;
 
                 // Load scene
@@ -290,7 +290,9 @@ module BABYLON.DEMO {
                         }
 
                         if (navigator.getVRDisplays) {
-                            vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0], false, { trackPosition: true });
+                            //, false, { trackPosition: true }
+
+                            vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0]);
                             vrCamera.deviceScaleFactor = 1;
                             //engine.disableVR();
                         }

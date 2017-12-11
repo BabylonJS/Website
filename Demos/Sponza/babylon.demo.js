@@ -20,7 +20,7 @@ var BABYLON;
         // Size of Sponza.babylon scene is 29 MB approx.
         var SCENESIZE = 29.351353645324707;
         var ITEMSTOSTREAM = 78;
-        var Trigger = (function () {
+        var Trigger = /** @class */ (function () {
             function Trigger() {
             }
             Trigger.prototype.engage = function (effect) {
@@ -30,7 +30,7 @@ var BABYLON;
             return Trigger;
         }());
         DEMO.Trigger = Trigger;
-        var Effect = (function () {
+        var Effect = /** @class */ (function () {
             function Effect() {
             }
             Effect.prototype.start = function () {
@@ -38,20 +38,20 @@ var BABYLON;
             return Effect;
         }());
         DEMO.Effect = Effect;
-        var Track = (function () {
+        var Track = /** @class */ (function () {
             function Track() {
             }
             return Track;
         }());
         DEMO.Track = Track;
-        var DemoConfiguration = (function () {
+        var DemoConfiguration = /** @class */ (function () {
             function DemoConfiguration() {
                 this.startCameraIndex = 0;
             }
             return DemoConfiguration;
         }());
         DEMO.DemoConfiguration = DemoConfiguration;
-        var TimeTrigger = (function (_super) {
+        var TimeTrigger = /** @class */ (function (_super) {
             __extends(TimeTrigger, _super);
             function TimeTrigger() {
                 return _super !== null && _super.apply(this, arguments) || this;
@@ -67,7 +67,7 @@ var BABYLON;
             return TimeTrigger;
         }(Trigger));
         DEMO.TimeTrigger = TimeTrigger;
-        var FadePostProcessEffect = (function (_super) {
+        var FadePostProcessEffect = /** @class */ (function (_super) {
             __extends(FadePostProcessEffect, _super);
             function FadePostProcessEffect() {
                 return _super !== null && _super.apply(this, arguments) || this;
@@ -101,7 +101,7 @@ var BABYLON;
             return FadePostProcessEffect;
         }(Effect));
         DEMO.FadePostProcessEffect = FadePostProcessEffect;
-        var SwitchCameraEffect = (function (_super) {
+        var SwitchCameraEffect = /** @class */ (function (_super) {
             __extends(SwitchCameraEffect, _super);
             function SwitchCameraEffect(scheduler) {
                 var _this = _super.call(this) || this;
@@ -118,7 +118,7 @@ var BABYLON;
             return SwitchCameraEffect;
         }(Effect));
         DEMO.SwitchCameraEffect = SwitchCameraEffect;
-        var TextEffect = (function (_super) {
+        var TextEffect = /** @class */ (function (_super) {
             __extends(TextEffect, _super);
             function TextEffect() {
                 return _super !== null && _super.apply(this, arguments) || this;
@@ -157,7 +157,7 @@ var BABYLON;
             return TextEffect;
         }(Effect));
         DEMO.TextEffect = TextEffect;
-        var Scheduler = (function () {
+        var Scheduler = /** @class */ (function () {
             function Scheduler() {
                 this.triggers = [];
                 this._interactive = false;
@@ -265,7 +265,8 @@ var BABYLON;
                                 document.getElementById("fullscreenButton").classList.remove("hidden");
                             }
                             if (navigator.getVRDisplays) {
-                                vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0], false, { trackPosition: true });
+                                //, false, { trackPosition: true }
+                                vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0]);
                                 vrCamera.deviceScaleFactor = 1;
                                 //engine.disableVR();
                             }
