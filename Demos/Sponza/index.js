@@ -248,8 +248,7 @@ switchToVR = function () {
     };
 
     if (!demoScheduler.interactive) {
-        // switchCamera(attachVRCamera);
-        VRHelper.dispose();
+        switchCamera(attachVRCamera);
     }
     else {
         VRHelper.enterVR();
