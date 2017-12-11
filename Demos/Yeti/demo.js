@@ -52,6 +52,7 @@
 
         particleSystem.gravity = new BABYLON.Vector3(0, -9.81, 0);
         particleSystem.direction1 = new BABYLON.Vector3(0, -1, 0);
+        particleSystem.direction2 = new BABYLON.Vector3(0, -1, 0);
 
         particleSystem.minAngularSpeed = 0;
         particleSystem.maxAngularSpeed = Math.PI;
