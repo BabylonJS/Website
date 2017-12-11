@@ -51,7 +51,7 @@ demoScheduler.onInteractive = function () {
     if (!soundsInitialized) {
         getSoundsFromScene();
         soundsInitialized = true;
-        engine.scenes[0].gamepadManager.onGamepadConnectedObservable.add(onNewGamepadConnected);   
+        engine.scenes[0].gamepadManager.onGamepadConnectedObservable.add(onNewGamepadConnected);
     }
     playSounds();
 }
@@ -204,7 +204,7 @@ switchCamera = function (callback) {
             fadePP.scene = engine.scenes[0];
             fadePP.start();
             demoScheduler.restart();
-        }, 1000);   
+        }, 1000);
     }
 }
 
@@ -238,16 +238,23 @@ switchFullscreen = function () {
 };
 
 switchToVR = function () {
+    var VRHelper = engine.scenes[0].createDefaultVRExperience();
+    VRHelper.enableTeleportation({ floorMeshName: "Sponza floor" });
+    VRHelper._btnVR.style.display = 'none'
+
     var attachVRCamera = function () {
         vrCamera.attachControl(canvas, true);
         engine.scenes[0].activeCamera = vrCamera;
     };
 
     if (!demoScheduler.interactive) {
-        switchCamera(attachVRCamera);
+        // switchCamera(attachVRCamera);
+        VRHelper.dispose();
     }
     else {
-        attachVRCamera();
+        VRHelper.enterVR();
+        // attachVRCamera();
+
     }
 
     camBtn.title = "Switch to normal camera";
