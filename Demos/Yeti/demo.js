@@ -26,8 +26,11 @@
 
         var particleSystem = new BABYLON.ParticleSystem("particles", 1500, scene, null, true);
         particleSystem.particleTexture = new BABYLON.Texture("/Assets/Yeti/snowflake.png", scene);
-        particleSystem.startSpriteCellID = 1;
-        particleSystem.endSpriteCellID = 3;
+        scene.registerBeforeRender(() => {
+            particleSystem.startSpriteCellID = Math.round(Math.random()*3-1);
+        });
+        particleSystem.startSpriteCellID = 0;
+        particleSystem.endSpriteCellID = 0;
         particleSystem.spriteCellHeight = 512;
         particleSystem.spriteCellWidth = 512;
 
@@ -36,27 +39,20 @@
         particleSystem.minEmitBox = new BABYLON.Vector3(-10, 0, -10); // Starting all from
         particleSystem.maxEmitBox = new BABYLON.Vector3(10, 0, 10); // To...
 
-        // Size of each particle (random between...
         particleSystem.minSize = .015;
         particleSystem.maxSize = .15;
 
-        // Life time of each particle (random between...
-        particleSystem.minLifeTime = 1;
-        particleSystem.maxLifeTime = 2.5;
+        particleSystem.minLifeTime = 1.2;
+        particleSystem.maxLifeTime = 1.2;
 
-        // Emission rate
         particleSystem.emitRate = 150;
 
         // Blend mode : BLENDMODE_ONEONE, or BLENDMODE_STANDARD
         particleSystem.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
 
-        // Set the gravity of all particles
         particleSystem.gravity = new BABYLON.Vector3(0, -9.81, 0);
-
-        // Direction of each particle after it has been emitted
         particleSystem.direction1 = new BABYLON.Vector3(0, -1, 0);
 
-        // Angular speed, in radians
         particleSystem.minAngularSpeed = 0;
         particleSystem.maxAngularSpeed = Math.PI;
 
@@ -69,7 +65,7 @@
         gui.add(particleSystem, 'minSize', 0.01, 1.5);
         gui.add(particleSystem, 'maxSize', 0.01, 1.5);
         gui.add(particleSystem, 'emitRate', 1, 500);
-        gui.add(particleSystem, 'updateSpeed', 0.001, 1);
+        gui.add(particleSystem, 'updateSpeed', 0, 0.02);
 
         // Start the particle system
         particleSystem.start();
