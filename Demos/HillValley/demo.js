@@ -13,5 +13,10 @@
         for (var matIndex = 0; matIndex < scene.materials.length; matIndex++) {
             scene.materials[matIndex].checkReadyOnEveryCall = false;
         }
+
+        var VRHelper = scene.createDefaultVRExperience();
+        VRHelper.enableTeleportation({
+            floorMeshName: "Road1"
+        });
     }
 };

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>Babylon.js - Sponza demo</title>
     <meta name="description" content="Sponza by Babylon.js demo using WebGL, Web Audio, touch & gamepad on desktop, mobile & xbox one devices">
@@ -33,10 +34,9 @@
     <!-- FB -->
     <meta property="og:title" content="Babylon.js - Sponza demo" />
     <meta property="og:site_name" content="Babylon.js" />
-    <meta property="og:url"
-          content="http://www.babylonjs.com/demos/sponza" />
-    <meta property="og:description"
-          content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline." />
+    <meta property="og:url" content="http://www.babylonjs.com/demos/sponza" />
+    <meta property="og:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline."
+    />
     <meta property="fb:app_id" content="1673000116277273" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaFB.jpg" />
@@ -49,7 +49,8 @@
     <meta name="twitter:creator" content="@davrous" />
     <meta name="twitter:url" content="http://www.babylonjs.com/demos/sponza" />
     <meta name="twitter:title" content="Babylon.js - Sponza demo" />
-    <meta name="twitter:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline." />
+    <meta name="twitter:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline."
+    />
     <meta name="twitter:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaTwitter.jpg" />
 
     <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
@@ -58,7 +59,7 @@
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-41767310-1', 'babylonjs.com');
@@ -66,11 +67,13 @@
     </script>
     <!-- <script src="register-sw.js"></script> -->
     <link href="https://www.babylonjs.com/css/index.css" rel="stylesheet" />
-	<link href="index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
     <script src="//code.jquery.com/pep/0.4.0/pep.min.js"></script>
     <script src="//preview.babylonjs.com/babylon.js"></script>
-	<script src="babylon.demo.js"></script>
+    <script src="//preview.babylonjs.com/loaders/babylon.glTFFileLoader.js"></script>
+    <script src="babylon.demo.js"></script>
 </head>
+
 <body>
     <div id="sponzaLoader">
         <div id="backgroundImage"></div>>
@@ -92,7 +95,7 @@
         <canvas id="renderCanvas" touch-action="none"></canvas>
     </div>
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
-	<div id="controls" class="hidden">
+    <div id="controls" class="hidden">
         <div>
             <button onclick="switchSound();" id="soundButton" class="uiButton" title="Turn off the volume"></button>
         </div>
@@ -110,8 +113,9 @@
             <div id="vrHelper">click to enter VR -></div>
             <button onclick="switchToVR();" id="vrButton" class="uiButton" title="Switch to VR mode"></button>
         </div>
-</div>
+    </div>
     <div id="fps"></div>
-	<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
