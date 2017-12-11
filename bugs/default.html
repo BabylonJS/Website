@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>UBO cache issue repro - extract from Babylon.js</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="glMatrix-0.9.5.min.js"></script>
+
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
+        precision highp float;
+
+        out vec4 glFragColor;
+        
+        layout(std140, column_major) uniform;
+
+        uniform Material
+        {
+            uniform vec3 uColor;
+        };
+
+        void main(void) {
+            glFragColor = vec4(uColor, 1.0);
+        }
+    </script>
+
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+        precision highp float;
+
+        in vec3 position;
+
+        uniform mat4 uMVMatrix;
+        uniform mat4 uPMatrix;
+
+        void main(void) {
+            gl_Position = uPMatrix * uMVMatrix * vec4(position, 1.0);
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script src="default.js"></script>
+</body>
+
+</html>
