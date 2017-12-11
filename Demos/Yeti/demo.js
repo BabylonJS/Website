@@ -4,13 +4,20 @@
         scene.activeCamera.alpha = 2;
         scene.activeCamera.beta = 1.5;
         scene.activeCamera.upperRadiusLimit = 4;
+        scene.activeCamera.useAutoRotationBehavior = true;
+
+        // Environment
+        var helper = scene.createDefaultEnvironment({
+            groundShadowLevel: 0.6,
+        });
+        helper.setMainColor(BABYLON.Color3.White());
 
         // FOG
-        scene.fogMode = BABYLON.Scene.FOGMODE_LINEAR;
-        scene.fogStart = 0;
-        scene.fogEnd = 50;
-        scene.fogDensity = .5;
-        scene.fogColor = new BABYLON.Color3(1,1,1);
+        // scene.fogMode = BABYLON.Scene.FOGMODE_LINEAR;
+        // scene.fogStart = 0;
+        // scene.fogEnd = 50;
+        // scene.fogDensity = .5;
+        // scene.fogColor = new BABYLON.Color3(1,1,1);
 
         // SNOW 
         var fountain = BABYLON.Mesh.CreateBox("fountain", .1, scene);
@@ -19,8 +26,8 @@
 
         var particleSystem = new BABYLON.ParticleSystem("particles", 1500, scene, null, true);
         particleSystem.particleTexture = new BABYLON.Texture("/Assets/Yeti/snowflake.png", scene);
-        particleSystem.startSpriteCellID = 0;
-        particleSystem.endSpriteCellID = 0;
+        particleSystem.startSpriteCellID = 1;
+        particleSystem.endSpriteCellID = 3;
         particleSystem.spriteCellHeight = 512;
         particleSystem.spriteCellWidth = 512;
 
@@ -57,6 +64,12 @@
         particleSystem.minEmitPower = 1;
         particleSystem.maxEmitPower = 4;
         particleSystem.updateSpeed = 0.01;
+
+        var gui = new dat.GUI();
+        gui.add(particleSystem, 'minSize', 0.01, 1.5);
+        gui.add(particleSystem, 'maxSize', 0.01, 1.5);
+        gui.add(particleSystem, 'emitRate', 1, 500);
+        gui.add(particleSystem, 'updateSpeed', 0.001, 1);
 
         // Start the particle system
         particleSystem.start();
