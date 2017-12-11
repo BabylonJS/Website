@@ -14,7 +14,7 @@
 	    scene.createDefaultCameraOrLight(true, true, true);
 		scene.createDefaultSkybox(hdrTexture, true, 1500, 0.3);
 
-		scene.activeCamera.lowerRadiusLimit = 2;
+		scene.activeCamera.lowerRadiusLimit = 20;
 		scene.activeCamera.upperRadiusLimit = 80;
 		scene.activeCamera.alpha = 2.5;
         scene.activeCamera.beta = 1.5;
