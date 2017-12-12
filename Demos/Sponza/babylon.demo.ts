@@ -478,6 +478,10 @@ module BABYLON.DEMO {
                             engine.scenes[0].activeCamera.attachControl(canvas);
                             this.interactive = true;
                         }
+
+                        var vrBtn = <HTMLButtonElement>document.getElementById("vrButton");
+                        var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
+                        VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
                     });
 
                 }, (evt) => {
