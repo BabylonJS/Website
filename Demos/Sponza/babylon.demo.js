@@ -443,6 +443,9 @@ var BABYLON;
                                 engine.scenes[0].activeCamera.attachControl(canvas);
                                 _this.interactive = true;
                             }
+                            var vrBtn = document.getElementById("vrButton");
+                            var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
+                            VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
                         });
                     }, function (evt) {
                         if (evt.lengthComputable) {

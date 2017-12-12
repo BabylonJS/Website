@@ -237,28 +237,32 @@ switchFullscreen = function () {
     }
 };
 
-switchToVR = function () {
-    var VRHelper = engine.scenes[0].createDefaultVRExperience();
-    VRHelper.enableTeleportation({ floorMeshName: "Sponza floor" });
-    VRHelper._btnVR.style.display = 'none'
+// var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
+// VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
 
-    var attachVRCamera = function () {
-        vrCamera.attachControl(canvas, true);
-        engine.scenes[0].activeCamera = vrCamera;
-    };
+// switchToVR = function () {
+//     var VRHelper = engine.scenes[0].createDefaultVRExperience();
+//     VRHelper.enableTeleportation({ floorMeshName: "Sponza floor" });
+//     // VRHelper._btnVR.style.display = 'none'
 
-    if (!demoScheduler.interactive) {
-        switchCamera(attachVRCamera);
-    }
-    else {
-        VRHelper.enterVR();
-        // attachVRCamera();
+//     var attachVRCamera = function () {
+//         vrCamera.attachControl(canvas, true);
+//         engine.scenes[0].activeCamera = vrCamera;
+//     };
 
-    }
+//     if (!demoScheduler.interactive) {
+//         switchCamera(attachVRCamera);
+//     }
+//     else {
+//         VRHelper.enterVR();
+//         console.log(VRHelper)
+//         // attachVRCamera();
 
-    camBtn.title = "Switch to normal camera";
-    demoScheduler.vrEnabled = true;
-}
+//     }
+
+//     camBtn.title = "Switch to normal camera";
+//     demoScheduler.vrEnabled = true;
+// }
 
 
 
