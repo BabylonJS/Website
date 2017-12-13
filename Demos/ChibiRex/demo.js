@@ -3,7 +3,8 @@
     onload: function () {
         scene.activeCamera.alpha = 2.5;
         scene.activeCamera.beta = 1.5;
-        scene.activeCamera.upperRadiusLimit = 6;
+        scene.activeCamera.lowerRadiusLimit = 2;
+        scene.activeCamera.upperRadiusLimit = 10;
         scene.activeCamera.useAutoRotationBehavior = true;
 
         var light = new BABYLON.DirectionalLight("light1", new BABYLON.Vector3(0, -1, -1), scene);
@@ -14,6 +15,7 @@
 
         for (var i = 0; i < scene.meshes.length; i++) {
             generator.addShadowCaster(scene.meshes[i]);
+            scene.meshes[i].alwaysSelectAsActiveMesh = true;
         }
 
         var helper = scene.createDefaultEnvironment({
