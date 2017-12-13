@@ -5,7 +5,7 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	engine.setHardwareScalingLevel(0.5);
+	engine.setHardwareScalingLevel(0.75);
 
 	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
 		currentPluginName = plugin.name;

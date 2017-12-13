@@ -14,7 +14,7 @@
 		}
 	});
 
-	engine.setHardwareScalingLevel(0.5);
+	engine.setHardwareScalingLevel(0.75);
 	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti_Idle.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
 	});
