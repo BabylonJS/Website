@@ -46,16 +46,16 @@
         particleSystem.blendMode = BABYLON.ParticleSystem.BLENDMODE_ONEONE;
 
         particleSystem.gravity = new BABYLON.Vector3(0, -98, 0);
-        particleSystem.direction1 = new BABYLON.Vector3(0, -1, 0);
-        particleSystem.direction2 = new BABYLON.Vector3(0, -1, 0);
+        particleSystem.direction1 = new BABYLON.Vector3(5.5, -1, 5.5);
+        particleSystem.direction2 = new BABYLON.Vector3(-5.5, -1, -5.5);
 
         particleSystem.minAngularSpeed = 0;
         particleSystem.maxAngularSpeed = Math.PI;
 
         // Speed
         particleSystem.minEmitPower = 1;
-        particleSystem.maxEmitPower = 4;
-        particleSystem.updateSpeed = 0.01;
+        particleSystem.maxEmitPower = 10;
+        particleSystem.updateSpeed = 0.005;
 
         var gui = new dat.GUI();
         gui.add(particleSystem, 'minSize', 0.1, 5);
