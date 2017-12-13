@@ -5,9 +5,18 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	engine.setHardwareScalingLevel(0.5);
+	engine.setHardwareScalingLevel(0.75);
 
-	BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Final.gltf", scene, function () {
+	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
+		currentPluginName = plugin.name;
+
+		if (plugin.name === "gltf" && plugin instanceof BABYLON.GLTFFileLoader) {
+			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
+			plugin.compileMaterials = true;
+		}
+	});
+
+	BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Idle_fix.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
 	});
 

@@ -5,20 +5,19 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	engine.setHardwareScalingLevel(0.5);
+	engine.setHardwareScalingLevel(0.75);
 
 	var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
 	hdrTexture.gammaSpace = false;
 
-    BABYLON.SceneLoader.Append("/Assets/FlightHelmet/glTF/", "FlightHelmet_Materials.gltf", scene, function () {
-	    scene.createDefaultCameraOrLight(true, true, true);
-		scene.createDefaultSkybox(hdrTexture, true, 1500, 0.3);
+	BABYLON.SceneLoader.Append("/Assets/FlightHelmet/glTF/", "FlightHelmet_Materials.gltf", scene, function () {
+		scene.createDefaultCameraOrLight(true, true, true);
 
 		scene.activeCamera.lowerRadiusLimit = 20;
 		scene.activeCamera.upperRadiusLimit = 80;
 		scene.activeCamera.alpha = 2.5;
-        scene.activeCamera.beta = 1.5;
-        scene.activeCamera.useAutoRotationBehavior = true;
+		scene.activeCamera.beta = 1.5;
+		scene.activeCamera.useAutoRotationBehavior = true;
 	});
 
 	return scene;
