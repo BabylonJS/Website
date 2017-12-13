@@ -24,6 +24,10 @@
 		scene.activeCamera.upperRadiusLimit = 200;
 		scene.activeCamera.useAutoRotationBehavior = true;
 
+		for (var i = 0; i < scene.meshes.length; i++) {
+			scene.meshes[i].alwaysSelectAsActiveMesh = true;
+		}
+
 		// Environment
 		var helper = scene.createDefaultEnvironment({
 			skyboxSize: 1000,
@@ -81,7 +85,7 @@
 		gui.add(particleSystem, 'updateSpeed', 0, 0.02);
 
 		// Start the particle system
-		particleSystem.start();		
+		particleSystem.start();
 	});
 
 	return scene;
