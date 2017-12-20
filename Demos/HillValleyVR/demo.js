@@ -12,7 +12,8 @@
             return mesh.checkCollisions;
         }        
         VRHelper.enableTeleportation({
-            floorMeshName: "Road1"
+            floorMeshName: "Road1",
+            disableInteractions: true
         });
     }
 };
