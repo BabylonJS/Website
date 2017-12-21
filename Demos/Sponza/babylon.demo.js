@@ -249,14 +249,14 @@ var BABYLON;
                         // Postprocesses
                         BABYLON.Effect.ShadersStore["fadePixelShader"] =
                             "precision highp float;" +
-                                "varying vec2 vUV;" +
-                                "uniform sampler2D textureSampler; " +
-                                "uniform float fadeLevel; " +
-                                "void main(void){" +
-                                "vec4 baseColor = texture2D(textureSampler, vUV) * fadeLevel;" +
-                                "baseColor.a = 1.0;" +
-                                "gl_FragColor = baseColor;" +
-                                "}";
+                            "varying vec2 vUV;" +
+                            "uniform sampler2D textureSampler; " +
+                            "uniform float fadeLevel; " +
+                            "void main(void){" +
+                            "vec4 baseColor = texture2D(textureSampler, vUV) * fadeLevel;" +
+                            "baseColor.a = 1.0;" +
+                            "gl_FragColor = baseColor;" +
+                            "}";
                         scene.executeWhenReady(function () {
                             if (canvas.requestFullscreen != undefined ||
                                 canvas.mozRequestFullScreen != undefined ||
@@ -445,7 +445,7 @@ var BABYLON;
                             }
                             var vrBtn = document.getElementById("vrButton");
                             var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
-                            VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor", disableInteractions: true });
+                            VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
                         });
                     }, function (evt) {
                         if (evt.lengthComputable) {
