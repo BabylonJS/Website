@@ -1,21 +1,15 @@
 function createScene(engine) {
     var scene = new BABYLON.Scene(engine);
 
-    var material = new BABYLON.PBRMaterial("material", scene);
-    material.sideOrientation = BABYLON.Material.CounterClockWiseSideOrientation;
-    material.metallic = 0;
-    material.bumpTexture = new BABYLON.Texture("/Assets/normal.png", scene, false, false);
-    material.invertNormalMapX = true;
-
     // Left-handed meshes
-    createPlane("plane1", scene, material, new BABYLON.Vector3(-2.2, +1.2, 0), true, true, false, "Normals + Tangents (LH)");
-    createPlane("plane2", scene, material, new BABYLON.Vector3(+0.0, +1.2, 0), true, false, false, "Normals Only (LH)");
-    createPlane("plane3", scene, material, new BABYLON.Vector3(+2.2, +1.2, 0), false, false, false, "No Normals/Tangents (LH)");
+    createPlane("plane1", scene, new BABYLON.Vector3(-2.2, +1.2, 0), true, true, false, "Normals + Tangents (LH)");
+    createPlane("plane2", scene, new BABYLON.Vector3(+0.0, +1.2, 0), true, false, false, "Normals Only (LH)");
+    createPlane("plane3", scene, new BABYLON.Vector3(+2.2, +1.2, 0), false, false, false, "No Normals/Tangents (LH)");
 
     // Right-handed meshes
-    createPlane("plane4", scene, material, new BABYLON.Vector3(-2.2, -1.2, 0), true, true, true, "Normals + Tangents (RH)");
-    createPlane("plane5", scene, material, new BABYLON.Vector3(+0.0, -1.2, 0), true, false, true, "Normals Only (RH)");
-    createPlane("plane6", scene, material, new BABYLON.Vector3(+2.2, -1.2, 0), false, false, true, "No Normals/Tangents (RH)");
+    createPlane("plane4", scene, new BABYLON.Vector3(-2.2, -1.2, 0), true, true, true, "Normals + Tangents (RH)");
+    createPlane("plane5", scene, new BABYLON.Vector3(+0.0, -1.2, 0), true, false, true, "Normals Only (RH)");
+    createPlane("plane6", scene, new BABYLON.Vector3(+2.2, -1.2, 0), false, false, true, "No Normals/Tangents (RH)");
 
     var light = new BABYLON.DirectionalLight("light", new BABYLON.Vector3(1, -1, 1), scene);
 
@@ -31,9 +25,15 @@ function createScene(engine) {
     return scene;
 }
 
-function createPlane(name, scene, material, center, normals, tangents, rightHanded, caption) {
+function createPlane(name, scene, center, normals, tangents, rightHanded, caption) {
+    var material = new BABYLON.PBRMaterial("material", scene);
+    material.sideOrientation = rightHanded ? BABYLON.Material.ClockWiseSideOrientation : BABYLON.Material.CounterClockWiseSideOrientation;
+    material.metallic = 0;
+    material.bumpTexture = new BABYLON.Texture("/Assets/normal.png", scene, false, false);
+    material.invertNormalMapX = true;
+
     var plane = new BABYLON.Mesh(name, scene);
-    plane.material = material.clone();
+    plane.material = material;
     plane.position.addInPlace(center);
 
     var vertexData = BABYLON.VertexData.CreatePlane({ size: 2 });
