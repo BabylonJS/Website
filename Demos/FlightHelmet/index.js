@@ -31,13 +31,10 @@
 		}
 
 		var helper = scene.createDefaultEnvironment({
-			skyboxSize: 1500,
 			groundShadowLevel: 0.6,
 		});
 
 		helper.setMainColor(new BABYLON.Color3(.42, .41, .33));
-
-		scene.meshes[0].position.y -= 7;
 	});
 
 	return scene;
