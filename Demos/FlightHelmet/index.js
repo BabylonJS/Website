@@ -37,7 +37,7 @@
 
 		helper.setMainColor(new BABYLON.Color3(.42, .41, .33));
 
-		scene.meshes[0].position.y -= 0.5;		
+		scene.meshes[0].position.y -= 7;
 	});
 
 	return scene;
