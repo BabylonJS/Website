@@ -40,8 +40,6 @@
 			groundShadowLevel: 0.6,
 		});
 		helper.setMainColor(new BABYLON.Color3(.19, .23, .12));
-
-		scene.meshes[0].position.y -= 0.8;
 	});
 
 	return scene;
