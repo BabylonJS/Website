@@ -7,9 +7,6 @@
 
 	engine.setHardwareScalingLevel(0.75);
 
-	var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
-	hdrTexture.gammaSpace = false;
-
 	BABYLON.SceneLoader.Append("/Assets/FlightHelmet/glTF/", "FlightHelmet_Materials.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
 
