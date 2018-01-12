@@ -5,7 +5,7 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	engine.setHardwareScalingLevel(0.75);
+	engine.setHardwareScalingLevel(0.5);
 
 	var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/Assets/environment.dds", scene);
 	hdrTexture.gammaSpace = false;
@@ -16,6 +16,20 @@
 
 		scene.activeCamera.lowerRadiusLimit = 2;
 		scene.activeCamera.upperRadiusLimit = 20;
+
+		var options = new BABYLON.SceneOptimizerOptions(50, 2000);
+		options.addOptimization(new BABYLON.HardwareScalingOptimization(0, 1));
+
+		// Optimizer
+		var optimizer = new BABYLON.SceneOptimizer(scene, options);
+		optimizer.start();
+
+		optimizer.onNewOptimizationAppliedObservable.add(function (optim) {
+			console.log(optim.getDescription());
+		});
+		optimizer.onSuccessObservable.add(function () {
+			console.log("Optimization done")
+		});
 	});
 
 	return scene;

@@ -5,7 +5,7 @@
 	scene.imageProcessingConfiguration.exposure = 0.6;
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
-	engine.setHardwareScalingLevel(0.75);
+	engine.setHardwareScalingLevel(0.5);
 
 	BABYLON.SceneLoader.Append("/Assets/FlightHelmet/glTF/", "FlightHelmet_Materials.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
@@ -32,6 +32,20 @@
 		});
 
 		helper.setMainColor(new BABYLON.Color3(.42, .41, .33));
+
+		var options = new BABYLON.SceneOptimizerOptions(50, 2000);
+		options.addOptimization(new BABYLON.HardwareScalingOptimization(0, 1));
+
+		// Optimizer
+		var optimizer = new BABYLON.SceneOptimizer(scene, options);
+		optimizer.start();
+
+		optimizer.onNewOptimizationAppliedObservable.add(function (optim) {
+			console.log(optim.getDescription());
+		});
+		optimizer.onSuccessObservable.add(function () {
+			console.log("Optimization done")
+		});
 	});
 
 	return scene;
