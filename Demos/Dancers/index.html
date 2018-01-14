@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Using babylon.js adn SIMD.js</title>
-	<script src="../babylon.max.js"></script>
+    <meta name="viewport" content="width=device-width">
+	<title>Dancers Performance demo</title>
+	<script src="//preview.babylonjs.com/babylon.js"></script>
 	<style>
 		html, body {
 			width: 100%;
@@ -30,14 +31,6 @@
 			font-size: 40px;
 			text-align: center;
 		}
-
-		#simd {
-			position: absolute;
-			right: 215px;
-			top: 120px;
-			color: white;
-			font-family: "Segoe WP", Arial;
-		}
 	</style>
 	<script src="dat.gui.min.js"></script>
 </head>
@@ -51,7 +44,6 @@
 		}
 
 		if (BABYLON.Engine.isSupported()) {
-			var SIMDCheck = document.getElementById("SIMDCheck");
 			var canvas = document.getElementById("renderCanvas");
 			var engine = new BABYLON.Engine(canvas, true);
 			var total = 1;
@@ -68,7 +60,7 @@
 			var addDancer = function () {
 				var newOne = dancer.clone("clone" + total);
 				newOne.skeleton = dancer.skeleton.clone("skeleton" + total);
-
+				newOne.material.freeze();
 				newOne.position.x = 250 - Math.random() * 500;
 				newOne.position.z = 250 - Math.random() * 500;
 				groundMaterial.reflectionTexture.renderList.push(newOne);
@@ -93,7 +85,7 @@
 				total--;
 			}
 
-			BABYLON.SceneLoader.Load("http://az612410.vo.msecnd.net/wwwbabylonjs/Scenes/DanceMoves/", "DanceMoves.babylon", engine, function (newScene) {
+			BABYLON.SceneLoader.Load("/Scenes/DanceMoves/", "DanceMoves.babylon", engine, function (newScene) {
 				scene = newScene;
 				newScene.activeCamera.maxZ = 10000.0;
 				newScene.activeCamera.position.z = 600.0;
@@ -125,22 +117,10 @@
 					});
 				});
 
-				// SIMD
-				configObject.useSIMD = BABYLON.SIMDHelper.IsEnabled;
 
 				// GUI
 				var gui = new dat.GUI();
 				gui.add(configObject, 'targetFPS', 10, 60);
-				gui.add(configObject, 'useSIMD').onChange(function () {
-					if (BABYLON.SIMDHelper.IsEnabled) {
-						BABYLON.SIMDHelper.DisableSIMD();
-					} else {
-						BABYLON.SIMDHelper.EnableSIMD();
-					}
-
-					configObject.useSIMD = BABYLON.SIMDHelper.IsEnabled;
-				});
-
 
 				// Let's start the cloning galore!
 				var downCounter = 0;
