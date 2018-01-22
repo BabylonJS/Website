@@ -1,4 +1,4 @@
-﻿/// <reference path="babylon.js" />
+/// <reference path="babylon.js" />
 
 var canvas = document.getElementById("renderCanvas");
 

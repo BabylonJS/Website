@@ -1,4 +1,4 @@
-﻿var CreateChibiRexScene = function (engine) {
+var CreateChibiRexScene = function (engine) {
 	var scene = new BABYLON.Scene(engine);
 	scene.clearColor = new BABYLON.Color4(0.02, 0.02, 0.02, 1.0);
 
@@ -43,7 +43,7 @@
 
 			groundShadowLevel: 0.8,
 
-			groundOpacity: 0.7,
+			groundOpacity: 0.7, 
 
 			skyboxColor: new BABYLON.Color3(.060, .0777, .082),
 			groundColor: new BABYLON.Color3(.07, .087, .0893)
