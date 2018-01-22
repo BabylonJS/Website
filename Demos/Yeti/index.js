@@ -1,4 +1,4 @@
-﻿var CreateYetiScene = function (engine) {
+var CreateYetiScene = function (engine) {
 	var scene = new BABYLON.Scene(engine);
 	scene.clearColor = new BABYLON.Color4(0.02, 0.02, 0.02, 1.0);
 	scene.imageProcessingConfiguration.contrast = 1.6;
@@ -12,7 +12,7 @@
 			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
 			plugin.compileMaterials = true;
 		}
-	});
+	}); 
 
 	engine.setHardwareScalingLevel(0.75);
 	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti_Idle.gltf", scene, function () {
@@ -42,7 +42,7 @@
 
 		var particleSystem = new BABYLON.ParticleSystem("particles", 1500, scene, null, true);
 		particleSystem.particleTexture = new BABYLON.Texture("/Assets/Yeti/snowflake.png", scene);
-		scene.registerBeforeRender(() => {
+		scene.registerBeforeRender(function() {
 			particleSystem.startSpriteCellID = Math.round(Math.random() * 3 - 1);
 		});
 		particleSystem.startSpriteCellID = 0;
