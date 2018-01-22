@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width">
+	<title>Dancers Performance demo</title>
+	<script src="//preview.babylonjs.com/babylon.js"></script>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#renderCanvas {
+			width: 100%;
+			height: 100%;
+		}
+
+		#infos {
+			position: absolute;
+			right: calc(50% - 150px);
+			top: 1px;
+			height: 110px;
+			width: 300px;
+			border: 1px solid black;
+			color: white;
+			background: rgba(0, 0, 0, 0.5);
+			font-family: "Segoe WP", Arial;
+			font-size: 40px;
+			text-align: center;
+		}
+	</style>
+	<script src="dat.gui.min.js"></script>
+</head>
+<body>
+	<canvas id="renderCanvas"></canvas>
+	<div id="infos"></div>
+	<script>
+		var configObject = {
+			targetFPS: 50,
+			useSIMD: false
+		}
+
+		if (BABYLON.Engine.isSupported()) {
+			var canvas = document.getElementById("renderCanvas");
+			var engine = new BABYLON.Engine(canvas, true);
+			var total = 1;
+			var infos = document.getElementById("infos");
+			var dancer;
+			var scene;
+			var groundMaterial;
+			var dancers = [];
+
+			window.addEventListener("resize", function () {
+				engine.resize();
+			});
+
+			var addDancer = function () {
+				var newOne = dancer.clone("clone" + total);
+				newOne.skeleton = dancer.skeleton.clone("skeleton" + total);
+				newOne.material.freeze();
+				newOne.position.x = 250 - Math.random() * 500;
+				newOne.position.z = 250 - Math.random() * 500;
+				groundMaterial.reflectionTexture.renderList.push(newOne);
+				scene.beginAnimation(newOne.skeleton, 2, 100, true, 0.05);
+
+				dancers.push(newOne);
+
+				total++;
+			}
+
+			var removeDancer = function () {
+				if (dancers.length === 0) {
+					return;
+				}
+
+				var dancer = dancers[0];
+				scene.stopAnimation(dancer);
+				dancer.dispose();
+
+				dancers.splice(0, 1);
+
+				total--;
+			}
+
+			BABYLON.SceneLoader.Load("/Scenes/DanceMoves/", "DanceMoves.babylon", engine, function (newScene) {
+				scene = newScene;
+				newScene.activeCamera.maxZ = 10000.0;
+				newScene.activeCamera.position.z = 600.0;
+
+				// Mirror
+				groundMaterial = new BABYLON.StandardMaterial("ground", newScene);
+				groundMaterial.reflectionTexture = new BABYLON.MirrorTexture("mirror", 1024, newScene, true);
+				groundMaterial.reflectionTexture.mirrorPlane = new BABYLON.Plane(0, -1.0, 0, 0);
+				groundMaterial.reflectionTexture.level = 0.5;
+
+				// Ground
+				var ground = BABYLON.Mesh.CreateGround("ground", 1000, 1000, 1, newScene, false);
+
+				groundMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+				groundMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+				ground.material = groundMaterial;
+
+				dancer = newScene.meshes[1];
+
+				groundMaterial.reflectionTexture.renderList.push(dancer);
+				newScene.beginAnimation(dancer.skeleton, 2, 100, true, 0.05);
+
+				newScene.executeWhenReady(function () {
+					newScene.activeCamera.attachControl(canvas);
+
+					engine.runRenderLoop(function () {
+						newScene.render();
+					});
+				});
+
+
+				// GUI
+				var gui = new dat.GUI();
+				gui.add(configObject, 'targetFPS', 10, 60);
+
+				// Let's start the cloning galore!
+				var downCounter = 0;
+				setInterval(function () {
+					var fps = Math.floor(engine.getFps());
+
+					if (fps >= configObject.targetFPS) {
+						downCounter = 0;
+						addDancer();
+					} else {
+						downCounter++;
+
+						if (downCounter === 3) { // FPS down for 3s ?
+							removeDancer();
+							downCounter = 0;
+						}
+					}
+
+					infos.innerHTML = total + " dancers<BR>" + fps + " fps";
+				}, 1000);
+			}, function (evt) {
+				if (evt.lengthComputable) {
+					engine.loadingUIText = "Loading, please wait..." + (evt.loaded * 100 / evt.total).toFixed() + "%";
+				} else {
+					dlCount = evt.loaded / (1024 * 1024);
+					engine.loadingUIText = "Loading, please wait..." + Math.floor(dlCount * 100.0) / 100.0 + " MB already loaded.";
+				}
+			});
+		}
+	</script>
+</body>
+</html>
