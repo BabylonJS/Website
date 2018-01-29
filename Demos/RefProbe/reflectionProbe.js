@@ -14,13 +14,13 @@
     var knot = BABYLON.Mesh.CreateTorusKnot("knot", 1, 0.4, 128, 64, 2, 3, scene);
 
     var yellowSphere = BABYLON.Mesh.CreateSphere("yellowSphere", 16, 1.5, scene);
-    yellowSphere.setPivotMatrix(BABYLON.Matrix.Translation(3, 0, 0));
+    yellowSphere.position = new BABYLON.Vector3(3, 0, 0);
 
     var blueSphere = BABYLON.Mesh.CreateSphere("blueSphere", 16, 1.5, scene);
-    blueSphere.setPivotMatrix(BABYLON.Matrix.Translation(-1, 3, 0));
+    blueSphere.position = new BABYLON.Vector3(-1, 3, 0);
 
     var greenSphere = BABYLON.Mesh.CreateSphere("greenSphere", 16, 1.5, scene);
-    greenSphere.setPivotMatrix(BABYLON.Matrix.Translation(0, 0, 3));
+    greenSphere.position = new BABYLON.Vector3(0, 0, 3);
 
     var generateSatelliteMaterial = function (root, color, others) {
         var material = new BABYLON.StandardMaterial("satelliteMat" + root.name, scene);
