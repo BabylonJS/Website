@@ -6,26 +6,19 @@
       "count": 4,
       "type": "VEC3",
       "max": [
-        -0.5,
-        -0.5,
+        0.5,
+        0.5,
         0.0
       ],
       "min": [
-        0.5,
-        0.5,
+        -0.5,
+        -0.5,
         0.0
       ],
       "name": "Positions Accessor"
     },
     {
       "bufferView": 1,
-      "componentType": 5125,
-      "count": 6,
-      "type": "SCALAR",
-      "name": "Indices Accessor"
-    },
-    {
-      "bufferView": 2,
       "componentType": 5121,
       "normalized": true,
       "count": 4,
@@ -33,12 +26,19 @@
       "name": "UV Accessor 0"
     },
     {
-      "bufferView": 3,
+      "bufferView": 2,
       "componentType": 5121,
       "normalized": true,
       "count": 4,
       "type": "VEC2",
       "name": "UV Accessor 1"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
     }
   ],
   "asset": {
@@ -63,25 +63,25 @@
     {
       "buffer": 0,
       "byteOffset": 48,
-      "byteLength": 24,
-      "name": "Indices"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 72,
       "byteLength": 8,
       "name": "Texture Coords 0"
     },
     {
       "buffer": 0,
-      "byteOffset": 80,
+      "byteOffset": 56,
       "byteLength": 8,
       "name": "Texture Coords 1"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 64,
+      "byteLength": 24,
+      "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "panel_baseColor.png"
+      "uri": "Texture_baseColor.png"
     }
   ],
   "materials": [
@@ -100,10 +100,10 @@
         {
           "attributes": {
             "POSITION": 0,
-            "TEXCOORD_0": 2,
-            "TEXCOORD_1": 3
+            "TEXCOORD_0": 1,
+            "TEXCOORD_1": 2
           },
-          "indices": 1,
+          "indices": 3,
           "material": 0
         }
       ]
