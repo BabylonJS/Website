@@ -6,13 +6,13 @@
       "count": 4,
       "type": "VEC3",
       "max": [
-        -0.5,
-        -0.5,
+        0.5,
+        0.5,
         0.0
       ],
       "min": [
-        0.5,
-        0.5,
+        -0.5,
+        -0.5,
         0.0
       ],
       "name": "Positions Accessor"
@@ -33,17 +33,17 @@
     },
     {
       "bufferView": 3,
-      "componentType": 5125,
-      "count": 6,
-      "type": "SCALAR",
-      "name": "Indices Accessor"
-    },
-    {
-      "bufferView": 4,
       "componentType": 5126,
       "count": 4,
       "type": "VEC2",
       "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
     }
   ],
   "asset": {
@@ -80,22 +80,22 @@
     {
       "buffer": 0,
       "byteOffset": 160,
-      "byteLength": 24,
-      "name": "Indices"
+      "byteLength": 32,
+      "name": "Texture Coords 0"
     },
     {
       "buffer": 0,
-      "byteOffset": 184,
-      "byteLength": 32,
-      "name": "Texture Coords 0"
+      "byteOffset": 192,
+      "byteLength": 24,
+      "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "panel_baseColor.png"
+      "uri": "Texture_baseColor.png"
     },
     {
-      "uri": "panel_normal.png"
+      "uri": "Texture_normal.png"
     }
   ],
   "materials": [
@@ -118,9 +118,9 @@
             "POSITION": 0,
             "NORMAL": 1,
             "TANGENT": 2,
-            "TEXCOORD_0": 4
+            "TEXCOORD_0": 3
           },
-          "indices": 3,
+          "indices": 4,
           "material": 0
         }
       ]
