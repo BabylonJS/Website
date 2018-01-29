@@ -9,50 +9,43 @@
       "count": 4,
       "type": "VEC3",
       "max": [
-        -0.5,
-        -0.5,
+        0.5,
+        0.5,
         0.0
       ],
       "min": [
-        0.5,
-        0.5,
+        -0.5,
+        -0.5,
         0.0
       ],
       "name": "Positions Accessor"
     },
     {
       "bufferView": 1,
-      "componentType": 5125,
-      "count": 6,
-      "type": "SCALAR",
-      "name": "Indices Accessor"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 4,
-      "type": "VEC3",
-      "name": "Colors Accessor"
-    },
-    {
-      "bufferView": 3,
       "componentType": 5126,
       "count": 4,
       "type": "VEC2",
       "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
     }
   ],
   "asset": {
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "VertexColor_Vector3_Float - DiffuseTexture - SpecularFactor_Override"
+      "Attributes": "DiffuseTexture - SpecularFactor_Override - SpecularGlossinessAppliedToMesh_Yes - BaseColorTexture - ExtensionUsed_SpecularGlossiness"
     }
   },
   "buffers": [
     {
       "uri": "Material_SpecularGlossiness_02.bin",
-      "byteLength": 152
+      "byteLength": 104
     }
   ],
   "bufferViews": [
@@ -64,25 +57,22 @@
     {
       "buffer": 0,
       "byteOffset": 48,
-      "byteLength": 24,
-      "name": "Indices"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 72,
-      "byteLength": 48,
-      "name": "Colors"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 120,
       "byteLength": 32,
       "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 80,
+      "byteLength": 24,
+      "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "panel_diffuse.png"
+      "uri": "X.png"
+    },
+    {
+      "uri": "Texture_diffuse.png"
     }
   ],
   "materials": [
@@ -90,13 +80,18 @@
       "extensions": {
         "KHR_materials_pbrSpecularGlossiness": {
           "diffuseTexture": {
-            "index": 0
+            "index": 1
           },
           "specularFactor": [
             0.0,
             0.0,
             0.0
           ]
+        }
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
         }
       }
     }
@@ -107,10 +102,9 @@
         {
           "attributes": {
             "POSITION": 0,
-            "COLOR_0": 2,
-            "TEXCOORD_0": 3
+            "TEXCOORD_0": 1
           },
-          "indices": 1,
+          "indices": 2,
           "material": 0
         }
       ]
@@ -132,6 +126,9 @@
   "textures": [
     {
       "source": 0
+    },
+    {
+      "source": 1
     }
   ]
 }
