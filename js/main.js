@@ -40,22 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	webvrFilter.addEventListener('change', function () {
 		let value = this.value;
-		console.log(value);
-		// if webvr demos are already visible, restore everything
-		if (value == 'all') {
+		// Restore all demos
+		clean(demoGallery);
+		for (let d = 0; d < demos.length; d++) {
+			let demo = demos[d];
+			demoGallery.appendChild(demo);
+		}
 
-			clean(demoGallery);
-
-			// Restore all demos
+		if (value !== 'all') {
 			for (let d = 0; d < demos.length; d++) {
 				let demo = demos[d];
-				demoGallery.appendChild(demo);
-			}
-		} else {
-			// Remove all demos that are not webvr
-			for (let d = 0; d < demos.length; d++) {
-				let demo = demos[d];
-				if (!demo.classList.contains(value)) {
+				if (!demo.classList.contains(value) && demo.parentElement === demoGallery) {
 					demoGallery.removeChild(demo);
 				}
 			}
