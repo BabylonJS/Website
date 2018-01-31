@@ -19,7 +19,7 @@
             "url": "?test=Mesh_Primitives&count=6&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
         },
         "Mesh_PrimitivesUV": {
-            "url": "?test=Mesh_PrimitivesUV&count=9&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+            "url": "?test=Mesh_PrimitivesUV&count=9&width=5&position=[-2.4,1.3,0.0]&radius=5.4&flip=false&showMenu=true"
         },
         "Primitive_Attribute": {
             "url": "?test=Primitive_Attribute&count=18&width=6&position=[-3.0,1.4,0.0]&radius=6&flip=false&showMenu=true"

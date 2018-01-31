@@ -1,6 +1,4 @@
-﻿/// <reference path="../../babylon.js" />
-
-if (BABYLON.Engine.isSupported()) {
+﻿if (BABYLON.Engine.isSupported()) {
     var canvas = document.getElementById("renderCanvas");
     var engine = new BABYLON.Engine(canvas, true);
     var divFps = document.getElementById("fps");
