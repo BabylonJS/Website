@@ -27,3 +27,55 @@ main {
   height: 20px;
   transform: translateY(5px);
 }
+
+.wrapper {	
+	.title {
+		display:flex;
+		// justify-content: center;
+		align-items: center;
+		position:relative;
+		h2 {
+			margin-right: 50px;
+		}
+		
+		.filters {
+			position:absolute;
+			right:0px;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			
+			.filter-title {
+				padding:15px;
+				display:flex;
+				height:40px;
+				text-transform: uppercase;
+				align-items: center;
+				justify-content: center;
+				transition : all 0.25s ease;
+				color:#999999;
+				-ms-user-select: none;
+				user-select:none;				
+			}
+			.filter {
+				font-family: $font-texts;
+				margin:15px;
+				width : 150px;
+				background-color: white;
+				border:0;
+				outline: 0;
+				padding: 1em 0 1em 0.25em;
+				cursor: pointer; 
+				
+				option {
+					height:35px;
+					border:1px solid #999999;
+				}
+				&:focus {
+					outline: none;
+					border-color: 1px solid #999999;
+				}
+			}
+		}
+	}
+}
