@@ -31,16 +31,23 @@ main {
 .wrapper {	
 	.title {
 		display:flex;
+		flex-wrap: wrap;
 		// justify-content: center;
 		align-items: center;
 		position:relative;
 		h2 {
 			margin-right: 50px;
+			width: 110px;
+			display: flex;
+		}
+		#webvrFilterSeparator {
+			width: calc(100% - 160px - 240px);
+			display: flex;
 		}
 		
 		.filters {
-			position:absolute;
-			right:0px;
+			width: 240px;
+			box-sizing: border-box;
 			display:flex;
 			align-items: center;
 			justify-content: center;
@@ -48,6 +55,7 @@ main {
 			.filter-title {
 				padding:15px;
 				display:flex;
+				white-space: nowrap;
 				height:40px;
 				text-transform: uppercase;
 				align-items: center;
@@ -60,6 +68,7 @@ main {
 			.filter {
 				font-family: $font-texts;
 				margin:15px;
+				margin-right: 0;
 				width : 150px;
 				background-color: white;
 				border:0;
