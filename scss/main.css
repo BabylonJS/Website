@@ -869,13 +869,20 @@ main .about + hr.margin {
   display: flex;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .wrapper .title h2 {
   margin-right: 50px;
+  width: 110px;
+  display: flex;
+}
+.wrapper .title #webvrFilterSeparator {
+  width: calc(100% - 160px - 240px);
+  display: flex;
 }
 .wrapper .title .filters {
-  position: absolute;
-  right: 0px;
+  width: 240px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,6 +890,7 @@ main .about + hr.margin {
 .wrapper .title .filters .filter-title {
   padding: 15px;
   display: flex;
+  white-space: nowrap;
   height: 40px;
   text-transform: uppercase;
   align-items: center;
@@ -895,6 +903,7 @@ main .about + hr.margin {
 .wrapper .title .filters .filter {
   font-family: "Roboto", sans-serif;
   margin: 15px;
+  margin-right: 0;
   width: 150px;
   background-color: white;
   border: 0;
