@@ -15,6 +15,14 @@
         ga('create', 'UA-41767310-1', 'babylonjs.com');
         ga('send', 'pageview');
 
+        window.onload = function () {
+            if (location.href.indexOf("mixedReality") !== -1) {
+                var a = document.createElement("a");
+                a.href = "../../Assets/FlightHelmet/glTF/FlightHelmet_Materials.gltf";
+                document.getElementById("mixedRealityAnchor").href += a.href;
+                document.getElementById("mixedReality").className = "mixedReality";
+            }
+        };
     </script>
     <link href="../../css/index.css" rel="stylesheet" />
     <script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
@@ -22,6 +30,13 @@
     <script src="//preview.babylonjs.com/loaders/babylon.glTFFileLoader.js"></script>
     <script src="index.js"></script>
     <script src="demo.js"></script>
+    <style>
+        .mixedReality {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
     <canvas id="renderCanvas" touch-action="none"></canvas>
@@ -34,6 +49,11 @@
         <img id="buttonAnimPause" src=""></img>
     </div>
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
+    <div id="mixedReality" class="hidden">
+        <a id="mixedRealityAnchor" href="ms-mixedreality:addmodel?uri=">
+            <img src="../../Assets/MixedRealityPortal.png"></img>
+        </a>
+    </div>
     <script src="../../js/loaderSimple.js"></script>
 </body>
 </html>
