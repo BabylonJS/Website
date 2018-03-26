@@ -106,6 +106,20 @@ function createMaterialDoubleSidedScene(engine) {
     return loadScene(engine, glTFParameters);
 }
 
+function createMaterialDoubleSidedBackScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["title"] = "Material Double Sided (Back)";
+    glTFParameters["test"] = "Material_DoubleSided";
+    glTFParameters["count"] = 4;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
+    glTFParameters["flip"] = true;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
 function createMaterialMetallicRoughnessScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Material_MetallicRoughness";
@@ -175,9 +189,9 @@ function createMeshPrimitivesUVScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Mesh_PrimitivesUV";
     glTFParameters["count"] = 9;
-    glTFParameters["width"] = 4;
-    glTFParameters["position"] = [-1.8, 0.7, 0.0];
-    glTFParameters["radius"] = 4;
+    glTFParameters["width"] = 5;
+    glTFParameters["position"] = [-2.5, 1.3, 0.0];
+    glTFParameters["radius"] = 5.6;
     glTFParameters["flip"] = false;
     glTFParameters["showMenu"] = false;
 
