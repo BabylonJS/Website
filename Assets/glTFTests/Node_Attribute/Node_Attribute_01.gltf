@@ -1,0 +1,194 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 98,
+      "type": "VEC3",
+      "max": [
+        7.5,
+        7.5,
+        7.5
+      ],
+      "min": [
+        -7.5,
+        -2.5,
+        -7.5
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 98,
+      "type": "VEC2",
+      "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5125,
+      "count": 18,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 98,
+      "type": "VEC3",
+      "max": [
+        7.5,
+        7.5,
+        7.5
+      ],
+      "min": [
+        -7.5,
+        -2.5,
+        -7.5
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 98,
+      "type": "VEC2",
+      "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 144,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    }
+  ],
+  "asset": {
+    "generator": "glTF Asset Generator",
+    "version": "2.0",
+    "extras": {
+      "Attributes": "Translation"
+    }
+  },
+  "buffers": [
+    {
+      "uri": "Node_Attribute_01.bin",
+      "byteLength": 4568
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1176,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1176,
+      "byteLength": 784,
+      "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1960,
+      "byteLength": 72,
+      "name": "Indices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2032,
+      "byteLength": 1176,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3208,
+      "byteLength": 784,
+      "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3992,
+      "byteLength": 576,
+      "name": "Indices"
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/BaseColor_Nodes.png"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "TEXCOORD_0": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "mesh": 0,
+      "name": "Node0"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        -2.0,
+        2.0,
+        -2.0
+      ],
+      "name": "Node1"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ]
+}

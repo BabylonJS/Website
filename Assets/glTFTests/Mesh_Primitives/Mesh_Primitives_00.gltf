@@ -19,20 +19,13 @@
     },
     {
       "bufferView": 1,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 2,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
       "name": "Indices Accessor"
     },
     {
-      "bufferView": 3,
+      "bufferView": 2,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
@@ -49,14 +42,7 @@
       "name": "Positions Accessor"
     },
     {
-      "bufferView": 4,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 5,
+      "bufferView": 3,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
@@ -67,13 +53,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "Primitive0VertexUV0 - Primitive1VertexUV0"
+      "Attributes": ""
     }
   },
   "buffers": [
     {
       "uri": "Mesh_Primitives_00.bin",
-      "byteLength": 144
+      "byteLength": 96
     }
   ],
   "bufferViews": [
@@ -85,30 +71,18 @@
     {
       "buffer": 0,
       "byteOffset": 36,
-      "byteLength": 24,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 60,
       "byteLength": 12,
       "name": "Indices"
     },
     {
       "buffer": 0,
-      "byteOffset": 72,
+      "byteOffset": 48,
       "byteLength": 36,
       "name": "Positions"
     },
     {
       "buffer": 0,
-      "byteOffset": 108,
-      "byteLength": 24,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 132,
+      "byteOffset": 84,
       "byteLength": 12,
       "name": "Indices"
     }
@@ -118,17 +92,15 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 0,
-            "TEXCOORD_0": 1
+            "POSITION": 0
           },
-          "indices": 2
+          "indices": 1
         },
         {
           "attributes": {
-            "POSITION": 3,
-            "TEXCOORD_0": 4
+            "POSITION": 2
           },
-          "indices": 5
+          "indices": 3
         }
       ]
     }

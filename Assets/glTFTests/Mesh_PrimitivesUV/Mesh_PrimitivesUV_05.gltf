@@ -19,41 +19,13 @@
     },
     {
       "bufferView": 1,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC3",
-      "name": "Normals Accessor"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC4",
-      "name": "Tangents Accessor"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC3",
-      "name": "Colors Accessor"
-    },
-    {
-      "bufferView": 4,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 5,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
       "name": "Indices Accessor"
     },
     {
-      "bufferView": 6,
+      "bufferView": 2,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
@@ -70,42 +42,42 @@
       "name": "Positions Accessor"
     },
     {
-      "bufferView": 7,
+      "bufferView": 3,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
       "name": "Normals Accessor"
     },
     {
-      "bufferView": 8,
+      "bufferView": 4,
       "componentType": 5126,
       "count": 3,
       "type": "VEC4",
       "name": "Tangents Accessor"
     },
     {
-      "bufferView": 9,
+      "bufferView": 5,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
       "name": "Colors Accessor"
     },
     {
-      "bufferView": 10,
+      "bufferView": 6,
       "componentType": 5126,
       "count": 3,
       "type": "VEC2",
       "name": "UV Accessor 0"
     },
     {
-      "bufferView": 11,
+      "bufferView": 7,
       "componentType": 5126,
       "count": 3,
       "type": "VEC2",
       "name": "UV Accessor 1"
     },
     {
-      "bufferView": 12,
+      "bufferView": 8,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
@@ -116,13 +88,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "Primitives_Split3 - Primitive0VertexUV0 - Primitive1VertexUV0 - Primitive1VertexUV1 - VertexNormal - VertexTangent - VertexColor_Vector4_Float - NormalTexture - BaseColorTexture"
+      "Attributes": "Primitives_Split2 - Primitive1VertexUV0 - Primitive1VertexUV1 - VertexNormal - VertexTangent - VertexColor_Vector4_Float - NormalTexture - BaseColorTexture"
     }
   },
   "buffers": [
     {
       "uri": "Mesh_PrimitivesUV_05.bin",
-      "byteLength": 408
+      "byteLength": 264
     }
   ],
   "bufferViews": [
@@ -134,95 +106,61 @@
     {
       "buffer": 0,
       "byteOffset": 36,
-      "byteLength": 36,
-      "name": "Normals"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 72,
-      "byteLength": 48,
-      "name": "Tangents"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 120,
-      "byteLength": 36,
-      "name": "Colors"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 156,
-      "byteLength": 24,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 180,
       "byteLength": 12,
       "name": "Indices"
     },
     {
       "buffer": 0,
-      "byteOffset": 192,
+      "byteOffset": 48,
       "byteLength": 36,
       "name": "Positions"
     },
     {
       "buffer": 0,
-      "byteOffset": 228,
+      "byteOffset": 84,
       "byteLength": 36,
       "name": "Normals"
     },
     {
       "buffer": 0,
-      "byteOffset": 264,
+      "byteOffset": 120,
       "byteLength": 48,
       "name": "Tangents"
     },
     {
       "buffer": 0,
-      "byteOffset": 312,
+      "byteOffset": 168,
       "byteLength": 36,
       "name": "Colors"
     },
     {
       "buffer": 0,
-      "byteOffset": 348,
+      "byteOffset": 204,
       "byteLength": 24,
       "name": "Texture Coords 0"
     },
     {
       "buffer": 0,
-      "byteOffset": 372,
+      "byteOffset": 228,
       "byteLength": 24,
       "name": "Texture Coords 1"
     },
     {
       "buffer": 0,
-      "byteOffset": 396,
+      "byteOffset": 252,
       "byteLength": 12,
       "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "Texture_baseColor.png"
+      "uri": "Textures/BaseColor_Plane.png"
     },
     {
-      "uri": "Texture_normal.png"
+      "uri": "Textures/Normal_Plane.png"
     }
   ],
   "materials": [
-    {
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        }
-      },
-      "normalTexture": {
-        "index": 1
-      }
-    },
     {
       "pbrMetallicRoughness": {
         "baseColorTexture": {
@@ -241,26 +179,21 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TANGENT": 2,
-            "COLOR_0": 3,
-            "TEXCOORD_0": 4
+            "POSITION": 0
           },
-          "indices": 5,
-          "material": 0
+          "indices": 1
         },
         {
           "attributes": {
-            "POSITION": 6,
-            "NORMAL": 7,
-            "TANGENT": 8,
-            "COLOR_0": 9,
-            "TEXCOORD_0": 10,
-            "TEXCOORD_1": 11
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TANGENT": 4,
+            "COLOR_0": 5,
+            "TEXCOORD_0": 6,
+            "TEXCOORD_1": 7
           },
-          "indices": 12,
-          "material": 1
+          "indices": 8,
+          "material": 0
         }
       ]
     }

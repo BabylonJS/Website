@@ -36,7 +36,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "MagFilter_Nearest - MinFilter_Nearest - WrapS_ClampToEdge - WrapT_ClampToEdge"
+      "Attributes": "WrapT_ClampToEdge"
     }
   },
   "buffers": [
@@ -66,7 +66,7 @@
   ],
   "images": [
     {
-      "uri": "Texture_baseColor.png"
+      "uri": "Textures/BaseColor_Plane.png"
     }
   ],
   "materials": [
@@ -99,9 +99,6 @@
   ],
   "samplers": [
     {
-      "magFilter": 9728,
-      "minFilter": 9728,
-      "wrapS": 33071,
       "wrapT": 33071
     }
   ],

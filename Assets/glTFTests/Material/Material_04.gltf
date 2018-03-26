@@ -43,7 +43,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "NormalTexture"
+      "Attributes": "NormalTexture - Scale"
     }
   },
   "buffers": [
@@ -79,7 +79,7 @@
   ],
   "images": [
     {
-      "uri": "Texture_normal.png"
+      "uri": "Textures/Normal_Plane.png"
     }
   ],
   "materials": [
@@ -94,7 +94,8 @@
         "metallicFactor": 0.0
       },
       "normalTexture": {
-        "index": 0
+        "index": 0,
+        "scale": 10.0
       }
     }
   ],
