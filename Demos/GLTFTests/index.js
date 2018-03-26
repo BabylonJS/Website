@@ -175,7 +175,7 @@ function createMeshPrimitiveModeScene(engine) {
 function createMeshPrimitivesScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Mesh_Primitives";
-    glTFParameters["count"] = 6;
+    glTFParameters["count"] = 3;
     glTFParameters["width"] = 4;
     glTFParameters["position"] = [-1.8, 0.7, 0.0];
     glTFParameters["radius"] = 4;
