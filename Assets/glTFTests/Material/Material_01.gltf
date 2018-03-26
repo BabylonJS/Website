@@ -43,7 +43,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "EmissiveFactor - EmissiveTexture - NormalTexture - Scale - OcclusionTexture - Strength"
+      "Attributes": "NormalTexture"
     }
   },
   "buffers": [
@@ -79,13 +79,7 @@
   ],
   "images": [
     {
-      "uri": "Texture_normal.png"
-    },
-    {
-      "uri": "Texture_occlusion.png"
-    },
-    {
-      "uri": "Texture_emissive.png"
+      "uri": "Textures/Normal_Plane.png"
     }
   ],
   "materials": [
@@ -100,21 +94,8 @@
         "metallicFactor": 0.0
       },
       "normalTexture": {
-        "index": 0,
-        "scale": 10.0
-      },
-      "occlusionTexture": {
-        "index": 1,
-        "strength": 0.5
-      },
-      "emissiveTexture": {
-        "index": 2
-      },
-      "emissiveFactor": [
-        1.0,
-        1.0,
-        1.0
-      ]
+        "index": 0
+      }
     }
   ],
   "meshes": [
@@ -148,12 +129,6 @@
   "textures": [
     {
       "source": 0
-    },
-    {
-      "source": 1
-    },
-    {
-      "source": 2
     }
   ]
 }

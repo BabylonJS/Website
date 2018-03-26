@@ -1,0 +1,148 @@
+{
+  "folder": "Node_NegativeScale",
+  "models": [
+    {
+      "fileName": "Node_NegativeScale_00.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_00.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_01.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_01.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_02.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_02.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_03.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_03.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_04.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_04.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_05.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_05.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_06.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_06.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_07.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_07.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_08.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_08.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_09.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_09.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_10.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_10.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_11.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_11.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    },
+    {
+      "fileName": "Node_NegativeScale_12.gltf",
+      "sampleImageName": "Figures/SampleImages/Node_NegativeScale_12.png",
+      "camera": {
+        "translation": [
+          0.0,
+          20.0,
+          -20.0
+        ]
+      }
+    }
+  ]
+}

@@ -36,7 +36,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "MagFilter_Nearest"
+      "Attributes": "WrapT_MirroredRepeat"
     }
   },
   "buffers": [
@@ -66,7 +66,7 @@
   ],
   "images": [
     {
-      "uri": "Texture_baseColor.png"
+      "uri": "Textures/BaseColor_Plane.png"
     }
   ],
   "materials": [
@@ -99,7 +99,7 @@
   ],
   "samplers": [
     {
-      "magFilter": 9728
+      "wrapT": 33648
     }
   ],
   "scene": 0,

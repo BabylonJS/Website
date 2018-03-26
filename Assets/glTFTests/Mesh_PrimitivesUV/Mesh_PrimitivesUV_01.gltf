@@ -47,20 +47,13 @@
     },
     {
       "bufferView": 5,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 1"
-    },
-    {
-      "bufferView": 6,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
       "name": "Indices Accessor"
     },
     {
-      "bufferView": 7,
+      "bufferView": 6,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
@@ -77,7 +70,7 @@
       "name": "Positions Accessor"
     },
     {
-      "bufferView": 8,
+      "bufferView": 7,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
@@ -88,13 +81,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "Primitives_Split1 - Primitive0VertexUV0 - Primitive0VertexUV1 - VertexNormal - VertexTangent - VertexColor_Vector4_Float - NormalTexture - BaseColorTexture"
+      "Attributes": "Primitives_Split1 - Primitive0VertexUV0 - VertexNormal - VertexTangent - VertexColor_Vector4_Float - NormalTexture - BaseColorTexture"
     }
   },
   "buffers": [
     {
       "uri": "Mesh_PrimitivesUV_01.bin",
-      "byteLength": 264
+      "byteLength": 240
     }
   ],
   "bufferViews": [
@@ -130,47 +123,39 @@
     {
       "buffer": 0,
       "byteOffset": 180,
-      "byteLength": 24,
-      "name": "Texture Coords 1"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 204,
       "byteLength": 12,
       "name": "Indices"
     },
     {
       "buffer": 0,
-      "byteOffset": 216,
+      "byteOffset": 192,
       "byteLength": 36,
       "name": "Positions"
     },
     {
       "buffer": 0,
-      "byteOffset": 252,
+      "byteOffset": 228,
       "byteLength": 12,
       "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "Texture_baseColor.png"
+      "uri": "Textures/BaseColor_Plane.png"
     },
     {
-      "uri": "Texture_normal.png"
+      "uri": "Textures/Normal_Plane.png"
     }
   ],
   "materials": [
     {
       "pbrMetallicRoughness": {
         "baseColorTexture": {
-          "index": 0,
-          "texCoord": 1
+          "index": 0
         }
       },
       "normalTexture": {
-        "index": 1,
-        "texCoord": 1
+        "index": 1
       }
     }
   ],
@@ -183,17 +168,16 @@
             "NORMAL": 1,
             "TANGENT": 2,
             "COLOR_0": 3,
-            "TEXCOORD_0": 4,
-            "TEXCOORD_1": 5
+            "TEXCOORD_0": 4
           },
-          "indices": 6,
+          "indices": 5,
           "material": 0
         },
         {
           "attributes": {
-            "POSITION": 7
+            "POSITION": 6
           },
-          "indices": 8
+          "indices": 7
         }
       ]
     }

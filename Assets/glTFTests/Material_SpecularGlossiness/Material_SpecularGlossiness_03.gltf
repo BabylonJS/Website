@@ -24,18 +24,11 @@
       "bufferView": 1,
       "componentType": 5126,
       "count": 4,
-      "type": "VEC3",
-      "name": "Colors Accessor"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 4,
       "type": "VEC2",
       "name": "UV Accessor 0"
     },
     {
-      "bufferView": 3,
+      "bufferView": 2,
       "componentType": 5125,
       "count": 6,
       "type": "SCALAR",
@@ -46,13 +39,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "VertexColor_Vector3_Float - DiffuseTexture - SpecularFactor_Override - SpecularGlossinessAppliedToMesh_Yes - BaseColorTexture - ExtensionUsed_SpecularGlossiness"
+      "Attributes": "DiffuseFactor - SpecularFactor_Override"
     }
   },
   "buffers": [
     {
       "uri": "Material_SpecularGlossiness_03.bin",
-      "byteLength": 152
+      "byteLength": 104
     }
   ],
   "bufferViews": [
@@ -64,37 +57,31 @@
     {
       "buffer": 0,
       "byteOffset": 48,
-      "byteLength": 48,
-      "name": "Colors"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 96,
       "byteLength": 32,
       "name": "Texture Coords 0"
     },
     {
       "buffer": 0,
-      "byteOffset": 128,
+      "byteOffset": 80,
       "byteLength": 24,
       "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "X.png"
-    },
-    {
-      "uri": "Texture_diffuse.png"
+      "uri": "Textures/BaseColor_X.png"
     }
   ],
   "materials": [
     {
       "extensions": {
         "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseTexture": {
-            "index": 1
-          },
+          "diffuseFactor": [
+            0.2,
+            0.2,
+            0.2,
+            0.8
+          ],
           "specularFactor": [
             0.0,
             0.0,
@@ -115,10 +102,9 @@
         {
           "attributes": {
             "POSITION": 0,
-            "COLOR_0": 1,
-            "TEXCOORD_0": 2
+            "TEXCOORD_0": 1
           },
-          "indices": 3,
+          "indices": 2,
           "material": 0
         }
       ]
@@ -140,9 +126,6 @@
   "textures": [
     {
       "source": 0
-    },
-    {
-      "source": 1
     }
   ]
 }

@@ -36,7 +36,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "EmissiveFactor - EmissiveTexture"
+      "Attributes": "EmissiveFactor"
     }
   },
   "buffers": [
@@ -64,11 +64,6 @@
       "name": "Indices"
     }
   ],
-  "images": [
-    {
-      "uri": "Texture_emissive.png"
-    }
-  ],
   "materials": [
     {
       "pbrMetallicRoughness": {
@@ -79,9 +74,6 @@
           1.0
         ],
         "metallicFactor": 0.0
-      },
-      "emissiveTexture": {
-        "index": 0
       },
       "emissiveFactor": [
         1.0,
@@ -115,11 +107,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "source": 0
     }
   ]
 }

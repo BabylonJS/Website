@@ -36,7 +36,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "MetallicRoughnessTexture - MetallicFactor"
+      "Attributes": "MetallicRoughnessTexture - RoughnessFactor"
     }
   },
   "buffers": [
@@ -66,13 +66,13 @@
   ],
   "images": [
     {
-      "uri": "Texture_metallicRoughness.png"
+      "uri": "Textures/MetallicRoughness_Plane.png"
     }
   ],
   "materials": [
     {
       "pbrMetallicRoughness": {
-        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0,
         "metallicRoughnessTexture": {
           "index": 0
         }

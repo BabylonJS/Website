@@ -21,18 +21,11 @@
       "bufferView": 1,
       "componentType": 5126,
       "count": 4,
-      "type": "VEC3",
-      "name": "Normals Accessor"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 4,
       "type": "VEC2",
       "name": "UV Accessor 0"
     },
     {
-      "bufferView": 3,
+      "bufferView": 2,
       "componentType": 5125,
       "count": 6,
       "type": "SCALAR",
@@ -43,13 +36,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "NormalTexture - Scale"
+      "Attributes": "OcclusionTexture - Strength"
     }
   },
   "buffers": [
     {
       "uri": "Material_05.bin",
-      "byteLength": 152
+      "byteLength": 104
     }
   ],
   "bufferViews": [
@@ -61,25 +54,19 @@
     {
       "buffer": 0,
       "byteOffset": 48,
-      "byteLength": 48,
-      "name": "Normals"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 96,
       "byteLength": 32,
       "name": "Texture Coords 0"
     },
     {
       "buffer": 0,
-      "byteOffset": 128,
+      "byteOffset": 80,
       "byteLength": 24,
       "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "Texture_normal.png"
+      "uri": "Textures/Occlusion_Plane.png"
     }
   ],
   "materials": [
@@ -93,9 +80,9 @@
         ],
         "metallicFactor": 0.0
       },
-      "normalTexture": {
+      "occlusionTexture": {
         "index": 0,
-        "scale": 10.0
+        "strength": 0.5
       }
     }
   ],
@@ -105,10 +92,9 @@
         {
           "attributes": {
             "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
+            "TEXCOORD_0": 1
           },
-          "indices": 3,
+          "indices": 2,
           "material": 0
         }
       ]
