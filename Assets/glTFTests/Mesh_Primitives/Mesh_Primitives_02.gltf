@@ -19,27 +19,13 @@
     },
     {
       "bufferView": 1,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC3",
-      "name": "Normals Accessor"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 3,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
       "name": "Indices Accessor"
     },
     {
-      "bufferView": 4,
+      "bufferView": 2,
       "componentType": 5126,
       "count": 3,
       "type": "VEC3",
@@ -56,21 +42,7 @@
       "name": "Positions Accessor"
     },
     {
-      "bufferView": 5,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC3",
-      "name": "Normals Accessor"
-    },
-    {
-      "bufferView": 6,
-      "componentType": 5126,
-      "count": 3,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 7,
+      "bufferView": 3,
       "componentType": 5125,
       "count": 3,
       "type": "SCALAR",
@@ -81,13 +53,13 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "VertexNormal - BaseColorTexture - Primitive0VertexUV0 - Primitive1VertexUV0"
+      "Attributes": "Primitive0_Material1BaseColorFactor - Primitive1_Material0BaseColorFactor"
     }
   },
   "buffers": [
     {
       "uri": "Mesh_Primitives_02.bin",
-      "byteLength": 216
+      "byteLength": 96
     }
   ],
   "bufferViews": [
@@ -99,64 +71,41 @@
     {
       "buffer": 0,
       "byteOffset": 36,
-      "byteLength": 36,
-      "name": "Normals"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 72,
-      "byteLength": 24,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 96,
       "byteLength": 12,
       "name": "Indices"
     },
     {
       "buffer": 0,
-      "byteOffset": 108,
+      "byteOffset": 48,
       "byteLength": 36,
       "name": "Positions"
     },
     {
       "buffer": 0,
-      "byteOffset": 144,
-      "byteLength": 36,
-      "name": "Normals"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 180,
-      "byteLength": 24,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 204,
+      "byteOffset": 84,
       "byteLength": 12,
       "name": "Indices"
-    }
-  ],
-  "images": [
-    {
-      "uri": "Texture_baseColor.png"
     }
   ],
   "materials": [
     {
       "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        }
+        "baseColorFactor": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
       }
     },
     {
       "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        }
+        "baseColorFactor": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
       }
     }
   ],
@@ -165,20 +114,16 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
+            "POSITION": 0
           },
-          "indices": 3,
+          "indices": 1,
           "material": 0
         },
         {
           "attributes": {
-            "POSITION": 4,
-            "NORMAL": 5,
-            "TEXCOORD_0": 6
+            "POSITION": 2
           },
-          "indices": 7,
+          "indices": 3,
           "material": 1
         }
       ]
@@ -195,11 +140,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "source": 0
     }
   ]
 }

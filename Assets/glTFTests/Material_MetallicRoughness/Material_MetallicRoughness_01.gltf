@@ -43,7 +43,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "VertexColor_Vector3_Float - BaseColorFactor - MetallicFactor - RoughnessFactor - BaseColorTexture - MetallicRoughnessTexture"
+      "Attributes": "VertexColor_Vector3_Float"
     }
   },
   "buffers": [
@@ -77,32 +77,9 @@
       "name": "Indices"
     }
   ],
-  "images": [
-    {
-      "uri": "Texture_baseColor.png"
-    },
-    {
-      "uri": "Texture_metallicRoughness.png"
-    }
-  ],
   "materials": [
     {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.2,
-          0.2,
-          0.2,
-          0.8
-        ],
-        "baseColorTexture": {
-          "index": 0
-        },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.0,
-        "metallicRoughnessTexture": {
-          "index": 1
-        }
-      }
+      "pbrMetallicRoughness": {}
     }
   ],
   "meshes": [
@@ -131,14 +108,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "source": 0
-    },
-    {
-      "source": 1
     }
   ]
 }

@@ -1,0 +1,82 @@
+{
+  "folder": "Material_AlphaMask",
+  "models": [
+    {
+      "fileName": "Material_AlphaMask_00.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_00.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_01.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_01.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_02.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_02.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_03.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_03.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_04.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_04.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_05.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_05.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_AlphaMask_06.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_AlphaMask_06.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    }
+  ]
+}
