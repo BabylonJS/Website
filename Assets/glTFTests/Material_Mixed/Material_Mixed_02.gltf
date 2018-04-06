@@ -1,0 +1,183 @@
+{
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC2",
+      "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC2",
+      "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    }
+  ],
+  "asset": {
+    "generator": "glTF Asset Generator",
+    "version": "2.0",
+    "extras": {
+      "Attributes": "SpecularGlossinessOnMaterial0_Yes - SpecularGlossinessOnMaterial1_No"
+    }
+  },
+  "buffers": [
+    {
+      "uri": "Material_Mixed_02.bin",
+      "byteLength": 144
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 36,
+      "byteLength": 24,
+      "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 60,
+      "byteLength": 12,
+      "name": "Indices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 72,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 108,
+      "byteLength": 24,
+      "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 132,
+      "byteLength": 12,
+      "name": "Indices"
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/BaseColor_X.png"
+    }
+  ],
+  "materials": [
+    {
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {}
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "TEXCOORD_0": 1
+          },
+          "indices": 2,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ]
+}

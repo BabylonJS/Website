@@ -22,7 +22,7 @@ function loadScene(engine, glTFParameters) {
     hdrTexture.gammaSpace = false;
     scene.createDefaultSkybox(hdrTexture, true, 100, 0.3);
 
-    if (glTFParameters !== null) {
+    if (glTFParameters != null) {
         showMenu = glTFParameters["showMenu"];
         var radius = glTFParameters["radius"];
         var camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2, radius);
@@ -41,10 +41,10 @@ function loadScene(engine, glTFParameters) {
     return scene;
 }
 
-function createCompatibilityScene(engine) {
+function createBufferInterleavedScene(engine) {
     var glTFParameters = {};
-    glTFParameters["test"] = "Compatibility";
-    glTFParameters["count"] = 6;
+    glTFParameters["test"] = "Buffer_Interleaved";
+    glTFParameters["count"] = 5;
     glTFParameters["width"] = 3;
     glTFParameters["position"] = [-1.8, 0.7, 0.0];
     glTFParameters["radius"] = 4;
@@ -67,27 +67,53 @@ function createMaterialScene(engine) {
     return loadScene(engine, glTFParameters);
 }
 
-function createMaterialAlphaScene(engine) {
+function createMaterialAlphaBlendScene(engine) {
     var glTFParameters = {};
-    glTFParameters["test"] = "Material_Alpha";
-    glTFParameters["count"] = 11;
-    glTFParameters["width"] = 5;
-    glTFParameters["position"] = [-2.5, 1.3, 0.0];
-    glTFParameters["radius"] = 5.6;
+    glTFParameters["test"] = "Material_AlphaBlend";
+    glTFParameters["count"] = 7;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
     glTFParameters["flip"] = false;
     glTFParameters["showMenu"] = false;
 
     return loadScene(engine, glTFParameters);
 }
 
-function createMaterialAlphaFlippedScene(engine) {
+function createMaterialAlphaMaskScene(engine) {
     var glTFParameters = {};
-    glTFParameters["title"] = "Material Alpha Flipped";
-    glTFParameters["test"] = "Material_Alpha";
-    glTFParameters["count"] = 11;
-    glTFParameters["width"] = 5;
-    glTFParameters["position"] = [-2.5, 1.3, 0.0];
-    glTFParameters["radius"] = 5.6;
+    glTFParameters["test"] = "Material_AlphaMask";
+    glTFParameters["count"] = 6;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
+    glTFParameters["flip"] = false;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
+function createMaterialDoubleSidedScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["test"] = "Material_DoubleSided";
+    glTFParameters["count"] = 4;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
+    glTFParameters["flip"] = false;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
+function createMaterialDoubleSidedBackScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["title"] = "Material Double Sided (Back)";
+    glTFParameters["test"] = "Material_DoubleSided";
+    glTFParameters["count"] = 4;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
     glTFParameters["flip"] = true;
     glTFParameters["showMenu"] = false;
 
@@ -97,10 +123,23 @@ function createMaterialAlphaFlippedScene(engine) {
 function createMaterialMetallicRoughnessScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Material_MetallicRoughness";
-    glTFParameters["count"] = 11;
+    glTFParameters["count"] = 12;
     glTFParameters["width"] = 5;
     glTFParameters["position"] = [-2.5, 1.3, 0.0];
     glTFParameters["radius"] = 5.6;
+    glTFParameters["flip"] = false;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
+function createMaterialMixedScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["test"] = "Material_Mixed";
+    glTFParameters["count"] = 3;
+    glTFParameters["width"] = 3;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
     glTFParameters["flip"] = false;
     glTFParameters["showMenu"] = false;
 
@@ -110,7 +149,7 @@ function createMaterialMetallicRoughnessScene(engine) {
 function createMaterialSpecularGlossinessScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Material_SpecularGlossiness";
-    glTFParameters["count"] = 11;
+    glTFParameters["count"] = 14;
     glTFParameters["width"] = 5;
     glTFParameters["position"] = [-2.5, 1.3, 0.0];
     glTFParameters["radius"] = 5.6;
@@ -120,10 +159,23 @@ function createMaterialSpecularGlossinessScene(engine) {
     return loadScene(engine, glTFParameters);
 }
 
+function createMeshPrimitiveModeScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["test"] = "Mesh_PrimitiveMode";
+    glTFParameters["count"] = 16;
+    glTFParameters["width"] = 6;
+    glTFParameters["position"] = [-2.8, 1.3, 0.0];
+    glTFParameters["radius"] = 6;
+    glTFParameters["flip"] = false;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
 function createMeshPrimitivesScene(engine) {
     var glTFParameters = {};
     glTFParameters["test"] = "Mesh_Primitives";
-    glTFParameters["count"] = 6;
+    glTFParameters["count"] = 3;
     glTFParameters["width"] = 4;
     glTFParameters["position"] = [-1.8, 0.7, 0.0];
     glTFParameters["radius"] = 4;
@@ -138,7 +190,7 @@ function createMeshPrimitivesUVScene(engine) {
     glTFParameters["test"] = "Mesh_PrimitivesUV";
     glTFParameters["count"] = 9;
     glTFParameters["width"] = 5;
-    glTFParameters["position"] = [-2.4, 1.3, 0.0];
+    glTFParameters["position"] = [-2.5, 1.3, 0.0];
     glTFParameters["radius"] = 5.6;
     glTFParameters["flip"] = false;
     glTFParameters["showMenu"] = false;
@@ -148,11 +200,24 @@ function createMeshPrimitivesUVScene(engine) {
 
 function createPrimitiveAttributeScene(engine) {
     var glTFParameters = {};
-    glTFParameters["test"] = "Primitive_Attribute";
-    glTFParameters["count"] = 18;
-    glTFParameters["width"] = 6;
-    glTFParameters["position"] = [-3.0, 1.4, 0.0];
-    glTFParameters["radius"] = 6.0;
+    glTFParameters["test"] = "Mesh_PrimitiveAttribute";
+    glTFParameters["count"] = 7;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4;
+    glTFParameters["flip"] = false;
+    glTFParameters["showMenu"] = false;
+
+    return loadScene(engine, glTFParameters);
+}
+
+function createPrimitiveVertexColorScene(engine) {
+    var glTFParameters = {};
+    glTFParameters["test"] = "Mesh_PrimitiveVertexColor";
+    glTFParameters["count"] = 6;
+    glTFParameters["width"] = 4;
+    glTFParameters["position"] = [-1.8, 0.7, 0.0];
+    glTFParameters["radius"] = 4.0;
     glTFParameters["flip"] = false;
     glTFParameters["showMenu"] = false;
 
@@ -174,7 +239,7 @@ function createTextureSamplerScene(engine) {
 
 function initScene(scene, camera, glTFParameters) {
     var assetRootDirectory = "/Assets/glTFTests/";
-    if (glTFParameters !== null) {
+    if (glTFParameters != null) {
         var assetName = glTFParameters["test"];
         var total = glTFParameters["count"];
         var width = glTFParameters["width"];
@@ -231,22 +296,6 @@ function initScene(scene, camera, glTFParameters) {
  * Parse the url for parameters.
  */
 function getURLParameters() {
-    /**
-     * Parse a string into an array of numbers.
-     * @param {string} arr 
-     */
-    function parseArray(arr) {
-        var result = [];
-        var entries = arr.substring(1, arr.length - 1).split(",");
-        var length = entries.length;
-
-        for (var i = 0; i < length; ++i) {
-            result.push(Number(entries[i]));
-        }
-
-        return result;
-    }
-
     var parameters = {};
     var queryString = window.location.href;
     var urlSplit = queryString.split('?');
@@ -275,7 +324,11 @@ function getURLParameters() {
                 parameters['width'] = value;
                 break;
             case 'position':
-                parameters['position'] = parseArray(value);
+                const positionStrings = value.match(/-?[0-9]+(\.[0-9]+)?/g);
+                parameters['position'] = [];
+                for (let i = 0; i < positionStrings.length; ++i) {
+                    parameters.position.push(Number(positionStrings[i]));
+                }
                 break;
             case 'radius':
                 parameters['radius'] = value;
@@ -372,7 +425,6 @@ function loadGLTF(scene, rootUrl, sceneFileName, name, position, caption, flip) 
                 meshes[i].parent = root;
             }
         }
-
         root.position = position;
         root.rotation = rotation;
     }, null, null);

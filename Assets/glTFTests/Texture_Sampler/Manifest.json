@@ -1,0 +1,159 @@
+{
+  "folder": "Texture_Sampler",
+  "models": [
+    {
+      "fileName": "Texture_Sampler_00.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_00.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_01.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_01.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_02.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_02.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_03.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_03.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_04.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_04.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_05.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_05.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_06.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_06.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_07.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_07.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_08.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_08.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_09.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_09.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_10.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_10.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_11.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_11.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_12.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_12.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Texture_Sampler_13.gltf",
+      "sampleImageName": "Figures/SampleImages/Texture_Sampler_13.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    }
+  ]
+}

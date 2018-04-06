@@ -36,7 +36,7 @@
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "MetallicRoughnessTexture"
+      "Attributes": "BaseColorFactor - BaseColorTexture"
     }
   },
   "buffers": [
@@ -66,13 +66,19 @@
   ],
   "images": [
     {
-      "uri": "Texture_metallicRoughness.png"
+      "uri": "Textures/BaseColor_Plane.png"
     }
   ],
   "materials": [
     {
       "pbrMetallicRoughness": {
-        "metallicRoughnessTexture": {
+        "baseColorFactor": [
+          0.2,
+          0.2,
+          0.2,
+          0.8
+        ],
+        "baseColorTexture": {
           "index": 0
         }
       }

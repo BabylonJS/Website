@@ -33,50 +33,19 @@
       "count": 6,
       "type": "SCALAR",
       "name": "Indices Accessor"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 4,
-      "type": "VEC3",
-      "max": [
-        1.5,
-        0.5,
-        0.0
-      ],
-      "min": [
-        0.5,
-        -0.5,
-        0.0
-      ],
-      "name": "Positions Accessor"
-    },
-    {
-      "bufferView": 4,
-      "componentType": 5126,
-      "count": 4,
-      "type": "VEC2",
-      "name": "UV Accessor 0"
-    },
-    {
-      "bufferView": 5,
-      "componentType": 5125,
-      "count": 6,
-      "type": "SCALAR",
-      "name": "Indices Accessor"
     }
   ],
   "asset": {
     "generator": "glTF Asset Generator",
     "version": "2.0",
     "extras": {
-      "Attributes": "SpecularGlossinessAppliedToMesh_Some - BaseColorTexture - ExtensionUsed_SpecularGlossiness"
+      "Attributes": "DiffuseTexture - SpecularFactor - GlossinessFactor"
     }
   },
   "buffers": [
     {
       "uri": "Material_SpecularGlossiness_12.bin",
-      "byteLength": 208
+      "byteLength": 104
     }
   ],
   "bufferViews": [
@@ -96,43 +65,37 @@
       "byteOffset": 80,
       "byteLength": 24,
       "name": "Indices"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 104,
-      "byteLength": 48,
-      "name": "Positions"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 152,
-      "byteLength": 32,
-      "name": "Texture Coords 0"
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 184,
-      "byteLength": 24,
-      "name": "Indices"
     }
   ],
   "images": [
     {
-      "uri": "X.png"
+      "uri": "Textures/BaseColor_X.png"
+    },
+    {
+      "uri": "Textures/Diffuse_Plane.png"
     }
   ],
   "materials": [
     {
       "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {}
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseTexture": {
+            "index": 1
+          },
+          "specularFactor": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "glossinessFactor": 0.3
+        }
       },
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
         }
       }
-    },
-    {}
+    }
   ],
   "meshes": [
     {
@@ -146,40 +109,27 @@
           "material": 0
         }
       ]
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 3,
-            "TEXCOORD_0": 4
-          },
-          "indices": 5,
-          "material": 1
-        }
-      ]
     }
   ],
   "nodes": [
     {
       "mesh": 0
-    },
-    {
-      "mesh": 1
     }
   ],
   "scene": 0,
   "scenes": [
     {
       "nodes": [
-        0,
-        1
+        0
       ]
     }
   ],
   "textures": [
     {
       "source": 0
+    },
+    {
+      "source": 1
     }
   ]
 }
