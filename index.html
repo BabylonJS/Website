@@ -2523,7 +2523,7 @@
 					<h3>Main features</h3>
 					<ul>
 						<li>Transparent WebGL 1.0/
-							<a href="http://doc.babylonjs.com/overviews/webgl2" target="_blank">WebGL 2.0</a> support</li>
+							<a href="http://doc.babylonjs.com/features/webgl2" target="_blank">WebGL 2.0</a> support</li>
 						<li>
 							<a href="http://doc.babylonjs.com/generals/File_Format_Map_(.babylon)" target="_blank">Complete scene graph</a> with lights, cameras, materials, meshes, animations, audio &amp; actions</li>
 						<li>
@@ -2544,17 +2544,17 @@
 							<li>Supports left and right handed systems</li>
 							<li>Antialiasing</li>
 							<li>
-								<a href="http://doc.babylonjs.com/tutorials/Animations" target="_blank">Animations</a> engine</li>
+								<a href="http://doc.babylonjs.com/babylon101/Animations" target="_blank">Animations</a> engine</li>
 							<li>
-								<a href="http://doc.babylonjs.com/tutorials/Particles" target="_blank">Particles</a> &amp;
+								<a href="http://doc.babylonjs.com/babylon101/Particles" target="_blank">Particles (both CPU and GPU)</a> &amp;
 								<a href="http://doc.babylonjs.com/overviews/Solid_Particle_System" target="_blank">Solid Particles</a> Systems
 							</li>
 							<li>
-								<a href="http://doc.babylonjs.com/tutorials/Sprites" target="_blank">Sprites</a> and 2D layers</li>
+								<a href="http://doc.babylonjs.com/babylon101/Sprites" target="_blank">Sprites</a> and 2D layers</li>
 							<li>Complete
 								<a href="http://doc.babylonjs.com/overviews/Playing_sounds_and_music" target="_blank">audio engine</a> based on Web Audio</li>
 							<li>Hardware accelerated
-								<a href="http://doc.babylonjs.com/overviews/gui" target="_blank">GUI</a>
+								<a href="http://doc.babylonjs.com/how_to/gui" target="_blank">GUI</a>
 							</li>
 							<li>
 								<a href="http://doc.babylonjs.com/features/behaviour" target="_blank">Behaviors</a>
@@ -2616,6 +2616,7 @@
 								<li>Bump texture</li>
 								<li>Lightmap texture</li>
 								<li>Unlimited lights (points, directionals, spots, hemispherics)</li>
+								<li>Light texture projection)</li>
 								<li>Custom materials</li>
 								<li>Custom shaders</li>
 								<li>
@@ -2646,15 +2647,15 @@
 						<li>Billboarding</li>
 						<li>Fullscreen mode</li>
 						<li>
-							<a href="http://doc.babylonjs.com/tutorials/Shadows" target="_blank">Shadow Maps and Exponentatial Shadow Maps (including soft shadows)</a>
+							<a href="http://doc.babylonjs.com/tutorials/Shadows" target="_blank">Shadow Maps and Exponentatial Shadow Maps (including soft shadows with PCF and PCSS)</a>
 						</li>
 						<li>Rendering layers</li>
 						<li>
-							<a href="http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline" target="_blank">Post-processes</a> (blur, refraction, black'n'white, color correction, fxaa,
-							<a href="http://doc.babylonjs.com/tutorials/Using_the_SSAO_rendering_pipeline" target="_blank">SSAO (including WebGL2 version)</a>,
-							<a href="http://doc.babylonjs.com/tutorials/Using_the_Volumetric_LightScattering_post-process" target="_blank">God Rays (VLS)</a>,
-							<a href="http://doc.babylonjs.com/tutorials/Using_the_HDR_Rendering_Pipeline" target="_blank">HDR</a>, DOF (Depth Of Field), tonemapping,
-							<a href="http://doc.babylonjs.com/tutorials/how_to_use_postprocesses#imageprocessing" target="_blank">Image processing</a>, customs...)
+							<a href="http://doc.babylonjs.com/how_to/How_to_use_PostProcessRenderPipeline" target="_blank">Post-processes</a> (blur, refraction, black'n'white, color correction, fxaa,
+							<a href="http://doc.babylonjs.com/how_to/Using_the_SSAO_rendering_pipeline" target="_blank">SSAO (including WebGL2 version)</a>,
+							<a href="http://doc.babylonjs.com/how_to/Using_the_Volumetric_LightScattering_post-process" target="_blank">God Rays (VLS)</a>,
+							<a href="http://doc.babylonjs.com/how_to/using_default_rendering_pipeline" target="_blank">HDR</a>, DOF (Depth Of Field), tonemapping, sharpen, grain
+							<a href="http://doc.babylonjs.com/how_to/how_to_use_postprocesses#imageprocessing" target="_blank">Image processing</a>, customs...)
 						</li>
 						<li>
 							<a href="http://doc.babylonjs.com/tutorials/How_to_use_Lens_Flares" target="_blank">Lens flares</a>
@@ -2668,6 +2669,9 @@
 						<li>Edges renderer</li>
 						<li>
 							<a href="http://doc.babylonjs.com/tutorials/Highlight_Layer" target="_blank">Highlights rendering</a>
+						</li>
+						<li>
+							<a href="http://doc.babylonjs.com/how_to/glow_layer" target="_blank">Glow layer</a>
 						</li>
 					</ul>
 					<h3>Textures</h3>
@@ -2689,8 +2693,9 @@
 						<li>Gamepad camera</li>
 						<li>VR Device Oriention camera for Cardboard</li>
 						<li>
-							<a href="http://doc.babylonjs.com/overviews/webvr_camera" target="_blank">WebVR camera</a>
+							<a href="http://doc.babylonjs.com/how_to/webvr_camera" target="_blank">WebVR camera</a>
 							<a href="http://doc.babylonjs.com/how_to/webvr_helper" target="_blank">VR Experience Helper</a>
+							<a href="http://doc.babylonjs.com/how_to/webvr_camera" target="_blank">WebVR video dome</a>
 						</li>
 						<li>Anaglyph camera</li>
 						<li>Follow camera</li>
@@ -2715,24 +2720,18 @@
 						</li>
 					</ul>
 					<h3>Exporters & Tooling</h3>
-					<a title="WebGL Blender exporter" href="http://doc.babylonjs.com/resources/blender" target="_blank">
-						<img title="Blender exporter" height="40" alt="Blender 3D logo" src="../Assets/blender-logo.svg">
-					</a>
+					<a title="WebGL Blender exporter" href="http://doc.babylonjs.com/resources/blender" target="_blank"><img title="Blender exporter" height="40" alt="Blender 3D logo" src="../Assets/blender-logo.svg"></a>
 					<br />
-					<a title="WebGL Unity exporter" href="http://doc.babylonjs.com/resources/intro" target="_blank">
-						<img title="Unity exporter" height="40" alt="Unity 3D logo" src="../Assets/unity-logo.svg">
-					</a>
+					<a title="WebGL Unity exporter" href="http://doc.babylonjs.com/resources/intro" target="_blank"><img title="Unity exporter" height="40" alt="Unity 3D logo" src="../Assets/unity-logo.svg"></a>
 					<br />
-					<a title="WebGL 3DS Max exporter" href="https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max" target="_blank">
-						<img title="3DS Max exporter" height="40" alt="Autodesk 3DS Max logo" src="../Assets/3ds-max-logo.svg">
-					</a>
+					<a title="WebGL 3DS Max exporter" href="https://github.com/BabylonJS/Exporters/tree/master/3ds%20Max" target="_blank"><img title="3DS Max exporter" height="40" alt="Autodesk 3DS Max logo" src="../Assets/3ds-max-logo.svg"></a>
 					<br />
-					<a title="WebGL Babylon.js Clara.io exporter" href="https://clara.io/" target="_blank">
-						<img title="Clara.io exporter" height="40" alt="Clara.iologo" src="../Assets/clara.io_logo_black.png">
-					</a>
+					<a title="WebGL Maya exporter" href="https://github.com/BabylonJS/Exporters/tree/master/Maya" target="_blank"><img title="Maya exporter" height="40" alt="Autodesk Maya logo" src="../Assets/maya.png"></a>					
+					<br />
+					<a title="WebGL Babylon.js Clara.io exporter" href="https://clara.io/" target="_blank"><img title="Clara.io exporter" height="40" alt="Clara.iologo" src="../Assets/clara.io_logo_black.png"></a>
 					<br />
 					<ul>
-						<li>Exporters for OBJ, FBX & STL</li>
+						<li>Exporters for OBJ & glTF</li>
 						<li>Importers for
 							<a href="http://doc.babylonjs.com/extensions/glTF" target="_blank">glTF</a>, STL & OBJ</li>
 						<li>Support for
