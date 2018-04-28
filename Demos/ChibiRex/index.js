@@ -6,7 +6,7 @@ var CreateChibiRexScene = function (engine) {
 	engine.setHardwareScalingLevel(0.75);
 
 	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
-		currentPluginName = plugin.name;
+		var currentPluginName = plugin.name;
 
 		if (plugin.name === "gltf" && plugin instanceof BABYLON.GLTFFileLoader) {
 			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
