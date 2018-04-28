@@ -6,7 +6,7 @@ var CreateYetiScene = function (engine) {
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
 	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
-		currentPluginName = plugin.name;
+		var currentPluginName = plugin.name;
 
 		if (plugin.name === "gltf" && plugin instanceof BABYLON.GLTFFileLoader) {
 			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
