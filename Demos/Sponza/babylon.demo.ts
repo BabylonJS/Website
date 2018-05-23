@@ -6,6 +6,8 @@ var LeftViveWand;
 var RightViveWand;
 var vrCamera;
 
+declare function switchFunction();
+
 module BABYLON.DEMO {
     // Size of Sponza.babylon scene is 29 MB approx.
     const SCENESIZE = 29.351353645324707;
@@ -482,6 +484,8 @@ module BABYLON.DEMO {
                         var vrBtn = <HTMLButtonElement>document.getElementById("vrButton");
                         var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
                         VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
+                        this.interactive = false;
+                        switchCamera();
                     });
 
                 }, (evt) => {
