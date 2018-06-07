@@ -449,6 +449,8 @@ var BABYLON;
                                 return mesh.checkCollisions;
                             }
                             VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
+                            _this.interactive = false;
+                            switchCamera();
                         });
                     }, function (evt) {
                         if (evt.lengthComputable) {
