@@ -15,7 +15,7 @@
 
 # THANKS
 
-    Site template: Matthieu Bué
+    Site template: Matthieu BuÃ©
 	Twitter: @Twikito
 	From: France
 
