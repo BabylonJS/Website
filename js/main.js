@@ -73,7 +73,7 @@ function webGLDescription() {
 }
 
 function noWebGLDescription(){
-    document.getElementById("descBox").style.visibility = "hidden";
+    document.getElementById("descriptionBox").style.visibility = "hidden";
 }
 
 
