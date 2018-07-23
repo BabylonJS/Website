@@ -929,3 +929,15 @@ main .about + hr.margin {
 #bigWebGL {
   text-decoration: underline;
 }
+
+#descriptionBox {
+  position: absolute;
+  font-size: 15px;
+  color: #000;
+  background-color: #FFF;
+  width: 300px;
+  height: 90px;
+  border: solid black;
+  padding: 10px;
+  visibility: hidden;
+}
