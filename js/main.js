@@ -67,3 +67,32 @@ if (queryString) {
 	window.location = "./Demos/" + query;
 }
 
+//Giving Description to big WebGL Element
+let descriptionBox = document.createElement("p");
+descriptionBox.id = "descBox";
+descriptionBox.appendChild(document.createTextNode("Web Graphics Library, or WebGL, is a JavaScript API designed to render interactive 3D computer graphics and 2D graphics within any compatible web browser, without the use of any plug-ins."));
+
+document.getElementById("bigWebGL").appendChild(descriptionBox);
+let descBox = document.getElementById("descBox");
+descBox.style.visibility = "hidden";
+//Styling
+descBox.style.fontSize = "15px";
+descBox.style.color = "#000";
+descBox.style.backgroundColor = "#FFF";
+descBox.style.position = "absolute";
+descBox.style.width = "300px";
+descBox.style.height = "90px";
+descBox.style.border = "solid black";
+descBox.style.padding = "10px";
+descBox.style.fontFamily = "roboto";
+
+function webGLDescription() {
+	document.getElementById("descBox").style.visibility = "visible";
+}
+
+function noWebGLDescription(){
+    document.getElementById("descBox").style.visibility = "hidden";
+}
+
+
+
