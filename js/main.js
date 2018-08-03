@@ -67,3 +67,14 @@ if (queryString) {
 	window.location = "./Demos/" + query;
 }
 
+
+function webGLDescription() {
+	document.getElementById("descriptionBox").style.visibility = "visible";
+}
+
+function noWebGLDescription(){
+    document.getElementById("descriptionBox").style.visibility = "hidden";
+}
+
+
+
