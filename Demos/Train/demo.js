@@ -1,7 +1,7 @@
 ﻿var demo = {
     scene: "Train",
     incremental: false,
-    binary: true,
+    binary: false,
     doNotUseCDN: false,
     collisions: true,
     offline: true,
