@@ -44,6 +44,7 @@ var CreateYetiScene = function (engine) {
 		particleSystem.particleTexture = new BABYLON.Texture("/Assets/Yeti/snowflake.png", scene);
 		scene.registerBeforeRender(function() {
 			particleSystem.startSpriteCellID = Math.round(Math.random() * 3 - 1);
+			particleSystem.endSpriteCellID = particleSystem.startSpriteCellID;
 		});
 		particleSystem.startSpriteCellID = 0;
 		particleSystem.endSpriteCellID = 0;

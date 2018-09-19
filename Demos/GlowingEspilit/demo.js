@@ -7,7 +7,6 @@
     offline: false,
     onload: function () {
         scene.autoClear = true;
-        scene.createOrUpdateSelectionOctree();
         scene.getMeshByName("Sol loin").useVertexColors = false;
         scene.gravity.scaleInPlace(0.5);
 
@@ -21,5 +20,9 @@
                 result.set(0, 0, 0, 0);
             }
         }
+        var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+        light.intensity = 0.7;
+        var VRHelper = scene.createDefaultVRExperience({createDeviceOrientationCamera:false});
+        VRHelper.enableTeleportation({ floorMeshName: "Sols" });
     }
 };
