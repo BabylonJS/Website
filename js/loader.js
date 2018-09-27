@@ -26,7 +26,7 @@ var sceneChecked;
 var sceneLocation = "../../../Scenes/";
 
 // Babylon
-var engine = new BABYLON.Engine(canvas, true);
+var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true });
 var scene;
 
 var previousPickedMesh;

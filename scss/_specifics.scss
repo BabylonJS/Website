@@ -27,3 +27,64 @@ main {
   height: 20px;
   transform: translateY(5px);
 }
+
+.wrapper {	
+	.title {
+		display:flex;
+		flex-wrap: wrap;
+		// justify-content: center;
+		align-items: center;
+		position:relative;
+		h2 {
+			margin-right: 50px;
+			width: 110px;
+			display: flex;
+		}
+		#webvrFilterSeparator {
+			width: calc(100% - 160px - 240px);
+			display: flex;
+		}
+		
+		.filters {
+			width: 240px;
+			box-sizing: border-box;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			
+			.filter-title {
+				padding:15px;
+				display:flex;
+				white-space: nowrap;
+				height:40px;
+				text-transform: uppercase;
+				align-items: center;
+				justify-content: center;
+				transition : all 0.25s ease;
+				color:#999999;
+				-ms-user-select: none;
+				user-select:none;				
+			}
+			.filter {
+				font-family: $font-texts;
+				margin:15px;
+				margin-right: 0;
+				width : 150px;
+				background-color: white;
+				border:0;
+				outline: 0;
+				padding: 1em 0 1em 0.25em;
+				cursor: pointer; 
+				
+				option {
+					height:35px;
+					border:1px solid #999999;
+				}
+				&:focus {
+					outline: none;
+					border-color: 1px solid #999999;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,145 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    }
+  ],
+  "asset": {
+    "generator": "glTF Asset Generator",
+    "version": "2.0",
+    "extras": {
+      "Attributes": "Primitive0_Material1BaseColorFactor - Primitive1_Material0BaseColorFactor"
+    }
+  },
+  "buffers": [
+    {
+      "uri": "Mesh_Primitives_02.bin",
+      "byteLength": 96
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 36,
+      "byteLength": 12,
+      "name": "Indices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 84,
+      "byteLength": 12,
+      "name": "Indices"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0
+          },
+          "indices": 1,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 2
+          },
+          "indices": 3,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

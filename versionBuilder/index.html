@@ -13,7 +13,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="http://www.babylonjs.com/img/favicon/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="http://www.babylonjs.com/img/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="http://www.babylonjs.com/img/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="http://www.babylonjs.com/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="http://www.babylonjs.com/img/favicon/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="http://www.babylonjs.com/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="http://www.babylonjs.com/img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="http://www.babylonjs.com/img/favicon/favicon-16x16.png">
@@ -30,6 +30,7 @@
 			position: initial;
 			height: initial;
 		}
+
 		#logo {
 			position: initial;
 			top: initial;
@@ -37,14 +38,25 @@
 			flex-basis: 50%;
 			transform: translateY(1.5%);
 		}
+
 		.logo img {
 			width: 100%;
 		}
+
 		#title {
 			font-size: 5.3vw;
 		}
+        
+        .buttonLink{
+            margin: 10pt auto 10pt;
+        }
+        
+        .buttonLink a{
+            text-decoration: none;
+            color: white;
+        }
 	</style>
-	
+
 </head>
 
 <body>
@@ -59,50 +71,58 @@
 				</div>
 			</div>
 			<div class="subtitle">
-				Generate your Babylon.js script using your components :  <br/>
-				select your options below and generate your favorite library!
-				</div>
+				Generate your Babylon.js script using your components :
+				<br/> select your options below and generate your favorite library!
+			</div>
 		</header>
-		
+
 		<section class="content">
-			
+
 			<h1>1. Components</h1>
-				<section class="component red" id='components'>
-					
-					
-				</section>
+			<section class="component red" id='components'>
+
+
+			</section>
 			<h1>2. Options</h1>
-				<section class="component green">
-					
-					
-					<div class="block">
-						<div class="title">Release</div>
-						<div class="choices">
-							<ul>
-								<li><input type="radio" name='release' id="stable" checked>v3.0 stable</li>
-								<li><input type="radio" name='release' id="preview">v3.1 preview</li>
-							</ul>
-						</div>
+			<section class="component green">
+
+
+				<div class="block">
+					<div class="title">Release</div>
+					<div class="choices">
+						<ul>
+							<li>
+								<input type="radio" name='release' id="stable" checked>v3.2 stable</li>
+							<li>
+								<input type="radio" name='release' id="preview">v3.3 preview</li>
+						</ul>
 					</div>
-					
-					
-					<div class="block">
-						<div class="title">Minification</div>
-						<div class="choices">
-							<ul> 
-								<li><input type="radio" name='minification' id="minified" checked>Minified</li>
-								<li><input type="radio" name='minification' id="unminified">Unminified</li>
-							</ul>
-						</div>
+				</div>
+
+
+				<div class="block">
+					<div class="title">Minification</div>
+					<div class="choices">
+						<ul>
+							<li>
+								<input type="radio" name='minification' id="minified" checked>Minified</li>
+							<li>
+								<input type="radio" name='minification' id="unminified">Unminified</li>
+						</ul>
 					</div>
-					
-				</section>
-			
-			<div id="generateButton" class="button">Generate</div>
-			
+				</div>
+
+			</section>
+
+			<div id="generateButton" class="button">Get your version</div>
+            
+            <h1>3. Tools</h1>
+            
+			<div class="button buttonLink"><a href="https://github.com/BabylonJS/Exporters">Go to exporters repo</a></div>
+
 		</section>
 	</div>
-	
+
 
 	<script src="index.js"></script>
 </body>

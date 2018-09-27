@@ -2,10 +2,8 @@ self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/Demos',
+        './',
         '/Demos/Sponza/',
-        '/Demos/Sponza/sponza.manifest',
         '/Demos/Sponza/../../css/index.css',
         '/Demos/Sponza/index.html',
         '/Demos/Sponza/index.css',
@@ -14,13 +12,14 @@ self.addEventListener('activate', function(event) {
         '/Demos/Sponza/demo.json',
         'https://code.jquery.com/pep/0.4.0/pep.min.js',
         '/Scenes/Sponza/Sponza.babylon.manifest',
-        '/Demos/Sponza/../../babylon.js',
+        'https://preview.babylonjs.com/babylon.js',
         '/Demos/Sponza/babylon.demo.js',
         '/Demos/Sponza/camera.png',
         '/Demos/Sponza/volume.png',
         '/Demos/Sponza/fullscreen.png',
         '/Demos/Sponza/speaker.png',
         '/Demos/Sponza/mute.png',
+        '/Demos/Sponza/vricon.svg',
         '/Demos/Sponza/SponzaBackgroundLoader.jpg'
       ]);
     })

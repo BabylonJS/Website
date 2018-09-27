@@ -50,7 +50,8 @@
     pipeline.lensStarTexture = new BABYLON.Texture("/assets/lensstar.png", scene);
     pipeline.lensColorTexture = new BABYLON.Texture("/assets/lenscolor.png", scene);
     pipeline.lensFlareDistortionStrength = 35;
-    pipeline.depthOfFieldDistance = 0.01;
+    pipeline.depthOfFieldDistance = 0.002;
+    pipeline.depthOfFieldBlurWidth = 32;
     pipeline.lensFlareStength = 5;
     pipeline.motionStrength = 0.1;
     pipeline.motionBlurSamples = 32;

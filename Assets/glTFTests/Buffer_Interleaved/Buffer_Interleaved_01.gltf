@@ -1,0 +1,123 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Position Accessor"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "name": "Texture Coord 0"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 20,
+      "componentType": 5121,
+      "normalized": true,
+      "count": 4,
+      "type": "VEC3",
+      "name": "Color Accessor"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    }
+  ],
+  "asset": {
+    "generator": "glTF Asset Generator",
+    "version": "2.0",
+    "extras": {
+      "Attributes": "VertexUV0_Float - VertexColor_Vector3_Byte"
+    }
+  },
+  "buffers": [
+    {
+      "uri": "Buffer_Interleaved_01.bin",
+      "byteLength": 120
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 96,
+      "byteStride": 24,
+      "name": "Interleaved attributes"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 24,
+      "name": "Indices"
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/BaseColor_Grey.png"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "TEXCOORD_0": 1,
+            "COLOR_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
