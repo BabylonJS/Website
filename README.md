@@ -3,7 +3,7 @@ Babylon.js Website
 
 www.babylonjs.com site.
 
-For questions, please use our [forum](http://www.html5gamedevs.com/forum/16-babylonjs/)
+For questions, please use our [forum](https://forum.babylonjs.com)
 Sources for Babylon.js are in a separate [repository](https://github.com/BabylonJS/Babylon.js)
 
 Documentation can be found [here](https://doc.babylonjs.com)
