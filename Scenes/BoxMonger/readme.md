@@ -9,7 +9,7 @@ You can have more information about this here : http://www.html5gamedevs.com/top
 
 I will soon write a blog article explaining this more in details.
 
-Do not hesitate to contact me on twitter to talk about this (http://www.twitter.com/meulta) or on the forum (http://www.html5gamedevs.com/forum/16-babylonjs/)
+Do not hesitate to contact me on twitter to talk about this (http://www.twitter.com/meulta) or on the forum (https://forum.babylonjs.com)
 
 Features 
 ---------
