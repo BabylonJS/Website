@@ -39,6 +39,18 @@
 
     WORLDMONGER.WaterMaterial.prototype = Object.create(BABYLON.Material.prototype);
 
+    Object.defineProperty(WORLDMONGER.WaterMaterial.prototype, "hasRenderTargetTextures", {
+        /**
+         * Gets a boolean indicating that current material needs to register RTT
+         */
+        get: function () {
+            return true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+
+
     // Properties   
     WORLDMONGER.WaterMaterial.prototype.needAlphaBlending = function () {
         return false;

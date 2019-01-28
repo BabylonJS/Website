@@ -1,11 +1,15 @@
-﻿/// <reference path="babylon.demo.js" />
+﻿/// <reference path="babylon.max.js" />
+/// <reference path="babylon.demo.js" />
 
 // Wind.mp3 Recorded by Mark DiAngelo 
 
+var divFps = document.getElementById("fps");
 var canvas = document.getElementById("renderCanvas");
 var soundBtn = document.getElementById("soundButton");
 var camBtn = document.getElementById("cameraButton");
 var speakersBtn = document.getElementById("speakersButton");
+var vrBtn = document.getElementById("vrButton");
+var vrCamera;
 
 // Babylon
 var engine = new BABYLON.Engine(canvas, true, { limitDeviceRatio: 2 }, true);
@@ -29,14 +33,16 @@ document.addEventListener("keydown", function (event) {
 
 function onNewGamepadConnected(gamepad) {
     var xboxpad = gamepad;
-    xboxpad.onbuttondown(function (buttonValue) {
-        if (buttonValue == BABYLON.Xbox360Button.Y) {
-            togglerDebugLayer();
-        }
-        if (buttonValue == BABYLON.Xbox360Button.A) {
-            switchCamera();
-        }
-    });
+    if (xboxpad.onbuttondown) {
+        xboxpad.onbuttondown(function (buttonValue) {
+            if (buttonValue == BABYLON.Xbox360Button.Y) {
+                togglerDebugLayer();
+            }
+            if (buttonValue == BABYLON.Xbox360Button.A) {
+                switchCamera();
+            }
+        });
+    }
 }
 
 // Demo
@@ -45,7 +51,7 @@ demoScheduler.onInteractive = function () {
     if (!soundsInitialized) {
         getSoundsFromScene();
         soundsInitialized = true;
-        engine.scenes[0].gamepadManager.onGamepadConnectedObservable.add(onNewGamepadConnected);        
+        engine.scenes[0].gamepadManager.onGamepadConnectedObservable.add(onNewGamepadConnected);
     }
     playSounds();
 }
@@ -73,11 +79,13 @@ function getSoundsFromScene() {
 }
 
 function playSounds() {
-    for (var index = 0; index < alwaysOnSounds.length; index++) {
-        alwaysOnSounds[index].play();
-    }
+    if (BABYLON.Engine.audioEngine.isMP3supported) {
+        for (var index = 0; index < alwaysOnSounds.length; index++) {
+            alwaysOnSounds[index].play();
+        }
 
-    fireThunderSounds();
+        fireThunderSounds();
+    }
 }
 
 function stopSounds() {
@@ -129,8 +137,13 @@ switchSpeakerType = function () {
     engine.scenes[0].headphone = headphone;
 }
 
-switchCamera = function () {
-    if (!demoScheduler.interactive) {
+switchCamera = function (callback) {
+    var setMainInteractiveCamera = function () {
+        engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+        engine.scenes[0].activeCamera.attachControl(canvas);
+        demoScheduler.vrEnabled = false;
+    };
+    if (!demoScheduler.interactive || demoScheduler.vrEnabled) {
         camBtn.disabled = true;
         demoScheduler.stop();
         var music = engine.scenes[0].getSoundByName("SponzaMusic.mp3")
@@ -144,22 +157,35 @@ switchCamera = function () {
             camBtn.disabled = false;
             camBtn.title = "Switch to demo mode";
         }, 1500);
-        var fadePP = new BABYLON.DEMO.FadePostProcessEffect();
-        fadePP.currentCamera = engine.scenes[0].activeCamera;
-        fadePP.duration = 2000;
-        fadePP.scene = engine.scenes[0];
-        fadePP.toBlack = true;
-        fadePP.start();
-        window.setTimeout(function () {
+        if (demoScheduler.vrEnabled) {
+            engine.setHardwareScalingLevel(1);
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            engine.resize();
+            setMainInteractiveCamera();
+        }
+        else {
             var fadePP = new BABYLON.DEMO.FadePostProcessEffect();
-            fadePP.currentCamera = engine.scenes[0].cameras[0];
-            fadePP.duration = 500;
+            fadePP.currentCamera = engine.scenes[0].activeCamera;
+            fadePP.duration = 2000;
             fadePP.scene = engine.scenes[0];
+            fadePP.toBlack = true;
             fadePP.start();
-            engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
-            engine.scenes[0].activeCamera.attachControl(canvas);
-            demoScheduler.interactive = true;
-        }, 2000);  
+            window.setTimeout(function () {
+                var fadePP = new BABYLON.DEMO.FadePostProcessEffect();
+                fadePP.currentCamera = engine.scenes[0].cameras[0];
+                fadePP.duration = 500;
+                fadePP.scene = engine.scenes[0];
+                fadePP.start();
+                demoScheduler.interactive = true;
+                if (!callback) {
+                    setMainInteractiveCamera();
+                }
+                else {
+                    callback();
+                }
+            }, 2000);
+        }
     }
     else {
         camBtn.title = "Switch to interactive mode";
@@ -178,7 +204,7 @@ switchCamera = function () {
             fadePP.scene = engine.scenes[0];
             fadePP.start();
             demoScheduler.restart();
-        }, 1000);   
+        }, 1000);
     }
 }
 
@@ -210,3 +236,33 @@ switchFullscreen = function () {
         BABYLON.Tools.ExitFullscreen();
     }
 };
+
+// var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
+// VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
+
+// switchToVR = function () {
+//     var VRHelper = engine.scenes[0].createDefaultVRExperience();
+//     VRHelper.enableTeleportation({ floorMeshName: "Sponza floor" });
+//     // VRHelper._btnVR.style.display = 'none'
+
+//     var attachVRCamera = function () {
+//         vrCamera.attachControl(canvas, true);
+//         engine.scenes[0].activeCamera = vrCamera;
+//     };
+
+//     if (!demoScheduler.interactive) {
+//         switchCamera(attachVRCamera);
+//     }
+//     else {
+//         VRHelper.enterVR();
+//         console.log(VRHelper)
+//         // attachVRCamera();
+
+//     }
+
+//     camBtn.title = "Switch to normal camera";
+//     demoScheduler.vrEnabled = true;
+// }
+
+
+

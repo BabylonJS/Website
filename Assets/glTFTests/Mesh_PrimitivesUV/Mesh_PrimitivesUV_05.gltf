@@ -1,0 +1,222 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "Positions Accessor"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "name": "Normals Accessor"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC4",
+      "name": "Tangents Accessor"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC3",
+      "name": "Colors Accessor"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC2",
+      "name": "UV Accessor 0"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 3,
+      "type": "VEC2",
+      "name": "UV Accessor 1"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5125,
+      "count": 3,
+      "type": "SCALAR",
+      "name": "Indices Accessor"
+    }
+  ],
+  "asset": {
+    "generator": "glTF Asset Generator",
+    "version": "2.0",
+    "extras": {
+      "Attributes": "Primitives_Split2 - Primitive1VertexUV0 - Primitive1VertexUV1 - VertexNormal - VertexTangent - VertexColor_Vector4_Float - NormalTexture - BaseColorTexture"
+    }
+  },
+  "buffers": [
+    {
+      "uri": "Mesh_PrimitivesUV_05.bin",
+      "byteLength": 264
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 36,
+      "byteLength": 12,
+      "name": "Indices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 36,
+      "name": "Positions"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 84,
+      "byteLength": 36,
+      "name": "Normals"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 120,
+      "byteLength": 48,
+      "name": "Tangents"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 168,
+      "byteLength": 36,
+      "name": "Colors"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 204,
+      "byteLength": 24,
+      "name": "Texture Coords 0"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 228,
+      "byteLength": 24,
+      "name": "Texture Coords 1"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 252,
+      "byteLength": 12,
+      "name": "Indices"
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/BaseColor_Plane.png"
+    },
+    {
+      "uri": "Textures/Normal_Plane.png"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 1
+        }
+      },
+      "normalTexture": {
+        "index": 1,
+        "texCoord": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0
+          },
+          "indices": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TANGENT": 4,
+            "COLOR_0": 5,
+            "TEXCOORD_0": 6,
+            "TEXCOORD_1": 7
+          },
+          "indices": 8,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    },
+    {
+      "source": 1
+    }
+  ]
+}

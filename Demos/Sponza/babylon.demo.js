@@ -1,8 +1,18 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+/// <reference path="babylon.d.ts" /> 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var divFps;
+var LeftViveWand;
+var RightViveWand;
+var vrCamera;
 var BABYLON;
 (function (BABYLON) {
     var DEMO;
@@ -10,7 +20,7 @@ var BABYLON;
         // Size of Sponza.babylon scene is 29 MB approx.
         var SCENESIZE = 29.351353645324707;
         var ITEMSTOSTREAM = 78;
-        var Trigger = (function () {
+        var Trigger = /** @class */ (function () {
             function Trigger() {
             }
             Trigger.prototype.engage = function (effect) {
@@ -18,33 +28,33 @@ var BABYLON;
             Trigger.prototype.disengage = function () {
             };
             return Trigger;
-        })();
+        }());
         DEMO.Trigger = Trigger;
-        var Effect = (function () {
+        var Effect = /** @class */ (function () {
             function Effect() {
             }
             Effect.prototype.start = function () {
             };
             return Effect;
-        })();
+        }());
         DEMO.Effect = Effect;
-        var Track = (function () {
+        var Track = /** @class */ (function () {
             function Track() {
             }
             return Track;
-        })();
+        }());
         DEMO.Track = Track;
-        var DemoConfiguration = (function () {
+        var DemoConfiguration = /** @class */ (function () {
             function DemoConfiguration() {
                 this.startCameraIndex = 0;
             }
             return DemoConfiguration;
-        })();
+        }());
         DEMO.DemoConfiguration = DemoConfiguration;
-        var TimeTrigger = (function (_super) {
+        var TimeTrigger = /** @class */ (function (_super) {
             __extends(TimeTrigger, _super);
             function TimeTrigger() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             TimeTrigger.prototype.engage = function (effect) {
                 this.handler = setTimeout(function () {
@@ -55,12 +65,12 @@ var BABYLON;
                 clearTimeout(this.handler);
             };
             return TimeTrigger;
-        })(Trigger);
+        }(Trigger));
         DEMO.TimeTrigger = TimeTrigger;
-        var FadePostProcessEffect = (function (_super) {
+        var FadePostProcessEffect = /** @class */ (function (_super) {
             __extends(FadePostProcessEffect, _super);
             function FadePostProcessEffect() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             FadePostProcessEffect.prototype.start = function () {
                 var _this = this;
@@ -89,13 +99,14 @@ var BABYLON;
                 }, this.duration);
             };
             return FadePostProcessEffect;
-        })(Effect);
+        }(Effect));
         DEMO.FadePostProcessEffect = FadePostProcessEffect;
-        var SwitchCameraEffect = (function (_super) {
+        var SwitchCameraEffect = /** @class */ (function (_super) {
             __extends(SwitchCameraEffect, _super);
             function SwitchCameraEffect(scheduler) {
-                _super.call(this);
-                this.scheduler = scheduler;
+                var _this = _super.call(this) || this;
+                _this.scheduler = scheduler;
+                return _this;
             }
             SwitchCameraEffect.prototype.start = function () {
                 this.scene.activeCamera = this.scene.cameras[this.cameraIndex];
@@ -105,12 +116,12 @@ var BABYLON;
                 }
             };
             return SwitchCameraEffect;
-        })(Effect);
+        }(Effect));
         DEMO.SwitchCameraEffect = SwitchCameraEffect;
-        var TextEffect = (function (_super) {
+        var TextEffect = /** @class */ (function (_super) {
             __extends(TextEffect, _super);
             function TextEffect() {
-                _super.apply(this, arguments);
+                return _super !== null && _super.apply(this, arguments) || this;
             }
             TextEffect.prototype.start = function () {
                 var _this = this;
@@ -144,13 +155,24 @@ var BABYLON;
                 }, this.exitDuration);
             };
             return TextEffect;
-        })(Effect);
+        }(Effect));
         DEMO.TextEffect = TextEffect;
-        var Scheduler = (function () {
+        var Scheduler = /** @class */ (function () {
             function Scheduler() {
                 this.triggers = [];
                 this._interactive = false;
+                this._vrEnabled = false;
             }
+            Object.defineProperty(Scheduler.prototype, "vrEnabled", {
+                get: function () {
+                    return this._vrEnabled;
+                },
+                set: function (value) {
+                    this._vrEnabled = value;
+                },
+                enumerable: true,
+                configurable: true
+            });
             Object.defineProperty(Scheduler.prototype, "interactive", {
                 get: function () {
                     return this._interactive;
@@ -227,20 +249,29 @@ var BABYLON;
                         // Postprocesses
                         BABYLON.Effect.ShadersStore["fadePixelShader"] =
                             "precision highp float;" +
-                                "varying vec2 vUV;" +
-                                "uniform sampler2D textureSampler; " +
-                                "uniform float fadeLevel; " +
-                                "void main(void){" +
-                                "vec4 baseColor = texture2D(textureSampler, vUV) * fadeLevel;" +
-                                "baseColor.a = 1.0;" +
-                                "gl_FragColor = baseColor;" +
-                                "}";
+                            "varying vec2 vUV;" +
+                            "uniform sampler2D textureSampler; " +
+                            "uniform float fadeLevel; " +
+                            "void main(void){" +
+                            "vec4 baseColor = texture2D(textureSampler, vUV) * fadeLevel;" +
+                            "baseColor.a = 1.0;" +
+                            "gl_FragColor = baseColor;" +
+                            "}";
                         scene.executeWhenReady(function () {
                             if (canvas.requestFullscreen != undefined ||
                                 canvas.mozRequestFullScreen != undefined ||
                                 canvas.webkitRequestFullscreen != undefined ||
                                 canvas.msRequestFullscreen != undefined) {
                                 document.getElementById("fullscreenButton").classList.remove("hidden");
+                            }
+                            if (navigator.getVRDisplays) {
+                                //, false, { trackPosition: true }
+                                vrCamera = new BABYLON.WebVRFreeCamera("camera1", new BABYLON.Vector3(-0.8980848729619885, 1, 0.4818257550471734), engine.scenes[0]);
+                                vrCamera.deviceScaleFactor = 1;
+                                //engine.disableVR();
+                            }
+                            else {
+                                vrCamera = new BABYLON.VRDeviceOrientationFreeCamera("vrCam", new BABYLON.Vector3(-0.8980848729619885, 2, 0.4818257550471734), engine.scenes[0]);
                             }
                             if (!BABYLON.Engine.audioEngine.unlocked) {
                                 streamingText.className = "hidden";
@@ -251,7 +282,10 @@ var BABYLON;
                                 BABYLON.Engine.audioEngine.onAudioUnlocked = function () {
                                     document.getElementById("sponzaLoader").className = "hidden";
                                     document.getElementById("controls").className = "";
-                                    _this.restart();
+                                    //this.restart();
+                                    engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                                    engine.scenes[0].activeCamera.attachControl(canvas);
+                                    _this.interactive = true;
                                 };
                             }
                             if (onload) {
@@ -259,6 +293,7 @@ var BABYLON;
                             }
                             // Render loop
                             var renderFunction = function () {
+                                divFps.innerHTML = engine.getFps().toFixed() + " fps";
                                 // Render scene
                                 scene.render();
                             };
@@ -403,8 +438,19 @@ var BABYLON;
                             if (BABYLON.Engine.audioEngine.unlocked) {
                                 document.getElementById("sponzaLoader").className = "hidden";
                                 document.getElementById("controls").className = "";
-                                _this.restart();
+                                //this.restart();
+                                engine.scenes[0].activeCamera = engine.scenes[0].cameras[0];
+                                engine.scenes[0].activeCamera.attachControl(canvas);
+                                _this.interactive = true;
                             }
+                            var vrBtn = document.getElementById("vrButton");
+                            var VRHelper = engine.scenes[0].createDefaultVRExperience({ useCustomVRButton: true, customVRButton: vrBtn });
+                            VRHelper.raySelectionPredicate = function (mesh) {
+                                return mesh.checkCollisions;
+                            }
+                            VRHelper.enableTeleportation({ floorMeshName: "Sponza Floor" });
+                            _this.interactive = false;
+                            switchCamera();
                         });
                     }, function (evt) {
                         if (evt.lengthComputable) {
@@ -469,8 +515,7 @@ var BABYLON;
                 }
             };
             return Scheduler;
-        })();
+        }());
         DEMO.Scheduler = Scheduler;
     })(DEMO = BABYLON.DEMO || (BABYLON.DEMO = {}));
 })(BABYLON || (BABYLON = {}));
-//# sourceMappingURL=babylon.demo.js.map

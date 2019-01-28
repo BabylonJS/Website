@@ -1,0 +1,38 @@
+{
+  "folder": "Material_Mixed",
+  "models": [
+    {
+      "fileName": "Material_Mixed_00.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_Mixed_00.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_Mixed_01.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_Mixed_01.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    },
+    {
+      "fileName": "Material_Mixed_02.gltf",
+      "sampleImageName": "Figures/SampleImages/Material_Mixed_02.png",
+      "camera": {
+        "translation": [
+          0.0,
+          0.0,
+          1.3
+        ]
+      }
+    }
+  ]
+}

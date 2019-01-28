@@ -43,7 +43,7 @@ var CreateVertexDataTestScene = function(engine) {
     size = 128;
     var count = 8000;
 
-    var globalVertexData = new BABYLON.VertexData();
+    var globalVertexData;
 
     for (var i = 0; i < count; i++) {
         var planeVertexData = BABYLON.VertexData.CreatePlane({ size: 128 });
@@ -58,8 +58,12 @@ var CreateVertexDataTestScene = function(engine) {
 
         planeVertexData.transform(transformMatrix);
 
-        // Merge
-        globalVertexData.merge(planeVertexData);
+		// Merge
+		if (!globalVertexData) {
+			globalVertexData = planeVertexData;
+		} else {
+			globalVertexData.merge(planeVertexData);
+		}
     }
 
     var clouds = new BABYLON.Mesh("Clouds", scene);

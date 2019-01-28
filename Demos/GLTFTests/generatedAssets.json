@@ -1,0 +1,55 @@
+{
+    "tests": {
+        "Buffer_Interleaved": {
+            "url": "?test=Buffer_Interleaved&count=5&width=3&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+        },
+        "Compatibility": {
+            "url": "?test=Compatibility&count=8&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+        },
+        "Material": {
+            "url": "?test=Material&count=8&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+        },
+        "Material_AlphaBlend": {
+            "url": "?test=Material_AlphaBlend&count=7&width=4&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Material_AlphaMask": {
+            "url": "?test=Material_AlphaMask&count=6&width=5&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Material_Doublesided": {
+            "url": "?test=Material_Doublesided&count=4&width=4&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Material_MetallicRoughness": {
+            "url": "?test=Material_MetallicRoughness&count=12&width=5&position=[-2.5,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        },
+        "Material_Mixed": {
+            "url": "?test=Material_Mixed&count=3&width=3&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Material_SpecularGlossiness": {
+            "url": "?test=Material_SpecularGlossiness&count=14&width=5&position=[-2.5,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        },
+        "Mesh_PrimitiveMode": {
+            "url": "?test=Mesh_PrimitiveMode&count=16&width=6&position=[-2.8,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Mesh_Primitives": {
+            "url": "?test=Mesh_Primitives&count=3&width=4&position=[-1.8,0.7,0.0]&radius=4&flip=false&showMenu=true"
+        },
+        "Mesh_PrimitivesUV": {
+            "url": "?test=Mesh_PrimitivesUV&count=9&width=5&position=[-2.4,1.3,0.0]&radius=5.4&flip=false&showMenu=true"
+        },
+        "Node_Attribute": {
+            "url": "?test=Node_Attribute&count=9&width=5&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Node_NegativeScale": {
+            "url": "?test=Node_NegativeScale&count=13&width=5&position=[-2.5,1.3,0.0]&radius=5.6&%20Alpha&flip=false&showMenu=true"
+        },
+        "Primitive_Attribute": {
+            "url": "?test=Primitive_Attribute&count=7&width=6&position=[-3.0,1.4,0.0]&radius=6&flip=false&showMenu=true"
+        },
+        "Primitive_VertexColor": {
+            "url": "?test=Primitive_VertexColor&count=6&width=6&position=[-3.0,1.4,0.0]&radius=6&flip=false&showMenu=true"
+        },
+        "Texture_Sampler": {
+            "url": "?test=Texture_Sampler&count=14&width=6&position=[-3.0,1.3,0.0]&radius=5.6&flip=false&showMenu=true"
+        }
+    }
+}
