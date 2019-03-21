@@ -55,8 +55,9 @@ var renderPage = function(pageConfig, globalConfig) {
 _gulp.task('build', function(done) {
 	_handlebars.registerHelper('block', function(block) {
 		var template = getTemplate("./templates/" + block.templateName + "-template.html");
-	  	var html = template(block.context);
-	  	return new _handlebars.SafeString(html);
+	  	var html = template(block.content);
+	  	
+	  	return html;
 	});
 
 	var siteConfig = parseJsonFromFile(_path.join(_contentRootPath, "config.json"));

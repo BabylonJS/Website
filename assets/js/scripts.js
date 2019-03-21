@@ -35,7 +35,5 @@ function showSubMenu(event) {
         headerTopWrapper.classList.toggle("show-submenu");
         headerTopWrapper.classList.remove("hide-menu");
         event.preventDefault();
-    } else {
-        return true;
     }
 }
