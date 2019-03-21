@@ -1,0 +1,51 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.vs": true,
+        "**/.tempChromeProfileForDebug": true,
+        "**/node_modules": true,
+        "**/temp": true,
+        "**/public/build": true,
+        "**/.temp": true,
+        "src/**/*.d.ts": true,
+        "gui/**/*.d.ts": true,
+        "inspector/**/*.d.ts": true,
+        "loaders/**/*.d.ts": true,
+        "materialsLibrary/**/*.d.ts": true,
+        "postProcessesLibrary/**/*.d.ts": true,
+        "proceduralTexturesLibrary/**/*.d.ts": true,
+        "serielazers/**/*.d.ts": true,
+        "Viewer/**/*.d.ts": true,
+        "**/*.js.map": true,
+        "**/*.js.fx": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        }
+    },
+    "files.associations": {
+        "*.fx": "glsl"
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.vs": true,
+        "**/.tempChromeProfileForDebug": true,
+        "**/.temp": true,
+        "**/dist": true,
+        "**/*.map": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.d.ts": true,
+        "assets": true
+    },
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+}
