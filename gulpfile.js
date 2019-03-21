@@ -23,6 +23,12 @@ var getPageConfig = function(rootPath, pageConfig) {
 		var config = parseJsonFromFile(configPath);
 		res = Object.assign(pageConfig, config);
 		res.absoluteRoot = _path.join(rootPath, pageConfig.root);
+		
+		res.siteRoot = "";
+		var subroutes = res.absoluteRoot.split("/");
+		for (var i = 0; i <= subroutes.length -2; i++) {
+			res.siteRoot = res.siteRoot + "../";
+		}
 	}
 	else {
 		res = pageConfig;
@@ -56,7 +62,7 @@ _gulp.task('build', function(done) {
 	_handlebars.registerHelper('block', function(block) {
 		var template = getTemplate("./templates/" + block.templateName + "-template.html");
 	  	var html = template(block.content);
-	  	
+
 	  	return html;
 	});
 
