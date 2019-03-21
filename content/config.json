@@ -1,0 +1,86 @@
+
+{
+	"home": {
+		"root": "home"
+	},
+	"menu": [
+		{
+			"root": "explore",
+			"children": [
+				{
+					"root": "features"
+				},
+				{
+					"root": "visual"
+				},
+				{
+					"root": "cameras"
+				},
+				{
+					"root": "user_interface"
+				},
+				{
+					"root": "meshes"
+				},
+				{
+					"root": "animation"
+				},
+				{
+					"root": "physics"
+				},
+				{
+					"root": "performance"
+				}
+			]
+		},
+		{
+			"root": "tools"
+		},
+		{
+			"root": "learn"
+		},
+		{
+			"root": "community"
+		},
+		{
+			"root": "team"
+		},
+		{
+			"root": "get"
+		}
+	],
+	"footerMenu": [
+		{
+			"menuTitle": "Features",
+			"url": "./features/index.html"
+		},
+		{
+			"menuTitle": "Logo and Branding",
+			"url": "#"
+		},
+		{
+			"menuTitle": "Roadmap",
+			"url": "#"
+		},
+		{
+			"menuTitle": "Education",
+			"url": "#"
+		},
+		{
+			"menuTitle": "Partners",
+			"url": "#"
+		},
+		{
+			"menuTitle": "More resources",
+			"url": "#"
+		},
+		{
+			"menuTitle": "Contribute",
+			"url": "#"
+		},
+		{
+			"menuTitle": "Contact Us",
+			"url": "#"
+		}
+	]
+}

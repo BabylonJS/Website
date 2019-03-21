@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    {{#each metaTags}}
+        <meta name="{{name}}" property="{{property}}" content="{{content}}"/>
+    {{/each}}
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-top-wrapper">
+                <div class="header-top">
+                    <div class="menu">
+                        <div class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul>
+                            {{#each menu}}
+                                <li><a class="{{menuTitle}}" href="../{{root}}/index.html">{{menuTitle}}</a>
+                            {{/each}}
+                        </ul>
+                        <div class="sub-menu">
+                            {{#each menu}}
+                                {{#if children}}
+                                    <ul class="{{menuTitle}} hidden">
+                                        {{#each children}}
+                                            <li><a href="../{{../root}}/{{root}}/index.html">{{menuTitle}}</a></li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                        <div class="logo">
+                            <a href="/home/index.html" ><img src="http://infr.mistaua.com/foto1/2018/20902_1_1.png" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download"></div>
+        </div>
+    </div>
+    <div class="content-container">
+        {{#each blocks}}
+            {{{block this}}}
+        {{/each}}
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons"></div>
+            <div class="footer-menu">
+                <ul>
+                    {{#each footerMenu}}
+                        <li><a href="#">Features</a></li>
+                    {{/each}}
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Logo and Branding</a></li>
+                    <li><a href="#">Roadmap</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">More Resources</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src="../assets/js/scripts.js"></script>
+
+</body>
+</html>
