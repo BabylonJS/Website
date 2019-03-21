@@ -1,3 +1,21 @@
+## Installation process
+
+```sh
+    npm install -g gulp
+    npm install
+```
+## Changing build directory
+Just change this constant in gulpfile.js
+```sh
+    const _outputRootPath = "build";
+```
+
+## Build process
+Run gulp task and check build folder
+```sh
+    gulp build
+```
+
 ## Additional options for the page
 #### Page title
 this property available as part of page level Json property
