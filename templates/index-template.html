@@ -8,7 +8,7 @@
     {{#each metaTags}}
         <meta name="{{name}}" property="{{property}}" content="{{content}}"/>
     {{/each}}
-    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="{{siteRoot}}assets/styles/styles.css">
 </head>
 <body>
     <div class="header">
@@ -23,7 +23,7 @@
                         </div>
                         <ul>
                             {{#each menu}}
-                                <li><a class="{{menuTitle}}" href="../{{root}}/index.html">{{menuTitle}}</a>
+                                <li><a class="{{menuTitle}}" href="{{../siteRoot}}{{root}}/index.html">{{menuTitle}}</a>
                             {{/each}}
                         </ul>
                         <div class="sub-menu">
@@ -31,14 +31,14 @@
                                 {{#if children}}
                                     <ul class="{{menuTitle}} hidden">
                                         {{#each children}}
-                                            <li><a href="../{{../root}}/{{root}}/index.html">{{menuTitle}}</a></li>
+                                            <li><a href="{{../../siteRoot}}{{../root}}/{{root}}/index.html">{{menuTitle}}</a></li>
                                         {{/each}}
                                     </ul>
                                 {{/if}}
                             {{/each}}
                         </div>
                         <div class="logo">
-                            <a href="/home/index.html" ><img src="http://infr.mistaua.com/foto1/2018/20902_1_1.png" alt="logo"></a>
+                            <a href="{{siteRoot}}home/index.html" ><img src="http://infr.mistaua.com/foto1/2018/20902_1_1.png" alt="logo"></a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </footer>
-<script src="../assets/js/scripts.js"></script>
+<script src="{{siteRoot}}assets/js/scripts.js"></script>
 
 </body>
 </html>
