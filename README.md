@@ -28,6 +28,12 @@ Web site will be available at http://localhost:8080/
     gulp server
 ```
 
+## Development mode
+Web site will be available at http://localhost:8080/
+```sh
+    gulp run
+```
+
 ## Additional options for the page
 #### Page title
 this property available as part of page level Json property
