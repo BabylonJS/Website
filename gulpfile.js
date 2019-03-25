@@ -54,7 +54,11 @@ var renderPage = function(pageConfig, globalConfig) {
 	var dir = _path.join(_path.resolve(), _outputRootPath, pageConfig.absoluteRoot.replace(_contentRootPath, ""));
 	_fs.ensureDirSync(dir);
 	//copy assets to build assets dirrectory
-	_fs.copySync(_path.join(pageConfig.absoluteRoot, "assets"), _path.join(_path.resolve(), _outputRootPath, "assets"));
+	try {
+		_fs.copySync(_path.join(pageConfig.absoluteRoot, "assets"), _path.join(_path.resolve(), _outputRootPath, "assets"));
+	} catch(ex) {
+		//ignore exceptyion because this is optional step
+	}
 
 	_fs.writeFileSync(_path.join(dir, "index.html"), html, {encoding:'utf8'});
 };
@@ -150,8 +154,23 @@ _gulp.task('server', function() {
 	_connect.server({
 		root: _outputRootPath,
 	    port: 8080,
-		keepalive: true
+		keepalive: true,
+		livereload: true
 	});
 });
+
+_gulp.task('reload', function() {
+	_connect.reload();
+});
+
+_gulp.task('watch-and-reload', function(done) {
+	_gulp.watch(['content/**/*.json', 'templates/**/*.html', 'assets/**/*.js', 'assets/**/*.css'], function() {
+	  }).on('change', function (file) {
+	  	_gulp.series('build', 'reload')();
+	  });
+	  done();
+});
+
+_gulp.task('run', _gulp.series('build', 'watch-and-reload', 'server'));
 
 //--------------- End ----------------
