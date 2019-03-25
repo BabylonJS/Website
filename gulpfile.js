@@ -24,12 +24,6 @@ var getPageConfig = function(rootPath, pageConfig) {
 		var config = parseJsonFromFile(configPath);
 		res = Object.assign(pageConfig, config);
 		res.absoluteRoot = _path.join(rootPath, pageConfig.root);
-		
-		res.siteRoot = "";
-		var subroutes = res.absoluteRoot.split("/");
-		for (var i = 0; i <= subroutes.length -2; i++) {
-			res.siteRoot = res.siteRoot + "../";
-		}
 	}
 	else {
 		res = pageConfig;
