@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+}
+
 .hidden {
     display: none;
 }
@@ -95,28 +99,6 @@ p {
 .inspect-setup {
     background: #333333;
     color: #E2E2E2;
-}
-
-.demos h2 {
-    margin-left: 60px;
-}
-
-.demos .container {
-    padding: 40px 0;
-    flex-direction: column;
-}
-
-.demos-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.demos-wrapper > div {
-    max-width: 450px;
-    width: 100%;
-    margin: 0 10px;
-    height: 350px;
-    background: #6594b5;
 }
 
 .footer {
@@ -298,6 +280,7 @@ li.has-sub-menu {
     left: -1000px;
 }
 
+
 @media (max-width: 1024px) {
     html, body {
       overflow-x: hidden;
@@ -317,18 +300,6 @@ li.has-sub-menu {
 }/*989px*/
 
 @media (max-width: 768px) {
-    .demos-wrapper > div {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .demos-wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 30px;
-    }
-
     .footer .container {
         padding: 0 30px;
     }
@@ -379,6 +350,65 @@ li.has-sub-menu {
         width: 100%;
     }
 }/*768px*/
+
+
+/****************      galleryBlock      ************/
+
+/****************          end           ************/
+/****************  samplesCarauselBlock  ************/
+
+/****************          end           ************/
+/****************   imagesAndTextBlock   ************/
+
+/****************          end           ************/
+/****************      imagesBlock       ************/
+
+.images-block .images-container div {
+    float: left;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 7px 15px 7px;
+}
+
+.images-block .images-container div a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+.images-block .images-container div a img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+/****************          end           ************/
+/****************      galleryBlock      ************/
+
+.gallery-block .images-container div {
+    float: left;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 7px 15px 7px;
+}
+
+.gallery-block .images-container div a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+.gallery-block .images-container div a img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+/****************          end           ************/
 
 
 

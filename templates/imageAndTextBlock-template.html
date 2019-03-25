@@ -1,8 +1,14 @@
-<div class="image-And-Text-Block">
+<div class="image-and-text-block" style="background-color: {{background}}">
     <div class="inner-container">
+    	{{#if (eq alignment "left")}}
+            <img src="{{img.url}}" alt="{{img.alt}}">
+        {{/if}}
         <div class="text-block">
             <h2>{{title}}</h2>
             <p>{{desc}}</p>
         </div>
+        {{#if (eq alignment "right")}}
+            <img src="{{img.url}}" alt="{{img.alt}}">
+        {{/if}}
     </div>
 </div>
