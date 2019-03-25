@@ -1,7 +1,8 @@
 var _gulp = require('gulp'),
-	_handlebars = require("handlebars"),
+	_handlebars = require('handlebars'),
 	_fs = require('fs-extra'),
-	_path = require('path');
+	_path = require('path'),
+	_connect = require('gulp-connect');
 
 //--------------- Constants ----------------
 const _contentRootPath = "content";
@@ -23,12 +24,6 @@ var getPageConfig = function(rootPath, pageConfig) {
 		var config = parseJsonFromFile(configPath);
 		res = Object.assign(pageConfig, config);
 		res.absoluteRoot = _path.join(rootPath, pageConfig.root);
-		
-		res.siteRoot = "";
-		var subroutes = res.absoluteRoot.split("/");
-		for (var i = 0; i <= subroutes.length -2; i++) {
-			res.siteRoot = res.siteRoot + "../";
-		}
 	}
 	else {
 		res = pageConfig;
@@ -48,10 +43,18 @@ var renderPage = function(pageConfig, globalConfig) {
 	var template = getTemplate("./templates/index-template.html");
 	var context = pageConfig;
 	context.menu = globalConfig.menu;
+	context.footerMenu = globalConfig.footerMenu;
+	context.socials = globalConfig.socials;
 	var html = template(context);
 
 	var dir = _path.join(_path.resolve(), _outputRootPath, pageConfig.absoluteRoot.replace(_contentRootPath, ""));
 	_fs.ensureDirSync(dir);
+	//copy assets to build assets dirrectory
+	try {
+		_fs.copySync(_path.join(pageConfig.absoluteRoot, "assets"), _path.join(_path.resolve(), _outputRootPath, "assets"));
+	} catch(ex) {
+		//ignore exceptyion because this is optional step
+	}
 
 	_fs.writeFileSync(_path.join(dir, "index.html"), html, {encoding:'utf8'});
 };
@@ -59,19 +62,51 @@ var renderPage = function(pageConfig, globalConfig) {
 
 //--------------- Gulp tasks ----------------
 _gulp.task('build', function(done) {
-	_handlebars.registerHelper('block', function(block) {
-		var template = getTemplate("./templates/" + block.templateName + "-template.html");
-	  	var html = template(block.content);
+	//init handlebars
+	_handlebars.registerHelper({
+		block: function(block) {
+			var template = getTemplate("./templates/" + block.templateName + "-template.html");
+		  	var html = template(block.content);
 
-	  	return html;
+		  	return html;
+		},
+		json: function (obj) {
+	        return new _handlebars.SafeString(JSON.stringify(obj));
+	    },
+	    eq: function (v1, v2) {
+	        return v1 === v2;
+	    },
+	    ne: function (v1, v2) {
+	        return v1 !== v2;
+	    },
+	    lt: function (v1, v2) {
+	        return v1 < v2;
+	    },
+	    gt: function (v1, v2) {
+	        return v1 > v2;
+	    },
+	    lte: function (v1, v2) {
+	        return v1 <= v2;
+	    },
+	    gte: function (v1, v2) {
+	        return v1 >= v2;
+	    },
+	    and: function () {
+	        return Array.prototype.slice.call(arguments).every(Boolean);
+	    },
+	    or: function () {
+	        return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
+	    }
 	});
 
-	var siteConfig = parseJsonFromFile(_path.join(_contentRootPath, "config.json"));
+	var siteConfig = parseJsonFromFile(_path.join(_contentRootPath, "site.json"));
 
 	var globalConfig = {
-		menu: []
+		menu: [],
+		socials: siteConfig.socials,
+		footerMenu: siteConfig.footerMenu
 	};
-
+	
 	//load settings for home page
 	siteConfig.home = getPageConfig(_contentRootPath, siteConfig.home);
 	//load settings for all children
@@ -112,4 +147,28 @@ _gulp.task('build', function(done) {
 
 	done();
 });
-//--------------- Helpers ----------------
+
+_gulp.task('server', function() {
+	_connect.server({
+		root: _outputRootPath,
+	    port: 8080,
+		keepalive: true,
+		livereload: true
+	});
+});
+
+_gulp.task('reload', function() {
+	_connect.reload();
+});
+
+_gulp.task('watch-and-reload', function(done) {
+	_gulp.watch(['content/**/*.json', 'templates/**/*.html', 'assets/**/*.js', 'assets/**/*.css'], function() {
+	  }).on('change', function (file) {
+	  	_gulp.series('build', 'reload')();
+	  });
+	  done();
+});
+
+_gulp.task('run', _gulp.series('build', 'watch-and-reload', 'server'));
+
+//--------------- End ----------------

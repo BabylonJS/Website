@@ -4,6 +4,13 @@
     npm install -g gulp
     npm install
 ```
+## If you have any issues with installing gulp
+
+just run this command with admin permission and try previous step again
+```sh
+    npm cache clear --force
+```
+
 ## Changing build directory
 Just change this constant in gulpfile.js
 ```sh
@@ -14,6 +21,17 @@ Just change this constant in gulpfile.js
 Run gulp task and check build folder
 ```sh
     gulp build
+```
+## Run server
+Web site will be available at http://localhost:8080/
+```sh
+    gulp server
+```
+
+## Development mode
+Web site will be available at http://localhost:8080/
+```sh
+    gulp run
 ```
 
 ## Additional options for the page
@@ -63,7 +81,7 @@ Image and text:
     "alignment": "left",//left or right
     "background": "#5C5C5C",
     "img": {
-      "name": "imageName",//relative path to the image
+      "url": "imageName",//relative path to the image
       "alt": "Alternative text for the image"
     },
     "title": "Block title",
@@ -90,21 +108,21 @@ Table with images:
     "items": [
       {
         "img": {
-          "name": "featuredDemo1",
+          "url": "featuredDemo1",
           "alt": "Demo 1 description"
         },
         "link": "https://google.com"
       },
       {
         "img": {
-          "name": "featuredDemo2",
+          "url": "featuredDemo2",
           "alt": "Demo 2 description"
         },
         "link": "https://google.ua"
       },
       {
         "img": {
-          "name": "featuredDemo3",
+          "url": "featuredDemo3",
           "alt": "Demo 3 description"
         },
         "link": "https://google.nl"

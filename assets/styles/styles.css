@@ -1,11 +1,74 @@
+@font-face {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Acumin-RPro.woff'), url('../fonts/Acumin-RPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: local('../fonts/AcuminPro-Light.otf'), url('../fonts/AcuminPro-Light.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Thin';
+    font-weight: 100;
+    src: local('../fonts/AcuminPro-Thin.otf'), url('../fonts/AcuminPro-Thin.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Acumin Pro Italic'), url('Acumin-ItPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Acumin Pro Bold'), url('../fonts/Acumin-BdPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../fonts/Acumin Pro Bold Italic'), url('Acumin-BdItPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    font-weight: 400;
+    src: local('../fonts/AcuminProExtraCondensed-Regular.otf'), url('../fonts/AcuminProExtraCondensed-Regular.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    font-weight: 600;
+    src: local('../fonts/AcuminProExtraCondensed-SemiBold.otf'), url('../fonts/AcuminProExtraCondensed-SemiBold.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    font-weight: 200;
+    src: local('../fonts/AcuminProExtraCondensed-Light.otf'), url('../fonts/AcuminProExtraCondensed-Light.otf') format('woff');
+}
+
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
 }
 
 .hidden {
@@ -97,28 +160,6 @@ p {
     color: #E2E2E2;
 }
 
-.demos h2 {
-    margin-left: 60px;
-}
-
-.demos .container {
-    padding: 40px 0;
-    flex-direction: column;
-}
-
-.demos-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.demos-wrapper > div {
-    max-width: 450px;
-    width: 100%;
-    margin: 0 10px;
-    height: 350px;
-    background: #6594b5;
-}
-
 .footer {
     background: #2a2a2a;
     height: 246px;
@@ -141,7 +182,7 @@ p {
     overflow: hidden;
     width: 270px;
 
-    transition: width .25s;
+    transition: width .15s linear;
 }
 
 .header-top-wrapper.show {
@@ -154,6 +195,9 @@ p {
     height: 70px;
     display: flex;
     align-items: center;
+    font-family: "Acumin Pro ExtraCondensed";
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .show .header-top {
@@ -162,14 +206,18 @@ p {
 }
 
 .logo {
-    width: 200px;
+    width: 210px;
     height: 70px;
+
+    font-family: "Acumin Pro ExtraCondensed";
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 50px;
     background: #626d77;
-
-    transition: all .3s linear;
+    transition: all .15s linear;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .show .logo {
@@ -190,7 +238,7 @@ p {
     left: -286px;
     background: #9ca9b9;
 
-    transition: all .25s linear;
+    transition: all .15s linear;
 }
 
 .show .menu > ul {
@@ -212,17 +260,39 @@ p {
     cursor: pointer;
 }
 
+.menu > ul li {
+    background: linear-gradient(to left, #9ca8b8 50%, #b5bfca 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition:all .2s ease;
+}
+
+.menu ul li.active {
+    background-position:left bottom;
+}
+
+.menu ul li.active:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    border: 7px solid transparent;
+    border-left: 10px solid #e2e2e2;
+}
+
 .menu-btn {
     cursor: pointer;
     position: relative;
     top: 20px;
     z-index: 1000;
 
-    transition: transform .3s ease-in-out;
+    left: 0;
+
+    transition: all .2s ease-in-out;
 }
 
 .show .menu-btn {
-    transform: translate3d(216px, 0px, 0px);
+    left: 216px;
 }
 
 .menu-btn span {
@@ -277,20 +347,20 @@ div.sub-menu ul li a {
 li.has-sub-menu {
     background: linear-gradient(to left, #9ca8b8 50%, #b5bfca 50%);
     background-size: 200% 100%;
-    background-position:right bottom;
-    transition:all .2s ease;
+    background-position: right bottom;
+    transition: all .2s ease;
 }
 
 .show-submenu li.has-sub-menu {
-    background-position:left bottom;
+    background-position: left bottom;
 }
 
 .show-submenu li.has-sub-menu:before {
-    content: ''; 
+    content: '';
     position: absolute;
-    left: 20px; 
+    left: 20px;
     top: 13px;
-    border: 7px solid transparent;	
+    border: 7px solid transparent;
     border-left: 10px solid #e2e2e2;
 }
 
@@ -300,10 +370,12 @@ li.has-sub-menu {
 
 @media (max-width: 1024px) {
     html, body {
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
-}/*1024px*/
+}
+
+/*1024px*/
 
 @media (max-width: 989px) {
     .inner-container {
@@ -314,21 +386,31 @@ li.has-sub-menu {
         max-width: 100%;
         margin-left: 0;
     }
-}/*989px*/
+
+    .gallery-block .images-container{
+        padding: 15px 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-and-text-block .inner-container {
+        flex-wrap: wrap;
+        max-height: none!important;
+        justify-content: center!important;
+    }
+
+    .image-and-text-block .inner-container div{
+        margin: 0!important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+
+
+}
+
+/*989px*/
 
 @media (max-width: 768px) {
-    .demos-wrapper > div {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .demos-wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 30px;
-    }
-
     .footer .container {
         padding: 0 30px;
     }
@@ -337,7 +419,7 @@ li.has-sub-menu {
         padding: 80px 30px;
     }
 
-    .why-choose .inner-container {
+    .text-block .inner-container {
         padding: 40px 30px;
     }
 
@@ -378,7 +460,224 @@ li.has-sub-menu {
         transform: translate3d(calc(100%), 0px, 0px);
         width: 100%;
     }
-}/*768px*/
+}
 
+/*768px*/
+
+/****************      FOOTER         ****************/
+
+.footer-menu {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 250px;
+}
+
+.footer-menu ul li a {
+    font-family: "Acumin Pro";
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.footer .container {
+    flex-direction: column;
+}
+.footer .social-icons{
+    margin-left: 20px;
+    margin-top: 15px
+}
+
+.footer .social-icons img{
+    margin-right: 5px;
+}
+
+/****************          end           ************/
+
+/****************      galleryBlock      ************/
+
+/****************          end           ************/
+/****************  samplesCarauselBlock  ************/
+
+/****************          end           ************/
+/****************   imagesAndTextBlock   ************/
+
+.image-and-text-block .inner-container {
+    display: flex;
+    max-height: 300px;
+    max-width: 1200px;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.image-and-text-block .inner-container img {
+    height: auto;
+}
+
+.image-and-text-block:nth-of-type(2n) .inner-container div:nth-child(1){
+    margin-right: 25px;
+}
+
+.image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2){
+    position: relative;
+    margin-left: 25px;
+}
+.image-and-text-block:nth-of-type(2n) .inner-container div:nth-child(1){
+    padding-left: 10px;
+}
+
+
+
+.image-and-text-block:nth-of-type(4) .inner-container div:nth-child(2){
+    width: 460px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image-and-text-block:nth-of-type(5) .inner-container div:nth-child(1){
+    width: 100%;
+    max-width: 400px;
+}
+
+.image-and-text-block:nth-of-type(5) .inner-container div:nth-child(1) img{
+    width: 100%;
+}
+
+
+
+
+.image-and-text-block.right .inner-container {
+    justify-content: flex-end;
+}
+
+.image-and-text-block.right .text-block h2,
+.image-and-text-block.right .text-block p {
+    color: #546E88;
+}
+
+
+.image-and-text-block .inner-container .text-block {
+    margin: 0;
+}
+
+.image-and-text-block .text-block h2 {
+    color: #ffffff;
+    font-family: "Acumin Pro ExtraCondensed";
+    font-size: 36px;
+    font-weight: 200;
+    letter-spacing: 2.1px;
+}
+
+.image-and-text-block .text-block p {
+    color: #ffffff;
+    font-family: "Acumin Pro";
+    font-size: 15px;
+    max-width: 520px;
+    letter-spacing: 1px;
+}
+
+/****************          end           ************/
+/****************      imagesBlock       ************/
+.images-block .inner-container {
+    max-width: 1200px;
+}
+
+.images-block .inner-container h2 {
+    max-width: 1200px;
+    font-family: "Acumin Pro ExtraCondensed";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 2.1px;
+    padding: 40px 0 0 50px;
+}
+
+.images-block .images-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images-block .images-container div {
+    max-width: 32%;
+}
+
+.images-block .images-container div img {
+    max-width: 100%;
+}
+
+/****************          end           ************/
+/****************      galleryBlock      ************/
+
+.gallery-block{
+    padding: 1px;
+}
+.gallery-block h2{
+    font-family: "Acumin Pro ExtraCondensed";
+    font-size: 42px;
+    font-weight: 200;
+    letter-spacing: 2.1px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-block .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.gallery-block .images-container div {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 7px 15px 7px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.gallery-block .images-container div a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+.gallery-block .images-container div a img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+/****************          end           ************/
+
+/****************      textBlock         ****************/
+
+.content-container > .text-block {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container > .text-block .inner-container {
+    max-width: 805px;
+    padding: 40px 0;
+}
+
+.content-container > .text-block .inner-container h2 {
+    font-family: "Acumin Pro ExtraCondensed";
+    font-size: 36px;
+    font-weight: 200;
+    letter-spacing: 2.1px;
+}
+
+.content-container > .text-block .inner-container p {
+    font-family: "Acumin Pro", serif;
+    font-size: 15px;
+    /*font-weight: 100;*/
+    letter-spacing: 1px;
+}
+
+/****************          end           ************/
 
 

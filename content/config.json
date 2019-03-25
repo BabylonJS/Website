@@ -1,86 +1,132 @@
-
 {
-	"home": {
-		"root": "home"
-	},
-	"menu": [
+	"menuTitle": "",
+	"title": "BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript",
+	"metaTags": [
 		{
-			"root": "explore",
-			"children": [
-				{
-					"root": "features"
-				},
-				{
-					"root": "visual"
-				},
-				{
-					"root": "cameras"
-				},
-				{
-					"root": "user_interface"
-				},
-				{
-					"root": "meshes"
-				},
-				{
-					"root": "animation"
-				},
-				{
-					"root": "physics"
-				},
-				{
-					"root": "performance"
-				}
-			]
+			"name": "description",
+			"content": "BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript"
 		},
 		{
-			"root": "tools"
-		},
-		{
-			"root": "learn"
-		},
-		{
-			"root": "community"
-		},
-		{
-			"root": "team"
-		},
-		{
-			"root": "get"
+			"property": "og:title",
+			"content": "BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript"
 		}
 	],
-	"footerMenu": [
+	"blocks": [
 		{
-			"menuTitle": "Features",
-			"url": "./features/index.html"
+			"templateName": "samplesCarouselBlock",
+			"content": {
+				"items": [
+					{
+						"interactiveSampleUrl": "",
+						"videoUrl": ""
+					},
+					{
+						"interactiveSampleUrl": "",
+						"videoUrl": ""
+					}
+				]
+			}
 		},
 		{
-			"menuTitle": "Logo and Branding",
-			"url": "#"
+			"templateName": "textBlock",
+			"content": {
+				"title": "WHY CHOOSE BABYLON.JS?",
+				"desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:"
+			}
 		},
 		{
-			"menuTitle": "Roadmap",
-			"url": "#"
+			"templateName": "imageAndTextBlock",
+			"content": {
+				"alignment": "left",
+				"background": "#5C5C5C",
+				"img": {
+					"url": "assets/img/SceneGraph.png",
+					"alt": "Complete scene graph"
+				},
+				"title": "COMPLETE SCENE GRAPH",
+				"desc": "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements and actions."
+			}
 		},
 		{
-			"menuTitle": "Education",
-			"url": "#"
+			"templateName": "imageAndTextBlock",
+			"content": {
+				"alignment": "right",
+				"background": "#00000000",
+				"img": {
+					"url": "assets/img/SceneInteraction.png",
+					"alt": "Scene interaction"
+				},
+				"title": "SCENE INTERACTION",
+				"desc": "Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."
+			}
 		},
 		{
-			"menuTitle": "Partners",
-			"url": "#"
+			"templateName": "imageAndTextBlock",
+			"content": {
+				"alignment": "left",
+				"background": "#282828",
+				"img": {
+					"url": "assets/img/GUIsystem.png",
+					"alt": "GUI system"
+				},
+				"title": "GUI SYSTEM",
+				"desc": "Your user interface needs are covered with the full-fledged GUI engine that provides a complete set of controls like buttons, grid, stack panels, lists and so on."
+			}
 		},
 		{
-			"menuTitle": "More resources",
-			"url": "#"
+			"templateName": "imageAndTextBlock",
+			"content": {
+				"alignment": "right",
+				"background": "#00000000",
+				"img": {
+					"url": "assets/img/FlightHelmet.png",
+					"alt": "Import and export"
+				},
+				"title": "IMPORT AND EXPORT",
+				"desc": "Work with existing file formats with our gITFm OBJ and STL importers. Export your entire scene to OBJ or gITL, SImply load all your scene assets with a few lines of code thanks to the AssetsManager"
+			}
 		},
 		{
-			"menuTitle": "Contribute",
-			"url": "#"
+			"templateName": "imageAndTextBlock",
+			"content": {
+				"alignment": "left",
+				"background": "#333333",
+				"img": {
+					"url": "assets/img/Inspector.png",
+					"alt": "EASILY INSPECT AND SETUP YOUR SCENE"
+				},
+				"title": "EASILY INSPECT AND SETUP YOUR SCENE",
+				"desc": "Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."
+			}
 		},
 		{
-			"menuTitle": "Contact Us",
-			"url": "#"
+			"templateName": "imagesBlock",
+			"content": {
+				"title": "FEATURED DEMOS",
+				"items": [
+					{
+						"img": {
+							"url": "assets/img/Demo1.png",
+							"alt": "Demo 1 description"
+						},
+						"link": "https://google.com"
+					},
+					{
+						"img": {
+							"url": "assets/img/Demo2.png",
+							"alt": "Demo 2 description"
+						},
+						"link": "https://google.ua"
+					},
+					{
+						"img": {
+							"url": "assets/img/Demo3.png",
+							"alt": "Demo 3 description"
+						},
+						"link": "https://google.nl"
+					}
+				]
+			}
 		}
 	]
 }

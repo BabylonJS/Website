@@ -13,21 +13,6 @@
 		],
 		"blocks": [
 			{
-				"templateName": "samplesCarousel",
-				"content": {
-					"items": [
-						{
-							"interactiveSampleUrl": "",
-							"videoUrl": ""
-						},
-						{
-							"interactiveSampleUrl": "",
-							"videoUrl": ""
-						}
-					]
-				}
-			},
-			{
 				"templateName": "textBlock",
 				"content": {
 					"title": "WHY CHOOSE BABYLON.JS?",
@@ -40,7 +25,7 @@
 					"alignment": "left",
 					"background": "#5C5C5C",
 					"img": {
-						"name": "completeSceneGraph",
+						"naurlme": "completeSceneGraph",
 						"alt": "Complete scene graph"
 					},
 					"title": "COMPLETE SCENE GRAPH",
@@ -53,7 +38,7 @@
 					"alignment": "right",
 					"background": "#00000000",
 					"img": {
-						"name": "sceneInteraction",
+						"url": "sceneInteraction",
 						"alt": "Scene interaction"
 					},
 					"title": "SCENE INTERACTION",
@@ -66,7 +51,7 @@
 					"alignment": "left",
 					"background": "#282828",
 					"img": {
-						"name": "guiSystem",
+						"url": "guiSystem",
 						"alt": "GUI system"
 					},
 					"title": "GUI SYSTEM",
@@ -79,7 +64,7 @@
 					"alignment": "right",
 					"background": "#00000000",
 					"img": {
-						"name": "importAndExport",
+						"url": "importAndExport",
 						"alt": "Import and export"
 					},
 					"title": "IMPORT AND EXPORT",
@@ -92,7 +77,7 @@
 					"alignment": "right",
 					"background": "#333333",
 					"img": {
-						"name": "inspectAndSetupScene",
+						"url": "inspectAndSetupScene",
 						"alt": "EASILY INSPECT AND SETUP YOUR SCENE"
 					},
 					"title": "EASILY INSPECT AND SETUP YOUR SCENE",
@@ -106,21 +91,21 @@
 					"items": [
 						{
 							"img": {
-								"name": "featuredDemo1",
+								"url": "featuredDemo1",
 								"alt": "Demo 1 description"
 							},
 							"link": "https://google.com"
 						},
 						{
 							"img": {
-								"name": "featuredDemo2",
+								"url": "featuredDemo2",
 								"alt": "Demo 2 description"
 							},
 							"link": "https://google.ua"
 						},
 						{
 							"img": {
-								"name": "featuredDemo3",
+								"url": "featuredDemo3",
 								"alt": "Demo 3 description"
 							},
 							"link": "https://google.nl"

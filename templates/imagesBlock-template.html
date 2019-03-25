@@ -1,12 +1,15 @@
 <div class="images-block">
-    <div class="container">
+    <div class="inner-container">
         <h2>{{title}}</h2>
-        <div class="demos-wrapper">
-        	<ul>
-        	{{#each items}}
-				<li>{{img.alt}}</li>
-			{{/each}}
-			</ul>
+        <div class="images-container">
+    	{{#each items}}
+            <div>
+				<a href="{{link}}">
+                    <img src="{{img.url}}" alt="{{img.alt}}">
+                </a>
+            </div>
+		{{/each}}
         </div>
+        <div style="clear:both; padding:30px;"></div>
     </div>
 </div>
