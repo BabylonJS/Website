@@ -52,7 +52,7 @@
 	"footerMenu": [
 		{
 			"menuTitle": "Features",
-			"url": "./features/index.html"
+			"url": "/features/index.html"
 		},
 		{
 			"menuTitle": "Logo and Branding",
@@ -81,6 +81,50 @@
 		{
 			"menuTitle": "Contact Us",
 			"url": "#"
+		}
+	],
+	"socials": [
+		{
+			"img": {
+				"url": "/assets/img/twitter.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
+		},
+		{
+			"img": {
+				"url": "/assets/img/facebook.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
+		},
+		{
+			"img": {
+				"url": "/assets/img/twitch.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
+		},
+		{
+			"img": {
+				"url": "/assets/img/Instagram.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
+		},
+		{
+			"img": {
+				"url": "/assets/img/youtube.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
+		},
+		{
+			"img": {
+				"url": "/assets/img/wifi.svg",
+				"alt": "Low poly"
+			},
+			"link": "https://google.com"
 		}
 	]
 }

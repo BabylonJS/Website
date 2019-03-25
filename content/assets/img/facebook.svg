@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Add-Plan-Empty-4-concept-2" transform="translate(-178.000000, -556.000000)">
+            <rect fill="#3B0B54" x="0" y="0" width="375" height="812"></rect>
+            <g id="facebook-(2)" transform="translate(178.000000, 556.000000)" fill="#C4C4C4">
+                <path d="M1.42857143,0 C0.639593571,0 0,0.639593571 0,1.42857143 L0,18.5714286 C0,19.3604286 0.639593571,20 1.42857143,20 L10,20 L10,11.0714286 L7.14285714,11.0714286 L7.14285714,8.57142857 L10,8.57142857 C10,4.85714286 11.7857143,3.57142857 13.9285714,3.57142857 L15.7142857,3.57142857 L15.7142857,6.07142857 L13.9285714,6.07142857 C12.5,6.07142857 12.5,7.85714286 12.5,8.57142857 L15.7142857,8.57142857 L15.7142857,11.0714286 L12.5,11.0714286 L12.5,20 L18.5714286,20 C19.3604286,20 20,19.3604286 20,18.5714286 L20,1.42857143 C20,0.639593571 19.3604286,0 18.5714286,0 L1.42857143,0 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

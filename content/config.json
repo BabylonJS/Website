@@ -89,7 +89,7 @@
 		{
 			"templateName": "imageAndTextBlock",
 			"content": {
-				"alignment": "right",
+				"alignment": "left",
 				"background": "#333333",
 				"img": {
 					"url": "assets/img/Inspector.png",

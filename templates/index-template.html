@@ -54,20 +54,16 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="social-icons"></div>
+            <div class="social-icons">
+                {{#each socials}}
+                    <a href="{{link}}"><img src="{{img.url}}" alt="{{img.alt}}"></a>
+                {{/each}}
+            </div>
             <div class="footer-menu">
                 <ul>
                     {{#each footerMenu}}
-                        <li><a href="#">Features</a></li>
+                        <li><a href="#">{{menuTitle}}</a></li>
                     {{/each}}
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Logo and Branding</a></li>
-                    <li><a href="#">Roadmap</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">More Resources</a></li>
-                    <li><a href="#">Contribute</a></li>
-                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
         </div>
