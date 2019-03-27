@@ -1,36 +1,17 @@
 <div class="samples-carousel-block">
-    <script type="text/javascript">
-    	function detectWebGL()
-		{
-		    // Check for the WebGL rendering context
-		    if ( !! window.WebGLRenderingContext) {
-		        var canvas = document.createElement("canvas"),
-		            names = ["webgl", "experimental-webgl", "moz-webgl", "webkit-3d"],
-		            context = false;
-
-		        for (var i in names) {
-		            try {
-		                context = canvas.getContext(names[i]);
-		                if (context && typeof context.getParameter === "function") {
-		                    // WebGL is enabled.
-		                    return 1;
-		                }
-		            } catch (e) {}
-		        }
-
-		        // WebGL is supported, but disabled.
-		        return 0;
-		    }
-
-		    // WebGL not supported.
-		    return -1;
-		};
-		var items = {{json items}};
-		if (detectWebGL()) {
-			//TODO: init iframes carausel
-		} else {
-			//TODO: init crausel with videos
-			alert("WebGL is not supported");
-		}
-    </script>
+    <div class="carousel">
+        <ul>
+        	{{#each items}}
+				<li style="background-image: url('{{imgUrl}}')" data-sample="{{interactiveSampleUrl}}"></li>
+			{{/each}}
+        </ul>
+        <div class="carousel-navigate">
+            <img src="/assets/img/donut.svg" alt="" class="caret">
+            {{#each items}}
+				<div class="carousel-navigate-item" data-order="{{@index}}">
+                <img src="/assets/img/cirle.svg" alt="">
+            </div>
+			{{/each}}
+        </div>
+    </div>
 </div>

@@ -17,12 +17,20 @@
 			"content": {
 				"items": [
 					{
-						"interactiveSampleUrl": "",
-						"videoUrl": ""
+						"interactiveSampleUrl": "https://www.babylonjs-playground.com/full.html#1VGT5D#2",
+						"imgUrl": "https://images.pexels.com/photos/257540/pexels-photo-257540.jpeg?cs=srgb&dl=adorable-animal-canine-257540.jpg&fm=jpg"
 					},
 					{
-						"interactiveSampleUrl": "",
-						"videoUrl": ""
+						"interactiveSampleUrl": "https://www.babylonjs-playground.com/full.html#1VGT5D#2",
+						"imgUrl": "https://images.pexels.com/photos/257540/pexels-photo-257540.jpeg?cs=srgb&dl=adorable-animal-canine-257540.jpg&fm=jpg"
+					},
+					{
+						"interactiveSampleUrl": "https://www.babylonjs-playground.com/full.html#1VGT5D#2",
+						"imgUrl": "https://images.pexels.com/photos/257540/pexels-photo-257540.jpeg?cs=srgb&dl=adorable-animal-canine-257540.jpg&fm=jpg"
+					},
+					{
+						"interactiveSampleUrl": "https://www.babylonjs-playground.com/full.html#1VGT5D#2",
+						"imgUrl": "https://images.pexels.com/photos/257540/pexels-photo-257540.jpeg?cs=srgb&dl=adorable-animal-canine-257540.jpg&fm=jpg"
 					}
 				]
 			}

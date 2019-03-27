@@ -45,6 +45,7 @@ var renderPage = function(pageConfig, globalConfig) {
 	context.menu = globalConfig.menu;
 	context.footerMenu = globalConfig.footerMenu;
 	context.socials = globalConfig.socials;
+	context.downloadLink = globalConfig.downloadLink;
 	var html = template(context);
 
 	var dir = _path.join(_path.resolve(), _outputRootPath, pageConfig.absoluteRoot.replace(_contentRootPath, ""));
@@ -104,7 +105,8 @@ _gulp.task('build', function(done) {
 	var globalConfig = {
 		menu: [],
 		socials: siteConfig.socials,
-		footerMenu: siteConfig.footerMenu
+		footerMenu: siteConfig.footerMenu,
+		downloadLink: siteConfig.downloadLink
 	};
 	
 	//load settings for home page

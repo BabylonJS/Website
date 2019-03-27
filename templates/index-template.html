@@ -21,11 +21,13 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <ul>
+                        <div class="header-ul-wrapper">
+                            <ul>
                             {{#each menu}}
                                 <li><a class="{{menuTitle}}" href="/{{root}}">{{menuTitle}}</a>
                             {{/each}}
-                        </ul>
+                            </ul>
+                        </div>
                         <div class="sub-menu">
                             {{#each menu}}
                                 {{#if children}}
@@ -43,10 +45,11 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="download"></div>
+
+            <a class="download" href="{{downloadLink}}"><img src="/assets/img/download.svg"></a>
         </div>
     </div>
+
     <div class="content-container">
         {{#each blocks}}
             {{{block this}}}
