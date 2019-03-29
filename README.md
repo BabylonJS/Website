@@ -4,29 +4,6 @@
     npm install -g gulp
     npm install
 ```
-## If you have any issues with installing gulp
-
-just run this command with admin permission and try previous step again
-```sh
-    npm cache clear --force
-```
-
-## Changing build directory
-Just change this constant in gulpfile.js
-```sh
-    const _outputRootPath = "build";
-```
-
-## Build process
-Run gulp task and check build folder
-```sh
-    gulp build
-```
-## Run server
-Web site will be available at http://localhost:8080/
-```sh
-    gulp server
-```
 
 ## Development mode
 Web site will be available at http://localhost:8080/
