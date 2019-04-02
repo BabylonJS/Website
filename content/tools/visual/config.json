@@ -1,14 +1,14 @@
 {
-		"menuTitle": "TOOLS",
-		"title": "BabylonJS - tools",
+		"menuTitle": "VISUAL",
+		"title": "BabylonJS - features",
 		"metaTags": [
 			{
 				"name": "description",
-				"content": "BabylonJS - tools"
+				"content": "BabylonJS - features"
 			},
 			{
 				"property": "og:title",
-				"content": "BabylonJS - tools"
+				"content": "BabylonJS - features"
 			}
 		],
 		"blocks": [

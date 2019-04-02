@@ -1,14 +1,14 @@
 {
-		"menuTitle": "TOOLS",
-		"title": "BabylonJS - tools",
+		"menuTitle": "PHYSICS",
+		"title": "BabylonJS - features",
 		"metaTags": [
 			{
 				"name": "description",
-				"content": "BabylonJS - tools"
+				"content": "BabylonJS - features"
 			},
 			{
 				"property": "og:title",
-				"content": "BabylonJS - tools"
+				"content": "BabylonJS - features"
 			}
 		],
 		"blocks": [
@@ -25,7 +25,7 @@
 					"alignment": "left",
 					"background": "#5C5C5C",
 					"img": {
-						"url": "completeSceneGraph",
+						"naurlme": "completeSceneGraph",
 						"alt": "Complete scene graph"
 					},
 					"title": "COMPLETE SCENE GRAPH",

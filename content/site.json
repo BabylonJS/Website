@@ -34,7 +34,33 @@
 			]
 		},
 		{
-			"root": "tools"
+			"root": "tools",
+			"children": [
+				{
+					"root": "test"
+				},
+				{
+					"root": "visual"
+				},
+				{
+					"root": "cameras"
+				},
+				{
+					"root": "user_interface"
+				},
+				{
+					"root": "meshes"
+				},
+				{
+					"root": "animation"
+				},
+				{
+					"root": "physics"
+				},
+				{
+					"root": "performance"
+				}
+			]
 		},
 		{
 			"root": "learn"

@@ -1,8 +1,8 @@
 <div class="samples-carousel-block">
-    <div class="carousel">
+    <div class="carousel" data-sample="{{interactiveSampleUrl}}" data-sample="{{delay}}">
         <ul>
         	{{#each items}}
-				<li style="background-image: url('{{imgUrl}}')" data-sample="{{interactiveSampleUrl}}"></li>
+				<li style="background-image: url('{{imgUrl}}')"></li>
 			{{/each}}
         </ul>
         <div class="carousel-navigate">
