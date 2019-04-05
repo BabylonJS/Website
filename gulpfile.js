@@ -2,7 +2,8 @@ var _gulp = require('gulp'),
 	_handlebars = require('handlebars'),
 	_fs = require('fs-extra'),
 	_path = require('path'),
-	_connect = require('gulp-connect');
+	_connect = require('gulp-connect'),
+	_shared = { "variables": {} };
 
 //--------------- Constants ----------------
 const _contentRootPath = "content";
@@ -74,6 +75,12 @@ _gulp.task('build', function(done) {
 		json: function (obj) {
 	        return new _handlebars.SafeString(JSON.stringify(obj));
 	    },
+	    var: function (key) {
+	    	if (_shared.variables[key])
+	    		return new _handlebars.SafeString(_shared.variables[key]);
+	    	else
+	    		return new _handlebars.SafeString(key);
+	    },
 	    eq: function (v1, v2) {
 	        return v1 === v2;
 	    },
@@ -108,7 +115,8 @@ _gulp.task('build', function(done) {
 		footerMenu: siteConfig.footerMenu,
 		downloadLink: siteConfig.downloadLink
 	};
-	
+	_shared.variables = siteConfig.variables;
+
 	//load settings for home page
 	siteConfig.home = getPageConfig(_contentRootPath, siteConfig.home);
 	//load settings for all children
@@ -138,11 +146,14 @@ _gulp.task('build', function(done) {
 
 	//render all other pages from the menue
 	siteConfig.menu.forEach(function(menuItem) {
+		if (menuItem.menuUrl)
+			return;
 		renderPage(menuItem, globalConfig);
 		if (menuItem.children)
 		{
 			for (var i = 0; i < menuItem.children.length; i++) {
-				renderPage(menuItem.children[i], globalConfig);
+				if (!menuItem.children[i].menuUrl)
+					renderPage(menuItem.children[i], globalConfig);
 			}
 		}
 	});

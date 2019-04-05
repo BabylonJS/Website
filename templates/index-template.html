@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <div class="container">
-            <div class="header-top-wrapper">
+            <div class="header-top-wrapper overflow">
                 <div class="header-top">
                     <div class="menu">
                         <div class="menu-btn">
@@ -24,7 +24,11 @@
                         <div class="header-ul-wrapper">
                             <ul>
                             {{#each menu}}
-                                <li><a class="{{menuTitle}}" href="/{{root}}">{{menuTitle}}</a>
+                                {{#if menuUrl}}
+                                    <li class="{{menuTitle}}"><a class="{{menuTitle}}" href="{{menuUrl}}">{{menuTitle}}</a>
+                                {{else}}
+                                    <li class="{{menuTitle}}"><a class="{{menuTitle}}" href="/{{root}}">{{menuTitle}}</a>
+                                {{/if}}
                             {{/each}}
                             </ul>
                         </div>
@@ -33,7 +37,11 @@
                                 {{#if children}}
                                     <ul class="{{menuTitle}} hidden">
                                         {{#each children}}
-                                            <li><a href="/{{../root}}/{{root}}">{{menuTitle}}</a></li>
+                                            {{#if menuUrl}}
+                                                <li><a href="{{menuUrl}}">{{menuTitle}}</a></li>
+                                            {{else}}
+                                                <li><a href="/{{../root}}/{{root}}">{{menuTitle}}</a></li>
+                                            {{/if}}
                                         {{/each}}
                                     </ul>
                                 {{/if}}

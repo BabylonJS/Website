@@ -104,6 +104,10 @@ body > div {
     margin: 0 auto;
 }
 
+.content-container > .text-block{
++    padding: 0 15px;
++}
+
 h2 {
     text-transform: uppercase;
     font-size: 36px;
@@ -191,7 +195,7 @@ p {
 }
 
 .show .header-top {
-    width: 287px;
+    width: 286px;
     z-index: 1000;
 }
 
@@ -200,9 +204,9 @@ p {
 }
 
 .header-top-wrapper {
-    width: 270px;
+    width: 286px;
 
-    transition: width .1s linear;
+    transition: width .15s linear;
 }
 
 .header-top-wrapper.show {
@@ -223,7 +227,7 @@ p {
     top: 0;
     left: 50px;
     /*background: #626d77;*/
-    transition: all .1s linear;
+    transition: all .15s linear;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -257,7 +261,7 @@ p {
 
     transform: translateX(-100%);
 
-    transition: all .1s linear;
+    transition: all .15s linear;
 }
 
 .header-ul-wrapper ul:before{
@@ -289,7 +293,7 @@ p {
     background: linear-gradient(to left, rgba(156, 169, 185, 0.95) 50%, rgba(181, 191, 202, 0.95) 50%);
     background-size: 200% 100%;
     background-position:right bottom;
-    transition:all .1s ease;
+    transition:all .15s ease;
 }
 
 .menu ul li.active {
@@ -313,7 +317,7 @@ p {
 
     left: 0;
 
-    transition: all .1s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 .show .menu-btn {
@@ -344,7 +348,7 @@ div.sub-menu {
     width: 0;
     overflow: hidden;
 
-    transition: all .1s ease-in-out;
+    transition: all .15s ease-in-out;
     /*display: none;*/
 }
 
@@ -360,7 +364,7 @@ div.sub-menu > ul {
     padding-top: 0;
     transform: translateX(-100%);
 
-    transition: all .1s ease-in-out;
+    transition: all .15s ease-in-out;
 
     background: rgba(181, 191, 190, 0.95);
     width: 210px;
@@ -380,14 +384,14 @@ div.sub-menu ul li a {
 
 .show-submenu div.sub-menu > ul {
     transform: translateX(0%);
-    /*transition: all .1s ease-in-out;*/
+    /*transition: all .15s ease-in-out;*/
 }
 
 li.has-sub-menu {
     background: linear-gradient(to left, #9ca8b8 50%, #b5bfca 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .1s ease;
+    transition: all .15s ease;
 }
 
 .show-submenu li.has-sub-menu {
@@ -528,7 +532,7 @@ li.has-sub-menu {
     }
 
     .header-top:before {
-        transition: left .1s linear;
+        transition: left .15s linear;
     }
 
     .show .header-top:before {
@@ -688,6 +692,8 @@ li.has-sub-menu {
         position: absolute;
         padding-top: 54px;
         margin-top: 250px!important;
+        width: 100%;
+        min-height: 100vh;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52) 0%,
         rgba(255, 255, 255, 0.7019607843137254) 50%,#ffffff 100%);
         box-shadow: 0 0 51px rgba(255,255,255,1);
@@ -698,6 +704,8 @@ li.has-sub-menu {
         position: absolute;
         padding-top: 20px;
         margin-top: 280px!important;
+        width: 100%;
+        min-height: 100vh;
         background: #333333;
         box-shadow: 0px -20px 13px 0px rgba(51,51,51,1);
     }

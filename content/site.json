@@ -53,12 +53,6 @@
 				},
 				{
 					"root": "animation"
-				},
-				{
-					"root": "physics"
-				},
-				{
-					"root": "performance"
 				}
 			]
 		},
@@ -72,7 +66,8 @@
 			"root": "team"
 		},
 		{
-			"root": "get"
+			"menuTitle": "GET",
+			"menuUrl": "https://github.com/BabylonJS/Babylon.js"
 		}
 	],
 	"footerMenu": [
@@ -153,5 +148,10 @@
 			"link": "https://google.com"
 		}
 	],
-	"downloadLink": "https://www.babylonjs.com/versionbuilder/"
+	"downloadLink": "https://github.com/BabylonJS/Babylon.js",
+	"variables": {
+		"color1": "#5C5C5C",
+		"color2": "#282828",
+		"color3": "#333333"
+	}
 }
