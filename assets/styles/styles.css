@@ -1,61 +1,61 @@
-@font-face {
-    font-family: 'Acumin Pro';
-    font-style: normal;
-    font-weight: normal;
-    src: local('../fonts/Acumin-RPro.woff'), url('../fonts/Acumin-RPro.woff') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro';*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*src: local('../fonts/Acumin-RPro.woff'), url('../fonts/Acumin-RPro.woff') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro';
-    font-style: normal;
-    font-weight: 200;
-    src: local('../fonts/AcuminPro-Light.otf'), url('../fonts/AcuminPro-Light.otf') format('otf');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro';*/
+/*font-style: normal;*/
+/*font-weight: 200;*/
+/*src: local('../fonts/AcuminPro-Light.otf'), url('../fonts/AcuminPro-Light.otf') format('otf');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro Thin';
-    font-weight: 100;
-    src: local('../fonts/AcuminPro-Thin.otf'), url('../fonts/AcuminPro-Thin.otf') format('otf');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro Thin';*/
+/*font-weight: 100;*/
+/*src: local('../fonts/AcuminPro-Thin.otf'), url('../fonts/AcuminPro-Thin.otf') format('otf');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('../fonts/Acumin Pro Italic'), url('Acumin-ItPro.woff') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro Italic';*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*src: local('../fonts/Acumin Pro Italic'), url('Acumin-ItPro.woff') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('../fonts/Acumin Pro Bold'), url('../fonts/Acumin-BdPro.woff') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro Bold';*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*src: local('../fonts/Acumin Pro Bold'), url('../fonts/Acumin-BdPro.woff') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro Bold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('../fonts/Acumin Pro Bold Italic'), url('Acumin-BdItPro.woff') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro Bold Italic';*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*src: local('../fonts/Acumin Pro Bold Italic'), url('Acumin-BdItPro.woff') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro ExtraCondensed';
-    font-weight: 400;
-    src: local('../fonts/AcuminProExtraCondensed-Regular.otf'), url('../fonts/AcuminProExtraCondensed-Regular.otf') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro ExtraCondensed';*/
+/*font-weight: 400;*/
+/*src: local('../fonts/AcuminProExtraCondensed-Regular.otf'), url('../fonts/AcuminProExtraCondensed-Regular.otf') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro ExtraCondensed';
-    font-weight: 600;
-    src: local('../fonts/AcuminProExtraCondensed-SemiBold.otf'), url('../fonts/AcuminProExtraCondensed-SemiBold.otf') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro ExtraCondensed';*/
+/*font-weight: 600;*/
+/*src: local('../fonts/AcuminProExtraCondensed-SemiBold.otf'), url('../fonts/AcuminProExtraCondensed-SemiBold.otf') format('woff');*/
+/*}*/
 
-@font-face {
-    font-family: 'Acumin Pro ExtraCondensed';
-    font-weight: 200;
-    src: local('../fonts/AcuminProExtraCondensed-Light.otf'), url('../fonts/AcuminProExtraCondensed-Light.otf') format('woff');
-}
+/*@font-face {*/
+/*font-family: 'Acumin Pro ExtraCondensed';*/
+/*font-weight: 200;*/
+/*src: local('../fonts/AcuminProExtraCondensed-Light.otf'), url('../fonts/AcuminProExtraCondensed-Light.otf') format('woff');*/
+/*}*/
 
 * {
     margin: 0;
@@ -104,10 +104,6 @@ body > div {
     margin: 0 auto;
 }
 
-.content-container > .text-block{
-+    padding: 0 15px;
-+}
-
 h2 {
     text-transform: uppercase;
     font-size: 36px;
@@ -132,7 +128,7 @@ p {
 }
 
 .text-block {
-    max-width: 540px;
+    max-width: 632px;
     margin-left: 40%;
     padding: 80px 0;
 }
@@ -144,7 +140,7 @@ p {
 
 .footer {
     background: #2a2a2a;
-    height: 246px;
+    padding-bottom: 48px;
 }
 
 .footer .container {
@@ -176,7 +172,7 @@ p {
     height: 70px;
     display: flex;
     align-items: center;
-    font-family: "Acumin Pro ExtraCondensed";
+    font-family: "acumin-pro-extra-condensed";
     letter-spacing: 2px;
     font-size: 20px;
     position: relative;
@@ -195,7 +191,7 @@ p {
 }
 
 .show .header-top {
-    width: 286px;
+    width: 287px;
     z-index: 1000;
 }
 
@@ -204,7 +200,7 @@ p {
 }
 
 .header-top-wrapper {
-    width: 286px;
+    width: 270px;
 
     transition: width .15s linear;
 }
@@ -222,7 +218,7 @@ p {
     width: 210px;
     height: 70px;
 
-    font-family: "Acumin Pro ExtraCondensed";
+    font-family: "acumin-pro-extra-condensed";
     position: absolute;
     top: 0;
     left: 50px;
@@ -565,13 +561,13 @@ li.has-sub-menu {
 
 .footer-menu {
     margin-left: 20px;
-    margin-top: 15px;
-    width: 250px;
+    margin-top: 25px;
+    width: 280px;
 }
 
 .footer-menu ul li a {
-    font-family: "Acumin Pro";
-    font-size: 12px;
+    font-family: "acumin-pro";
+    font-size: 14px;
     line-height: 20px;
     font-weight: 400;
 }
@@ -581,11 +577,12 @@ li.has-sub-menu {
 }
 .footer .social-icons{
     margin-left: 20px;
-    margin-top: 15px
+    margin-top: 30px
 }
 
 .footer .social-icons img{
     margin-right: 5px;
+    width: 25px;
 }
 
 
@@ -666,71 +663,24 @@ li.has-sub-menu {
 }
 
 .image-and-text-block .text-block h2 {
-    color: #ffffff;
-    font-family: "Acumin Pro ExtraCondensed";
+    color: #E2E2E2;
+    font-family: "acumin-pro-extra-condensed";
     font-size: 36px;
     font-weight: 200;
     letter-spacing: 2.1px;
 }
 
 .image-and-text-block .text-block p {
-    color: #ffffff;
-    font-family: "Acumin Pro";
-    font-size: 15px;
-    max-width: 520px;
+    color: #E2E2E2;
+    font-family: "acumin-pro";
+    font-size: 18px;
+    line-height: 35px;
+    /*max-width: 520px;*/
     letter-spacing: 1px;
 }
 
 
-@media all and (max-width: 768px){
-    .image-and-text-block .inner-container {
-        height: 550px;
-        position: relative;
-    }
 
-    .image-and-text-block:nth-of-type(2n) .inner-container div:nth-child(1){
-        position: absolute;
-        padding-top: 54px;
-        margin-top: 250px!important;
-        width: 100%;
-        min-height: 100vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52) 0%,
-        rgba(255, 255, 255, 0.7019607843137254) 50%,#ffffff 100%);
-        box-shadow: 0 0 51px rgba(255,255,255,1);
-    }
-
-
-    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2){
-        position: absolute;
-        padding-top: 20px;
-        margin-top: 280px!important;
-        width: 100%;
-        min-height: 100vh;
-        background: #333333;
-        box-shadow: 0px -20px 13px 0px rgba(51,51,51,1);
-    }
-    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2):before{
-        position: absolute;
-        width: 200%;
-        height: 63px;
-        content: "";
-        top: 5px;
-        left: -17px;
-        box-shadow: 0px -35px 13px 0px rgb(51,51,51);
-    }
-}
-
-
-@media (max-width: 350px){
-    .image-and-text-block .inner-container {
-        height: 591px;
-        position: relative;
-    }
-
-    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2) {
-        padding-top: 36px;
-    }
-}
 
 /****************          end           ************/
 /****************      imagesBlock       ************/
@@ -740,7 +690,7 @@ li.has-sub-menu {
 
 .images-block .inner-container h2 {
     max-width: 1200px;
-    font-family: "Acumin Pro ExtraCondensed";
+    font-family: "acumin-pro-extra-condensed";
     font-size: 36px;
     font-weight: 400;
     letter-spacing: 2.1px;
@@ -784,7 +734,7 @@ li.has-sub-menu {
     padding: 1px;
 }
 .gallery-block h2{
-    font-family: "Acumin Pro ExtraCondensed";
+    font-family: "acumin-pro-extra-condensed";
     font-size: 42px;
     font-weight: 200;
     letter-spacing: 2.1px;
@@ -830,25 +780,25 @@ li.has-sub-menu {
     max-width: none;
     margin: 0;
     padding: 0;
- }
- 
+}
+
 .content-container > .text-block .inner-container {
-     max-width: 805px;
-     padding: 40px 0;
- }
- 
+    max-width: 906px;
+    padding: 40px 0;
+}
+
 .content-container > .text-block .inner-container h2 {
-     font-family: "Acumin Pro ExtraCondensed";
-     font-size: 36px;
-     font-weight: 200;
-     letter-spacing: 2.1px;
- }
- 
+    font-family: "acumin-pro-extra-condensed";
+    font-size: 36px;
+    font-weight: 200;
+    letter-spacing: 2.1px;
+}
+
 .content-container > .text-block .inner-container p {
-     font-family: "Acumin Pro", serif;
-     font-size: 15px;
-     letter-spacing: 1px;
- }
+    font-family: "acumin-pro", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
 
 /****************          end           ************/
 
@@ -920,4 +870,168 @@ li.has-sub-menu {
     transition: left .5s;
 }
 
+.iframe-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-overlay.hidden{
+    display: none;
+}
+
 /****************          end           ************/
+
+.content-container > .text-block{
+    padding: 0 15px;
+}
+
+
+@media all and (max-width: 768px){
+    .content-container > .text-block .inner-container h2{
+        font-size: 24px;
+    }
+
+    .content-container > .text-block .inner-container p{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    .image-and-text-block .inner-container {
+        height: 540px;
+        position: relative;
+    }
+
+    .image-and-text-block .text-block h2{
+        font-size: 24px;
+        letter-spacing: 1.3px;
+    }
+
+    .image-and-text-block .text-block p{
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0;
+    }
+
+    .image-and-text-block:nth-of-type(2n) .inner-container div:nth-child(1){
+        margin: 0 auto;
+        position: absolute;
+        margin-top: 250px!important;
+        width: 100%;
+        /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52) 0%,*/
+        /*rgba(255, 255, 255, 0.7019607843137254) 50%,#ffffff 100%);*/
+        /*box-shadow: 0 0 51px rgba(255,255,255,1);*/
+        min-height: 100vh;
+        padding: 54px 0 0 0!important;
+    }
+
+    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(1){
+        /*max-height: ;*/
+    }
+    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2){
+        position: absolute;
+        padding-top: 20px;
+        width: 100%;
+        margin-top: 280px!important;
+        /*background: #333333;*/
+        /*box-shadow: 0px -20px 13px 0px rgba(51,51,51,1);*/
+        min-height: 100vh;
+    }
+
+    .image-and-text-block:nth-of-type(5){
+
+    }
+
+    .image-and-text-block:nth-of-type(1) .inner-container {height: 390px}
+    .image-and-text-block:nth-of-type(1) .inner-container div.text-block h2{
+        margin-top: 165px;
+    }
+    .image-and-text-block:nth-of-type(1) img{
+        width: 100%;
+        min-height: 210px;
+    }
+
+    .image-and-text-block:nth-of-type(1) .inner-container div.text-block{
+        margin-top: 20px!important;
+        background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.4) 20px, rgba(51, 51, 51, 1) 200px,#333333 100%);
+        padding-top: 0;
+    }
+
+    .image-and-text-block:nth-of-type(2) .inner-container {height: 410px}
+    .image-and-text-block:nth-of-type(2) .inner-container div.text-block{
+        margin-top: 161px!important;
+    }
+
+    .image-and-text-block:nth-of-type(2) img{
+        max-width: 300px;
+        margin: 15px auto;
+    }
+
+    .image-and-text-block:nth-of-type(3) .inner-container {height: 390px}
+    .image-and-text-block:nth-of-type(3) .inner-container div.text-block{
+        margin-top: 180px!important;
+    }
+
+    .image-and-text-block:nth-of-type(3) img{
+        max-width: 300px;
+    }
+
+    .image-and-text-block:nth-of-type(4) .inner-container div.text-block{
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52) 0%,
+        rgba(255, 255, 255, 0.7019607843137254) 50%,#ffffff 100%);
+        box-shadow: 0 0 51px rgba(255,255,255,1);
+    }
+
+    .image-and-text-block:nth-of-type(5) .inner-container {height: 440px}
+    .image-and-text-block:nth-of-type(5) .inner-container div.text-block h2{
+        margin-top: 35px;
+    }
+
+    .image-and-text-block:nth-of-type(5) .inner-container div.text-block{
+        margin-top: 210px!important;
+        background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 1) 70px,#333333 100%);
+        padding-top: 0;
+    }
+    /*.image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2):before{*/
+    /*position: absolute;*/
+    /*width: 200%;*/
+    /*height: 63px;*/
+    /*content: "";*/
+    /*top: 5px;*/
+    /*left: -17px;*/
+    /*box-shadow: 0px -35px 13px 0px rgb(51,51,51);*/
+    /*}*/
+}
+
+@media all and (max-width: 480px){
+    .content-container > .text-block .inner-container{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .image-and-text-block .text-block h2{
+        max-width: 300px;
+        margin: 0 auto 18px;
+    }
+
+    .image-and-text-block .text-block p{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (max-width: 350px){
+    .image-and-text-block .inner-container {
+        height: 540px;
+        position: relative;
+    }
+
+    .image-and-text-block:nth-of-type(2n + 1) .inner-container div:nth-child(2) {
+        padding-top: 36px;
+    }
+
+    .image-and-text-block:nth-of-type(5) .inner-container {height: 465px}
+}

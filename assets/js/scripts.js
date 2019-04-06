@@ -41,6 +41,13 @@ window.onload = function () {
             frame.setAttribute("src", carouselContainer.dataset.sample);
             carouselContainer.innerHTML = '';
             carouselContainer.appendChild(frame);
+            var overlay = document.createElement("div");
+            overlay.setAttribute("class", 'iframe-overlay');
+            overlay.addEventListener('click', function (e) {
+                e.target.classList.add('hidden');
+            });
+            carouselContainer.appendChild(overlay);
+
         } else {
             function initiateScroll(order) {
                 carousel.style.transform = 'translateX(-' + ((order) * windowWidth) + 'px)';
