@@ -44,7 +44,7 @@
 			"templateName": "imageAndTextBlock",
 			"content": {
 				"alignment": "left",
-				"background": "#5C5C5C",
+				"background": "color1",
 				"img": {
 					"url": "assets/img/SceneGraph.png",
 					"alt": "Complete scene graph"
@@ -70,7 +70,7 @@
 			"templateName": "imageAndTextBlock",
 			"content": {
 				"alignment": "left",
-				"background": "#282828",
+				"background": "color2",
 				"img": {
 					"url": "assets/img/GUIsystem.png",
 					"alt": "GUI system"
@@ -96,7 +96,7 @@
 			"templateName": "imageAndTextBlock",
 			"content": {
 				"alignment": "left",
-				"background": "#333333",
+				"background": "color3",
 				"img": {
 					"url": "assets/img/Inspector.png",
 					"alt": "EASILY INSPECT AND SETUP YOUR SCENE"
