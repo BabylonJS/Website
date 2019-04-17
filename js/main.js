@@ -61,9 +61,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Query string
 var queryString = window.location.search;
 
-if (queryString) {
+if (queryString && !queryString.startsWith('?fbclid=')) {
 	var query = queryString.replace("?", "");
 
 	window.location = "./Demos/" + query;
 }
+
+
+function webGLDescription() {
+	document.getElementById("descriptionBox").style.visibility = "visible";
+}
+
+function noWebGLDescription(){
+    document.getElementById("descriptionBox").style.visibility = "hidden";
+}
+
+
 

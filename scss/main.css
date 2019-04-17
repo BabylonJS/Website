@@ -429,29 +429,35 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+  box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
+  transition: box-shadow .1s ease-in-out;
+  border-radius: 2px;
 }
 [class*=button]:hover, [class*=button]:focus {
   transform: translateY(0.1em);
   color: white;
   opacity: 0.75;
+  box-shadow: 0px 3px 5px 0px rgb(0, 0, 0);
 }
 
 .button-red {
   background: #E12227;
   color: white;
   width: 100px;
+  
 }
 
 .button-green {
   background: #2DB14B;
   color: white;
-  width: 100px;
+  width: 110px;
 }
 
 .button-blue {
   background: #3B789A;
   color: white;
   width: 100px;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -918,4 +924,21 @@ main .about + hr.margin {
 .wrapper .title .filters .filter:focus {
   outline: none;
   border-color: 1px solid #999999;
+}
+
+
+#bigWebGL {
+  text-decoration: underline;
+}
+
+#descriptionBox {
+  position: absolute;
+  font-size: 15px;
+  color: #000;
+  background-color: #FFF;
+  width: 300px;
+  height: 90px;
+  border: solid black;
+  padding: 10px;
+  visibility: hidden;
 }

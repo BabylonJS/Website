@@ -32,7 +32,7 @@ var CreateChibiRexScene = function (engine) {
 		light.intensity = 0.7;
 
 		for (var i = 0; i < scene.meshes.length; i++) {
-			generator.addShadowCaster(scene.meshes[i]);
+			generator.addShadowCaster(scene.meshes[i], false);
 			scene.meshes[i].alwaysSelectAsActiveMesh = true;
 		}
 
