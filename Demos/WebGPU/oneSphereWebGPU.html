@@ -47,6 +47,7 @@
         }
 
         a {
+            color: green;
             margin: auto;
         }
         a:hover {
@@ -78,11 +79,11 @@
     <div>
 
     <script>
-    if (!navigator.gpu) {
-        alert("Web GPU is not supported on your platform so far.");
-        return;
-    }
     (async function() {
+        if (!navigator.gpu) {
+            alert("Web GPU is not supported on your platform so far.");
+            return;
+        }
         const canvas = document.getElementById("renderCanvas");
         const divFps = document.getElementById("fps");
 
