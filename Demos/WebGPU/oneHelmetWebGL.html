@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Local Development</title>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="./lib/shaderc.js"></script>
+    <script src="./lib/babylon.max.js"></script>
+    <script src="./lib/babylonjs.loaders.js"></script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: black; 
+            color: green;
+            font-family: Consolas, monaco, monospace;
+        }
+
+        #renderCanvas {
+            width: 1024px;
+            height: 768px;
+            display: block;
+            font-size: 0;
+            margin: auto;
+        }
+
+        #fps {
+            position: absolute;
+            background-color: black;
+            border: 2px solid green;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            top: 15px;
+            right: 10px;
+            width: 60px;
+            height: 20px;
+        }
+
+        .centered {
+            margin: auto;
+            text-align: center;
+        }
+
+        a {
+           margin: auto;
+        }
+        a:hover {
+            color: green;
+            font-family: Consolas, monaco, monospace;
+        }
+        a:visited {
+            color: green;
+            font-family: Consolas, monaco, monospace;
+        }
+        a:focus {
+            color: green;
+            font-family: Consolas, monaco, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered">
+        <h1>WebGPU Experiment</h1>
+    <div>
+
+    <div id="fps">0</div>
+
+    <canvas id="renderCanvas" width="1024" height="768"></canvas>
+
+    <div class="centered">
+        <a href="https://doc.babylonjs.com/extensions/WebGPU">You can find the related documentation on our WebSite</a>
+    <div>
+
+    <script>
+    (async function() {
+        const canvas = document.getElementById("renderCanvas");
+        const divFps = document.getElementById("fps");
+
+        const engine = new BABYLON.Engine(canvas);
+
+        const scene = new BABYLON.Scene(engine);
+        scene.environmentTexture = new BABYLON.CubeTexture("https://assets.babylonjs.com/environments/environmentSpecular.env", scene);
+
+        await BABYLON.SceneLoader.ImportMeshAsync("", "https://www.babylonjs.com/Assets/DamagedHelmet/glTF/", "damagedhelmet.gltf", scene);
+        
+        scene.createDefaultCamera(true, true, true);
+        scene.createDefaultSkybox(scene.environmentTexture, true, undefined, 0.3);
+
+        engine.runRenderLoop(() => {
+            scene.render();
+            divFps.innerHTML = engine.getFps().toFixed() + " fps";
+        });
+    })();
+    </script>
+</body>
+
+</html>
