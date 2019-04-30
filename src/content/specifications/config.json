@@ -32,7 +32,7 @@
                             "list": [
                                 [
                                     {
-                                        "text": "Transparent WebGL 1.0/"
+                                        "text": "Transparent WebGL 1.0 /"
                                     },
                                     {
                                         "link": "http://doc.babylonjs.com/features/webgl2",
@@ -72,7 +72,7 @@
                                 [
                                     {
                                         "link": "https://www.davrous.com/2014/11/18/understanding-collisions-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js/",
-                                        "text": "Physics engine "
+                                        "text": "Physics engine"
                                     },
                                     {
                                         "text": "(thanks to "
@@ -93,7 +93,7 @@
                                         "text": "cannon.js"
                                     },
                                     {
-                                        "text": ")"
+                                        "text": "integrations)"
                                     }
                                 ],
                                 [
@@ -629,7 +629,7 @@
                                 ],
                                 [
                                     {
-                                        "text": "Importers for glTF, STL, OBJ and Bbaylon file formats"
+                                        "text": "Importers for glTF, STL, OBJ and Babylon file formats"
                                     }
                                 ],
                                 [
