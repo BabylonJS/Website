@@ -1,0 +1,37 @@
+<section class="top-block">
+    <div class="container">
+        <div class="triangle-background">
+            <div class="large-logo">
+                <img id="" src="{{img.url}}" />
+            </div>
+            <div class="version">4.0</div>
+        </div>
+    </div>
+    <div class="container-info">
+        <div class="text-part">
+            <h1>{{title}}</h1>
+            <h2>{{title2}}</h2>
+            <h2 class="last-subtitle">{{title3}}</h2>
+            <span>{{desc}}</span>
+        </div>
+        <div class="logo-part">
+            <ul>
+                {{#each items}}
+                <li>
+                    <a href="{{link}}" class="logo-part-link" target="_blank">
+                        <div class="icon-back">
+                            <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                            <img class="iconImage" src="{{img.url}}">
+                        </div>
+                        <div class="logo-part-desc">{{desc}}</div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="middle-triangle">
+        </div>
+    </div>
+</section>

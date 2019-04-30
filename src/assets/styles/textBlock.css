@@ -1,0 +1,21 @@
+
+.content-container > .text-block {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container > .text-block .inner-container {
+    max-width: 906px;
+    padding: 40px 0;
+}
+
+.content-container > .text-block .inner-container h2 {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.content-container > .text-block .inner-container p {
+    font-family: "acumin-pro", serif;
+    font-size: 18px;
+}

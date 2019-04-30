@@ -1,0 +1,24 @@
+<div class="samples-carousel-block">
+    <div class="carousel" data-sample="{{delay}}">
+        {{#each items}}
+        {{#if videoUrl}}
+        <div class="img-holder">
+            <video src='{{videoUrl}}' autoplay loop muted></video>
+        </div>
+        {{/if}}
+        {{#if imgUrl}}
+        <div class="img-holder">
+            <img class="img-carousel" src='{{imgUrl}}'></video>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+    <div class="carousel-navigate">
+        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
+        {{#each items}}
+        <div class="carousel-navigate-item" data-order="{{@index}}">
+            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
+        </div>
+        {{/each}}
+    </div>
+</div>

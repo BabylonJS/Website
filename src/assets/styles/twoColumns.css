@@ -1,0 +1,91 @@
+.two-columns{
+    background-color: var(--background);
+}
+.two-columns h1{
+    color: #fff;
+    font-size: 65px;
+    line-height: 60px;
+    padding-top: 30px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+.two-columns h2{
+    color: #fff;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 0;
+    font-family: "acumin-pro-condensed"; 
+    font-weight: 500;
+}
+
+
+.columns-container{
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.two-columns li, .two-columns li a {
+    list-style: none;    
+    font-family: "acumin-pro"; 
+    font-weight: 300;
+}
+
+.two-columns li:before {
+    content:"•";
+    font-size:20px;    
+    font-family: "acumin-pro"; 
+}
+
+.left-list a, .right-list a {
+    padding-left: 0px;
+}
+
+.left-list .right-list{
+    width: 540px;
+}
+.right-list{
+    padding-left: 100px;
+    font-family:"acumin-pro";
+    font-size: 18px;
+    line-height: 30px;
+}
+.left-list{
+    font-family:"acumin-pro";
+    font-size: 18px;
+    line-height: 30px;
+}
+.left-list  ul li{
+    color: #ffffff;
+
+}
+.right-list  ul li{
+    color: #ffffff;
+}
+.left-list p{
+    font-family:"acumin-pro";
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.two-columns a{
+    color: var(--link-color);
+}
+
+.two-columns a img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+@media (hover: hover) {    
+    .two-columns a:hover{
+        color: var(--link-hover);
+    }
+}
+
