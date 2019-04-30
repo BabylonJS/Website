@@ -55,10 +55,13 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/PBR 4.0 Reel_Website_Cut.mp4"
+                        "videoUrl": "/assets/videos/clearCoatWeb.mp4"
                     },
                     {
-                        "videoUrl": "/assets/videos/PBR 4.0 Reel_Website_Cut_Sheen.mp4"
+                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4"
+                    },
+                    {
+                        "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
                     }
                 ]
             }
