@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Babylon - Basic scene</title>
+	<style>
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		#renderCanvas {
+			width: 100%;
+			height: 100%;
+			touch-action: none;
+		}
+	</style>
+	<script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
+	<script src="//preview.babylonjs.com/babylon.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+</head>
+<body>
+	<canvas id="renderCanvas" touch-action="none"></canvas>
+	<script src="main.js"></script>
+	<script type="text/javascript">
+		// Get the canvas element from our HTML below
+		var canvas = document.querySelector("#renderCanvas");
+		// Load the BABYLON 3D engine
+		var engine = new BABYLON.Engine(canvas, true);
+		var scene = createScene(engine, canvas);
+		// Register a render loop to repeatedly render the scene
+		engine.runRenderLoop(function () {
+			scene.render();
+		});
+		// Watch for browser/canvas resize events
+		window.addEventListener("resize", function () {
+			engine.resize();
+		});
+	</script>
+</body>
+</html>

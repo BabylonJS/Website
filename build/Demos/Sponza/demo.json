@@ -1,0 +1,688 @@
+﻿{
+  "sceneName": "Sponza.babylon",
+  "scenePath": "/Scenes/Sponza/",
+  "startCameraIndex": 1,
+  "tracks": [
+    {
+      "name": "fades",
+      "effects": [
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 7157
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 8157
+          },
+          "duration": 250,
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 15876
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 17376
+          },
+          "duration": 250,
+          "cameraIndex": 3
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 24500
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 3
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 26000
+          },
+          "duration": 250,
+          "cameraIndex": 4
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 33219
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 4
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 34719
+          },
+          "duration": 250,
+          "cameraIndex": 5
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 43500
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 5
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 45000
+          },
+          "duration": 250,
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 59200
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 60700
+          },
+          "duration": 250,
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 67500
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 69000
+          },
+          "duration": 250,
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 85254
+          },
+          "duration": 1500,
+          "toBlack": "true",
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 86754
+          },
+          "duration": 250,
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 138348
+          },
+          "duration": 250,
+          "toBlack": "true",
+          "cameraIndex": 1
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 138598
+          },
+          "duration": 3000,
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 172000
+          },
+          "duration": 1000,
+          "toBlack": "true",
+          "cameraIndex": 2
+        },
+        {
+          "type": "fade",
+          "trigger": {
+            "type": "time",
+            "delay": 173000
+          },
+          "duration": 1000,
+          "cameraIndex": 0
+        }
+      ]
+    },
+
+    {
+      "name": "cameras",
+      "effects": [
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 8657
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 17376
+          },
+          "cameraIndex": 3
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 26000
+          },
+          "cameraIndex": 4
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 34719
+          },
+          "cameraIndex": 5
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 45000
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 60700
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 69000
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 86754
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 103907
+          },
+          "cameraIndex": 3
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 106200
+          },
+          "cameraIndex": 5
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 108153
+          },
+          "cameraIndex": 4
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 108500
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 110852
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 112732
+          },
+          "cameraIndex": 4
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 114839
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 116867
+          },
+          "cameraIndex": 3
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 117220
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 119490
+          },
+          "cameraIndex": 4
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 121305
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 123485
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 125469
+          },
+          "cameraIndex": 4
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 125826
+          },
+          "cameraIndex": 3
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 128162
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 130000
+          },
+          "cameraIndex": 5
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 132166
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 134000
+          },
+          "cameraIndex": 3
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 134527
+          },
+          "cameraIndex": 1
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 136800
+          },
+          "cameraIndex": 5
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 138598
+          },
+          "cameraIndex": 2
+        },
+        {
+          "type": "switchCamera",
+          "trigger": {
+            "type": "time",
+            "delay": 173000
+          },
+          "cameraIndex": 0,
+          "attachControl":  true
+        }
+      ]
+    },
+    {
+      "name": "texts",
+      "effects": [
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 4310
+          },
+          "enterDuration": 1000,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,
+          "enterTranslation": "0, -10%",
+          "exitTranslation": "0, 10%",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "A Babylon.js<BR>Production",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "center",
+          "justifyContent":  "center"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 12750
+          },
+          "enterDuration": 750,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,          
+          "enterTranslation": "10%, 0",
+          "exitTranslation": "0px, 0",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "Inspired by Sponza<BR>from Crytek",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "flex-end",
+          "justifyContent":  "flex-end"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 21609
+          },
+          "enterDuration": 750,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,          
+          "enterTranslation": "-10%, 0",
+          "exitTranslation": "0px, 0",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "3D scene & animations<BR>@rousseau_michel",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "flex-start",
+          "justifyContent":  "flex-start"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 30349
+          },
+          "enterDuration": 750,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,          
+          "enterTranslation": "-10%, 0",
+          "exitTranslation": "0, 0",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "Code<BR>@deltakosh & @davrous",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "center",
+          "justifyContent":  "center"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 39000
+          },
+          "enterDuration": 750,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,          
+          "enterTranslation": "10%, 0",
+          "exitTranslation": "0, 0",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "Music<BR>@davrous",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "center",
+          "justifyContent":  "center"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 47803
+          },
+          "enterDuration": 750,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 0.8,
+          "scaling": 1.0,          
+          "enterTranslation": "10%, 0",
+          "exitTranslation": "0, 0",
+          "translation": "0px, 0",
+          "duration": 2250,
+          "text": "Tooling<BR>@Luaacro",
+          "color": "white",
+          "fontSize": "3.5vw",
+          "font": "Century",
+          "fontWeight": "bold",
+          "alignItems": "flex-end",
+          "justifyContent":  "flex-end"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 62000
+          },
+          "enterDuration": 2000,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 1.0,
+          "scaling": 1.0,          
+          "enterTranslation": "0, 20%",
+          "exitTranslation": "0, 20%",
+          "translation": "0, 0",
+          "duration": 4000,
+          "text": "Powered by<BR>WebGL / Web Audio<BR>Pointer Events / Gamepad API / IndexedDB",
+          "color": "white",
+          "fontSize": "1.5vw",
+          "font": "Century",
+          "fontWeight": "light",
+          "alignItems": "flex-end",
+          "justifyContent":  "center"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 81000
+          },
+          "enterDuration": 2000,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 1.0,
+          "scaling": 1.0,          
+          "enterTranslation": "0, 20%",
+          "exitTranslation": "0, 20%",
+          "translation": "0, 0",
+          "duration": 4000,
+          "text": "Optimized for<BR>Desktops / Tablets / Mobiles / Xbox One",
+          "color": "white",
+          "fontSize": "1.5vw",
+          "font": "Century",
+          "fontWeight": "light",
+          "alignItems": "flex-end",
+          "justifyContent":  "center"
+        },
+        {
+          "type": "text",
+          "trigger": {
+            "type": "time",
+            "delay": 146000
+          },
+          "enterDuration": 2000,
+          "exitDuration": 2000,
+          "enterOpacity": 0,
+          "exitOpacity": 0,
+          "opacity": 0.8,
+          "enterScaling": 1.0,
+          "exitScaling": 1.0,
+          "scaling": 1.0,          
+          "enterTranslation": "0, 20%",
+          "exitTranslation": "0, 20%",
+          "translation": "0, 0",
+          "duration": 4000,
+          "text": "Wait for the end of the sequence<BR>or use the camera icon (or button A)<BR>to switch to free interactive mode",
+          "color": "white",
+          "fontSize": "1.5vw",
+          "font": "Century",
+          "fontWeight": "light",
+          "alignItems": "flex-end",
+          "justifyContent":  "center"
+        }
+      ]
+    }
+  ]
+}

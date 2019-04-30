@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BabylonJS - Clouds demo</title>
+    <script src="//preview.babylonjs.com/babylon.js"></script>
+    
+    <script type="application/vertexShader" id="vertexShaderCode">
+        #ifdef GL_ES
+        precision highp float;
+        #endif
+
+        // Attributes
+        attribute vec3 position;
+        attribute vec2 uv;
+
+        // Uniforms
+        uniform mat4 worldViewProjection;
+
+        // Normal
+        varying vec2 vUV;
+
+        void main(void) {
+        gl_Position = worldViewProjection * vec4(position, 1.0);
+
+        vUV = uv;
+        }
+    </script>
+  
+    <script type="application/fragmentShader" id="fragmentShaderCode">
+        #ifdef GL_ES
+        precision highp float;
+        #endif
+
+        varying vec2 vUV;
+
+        uniform vec3 fogColor;
+        uniform float fogNear;
+        uniform float fogFar;
+
+        // Refs
+        uniform sampler2D textureSampler;
+
+        void main(void) {
+        float depth = gl_FragCoord.z / gl_FragCoord.w;
+        float fogFactor = smoothstep(fogNear, fogFar, depth);
+
+        gl_FragColor = texture2D(textureSampler, vUV);
+        gl_FragColor.w *= pow(abs(gl_FragCoord.z), 20.0);
+        gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor);
+        }
+    </script>
+
+    <script src="clouds.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #326696;
+            margin: 0px;
+            overflow: hidden;
+            font-family: Monospace;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+
+        a {
+            color: #0078ff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+</body>
+</html>

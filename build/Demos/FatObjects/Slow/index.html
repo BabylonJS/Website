@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Slow</title>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="babylon.max.js"></script>
+    <script src="babylonjs.loaders.js"></script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        #fps {
+            position: absolute;
+            background-color: black;
+            border: 2px solid red;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            top: 15px;
+            right: 10px;
+            width: 60px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fps">0</div>
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+
+    <script>
+
+    var skyboxPath = "https://assets.babylonjs.com/environments/environmentSpecular.env";
+
+    if (BABYLON.Engine.isSupported()) {
+
+        var divFps = document.getElementById("fps");
+        var canvas = document.getElementById("renderCanvas");
+        var engine = new BABYLON.Engine(canvas, true, { stencil: true, disableWebGL2Support: false, preserveDrawingBuffer: true });
+        
+        BABYLON.Animation.AllowMatricesInterpolation = true;
+        BABYLON.GLTFFileLoader.IncrementalLoading = false;
+
+        window.addEventListener("resize", function() {
+            engine.resize();
+        });
+
+        var sceneLoaded = function(sceneFile, babylonScene) {
+            engine.clearInternalTexturesCache();
+
+            currentScene.createDefaultCamera(true);
+            // glTF assets use a +Z forward convention while the default camera faces +Z. Rotate the camera to look at the front of the asset.
+            currentScene.activeCamera.alpha += Math.PI;
+            // Enable camera's behaviors
+            currentScene.activeCamera.useFramingBehavior = true;
+
+            var framingBehavior = currentScene.activeCamera.getBehaviorByName("Framing");
+            framingBehavior.framingTime = 0;
+            framingBehavior.elevationReturnTime = -1;
+
+            if (currentScene.meshes.length) {
+                var worldExtends = currentScene.getWorldExtends();
+                currentScene.activeCamera.lowerRadiusLimit = null;
+                framingBehavior.zoomOnBoundingInfo(worldExtends.min, worldExtends.max);
+            }
+
+            currentScene.activeCamera.pinchPrecision = 200 / currentScene.activeCamera.radius;
+            currentScene.activeCamera.upperRadiusLimit = 5 * currentScene.activeCamera.radius;
+
+            currentScene.activeCamera.wheelDeltaPercentage = 0.01;
+            currentScene.activeCamera.pinchDeltaPercentage = 0.01;
+
+            currentScene.activeCamera.attachControl(canvas);
+
+            currentScene.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(skyboxPath, currentScene);
+            currentSkybox = currentScene.createDefaultSkybox(currentScene.environmentTexture, true, (currentScene.activeCamera.maxZ - currentScene.activeCamera.minZ) / 2, 0.3, false);
+
+            currentScene.meshes.forEach((mesh) => {
+                mesh.doNotSyncBoundingInfo = true;
+            });
+            currentScene.materials.forEach((mat) => {
+                mat.freeze()
+            });
+
+            currentScene.meshes.forEach((mesh) => mesh.ignoreNonUniformScaling = true);
+            currentScene.transformNodes.forEach((node) => node.ignoreNonUniformScaling = true);
+
+            currentScene.freezeActiveMeshes();
+        };
+
+        var rootUrl = "./";
+        var fileName = "sword-fight.glb";
+        BABYLON.SceneLoader.LoadAsync(rootUrl, fileName, engine).then(function(scene) {
+            currentScene = scene;
+
+            sceneLoaded({ name: fileName }, scene);
+
+            scene.whenReadyAsync().then(function() {
+                engine.runRenderLoop(function() {
+                    scene.render();
+                    divFps.innerHTML = engine.getFps().toFixed() + " fps";
+                });
+            });
+        }).catch(function(reason) {
+            console.error("load fail", reason.message || reason);
+        });
+    }
+    else {
+        alert('BabylonJS is not supported.')
+    }
+    </script>
+</body>
+
+</html>

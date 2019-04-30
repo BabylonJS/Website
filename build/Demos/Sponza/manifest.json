@@ -1,0 +1,110 @@
+{
+    "name": "Sponza by babylon.js",
+    "short_name": "Sponza",
+    "start_url": "https://www.babylonjs.com/demos/sponza/index.html",
+    "display": "standalone",
+    "background_color": "#686867",
+    "icons": [
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/9bfe89e5-6efb-0976-a769-f5eaaa003ad8.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/windows10/SplashScreen.scale-200.png.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/f31b7973-c1f3-ddac-b5a7-ef840d08efb4.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/a3d2c05a-2db7-c960-92a4-c8b9f2e59f13.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/37f06abf-2cb9-5eb1-ab53-b83f991e3a50.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/cd92bd80-b88d-d853-cf41-c7f0fc1174fc.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/windows10/Wide310x150Logo.scale-200.png.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/5f05411f-36de-d8f3-5803-ed2b9dd02f78.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/bd06de7d-fcf3-c360-ea03-9f24867f0bad.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/c6db352d-b91c-cf8e-dd52-a9f8b4516e18.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/9d7f5760-ade1-1765-1fd1-6a33268eebdc.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/2596cf8c-ffef-1b51-183f-9f71db2e80e3.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/ios/ios-appicon-1024-1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/6c1cd167-bbed-3459-fee1-b21b6c198218.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/a667d2f8-ba20-1cc5-d986-fcd7b33a8bc5.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/6aa935e6-55c6-ca58-8760-428decf1f867.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "https://david.blob.core.windows.net/babylonjs/SponzaVR/images/5e12b15c-1af4-4df1-dc69-fb1729bb60e7.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ],
+    "splash_screens": [
+        {
+            "src": "https://www.babylonjs.com/demos/sponza/img/splash/lowres.png",
+            "sizes": "320x240"
+        },
+        {
+            "src": "https://www.babylonjs.com/demos/sponza/img/splash/hd_small.png",
+            "sizes": "1334x750"
+        },
+        {
+            "src": "https://www.babylonjs.com/demos/sponza/img/splash/hd_hi.png",
+            "sizes": "1920x1080",
+            "density": 3
+        }
+    ],
+    "orientation": "landscape"
+}

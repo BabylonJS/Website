@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Babylon.js - Sponza demo</title>
+    <meta name="description" content="Sponza by Babylon.js demo using WebGL, Web Audio, touch & gamepad on desktop, mobile & xbox one devices">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- W3C manifest -->
+    <link rel="manifest" href="manifest.json"></link>
+
+    <link rel="apple-touch-startup-image" href="img/splash/iOSStartup.jpg">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="author" href="humans.txt" />
+    <meta name="msapplication-TileColor" content="#555555">
+    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- FB -->
+    <meta property="og:title" content="Babylon.js - Sponza demo" />
+    <meta property="og:site_name" content="Babylon.js" />
+    <meta property="og:url" content="http://www.babylonjs.com/demos/sponza" />
+    <meta property="og:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline."
+    />
+    <meta property="fb:app_id" content="1673000116277273" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaFB.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="https://www.facebook.com/davrous" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@davrous" />
+    <meta name="twitter:creator" content="@davrous" />
+    <meta name="twitter:url" content="http://www.babylonjs.com/demos/sponza" />
+    <meta name="twitter:title" content="Babylon.js - Sponza demo" />
+    <meta name="twitter:description" content="Sponza by Babylon.js shows the potential of WebGL/Web Audio accross all platforms. You can use keyboard/mouse, touch or gamepad. It supports also HTML5 Offline."
+    />
+    <meta name="twitter:image" content="http://www.babylonjs.com/demos/sponza/img/sponzaTwitter.jpg" />
+
+    <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-41767310-1', 'babylonjs.com');
+        ga('send', 'pageview');
+    </script>
+    <!-- <script src="register-sw.js"></script> -->
+    <link href="https://www.babylonjs.com/css/index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <script src="//code.jquery.com/pep/0.4.0/pep.min.js"></script>
+    <script src="//preview.babylonjs.com/babylon.js"></script>
+    <script src="//preview.babylonjs.com/loaders/babylon.glTFFileLoader.js"></script>
+    <script src="babylon.demo.js"></script>
+</head>
+
+<body>
+    <div id="sponzaLoader">
+        <div id="backgroundImage"></div>>
+        <div id="loadingDetails">
+            <div id="loadingDetailsBackground"></div>
+            <div id="loadingPercentage">
+                <div id="loadingTitle">Sponza</div>
+                <div id="teamText">by Babylon.js</div>
+                <div id="textPercentage">0%</div>
+                <div id="progressContainer">
+                    <progress id="loadingProgress" value="0" max="100"></progress>
+                </div>
+                <div id="streamingText">downloading scene</div>
+            </div>
+            <div id="iOSTouchToStart" class="hidden">Touch to start</div>
+        </div>
+    </div>
+    <div id="renderingZone">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+    </div>
+    <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
+    <div id="controls" class="hidden">
+        <div>
+            <button onclick="switchSound();" id="soundButton" class="uiButton" title="Turn off the volume"></button>
+        </div>
+        <div>
+            <div id="cameraHelper">click to switch between interative/cinematic mode -></div>
+            <button onclick="switchCamera();" id="cameraButton" class="uiButton" title="Switch to demo mode"></button>
+        </div>
+        <div>
+            <button onclick="switchFullscreen();" id="fullscreenButton" class="uiButton hidden" title="Switch to fullscreen"></button>
+        </div>
+        <div>
+            <button onclick="switchSpeakerType();" id="speakersButton" class="uiButton" title="Switch to headphone mode"></button>
+        </div>
+        <div>
+            <div id="vrHelper">click to enter VR -></div>
+            <button id="vrButton" class="uiButton" title="Switch to VR mode"></button>
+        </div>
+    </div>
+    <div id="fps"></div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Babylon.js - Retail demo</title>
+    <script src="http://cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-41767310-1', 'babylonjs.com');
+        ga('send', 'pageview');
+
+    </script>
+    <link href="../../css/index.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/pep/0.4.0/pep.min.js"></script>
+    <script src="../../babylon.max.js"></script>
+    <script src="demo.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+    <div id="fps"></div>
+    <div id="stats"></div>
+    <div id="status"></div>
+    <div id="controlPanel">
+        <div id="controlsZone">
+            <p>
+                <button id="enableDebug">Debug layer</button>
+            </p>
+            <p>
+                <button id="fullscreen">Fullscreen</button>
+            </p>
+        </div>
+        <div class="tag">Control panel</div>
+        <div class="tag" id="clickableTag"></div>
+    </div>
+    <div id="cameraPanel">
+        <div id="cameraControlsZone">
+            Active camera:<br>
+            <select id="camerasList"></select>
+            <p>
+                Change control method:
+                <button class="buttonControlPanel" id="touchCamera">
+                    <img src="../../../Assets/CamTouchOff.png" class="buttonImg" />Touch camera
+                </button>
+                <button class="buttonControlPanel" id="deviceOrientationCamera">
+                    <img src="../../../Assets/CamDeviceOff.png" class="buttonImg" />VR Device orientation camera
+                </button>
+                <button class="buttonControlPanel" id="gamepadCamera">
+                    <img src="../../../../Assets/CamGamepadJoy.png" class="buttonImg" />Gamepad camera
+                </button>
+                <button class="buttonControlPanel" id="virtualJoysticksCamera">
+                    <img src="../../../Assets/CamVirtualJoy.png" class="buttonImg" />Virtual joysticks camera
+                </button>
+                <button class="buttonControlPanel" id="anaglyphCamera">
+                    <img src="../../../Assets/CamAnaGly.png" class="buttonImg" />Anaglyph camera
+                </button>
+            </p>
+            <p>
+                Post-processes:
+                <button class="smallButtonControlPanel" id="toggleFxaa">Toggle FXAA (antialiasing)</button>
+                <button class="smallButtonControlPanel" id="toggleFsaa4">Toggle FSAA 4X (antialiasing)</button>
+                <button class="smallButtonControlPanel" id="toggleBandW">Toggle Black and white</button>
+                <button class="smallButtonControlPanel" id="toggleSepia">Toggle Sepia</button>
+            </p>
+        </div>
+        <div class="cameraTag"><img src="../../../Assets/camera.png" /></div>
+        <div class="cameraTag" id="cameraClickableTag"></div>
+    </div>
+    <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
+    <script src="../../js/loader.js"></script>
+</body>
+</html>

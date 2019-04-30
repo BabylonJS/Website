@@ -1,0 +1,119 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon - Basic scene</title>
+
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+
+    <script type="text/javascript" src="..\..\babylon.max.js"></script>
+    <script type="text/javascript" src="boxmonger.boxmesh.js"></script>
+    <script type="text/javascript" src="boxmonger.worldmanager.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script type="text/javascript">
+        ///<reference path="../../babylon.max.js" />
+        ///<reference path="boxmonger.boxmesh.js" />
+        ///<reference path="boxmonger.worldmanager.js" />
+
+        var canvas = document.getElementById("renderCanvas");
+        var engine = new BABYLON.Engine(canvas, true);
+        var startPoint = new BABYLON.Vector3(10 * 16, 4, 10 * 16);
+        var camera;
+        var worldWidthInChunks = 25;
+        var worldDepthInChunks = 25;
+
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+
+            camera = new BABYLON.FreeCamera("freeCamera", startPoint, scene);
+            camera.attachControl(canvas, false);
+            camera.keysUp.push(90);
+            camera.keysDown.push(83);
+            camera.keysRight.push(68);
+            camera.keysLeft.push(81);
+            camera.speed = 0.4;
+
+            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 25, 0), scene);
+            light.intensity = 1.0;
+
+            // Skybox
+            var skybox = BABYLON.Mesh.CreateBox("skyBox", 200.0, scene);
+            skybox.position = camera.position;
+            var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
+            skyboxMaterial.backFaceCulling = false;
+            skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Assets/Textures/TropicalSunnyDay", scene);
+            skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+            skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+            skybox.material = skyboxMaterial;
+
+            return scene;
+        };
+
+        var createWorldManager = function (scene) {
+            var worldManager = new BOXMONGER.WordManager(worldWidthInChunks, worldDepthInChunks, 1, scene);
+            worldManager.initData();
+            return worldManager;
+        };
+
+        var scene = createScene();
+        scene.debugLayer.show();
+        var worldManager = createWorldManager(scene);
+
+        var del = false;
+        var add = false;
+
+        function getMousePos(canvas, evt) {
+            var rect = canvas.getBoundingClientRect();
+            return {
+                x: evt.clientX - rect.left,
+                y: evt.clientY - rect.top
+            };
+        }
+
+        function getChar(event) {
+            if (event.which == null) {
+                return String.fromCharCode(event.keyCode) // IE
+            } else if (event.which!=0 && event.charCode!=0) {
+                return String.fromCharCode(event.which)   // the rest
+            } else {
+                return null // special key
+            }
+        }
+
+        canvas.addEventListener('mouseup', function (evt) {
+            var mousePos = getMousePos(canvas, evt);
+            //worldManager.removeFromCoords(mousePos.x, mousePos.y, camera);
+            worldManager.addFromCoords(mousePos.x, mousePos.y, camera);
+        }, false);
+
+        engine.runRenderLoop(function () {
+            scene.render();
+        });
+
+        setInterval(function () {
+            worldManager.setPlayerPosition(camera.position.x, camera.position.y, camera.position.z);
+        }, 500);
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+    </script>
+</body>
+</html>

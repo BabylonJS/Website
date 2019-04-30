@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DiStraction</title>
+
+    <link rel="stylesheet" href="./css/distraction.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./lib/icheck.skins/flat/blue.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+    <div id="canvasZone">
+        <canvas id="renderCanvas"></canvas>
+    </div>
+
+    <div id="loading">
+        Loading
+
+        <div id="message"></div>
+    </div>
+
+    <div id="title_bar" class="disable-selection">
+        <div id="title"><span>D</span>i<span>S</span>traction</div>
+        <div id="subtitle">javascript driving game demo</div>
+        <div id="menus">
+            <div id="start_btn" class="btn">Start</div>
+            <div id="game_option_ttl" class="title">Game mode</div>
+            <div id="game_options">
+                <label>
+                    <input type="radio" name="game_radio" value="free_ride" checked> Free ride
+                </label>
+                <br/>
+                <label>
+                    <input type="radio" name="game_radio" value="checkpoints"> Checkpoints
+                </label>
+            </div>
+            <div id="option_ttl" class="title">Options</div>
+            <div id="options">
+                <label>
+                    <input type="checkbox" name="shadows"> Shadows
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" name="antialias"> FXAA
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="bottom_bar"></div> -->
+
+    <div id="tdb_back"></div>
+    <div id="tdb">
+        <div id="speed"><span>0</span>km/h</div>
+        <div id="direction"></div>
+        <div id="steering"></div>
+        <div id="tdb_checkpoints">
+            <div id="timer">Time <span>00:00:00</span></div>
+            <div id="failed">Failed <span>0</span></div>
+            <div id="remaining">Checkpoints <span>0</span></div>
+        </div>
+    </div>
+
+    <script src="lib/babylon.2.2.min.js"></script>
+    <script src="lib/hand-1.3.9.min.js"></script>
+    <script src="lib/cannon-0.6.2.min.js"></script>
+    <script src="lib/fpsmeter-0.3.1.min.js"></script>
+    <script src="lib/jquery-1.11.1.min.js"></script>
+    <script src="lib/icheck-1.0.2.min.js"></script>
+
+    <script src="lib/randomColor.min.js"></script>
+    <script src="lib/tree.min.js"></script>
+
+    <script src="car.min.js"></script>
+    <script src="ground.min.js"></script>
+    <script src="chekpoints.min.js"></script>
+    <script src="distraction.min.js"></script>
+
+    <script type="text/javascript">
+        new Demo();
+    </script>
+
+</body>
+
+</html>

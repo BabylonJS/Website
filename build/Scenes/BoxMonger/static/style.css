@@ -1,0 +1,91 @@
+﻿body {
+  background: black;
+  font-family: 'Open Sans', sans-serif;
+  color: #ccc;
+}
+
+#container {
+  margin: 0 auto;
+  width: 640px;
+  background: #111;
+  padding: 20px;
+  border: 1px #222 solid;
+}
+
+#header h1 { margin: 0; }
+#nav ul { margin: 0; }
+#nav li {
+  font-weight: bold;
+  float: right;
+  list-style: none;
+  margin-left: 10px;
+}
+
+#header a, #nav a { color: rgb(28, 161, 202); text-decoration: none; }
+#header a:hover, #nav a:hover { color: rgb(157, 204, 255); text-decoration: underline; }
+
+article a { color: #FEFEF2; text-decoration: none; }
+article a:hover { color: white; text-decoration: underline; }
+
+a { color: #FEF0C9; text-decoration: none; }
+a:hover { color: #FEF6E4; text-decoration: underline; }
+
+article {
+  font-weight: bold;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+
+#content article:nth-child(6n+1) { background: #FA6B67; }
+#content article:nth-child(6n+2) { background: #70CA5D; }
+#content article:nth-child(6n+3) { background: #3CC9E4; }
+#content article:nth-child(6n+4) { background: #EC945E; }
+#content article:nth-child(6n+5) { background: #7189DE; }
+#content article:nth-child(6n+6) { background: #E798DC; }
+
+
+.sample .name {
+  font-size: 22px;
+  padding-bottom: 5px;
+  color: #fee;
+}
+
+.sample .info {
+  color: #B0F0F8;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background-color: gray;
+  height: 20px;
+  border-radius: 15px;
+  padding: 0 3px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: #444;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  background:url(/static/images/check_radio_sheet.png) left top no-repeat;
+  cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+  background:url(/static/images/check_radio_sheet.png) -19px top no-repeat;
+}

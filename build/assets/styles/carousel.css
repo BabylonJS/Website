@@ -1,0 +1,93 @@
+.samples-carousel-block {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    max-height: 100vh;
+    overflow: hidden;
+    display: grid;
+}
+
+.carousel{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-auto-columns: 100%;
+    transition: transform .5s;
+    height: 600px;
+}
+
+.carousel .img-holder {
+    width: 100%;
+    grid-row: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .img-carousel {
+    flex: 1 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+}
+
+.carousel iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-navigate {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--background);
+    border-radius: 40px;
+    display: flex;
+    padding-right: 15px;
+}
+
+.carousel-navigate-item {
+    display: flex;
+    align-items: center;
+    transition: transform .5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carousel-navigate-item img {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 15px; 
+}
+
+.carousel-navigate-item.hidden{
+    opacity: 0;
+}
+
+.carousel-navigate .caret {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 15px;
+    transition: left .5s;
+}
+
+.iframe-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-overlay.hidden{
+    display: none;
+}
+
