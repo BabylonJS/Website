@@ -1,0 +1,69 @@
+.downTriangle-block {
+    width: 100%;
+    height: 405px;
+    transform: scale(1);
+    background-color: var(--footerBackground);
+    margin-bottom: -50px;
+    margin-top: -2px;
+}
+
+.downTriangle-background {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: url("../../assets/img/footerTriangle.svg") no-repeat;
+    background-size: 100%;
+    background-position: top;
+    transform: scale(1);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.hex-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.hex-container .hex-backImage {
+    grid-row: 1;
+    grid-column: 1;    
+    height: 100%;
+    align-self: center;
+    justify-self: left;
+}
+
+.hex-container .hexagon{
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+a .hexagon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+}
+
+
+@media (max-width: 1400px) {
+    .downTriangle-block {     
+        height: 32vw;        
+    }
+}
+
+@media (hover: hover) {
+    .hex-container:hover .hex-backImage {
+        justify-self: right;
+    }
+}

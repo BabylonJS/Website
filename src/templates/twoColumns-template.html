@@ -1,0 +1,119 @@
+<section class="two-columns">
+    <h1>{{title}}</h1>
+    <div class="columns-container">
+        <div class="left-list">
+            {{#each left.sections}}
+            {{#if title}}
+            <h2>{{title}}</h2>
+            {{/if}}
+            {{#if list}}
+            <ul>
+                {{#each list}}
+                <li>
+                    {{#each .}}
+                    {{#if link}}
+                    <a href="{{link}}">{{text}}</a>
+                    {{else if list}}
+                    <ul>
+                        {{#each list}}
+                        <li>
+                            {{#each .}}
+                            {{#if link}}
+                            <a href="{{link}}">{{text}}</a>
+                            {{else}}
+                            {{text}}
+                            {{/if}}
+                            {{/each}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    {{text}}
+                    {{/if}}
+                    {{/each}}
+                </li>
+                {{/each}}
+            </ul>
+            {{else if spans}}
+            <p>
+                {{#each spans}}
+                {{#if isBold}}<b>{{/if}}
+                    {{#if link}}
+                    <a href="{{link}}">{{text}}</a>
+                    {{else}}
+                    {{text}}
+                    {{/if}}
+                    {{#if isBold}}</b>{{/if}}
+                {{/each}}
+            </p>
+            {{/if}}
+            {{#if images}}
+            {{#each images}}
+            <a title="{{linkTitle}}" url="{{link}}">
+                <img height="40" title="{{imgTitle}}" alt="{{imgAlt}}" src="{{imgUrl}}">
+            </a>
+            <br />
+            {{/each}}
+            {{/if}}
+            <br>
+            {{/each}}
+        </div>
+        <div class="right-list">
+            {{#each right.sections}}
+            {{#if title}}
+            <h2>{{title}}</h2>
+            {{/if}}
+            {{#if list}}
+            <ul>
+                {{#each list}}
+                <li>
+                    {{#each .}}
+                    {{#if link}}
+                    <a href="{{link}}">{{text}}</a>
+                    {{else if list}}
+                    <ul>
+                        {{#each list}}
+                        <li>
+                            {{#each .}}
+                            {{#if link}}
+                            <a href="{{link}}">{{text}}</a>
+                            {{else}}
+                            {{text}}
+                            {{/if}}
+                            {{/each}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    {{text}}
+                    {{/if}}
+                    {{/each}}
+                </li>
+                {{/each}}
+            </ul>
+            {{else if spans}}
+            <p>
+                {{#each spans}}
+                {{#if isBold}}<b>{{/if}}
+                    {{#if link}}
+                    <a href="{{link}}">{{text}}</a>
+                    {{else}}
+                    {{text}}
+                    {{/if}}
+                    {{#if isBold}}</b>{{/if}}
+                {{/each}}
+            </p>
+            {{/if}}
+            {{#if images}}
+            {{#each images}}
+            <a title="{{linkTitle}}" url="{{link}}">
+                <img title="{{imgTitle}}" alt="{{imgAlt}}" src="{{imgUrl}}">
+            </a>
+            <br />
+            {{/each}}
+            {{/if}}
+            <br>
+            {{/each}}
+        </div>
+    </div>
+</section>

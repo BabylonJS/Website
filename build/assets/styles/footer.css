@@ -1,0 +1,127 @@
+.footer {
+    background: var(--footerBackground);
+    vertical-align: bottom;
+}
+
+
+.footer-container{
+    padding: 20px 0;
+    max-width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.footer a {
+    font-family: "acumin-pro";
+    font-weight: 500;
+}
+
+.footer ul li a {
+    font-size: 20px;
+    font-weight: 500;
+}
+.footer-menu{
+    float: right;
+}
+.footer-right{
+    width: 50%;
+    display:flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    width: 140px;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    text-align: center;
+}
+
+.footer-left{
+    width: 50%;
+}
+
+.footer-menu ul li a {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.footer.container{
+    min-width: 80%;
+    margin: 0 auto;
+}
+
+.social-icons{
+    float:left;
+    transform: scale(1);
+}
+.social-icons a img{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+@media all and (max-width: 1400px){  
+    .footer-container{
+        margin-left: 20px;
+        margin-right: 20px;     
+        height: 150px;
+    }
+
+    .footer-right {
+        text-align: right;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .social-icons {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-right{
+        justify-content: center;
+    }
+    
+    .footer-right a {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .footer-container{
+        flex-direction: column-reverse;
+        height: 250px;
+    }
+    .footer-menu{
+        float:none;
+    }    
+    .footer-menu ul{
+        column-count: 6;
+    }
+    .footer-left{
+        width: 100%;
+    }
+    .footer-right{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-menu ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (hover: hover) {
+    .footer a:hover {
+        color: var(--mainColor2);
+    }
+}
+

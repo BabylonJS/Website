@@ -1,0 +1,19 @@
+<section class="image-and-text-block {{#if (eq alignment 'right')}} right {{/if}}"
+     style="background-color: {{#var background}}{{/var}}">
+    <div class="inner-container">
+    	{{#if (eq alignment "left")}}
+            <div>
+                <img src="{{img.url}}" alt="{{img.alt}}">
+            </div>
+        {{/if}}
+        <div class="text-block">
+            <h2>{{title}}</h2>
+            <p>{{desc}}</p>
+        </div>
+        {{#if (eq alignment "right")}}
+            <div>
+                <img src="{{img.url}}" alt="{{img.alt}}">
+            </div>
+        {{/if}}
+    </div>
+</section>
