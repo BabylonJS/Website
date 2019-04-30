@@ -1,0 +1,27 @@
+<div class="gallery-block">
+    <div class="container">
+        <div class="middle-background-gallery">
+            <h2>{{title}}</h2>
+            <h3>{{desc}}</h3>
+            <div class="container-info">
+                <ul id="hexGrid">
+                    {{#each items}}
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="{{link}}">
+                                <img src="{{img.url}}" alt="{{img.alt}}" />
+                                <div class="desc">
+                                    <div class="hexDesc">{{desc}}</div>
+                                    <div class="hexDesc author">{{author}}</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

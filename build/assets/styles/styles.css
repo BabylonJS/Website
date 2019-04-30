@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: "acumin-pro-extra-condensed";
+    letter-spacing: normal;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    font-size: 18px;  
+}
+
+.content-container {
+    background-color: var(--background); 
+}
+
+li {
+    list-style: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: #e2e2e2;
+    width: 100%;
+    padding-left: 24px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #201936;
+}
+
+.inner-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.margin-block {
+    height: 70px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+p {
+    line-height: 28px;
+}
+
+.middle-background h2 {
+    color: #fff;
+    margin: 137px 0 80px 7%;
+    font-size: 65px;
+    line-height: 60px;
+}
+
+.why-choose .inner-container {
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.text-block {
+    max-width: 632px;
+    margin-left: 40%;
+    padding: 80px 0;
+}
+
+.align-left {
+    margin-left: 0;
+    margin-right: 40%;;
+}
+
+
+.logo {
+    width: 210px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    /*background: #626d77;*/
+    transition: all .15s linear;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.show .logo {
+    left: 286px;
+    background: #606c77;
+    opacity: 0.95;
+}
+
+.content-container > .text-block{
+    padding: 0 15px;
+}
+
+
+/*********************** middleBlock ************/
+
+.middle-block {
+    font-size: 20px;
+    width: 100%;
+    background-color: var(--background);
+}
+.middle-background {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background: url("../../assets/img/DownTriangle.svg") no-repeat;
+    padding-bottom: 50px;
+    background-position: top;
+    background-color: var(--midBackground);
+}
+.container-info h2{
+    padding-top: 100px;
+    font-size: 50px;
+    color:#ffffff;
+}
