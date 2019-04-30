@@ -3,7 +3,13 @@
         {{#each items}}
         {{#if videoUrl}}
         <div class="img-holder">
+            {{#if demoLink}}
+            <a href="{{demoLink}}" target="_blank">
+                <video src='{{videoUrl}}' autoplay loop muted></video>
+            </a>
+            {{else}}
             <video src='{{videoUrl}}' autoplay loop muted></video>
+            {{/if}}
         </div>
         {{/if}}
         {{#if imgUrl}}

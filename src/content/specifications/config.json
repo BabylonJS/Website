@@ -32,7 +32,7 @@
                             "list": [
                                 [
                                     {
-                                        "text": "Transparent WebGL 1.0/"
+                                        "text": "Transparent WebGL 1.0 /"
                                     },
                                     {
                                         "link": "http://doc.babylonjs.com/features/webgl2",
@@ -72,7 +72,7 @@
                                 [
                                     {
                                         "link": "https://www.davrous.com/2014/11/18/understanding-collisions-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js/",
-                                        "text": "Physics engine "
+                                        "text": "Physics engine"
                                     },
                                     {
                                         "text": "(thanks to "
@@ -93,7 +93,7 @@
                                         "text": "cannon.js"
                                     },
                                     {
-                                        "text": ")"
+                                        "text": "integrations)"
                                     }
                                 ],
                                 [
@@ -629,7 +629,7 @@
                                 ],
                                 [
                                     {
-                                        "text": "Importers for glTF, STL, OBJ and Bbaylon file formats"
+                                        "text": "Importers for glTF, STL, OBJ and Babylon file formats"
                                     }
                                 ],
                                 [
@@ -710,6 +710,15 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
+                        "desc": "Marble Tower",
+                        "author": "by PirateJC",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "../community/assets/img/marbletower.jpg",
+                            "alt": "Local War"
+                        }
+                    },
+                    {
                         "desc": "SharePoint Spaces",
                         "author": "by Microsoft",
                         "link": "https://www.exploresharepointspaces.com/",
@@ -743,15 +752,6 @@
                         "img": {
                             "url": "../community/assets/img/ShellShockers.jpg",
                             "alt": "Shell Shockers"
-                        }
-                    },
-                    {
-                        "desc": "Jumpy Jumpy",
-                        "author": "by Game.cn",
-                        "link": "https://www.facebook.com/instantgames/play/198982457542294/?source=www_play_url",
-                        "img": {
-                            "url": "../community/assets/img/jumpy.jpg",
-                            "alt": "Jumpy Jumpy"
                         }
                     },
                     {

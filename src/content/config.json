@@ -58,7 +58,8 @@
                         "videoUrl": "/assets/videos/clearCoatWeb.mp4"
                     },
                     {
-                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4"
+                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
                     },
                     {
                         "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
@@ -72,6 +73,15 @@
                 "title": "FEATURED DEMOS",
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
+                    {
+                        "desc": "Marble Tower",
+                        "author": "by PirateJC",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "../community/assets/img/marbletower.jpg",
+                            "alt": "Local War"
+                        }
+                    },
                     {
                         "desc": "SharePoint Spaces",
                         "author": "by Microsoft",
@@ -106,15 +116,6 @@
                         "img": {
                             "url": "./community/assets/img/ShellShockers.jpg",
                             "alt": "Shell Shockers"
-                        }
-                    },
-                    {
-                        "desc": "Jumpy Jumpy",
-                        "author": "by Game.cn",
-                        "link": "https://www.facebook.com/instantgames/play/198982457542294/?source=www_play_url",
-                        "img": {
-                            "url": "./community/assets/img/jumpy.jpg",
-                            "alt": "Jumpy Jumpy"
                         }
                     },
                     {
