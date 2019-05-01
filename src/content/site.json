@@ -25,6 +25,19 @@
             ]
         },
         {
+            "root": "community",
+            "children": [
+                {
+                    "menuTitle": "DEMOS",
+                    "menuUrl": "https://www.babylonjs.com/community"
+                },
+                {
+                    "menuTitle": "FORUM",
+                    "menuUrl": "https://forum.babylonjs.com"
+                }
+            ]
+        },
+        {
             "root": "learn",
             "children": [
                 {
@@ -38,19 +51,6 @@
                 {
                     "menuTitle": "TUTORIALS",
                     "menuUrl": "https://doc.babylonjs.com/how_to/"
-                }
-            ]
-        },
-        {
-            "root": "community",
-            "children": [
-                {
-                    "menuTitle": "Demos",
-                    "menuUrl": "https://www.babylonjs.com/community" 
-                },
-                {
-                    "menuTitle": "Forum",
-                    "menuUrl": "https://forum.babylonjs.com"
                 }
             ]
         },
