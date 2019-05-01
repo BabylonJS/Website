@@ -72,8 +72,12 @@
                                 <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}" href="{{menuUrl}}"
                                         target="_blank">{{menuTitle}}</a>
                                     {{else}}
+                                    {{#if children}}
+                                <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}">{{menuTitle}}</a>
+                                    {{else}}
                                 <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}"
                                         href="/{{root}}">{{menuTitle}}</a>
+                                    {{/if}}
                                     {{/if}}
                                     {{/each}}
                             </ul>
