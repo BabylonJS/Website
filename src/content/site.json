@@ -28,12 +28,12 @@
             "root": "community",
             "children": [
                 {
-                    "menuTitle": "DEMOS",
-                    "menuUrl": "https://www.babylonjs.com/community"
-                },
-                {
                     "menuTitle": "FORUM",
                     "menuUrl": "https://forum.babylonjs.com"
+                },
+                {
+                    "menuTitle": "DEMOS",
+                    "menuUrl": "https://www.babylonjs.com/community"
                 }
             ]
         },
