@@ -42,7 +42,17 @@
             ]
         },
         {
-            "root": "community"
+            "root": "community",
+            "children": [
+                {
+                    "menuTitle": "Demos",
+                    "menuUrl": "https://www.babylonjs.com/community" 
+                },
+                {
+                    "menuTitle": "Forum",
+                    "menuUrl": "https://forum.babylonjs.com"
+                }
+            ]
         },
         {
             "root": "specifications"
