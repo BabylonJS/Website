@@ -8,12 +8,21 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "WebGl CS 1.6",
+                        "author": "by Abdullah Khawatrah",
+                        "link": "https://cs16.herokuapp.com",
+                        "img": {
+                            "url": "/community/assets/img/cs16.jpg",
+                            "alt": "CS 1.6"
+                        }
+                    },
+                    {
                         "desc": "Marble Tower",
                         "author": "by PirateJC",
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
                         "img": {
                             "url": "/community/assets/img/marbletower.jpg",
-                            "alt": "Local War"
+                            "alt": "Marble Tower"
                         }
                     },
                     {
