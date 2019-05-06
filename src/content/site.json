@@ -51,6 +51,10 @@
                 {
                     "menuTitle": "TUTORIALS",
                     "menuUrl": "https://doc.babylonjs.com/how_to/"
+                },
+                {
+                    "menuTitle": "BLOG",
+                    "menuUrl": "https://medium.com/@babylonjs"
                 }
             ]
         },
