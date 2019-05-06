@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Local Development</title>
+    <title>10000 Spheres WebGPU</title>
 
-    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-    <script src="./lib/shaderc.js"></script>
-    <script src="./lib/babylon.js"></script>
-    <script src="./lib/babylonjs.loaders.min.js"></script>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
 
     <style>
         html,
@@ -15,9 +15,9 @@
             width: 100%;
             padding: 0;
             margin: 0;
-            background-color: black; 
-            color: green;
-            font-family: Consolas, monaco, monospace;
+            background-color: #2a2342; 
+            color: #ffffff;
+            font-family: "acumin-pro";
         }
 
         #renderCanvas {
@@ -28,54 +28,91 @@
             margin: auto;
         }
 
-        #fps {
-            position: absolute;
-            background-color: black;
-            border: 2px solid green;
-            text-align: center;
-            font-size: 16px;
-            color: white;
-            top: 15px;
-            right: 10px;
-            width: 60px;
-            height: 20px;
+        .container {
+            display: grid;
+            grid-template-columns: auto 60px 864px 100px auto;
+            grid-template-rows: 60px 768px;
         }
 
-        .centered {
-            margin: auto;
+        .headerLogo {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            background-color: #201936;
+        }
+
+        .headerLogo > img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .headerText {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 35px;
+            line-height: 60px;
+            background-color: #201936;
+            font-family: "acumin-pro-extra-condensed";
+        }
+
+        .headerFPS {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 15px;
+            line-height: 60px;
             text-align: center;
+            background-color: #BB464B;
+        }
+
+        .content {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
         }
 
         a {
-            color: green;
-            margin: auto;
+            color: #FFFFFF;
+            text-decoration: unset;
         }
         a:hover {
-            color: green;
-            font-family: Consolas, monaco, monospace;
+            color: #FFFFFF;
         }
         a:visited {
-            color: green;
-            font-family: Consolas, monaco, monospace;
+            color: #FFFFFF;
         }
         a:focus {
-            color: green;
-            font-family: Consolas, monaco, monospace;
+            color: #FFFFFF;
         }
     </style>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="./lib/shaderc.js"></script>
+    <script src="./lib/babylon.max.js"></script>
+    <script src="./lib/babylonjs.loaders.js"></script>
 </head>
 
 <body>
-    <div class="centered">
-        <h1>WebGPU Experiment</h1>
-    <div>
-
-    <div id="fps">0</div>
-
-    <canvas id="renderCanvas" width="1024" height="768"></canvas>
-
-    <div class="centered">
-        <a href="https://doc.babylonjs.com/extensions/WebGPU">You can find the related documentation on our WebSite</a>
+    <div class="container">
+        <div class="headerLogo">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                <img src="/assets/img/Page_Logo.svg"></img>
+            </a>
+        </div>
+        <div class="headerText">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                Babylon.js - WebGPU Experiment
+            </a>
+        </div>
+        <div class="headerFPS" id="fps">0</div>
+        <div class="content">
+            <canvas id="renderCanvas" width="1024" height="768"></canvas>
+        </div>
     <div>
 
     <script>
