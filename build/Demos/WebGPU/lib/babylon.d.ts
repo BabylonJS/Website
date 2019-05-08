@@ -460,6 +460,16 @@ declare module BABYLON {
          */
         toLinearSpace(): Color3;
         /**
+         * Converts current color in rgb space to HSV values
+         * @returns a new color3 representing the HSV values
+         */
+        toHSV(): Color3;
+        /**
+         * Converts current color in rgb space to HSV values
+         * @param result defines the Color3 where to store the HSV values
+         */
+        toHSVToRef(result: Color3): void;
+        /**
          * Converts the Color3 values to linear space and stores the result in "convertedColor"
          * @param convertedColor defines the Color3 object where to store the linear space version
          * @returns the unmodified Color3
@@ -477,6 +487,14 @@ declare module BABYLON {
          */
         toGammaSpaceToRef(convertedColor: Color3): Color3;
         private static _BlackReadOnly;
+        /**
+         * Convert Hue, saturation and value to a Color3 (RGB)
+         * @param hue defines the hue
+         * @param saturation defines the saturation
+         * @param value defines the value
+         * @param result defines the Color3 where to store the RGB values
+         */
+        static HSVtoRGBToRef(hue: number, saturation: number, value: number, result: Color3): void;
         /**
          * Creates a new Color3 from the string containing valid hexadecimal values
          * @param hex defines a string containing valid hexadecimal values
@@ -13923,186 +13941,6 @@ declare module BABYLON {
         _finalizeFrame(doNotPresent?: boolean, targetTexture?: InternalTexture, faceIndex?: number, postProcesses?: Array<PostProcess>, forceFullscreenViewport?: boolean): void;
         /**
          * Disposes of the post process manager.
-         */
-        dispose(): void;
-    }
-}
-declare module BABYLON {
-        interface AbstractScene {
-            /**
-             * The list of layers (background and foreground) of the scene
-             */
-            layers: Array<Layer>;
-        }
-    /**
-     * Defines the layer scene component responsible to manage any layers
-     * in a given scene.
-     */
-    export class LayerSceneComponent implements ISceneComponent {
-        /**
-         * The component name helpfull to identify the component in the list of scene components.
-         */
-        readonly name: string;
-        /**
-         * The scene the component belongs to.
-         */
-        scene: Scene;
-        private _engine;
-        /**
-         * Creates a new instance of the component for the given scene
-         * @param scene Defines the scene to register the component in
-         */
-        constructor(scene: Scene);
-        /**
-         * Registers the component in a given scene
-         */
-        register(): void;
-        /**
-         * Rebuilds the elements related to this component in case of
-         * context lost for instance.
-         */
-        rebuild(): void;
-        /**
-         * Disposes the component and the associated ressources.
-         */
-        dispose(): void;
-        private _draw;
-        private _drawCameraPredicate;
-        private _drawCameraBackground;
-        private _drawCameraForeground;
-        private _drawRenderTargetPredicate;
-        private _drawRenderTargetBackground;
-        private _drawRenderTargetForeground;
-    }
-}
-declare module BABYLON {
-    /** @hidden */
-    export var layerPixelShader: {
-        name: string;
-        shader: string;
-    };
-}
-declare module BABYLON {
-    /** @hidden */
-    export var layerVertexShader: {
-        name: string;
-        shader: string;
-    };
-}
-declare module BABYLON {
-    /**
-     * This represents a full screen 2d layer.
-     * This can be useful to display a picture in the  background of your scene for instance.
-     * @see https://www.babylonjs-playground.com/#08A2BS#1
-     */
-    export class Layer {
-        /**
-         * Define the name of the layer.
-         */
-        name: string;
-        /**
-         * Define the texture the layer should display.
-         */
-        texture: Nullable<Texture>;
-        /**
-         * Is the layer in background or foreground.
-         */
-        isBackground: boolean;
-        /**
-         * Define the color of the layer (instead of texture).
-         */
-        color: Color4;
-        /**
-         * Define the scale of the layer in order to zoom in out of the texture.
-         */
-        scale: Vector2;
-        /**
-         * Define an offset for the layer in order to shift the texture.
-         */
-        offset: Vector2;
-        /**
-         * Define the alpha blending mode used in the layer in case the texture or color has an alpha.
-         */
-        alphaBlendingMode: number;
-        /**
-         * Define if the layer should alpha test or alpha blend with the rest of the scene.
-         * Alpha test will not mix with the background color in case of transparency.
-         * It will either use the texture color or the background depending on the alpha value of the current pixel.
-         */
-        alphaTest: boolean;
-        /**
-         * Define a mask to restrict the layer to only some of the scene cameras.
-         */
-        layerMask: number;
-        /**
-         * Define the list of render target the layer is visible into.
-         */
-        renderTargetTextures: RenderTargetTexture[];
-        /**
-         * Define if the layer is only used in renderTarget or if it also
-         * renders in the main frame buffer of the canvas.
-         */
-        renderOnlyInRenderTargetTextures: boolean;
-        private _scene;
-        private _vertexBuffers;
-        private _indexBuffer;
-        private _effect;
-        private _alphaTestEffect;
-        /**
-         * An event triggered when the layer is disposed.
-         */
-        onDisposeObservable: Observable<Layer>;
-        private _onDisposeObserver;
-        /**
-         * Back compatibility with callback before the onDisposeObservable existed.
-         * The set callback will be triggered when the layer has been disposed.
-         */
-        onDispose: () => void;
-        /**
-        * An event triggered before rendering the scene
-        */
-        onBeforeRenderObservable: Observable<Layer>;
-        private _onBeforeRenderObserver;
-        /**
-         * Back compatibility with callback before the onBeforeRenderObservable existed.
-         * The set callback will be triggered just before rendering the layer.
-         */
-        onBeforeRender: () => void;
-        /**
-        * An event triggered after rendering the scene
-        */
-        onAfterRenderObservable: Observable<Layer>;
-        private _onAfterRenderObserver;
-        /**
-         * Back compatibility with callback before the onAfterRenderObservable existed.
-         * The set callback will be triggered just after rendering the layer.
-         */
-        onAfterRender: () => void;
-        /**
-         * Instantiates a new layer.
-         * This represents a full screen 2d layer.
-         * This can be useful to display a picture in the  background of your scene for instance.
-         * @see https://www.babylonjs-playground.com/#08A2BS#1
-         * @param name Define the name of the layer in the scene
-         * @param imgUrl Define the url of the texture to display in the layer
-         * @param scene Define the scene the layer belongs to
-         * @param isBackground Defines whether the layer is displayed in front or behind the scene
-         * @param color Defines a color for the layer
-         */
-        constructor(
-        /**
-         * Define the name of the layer.
-         */
-        name: string, imgUrl: Nullable<string>, scene: Nullable<Scene>, isBackground?: boolean, color?: Color4);
-        private _createIndexBuffer;
-        /** @hidden */
-        _rebuild(): void;
-        /**
-         * Renders the layer in the scene.
-         */
-        render(): void;
-        /**
-         * Disposes and releases the associated ressources.
          */
         dispose(): void;
     }
@@ -29168,6 +29006,485 @@ declare module BABYLON {
     }
 }
 declare module BABYLON {
+    /** @hidden */
+    export class WebGPUConstants {
+        static readonly GPUCullMode_none: GPUCullMode;
+        static readonly GPUCullMode_front: GPUCullMode;
+        static readonly GPUCullMode_back: GPUCullMode;
+        static readonly GPUFrontFace_ccw: GPUFrontFace;
+        static readonly GPUFrontFace_cw: GPUFrontFace;
+        static readonly GPUIndexFormat_uint16: GPUIndexFormat;
+        static readonly GPUIndexFormat_uint32: GPUIndexFormat;
+        static readonly GPULoadOp_clear: GPULoadOp;
+        static readonly GPULoadOp_load: GPULoadOp;
+        static readonly GPUStoreOp_store: GPUStoreOp;
+        static readonly GPUPrimitiveTopology_pointList: GPUPrimitiveTopology;
+        static readonly GPUPrimitiveTopology_lineList: GPUPrimitiveTopology;
+        static readonly GPUPrimitiveTopology_lineStrip: GPUPrimitiveTopology;
+        static readonly GPUPrimitiveTopology_triangleList: GPUPrimitiveTopology;
+        static readonly GPUPrimitiveTopology_triangleStrip: GPUPrimitiveTopology;
+        static readonly GPUTextureDimension_1d: GPUTextureDimension;
+        static readonly GPUTextureDimension_2d: GPUTextureDimension;
+        static readonly GPUTextureDimension_3d: GPUTextureDimension;
+        static readonly GPUTextureFormat_r8unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_r8unormSrgb: GPUTextureFormat;
+        static readonly GPUTextureFormat_r8snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_r8uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r8sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r16unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_r16snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_r16uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r16sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r16float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg8unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg8unormSrgb: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg8snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg8uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg8sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_b5g6r5unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_r32uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r32sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_r32float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg16unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg16snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg16uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg16sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg16float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba8unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba8unormSrgb: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba8snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba8uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba8sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_bgra8unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_bgra8unormSrgb: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgb10a2unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg11b10float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg32uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg32sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rg32float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba16unorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba16snorm: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba16uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba16sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba16float: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba32uint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba32sint: GPUTextureFormat;
+        static readonly GPUTextureFormat_rgba32float: GPUTextureFormat;
+        static readonly GPUTextureFormat_depth32float: GPUTextureFormat;
+        static readonly GPUTextureFormat_depth32floatStencil8: GPUTextureFormat;
+        static readonly GPUTextureViewDimension_1d: GPUTextureViewDimension;
+        static readonly GPUTextureViewDimension_2d: GPUTextureViewDimension;
+        static readonly GPUTextureViewDimension_2dArray: GPUTextureViewDimension;
+        static readonly GPUTextureViewDimension_cube: GPUTextureViewDimension;
+        static readonly GPUTextureViewDimension_cubeArray: GPUTextureViewDimension;
+        static readonly GPUTextureViewDimension_3d: GPUTextureViewDimension;
+        static readonly GPUPowerPreference_lowPower: GPUPowerPreference;
+        static readonly GPUPowerPreference_highPerformance: GPUPowerPreference;
+        static readonly GPUVertexFormat_uchar: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar2: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar3: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar4: GPUVertexFormat;
+        static readonly GPUVertexFormat_char: GPUVertexFormat;
+        static readonly GPUVertexFormat_char2: GPUVertexFormat;
+        static readonly GPUVertexFormat_char3: GPUVertexFormat;
+        static readonly GPUVertexFormat_char4: GPUVertexFormat;
+        static readonly GPUVertexFormat_ucharnorm: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar2norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar3norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar4norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_uchar4normBGRA: GPUVertexFormat;
+        static readonly GPUVertexFormat_charnorm: GPUVertexFormat;
+        static readonly GPUVertexFormat_char2norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_char3norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_char4norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort2: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort3: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort4: GPUVertexFormat;
+        static readonly GPUVertexFormat_short: GPUVertexFormat;
+        static readonly GPUVertexFormat_short2: GPUVertexFormat;
+        static readonly GPUVertexFormat_short3: GPUVertexFormat;
+        static readonly GPUVertexFormat_short4: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushortnorm: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort2norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort3norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_ushort4norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_shortnorm: GPUVertexFormat;
+        static readonly GPUVertexFormat_short2norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_short3norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_short4norm: GPUVertexFormat;
+        static readonly GPUVertexFormat_half: GPUVertexFormat;
+        static readonly GPUVertexFormat_half2: GPUVertexFormat;
+        static readonly GPUVertexFormat_half3: GPUVertexFormat;
+        static readonly GPUVertexFormat_half4: GPUVertexFormat;
+        static readonly GPUVertexFormat_float: GPUVertexFormat;
+        static readonly GPUVertexFormat_float2: GPUVertexFormat;
+        static readonly GPUVertexFormat_float3: GPUVertexFormat;
+        static readonly GPUVertexFormat_float4: GPUVertexFormat;
+        static readonly GPUVertexFormat_uint: GPUVertexFormat;
+        static readonly GPUVertexFormat_uint2: GPUVertexFormat;
+        static readonly GPUVertexFormat_uint3: GPUVertexFormat;
+        static readonly GPUVertexFormat_uint4: GPUVertexFormat;
+        static readonly GPUVertexFormat_int: GPUVertexFormat;
+        static readonly GPUVertexFormat_int2: GPUVertexFormat;
+        static readonly GPUVertexFormat_int3: GPUVertexFormat;
+        static readonly GPUVertexFormat_int4: GPUVertexFormat;
+        static readonly GPUBufferUsage_NONE: number;
+        static readonly GPUBufferUsage_MAP_READ: number;
+        static readonly GPUBufferUsage_MAP_WRITE: number;
+        static readonly GPUBufferUsage_TRANSFER_SRC: number;
+        static readonly GPUBufferUsage_TRANSFER_DST: number;
+        static readonly GPUBufferUsage_INDEX: number;
+        static readonly GPUBufferUsage_VERTEX: number;
+        static readonly GPUBufferUsage_UNIFORM: number;
+        static readonly GPUBufferUsage_STORAGE: number;
+        static readonly GPUColorWriteBits_NONE: number;
+        static readonly GPUColorWriteBits_RED: number;
+        static readonly GPUColorWriteBits_GREEN: number;
+        static readonly GPUColorWriteBits_BLUE: number;
+        static readonly GPUColorWriteBits_ALPHA: number;
+        static readonly GPUColorWriteBits_ALL: number;
+        static readonly GPUShaderStageBit_NONE: number;
+        static readonly GPUShaderStageBit_VERTEX: number;
+        static readonly GPUShaderStageBit_FRAGMENT: number;
+        static readonly GPUShaderStageBit_COMPUTE: number;
+        static readonly GPUTextureAspect_COLOR: number;
+        static readonly GPUTextureAspect_DEPTH: number;
+        static readonly GPUTextureAspect_STENCIL: number;
+        static readonly GPUTextureUsage_NONE: number;
+        static readonly GPUTextureUsage_TRANSFER_SRC: number;
+        static readonly GPUTextureUsage_TRANSFER_DST: number;
+        static readonly GPUTextureUsage_SAMPLED: number;
+        static readonly GPUTextureUsage_STORAGE: number;
+        static readonly GPUTextureUsage_OUTPUT_ATTACHMENT: number;
+        static readonly GPUCompareFunction_never: GPUCompareFunction;
+        static readonly GPUCompareFunction_less: GPUCompareFunction;
+        static readonly GPUCompareFunction_equal: GPUCompareFunction;
+        static readonly GPUCompareFunction_lessEqual: GPUCompareFunction;
+        static readonly GPUCompareFunction_greater: GPUCompareFunction;
+        static readonly GPUCompareFunction_notEqual: GPUCompareFunction;
+        static readonly GPUCompareFunction_greaterEqual: GPUCompareFunction;
+        static readonly GPUCompareFunction_always: GPUCompareFunction;
+        static readonly GPUBindingType_uniformBuffer: GPUBindingType;
+        static readonly GPUBindingType_dynamicUniformBuffer: GPUBindingType;
+        static readonly GPUBindingType_sampler: GPUBindingType;
+        static readonly GPUBindingType_sampledTexture: GPUBindingType;
+        static readonly GPUBindingType_storageBuffer: GPUBindingType;
+        static readonly GPUBindingType_dynamicStorageBuffer: GPUBindingType;
+        static readonly GPUInputStepMode_vertex: GPUInputStepMode;
+        static readonly GPUInputStepMode_instance: GPUInputStepMode;
+        static readonly GPUStencilOperation_keep: string;
+        static readonly GPUStencilOperation_zero: string;
+        static readonly GPUStencilOperation_replace: string;
+        static readonly GPUStencilOperation_invert: string;
+        static readonly GPUStencilOperation_incrementClamp: string;
+        static readonly GPUStencilOperation_decrementClamp: string;
+        static readonly GPUStencilOperation_incrementWrap: string;
+        static readonly GPUStencilOperation_decrementWrap: string;
+    }
+}
+declare module BABYLON {
+    /** @hidden */
+    export class WebGPUDataBuffer extends DataBuffer {
+        private _buffer;
+        constructor(resource: GPUBuffer);
+        readonly underlyingResource: any;
+    }
+}
+declare module BABYLON {
+    /**
+     * Options to create the WebGPU engine
+     */
+    export interface WebGPUEngineOptions extends GPURequestAdapterOptions {
+        /**
+         * If delta time between frames should be constant
+         * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+         */
+        deterministicLockstep?: boolean;
+        /**
+         * Maximum about of steps between frames (Default: 4)
+         * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+         */
+        lockstepMaxSteps?: number;
+        /**
+         * Defines that engine should ignore modifying touch action attribute and style
+         * If not handle, you might need to set it up on your side for expected touch devices behavior.
+         */
+        doNotHandleTouchAction?: boolean;
+        /**
+         * Defines if webaudio should be initialized as well
+         * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+         */
+        audioEngine?: boolean;
+        /**
+         * Defines the category of adapter to use.
+         * Is it the discrete or integrated device.
+         */
+        powerPreference?: GPUPowerPreference;
+        /**
+         * Defines the device descriptor used to create a device.
+         */
+        deviceDescriptor?: GPUDeviceDescriptor;
+        /**
+         * Defines the requested Swap Chain Format.
+         */
+        swapChainFormat?: GPUTextureFormat;
+    }
+    /**
+     * The web GPU engine class provides support for WebGPU version of babylon.js.
+     */
+    export class WebGPUEngine extends Engine {
+        private readonly _uploadEncoderDescriptor;
+        private readonly _renderEncoderDescriptor;
+        private readonly _blitDescriptor;
+        private _canvas;
+        private _options;
+        private _shaderc;
+        private _adapter;
+        private _device;
+        private _context;
+        private _swapChain;
+        private _mainTextureCopyView;
+        private _mainColorAttachments;
+        private _mainTextureExtends;
+        private _mainDepthAttachment;
+        private _uploadEncoder;
+        private _renderEncoder;
+        private _blitEncoder;
+        private _commandBuffers;
+        private _currentRenderPass;
+        private _currentVertexBuffers;
+        private _currentIndexBuffer;
+        private __colorWrite;
+        private _uniformsBuffers;
+        private _compiledShaders;
+        private _decodeCanvas;
+        private _decodeEngine;
+        /**
+         * Gets a boolean indicating that the engine supports uniform buffers
+         * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+         */
+        readonly supportsUniformBuffers: boolean;
+        /**
+         * Create a new instance of the gpu engine.
+         * @param canvas Defines the canvas to use to display the result
+         * @param options Defines the options passed to the engine to create the GPU context dependencies
+         */
+        constructor(canvas: HTMLCanvasElement, options?: WebGPUEngineOptions);
+        /**
+         * Initializes the WebGPU context and dependencies.
+         * @param shadercOptions Defines the ShaderC compiler options if necessary
+         * @returns a promise notifying the readiness of the engine.
+         */
+        initEngineAsync(shadercOptions?: any): Promise<void>;
+        private _initializeLimits;
+        private _initializeContextAndSwapChain;
+        private _initializeMainAttachments;
+        wipeCaches(bruteForce?: boolean): void;
+        setColorWrite(enable: boolean): void;
+        getColorWrite(): boolean;
+        _viewport(x: number, y: number, width: number, height: number): void;
+        enableScissor(x: number, y: number, width: number, height: number): void;
+        disableScissor(): void;
+        clear(color: Color4, backBuffer: boolean, depth: boolean, stencil?: boolean): void;
+        private _createBuffer;
+        private _setSubData;
+        createVertexBuffer(data: DataArray): DataBuffer;
+        createDynamicVertexBuffer(data: DataArray): DataBuffer;
+        updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset?: number, byteLength?: number): void;
+        createIndexBuffer(data: IndicesArray): DataBuffer;
+        updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray, offset?: number): void;
+        bindBuffersDirectly(vertexBuffer: DataBuffer, indexBuffer: DataBuffer, vertexDeclaration: number[], vertexStrideSize: number, effect: Effect): void;
+        updateAndBindInstancesBuffer(instancesBuffer: DataBuffer, data: Float32Array, offsetLocations: number[] | InstancingAttributeInfo[]): void;
+        bindBuffers(vertexBuffers: {
+            [key: string]: Nullable<VertexBuffer>;
+        }, indexBuffer: Nullable<DataBuffer>, effect: Effect): void;
+        /** @hidden */
+        _releaseBuffer(buffer: DataBuffer): boolean;
+        createUniformBuffer(elements: FloatArray): DataBuffer;
+        createDynamicUniformBuffer(elements: FloatArray): DataBuffer;
+        updateUniformBuffer(uniformBuffer: DataBuffer, elements: FloatArray, offset?: number, count?: number): void;
+        bindUniformBufferBase(buffer: DataBuffer, location: number, name: string): void;
+        createEffect(baseName: any, attributesNamesOrOptions: string[] | EffectCreationOptions, uniformsNamesOrEngine: string[] | Engine, samplers?: string[], defines?: string, fallbacks?: EffectFallbacks, onCompiled?: Nullable<(effect: Effect) => void>, onError?: Nullable<(effect: Effect, errors: string) => void>, indexParameters?: any): Effect;
+        private _compileRawShaderToSpirV;
+        private _compileShaderToSpirV;
+        private _createPipelineStageDescriptor;
+        private _compileRawPipelineStageDescriptor;
+        private _compilePipelineStageDescriptor;
+        createRawShaderProgram(pipelineContext: IPipelineContext, vertexCode: string, fragmentCode: string, context?: WebGLRenderingContext, transformFeedbackVaryings?: Nullable<string[]>): WebGLProgram;
+        createShaderProgram(pipelineContext: IPipelineContext, vertexCode: string, fragmentCode: string, defines: Nullable<string>, context?: WebGLRenderingContext, transformFeedbackVaryings?: Nullable<string[]>): WebGLProgram;
+        createPipelineContext(): IPipelineContext;
+        /** @hidden */
+        _preparePipelineContext(pipelineContext: IPipelineContext, vertexSourceCode: string, fragmentSourceCode: string, createAsRaw: boolean, rebuildRebind: any, defines: Nullable<string>, transformFeedbackVaryings: Nullable<string[]>, key: string): void;
+        private _findAttributes;
+        private _findUBOs;
+        getAttributes(pipelineContext: IPipelineContext, attributesNames: string[]): number[];
+        enableEffect(effect: Effect): void;
+        _releaseEffect(effect: Effect): void;
+        /**
+         * Force the engine to release all cached effects. This means that next effect compilation will have to be done completely even if a similar effect was already compiled
+         */
+        releaseEffects(): void;
+        _deletePipelineContext(pipelineContext: IPipelineContext): void;
+        /** @hidden */
+        _createTexture(): WebGLTexture;
+        /** @hidden */
+        _releaseTexture(texture: InternalTexture): void;
+        private _uploadMipMapsFromWebglTexture;
+        private _uploadFromWebglTexture;
+        createTexture(urlArg: string, noMipmap: boolean, invertY: boolean, scene: Scene, samplingMode?: number, onLoad?: Nullable<() => void>, onError?: Nullable<(message: string, exception: any) => void>, buffer?: Nullable<ArrayBuffer | HTMLImageElement>, fallBack?: InternalTexture, format?: number): InternalTexture;
+        createCubeTexture(rootUrl: string, scene: Nullable<Scene>, files: Nullable<string[]>, noMipmap?: boolean, onLoad?: Nullable<(data?: any) => void>, onError?: Nullable<(message?: string, exception?: any) => void>, format?: number, forcedExtension?: any, createPolynomials?: boolean, lodScale?: number, lodOffset?: number, fallback?: Nullable<InternalTexture>, excludeLoaders?: Array<IInternalTextureLoader>): InternalTexture;
+        updateTextureSamplingMode(samplingMode: number, texture: InternalTexture): void;
+        updateDynamicTexture(texture: Nullable<InternalTexture>, canvas: HTMLCanvasElement, invertY: boolean, premulAlpha?: boolean, format?: number): void;
+        setTexture(channel: number, uniform: Nullable<WebGLUniformLocation>, texture: Nullable<BaseTexture>, name: string): void;
+        bindSamplers(effect: Effect): void;
+        _bindTextureDirectly(target: number, texture: InternalTexture): boolean;
+        /** @hidden */
+        _bindTexture(channel: number, texture: InternalTexture): void;
+        /** @hidden */
+        _uploadCompressedDataToTextureDirectly(texture: InternalTexture, internalFormat: number, width: number, height: number, data: ArrayBufferView, faceIndex?: number, lod?: number): void;
+        /** @hidden */
+        _uploadDataToTextureDirectly(texture: InternalTexture, imageData: ArrayBufferView, faceIndex?: number, lod?: number): void;
+        /** @hidden */
+        _uploadArrayBufferViewToTexture(texture: InternalTexture, imageData: ArrayBufferView, faceIndex?: number, lod?: number): void;
+        /** @hidden */
+        _uploadImageToTexture(texture: InternalTexture, image: HTMLImageElement, faceIndex?: number, lod?: number): void;
+        createRenderTargetTexture(size: any, options: boolean | RenderTargetCreationOptions): InternalTexture;
+        /**
+         * Begin a new frame
+         */
+        beginFrame(): void;
+        private _freezeCommands;
+        private _frozenCommands;
+        _shouldOnlyUpdateCameras(): boolean;
+        /**
+         * End the current frame
+         */
+        endFrame(): void;
+        /**
+         * Freezes the current list of commands to speed up rendering of sub sequent frames.
+         */
+        freezeCommands(): void;
+        /**
+         * Freezes the current list of commands to speed up rendering of sub sequent frames.
+         */
+        unFreezeCommands(): void;
+        private _startMainRenderPass;
+        private _endRenderPass;
+        bindFramebuffer(texture: InternalTexture, faceIndex?: number, requiredWidth?: number, requiredHeight?: number, forceFullscreenViewport?: boolean): void;
+        unBindFramebuffer(texture: InternalTexture, disableGenerateMipMaps?: boolean, onBeforeUnbind?: () => void): void;
+        private _getTopology;
+        private _getCompareFunction;
+        private _getOpFunction;
+        private _getDepthStencilStateDescriptor;
+        /**
+         * Set various states to the webGL context
+         * @param culling defines backface culling state
+         * @param zOffset defines the value to apply to zOffset (0 by default)
+         * @param force defines if states must be applied even if cache is up to date
+         * @param reverseSide defines if culling must be reversed (CCW instead of CW and CW instead of CCW)
+         */
+        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean): void;
+        private _getFrontFace;
+        private _getCullMode;
+        private _getRasterizationStateDescriptor;
+        private _getWriteMask;
+        private _getColorStateDescriptors;
+        private _getStages;
+        private _getVertexInputDescriptorFormat;
+        private _getVertexInputDescriptor;
+        private _getPipelineLayout;
+        private _getRenderPipeline;
+        private _getVertexInputsToRender;
+        private _getBindGroupsToRender;
+        private _bindVertexInputs;
+        private _setRenderBindGroups;
+        private _setRenderPipeline;
+        drawElementsType(fillMode: number, indexStart: number, indexCount: number, instancesCount?: number): void;
+        drawArraysType(fillMode: number, verticesStart: number, verticesCount: number, instancesCount?: number): void;
+        /**
+         * Dispose and release all associated resources
+         */
+        dispose(): void;
+        getRenderWidth(useScreen?: boolean): number;
+        getRenderHeight(useScreen?: boolean): number;
+        getRenderingCanvas(): Nullable<HTMLCanvasElement>;
+        getError(): number;
+        areAllEffectsReady(): boolean;
+        _executeWhenRenderingStateIsCompiled(pipelineContext: IPipelineContext, action: () => void): void;
+        _isRenderingStateCompiled(pipelineContext: IPipelineContext): boolean;
+        _getUnpackAlignement(): number;
+        _unpackFlipY(value: boolean): void;
+        bindUniformBlock(pipelineContext: IPipelineContext, blockName: string, index: number): void;
+        getUniforms(pipelineContext: IPipelineContext, uniformsNames: string[]): Nullable<WebGLUniformLocation>[];
+        setIntArray(uniform: WebGLUniformLocation, array: Int32Array): void;
+        setIntArray2(uniform: WebGLUniformLocation, array: Int32Array): void;
+        setIntArray3(uniform: WebGLUniformLocation, array: Int32Array): void;
+        setIntArray4(uniform: WebGLUniformLocation, array: Int32Array): void;
+        setFloatArray(uniform: WebGLUniformLocation, array: Float32Array): void;
+        setFloatArray2(uniform: WebGLUniformLocation, array: Float32Array): void;
+        setFloatArray3(uniform: WebGLUniformLocation, array: Float32Array): void;
+        setFloatArray4(uniform: WebGLUniformLocation, array: Float32Array): void;
+        setArray(uniform: WebGLUniformLocation, array: number[]): void;
+        setArray2(uniform: WebGLUniformLocation, array: number[]): void;
+        setArray3(uniform: WebGLUniformLocation, array: number[]): void;
+        setArray4(uniform: WebGLUniformLocation, array: number[]): void;
+        setMatrices(uniform: WebGLUniformLocation, matrices: Float32Array): void;
+        setMatrix(uniform: WebGLUniformLocation, matrix: Matrix): void;
+        setMatrix3x3(uniform: WebGLUniformLocation, matrix: Float32Array): void;
+        setMatrix2x2(uniform: WebGLUniformLocation, matrix: Float32Array): void;
+        setFloat(uniform: WebGLUniformLocation, value: number): void;
+        setFloat2(uniform: WebGLUniformLocation, x: number, y: number): void;
+        setFloat3(uniform: WebGLUniformLocation, x: number, y: number, z: number): void;
+        setBool(uniform: WebGLUniformLocation, bool: number): void;
+        setFloat4(uniform: WebGLUniformLocation, x: number, y: number, z: number, w: number): void;
+        setColor3(uniform: WebGLUniformLocation, color3: Color3): void;
+        setColor4(uniform: WebGLUniformLocation, color3: Color3, alpha: number): void;
+    }
+}
+declare module BABYLON {
+    /** @hidden */
+    export interface IWebGPUPipelineContextSamplerCache {
+        textureBinding: number;
+        samplerBinding: number;
+        texture: InternalTexture;
+    }
+    /** @hidden */
+    export interface IWebGPUPipelineContextVertexInputsCache {
+        indexBuffer: Nullable<GPUBuffer>;
+        indexOffset: number;
+        vertexStartSlot: number;
+        vertexBuffers: GPUBuffer[];
+        vertexOffsets: number[];
+    }
+    /** @hidden */
+    export class WebGPUPipelineContext implements IPipelineContext {
+        engine: WebGPUEngine;
+        availableAttributes: {
+            [key: string]: number;
+        };
+        availableUBOs: {
+            [key: string]: number;
+        };
+        sources: {
+            vertex: string;
+            fragment: string;
+        };
+        stages: Nullable<GPURenderPipelineStageDescriptor>;
+        samplers: {
+            [name: string]: Nullable<IWebGPUPipelineContextSamplerCache>;
+        };
+        vertexInputs: IWebGPUPipelineContextVertexInputsCache;
+        bindGroupLayouts: (GPUBindGroupLayout | undefined)[];
+        bindGroups: GPUBindGroup[];
+        renderPipeline: GPURenderPipeline;
+        onCompiled?: () => void;
+        readonly isAsync: boolean;
+        readonly isReady: boolean;
+        _handlesSpectorRebuildCallback(onCompiled: (program: any) => void): void;
+    }
+}
+declare module BABYLON {
     /**
      * EffectFallbacks can be used to add fallbacks (properties to disable) to certain properties when desired to improve performance.
      * (Eg. Start at high quality with reflection and fog, if fps is low, remove reflection, if still low remove fog)
@@ -29351,8 +29668,12 @@ declare module BABYLON {
          * @param onError Callback that will be called if an error occurs during shader compilation.
          * @param indexParameters Parameters to be used with Babylons include syntax to iterate over an array (eg. {lights: 10})
          * @param key Effect Key identifying uniquely compiled shader variants
+         * @param sources Already processed sources for the current key.
          */
-        constructor(baseName: any, attributesNamesOrOptions: string[] | EffectCreationOptions, uniformsNamesOrEngine: string[] | Engine, samplers?: Nullable<string[]>, engine?: Engine, defines?: Nullable<string>, fallbacks?: Nullable<EffectFallbacks>, onCompiled?: Nullable<(effect: Effect) => void>, onError?: Nullable<(effect: Effect, errors: string) => void>, indexParameters?: any, key?: string);
+        constructor(baseName: any, attributesNamesOrOptions: string[] | EffectCreationOptions, uniformsNamesOrEngine: string[] | Engine, samplers?: Nullable<string[]>, engine?: Engine, defines?: Nullable<string>, fallbacks?: Nullable<EffectFallbacks>, onCompiled?: Nullable<(effect: Effect) => void>, onError?: Nullable<(effect: Effect, errors: string) => void>, indexParameters?: any, key?: string, sources?: {
+            vertex: string;
+            fragment: string;
+        });
         /**
          * Unique key for this effect
          */
@@ -41985,475 +42306,6 @@ declare module BABYLON {
         }
 }
 declare module BABYLON {
-    /** @hidden */
-    export class WebGPUConstants {
-        static readonly GPUCullMode_none: GPUCullMode;
-        static readonly GPUCullMode_front: GPUCullMode;
-        static readonly GPUCullMode_back: GPUCullMode;
-        static readonly GPUFrontFace_ccw: GPUFrontFace;
-        static readonly GPUFrontFace_cw: GPUFrontFace;
-        static readonly GPUIndexFormat_uint16: GPUIndexFormat;
-        static readonly GPUIndexFormat_uint32: GPUIndexFormat;
-        static readonly GPULoadOp_clear: GPULoadOp;
-        static readonly GPULoadOp_load: GPULoadOp;
-        static readonly GPUStoreOp_store: GPUStoreOp;
-        static readonly GPUPrimitiveTopology_pointList: GPUPrimitiveTopology;
-        static readonly GPUPrimitiveTopology_lineList: GPUPrimitiveTopology;
-        static readonly GPUPrimitiveTopology_lineStrip: GPUPrimitiveTopology;
-        static readonly GPUPrimitiveTopology_triangleList: GPUPrimitiveTopology;
-        static readonly GPUPrimitiveTopology_triangleStrip: GPUPrimitiveTopology;
-        static readonly GPUTextureDimension_1d: GPUTextureDimension;
-        static readonly GPUTextureDimension_2d: GPUTextureDimension;
-        static readonly GPUTextureDimension_3d: GPUTextureDimension;
-        static readonly GPUTextureFormat_r8unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_r8unormSrgb: GPUTextureFormat;
-        static readonly GPUTextureFormat_r8snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_r8uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r8sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r16unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_r16snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_r16uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r16sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r16float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg8unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg8unormSrgb: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg8snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg8uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg8sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_b5g6r5unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_r32uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r32sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_r32float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg16unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg16snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg16uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg16sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg16float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba8unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba8unormSrgb: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba8snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba8uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba8sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_bgra8unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_bgra8unormSrgb: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgb10a2unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg11b10float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg32uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg32sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rg32float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba16unorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba16snorm: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba16uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba16sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba16float: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba32uint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba32sint: GPUTextureFormat;
-        static readonly GPUTextureFormat_rgba32float: GPUTextureFormat;
-        static readonly GPUTextureFormat_depth32float: GPUTextureFormat;
-        static readonly GPUTextureFormat_depth32floatStencil8: GPUTextureFormat;
-        static readonly GPUTextureViewDimension_1d: GPUTextureViewDimension;
-        static readonly GPUTextureViewDimension_2d: GPUTextureViewDimension;
-        static readonly GPUTextureViewDimension_2dArray: GPUTextureViewDimension;
-        static readonly GPUTextureViewDimension_cube: GPUTextureViewDimension;
-        static readonly GPUTextureViewDimension_cubeArray: GPUTextureViewDimension;
-        static readonly GPUTextureViewDimension_3d: GPUTextureViewDimension;
-        static readonly GPUPowerPreference_lowPower: GPUPowerPreference;
-        static readonly GPUPowerPreference_highPerformance: GPUPowerPreference;
-        static readonly GPUVertexFormat_uchar: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar2: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar3: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar4: GPUVertexFormat;
-        static readonly GPUVertexFormat_char: GPUVertexFormat;
-        static readonly GPUVertexFormat_char2: GPUVertexFormat;
-        static readonly GPUVertexFormat_char3: GPUVertexFormat;
-        static readonly GPUVertexFormat_char4: GPUVertexFormat;
-        static readonly GPUVertexFormat_ucharnorm: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar2norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar3norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar4norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_uchar4normBGRA: GPUVertexFormat;
-        static readonly GPUVertexFormat_charnorm: GPUVertexFormat;
-        static readonly GPUVertexFormat_char2norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_char3norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_char4norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort2: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort3: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort4: GPUVertexFormat;
-        static readonly GPUVertexFormat_short: GPUVertexFormat;
-        static readonly GPUVertexFormat_short2: GPUVertexFormat;
-        static readonly GPUVertexFormat_short3: GPUVertexFormat;
-        static readonly GPUVertexFormat_short4: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushortnorm: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort2norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort3norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_ushort4norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_shortnorm: GPUVertexFormat;
-        static readonly GPUVertexFormat_short2norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_short3norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_short4norm: GPUVertexFormat;
-        static readonly GPUVertexFormat_half: GPUVertexFormat;
-        static readonly GPUVertexFormat_half2: GPUVertexFormat;
-        static readonly GPUVertexFormat_half3: GPUVertexFormat;
-        static readonly GPUVertexFormat_half4: GPUVertexFormat;
-        static readonly GPUVertexFormat_float: GPUVertexFormat;
-        static readonly GPUVertexFormat_float2: GPUVertexFormat;
-        static readonly GPUVertexFormat_float3: GPUVertexFormat;
-        static readonly GPUVertexFormat_float4: GPUVertexFormat;
-        static readonly GPUVertexFormat_uint: GPUVertexFormat;
-        static readonly GPUVertexFormat_uint2: GPUVertexFormat;
-        static readonly GPUVertexFormat_uint3: GPUVertexFormat;
-        static readonly GPUVertexFormat_uint4: GPUVertexFormat;
-        static readonly GPUVertexFormat_int: GPUVertexFormat;
-        static readonly GPUVertexFormat_int2: GPUVertexFormat;
-        static readonly GPUVertexFormat_int3: GPUVertexFormat;
-        static readonly GPUVertexFormat_int4: GPUVertexFormat;
-        static readonly GPUBufferUsage_NONE: number;
-        static readonly GPUBufferUsage_MAP_READ: number;
-        static readonly GPUBufferUsage_MAP_WRITE: number;
-        static readonly GPUBufferUsage_TRANSFER_SRC: number;
-        static readonly GPUBufferUsage_TRANSFER_DST: number;
-        static readonly GPUBufferUsage_INDEX: number;
-        static readonly GPUBufferUsage_VERTEX: number;
-        static readonly GPUBufferUsage_UNIFORM: number;
-        static readonly GPUBufferUsage_STORAGE: number;
-        static readonly GPUColorWriteBits_NONE: number;
-        static readonly GPUColorWriteBits_RED: number;
-        static readonly GPUColorWriteBits_GREEN: number;
-        static readonly GPUColorWriteBits_BLUE: number;
-        static readonly GPUColorWriteBits_ALPHA: number;
-        static readonly GPUColorWriteBits_ALL: number;
-        static readonly GPUShaderStageBit_NONE: number;
-        static readonly GPUShaderStageBit_VERTEX: number;
-        static readonly GPUShaderStageBit_FRAGMENT: number;
-        static readonly GPUShaderStageBit_COMPUTE: number;
-        static readonly GPUTextureAspect_COLOR: number;
-        static readonly GPUTextureAspect_DEPTH: number;
-        static readonly GPUTextureAspect_STENCIL: number;
-        static readonly GPUTextureUsage_NONE: number;
-        static readonly GPUTextureUsage_TRANSFER_SRC: number;
-        static readonly GPUTextureUsage_TRANSFER_DST: number;
-        static readonly GPUTextureUsage_SAMPLED: number;
-        static readonly GPUTextureUsage_STORAGE: number;
-        static readonly GPUTextureUsage_OUTPUT_ATTACHMENT: number;
-        static readonly GPUCompareFunction_never: GPUCompareFunction;
-        static readonly GPUCompareFunction_less: GPUCompareFunction;
-        static readonly GPUCompareFunction_equal: GPUCompareFunction;
-        static readonly GPUCompareFunction_lessEqual: GPUCompareFunction;
-        static readonly GPUCompareFunction_greater: GPUCompareFunction;
-        static readonly GPUCompareFunction_notEqual: GPUCompareFunction;
-        static readonly GPUCompareFunction_greaterEqual: GPUCompareFunction;
-        static readonly GPUCompareFunction_always: GPUCompareFunction;
-        static readonly GPUBindingType_uniformBuffer: GPUBindingType;
-        static readonly GPUBindingType_dynamicUniformBuffer: GPUBindingType;
-        static readonly GPUBindingType_sampler: GPUBindingType;
-        static readonly GPUBindingType_sampledTexture: GPUBindingType;
-        static readonly GPUBindingType_storageBuffer: GPUBindingType;
-        static readonly GPUBindingType_dynamicStorageBuffer: GPUBindingType;
-        static readonly GPUInputStepMode_vertex: GPUInputStepMode;
-        static readonly GPUInputStepMode_instance: GPUInputStepMode;
-        static readonly GPUStencilOperation_keep: string;
-        static readonly GPUStencilOperation_zero: string;
-        static readonly GPUStencilOperation_replace: string;
-        static readonly GPUStencilOperation_invert: string;
-        static readonly GPUStencilOperation_incrementClamp: string;
-        static readonly GPUStencilOperation_decrementClamp: string;
-        static readonly GPUStencilOperation_incrementWrap: string;
-        static readonly GPUStencilOperation_decrementWrap: string;
-    }
-}
-declare module BABYLON {
-    /** @hidden */
-    export interface IWebGPUPipelineContextSamplerCache {
-        textureBinding: number;
-        samplerBinding: number;
-        texture: InternalTexture;
-    }
-    /** @hidden */
-    export interface IWebGPUPipelineContextVertexInputsCache {
-        indexBuffer: Nullable<GPUBuffer>;
-        indexOffset: number;
-        vertexStartSlot: number;
-        vertexBuffers: GPUBuffer[];
-        vertexOffsets: number[];
-    }
-    /** @hidden */
-    export class WebGPUPipelineContext implements IPipelineContext {
-        engine: WebGPUEngine;
-        vertexShaderCode: string;
-        fragmentShaderCode: string;
-        stages: Nullable<GPURenderPipelineStageDescriptor>;
-        samplers: {
-            [name: string]: Nullable<IWebGPUPipelineContextSamplerCache>;
-        };
-        vertexInputs: IWebGPUPipelineContextVertexInputsCache;
-        bindGroupLayouts: (GPUBindGroupLayout | undefined)[];
-        bindGroups: GPUBindGroup[];
-        renderPipeline: GPURenderPipeline;
-        onCompiled?: () => void;
-        readonly isAsync: boolean;
-        readonly isReady: boolean;
-        _handlesSpectorRebuildCallback(onCompiled: (program: any) => void): void;
-    }
-}
-declare module BABYLON {
-    /** @hidden */
-    export class WebGPUDataBuffer extends DataBuffer {
-        private _buffer;
-        constructor(resource: GPUBuffer);
-        readonly underlyingResource: any;
-    }
-}
-declare module BABYLON {
-    /**
-     * Options to create the WebGPU engine
-     */
-    export interface WebGPUEngineOptions extends GPURequestAdapterOptions {
-        /**
-         * If delta time between frames should be constant
-         * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
-         */
-        deterministicLockstep?: boolean;
-        /**
-         * Maximum about of steps between frames (Default: 4)
-         * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
-         */
-        lockstepMaxSteps?: number;
-        /**
-         * Defines that engine should ignore modifying touch action attribute and style
-         * If not handle, you might need to set it up on your side for expected touch devices behavior.
-         */
-        doNotHandleTouchAction?: boolean;
-        /**
-         * Defines if webaudio should be initialized as well
-         * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
-         */
-        audioEngine?: boolean;
-        /**
-         * Defines the category of adapter to use.
-         * Is it the discrete or integrated device.
-         */
-        powerPreference?: GPUPowerPreference;
-        /**
-         * Defines the device descriptor used to create a device.
-         */
-        deviceDescriptor?: GPUDeviceDescriptor;
-        /**
-         * Defines the requested Swap Chain Format.
-         */
-        swapChainFormat?: GPUTextureFormat;
-    }
-    /**
-     * The web GPU engine class provides support for WebGPU version of babylon.js.
-     */
-    export class WebGPUEngine extends Engine {
-        private readonly _uploadEncoderDescriptor;
-        private readonly _renderEncoderDescriptor;
-        private readonly _blitDescriptor;
-        private _canvas;
-        private _options;
-        private _shaderc;
-        private _adapter;
-        private _device;
-        private _context;
-        private _swapChain;
-        private _mainTextureCopyView;
-        private _mainColorAttachments;
-        private _mainTextureExtends;
-        private _mainDepthAttachment;
-        private _uploadEncoder;
-        private _renderEncoder;
-        private _blitEncoder;
-        private _commandBuffers;
-        private _currentRenderPass;
-        private _currentVertexBuffers;
-        private _currentIndexBuffer;
-        private __colorWrite;
-        private _uniformsBuffers;
-        private _compiledStages;
-        private _decodeCanvas;
-        private _decodeEngine;
-        /**
-         * Gets a boolean indicating that the engine supports uniform buffers
-         * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
-         */
-        readonly supportsUniformBuffers: boolean;
-        /**
-         * Create a new instance of the gpu engine.
-         * @param canvas Defines the canvas to use to display the result
-         * @param options Defines the options passed to the engine to create the GPU context dependencies
-         */
-        constructor(canvas: HTMLCanvasElement, options?: WebGPUEngineOptions);
-        /**
-         * Initializes the WebGPU context and dependencies.
-         * @param shadercOptions Defines the ShaderC compiler options if necessary
-         * @returns a promise notifying the readiness of the engine.
-         */
-        initEngineAsync(shadercOptions?: any): Promise<void>;
-        private _initializeLimits;
-        private _initializeContextAndSwapChain;
-        private _initializeMainAttachments;
-        wipeCaches(bruteForce?: boolean): void;
-        setColorWrite(enable: boolean): void;
-        getColorWrite(): boolean;
-        _viewport(x: number, y: number, width: number, height: number): void;
-        enableScissor(x: number, y: number, width: number, height: number): void;
-        disableScissor(): void;
-        clear(color: Color4, backBuffer: boolean, depth: boolean, stencil?: boolean): void;
-        private _createBuffer;
-        private _setSubData;
-        createVertexBuffer(data: DataArray): DataBuffer;
-        createDynamicVertexBuffer(data: DataArray): DataBuffer;
-        updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset?: number, byteLength?: number): void;
-        createIndexBuffer(data: IndicesArray): DataBuffer;
-        updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray, offset?: number): void;
-        bindBuffersDirectly(vertexBuffer: DataBuffer, indexBuffer: DataBuffer, vertexDeclaration: number[], vertexStrideSize: number, effect: Effect): void;
-        updateAndBindInstancesBuffer(instancesBuffer: DataBuffer, data: Float32Array, offsetLocations: number[] | InstancingAttributeInfo[]): void;
-        bindBuffers(vertexBuffers: {
-            [key: string]: Nullable<VertexBuffer>;
-        }, indexBuffer: Nullable<DataBuffer>, effect: Effect): void;
-        /** @hidden */
-        _releaseBuffer(buffer: DataBuffer): boolean;
-        createUniformBuffer(elements: FloatArray): DataBuffer;
-        createDynamicUniformBuffer(elements: FloatArray): DataBuffer;
-        updateUniformBuffer(uniformBuffer: DataBuffer, elements: FloatArray, offset?: number, count?: number): void;
-        bindUniformBufferBase(buffer: DataBuffer, location: number, name: string): void;
-        createEffect(baseName: any, attributesNamesOrOptions: string[] | EffectCreationOptions, uniformsNamesOrEngine: string[] | Engine, samplers?: string[], defines?: string, fallbacks?: EffectFallbacks, onCompiled?: Nullable<(effect: Effect) => void>, onError?: Nullable<(effect: Effect, errors: string) => void>, indexParameters?: any): Effect;
-        private _compileRawShaderToSpirV;
-        private _compileShaderToSpirV;
-        private _createPipelineStageDescriptor;
-        private _compileRawPipelineStageDescriptor;
-        private _compilePipelineStageDescriptor;
-        createRawShaderProgram(pipelineContext: IPipelineContext, vertexCode: string, fragmentCode: string, context?: WebGLRenderingContext, transformFeedbackVaryings?: Nullable<string[]>): WebGLProgram;
-        createShaderProgram(pipelineContext: IPipelineContext, vertexCode: string, fragmentCode: string, defines: Nullable<string>, context?: WebGLRenderingContext, transformFeedbackVaryings?: Nullable<string[]>): WebGLProgram;
-        createPipelineContext(): IPipelineContext;
-        /** @hidden */
-        _preparePipelineContext(pipelineContext: IPipelineContext, vertexSourceCode: string, fragmentSourceCode: string, createAsRaw: boolean, rebuildRebind: any, defines: Nullable<string>, transformFeedbackVaryings: Nullable<string[]>, key: string): void;
-        getAttributes(pipelineContext: IPipelineContext, attributesNames: string[]): number[];
-        enableEffect(effect: Effect): void;
-        _releaseEffect(effect: Effect): void;
-        /**
-         * Force the engine to release all cached effects. This means that next effect compilation will have to be done completely even if a similar effect was already compiled
-         */
-        releaseEffects(): void;
-        _deletePipelineContext(pipelineContext: IPipelineContext): void;
-        /** @hidden */
-        _createTexture(): WebGLTexture;
-        /** @hidden */
-        _releaseTexture(texture: InternalTexture): void;
-        private _uploadMipMapsFromWebglTexture;
-        private _uploadFromWebglTexture;
-        createTexture(urlArg: string, noMipmap: boolean, invertY: boolean, scene: Scene, samplingMode?: number, onLoad?: Nullable<() => void>, onError?: Nullable<(message: string, exception: any) => void>, buffer?: Nullable<ArrayBuffer | HTMLImageElement>, fallBack?: InternalTexture, format?: number): InternalTexture;
-        createCubeTexture(rootUrl: string, scene: Nullable<Scene>, files: Nullable<string[]>, noMipmap?: boolean, onLoad?: Nullable<(data?: any) => void>, onError?: Nullable<(message?: string, exception?: any) => void>, format?: number, forcedExtension?: any, createPolynomials?: boolean, lodScale?: number, lodOffset?: number, fallback?: Nullable<InternalTexture>, excludeLoaders?: Array<IInternalTextureLoader>): InternalTexture;
-        updateTextureSamplingMode(samplingMode: number, texture: InternalTexture): void;
-        updateDynamicTexture(texture: Nullable<InternalTexture>, canvas: HTMLCanvasElement, invertY: boolean, premulAlpha?: boolean, format?: number): void;
-        setTexture(channel: number, uniform: Nullable<WebGLUniformLocation>, texture: Nullable<BaseTexture>, name: string): void;
-        bindSamplers(effect: Effect): void;
-        _bindTextureDirectly(target: number, texture: InternalTexture): boolean;
-        /** @hidden */
-        _bindTexture(channel: number, texture: InternalTexture): void;
-        /** @hidden */
-        _uploadCompressedDataToTextureDirectly(texture: InternalTexture, internalFormat: number, width: number, height: number, data: ArrayBufferView, faceIndex?: number, lod?: number): void;
-        /** @hidden */
-        _uploadDataToTextureDirectly(texture: InternalTexture, imageData: ArrayBufferView, faceIndex?: number, lod?: number): void;
-        /** @hidden */
-        _uploadArrayBufferViewToTexture(texture: InternalTexture, imageData: ArrayBufferView, faceIndex?: number, lod?: number): void;
-        /** @hidden */
-        _uploadImageToTexture(texture: InternalTexture, image: HTMLImageElement, faceIndex?: number, lod?: number): void;
-        createRenderTargetTexture(size: any, options: boolean | RenderTargetCreationOptions): InternalTexture;
-        /**
-         * Begin a new frame
-         */
-        beginFrame(): void;
-        private _freezeCommands;
-        private _frozenCommands;
-        _shouldOnlyUpdateCameras(): boolean;
-        /**
-         * End the current frame
-         */
-        endFrame(): void;
-        /**
-         * Freezes the current list of commands to speed up rendering of sub sequent frames.
-         */
-        freezeCommands(): void;
-        /**
-         * Freezes the current list of commands to speed up rendering of sub sequent frames.
-         */
-        unFreezeCommands(): void;
-        private _startMainRenderPass;
-        private _endRenderPass;
-        bindFramebuffer(texture: InternalTexture, faceIndex?: number, requiredWidth?: number, requiredHeight?: number, forceFullscreenViewport?: boolean): void;
-        unBindFramebuffer(texture: InternalTexture, disableGenerateMipMaps?: boolean, onBeforeUnbind?: () => void): void;
-        private _getTopology;
-        private _getCompareFunction;
-        private _getOpFunction;
-        private _getDepthStencilStateDescriptor;
-        /**
-         * Set various states to the webGL context
-         * @param culling defines backface culling state
-         * @param zOffset defines the value to apply to zOffset (0 by default)
-         * @param force defines if states must be applied even if cache is up to date
-         * @param reverseSide defines if culling must be reversed (CCW instead of CW and CW instead of CCW)
-         */
-        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean): void;
-        private _getFrontFace;
-        private _getCullMode;
-        private _getRasterizationStateDescriptor;
-        private _getWriteMask;
-        private _getColorStateDescriptors;
-        private _getStages;
-        private _getVertexInputDescriptorFormat;
-        private _getVertexInputDescriptor;
-        private _getPipelineLayout;
-        private _getRenderPipeline;
-        private _getVertexInputsToRender;
-        private _getBindGroupsToRender;
-        private _bindVertexInputs;
-        private _setRenderBindGroups;
-        private _setRenderPipeline;
-        drawElementsType(fillMode: number, indexStart: number, indexCount: number, instancesCount?: number): void;
-        drawArraysType(fillMode: number, verticesStart: number, verticesCount: number, instancesCount?: number): void;
-        /**
-         * Dispose and release all associated resources
-         */
-        dispose(): void;
-        getRenderWidth(useScreen?: boolean): number;
-        getRenderHeight(useScreen?: boolean): number;
-        getRenderingCanvas(): Nullable<HTMLCanvasElement>;
-        getError(): number;
-        areAllEffectsReady(): boolean;
-        _executeWhenRenderingStateIsCompiled(pipelineContext: IPipelineContext, action: () => void): void;
-        _isRenderingStateCompiled(pipelineContext: IPipelineContext): boolean;
-        _getUnpackAlignement(): number;
-        _unpackFlipY(value: boolean): void;
-        bindUniformBlock(pipelineContext: IPipelineContext, blockName: string, index: number): void;
-        getUniforms(pipelineContext: IPipelineContext, uniformsNames: string[]): Nullable<WebGLUniformLocation>[];
-        setIntArray(uniform: WebGLUniformLocation, array: Int32Array): void;
-        setIntArray2(uniform: WebGLUniformLocation, array: Int32Array): void;
-        setIntArray3(uniform: WebGLUniformLocation, array: Int32Array): void;
-        setIntArray4(uniform: WebGLUniformLocation, array: Int32Array): void;
-        setFloatArray(uniform: WebGLUniformLocation, array: Float32Array): void;
-        setFloatArray2(uniform: WebGLUniformLocation, array: Float32Array): void;
-        setFloatArray3(uniform: WebGLUniformLocation, array: Float32Array): void;
-        setFloatArray4(uniform: WebGLUniformLocation, array: Float32Array): void;
-        setArray(uniform: WebGLUniformLocation, array: number[]): void;
-        setArray2(uniform: WebGLUniformLocation, array: number[]): void;
-        setArray3(uniform: WebGLUniformLocation, array: number[]): void;
-        setArray4(uniform: WebGLUniformLocation, array: number[]): void;
-        setMatrices(uniform: WebGLUniformLocation, matrices: Float32Array): void;
-        setMatrix(uniform: WebGLUniformLocation, matrix: Matrix): void;
-        setMatrix3x3(uniform: WebGLUniformLocation, matrix: Float32Array): void;
-        setMatrix2x2(uniform: WebGLUniformLocation, matrix: Float32Array): void;
-        setFloat(uniform: WebGLUniformLocation, value: number): void;
-        setFloat2(uniform: WebGLUniformLocation, x: number, y: number): void;
-        setFloat3(uniform: WebGLUniformLocation, x: number, y: number, z: number): void;
-        setBool(uniform: WebGLUniformLocation, bool: number): void;
-        setFloat4(uniform: WebGLUniformLocation, x: number, y: number, z: number, w: number): void;
-        setColor3(uniform: WebGLUniformLocation, color3: Color3): void;
-        setColor4(uniform: WebGLUniformLocation, color3: Color3, alpha: number): void;
-    }
-}
-declare module BABYLON {
     /**
      * Gather the list of clipboard event types as constants.
      */
@@ -48276,6 +48128,186 @@ declare module BABYLON {
          * @returns a parsed Highlight layer
          */
         static Parse(parsedHightlightLayer: any, scene: Scene, rootUrl: string): HighlightLayer;
+    }
+}
+declare module BABYLON {
+        interface AbstractScene {
+            /**
+             * The list of layers (background and foreground) of the scene
+             */
+            layers: Array<Layer>;
+        }
+    /**
+     * Defines the layer scene component responsible to manage any layers
+     * in a given scene.
+     */
+    export class LayerSceneComponent implements ISceneComponent {
+        /**
+         * The component name helpfull to identify the component in the list of scene components.
+         */
+        readonly name: string;
+        /**
+         * The scene the component belongs to.
+         */
+        scene: Scene;
+        private _engine;
+        /**
+         * Creates a new instance of the component for the given scene
+         * @param scene Defines the scene to register the component in
+         */
+        constructor(scene: Scene);
+        /**
+         * Registers the component in a given scene
+         */
+        register(): void;
+        /**
+         * Rebuilds the elements related to this component in case of
+         * context lost for instance.
+         */
+        rebuild(): void;
+        /**
+         * Disposes the component and the associated ressources.
+         */
+        dispose(): void;
+        private _draw;
+        private _drawCameraPredicate;
+        private _drawCameraBackground;
+        private _drawCameraForeground;
+        private _drawRenderTargetPredicate;
+        private _drawRenderTargetBackground;
+        private _drawRenderTargetForeground;
+    }
+}
+declare module BABYLON {
+    /** @hidden */
+    export var layerPixelShader: {
+        name: string;
+        shader: string;
+    };
+}
+declare module BABYLON {
+    /** @hidden */
+    export var layerVertexShader: {
+        name: string;
+        shader: string;
+    };
+}
+declare module BABYLON {
+    /**
+     * This represents a full screen 2d layer.
+     * This can be useful to display a picture in the  background of your scene for instance.
+     * @see https://www.babylonjs-playground.com/#08A2BS#1
+     */
+    export class Layer {
+        /**
+         * Define the name of the layer.
+         */
+        name: string;
+        /**
+         * Define the texture the layer should display.
+         */
+        texture: Nullable<Texture>;
+        /**
+         * Is the layer in background or foreground.
+         */
+        isBackground: boolean;
+        /**
+         * Define the color of the layer (instead of texture).
+         */
+        color: Color4;
+        /**
+         * Define the scale of the layer in order to zoom in out of the texture.
+         */
+        scale: Vector2;
+        /**
+         * Define an offset for the layer in order to shift the texture.
+         */
+        offset: Vector2;
+        /**
+         * Define the alpha blending mode used in the layer in case the texture or color has an alpha.
+         */
+        alphaBlendingMode: number;
+        /**
+         * Define if the layer should alpha test or alpha blend with the rest of the scene.
+         * Alpha test will not mix with the background color in case of transparency.
+         * It will either use the texture color or the background depending on the alpha value of the current pixel.
+         */
+        alphaTest: boolean;
+        /**
+         * Define a mask to restrict the layer to only some of the scene cameras.
+         */
+        layerMask: number;
+        /**
+         * Define the list of render target the layer is visible into.
+         */
+        renderTargetTextures: RenderTargetTexture[];
+        /**
+         * Define if the layer is only used in renderTarget or if it also
+         * renders in the main frame buffer of the canvas.
+         */
+        renderOnlyInRenderTargetTextures: boolean;
+        private _scene;
+        private _vertexBuffers;
+        private _indexBuffer;
+        private _effect;
+        private _alphaTestEffect;
+        /**
+         * An event triggered when the layer is disposed.
+         */
+        onDisposeObservable: Observable<Layer>;
+        private _onDisposeObserver;
+        /**
+         * Back compatibility with callback before the onDisposeObservable existed.
+         * The set callback will be triggered when the layer has been disposed.
+         */
+        onDispose: () => void;
+        /**
+        * An event triggered before rendering the scene
+        */
+        onBeforeRenderObservable: Observable<Layer>;
+        private _onBeforeRenderObserver;
+        /**
+         * Back compatibility with callback before the onBeforeRenderObservable existed.
+         * The set callback will be triggered just before rendering the layer.
+         */
+        onBeforeRender: () => void;
+        /**
+        * An event triggered after rendering the scene
+        */
+        onAfterRenderObservable: Observable<Layer>;
+        private _onAfterRenderObserver;
+        /**
+         * Back compatibility with callback before the onAfterRenderObservable existed.
+         * The set callback will be triggered just after rendering the layer.
+         */
+        onAfterRender: () => void;
+        /**
+         * Instantiates a new layer.
+         * This represents a full screen 2d layer.
+         * This can be useful to display a picture in the  background of your scene for instance.
+         * @see https://www.babylonjs-playground.com/#08A2BS#1
+         * @param name Define the name of the layer in the scene
+         * @param imgUrl Define the url of the texture to display in the layer
+         * @param scene Define the scene the layer belongs to
+         * @param isBackground Defines whether the layer is displayed in front or behind the scene
+         * @param color Defines a color for the layer
+         */
+        constructor(
+        /**
+         * Define the name of the layer.
+         */
+        name: string, imgUrl: Nullable<string>, scene: Nullable<Scene>, isBackground?: boolean, color?: Color4);
+        private _createIndexBuffer;
+        /** @hidden */
+        _rebuild(): void;
+        /**
+         * Renders the layer in the scene.
+         */
+        render(): void;
+        /**
+         * Disposes and releases the associated ressources.
+         */
+        dispose(): void;
     }
 }
 declare module BABYLON {
@@ -55235,9 +55267,19 @@ declare module BABYLON {
          */
         depthOfFieldBlurWidth: number;
         /**
-         * For motion blur, defines how much the image is blurred by the movement
+         * Gets how much the image is blurred by the movement while using the motion blur post-process
          */
+        /**
+        * Sets how much the image is blurred by the movement while using the motion blur post-process
+        */
         motionStrength: number;
+        /**
+         * Gets wether or not the motion blur post-process is object based or screen based.
+         */
+        /**
+        * Sets wether or not the motion blur post-process should be object based or screen based
+        */
+        objectBasedMotionBlur: boolean;
         /**
          * List of animations for the pipeline (IAnimatable implementation)
          */
@@ -55252,6 +55294,8 @@ declare module BABYLON {
         private _currentExposure;
         private _hdrAutoExposure;
         private _hdrCurrentLuminance;
+        private _motionStrength;
+        private _isObjectBasedMotionBlur;
         private _floatTextureType;
         private _ratio;
         private _bloomEnabled;

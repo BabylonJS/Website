@@ -32,8 +32,8 @@
 
         .container {
             display: grid;
-            grid-template-columns: auto 170px 584px 270px auto;
-            grid-template-rows: 60px 768px;
+            grid-template-columns: auto 230px 494px 300px auto;
+            grid-template-rows: 80px 768px;
         }
 
         .headerLogo {
@@ -46,7 +46,7 @@
 
         .headerLogo > a > img {
             width: auto;
-            height: 60px;
+            height: 80px;
             margin-left: 10px;
         }
 
@@ -55,8 +55,8 @@
             grid-column-end: 3;
             grid-row-start: 1;
             grid-row-end: 1;
-            font-size: 35px;
-            line-height: 60px;
+            font-size: 40px;
+            line-height: 80px;
             text-align: center;
             background-color: #201936;
             font-family: "acumin-pro-extra-condensed";
@@ -67,8 +67,8 @@
             grid-column-end: 4;
             grid-row-start: 1;
             grid-row-end: 1;
-            font-size: 20px;
-            line-height: 60px;
+            font-size: 31px;
+            line-height: 80px;
             text-align: center;
             background-color: #BB464B;
         }
@@ -110,7 +110,7 @@
         </div>
         <div class="headerText">
             <a href="https://doc.babylonjs.com/extensions/WebGPU">
-                WebGL Experiment
+                WebGL
             </a>
         </div>
         <div class="headerFPS" id="fps">0</div>
@@ -184,19 +184,28 @@
             return originalMeshes;
         }
 
-        const getDistributionTextureAsync = async function(scene) {
+        const getDistributionTextureDataAsync = async function() {
             return new Promise((resolve, reject) => {
                 let logoDistribution;
+                const canvas = document.createElement('canvas');
+                const tempEngine = new BABYLON.Engine(canvas);
+                const tempScene = new BABYLON.Scene(tempEngine);
+    
                 const onLoad = () => {
-                    resolve(logoDistribution);
+                    const data = {
+                        data: logoDistribution.readPixels(),
+                        size: logoDistribution.getSize()
+                    };
+                    tempEngine.dispose();
+                    resolve(data);
                 };
-                logoDistribution = new BABYLON.Texture("assets/distribution.png", scene, true, true, undefined, onLoad);
+                logoDistribution = new BABYLON.Texture("assets/distribution.png", tempScene, true, true, undefined, onLoad);
             });
         }
 
         const getScaleFunction = function(texture) {
-            var textureData = texture.readPixels();
-            var textureSize = texture.getSize();
+            var textureData = texture.data;
+            var textureSize = texture.size;
             var textureWidth = textureSize.width;
             var textureHeight = textureSize.height;
 
@@ -237,7 +246,7 @@
         const cloneMeshAsync = async function(mesh, name, count, scale, position, rotationY) {
             return new Promise((resolve, reject) => {
                 const create = () => {
-                    engine.loadingScreen.loadingUIText = "Cloning element " + count + " on " + maxCount;
+                    engine.loadingScreen.loadingUIText = "Cloning element " + count + " of " + maxCount;
 
                     const clone = mesh.clone(name, null, false);
                     clone.scaling = clone.scaling.scale(scale);
@@ -323,8 +332,8 @@
         engine.loadingScreen.loadingUIText = "Loading trees and rocks...";
         const gardenMeshes = await getGardenMeshesAsync(scene);
 
-        const distributionTexture = await getDistributionTextureAsync(scene);
-        const getScale = getScaleFunction(distributionTexture);
+        const distributionTextureData = await getDistributionTextureDataAsync();
+        const getScale = getScaleFunction(distributionTextureData);
 
         let i = 0;
         let j = 0;
@@ -382,7 +391,7 @@
             t = (t + 1) % 10;
             // Prevent hammering the composition.
             if (t === 0) {
-                divFps.innerHTML = engine.getFps().toFixed() + " fps - " + ((endCPUTime - startCPUTime)).toFixed() + " ms on CPU";
+                divFps.innerHTML = engine.getFps().toFixed() + " fps - " + ((endCPUTime - startCPUTime)).toFixed() + " CPU ms";
             }
         });
 
