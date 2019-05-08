@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Forest WebGL</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #2a2342; 
+            color: #ffffff;
+            font-family: "acumin-pro";
+        }
+
+        #renderCanvas {
+            width: 1024px;
+            height: 768px;
+            display: block;
+            font-size: 0;
+            margin: auto;
+            border:none !important;
+            outline:none !important;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 170px 584px 270px auto;
+            grid-template-rows: 60px 768px;
+        }
+
+        .headerLogo {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            background-color: #201936;
+        }
+
+        .headerLogo > a > img {
+            width: auto;
+            height: 60px;
+            margin-left: 10px;
+        }
+
+        .headerText {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 35px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #201936;
+            font-family: "acumin-pro-extra-condensed";
+        }
+
+        .headerFPS {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #BB464B;
+        }
+
+        .content {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: unset;
+        }
+        a:hover {
+            color: #FFFFFF;
+        }
+        a:visited {
+            color: #FFFFFF;
+        }
+        a:focus {
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="./lib/shaderc.js"></script>
+    <script src="./lib/babylon.max.js"></script>
+    <script src="./lib/babylonjs.loaders.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerLogo">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                <img src="logo.svg"></img>
+            </a>
+        </div>
+        <div class="headerText">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                WebGL Experiment
+            </a>
+        </div>
+        <div class="headerFPS" id="fps">0</div>
+        <div class="content">
+            <canvas id="renderCanvas" width="1024" height="768"></canvas>
+        </div>
+    <div>
+
+    <script>
+    (async function() {
+        const maxCount = 10000;
+        const sceneSize = 650;
+        const centerSize = 60;
+
+        const canvas = document.getElementById("renderCanvas");
+        const divFps = document.getElementById("fps");
+
+        const setupCamera = function(scene) {
+            scene.activeCamera.alpha = -Math.PI / 2;
+            scene.activeCamera.beta = Math.PI / 2 - 0.2;
+            scene.activeCamera.radius = 63;
+
+            scene.activeCamera.lowerBetaLimit = 0.01;
+            scene.activeCamera.upperBetaLimit = Math.PI / 2 - 0.1;
+            scene.activeCamera.lowerRadiusLimit = 50;
+            scene.activeCamera.upperRadiusLimit = 1600;
+        }
+
+        const setupScene = function(scene) {
+            scene.clearColor = new BABYLON.Color3(0.626, 0.764, 0.883);
+
+            scene.environmentTexture = new BABYLON.CubeTexture("assets/environments/country.env", scene);
+
+            scene.imageProcessingConfiguration.exposure = 4;
+            scene.imageProcessingConfiguration.contrast = 1.6;
+            scene.imageProcessingConfiguration.toneMappingEnabled = true;
+            scene.imageProcessingConfiguration.toneMappingType = BABYLON.ImageProcessingConfiguration.TONEMAPPING_ACES;
+        }
+
+        const createGroundAsync = async function(scene) {
+            const groundRoot = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/ground/", "ground.gltf", scene);
+            const groundRootMesh = groundRoot.meshes[0];
+            groundRootMesh.scaling = groundRootMesh.scaling.scale(sceneSize / 2);
+            groundRootMesh.getDescendants()[0].material.unlit = true;
+            groundRootMesh.getDescendants()[0].material.imageProcessingConfiguration = new BABYLON.ImageProcessingConfiguration();
+            groundRootMesh.computeWorldMatrix(true);
+        }
+
+        const createCampGroundAsync = async function(scene) {
+            const campRoot = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/camp/", "campMesh.gltf", scene);
+            const campRootMesh = campRoot.meshes[0];
+            campRootMesh.rotation.y = - Math.PI / 6 - 0.06;
+            campRootMesh.rotationQuaternion = null;
+            campRootMesh.scaling = campRootMesh.scaling.scale(1.6);
+        }
+
+        const getGardenMeshesAsync = async function(scene) {
+            const tree2 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/evergreen/", "evergreen2.gltf", scene);
+            const rock1 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock1.gltf", scene);
+            const rock2 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock2.gltf", scene);
+            const rock3 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock3.gltf", scene);
+            const rock4 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock4.gltf", scene);
+
+            tree2.meshes[0].setEnabled(false);
+            rock1.meshes[0].setEnabled(false);
+            rock2.meshes[0].setEnabled(false);
+            rock3.meshes[0].setEnabled(false);
+            rock4.meshes[0].setEnabled(false);
+
+            const originalMeshes = [tree2.meshes[0], rock1.meshes[0], tree2.meshes[0], rock2.meshes[0], tree2.meshes[0], rock3.meshes[0], tree2.meshes[0], rock4.meshes[0]];
+            return originalMeshes;
+        }
+
+        const getDistributionTextureAsync = async function(scene) {
+            return new Promise((resolve, reject) => {
+                let logoDistribution;
+                const onLoad = () => {
+                    resolve(logoDistribution);
+                };
+                logoDistribution = new BABYLON.Texture("assets/distribution.png", scene, true, true, undefined, onLoad);
+            });
+        }
+
+        const getScaleFunction = function(texture) {
+            var textureData = texture.readPixels();
+            var textureSize = texture.getSize();
+            var textureWidth = textureSize.width;
+            var textureHeight = textureSize.height;
+
+            // Based on our min max value in the distribution texture.
+            const normalizeG = function(g) {
+                g = 257 - g;
+                g = g / 144;
+                return g;
+            }
+
+            return (x, y, tree) => {
+                var u = Math.ceil(x * textureWidth);
+                var v = Math.ceil(y * textureHeight);
+                // Index in the data array RGBA.
+                var index = v * textureWidth * 4 + u * 4;
+                // If Transparent, do not display.
+                if (textureData[index + 3] === 0) {
+                    return 0;
+                }
+
+                var g = textureData[index + 1];
+                g = normalizeG(g);
+
+                // For trees, distribute evenly.
+                if (tree) {
+                    // Reduce the scale parameter to prevent big trees.
+                    return 0.5 + g * 0.5;
+                }
+
+                // For rocks, rool a dice to know whether to display (display more where the intensity is bigger)
+                if (Math.random() < g) {
+                    return 0.5 + g;
+                }
+                return 0;
+            }
+        }
+
+        const cloneMeshAsync = async function(mesh, name, count, scale, position, rotationY) {
+            return new Promise((resolve, reject) => {
+                const create = () => {
+                    engine.loadingScreen.loadingUIText = "Cloning element " + count + " on " + maxCount;
+
+                    const clone = mesh.clone(name, null, false);
+                    clone.scaling = clone.scaling.scale(scale);
+                    clone.position = position;
+                    clone.rotation.y = rotationY;
+                    clone.rotationQuaternion = null;
+
+                    resolve();
+                }
+
+                // Defer to update loading text.
+                if (count % 99 === 0) {
+                    setTimeout(() => {
+                        create();
+                    }, 10);
+                }
+                else {
+                    create();
+                }
+            });
+        }
+
+        const animateCamera = function(scene) {
+            setupCamera(scene);
+            scene.stopAllAnimations();
+
+            const animationBeta = new BABYLON.Animation("animBeta", "beta", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+            animationBeta.setKeys([{
+                frame: 0,
+                value: scene.activeCamera.beta
+            }, {
+                frame: 60,
+                value: 0
+            }, {
+                frame: 400,
+                value: 0
+            }]);
+
+            const animationRadius = new BABYLON.Animation("animRadius", "radius", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+            animationRadius.setKeys([{
+                frame: 0,
+                value: scene.activeCamera.radius
+            }, {
+                frame: 120,
+                value: scene.activeCamera.radius
+            }, {
+                frame: 400,
+                value: 1550
+            }]);
+
+            scene.activeCamera.animations.push(animationBeta);
+            scene.activeCamera.animations.push(animationRadius);
+
+            scene.beginAnimation(scene.activeCamera, 0, 400, false);
+        }
+
+        const optimizeScene = function(scene) {
+            scene.freezeMaterials();
+            scene.meshes.forEach((m) => {
+                m.isPickable = false;
+                m.freezeWorldMatrix();
+            });
+        }
+
+        const engine = new BABYLON.Engine(canvas);
+        engine.displayLoadingUI();
+        engine.loadingScreen.loadingUIText = "Getting photons canon ready...";
+
+        const scene = new BABYLON.Scene(engine);
+
+        setupScene(scene);
+
+        await createCampGroundAsync(scene);
+
+        scene.createDefaultCamera(true, true, true);
+        setupCamera(scene);
+
+        engine.loadingScreen.loadingUIText = "Creating ground...";
+        await createGroundAsync(scene);
+
+        engine.loadingScreen.loadingUIText = "Loading trees and rocks...";
+        const gardenMeshes = await getGardenMeshesAsync(scene);
+
+        const distributionTexture = await getDistributionTextureAsync(scene);
+        const getScale = getScaleFunction(distributionTexture);
+
+        let i = 0;
+        let j = 0;
+        while (i < maxCount) {
+            j = 0;
+            while (j < gardenMeshes.length) {
+                const a = Math.random();
+                const b = Math.random();
+                // trees vs rocks (even vs odd)
+                const scale = getScale(a, b, j % 2 === 0);
+                // do not create if no scale;
+                if (scale === 0) {
+                    continue;
+                }
+
+                const x = (a * 2 - 1) * sceneSize; // -scenSize to +sceneSize
+                const y = (b * 2 - 1) * sceneSize; // -scenSize to +sceneSize;
+                // do not create near the camp ground
+                if ((x * x + y * y) < centerSize * centerSize) {
+                    continue;
+                }
+
+                const randomScale = Math.random() * 1.5 + scale;
+                const randomPosition = new BABYLON.Vector3(x, 0, y);
+                const randomRotation = Math.random() * Math.PI * 2;
+                await cloneMeshAsync(gardenMeshes[j], i + "_" + j, i, randomScale, randomPosition, randomRotation);
+
+                // NEXT !!!
+                i++;
+                j++;
+            }
+        }
+
+        // After all the meshes creation, freeze as much as we can to improve perfs.
+        optimizeScene(scene);
+
+        // Animate the camera on space key pressed.
+        document.onkeypress = function(e) {
+            var keywhich = e.which;
+            var keyChar = String.fromCharCode(keywhich);
+            if (keyChar === " ") {
+                animateCamera(scene);
+            }
+        }
+
+        // Starts the render loop.
+        engine.loadingScreen.loadingUIText = "Let's start it (press space to animate)";
+
+        let t = 0;
+        engine.runRenderLoop(() => {
+            const startCPUTime = BABYLON.PrecisionDate.Now;
+            scene.render();
+            const endCPUTime = BABYLON.PrecisionDate.Now;
+
+            t = (t + 1) % 10;
+            // Prevent hammering the composition.
+            if (t === 0) {
+                divFps.innerHTML = engine.getFps().toFixed() + " fps - " + ((endCPUTime - startCPUTime)).toFixed() + " ms on CPU";
+            }
+        });
+
+        // Hide the loading screen.
+        engine.hideLoadingUI();
+    })();
+    </script>
+</body>
+
+</html>

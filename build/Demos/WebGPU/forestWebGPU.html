@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Forest WebGPU</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #2a2342; 
+            color: #ffffff;
+            font-family: "acumin-pro";
+        }
+
+        #renderCanvas {
+            width: 1024px;
+            height: 768px;
+            display: block;
+            font-size: 0;
+            margin: auto;
+            border:none !important;
+            outline:none !important;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 170px 754px 100px auto;
+            grid-template-rows: 60px 768px;
+        }
+
+        .headerLogo {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            background-color: #201936;
+        }
+
+        .headerLogo > a > img {
+            width: auto;
+            height: 60px;
+            margin-left: 10px;
+        }
+
+        .headerText {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 35px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #201936;
+            font-family: "acumin-pro-extra-condensed";
+        }
+
+        .headerFPS {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 15px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #BB464B;
+        }
+
+        .content {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: unset;
+        }
+        a:hover {
+            color: #FFFFFF;
+        }
+        a:visited {
+            color: #FFFFFF;
+        }
+        a:focus {
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="./lib/shaderc.js"></script>
+    <script src="./lib/babylon.max.js"></script>
+    <script src="./lib/babylonjs.loaders.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerLogo">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                <img src="logo.svg"></img>
+            </a>
+        </div>
+        <div class="headerText">
+            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+                WebGPU Experiment
+            </a>
+        </div>
+        <div class="headerFPS" id="fps">0</div>
+        <div class="content">
+            <canvas id="renderCanvas" width="1024" height="768"></canvas>
+        </div>
+    <div>
+
+    <script>
+    (async function() {
+        const maxCount = 1000;
+        const sceneSize = 400;
+        const spawnTime = 1;
+
+        const canvas = document.getElementById("renderCanvas");
+        const divFps = document.getElementById("fps");
+
+        const engine = new BABYLON.WebGPUEngine(canvas);
+        await engine.initEngineAsync({ wasmBinaryFile: "./lib/shaderc.wasm" });
+
+        const scene = new BABYLON.Scene(engine);
+        scene.environmentTexture = new BABYLON.CubeTexture("assets/environments/country.env", scene);
+        // scene.imageProcessingConfiguration.exposure = 4;
+        // scene.imageProcessingConfiguration.contrast = 1.6;
+        // scene.imageProcessingConfiguration.toneMappingEnabled = true;
+        // scene.imageProcessingConfiguration.toneMappingType = BABYLON.ImageProcessingConfiguration.TONEMAPPING_ACES;
+
+        var tree2 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/evergreen/", "evergreen2.gltf", scene);
+
+        var rock1 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock1.gltf", scene);
+        var rock2 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock2.gltf", scene);
+        var rock3 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock3.gltf", scene);
+        var rock4 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock4.gltf", scene);
+
+        // var ro = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/", "meh.glb", scene);
+        // ro.meshes[1].scaling = ro.meshes[1].scaling.scale(3);
+        // ro.meshes[1].position.x += 7;
+        // ro.meshes[1].rotation.y = Math.PI;
+        // ro.meshes[1].rotationQuaternion = null;
+        // ro.meshes[1].isPickable = false;
+        // ro.meshes[1].alwaysSelectAsActiveMesh = true;
+        // ro.meshes[1].computeWorldMatrix(true);
+
+        var material = new BABYLON.PBRMaterial("groundMaterial", scene);
+        material.metallic = 0;
+        material.roughness = 1;
+        material.albedoColor = new BABYLON.Color3(0.084, 0.237, 0.086);
+        var ground = BABYLON.MeshBuilder.CreateGround("ground", { width: sceneSize * 2, height: sceneSize * 2 }, scene);
+        ground.material = material;
+        ground.isPickable = false;
+        ground.alwaysSelectAsActiveMesh = true;
+        ground.computeWorldMatrix(true);
+
+        var originalMeshes = [tree2.meshes[0], rock1.meshes[0], tree2.meshes[0], rock2.meshes[0], tree2.meshes[0], rock3.meshes[0], tree2.meshes[0], rock4.meshes[0]];
+
+        for (var i = 0; i < maxCount; i++) {
+            setTimeout(() => {
+                for (var j = 0; j < originalMeshes.length; j++) {
+                    const clone = originalMeshes[j].clone("" + i + "_" + j, null, false);
+
+                    var scale = Math.random() * 1.5 + 0.5;
+                    clone.scaling = clone.scaling.scale(scale);
+                    clone.position = new BABYLON.Vector3(
+                        Math.random() * 2 * sceneSize - sceneSize,
+                        0,
+                        Math.random() * 2 * sceneSize - sceneSize
+                    );
+                    clone.rotation.y = Math.random() * Math.PI * 2;
+                    clone.rotationQuaternion = null;
+
+                    clone.alwaysSelectAsActiveMesh = true;
+                    clone.computeWorldMatrix(true);
+                    clone.isPickable = false;
+                }
+            }, i * spawnTime);
+        }
+
+        setTimeout(() => {
+            scene.freezeActiveMeshes();
+            scene.freezeMaterials();
+            scene.meshes.forEach((m) => {
+                m.freezeWorldMatrix();
+            });
+            engine.freezeCommands();
+        }, 5000);
+
+        scene.createDefaultCamera(true, true, true);
+        // const skybox = new BABYLON.CubeTexture("assets/skybox/blueSky", scene, null, true, null);
+        // skybox.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+        // scene.createDefaultSkybox(skybox, true, 10000, 0, false);
+
+        engine.runRenderLoop(() => {
+            scene.render();
+            divFps.innerHTML = engine.getFps().toFixed() + " fps";
+        });
+    })();
+    </script>
+</body>
+
+</html>
