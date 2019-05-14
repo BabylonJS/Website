@@ -74,6 +74,15 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
+                        "desc": "Bastille 1789",
+                        "author": "by Axeon Software",
+                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/Bastille-1789/",
+                        "img": {
+                            "url": "../community/assets/img/axeon-bastille.jpg",
+                            "alt": "Bastille 1789 - Axeon"
+                        }
+                    },
+                    {
                         "desc": "Marble Tower",
                         "author": "by PirateJC",
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
@@ -125,15 +134,6 @@
                         "img": {
                             "url": "./community/assets/img/jig.jpg",
                             "alt": "JigSpace"
-                        }
-                    },
-                    {
-                        "desc": "Apartment Configurator",
-                        "author": "by Axeon Software",
-                        "link": "http://axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
-                        "img": {
-                            "url": "./community/assets/img/ApartmentConfigurator.jpg",
-                            "alt": "Apartment Configurator"
                         }
                     }
                 ]
