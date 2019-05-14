@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="182px" height="282px" viewBox="0 0 182 282" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Page_Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MenuSubMenu_HexBar" transform="translate(-869.000000, -124.000000)" fill-rule="nonzero">
+            <g id="Page_Logo">
+                <g transform="translate(869.000000, 124.000000)">
+                    <polygon id="Path" fill="#E0684B" points="181.09 52.35 152.89 36.07 125.76 51.73 153.96 68.01"></polygon>
+                    <polygon id="Path" fill="#E0684B" points="28.04 68.01 118.12 16 91 0.34 0.91 52.35"></polygon>
+                    <polygon id="Path" fill="#E0684B" points="62.8 120.64 91 136.92 119.2 120.64 91 104.36"></polygon>
+                    <polygon id="Path" fill="#BB464B" points="153.96 68.01 153.96 140.71 91 177.06 28.04 140.71 28.04 68.01 0.91 52.35 0.91 156.37 91 208.38 181.09 156.37 181.09 52.35"></polygon>
+                    <polygon id="Path" fill="#BB464B" points="91 71.81 62.8 88.09 62.8 120.64 91 104.36 119.2 120.64 119.2 88.09"></polygon>
+                    <polygon id="Path" fill="#E0DED8" points="153.96 68.01 119.2 88.09 119.2 120.64 91 136.92 91 177.06 153.96 140.71"></polygon>
+                    <polygon id="Path" fill="#D5D2CA" points="28.04 68.01 62.8 88.09 62.8 120.64 91 136.92 91 177.06 28.04 140.71"></polygon>
+                    <polygon id="Path" fill="#FFFFFF" points="118.12 16 152.89 36.07 125.76 51.73 153.96 68.01 119.2 88.09 91 71.81 62.8 88.09 28.04 68.01"></polygon>
+                    <path d="M67.41,280.4 L67.41,270.91 L45.18,270.91 L45.18,262.27 L65.26,236.85 L77.26,236.85 L77.26,262.46 L83.26,262.46 L82.42,270.91 L77.22,270.91 L77.22,280.4 L67.41,280.4 Z M67.41,255.7 C67.41,253.23 67.47,248.49 67.54,246.28 C65.72,249.01 61.88,254.28 55.54,262.46 L67.37,262.46 L67.41,255.7 Z" id="Shape" fill="#E0684B"></path>
+                    <polygon id="Path" fill="#E0684B" points="87.62 280.4 87.62 269.74 94.51 269.74 94.51 280.4"></polygon>
+                    <path d="M136.5,258.17 C136.5,271.3 131.11,281.31 117.59,281.31 C104.91,281.31 98.59,271.37 98.59,258.63 C98.59,246.21 104.76,235.94 117.7,235.94 C130.2,235.94 136.5,246.15 136.5,258.17 Z M109.5,258.5 C109.5,265.39 111.13,273.06 117.76,273.06 C124.39,273.06 125.76,265.91 125.76,258.24 C125.76,251.8 124.53,244.13 117.83,244.13 C111.28,244.13 109.46,250.83 109.46,258.5 L109.5,258.5 Z" id="Shape" fill="#E0684B"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
