@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "campus Albano",
+                        "author": "by wec360°",
+                        "link": "https://campusalbano.se/",
+                        "img": {
+                            "url": "/community/assets/img/campus-albano.jpg",
+                            "alt": "campus Albano - wec360°"
+                        }
+                    },
+                    {
                         "desc": "Unit21 Interior Visualization",
                         "author": "by Marko & Pero",
                         "link": "https://www.productexample.com/unit21/index.html",
