@@ -2,8 +2,8 @@
     style="background-color: {{#var background}}{{/var}};">
     <div class="inner-container" style="max-height:{{height}}">
         {{#if (eq alignment "left")}}
-        <div>
-            <img src="{{img.url}}" alt="{{img.alt}}">
+        <div style="width:150px">
+            <!-- <img src="{{img.url}}" alt="{{img.alt}}"> -->
         </div>
         {{/if}}
         <div class="text-block" style="text-align:{{textAlign}}">
@@ -12,9 +12,10 @@
             <h3>{{subtitle}}</h3>
             {{/if}}
             <p style="color:{{color}}">{{desc}}</p>
+            toto
         </div>
         {{#if (eq alignment "right")}}
-        <div>
+        <div style="width:{{imageWidth}}">
             <img src="{{img.url}}" alt="{{img.alt}}">
         </div>
         {{/if}}
