@@ -70,27 +70,28 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-              "alignment": "left",
-              "background": "#3F3461",
-              "img": {
-                "url": "../assets/img/FlightHelmet.png",
-                "alt": "Alternative text for the image"
-              },
-              "title": "Hello World",
-              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+                "alignment": "left",
+                "background": "#3F3461",
+                "img": {
+                    "url": "../assets/img/FlightHelmet.png",
+                    "alt": "Alternative text for the image"
+                },
+                "height": "400px",
+                "title": "Hello World",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
             }
         },
         {
             "templateName": "imageAndTextBlock",
             "content": {
-              "alignment": "right",
-              "background": "#3F3461",
-              "img": {
-                "url": "../assets/img/Inspector.png",
-                "alt": "Alternative text for the image"
-              },
-              "title": "Hello World",
-              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+                "alignment": "right",
+                "background": "#3F3461",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image"
+                },
+                "title": "Hello World",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
             }
         },
         {
