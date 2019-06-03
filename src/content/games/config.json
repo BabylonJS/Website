@@ -1,0 +1,219 @@
+{
+    "menuTitle": "GAMES",
+    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
+    "metaTags": [
+        {
+            "name": "custom"
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "topBlock",
+            "content": {
+                "title2": "The Game Engine Built For The Web.",
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet.",
+                "img": {
+                    "url": "../assets/img/Page_Logo.svg"
+                },
+                "items": [
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://www.babylonjs-playground.com/",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Check Out the latest release: Babylon 4.0",
+                        "link": "https://babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Get babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../assets/img/DownloadIcon.svg"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "../assets/videos/clearCoatWeb.mp4"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/marbleTowerWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/mBlurFanWeb.mp4"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "FEATURED GAMES",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Minecraft Classic",
+                        "author": "by Mojang",
+                        "link": "https://classic.minecraft.net",
+                        "img": {
+                            "url": "./assets/img/Minecraft_Classic.png",
+                            "alt": "Bastille 1789 - Axeon"
+                        }
+                    },
+                    {
+                        "desc": "Assassin's Creed Pirates",
+                        "author": "by Ubisoft",
+                        "link": "http://race.assassinscreedpirates.com/",
+                        "img": {
+                            "url": "../community/assets/img/AssassinsCreed.jpg",
+                            "alt": "ACP"
+                        }
+                    },
+                    {
+                        "desc": "PCOL",
+                        "author": "by Zhengxi Zhang",
+                        "link": "http://www.heyzxz.me/pcol",
+                        "img": {
+                            "url": "../community/assets/img/pcol.jpg",
+                            "alt": "PCOL"
+                        }
+                    },
+                    {
+                        "desc": "Local War",
+                        "author": "by 蔬菜土豆泥",
+                        "link": "http://localwar.xidayun.com/",
+                        "img": {
+                            "url": "../community/assets/img/localwar.jpg",
+                            "alt": "Local War"
+                        }
+                    },
+                    {
+                        "desc": "Shell Shockers",
+                        "author": "by Fun Fetched",
+                        "link": "http://shellshock.io",
+                        "img": {
+                            "url": "../community/assets/img/ShellShockers.jpg",
+                            "alt": "Shell Shockers"
+                        }
+                    },
+                    {
+                        "desc": "Mansion VR",
+                        "author": "by Michel Rousseau",
+                        "link": "/Demos/MANSIONVR",
+                        "img": {
+                            "url": "../community/assets/img/Mansion400.jpg",
+                            "alt": "Mansion VR"
+                        }
+                    },
+                    {
+                        "desc": "Brilliant man",
+                        "author": "by Walter van Maanen",
+                        "link": "https://www.bigredbox.nl//BrilliantMan/index.html",
+                        "img": {
+                            "url": "../community/assets/img/BrilliantMan.jpg",
+                            "alt": "Brilliant man"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "left",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/FlightHelmet.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "right",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/Inspector.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "left",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/FlightHelmet.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "right",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/Inspector.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "left",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/FlightHelmet.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+              "alignment": "right",
+              "background": "#2A2342",
+              "img": {
+                "url": "../assets/img/Inspector.png",
+                "alt": "Alternative text for the image"
+              },
+              "title": "Hello World",
+              "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        }
+    ]
+}

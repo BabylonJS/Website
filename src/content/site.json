@@ -25,6 +25,9 @@
             ]
         },
         {
+            "root": "games"
+        },
+        {
             "root": "community",
             "children": [
                 {
