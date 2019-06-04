@@ -3,41 +3,15 @@
     "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
     "metaTags": [
         {
-            "name": "custom"
+            "name": "mini-custom"
         }
     ],
     "blocks": [
         {
-            "templateName": "topBlock",
+            "templateName": "miniTopBlock",
             "content": {
                 "title2": "The Game Engine Built For The Web.",
-                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet.",
-                "img": {
-                    "url": "../assets/img/Page_Logo.svg"
-                },
-                "items": [
-                    {
-                        "desc": "Try Babylon.js in the playground",
-                        "link": "https://www.babylonjs-playground.com/",
-                        "img": {
-                            "url": "../assets/img/TryIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "Check Out the latest release: Babylon 4.0",
-                        "link": "https://babylonjs.com",
-                        "img": {
-                            "url": "../assets/img/TestIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "Get babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
-                        "img": {
-                            "url": "../assets/img/DownloadIcon.svg"
-                        }
-                    }
-                ]
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet."
             }
         },
         {
@@ -66,6 +40,12 @@
                         }
                     }
                 ]
+            }
+        },        
+        {
+            "templateName": "upTriangle",
+            "content": {
+                "marginTop": "0px"
             }
         },
         {
@@ -98,7 +78,7 @@
                         "link": "https://classic.minecraft.net",
                         "img": {
                             "url": "./assets/img/Minecraft_Classic.png",
-                            "alt": "Bastille 1789 - Axeon"
+                            "alt": "Minecraft Classic"
                         }
                     },
                     {

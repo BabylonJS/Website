@@ -1,17 +1,15 @@
 <section class="linkList-block">
     <div class="link-part">
-        <div>
-            {{#each items}}
-            <div class="link">
-                <a href="{{link}}" class="link-part-link" target="_blank">
-                    <div class="icon-back">
-                        <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                        <img class="iconImage" src="{{img.url}}">
-                    </div>
-                    <div class="link-part-desc">{{desc}}</div>
-                </a>
-            </div>
-            {{/each}}
+        {{#each items}}
+        <div class="link">
+            <a href="{{link}}" class="link-part-link" target="_blank">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="{{img.url}}">
+                </div>
+                <div class="link-part-desc">{{desc}}</div>
+            </a>
         </div>
+        {{/each}}
     </div>
 </section>

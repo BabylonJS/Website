@@ -6,7 +6,8 @@
 }
 
 .link-part{
-    width: 505px;
+    display: flex;
+    justify-content: center;
 }
 
 .link-part .link {
@@ -15,6 +16,7 @@
     color: #DE674A;
     list-style-type: none;
     text-transform: uppercase;
+    margin-right: 10px;
 }
 
 .link-part .link a{
@@ -62,6 +64,13 @@
     justify-self: center;
 }
 
+@media all and (max-width: 1280px){
+    .link-part{
+        display: block;
+        width: 505px;
+        margin: auto;
+    } 
+}
 
 @media (hover: hover) {    
     .link-part .link a:hover{

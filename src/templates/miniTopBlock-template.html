@@ -1,0 +1,22 @@
+<section class="top-block">
+    <div class="container">
+        <div class="triangle-background short">
+            <div class="large-logo short">
+                <img id="" src="../assets/img/logo_page_smaller.svg" />
+            </div>
+        </div>
+    </div>
+    <div class="container-info short">
+        <div class="text-part short">
+            <h1>{{title}}</h1>
+            <h2>{{title2}}</h2>
+            <h2 class="last-subtitle">{{title3}}</h2>
+            <span>{{desc}}</span>
+        </div>
+        {{#if link}}
+        <div class="img-part">
+            <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">
+        </div>
+        {{/if}}
+    </div>
+</section>
