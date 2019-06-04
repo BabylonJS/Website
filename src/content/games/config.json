@@ -20,7 +20,7 @@
                 "items": [
                     {
                         "desc": "Try Babylon.js in the playground",
-                        "link": "https://www.babylonjs-playground.com/",
+                        "link": "#foo",
                         "img": {
                             "url": "../assets/img/TryIcon.svg"
                         },
@@ -169,6 +169,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
+                "anchor": "foo",
                 "alignment": "right",
                 "background": "#2A2342",
                 "img": {
