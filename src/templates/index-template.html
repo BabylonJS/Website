@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
     <link rel="stylesheet" href="/assets/styles/variables.css">
+    <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
     <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
     <link rel="stylesheet" href="/assets/styles/header.css">
     <link rel="stylesheet" href="/assets/styles/footer.css">
@@ -43,6 +44,7 @@
     <link rel="stylesheet" href="/assets/styles/imageBlock.css">
     <link rel="stylesheet" href="/assets/styles/twoColumns.css">
     <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
+    <link rel="stylesheet" href="/assets/styles/linkList.css">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
     <link rel="author" href="humans.txt">
@@ -68,6 +70,7 @@
                         <div class="header-ul-wrapper">
                             <ul>
                                 {{#each menu}}
+                                {{#if visible}}
                                 {{#if menuUrl}}
                                 <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}"
                                         href="{{menuUrl}}">{{menuTitle}}</a>
@@ -77,6 +80,7 @@
                                     {{else}}
                                 <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}"
                                         href="/{{root}}">{{menuTitle}}</a>
+                                    {{/if}}
                                     {{/if}}
                                     {{/if}}
                                     {{/each}}

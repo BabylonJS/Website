@@ -25,12 +25,13 @@
     <meta name="twitter:description"
         content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
     <meta name="twitter:image" content="http://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
-    <meta name="custom" property="" content="" />
+    <meta name="mini-custom" property="" content="" />
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" href="/assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
     <link rel="stylesheet" href="/assets/styles/variables.css">
+    <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
     <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
     <link rel="stylesheet" href="/assets/styles/header.css">
     <link rel="stylesheet" href="/assets/styles/footer.css">
@@ -41,6 +42,7 @@
     <link rel="stylesheet" href="/assets/styles/imageBlock.css">
     <link rel="stylesheet" href="/assets/styles/twoColumns.css">
     <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
+    <link rel="stylesheet" href="/assets/styles/linkList.css">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
     <link rel="author" href="humans.txt">
@@ -66,8 +68,6 @@
                         <div class="header-ul-wrapper">
                             <ul>
                                 <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
-                                <li class="GAMES user-select"><a class="GAMES"
-                                        href="/games">GAMES</a>
                                 <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
                                 <li class="LEARN user-select"><a class="LEARN">LEARN</a>
                                 <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
@@ -103,57 +103,58 @@
     <div class="content-container">
         <section class="top-block">
     <div class="container">
-        <div class="triangle-background">
-            <div class="large-logo">
-                <img id="" src="../assets/img/Page_Logo.svg" />
+        <div class="triangle-background short">
+            <div class="large-logo short">
+                <img id="" src="../assets/img/logo_page_smaller.svg" />
             </div>
-            <div class="version">4.0</div>
         </div>
     </div>
-    <div class="container-info">
-        <div class="text-part">
+    <div class="container-info short">
+        <div class="text-part short">
             <h1></h1>
             <h2>The Game Engine Built For The Web.</h2>
             <h2 class="last-subtitle"></h2>
             <span>A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what&#x27;s truly important…creating breathtaking experiences for gamers across the planet.</span>
         </div>
-        <div class="logo-part">
-            <ul>
-                <li>
-                    <a href="https://www.babylonjs-playground.com/" class="logo-part-link" target="_blank">
-                        <div class="icon-back">
-                            <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                            <img class="iconImage" src="../assets/img/TryIcon.svg">
-                        </div>
-                        <div class="logo-part-desc">Try Babylon.js in the playground</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://babylonjs.com" class="logo-part-link" target="_blank">
-                        <div class="icon-back">
-                            <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                            <img class="iconImage" src="../assets/img/TestIcon.svg">
-                        </div>
-                        <div class="logo-part-desc">Check Out the latest release: Babylon 4.0</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://doc.babylonjs.com/babylon101/how_to_get" class="logo-part-link" target="_blank">
-                        <div class="icon-back">
-                            <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                            <img class="iconImage" src="../assets/img/DownloadIcon.svg">
-                        </div>
-                        <div class="logo-part-desc">Get babylon.js</div>
-                    </a>
-                </li>
-            </ul>
+    </div>
+</section>
+        <section class="linkList-block">
+    <div class="link-part">
+        <div class="link">
+            <a href="https://www.babylonjs-playground.com/" class="link-part-link" target="_blank">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../assets/img/TryIcon.svg">
+                </div>
+                <div class="link-part-desc">Try Babylon.js in the playground</div>
+            </a>
+        </div>
+        <div class="link">
+            <a href="https://babylonjs.com" class="link-part-link" target="_blank">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../assets/img/TestIcon.svg">
+                </div>
+                <div class="link-part-desc">Check Out the latest release: Babylon 4.0</div>
+            </a>
+        </div>
+        <div class="link">
+            <a href="https://doc.babylonjs.com/babylon101/how_to_get" class="link-part-link" target="_blank">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../assets/img/DownloadIcon.svg">
+                </div>
+                <div class="link-part-desc">Get babylon.js</div>
+            </a>
         </div>
     </div>
+</section>
+        <div class="upTriangle-block" style="margin-top:0px">
     <div class="container">
         <div class="middle-triangle">
         </div>
     </div>
-</section>
+</div>
         <div class="samples-carousel-block">
     <div class="carousel" data-sample="">
         <div class="img-holder">
@@ -190,7 +191,7 @@
                     <li class="hex">
                         <div class="hexIn">
                             <a class="hexLink" href="https://classic.minecraft.net">
-                                <img src="./assets/img/Minecraft_Classic.png" alt="Bastille 1789 - Axeon" />
+                                <img src="./assets/img/Minecraft_Classic.png" alt="Minecraft Classic" />
                                 <div class="desc">
                                     <div class="hexDesc">Minecraft Classic</div>
                                     <div class="hexDesc author">by Mojang</div>
@@ -283,7 +284,7 @@
         </div>
     </div>
 </div>
-        <div class="downTriangle-block">
+        <div class="downTriangle-block" style="margin-bottom:0px">
     <div class="downTriangle-background">
         <a href="../community">
             <div class="hex-container">
@@ -294,77 +295,84 @@
     </div>
 </div>
         <section class="image-and-text-block "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-            <div>
-                <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image">
-            </div>
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div>
+            <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image" style="width:450px">
+        </div>
+        <div class="text-block" style="text-align:">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <h3>Yeah..this is cool</h3>
+            <p style="color:">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
     </div>
 </section>
         <section class="image-and-text-block  right "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div class="text-block" style="text-align:right">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <p style="color:yellow">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
-            <div>
-                <img src="../assets/img/Inspector.png" alt="Alternative text for the image">
-            </div>
+        <div>
+            <img src="../assets/img/Inspector.png" alt="Alternative text for the image" style="width:450px">
+        </div>
     </div>
 </section>
         <section class="image-and-text-block "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-            <div>
-                <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image">
-            </div>
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div>
+            <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image" style="width:450px">
+        </div>
+        <div class="text-block" style="text-align:">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <p style="color:">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
     </div>
 </section>
         <section class="image-and-text-block  right "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div class="text-block" style="text-align:">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <p style="color:">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
-            <div>
-                <img src="../assets/img/Inspector.png" alt="Alternative text for the image">
-            </div>
+        <div>
+            <img src="../assets/img/Inspector.png" alt="Alternative text for the image" style="width:450px">
+        </div>
     </div>
 </section>
         <section class="image-and-text-block "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-            <div>
-                <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image">
-            </div>
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div>
+            <img src="../assets/img/FlightHelmet.png" alt="Alternative text for the image" style="width:450px">
+        </div>
+        <div class="text-block" style="text-align:">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <p style="color:">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
     </div>
 </section>
         <section class="image-and-text-block  right "
-     style="background-color: #2A2342">
-    <div class="inner-container">
-        <div class="text-block">
+    style="background-color: #2A2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div class="text-block" style="text-align:">
             <h2>Hello World</h2>
-            <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+            <p style="color:">Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
         </div>
-            <div>
-                <img src="../assets/img/Inspector.png" alt="Alternative text for the image">
-            </div>
+        <div>
+            <img src="../assets/img/Inspector.png" alt="Alternative text for the image" style="width:450px">
+        </div>
     </div>
 </section>
+        <div class="text-block">
+    <div class="inner-container">
+        <h2>Hello World</h2>
+        <p>Babylon.js 4.0 is here and marks a major step forward in one of the world&#x27;s leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.</p>
+    </div>
+</div>
     </div>
     <footer class="footer">
         <div class="footer-container">

@@ -9,7 +9,6 @@
     line-height: 60px;
     color: #fff;
     padding-left: 101px;
-    z-index: 100;
     transform: scale(1);
 }
 
@@ -19,7 +18,6 @@
     line-height: 30px;
     padding-left: 101px;
     color: #fff;
-    z-index: 100;
     transform: scale(1);
     margin-bottom: 71px;
     padding-right: 20px;
