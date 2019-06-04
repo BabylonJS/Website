@@ -167,9 +167,15 @@
             }
         },
         {
-            "templateName": "imageAndTextBlock",
+            "templateName": "anchorBlock",
             "content": {
                 "anchor": "foo",
+                "offset": "-70px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
                 "alignment": "right",
                 "background": "#2A2342",
                 "img": {
