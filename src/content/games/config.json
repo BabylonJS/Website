@@ -23,25 +23,29 @@
                         "link": "https://www.babylonjs-playground.com/",
                         "img": {
                             "url": "../assets/img/TryIcon.svg"
-                        }
+                        },
+                        "marginRight": "10px"
                     },
                     {
                         "desc": "Check Out the latest release: Babylon 4.0",
                         "link": "https://babylonjs.com",
                         "img": {
                             "url": "../assets/img/TestIcon.svg"
-                        }
+                        },
+                        "marginLeft": "10px",
+                        "marginRight": "10px"
                     },
                     {
                         "desc": "Get babylon.js",
                         "link": "https://doc.babylonjs.com/babylon101/how_to_get",
                         "img": {
                             "url": "../assets/img/DownloadIcon.svg"
-                        }
+                        },
+                        "marginLeft": "10px"
                     }
                 ]
             }
-        },        
+        },
         {
             "templateName": "upTriangle",
             "content": {
