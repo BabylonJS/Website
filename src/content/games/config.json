@@ -120,7 +120,6 @@
                     "width": "450px"
                 },
                 "height": "400px",
-                "textAlign": "right",
                 "title": "Animation",
                 "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It doesn't stop there however, with full support for complex rigid-body skeletal animation, playing back any animation made from your favorite 3D creation tool is equally as simple.",
                 "moreInfo": "https://doc.babylonjs.com/features/animations"
@@ -191,10 +190,40 @@
             }
         },
         {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Active, Friendly Community",
+                "desc": "What truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.",
+                "moreInfo": "https://forum.babylonjs.com"
+            }
+        },
+        {
             "templateName": "textBlock",
             "content": {
                 "title": "Just the Tip of the Iceberg",
                 "desc": "We don't take it lightly when we say that Babylon is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "https://doc.babylonjs.com/features/",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
+                        }
+                    }
+                ]
             }
         },
         {
