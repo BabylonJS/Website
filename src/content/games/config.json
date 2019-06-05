@@ -1,0 +1,281 @@
+{
+    "menuTitle": "GAMES",
+    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
+    "metaTags": [
+        {
+            "name": "mini-custom"
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "miniTopBlock",
+            "content": {
+                "title2": "The Game Engine Made For The Web.",
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the Features",
+                        "link": "#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        },
+                        "marginRight": "10px"
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        },
+                        "marginLeft": "50px",
+                        "marginRight": "50px"
+                    },
+                    {
+                        "desc": "Get babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../assets/img/DownloadIcon.svg"
+                        },
+                        "marginLeft": "10px"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "upTriangle",
+            "content": {
+                "marginTop": "0px"
+            }
+        },
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "../assets/videos/clearCoatWeb.mp4"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/marbleTowerWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/mBlurFanWeb.mp4"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "imageListBlock",
+            "content": {
+                "items": [
+                    {
+                        "img": {
+                            "url": "./assets/img/GS_Banner.png",
+                            "marginRight": "10px"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "anchorBlock",
+            "content": {
+                "anchor": "feature",
+                "offset": "-70px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/SceneGraph.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "textWidth": "600px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Advanced Rendering",
+                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
+                "moreInfo": "https://doc.babylonjs.com/how_to/physically_based_rendering"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "textAlign": "right",
+                "title": "Animation",
+                "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It doesn't stop there however, with full support for complex rigid-body skeletal animation, playing back any animation made from your favorite 3D creation tool is equally as simple.",
+                "moreInfo": "https://doc.babylonjs.com/features/animations"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/GUIsystem.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Particles",
+                "desc": "With the powerful particle system in Babylon.js, jaw-dropping FX are at your fingertips. Whether using sprites and solid mesh particles the creative possibilities are truly limitless.  Best of all though, it's all built with performance in mind.  Meaning with Babylon, not only do you get both the beauty and power of complex FX, but you get it without worrying about degrading your experience. ",
+                "moreInfo": "https://doc.babylonjs.com/features/particles"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/FlightHelmet.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Physics",
+                "desc": "For truly unique experiences and worlds, nothing beats adding complex physics interactions to your game.  However physics is computationally expensive.  Luckily, amazingly smart people across the globe have created several powerful open-source physics engines, and Babylon.js has built-in support for the best of them!",
+                "moreInfo": "https://doc.babylonjs.com/features/physics_engine"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "GUI System",
+                "desc": "Creating amazing menus and 2D interactive layers to your 3D scene is a snap with Babylon's GUI system.  From buttons, grids, stack panels, lists, and more, you'll find everything that you need in this intuitive GUI engine.",
+                "moreInfo": "https://doc.babylonjs.com/features/gui"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Audio",
+                "desc": "As a game creator, your number one mission is to immerse your players in fun. Nothing gets your blood pumping faster than amazing music and sound.  Whether you're looking for ambient, directional, or fully spatialized sound, Babylon.js brings immersive sound capabilities directly under one roof in a powerful, easy-to-use sound engine.",
+                "moreInfo": "https://doc.babylonjs.com/how_to/playing_sounds_and_music"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "Games made with Babylon.js",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Minecraft Classic",
+                        "author": "by Mojang",
+                        "link": "https://classic.minecraft.net",
+                        "img": {
+                            "url": "./assets/img/Minecraft_Classic.png",
+                            "alt": "Minecraft Classic"
+                        }
+                    },
+                    {
+                        "desc": "Assassin's Creed Pirates",
+                        "author": "by Ubisoft",
+                        "link": "http://race.assassinscreedpirates.com/",
+                        "img": {
+                            "url": "../community/assets/img/AssassinsCreed.jpg",
+                            "alt": "ACP"
+                        }
+                    },
+                    {
+                        "desc": "PCOL",
+                        "author": "by Zhengxi Zhang",
+                        "link": "http://www.heyzxz.me/pcol",
+                        "img": {
+                            "url": "../community/assets/img/pcol.jpg",
+                            "alt": "PCOL"
+                        }
+                    },
+                    {
+                        "desc": "Local War",
+                        "author": "by 蔬菜土豆泥",
+                        "link": "http://localwar.xidayun.com/",
+                        "img": {
+                            "url": "../community/assets/img/localwar.jpg",
+                            "alt": "Local War"
+                        }
+                    },
+                    {
+                        "desc": "Shell Shockers",
+                        "author": "by Fun Fetched",
+                        "link": "http://shellshock.io",
+                        "img": {
+                            "url": "../community/assets/img/ShellShockers.jpg",
+                            "alt": "Shell Shockers"
+                        }
+                    },
+                    {
+                        "desc": "Mansion VR",
+                        "author": "by Michel Rousseau",
+                        "link": "/Demos/MANSIONVR",
+                        "img": {
+                            "url": "../community/assets/img/Mansion400.jpg",
+                            "alt": "Mansion VR"
+                        }
+                    },
+                    {
+                        "desc": "Brilliant man",
+                        "author": "by Walter van Maanen",
+                        "link": "https://www.bigredbox.nl//BrilliantMan/index.html",
+                        "img": {
+                            "url": "../community/assets/img/BrilliantMan.jpg",
+                            "alt": "Brilliant man"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE",
+                "marginBottom": "0px"
+            }
+        }
+    ]
+}
