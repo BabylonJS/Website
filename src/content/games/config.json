@@ -15,28 +15,6 @@
             }
         },
         {
-            "templateName": "imageListBlock",
-            "content": {
-                "marginTop": "20px",
-                "marginBottom": "20px",
-                "items": [
-                    {
-                        "img": {
-                            "url": "../assets/img/SceneGraph.png",
-                            "width": "300px",
-                            "marginRight": "10px"
-                        }
-                    },
-                    {
-                        "img": {
-                            "url": "../assets/img/GUIsystem.png",
-                            "marginLeft": "10px"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "templateName": "linkListBlock",
             "content": {
                 "items": [
@@ -93,6 +71,19 @@
             }
         },
         {
+            "templateName": "imageListBlock",
+            "content": {
+                "items": [
+                    {
+                        "img": {
+                            "url": "./assets/img/GS_Banner.png",
+                            "marginRight": "10px"
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "templateName": "anchorBlock",
             "content": {
                 "anchor": "feature",
@@ -114,7 +105,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
-                "desc": "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions.",
+                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful images, all inside of your browser.",
                 "moreInfo": "https://www.babylonjs.com"
             }
         },
@@ -131,7 +122,7 @@
                 "height": "400px",
                 "textAlign": "right",
                 "title": "Animation",
-                "desc": "Interactions with elements in the 3D scene are made easy through the integration of ray casting, behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."
+                "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It doesn't stop there however, with full support for complex rigid-body skeletal animation, playing back any animation made from your favorite 3D creation tool is equally as simple."
             }
         },
         {
@@ -204,7 +195,7 @@
         {
             "templateName": "imagesBlock",
             "content": {
-                "title": "Featured Games made with Babylon.js",
+                "title": "Games made with Babylon.js",
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
