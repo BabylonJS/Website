@@ -11,7 +11,7 @@
             "templateName": "miniTopBlock",
             "content": {
                 "title2": "The Game Engine Made For The Web.",
-                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet."
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the web."
             }
         },
         {
@@ -106,6 +106,7 @@
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
                 "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
+                "moreInfoText": "More on Rendering",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering"
             }
         },
