@@ -114,7 +114,8 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
-                "desc": "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions."
+                "desc": "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions.",
+                "moreInfo": "https://www.babylonjs.com"
             }
         },
         {

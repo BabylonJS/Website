@@ -13,6 +13,11 @@
             <h3>{{subtitle}}</h3>
             {{/if}}
             <p style="color:{{color}}">{{desc}}</p>
+            {{#if moreInfo}}
+            <div class="link-block">
+                <a style="color:{{color}}" href="{{moreInfo}}">More info</a>
+            </div>
+            {{/if}}
         </div>
         {{#if (eq alignment "right")}}
         <div>
