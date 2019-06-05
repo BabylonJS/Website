@@ -40,6 +40,17 @@
     line-height: 30px;
 }
 
+.image-and-text-block .text-block .link-block {
+    margin-top: 10px;
+}
+
+.image-and-text-block .text-block a {
+    color: #E2E2E2;    
+    font-family: "acumin-pro";
+    font-size: 16px;
+    text-decoration: underline;
+}
+
 @media all and (max-width: 480px){
     .content-container > .text-block .inner-container{
         max-width: 300px;

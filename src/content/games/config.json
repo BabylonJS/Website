@@ -105,7 +105,8 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
-                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful images, all inside of your browser. "
+                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful images, all inside of your browser.",
+                "moreInfo": "https://www.babylonjs.com"
             }
         },
         {
