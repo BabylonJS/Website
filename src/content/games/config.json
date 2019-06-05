@@ -10,7 +10,7 @@
         {
             "templateName": "miniTopBlock",
             "content": {
-                "title2": "The Game Engine Built For The Web.",
+                "title2": "The Game Engine Made For The Web.",
                 "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the planet."
             }
         },
@@ -19,21 +19,21 @@
             "content": {
                 "items": [
                     {
-                        "desc": "Try Babylon.js in the playground",
-                        "link": "#foo",
+                        "desc": "Check out the Features",
+                        "link": "#feature",
                         "img": {
-                            "url": "../assets/img/TryIcon.svg"
+                            "url": "../assets/img/NotesIcon.svg"
                         },
                         "marginRight": "10px"
                     },
                     {
-                        "desc": "Check Out the latest release: Babylon 4.0",
-                        "link": "https://babylonjs.com",
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
                         "img": {
-                            "url": "../assets/img/TestIcon.svg"
+                            "url": "../assets/img/TryIcon.svg"
                         },
-                        "marginLeft": "10px",
-                        "marginRight": "10px"
+                        "marginLeft":"50px",
+                        "marginRight": "50px"
                     },
                     {
                         "desc": "Get babylon.js",
@@ -71,9 +71,114 @@
             }
         },
         {
+            "templateName": "anchorBlock",
+            "content": {
+                "anchor": "feature",
+                "offset": "-70px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/SceneGraph.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Advanced Rendering",
+                "desc": "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "textAlign": "right",
+                "title": "Animation",
+                "desc": "Interactions with elements in the 3D scene are made easy through the integration of ray casting, behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/GUIsystem.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Particles",
+                "desc": "Your user interface needs are covered with the full-fledged GUI engine that provides a complete set of controls like buttons, grid, stack panels, lists and so on."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/FlightHelmet.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Physics",
+                "desc": "Work with existing file formats with our glTF, OBJ and STL importers. Export your entire scene to OBJ or glTF. Simply load all your scene assets with a few lines of code thanks to the AssetsManager"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "GUI System",
+                "desc": "Your user interface needs are covered with the full-fledged GUI engine that provides a complete set of controls like buttons, grid, stack panels, lists and so on."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2A2342",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image",
+                    "width": "450px"
+                },
+                "height": "400px",
+                "title": "Audio",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "title": "Hello World",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
             "templateName": "imagesBlock",
             "content": {
-                "title": "FEATURED GAMES",
+                "title": "Featured Games made with Babylon.js",
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
@@ -148,113 +253,6 @@
                 "link": "../community",
                 "label": "MORE",
                 "marginBottom": "0px"
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/FlightHelmet.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "title": "Hello World",
-                "subtitle": "Yeah..this is cool",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "anchorBlock",
-            "content": {
-                "anchor": "foo",
-                "offset": "-70px"
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "right",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "textAlign": "right",
-                "color": "yellow",
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/FlightHelmet.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "right",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/FlightHelmet.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "right",
-                "background": "#2A2342",
-                "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
-                },
-                "height": "400px",
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
-            }
-        },
-        {
-            "templateName": "textBlock",
-            "content": {
-                "title": "Hello World",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
             }
         }
     ]
