@@ -1,4 +1,8 @@
-
+@media (max-width: 1280px) {
+    .image-and-text-block .text-block p {
+        font-size: 15px;
+    }
+}
 
 @media (max-width: 1024px) {
     html, body {
@@ -35,8 +39,17 @@
         margin: 0!important;
         padding-left: 15px!important;
         padding-right: 15px!important;
+        display: grid;
     }
 
+    .image-and-text-block.right .inner-container {
+        flex-direction: column-reverse;
+    }
+    
+    .image-and-text-block .text-block .link-block {
+        padding: 0 !important;
+        margin: 20px 0px !important;
+    }
 
 }
 
@@ -53,12 +66,12 @@
         padding: 0 30px;
     }
 
-    .image-and-text-block .inner-container img {
-        width: 400px !important;
+    .link-part-desc {
+        font-size: 25px;
     }
 
-    .image-and-text-block.right .inner-container {
-        flex-direction: column-reverse;
+    .image-and-text-block .inner-container img {
+        width: 400px !important;
     }
 
     .imageList-block img {
@@ -67,16 +80,6 @@
 
     .text-block {
         padding: 10px 30px 20px 30px;
-    }
-
-    .image-and-text-block .text-block .link-block {
-        padding: 0 !important;
-        margin: 20px 0px !important;
-    }
-
-    .image-and-text-block.right .text-block .link-block {
-        max-width: 300px;
-        margin: 10px auto !important;
     }
 
     .why-choose .inner-container {
@@ -94,8 +97,6 @@
     .header-top-wrapper {
         width: 100%;
     }
-
-
 
     .show .menu {
         width: 50vw;
@@ -198,6 +199,7 @@
     }
     .text-part, .logo-part{
         width: 90%;
+        padding: 0 20px;
     }
     .logo-part ul li {
         font-size: 16px;
@@ -219,7 +221,16 @@
         font-size: 16px;
     }
     .middle-background h2{
-        font-size: 45px;
+        font-size: 30px;
+    }
+
+    .middle-background {
+        padding-bottom: 0;
+    }
+    
+    .image-and-text-block.right .text-block .link-block {
+        max-width: 300px;
+        margin: 10px auto !important;
     }
 }
 
@@ -232,4 +243,13 @@
         font-size: 14px;
         letter-spacing: 0;
     }  
+
+    .hex-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    a .hexagon {
+        font-size: 24px;
+    }
 }

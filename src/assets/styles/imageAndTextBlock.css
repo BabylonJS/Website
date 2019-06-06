@@ -8,7 +8,8 @@
 }
 
 .image-and-text-block .inner-container img {
-    height: auto;
+    height: auto;    
+    justify-self: center;
 }
 
 .image-and-text-block.right .inner-container {
