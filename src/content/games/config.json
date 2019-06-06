@@ -24,7 +24,7 @@
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         },
-                        "marginRight": "10px"
+                        "marginRight": "60px"
                     },
                     {
                         "desc": "Try Babylon.js in the playground",
@@ -32,16 +32,14 @@
                         "img": {
                             "url": "../assets/img/TryIcon.svg"
                         },
-                        "marginLeft": "50px",
-                        "marginRight": "50px"
+                        "marginRight": "60px"
                     },
                     {
                         "desc": "Get babylon.js",
                         "link": "https://doc.babylonjs.com/babylon101/how_to_get",
                         "img": {
                             "url": "../assets/img/DownloadIcon.svg"
-                        },
-                        "marginLeft": "10px"
+                        }
                     }
                 ]
             }
@@ -90,12 +88,11 @@
                     "width": "550px"
                 },
                 "height": "400px",
-                "textWidth": "600px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
                 "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering", 
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering",
                 "moreInfoText": "More on Rendering"
             }
         },
@@ -257,18 +254,20 @@
             }
         },
         {
-            "templateName": "imageAndTextBlock",
+            "templateName": "imageListBlock",
             "content": {
-                "alignment": "left",
                 "background": "#2f2f2f",
-                "img": {
-                    "url": "assets/img/gameStackBanner.png",
-                    "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
-                    "width": "1000px"
-                },
-                "height": "200px",
-                "marginLeft": "70px",
-                "marginRight": "50px"
+                "marginTop": "20px",
+                "items": [
+                    {
+                        "img": {
+                            "url": "assets/img/gameStackBanner.png",
+                            "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
+                            "width": "1000px",
+                            "link": "https://developer.microsoft.com/en-us/games"
+                        }
+                    }
+                ]
             }
         },
         {

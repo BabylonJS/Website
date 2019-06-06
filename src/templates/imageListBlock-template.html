@@ -1,6 +1,13 @@
-<div class="imageList-block" style="margin-top:{{marginTop}};margin-bottom:{{marginBottom}};">
+<div class="imageList-block" style="margin-top:{{marginTop}};margin-bottom:{{marginBottom}};background:{{background}}">
     {{#each items}}
+    {{#if img.link}}
+    <a href={{img.link}}>
+        <img src="{{img.url}}" alt="{{img.alt}}"
+            style="width:{{img.width}};height:{{img.height}};margin-left:{{img.marginLeft}};margin-right:{{img.marginRight}};" />
+    </a>
+    {{else}}
     <img src="{{img.url}}" alt="{{img.alt}}"
         style="width:{{img.width}};height:{{img.height}};margin-left:{{img.marginLeft}};margin-right:{{img.marginRight}};" />
+    {{/if}}
     {{/each}}
 </div>
