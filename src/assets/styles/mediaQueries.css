@@ -75,7 +75,8 @@
     }
 
     .image-and-text-block.right .text-block .link-block {
-        margin: 20px 35px !important;
+        max-width: 300px;
+        margin: 10px auto !important;
     }
 
     .why-choose .inner-container {
