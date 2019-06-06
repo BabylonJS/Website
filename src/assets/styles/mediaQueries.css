@@ -53,8 +53,29 @@
         padding: 0 30px;
     }
 
+    .image-and-text-block .inner-container img {
+        width: 400px !important;
+    }
+
+    .image-and-text-block.right .inner-container {
+        flex-direction: column-reverse;
+    }
+
+    .imageList-block img {
+        width: 400px !important;
+    }
+
     .text-block {
-        padding: 80px 30px;
+        padding: 10px 30px 20px 30px;
+    }
+
+    .image-and-text-block .text-block .link-block {
+        padding: 0 !important;
+        margin: 20px 0px !important;
+    }
+
+    .image-and-text-block.right .text-block .link-block {
+        margin: 20px 35px !important;
     }
 
     .why-choose .inner-container {
