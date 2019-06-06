@@ -24,7 +24,7 @@
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         },
-                        "marginRight": "10px"
+                        "marginRight": "60px"
                     },
                     {
                         "desc": "Try Babylon.js in the playground",
@@ -32,16 +32,14 @@
                         "img": {
                             "url": "../assets/img/TryIcon.svg"
                         },
-                        "marginLeft": "50px",
-                        "marginRight": "50px"
+                        "marginRight": "60px"
                     },
                     {
                         "desc": "Get babylon.js",
                         "link": "https://doc.babylonjs.com/babylon101/how_to_get",
                         "img": {
                             "url": "../assets/img/DownloadIcon.svg"
-                        },
-                        "marginLeft": "10px"
+                        }
                     }
                 ]
             }
