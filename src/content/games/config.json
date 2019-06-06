@@ -204,7 +204,7 @@
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "VR",
+                "title": "Virtual Reality",
                 "desc": "VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebVR helper, you can get a VR scene up and running in a matter of minutes.",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/webvr_helper",
                 "moreInfoText": "More on VR"
@@ -243,14 +243,14 @@
             "content": {
                 "items": [
                     {
-                        "marginBottom": "500px",
                         "desc": "Full List of Features",
                         "link": "https://doc.babylonjs.com/features/",
                         "img": {
-                            "url": "../assets/img/TestIcon.svg"
+                            "url": "../assets/img/NotesIcon.svg"
                         }
                     }
-                ]
+                ],
+                "marginBottom": "30px"
             }
         },
         {
