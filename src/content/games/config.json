@@ -73,19 +73,6 @@
             }
         },
         {
-            "templateName": "imageListBlock",
-            "content": {
-                "items": [
-                    {
-                        "img": {
-                            "url": "./assets/img/GS_Banner.png",
-                            "marginRight": "10px"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "templateName": "anchorBlock",
             "content": {
                 "anchor": "feature",
@@ -96,11 +83,11 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2A2342",
+                "background": "#5a0014",
                 "img": {
-                    "url": "../assets/img/SceneGraph.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "width": "550px"
                 },
                 "height": "400px",
                 "textWidth": "600px",
@@ -116,13 +103,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#2A2342",
+                "background": "#3b4846",
                 "img": {
-                    "url": "../assets/img/Inspector.png",
+                    "url": "assets/img/animation.png",
                     "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Animation",
                 "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It's not just simple, though, it's modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective.",
                 "moreInfoLink": "https://doc.babylonjs.com/features/animations",
@@ -133,13 +122,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2A2342",
+                "background": "#000000",
                 "img": {
-                    "url": "../assets/img/GUIsystem.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/particles.png",
+                    "alt": "A 3D sun made with particle systems.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Particles",
                 "desc": "With the powerful particle system in Babylon.js, jaw-dropping FX are at your fingertips. Whether using sprites or solid mesh particles the creative possibilities are truly limitless.  Best of all though, it's all built with performance in mind.  Meaning with Babylon.js, not only do you get both the beauty and power of complex FX, but you get it without worrying about degrading your experience. ",
                 "moreInfoLink": "https://doc.babylonjs.com/features/particles",
@@ -150,13 +141,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#2A2342",
+                "background": "#453526",
                 "img": {
-                    "url": "../assets/img/FlightHelmet.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/physics.png",
+                    "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Physics",
                 "desc": "For truly unique experiences and worlds, nothing beats adding complex physics interactions to your game.  However physics is computationally expensive.  Luckily, amazingly smart people across the globe have created several powerful open-source physics engines, and Babylon.js has built-in support for the best of them!",
                 "moreInfoLink": "https://doc.babylonjs.com/features/physics_engine",
@@ -167,13 +160,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2A2342",
+                "background": "#2a2342",
                 "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/gui.png",
+                    "alt": "A color picker made with the Babylon.js GUI system.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "GUI System",
                 "desc": "Creating amazing menus and 2D interactive layers to your 3D scene is a snap with the GUI system inside Babylon.js.  From buttons, grids, stack panels, lists, a full VR GUI toolkit, and more, you'll find everything that you need in this intuitive GUI engine.",
                 "moreInfoLink": "https://doc.babylonjs.com/features/gui",
@@ -184,13 +179,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#2A2342",
+                "background": "#454545",
                 "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/audio.png",
+                    "alt": "Image of a 3D boom box with an audio icon.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Audio",
                 "desc": "As a game creator, your number one mission is to immerse your players in fun. Nothing gets your blood pumping faster than amazing music and sound.  Whether you're looking for ambient, directional, or fully spatialized sound, Babylon.js brings immersive sound capabilities directly under one roof in a powerful, easy-to-use sound engine.",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/playing_sounds_and_music",
@@ -218,13 +215,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#2A2342",
+                "background": "#000000",
                 "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/forum.png",
+                    "alt": "A screen capture of our very active forum page.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Active, Friendly Community",
                 "desc": "Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.",
                 "moreInfoLink": "https://forum.babylonjs.com",
@@ -234,6 +233,8 @@
         {
             "templateName": "textBlock",
             "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Just the Tip of the Iceberg",
                 "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
             }
@@ -251,6 +252,21 @@
                     }
                 ]
             }
+        },
+        {
+            "templateName": "imageListBlock",
+            "content": {
+                "items": [
+                    {
+                        "img": {
+                            "url": "./assets/img/GS_Banner.png",
+                            "marginRight": "10px"
+                        }
+                    }
+                ],
+                "marginTop": "80px",
+                "marginBottom": "40px"
+           }
         },
         {
             "templateName": "imagesBlock",
