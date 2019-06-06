@@ -18,6 +18,8 @@
 
 .image-and-text-block .inner-container .text-block {
     margin: 0;
+    align-self: center;
+    padding: 0;
 }
 
 .image-and-text-block .text-block h2 {
