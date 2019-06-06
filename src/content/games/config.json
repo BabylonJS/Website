@@ -198,13 +198,15 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2A2342",
+                "background": "#163035",
                 "img": {
-                    "url": "../assets/img/Inspector.png",
-                    "alt": "Alternative text for the image",
-                    "width": "450px"
+                    "url": "assets/img/vr.png",
+                    "alt": "3D model of a VR controller.",
+                    "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "VR",
                 "desc": "VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebVR helper, you can get a VR scene up and running in a matter of minutes.",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/webvr_helper",
@@ -244,6 +246,7 @@
             "content": {
                 "items": [
                     {
+                        "marginBottom": "500px",
                         "desc": "Full List of Features",
                         "link": "https://doc.babylonjs.com/features/",
                         "img": {
@@ -254,19 +257,19 @@
             }
         },
         {
-            "templateName": "imageListBlock",
+            "templateName": "imageAndTextBlock",
             "content": {
-                "items": [
-                    {
-                        "img": {
-                            "url": "./assets/img/GS_Banner.png",
-                            "marginRight": "10px"
-                        }
-                    }
-                ],
-                "marginTop": "80px",
-                "marginBottom": "40px"
-           }
+                "alignment": "left",
+                "background": "#2f2f2f",
+                "img": {
+                    "url": "assets/img/gameStackBanner.png",
+                    "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
+                    "width": "1000px"
+                },
+                "height": "200px",
+                "marginLeft": "70px",
+                "marginRight": "50px"
+            }
         },
         {
             "templateName": "imagesBlock",
