@@ -8,7 +8,8 @@
 }
 
 .image-and-text-block .inner-container img {
-    height: auto;
+    height: auto;    
+    justify-self: center;
 }
 
 .image-and-text-block.right .inner-container {
@@ -17,6 +18,8 @@
 
 .image-and-text-block .inner-container .text-block {
     margin: 0;
+    align-self: center;
+    padding: 0;
 }
 
 .image-and-text-block .text-block h2 {

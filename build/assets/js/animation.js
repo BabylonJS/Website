@@ -80,25 +80,25 @@ var processMiniCustom = function() {
 
     window.onscroll = function() {
         let scrollTop = Math.max(0, document.body.scrollTop || document.documentElement.scrollTop);
-        let currentHeightMax = 155 - 70;
+        let currentHeightMax = 80 - 50;
 
         if (scrollTop <= currentHeightMax) {
             let ratio = 1.0 - scrollTop / currentHeightMax;
 
-            var height = 60 + 40 * ratio;
-            var top = 10 + 20 * ratio;
+            var height = 40 + 40 * ratio;
+            var top = 7 + 20 * ratio;
 
             largeLogo.style.width = height + "px";
             largeLogo.style.height = height + "px";
             largeLogo.style.left = "calc(50% - " + (height / 2) + "px)";
             largeLogo.style.top = top + "px";
         } else {
-            largeLogo.style.width = "60px";
-            largeLogo.style.height = "60px";
-            largeLogo.style.left = "calc(50% - 30px)";
-            largeLogo.style.top = "10px";
+            largeLogo.style.width = "40px";
+            largeLogo.style.height = "40px";
+            largeLogo.style.left = "calc(50% - 20px)";
+            largeLogo.style.top = "7px";
         }
-        
+
         if (scrollTop > currentHeightMax) {
             largeLogo.style.opacity = 0;
             babylonLogo.classList.remove("hidden");
@@ -113,7 +113,7 @@ var processMiniCustom = function() {
 }
 
 for (var i = 0; i < metaTags.length; i++) {
-    switch(metaTags[i].getAttribute("name")) {
+    switch (metaTags[i].getAttribute("name")) {
         case "custom": {
             processCustom();
             break;
