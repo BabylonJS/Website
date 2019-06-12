@@ -20,6 +20,10 @@
                     "menuUrl": "https://doc.babylonjs.com/"
                 },
                 {
+                    "menuTitle": "EXPORTERS",
+                    "menuUrl": "https://github.com/BabylonJS/Exporters/"
+                },
+                {
                     "menuTitle": "SPECTOR.JS",
                     "menuUrl": "https://spector.babylonjs.com/"
                 }
