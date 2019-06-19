@@ -304,6 +304,15 @@
                         }
                     },
                     {
+                        "desc": "Wazana.io",
+                        "author": "by Pichou",
+                        "link": "https://wazana.io/",
+                        "img": {
+                            "url": "../community/assets/img/wazanaio.jpg",
+                            "alt": "Wazana.io"
+                        }
+                    },
+                    {
                         "desc": "Local War",
                         "author": "by 蔬菜土豆泥",
                         "link": "http://localwar.xidayun.com/",
@@ -319,15 +328,6 @@
                         "img": {
                             "url": "../community/assets/img/ShellShockers.jpg",
                             "alt": "Shell Shockers"
-                        }
-                    },
-                    {
-                        "desc": "Mansion VR",
-                        "author": "by Michel Rousseau",
-                        "link": "/Demos/MANSIONVR",
-                        "img": {
-                            "url": "../community/assets/img/Mansion400.jpg",
-                            "alt": "Mansion VR"
                         }
                     },
                     {
