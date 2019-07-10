@@ -26,6 +26,15 @@
                         }
                     },
                     {
+                        "desc": "Boxgun",
+                        "author": "by Victor // vtange",
+                        "link": "https://vtange.github.io/boxgun/",
+                        "img": {
+                            "url": "../community/assets/img/boxgun1j.jpg",
+                            "alt": "Boxgun - A Simple Projectile Game"
+                        }
+                    },
+                    {
                         "desc": "Carport Designer",
                         "author": "by Unda Solutions",
                         "link": "https://carport.unda.com.au",
