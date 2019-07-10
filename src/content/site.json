@@ -5,6 +5,7 @@
     "menu": [
         {
             "root": "tools",
+            "visible": "true",
             "children": [
                 {
                     "menuTitle": "PLAYGROUND",
@@ -19,6 +20,10 @@
                     "menuUrl": "https://doc.babylonjs.com/"
                 },
                 {
+                    "menuTitle": "EXPORTERS",
+                    "menuUrl": "https://github.com/BabylonJS/Exporters/"
+                },
+                {
                     "menuTitle": "SPECTOR.JS",
                     "menuUrl": "https://spector.babylonjs.com/"
                 }
@@ -26,6 +31,7 @@
         },
         {
             "root": "community",
+            "visible": "true",
             "children": [
                 {
                     "menuTitle": "FORUM",
@@ -38,7 +44,12 @@
             ]
         },
         {
+            "root": "games",
+            "visible":"true"
+        },
+        {
             "root": "learn",
+            "visible": "true",
             "children": [
                 {
                     "menuTitle": "DOCUMENTATION",
@@ -59,10 +70,12 @@
             ]
         },
         {
-            "root": "specifications"
+            "root": "specifications",
+            "visible": "true"
         },
         {
             "menuTitle": "GET",
+            "visible": "true",
             "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get"
         }
     ],

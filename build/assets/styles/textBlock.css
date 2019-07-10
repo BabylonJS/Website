@@ -1,12 +1,14 @@
 
 .content-container > .text-block {
-    max-width: none;
-    margin: 0;
+    width: 1200px;
+    margin: 0 auto;
     padding: 0;
+    color: #E2E2E2;
+    padding: 0 !important;
 }
 
 .content-container > .text-block .inner-container {
-    max-width: 906px;
+    max-width: 1200px;
     padding: 40px 0;
 }
 
