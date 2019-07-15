@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "battlechoc",
+                        "author": "by battlechoc.com",
+                        "link": "https://battlechoc.com",
+                        "img": {
+                            "url": "../community/assets/img/battlechoc.jpg",
+                            "alt": "battlechoc"
+                        }
+                    },
+                    {
                         "desc": "Simple Open Source FPS",
                         "author": "by kingofcode.com.br",
                         "link": "https://simple-3d-fps-game.herokuapp.com",
