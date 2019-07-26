@@ -10,7 +10,7 @@
     "license": "Apache2",
     "dependencies": {
         "fs-extra": "^7.0.1",
-        "gulp": "^4.0.0",
+        "gulp": "^4.0.2",
         "gulp-connect": "^5.7.0",
         "handlebars": "^4.1.1"
     }
