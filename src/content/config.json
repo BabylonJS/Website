@@ -92,6 +92,15 @@
                         }
                     },
                     {
+                        "desc": "Final Fantasy Card Game",
+                        "author": "by Square Enix",
+                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
+                        "img": {
+                            "url": "../community/assets/img/finalFantasy.jpg",
+                            "alt": "Final Fantasy Digital Card Game"
+                        }
+                    },
+                    {
                         "desc": "SharePoint Spaces",
                         "author": "by Microsoft",
                         "link": "https://www.exploresharepointspaces.com/",
@@ -116,15 +125,6 @@
                         "img": {
                             "url": "./community/assets/img/dimension.jpg",
                             "alt": "Adobe Dimension web export"
-                        }
-                    },
-                    {
-                        "desc": "Shell Shockers",
-                        "author": "by Fun Fetched",
-                        "link": "http://shellshock.io",
-                        "img": {
-                            "url": "./community/assets/img/ShellShockers.jpg",
-                            "alt": "Shell Shockers"
                         }
                     },
                     {
