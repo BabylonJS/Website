@@ -66,6 +66,10 @@
                     {
                         "videoUrl": "./assets/videos/brilliantMan.mp4",
                         "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/battlechoc.mp4",
+                        "demoLink": "https://battlechoc.com"
                     }
                 ]
             }
@@ -319,6 +323,15 @@
                         "img": {
                             "url": "../community/assets/img/localwar.jpg",
                             "alt": "Local War"
+                        }
+                    },
+                    {
+                        "desc": "battlechoc",
+                        "author": "by battlechoc.com",
+                        "link": "https://battlechoc.com",
+                        "img": {
+                            "url": "../community/assets/img/battlechoc.jpg",
+                            "alt": "battlechoc"
                         }
                     },
                     {
