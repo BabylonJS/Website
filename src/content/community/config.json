@@ -17,6 +17,69 @@
                         }
                     },
                     {
+                        "desc": "Epic City Driver",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/epic-city-driver/index.html",
+                        "img": {
+                            "url": "../community/assets/img/epicCityDriver.jpg",
+                            "alt": "Epic City Driver"
+                        }
+                    },
+                    {
+                        "desc": "Flip Jump",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/flip-jump/index.html",
+                        "img": {
+                            "url": "../community/assets/img/flipJump.jpg",
+                            "alt": "Flip Jump"
+                        }
+                    },
+                    {
+                        "desc": "Rainbow Stacker",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/rainbow-stacker/index.html",
+                        "img": {
+                            "url": "../community/assets/img/rainbowStacker.jpg",
+                            "alt": "Rainbow Stacker"
+                        }
+                    },
+                    {
+                        "desc": "Cube Form",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/cubeform/index.html",
+                        "img": {
+                            "url": "../community/assets/img/cubeForm.jpg",
+                            "alt": "Cube Form"
+                        }
+                    },
+                    {
+                        "desc": "Jumpee Land",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/jumpee-land-3d/index.html",
+                        "img": {
+                            "url": "../community/assets/img/jumpeeLand.jpg",
+                            "alt": "Jumpee Land"
+                        }
+                    },
+                    {
+                        "desc": "Pro Bowling 3D",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/pro-bowling-3d/index.html",
+                        "img": {
+                            "url": "../community/assets/img/proBowling3D.jpg",
+                            "alt": "Pro Bowling 3D"
+                        }
+                    },
+                    {
+                        "desc": "X Trench Run",
+                        "author": "by MarketJS",
+                        "link": "https://cdn-factory.marketjs.com/en/x-trench-run/index.html",
+                        "img": {
+                            "url": "../community/assets/img/xTrenchRun.jpg",
+                            "alt": "X Trench Run"
+                        }
+                    },
+                    {
                         "desc": "Japanese Lamp",
                         "author": "by Axeon Software",
                         "link": "http://axeon.fr/CLIENT/TEST/lampBabylon/",
