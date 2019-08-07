@@ -66,6 +66,10 @@
                     {
                         "videoUrl": "./assets/videos/brilliantMan.mp4",
                         "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/battlechoc.mp4",
+                        "demoLink": "https://battlechoc.com"
                     }
                 ]
             }
@@ -295,12 +299,12 @@
                         }
                     },
                     {
-                        "desc": "PCOL",
-                        "author": "by Zhengxi Zhang",
-                        "link": "http://www.heyzxz.me/pcol",
+                        "desc": "Final Fantasy Card Game",
+                        "author": "by Square Enix",
+                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
                         "img": {
-                            "url": "../community/assets/img/pcol.jpg",
-                            "alt": "PCOL"
+                            "url": "../community/assets/img/finalFantasy.jpg",
+                            "alt": "Final Fantasy Digital Card Game"
                         }
                     },
                     {
@@ -322,21 +326,21 @@
                         }
                     },
                     {
+                        "desc": "battlechoc",
+                        "author": "by battlechoc.com",
+                        "link": "https://battlechoc.com",
+                        "img": {
+                            "url": "../community/assets/img/battlechoc.jpg",
+                            "alt": "battlechoc"
+                        }
+                    },
+                    {
                         "desc": "Shell Shockers",
                         "author": "by Fun Fetched",
                         "link": "http://shellshock.io",
                         "img": {
                             "url": "../community/assets/img/ShellShockers.jpg",
                             "alt": "Shell Shockers"
-                        }
-                    },
-                    {
-                        "desc": "Brilliant man",
-                        "author": "by Walter van Maanen",
-                        "link": "https://www.bigredbox.nl//BrilliantMan/index.html",
-                        "img": {
-                            "url": "../community/assets/img/BrilliantMan.jpg",
-                            "alt": "Brilliant man"
                         }
                     }
                 ]
