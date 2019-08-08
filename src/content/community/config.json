@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Truck 3D",
+                        "author": "by SmarTeam3D",
+                        "link": "https://www.smarteam3d.com/portfolio/truck/index.html",
+                        "img": {
+                            "url": "../community/assets/img/truck_3d.jpg",
+                            "alt": "Truck 3D"
+                        }
+                    },
+                    {
                         "desc": "Final Fantasy Card Game",
                         "author": "by Square Enix",
                         "link": "https://games.yahoo-net.jp/title/casual/752490904",
