@@ -91,7 +91,7 @@
                     {
                         "desc": "Japanese Lamp",
                         "author": "by Quentin Davy",
-                        "link": "http://axeon.fr/CLIENT/AXEON_SOFTWARE/TEST/lampBabylon/",
+                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/TEST/lampBabylon/",
                         "img": {
                             "url": "../community/assets/img/AxeonJapaneseLamp.jpg",
                             "alt": "Japanese Lamp"
@@ -181,7 +181,7 @@
                     {
                         "desc": "Bastille 1789",
                         "author": "by Axeon Software",
-                        "link": "http://axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
+                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
                         "img": {
                             "url": "/community/assets/img/axeon-bastille.jpg",
                             "alt": "Bastille 1789 - Axeon"
@@ -280,7 +280,7 @@
                     {
                         "desc": "Apartment Configurator",
                         "author": "by Axeon Software",
-                        "link": "http://axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
+                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
                         "img": {
                             "url": "/community/assets/img/ApartmentConfigurator.jpg",
                             "alt": "Apartment Configurator"
@@ -343,7 +343,7 @@
                     {
                         "desc": "Bordeaux Hyperion",
                         "author": "by Axeon Software",
-                        "link": "https://axeon.fr/CLIENT/EIFFAGE/Bordeaux.Hyperion/#/MAQUETTE_RT/index.html",
+                        "link": "https://www.axeon.fr/CLIENT/EIFFAGE/Bordeaux.Hyperion/#/MAQUETTE_RT/index.html",
                         "img": {
                             "url": "/community/assets/img/axeon.jpg",
                             "alt": "Bordeaux Hyperion"
