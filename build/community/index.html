@@ -1,116 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="author" href="humans.txt" />
+    <head>
+        <title>Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="author" href="humans.txt" />
 
-    <!-- FB -->
-    <meta property="og:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
-    <meta property="og:site_name" content="Babylon.js" />
-    <meta property="og:url" content="http://www.babylonjs.com" />
-    <meta property="og:description"
-        content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
-    <meta property="og:locale" content="en_US" />
+        <!-- FB -->
+        <meta property="og:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta property="og:site_name" content="Babylon.js" />
+        <meta property="og:url" content="https://www.babylonjs.com" />
+        <meta property="og:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="http://www.babylonjs.com" />
-    <meta name="twitter:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
-    <meta name="twitter:description"
-        content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
-    <meta name="twitter:image" content="http://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" href="/assets/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
-    <link rel="stylesheet" href="/assets/styles/variables.css">
-    <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
-    <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
-    <link rel="stylesheet" href="/assets/styles/header.css">
-    <link rel="stylesheet" href="/assets/styles/footer.css">
-    <link rel="stylesheet" href="/assets/styles/gallery.css">
-    <link rel="stylesheet" href="/assets/styles/topBlock.css">
-    <link rel="stylesheet" href="/assets/styles/carousel.css">
-    <link rel="stylesheet" href="/assets/styles/textBlock.css">
-    <link rel="stylesheet" href="/assets/styles/imageBlock.css">
-    <link rel="stylesheet" href="/assets/styles/twoColumns.css">
-    <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
-    <link rel="stylesheet" href="/assets/styles/linkList.css">
-    <link rel="stylesheet" href="/assets/styles/imageList.css">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
-    <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
-    <link rel="author" href="humans.txt">
-    <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
-</head>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://www.babylonjs.com" />
+        <meta name="twitter:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta name="twitter:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta name="twitter:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="icon" type="image/png" href="/assets/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+        <link rel="stylesheet" href="/assets/styles/variables.css">
+        <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/header.css">
+        <link rel="stylesheet" href="/assets/styles/footer.css">
+        <link rel="stylesheet" href="/assets/styles/gallery.css">
+        <link rel="stylesheet" href="/assets/styles/topBlock.css">
+        <link rel="stylesheet" href="/assets/styles/carousel.css">
+        <link rel="stylesheet" href="/assets/styles/textBlock.css">
+        <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/twoColumns.css">
+        <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
+        <link rel="stylesheet" href="/assets/styles/linkList.css">
+        <link rel="stylesheet" href="/assets/styles/imageList.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="author" href="humans.txt">
+        <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    </head>
 
-<body>
-    <div class="container-header-background"></div>
-    <div class="header">
-        <div class="container-header">
-            <div class="menu-btn">
-                <img src="/assets/img/HamburgerIcon.svg">
-            </div>
-            <div class="babylon-logo hidden">
-                <a href="/">
-                    <img src="/assets/img/BabylonIdentity.svg">
-                </a>
-            </div>
-            <a class="download" href="https://github.com/BabylonJS/Babylon.js"><img src="/assets/img/GithubIcon.svg"></a>
-            <div class="header-top-wrapper overflow">
-                <div class="header-top">
-                    <div class="menu">
-                        <div class="header-ul-wrapper">
-                            <ul>
-                                <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
-                                <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                <li class="GAMES user-select"><a class="GAMES"
-                                        href="/games">GAMES</a>
-                                <li class="LEARN user-select"><a class="LEARN">LEARN</a>
-                                <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
-                                        href="/specifications">SPECIFICATIONS</a>
-                                <li class="GET user-select"><a class="GET"
-                                        href="https://doc.babylonjs.com/babylon101/how_to_get">GET</a>
-                            </ul>
-                        </div>
-                        <div class="sub-menu">
-                            <ul class="TOOLS hidden">
-                                <li class="user-select"><a href="https://playground.babylonjs.com/" target="_blank">PLAYGROUND</a></li>
-                                <li class="user-select"><a href="https://sandbox.babylonjs.com/" target="_blank">SANDBOX</a></li>
-                                <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
-                                <li class="user-select"><a href="https://github.com/BabylonJS/Exporters/" target="_blank">EXPORTERS</a></li>
-                                <li class="user-select"><a href="https://spector.babylonjs.com/" target="_blank">SPECTOR.JS</a></li>
-                            </ul>
-                            <ul class="COMMUNITY hidden">
-                                <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                <li class="user-select"><a href="https://www.babylonjs.com/community" target="_blank">DEMOS</a></li>
-                            </ul>
-                            <ul class="LEARN hidden">
-                                <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
-                                <li class="user-select"><a href="https://doc.babylonjs.com/examples/" target="_blank">EXAMPLES</a></li>
-                                <li class="user-select"><a href="https://doc.babylonjs.com/how_to/" target="_blank">TUTORIALS</a></li>
-                                <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
-                            </ul>
+    <body>
+        <div class="container-header-background"></div>
+        <div class="header">
+            <div class="container-header">
+                <div class="menu-btn">
+                    <img src="/assets/img/HamburgerIcon.svg">
+                </div>
+                <div class="babylon-logo hidden">
+                    <a href="/">
+                        <img src="/assets/img/BabylonIdentity.svg">
+                    </a>
+                </div>
+                <a class="download" href="https://github.com/BabylonJS/Babylon.js"><img src="/assets/img/GithubIcon.svg"></a>
+                <div class="header-top-wrapper overflow">
+                    <div class="header-top">
+                        <div class="menu">
+                            <div class="header-ul-wrapper">
+                                <ul>
+                                    <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
+                                    <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
+                                    <li class="GAMES user-select"><a class="GAMES"
+                                            href="/games">GAMES</a>
+                                    <li class="LEARN user-select"><a class="LEARN">LEARN</a>
+                                    <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
+                                            href="/specifications">SPECIFICATIONS</a>
+                                    <li class="GET user-select"><a class="GET"
+                                            href="https://doc.babylonjs.com/babylon101/how_to_get">GET</a>
+                                </ul>
+                            </div>
+                            <div class="sub-menu">
+                                <ul class="TOOLS hidden">
+                                    <li class="user-select"><a href="https://playground.babylonjs.com/" target="_blank">PLAYGROUND</a></li>
+                                    <li class="user-select"><a href="https://sandbox.babylonjs.com/" target="_blank">SANDBOX</a></li>
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
+                                    <li class="user-select"><a href="https://github.com/BabylonJS/Exporters/" target="_blank">EXPORTERS</a></li>
+                                    <li class="user-select"><a href="https://spector.babylonjs.com/" target="_blank">SPECTOR.JS</a></li>
+                                </ul>
+                                <ul class="COMMUNITY hidden">
+                                    <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
+                                    <li class="user-select"><a href="https://www.babylonjs.com/community" target="_blank">DEMOS</a></li>
+                                </ul>
+                                <ul class="LEARN hidden">
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/examples/" target="_blank">EXAMPLES</a></li>
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/how_to/" target="_blank">TUTORIALS</a></li>
+                                    <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="content-container">
-        <div class="gallery-block">
+        <div class="content-container">
+            <div class="gallery-block">
     <div class="container">
         <div class="middle-background-gallery">
             <h2>BABYLON.JS DEMOS</h2>
             <h3>Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!</h3>
             <div class="container-info">
                 <ul id="hexGrid">
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.smarteam3d.com/portfolio/truck/index.html">
+                                <img src="../community/assets/img/truck_3d.jpg" alt="Truck 3D" />
+                                <div class="desc">
+                                    <div class="hexDesc">Truck 3D</div>
+                                    <div class="hexDesc author">by SmarTeam3D</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
                     <li class="hex">
                         <div class="hexIn">
                             <a class="hexLink" href="https://games.yahoo-net.jp/title/casual/752490904">
@@ -221,7 +234,7 @@
                                 <img src="../community/assets/img/AxeonJapaneseLamp.jpg" alt="Japanese Lamp" />
                                 <div class="desc">
                                     <div class="hexDesc">Japanese Lamp</div>
-                                    <div class="hexDesc author">by Axeon Software</div>
+                                    <div class="hexDesc author">by Quentin Davy</div>
                                 </div>
                                 <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
                                 <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
@@ -2326,7 +2339,7 @@
         </div>
     </div>
 </div>
-        <div class="downTriangle-block" style="margin-bottom:">
+            <div class="downTriangle-block" style="margin-bottom:">
     <div class="downTriangle-background">
         <a href="https://forum.babylonjs.com/c/demos">
             <div class="hex-container">
@@ -2336,31 +2349,31 @@
         </a>
     </div>
 </div>
-    </div>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <div class="social-icons">
-                    <a href="https://www.twitter.com/babylonjs" target="_blank"><img src="/assets/img/TwitterIcon.svg" alt="Twitter"></a>
-                    <a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><img src="/assets/img/GithubIcon.svg" alt="Github"></a>
-                    <a href="https://forum.babylonjs.com/" target="_blank"><img src="/assets/img/DiscourseIcon.svg" alt="Forum"></a>
-                    <a href="https://medium.com/@babylonjs" target="_blank"><img src="/assets/img/MediumIcon.svg" alt="Blog"></a>
-                    <a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank"><img src="/assets/img/YouTubeIcon.svg" alt="YouTube channel"></a>
-                    <a href="https://www.netlify.com" target="_blank"><img src="/assets/img/netlify.svg" alt="Hosted by Netlify"></a>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="social-icons">
+                        <a href="https://www.twitter.com/babylonjs" target="_blank"><img src="/assets/img/TwitterIcon.svg" alt="Twitter"></a>
+                        <a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><img src="/assets/img/GithubIcon.svg" alt="Github"></a>
+                        <a href="https://forum.babylonjs.com/" target="_blank"><img src="/assets/img/DiscourseIcon.svg" alt="Forum"></a>
+                        <a href="https://medium.com/@babylonjs" target="_blank"><img src="/assets/img/MediumIcon.svg" alt="Blog"></a>
+                        <a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank"><img src="/assets/img/YouTubeIcon.svg" alt="YouTube channel"></a>
+                        <a href="https://www.netlify.com" target="_blank"><img src="/assets/img/netlify.svg" alt="Hosted by Netlify"></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <a href="https://forum.babylonjs.com" target="_blank">Forum</a>
+                    <a href="https://doc.babylonjs.com/how_to/how_to_start" target="_blank">Contribute</a>
+                    <a href="https://doc.babylonjs.com/babylon101" target="_blank">Tutorials</a>
+                    <a href="#" target="_blank">Branding</a>
                 </div>
             </div>
-            <div class="footer-right">
-                <a href="https://forum.babylonjs.com" target="_blank">Forum</a>
-                <a href="https://doc.babylonjs.com/how_to/how_to_start" target="_blank">Contribute</a>
-                <a href="https://doc.babylonjs.com/babylon101" target="_blank">Tutorials</a>
-                <a href="#" target="_blank">Branding</a>
-            </div>
-        </div>
-    </footer>
-    <script src="/assets/js/animation.js"></script>
-    <script src="/assets/js/scripts.js"></script>
-    <script src="/assets/js/pullRefresh.js"></script>
+        </footer>
+        <script src="/assets/js/animation.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/pullRefresh.js"></script>
 
-</body>
+    </body>
 
 </html>
