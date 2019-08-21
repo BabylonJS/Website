@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Royal Institute of Technology",
+                        "author": "by Akademiska Hus",
+                        "link": "https://campusalbano.se/view/79lbEXZtjqiYeCiUsAIAeG/open",
+                        "img": {
+                            "url": "../community/assets/img/RoyalInstituteofTechnology.jpg",
+                            "alt": "Royal Institute of Technology"
+                        }
+                    },
+                    {
                         "desc": "Truck 3D",
                         "author": "by SmarTeam3D",
                         "link": "https://www.smarteam3d.com/portfolio/truck/index.html",
