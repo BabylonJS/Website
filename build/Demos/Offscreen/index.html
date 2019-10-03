@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Babylon.js - Worker mode</title>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Open Sans';
+            color: white;
+            background: #2A2342;
+        }
+
+        a {
+            color: white;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            font-size: 0;
+            align-self: center;
+            justify-self: center;
+        }
+
+        #root {            
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto 1fr;
+        }
+
+        #renderCanvas {
+            grid-row: 4;
+            grid-column: 1;
+        }
+
+        #workerRenderCanvas {
+            grid-row: 4;
+            grid-column: 2;
+        }
+
+        #title {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            margin: 20px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        #description {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            margin: 20px;
+        }
+
+        #slowButton {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+            margin: 10px;
+            align-self: center;
+            justify-self: center;
+        }        
+
+        #labelMain {            
+            grid-row: 4;
+            grid-column: 1;
+            align-self: flex-end;
+            justify-self: center;
+            z-index: 10;
+            margin-bottom: 20px;
+        }
+
+        #labelWorker {            
+            grid-row: 4;
+            grid-column: 2;
+            align-self: flex-end;
+            justify-self: center;
+            z-index: 10;
+            margin-bottom: 20px;
+        }        
+       </style>
+</head>
+
+<body>
+    <script>
+        var slowDown = function() {
+            let count = 0;
+            setInterval(() => {
+                for (var index = 0; index < 10000000; index++) {
+                    count += Math.cos(Math.sin(Math.random()));
+                }
+            }, 1);    
+        }
+    </script>
+
+    <div id="root">
+        <h1 id="title">
+            Babylon.js Offscreen Canvas demo
+        </h1>
+        <div id="description">
+            This test page is intended to demonstrate the use of Babylon.js in a worker thread.
+            The left canvas is using Babylon.js directly from the main thread.
+            The right canvas is using an offscreen canvas and the rendering is done using a worker thread.   
+            
+            By clicking on the button below, we will simulate some random but heavy operations on the main thread to highlight why working with an offscreen canvas could be useful.
+            <br/>
+            Click <a href="https://doc.babylonjs.com/how_to/using_offscreen_canvas">here</a> for more documentation.
+        </div>
+        <input id="slowButton" type="button" value="Slow things down" onclick="slowDown()">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+        <canvas id="workerRenderCanvas" touch-action="none"></canvas>
+
+        <div id="labelMain">UI thread</div>
+        <div id="labelWorker">Worker thread</div>
+    </div>
+
+    <script>
+        if ('OffscreenCanvas' in window) {
+            // Offscreen version
+            var canvas = document.getElementById("workerRenderCanvas");
+
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+
+            var offscreen = canvas.transferControlToOffscreen();
+
+            var worker = new Worker("worker.js"); 
+            worker.postMessage({canvas: offscreen}, [offscreen]);
+
+            window.addEventListener("resize", () => {
+                worker.postMessage({width: canvas.clientWidth, height:canvas.clientHeight});
+            });
+        } else {
+            document.getElementById("labelWorker").innerHTML = "Unfortunately your browser does not support Offscreen canvas API"
+        }
+    </script>
+    
+    <script>
+        // Main thead version
+        var canvas = document.getElementById("renderCanvas");
+
+        var engine = new BABYLON.Engine(canvas, true);
+        var scene = createScene();
+        
+        engine.runRenderLoop(function() {
+            engine.resize();
+            if (scene.activeCamera) {
+                scene.render();
+            }
+        });
+    </script>
+
+</body>
+</html>
