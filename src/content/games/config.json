@@ -326,12 +326,12 @@
                         }
                     },
                     {
-                        "desc": "battlechoc",
-                        "author": "by battlechoc.com",
-                        "link": "https://battlechoc.com",
+                        "desc": "Galactic Fight",
+                        "author": "Galactic Fight",
+                        "link": "https://www.galacticfight.net/",
                         "img": {
-                            "url": "../community/assets/img/battlechoc.jpg",
-                            "alt": "battlechoc"
+                            "url": "../community/assets/img/galacticFight.jpg",
+                            "alt": "Galactic Fight"
                         }
                     },
                     {
