@@ -167,8 +167,8 @@
             scene.createDefaultSkybox(scene.environmentTexture, true, 3000, 0.3);
 
             setTimeout(() => {
-                engine.freezeCommands();
-            },2000);
+                scene.freezeActiveMeshes();
+            }, 2000);
 
             engine.runRenderLoop(() => {
                 scene.render();
