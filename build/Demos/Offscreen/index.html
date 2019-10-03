@@ -93,6 +93,15 @@
             z-index: 10;
             margin-bottom: 20px;
         }        
+
+        #loading {
+            grid-row: 4;
+            grid-column: 1 / span 2;
+            align-self: center;
+            justify-self: center;
+            z-index: 10;
+            font-size: 24px;
+        }
        </style>
 </head>
 
@@ -127,6 +136,9 @@
 
         <div id="labelMain">UI thread</div>
         <div id="labelWorker">Worker thread</div>
+
+        
+        <div id="loading">Please wait loading...</div>
     </div>
 
     <script>
@@ -156,6 +168,10 @@
 
         var engine = new BABYLON.Engine(canvas, true);
         var scene = createScene();
+
+        scene.executeWhenReady(() => {           
+            document.getElementById("loading").style.display = "none"; 
+        })
         
         engine.runRenderLoop(function() {
             engine.resize();
