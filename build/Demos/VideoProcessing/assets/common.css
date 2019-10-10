@@ -1,0 +1,30 @@
+:root {
+    --main-bg-color: #2a2342;
+    --main-bg-color-dark: #201936;
+    --main-txt-color: #ffffff;
+    --main-padding: 15px; 
+}
+
+html,
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-family: "acumin-pro";
+}
+
+a {
+    color: #BB464B;
+    text-decoration: unset;
+}
+a:hover {
+    color: #BB464B;
+}
+a:visited {
+    color: #BB464B;
+}
+a:focus {
+    color: #BB464B;
+}

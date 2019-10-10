@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Video Processing Sample">
+    
+    <title>Video Processing Sample</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+    <link rel="stylesheet" href="./assets/common.css">
+
+    <style>
+        .wrapper {
+            display: grid;
+            height: 100%;
+            grid-template-columns: auto 1024px auto;
+            grid-template-rows: auto 40px 40px auto 40px;
+        }
+
+        .headerLogo {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: var(--main-bg-color-dark);
+        }
+        .headerLogo > a > img {
+            width: auto;
+            height: 80px;
+            margin-left: 10px;
+        }
+        .title {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: var(--main-bg-color-dark);
+            font-size: 20px;
+            line-height: 40px;
+            padding-left: 5px;
+        }
+        .subTitle {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: var(--main-bg-color-dark);
+            line-height: 40px;
+            padding-left: 5px;
+        }
+        .canvasContainer {
+            grid-column: 2;
+            grid-row: 4;
+            background-color: var(--main-bg-color-dark);
+           
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            width: 512px;
+            height: 512px;
+            padding-left: 256px;
+            padding-right: 256px;
+            padding-top: 115px;
+            padding-bottom: 115px;
+            position: relative;
+            z-index: 0;
+        }
+        #back {
+            position: absolute;
+            top: 13px;
+            left: 58px;
+            z-index: -1;
+        }
+        #renderCanvas {
+            width: 512px;
+            height: 512px;
+            z-index: 2;
+        }
+        .link {
+            grid-column: 2;
+            grid-row: 5;
+            background-color: var(--main-bg-color-dark);
+            font-size: 20px;
+            line-height: 40px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="headerLogo">
+            <a href="#">
+                <img src="./assets/logo.svg"/>
+            </a>
+        </div>
+        <div class="title">
+            This demo highlights how to apply video filter in real time to any video in a Web Page.
+        </div>
+        <div class="subTitle">
+            Using the power of the GPU with Babylon.js can dramatically improve the user experience and make possible real time filtering of videos on the web.
+        </div>
+        <div class="canvasContainer">
+            <img id="back" src="./assets/back.png" />
+            <canvas id="renderCanvas"></canvas>
+        </div>
+        <div class="link">
+            You can have a look at the associated article on <a href="#">our blog</a>.
+        </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
