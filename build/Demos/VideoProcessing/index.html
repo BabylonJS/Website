@@ -18,9 +18,8 @@
     <style>
         .wrapper {
             display: grid;
-            height: 100%;
             grid-template-columns: auto 1024px auto;
-            grid-template-rows: auto 40px 40px auto 40px;
+            grid-template-rows: auto auto auto auto auto;
         }
 
         .headerLogo {
@@ -83,6 +82,49 @@
             font-size: 20px;
             line-height: 40px;
             padding-left: 5px;
+        }
+
+        @media only screen and (max-width: 1024px)  {
+            .wrapper {
+                transform: scale(1);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 860px)  {
+            .wrapper {
+                transform: scale(0.82);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 768px)  {
+            .wrapper {
+                transform: scale(0.75);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 414px)  {
+            .wrapper {
+                transform: scale(0.4);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 375px)  {
+            .wrapper {
+                transform: scale(0.37);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 360px)  {
+            .wrapper {
+                transform: scale(0.35);
+                transform-origin: 0 0;
+            }
+        }
+        @media only screen and (max-width: 320px)  {
+            .wrapper {
+                transform: scale(0.31);
+                transform-origin: 0 0;
+            }
         }
     </style>
 </head>
