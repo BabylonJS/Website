@@ -8,12 +8,30 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
-                        "desc": "Royal Institute of Technology",
-                        "author": "by Akademiska Hus",
-                        "link": "https://campusalbano.se/view/79lbEXZtjqiYeCiUsAIAeG/open",
+                        "desc": "Room Planner 3D",
+                        "author": "by Wayfair",
+                        "link": "https://www.wayfair.com/RoomPlanner3D",
                         "img": {
-                            "url": "../community/assets/img/RoyalInstituteofTechnology.jpg",
-                            "alt": "Royal Institute of Technology"
+                            "url": "../community/assets/img/RoomPlanner3D.jpg",
+                            "alt": "Room Planner 3D"
+                        }
+                    },
+                    {
+                        "desc": "Red Arrows",
+                        "author": "British Royal Airforce",
+                        "link": "https://www.raf.mod.uk/display-teams/red-arrows/displays/",
+                        "img": {
+                            "url": "../community/assets/img/redArrows.jpg",
+                            "alt": "Red Arrows"
+                        }
+                    },
+                    {
+                        "desc": "Galactic Fight",
+                        "author": "Galactic Fight",
+                        "link": "https://www.galacticfight.net/",
+                        "img": {
+                            "url": "../community/assets/img/galacticFight.jpg",
+                            "alt": "Galactic Fight"
                         }
                     },
                     {
