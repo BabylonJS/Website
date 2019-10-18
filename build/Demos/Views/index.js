@@ -17,7 +17,7 @@ var createScene = function () {
     var camera3 = new BABYLON.ArcRotateCamera("Camera3", 0, 0.8, 10, new BABYLON.Vector3.Zero(), scene);
 
     // This attaches the camera to the canvas
-    camera.attachControl(canvas, true);
+    camera.attachControl(document.getElementById("renderCanvas0"), true);
 
     // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
     var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
@@ -39,6 +39,7 @@ var createScene = function () {
 
     scene.createDefaultEnvironment();
     
+    engine.registerView(document.getElementById("renderCanvas0"));
     engine.registerView(document.getElementById("renderCanvas1"), camera1);
     engine.registerView(document.getElementById("renderCanvas2"), camera2);
     engine.registerView(document.getElementById("renderCanvas3"), camera3);

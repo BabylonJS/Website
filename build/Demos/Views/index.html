@@ -104,7 +104,7 @@
         <div id="description">
             This test page is intended to demonstrate the use of Babylon.js with multiple canvases but only one Engine (and thus only one WebGL context)
             <br/>
-            There are <b>4 independent canvases</b> on this page all rendered using the same scene but with different cameras. The first canvas (Top left) is the "master" canvas and is used with an interactive camera
+            There are <b>4 independent canvases</b> on this page all rendered using the same scene but with different cameras. The first canvas (Top left) can be controlled with an interactive camera
             <br/>
             <br/>
             Click <a href="https://doc.babylonjs.com/how_to/multi_canvases">here</a> for more documentation.
@@ -118,14 +118,17 @@
     </div>
     
     <script>
-        // Main thead version
-        var canvas = document.getElementById("renderCanvas0");
+        // Create a working document
+        var canvas = document.createElement("canvas");
 
         var engine = new BABYLON.Engine(canvas, true);
+
+        // Set the default canvas to use for events
+        engine.inputElement = document.getElementById("renderCanvas0");
+
         var scene = createScene();
         
         engine.runRenderLoop(function() {
-            engine.resize();
             if (scene.activeCamera) {
                 scene.render();
             }
