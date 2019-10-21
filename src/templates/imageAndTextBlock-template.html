@@ -1,0 +1,28 @@
+<section class="image-and-text-block {{#if (eq alignment 'right')}} right {{/if}}"
+    style="background-color: {{#var background}}{{/var}};">
+    <div class="inner-container" style="max-height:{{height}}">
+        {{#if (eq alignment "left")}}
+        <div>
+            <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">
+        </div>
+        {{/if}}
+        <div class="text-block"
+            style="text-align:{{textAlign}};width:{{textWidth}};margin-left:{{marginLeft}};margin-right:{{marginRight}};">
+            <h2>{{title}}</h2>
+            {{#if subtitle}}
+            <h3>{{subtitle}}</h3>
+            {{/if}}
+            <p style="color:{{color}}">{{desc}}</p>
+            {{#if moreInfoLink}}
+            <div class="link-block">
+                <a style="color:{{color}}" href="{{moreInfoLink}}">{{moreInfoText}}</a>
+            </div>
+            {{/if}}
+        </div>
+        {{#if (eq alignment "right")}}
+        <div>
+            <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">
+        </div>
+        {{/if}}
+    </div>
+</section>

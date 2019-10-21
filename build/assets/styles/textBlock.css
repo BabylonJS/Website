@@ -1,0 +1,23 @@
+
+.content-container > .text-block {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    color: #E2E2E2;
+    padding: 0 !important;
+}
+
+.content-container > .text-block .inner-container {
+    max-width: 1200px;
+    padding: 40px 0;
+}
+
+.content-container > .text-block .inner-container h2 {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.content-container > .text-block .inner-container p {
+    font-family: "acumin-pro", serif;
+    font-size: 18px;
+}

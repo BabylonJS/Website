@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="author" href="humans.txt" />
+
+        <!-- FB -->
+        <meta property="og:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta property="og:site_name" content="Babylon.js" />
+        <meta property="og:url" content="https://www.babylonjs.com" />
+        <meta property="og:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://www.babylonjs.com" />
+        <meta name="twitter:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta name="twitter:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta name="twitter:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        {{#each metaTags}}
+        <meta name="{{name}}" property="{{property}}" content="{{content}}" />
+        {{/each}}
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="icon" type="image/png" href="/assets/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+        <link rel="stylesheet" href="/assets/styles/variables.css">
+        <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/header.css">
+        <link rel="stylesheet" href="/assets/styles/footer.css">
+        <link rel="stylesheet" href="/assets/styles/gallery.css">
+        <link rel="stylesheet" href="/assets/styles/topBlock.css">
+        <link rel="stylesheet" href="/assets/styles/carousel.css">
+        <link rel="stylesheet" href="/assets/styles/textBlock.css">
+        <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/twoColumns.css">
+        <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
+        <link rel="stylesheet" href="/assets/styles/linkList.css">
+        <link rel="stylesheet" href="/assets/styles/imageList.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="author" href="humans.txt">
+        <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    </head>
+
+    <body>
+        <div class="container-header-background"></div>
+        <div class="header">
+            <div class="container-header">
+                <div class="menu-btn">
+                    <img src="/assets/img/HamburgerIcon.svg">
+                </div>
+                <div class="babylon-logo hidden">
+                    <a href="/">
+                        <img src="/assets/img/BabylonIdentity.svg">
+                    </a>
+                </div>
+                <a class="download" href="{{downloadLink}}"><img src="/assets/img/GithubIcon.svg"></a>
+                <div class="header-top-wrapper overflow">
+                    <div class="header-top">
+                        <div class="menu">
+                            <div class="header-ul-wrapper">
+                                <ul>
+                                    {{#each menu}}
+                                    {{#if visible}}
+                                    {{#if menuUrl}}
+                                    <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}"
+                                            href="{{menuUrl}}">{{menuTitle}}</a>
+                                        {{else}}
+                                        {{#if children}}
+                                    <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}">{{menuTitle}}</a>
+                                        {{else}}
+                                    <li class="{{menuTitle}} user-select"><a class="{{menuTitle}}"
+                                            href="/{{root}}">{{menuTitle}}</a>
+                                        {{/if}}
+                                        {{/if}}
+                                        {{/if}}
+                                        {{/each}}
+                                </ul>
+                            </div>
+                            <div class="sub-menu">
+                                {{#each menu}}
+                                {{#if children}}
+                                <ul class="{{menuTitle}} hidden">
+                                    {{#each children}}
+                                    {{#if menuUrl}}
+                                    <li class="user-select"><a href="{{menuUrl}}" target="_blank">{{menuTitle}}</a></li>
+                                    {{else}}
+                                    <li class="user-select"><a href="/{{../root}}/{{root}}">{{menuTitle}}</a></li>
+                                    {{/if}}
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            {{#each blocks}}
+            {{{block this}}}
+            {{/each}}
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="social-icons">
+                        {{#each socials}}
+                        <a href="{{link}}" target="_blank"><img src="{{img.url}}" alt="{{img.alt}}"></a>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="footer-right">
+                    {{#each footerMenu}}
+                    <a href="{{url}}" target="_blank">{{menuTitle}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </footer>
+        <script src="/assets/js/animation.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/pullRefresh.js"></script>
+
+    </body>
+
+</html>

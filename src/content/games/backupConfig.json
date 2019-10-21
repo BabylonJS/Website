@@ -1,0 +1,177 @@
+{
+    "menuTitle": "GAMES",
+    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
+    "metaTags": [
+        {
+            "name": "custom"
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "topBlock",
+            "content": {
+                "title": "Babylon.js",
+                "title2": "Powerful, Beautiful, Simple, Open.",
+                "title3": "The Game Engine Built For The Web.",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.",
+                "img": {
+                    "url": "../assets/img/Page_Logo.svg"
+                },
+                "items": [
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://www.babylonjs-playground.com/",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Test gltf models in the sandbox",
+                        "link": "https://sandbox.babylonjs.com/",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "See the full 4.0 release notes",
+                        "link": "https://doc.babylonjs.com/whats-new",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Get babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../assets/img/DownloadIcon.svg"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "../assets/videos/clearCoatWeb.mp4"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/marbleTowerWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
+                    },
+                    {
+                        "videoUrl": "../assets/videos/mBlurFanWeb.mp4"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#3F3461",
+                "img": {
+                    "url": "../assets/img/FlightHelmet.png",
+                    "alt": "Alternative text for the image"
+                },
+                "height": "400px",
+                "title": "Hello World",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#3F3461",
+                "img": {
+                    "url": "../assets/img/Inspector.png",
+                    "alt": "Alternative text for the image"
+                },
+                "title": "Hello World",
+                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web."
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "FEATURED DEMOS",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Bastille 1789",
+                        "author": "by Axeon Software",
+                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/Bastille-1789/",
+                        "img": {
+                            "url": "../community/assets/img/axeon-bastille.jpg",
+                            "alt": "Bastille 1789 - Axeon"
+                        }
+                    },
+                    {
+                        "desc": "Marble Tower",
+                        "author": "by PirateJC",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "../community/assets/img/marbletower.jpg",
+                            "alt": "Local War"
+                        }
+                    },
+                    {
+                        "desc": "SharePoint Spaces",
+                        "author": "by Microsoft",
+                        "link": "https://www.exploresharepointspaces.com/",
+                        "img": {
+                            "url": "../community/assets/img/sharepoint-spaces.jpg",
+                            "alt": "SharePoint Spaces"
+                        }
+                    },
+                    {
+                        "desc": "US Masters",
+                        "author": "by ANGC",
+                        "link": " https://www.masters.com/en_US/scores/track/index.html",
+                        "img": {
+                            "url": "../community/assets/img/masters.jpg",
+                            "alt": "US Masters"
+                        }
+                    },
+                    {
+                        "desc": "Adobe Dimension web export",
+                        "author": "by Adobe",
+                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "img": {
+                            "url": "../community/assets/img/dimension.jpg",
+                            "alt": "Adobe Dimension web export"
+                        }
+                    },
+                    {
+                        "desc": "Shell Shockers",
+                        "author": "by Fun Fetched",
+                        "link": "http://shellshock.io",
+                        "img": {
+                            "url": "../community/assets/img/ShellShockers.jpg",
+                            "alt": "Shell Shockers"
+                        }
+                    },
+                    {
+                        "desc": "JigSpace",
+                        "author": "by JigSpace Inc.",
+                        "link": "https://jig.space",
+                        "img": {
+                            "url": "../community/assets/img/jig.jpg",
+                            "alt": "JigSpace"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "community",
+                "label": "MORE"
+            }
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "home": {
+        "root": "/"
+    },
+    "menu": [
+        {
+            "root": "tools",
+            "visible": "true",
+            "children": [
+                {
+                    "menuTitle": "PLAYGROUND",
+                    "menuUrl": "https://playground.babylonjs.com/"
+                },
+                {
+                    "menuTitle": "SANDBOX",
+                    "menuUrl": "https://sandbox.babylonjs.com/"
+                },
+                {
+                    "menuTitle": "DOCUMENTATION",
+                    "menuUrl": "https://doc.babylonjs.com/"
+                },
+                {
+                    "menuTitle": "EXPORTERS",
+                    "menuUrl": "https://github.com/BabylonJS/Exporters/"
+                },
+                {
+                    "menuTitle": "SPECTOR.JS",
+                    "menuUrl": "https://spector.babylonjs.com/"
+                }
+            ]
+        },
+        {
+            "root": "community",
+            "visible": "true",
+            "children": [
+                {
+                    "menuTitle": "FORUM",
+                    "menuUrl": "https://forum.babylonjs.com"
+                },
+                {
+                    "menuTitle": "DEMOS",
+                    "menuUrl": "https://www.babylonjs.com/community"
+                }
+            ]
+        },
+        {
+            "root": "games",
+            "visible":"true"
+        },
+        {
+            "root": "learn",
+            "visible": "true",
+            "children": [
+                {
+                    "menuTitle": "DOCUMENTATION",
+                    "menuUrl": "https://doc.babylonjs.com/"
+                },
+                {
+                    "menuTitle": "EXAMPLES",
+                    "menuUrl": "https://doc.babylonjs.com/examples/"
+                },
+                {
+                    "menuTitle": "TUTORIALS",
+                    "menuUrl": "https://doc.babylonjs.com/how_to/"
+                },
+                {
+                    "menuTitle": "BLOG",
+                    "menuUrl": "https://medium.com/@babylonjs"
+                }
+            ]
+        },
+        {
+            "root": "specifications",
+            "visible": "true"
+        },
+        {
+            "menuTitle": "GET",
+            "visible": "true",
+            "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get"
+        }
+    ],
+    "footerMenu": [
+        {
+            "menuTitle": "Forum",
+            "url": "https://forum.babylonjs.com"
+        },
+        {
+            "menuTitle": "Contribute",
+            "url": "https://doc.babylonjs.com/how_to/how_to_start"
+        },
+        {
+            "menuTitle": "Tutorials",
+            "url": "https://doc.babylonjs.com/babylon101"
+        },
+        {
+            "menuTitle": "Branding",
+            "url": "#"
+        }
+    ],
+    "socials": [
+        {
+            "img": {
+                "url": "/assets/img/TwitterIcon.svg",
+                "alt": "Twitter"
+            },
+            "link": "https://www.twitter.com/babylonjs"
+        },
+        {
+            "img": {
+                "url": "/assets/img/GithubIcon.svg",
+                "alt": "Github"
+            },
+            "link": "https://github.com/BabylonJS/Babylon.js"
+        },
+        {
+            "img": {
+                "url": "/assets/img/DiscourseIcon.svg",
+                "alt": "Forum"
+            },
+            "link": "https://forum.babylonjs.com/"
+        },
+        {
+            "img": {
+                "url": "/assets/img/MediumIcon.svg",
+                "alt": "Blog"
+            },
+            "link": "https://medium.com/@babylonjs"
+        },
+        {
+            "img": {
+                "url": "/assets/img/YouTubeIcon.svg",
+                "alt": "YouTube channel"
+            },
+            "link": "https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ"
+        },
+        {
+            "img": {
+                "url": "/assets/img/netlify.svg",
+                "alt": "Hosted by Netlify"
+            },
+            "link": "https://www.netlify.com"
+        }
+    ],
+    "downloadLink": "https://github.com/BabylonJS/Babylon.js",
+    "variables": {
+        "color1": "#5C5C5C",
+        "color2": "#282828",
+        "color3": "#333333"
+    }
+}

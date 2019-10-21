@@ -1,0 +1,786 @@
+{
+    "menuTitle": "SPECIFICATIONS",
+    "blocks": [
+        {
+            "templateName": "marginBlock"
+        },
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "imgUrl": "/specifications/assets/img/ClearCoat.jpg"
+                    },
+                    {
+                        "imgUrl": "/specifications/assets/img/ControllerCarousel.jpg"
+                    },
+                    {
+                        "imgUrl": "/specifications/assets/img/FlightHelmetCarousel.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "twoColumns",
+            "content": {
+                "title": "ENGINE SPECIFICATIONS",
+                "left": {
+                    "sections": [
+                        {
+                            "title": "MAIN FEATURES",
+                            "list": [
+                                [
+                                    {
+                                        "text": "Transparent WebGL 1.0 /"
+                                    },
+                                    {
+                                        "link": "http://doc.babylonjs.com/features/webgl2",
+                                        "text": "WebGL 2.0"
+                                    },
+                                    {
+                                        "text": "support"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/resources/file_format_map_(.babylon)",
+                                        "text": "Complete scene graph "
+                                    },
+                                    {
+                                        "text": "with lights, cameras, materials, meshes, animations, audio & actions"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/extensions/the_babylon_viewer",
+                                        "text": "Easy to use full featured viewer"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Native "
+                                    },
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/Cameras,_Mesh_Collisions_and_Gravity",
+                                        "text": "collisions "
+                                    },
+                                    {
+                                        "text": "engine"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://www.davrous.com/2014/11/18/understanding-collisions-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js/",
+                                        "text": "Physics engine"
+                                    },
+                                    {
+                                        "text": "(thanks to "
+                                    },
+                                    {
+                                        "link": "https://github.com/lo-th/Oimo.js/",
+                                        "text": "oimo.js "
+                                    },
+                                    {
+                                        "link": "https://github.com/kripken/ammo.js/",
+                                        "text": "ammo.js "
+                                    },
+                                    {
+                                        "text": "and "
+                                    },
+                                    {
+                                        "link": "http://www.cannonjs.org/",
+                                        "text": "cannon.js"
+                                    },
+                                    {
+                                        "text": "integrations)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Scene picking"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Support left and right handed systems"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Antilialiasing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/Animations",
+                                        "text": "Animations "
+                                    },
+                                    {
+                                        "text": "engine"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/Particles",
+                                        "text": "Particles "
+                                    },
+                                    {
+                                        "text": "(both CPU and GPU)"
+                                    },
+                                    {
+                                        "text": "and "
+                                    },
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/solid_particles",
+                                        "text": "Solid particles "
+                                    },
+                                    {
+                                        "text": "Systems"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/Sprites",
+                                        "text": "Sprites "
+                                    },
+                                    {
+                                        "text": "and 2D layers"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Complete "
+                                    },
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/playing_sounds_and_music",
+                                        "text": "audio engine "
+                                    },
+                                    {
+                                        "text": "based on Web Audio"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Hardware accelerated "
+                                    },
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/gui",
+                                        "text": "GUI"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/features/behaviour",
+                                        "text": "Behaviors"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "SHADERS / RENDERING",
+                            "list": [
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/physically_based_rendering",
+                                        "text": "Physically Based Rendering (PBR)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Clear coat"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Sheen"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Diffuse lightning and texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Ambient lightning and texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Specular lightning and texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Opacity texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Mirror texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Emissive texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Bump texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Lightmap texture"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Unlimited lights (points, directionals, spots, hemispherics)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Light texture projection"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/environment",
+                                        "text": "Skybox"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Vertex color"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Up to 8 bones per vertex"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Morphing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Render target textures"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Dynamic textures (2D canvas)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Reflection texture (Spheric, planar, cubic, projection and equirectangular)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Video textures (including from webcam)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Compressed (DDS, KTX) textures & TGA"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "360 photos and videos",
+                                        "link": "https://doc.babylonjs.com/how_to/360videodome"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://github.com/BabylonJS/Babylon.js/tree/master/proceduralTexturesLibrary",
+                                        "text": "Procedural textures library"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://github.com/BabylonJS/Babylon.js/tree/master/materialsLibrary",
+                                        "text": "Materials library"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "MESHES",
+                            "list": [
+                                [
+                                    {
+                                        "text": "Mesh cloning"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Dynamic meshes"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Decals"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Height maps",
+                                        "link": "http://doc.babylonjs.com/babylon101/Height_Map"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Skeletons and bones",
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Bones_and_Skeletons"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/Parametric_Shapes",
+                                        "text": "Parametric shapes (Ribbon, tubes, etc.)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/how_to_use_morphtargets",
+                                        "text": "Morph targets"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Dynamic mesh simplification"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Constructive Solid Geometries"
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "right": {
+                    "sections": [
+                        {
+                            "title": "OPTIMIZATIONS",
+                            "list": [
+                                [
+                                    {
+                                        "text": "Frustum clipping"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Sub-meshes clipping"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Hardware scaling"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/features/occlusionquery",
+                                        "text": "Occlusion queries"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/Optimizing_Your_Scene_with_Octrees",
+                                        "text": "Selection octrees"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/Caching_Resources_in_IndexedDB",
+                                        "text": "Offline mode (Assets saved in IndexedDB)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/Using_the_Incremental_Loading_System",
+                                        "text": "Incremental loading"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Binary compressed format"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Instances",
+                                        "text": "Hardware accelerated instances"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_SceneOptimizer",
+                                        "text": "Automatic scene optimizer"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "LOD (Level Of Details)",
+                                        "link": "https://doc.babylonjs.com/how_to/how_to_use_lod"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/how_to_merge_meshes",
+                                        "text": "Meshes merging"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "SPECIAL FX",
+                            "list": [
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/babylon101/environment",
+                                        "text": "Fog"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Alpha blending"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Alpha testing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Billboarding"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Fullscreen mode"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/babylon101/shadows",
+                                        "text": "Shadow Maps and Exponentatial Shadow Maps (including soft shadows with PCF and PCSS)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/How_to_use_PostProcessRenderPipeline",
+                                        "text": "Post-processes"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#depth-of-field",
+                                        "text": "Depth of field"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#image-processing-effect",
+                                        "text": "Image processing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#bloom",
+                                        "text": "Bloom"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#grain",
+                                        "text": "Grain"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#antialiasing",
+                                        "text": "Anti aliasing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#sharpening",
+                                        "text": "Sharpening"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Rendering layers"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Lens_Flares",
+                                        "text": "Lens flares"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Reflection_probes",
+                                        "text": "Reflection Probes"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Edges renderer"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Multi-Views",
+                                        "text": "Multi-views"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/highlight_layer",
+                                        "text": "Highlights rendering"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/glow_layer",
+                                        "text": "Glow layer"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "CAMERAS",
+                            "list": [
+                                [
+                                    {
+                                        "text": "Universal camera (keyboard/touch/gamepad)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Arc rotate camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Free camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Touch camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/features/cameras#virtual-joysticks-camera",
+                                        "text": "Virtual Joysticks camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/how_to/webvr_camera",
+                                        "text": "WebVR camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Gamepad camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "VR Device Oriention camera for Cardboard"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Follow camera"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Anaglyph camera"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "EXPORTERS AND TOOLING",
+                            "list": [
+                                [
+                                    {
+                                        "text": "Exporters for glTF, OBJ & Babylon file formats"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Importers for glTF, STL, OBJ and Babylon file formats"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Support for drag'n'drop",
+                                        "link": "http://www.babylonjs.com/sandbox"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "http://doc.babylonjs.com/features/playground_debuglayer",
+                                        "text": "Inspector"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Assets manager",
+                                        "link": "https://doc.babylonjs.com/how_to/how_to_use_assetsmanager"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "title": "TOOLS INTEGRATION",
+                            "images": [
+                                {
+                                    "linkTitle": "8th Wall integration",
+                                    "link": "http://doc.babylonjs.com/resources/blender",
+                                    "imgTitle": "8th wall integration",
+                                    "imgAlt": "8th wall 3D logo",
+                                    "imgUrl": "/specifications/assets/img/8thwall.png"
+                                },
+                                {
+                                    "linkTitle": "Blender exporter",
+                                    "link": "http://doc.babylonjs.com/resources/blender",
+                                    "imgTitle": "Blender exporter",
+                                    "imgAlt": "Blender 3D logo",
+                                    "imgUrl": "/specifications/assets/img/blender-logo.svg"
+                                },
+                                {
+                                    "linkTitle": "Unity exporter",
+                                    "link": "http://doc.babylonjs.com/resources/intro",
+                                    "imgTitle": "Unity exporter",
+                                    "imgAlt": "Unity 3D logo",
+                                    "imgUrl": "/specifications/assets/img/unity.png"
+                                },
+                                {
+                                    "linkTitle": "3DS Max exporter",
+                                    "link": "https://github.com/BabylonJS/Exporters/tree/master/3ds%20Max",
+                                    "imgTitle": "3DS Max exporter",
+                                    "imgAlt": "Autodesk 3DS Max logo",
+                                    "imgUrl": "/specifications/assets/img/3dsmax.png"
+                                },
+                                {
+                                    "linkTitle": "Maya exporter",
+                                    "link": "https://github.com/BabylonJS/Exporters/tree/master/Maya",
+                                    "imgTitle": "Maya exporter",
+                                    "imgAlt": "Autodesk Maya logo",
+                                    "imgUrl": "/specifications/assets/img/maya.png"
+                                },
+                                {
+                                    "linkTitle": "Clara.io exporter",
+                                    "link": "https://clara.io/",
+                                    "imgTitle": "Clara.io exporter",
+                                    "imgAlt": "Clara.io logo",
+                                    "imgUrl": "/specifications/assets/img/ClaraIO.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "FEATURED DEMOS",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Marble Tower",
+                        "author": "by PirateJC",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "../community/assets/img/marbletower.jpg",
+                            "alt": "Local War"
+                        }
+                    },
+                    {
+                        "desc": "SharePoint Spaces",
+                        "author": "by Microsoft",
+                        "link": "https://www.exploresharepointspaces.com/",
+                        "img": {
+                            "url": "../community/assets/img/sharepoint-spaces.jpg",
+                            "alt": "SharePoint Spaces"
+                        }
+                    },
+                    {
+                        "desc": "US Masters",
+                        "author": "by ANGC",
+                        "link": " https://www.masters.com/en_US/scores/track/index.html",
+                        "img": {
+                            "url": "../community/assets/img/masters.jpg",
+                            "alt": "US Masters"
+                        }
+                    },
+                    {
+                        "desc": "Adobe Dimension web export",
+                        "author": "by Adobe",
+                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "img": {
+                            "url": "../community/assets/img/dimension.jpg",
+                            "alt": "Adobe Dimension web export"
+                        }
+                    },
+                    {
+                        "desc": "Shell Shockers",
+                        "author": "by Fun Fetched",
+                        "link": "http://shellshock.io",
+                        "img": {
+                            "url": "../community/assets/img/ShellShockers.jpg",
+                            "alt": "Shell Shockers"
+                        }
+                    },
+                    {
+                        "desc": "JigSpace",
+                        "author": "by JigSpace Inc.",
+                        "link": "https://jig.space",
+                        "img": {
+                            "url": "../community/assets/img/jig.jpg",
+                            "alt": "JigSpace"
+                        }
+                    },
+                    {
+                        "desc": "Apartment Configurator",
+                        "author": "by Axeon Software",
+                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
+                        "img": {
+                            "url": "../community/assets/img/ApartmentConfigurator.jpg",
+                            "alt": "Apartment Configurator"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE"
+            }
+        }
+    ]
+}

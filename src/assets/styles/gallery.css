@@ -1,0 +1,273 @@
+
+.gallery-block{
+    padding: 1px;
+}
+.gallery-block h2{
+    margin-bottom: 41px;
+    font-size: 65px;
+    font-weight: 200;
+    line-height: 60px;
+    color: #fff;
+    padding-left: 101px;
+    transform: scale(1);
+}
+
+.gallery-block h3{
+    font-family: "acumin-pro";
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 101px;
+    color: #fff;
+    transform: scale(1);
+    margin-bottom: 71px;
+    padding-right: 20px;
+}
+
+.gallery-block .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.gallery-block .images-container div {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 7px 15px 7px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.gallery-block .images-container div a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+.gallery-block .images-container div a img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
+
+/*********************** end ************/
+#hexGrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 15px;
+    list-style-type: none;
+}
+
+.hex {
+    position: relative;
+    visibility:hidden;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hex::after{
+    content:'';
+    display:block;
+    padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+}
+.hexIn{
+    position: absolute;
+    width:96%;
+    padding-bottom: 110.851%; /* =  width / sin(60) */
+    margin:0 2%;
+    overflow: hidden;
+    visibility: hidden;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+    -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+    transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+.hexIn * {
+    position: absolute;
+    visibility: visible;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hexLink {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+    -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+    transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+/*** HEX CONTENT **********************************************************************/
+.hex img {
+    left: -100%;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    -webkit-transform: rotate3d(0,0,0,0deg);
+    -ms-transform: rotate3d(0,0,0,0deg);
+    transform: rotate3d(0,0,0,0deg);
+}
+
+.hex h1, .hex .desc {
+    width: 100%;
+    padding: 5%;
+    box-sizing:border-box;
+    background-color: rgba(0, 000, 000, 0.8);
+    font-weight: 300;
+    -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+    transition:          transform .2s ease-out, opacity .3s ease-out;
+}
+
+.hex .desc {
+    top: 50%;
+    padding-bottom:50%;
+    -webkit-transform:translate3d(0,100%,0);
+    -ms-transform:translate3d(0,100%,0);
+    transform:translate3d(0,100%,0);
+    display: flex;
+    flex-direction: column;
+}
+
+.hex .desc .hexDesc{
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.hex .desc .hexDesc.author{
+    position: relative;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: unset;
+}
+
+
+.hexLink .hoverFrame {
+    display: none;
+    width: calc(100% + 1px);
+}
+
+.hexLink .defaultFrame {
+    width: calc(100% + 1px);
+}
+
+.gallery-block {
+    overflow: hidden;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+}
+.middle-background-gallery {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top:116px;   
+    background: url("../../assets/img/DownTriangle.svg") no-repeat;
+    background-position: top;
+    background-color: var(--midBackground);
+}
+
+.middle-background-gallery .gallery-background {
+    object-fit: cover;
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#hexGrid{
+    padding-bottom: 7.4%
+}
+.hex {
+    width: 25%; /* = 100 / 4 */
+}
+.hex:nth-child(7n+5){ /* first hexagon of even rows */
+    margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
+}
+
+@media (max-width: 600px) { /* <- 2-1  hexagons per row */
+    #hexGrid{
+        padding-bottom: 11.2%
+    }
+    .hex {
+        width: 33%; /* = 100 / 2 */
+    }
+
+    .hex:nth-child(7n+5){ /* first hexagon of even rows */
+        margin-left:unset;  /* = width of .hex / 2  to indent even rows */
+    }
+    
+    .hex:nth-child(5n+4){ /* first hexagon of even rows */
+        margin-left:16.5%;  /* = width of .hex / 2  to indent even rows */
+    }
+       
+    .hex:nth-last-child(2), .hex:last-child{
+        display: none;
+    }
+
+    .hex .desc .hexDesc{
+        font-size: 18px;
+    }
+
+    .hex .desc .hexDesc.author{
+        font-size: 16px;
+    }
+
+    .hex .desc {
+        top: 25%;        
+        padding-bottom:75%;
+    }
+}
+
+@media (max-width: 400px) {
+    #hexGrid {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .gallery-block h2, .gallery-block h3 {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .gallery-block h3 {        
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+
+}
+
+@media (hover: hover) {
+    .hexLink:hover h1, .hexLink:focus h1,
+    .hexLink:hover .desc, .hexLink:focus .desc{
+        -webkit-transform:translate3d(0,0,0);
+        -ms-transform:translate3d(0,0,0);
+        transform:translate3d(0,0,0);
+    }
+   
+    .hexLink:hover .hoverFrame {
+        display: block;
+    }
+
+    .hexLink:hover .defaultFrame {
+        display: none;
+    }
+}
