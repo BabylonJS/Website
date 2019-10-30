@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Babylon.js - Multi views demo</title>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Open Sans';
+            color: white;
+            background: #2A2342;
+        }
+
+        a {
+            color: white;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+
+        #root {            
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto 1fr;
+        }
+
+        #title {
+            grid-row: 1;
+            grid-column: 1;
+            margin: 20px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        #description {
+            grid-row: 2;
+            grid-column: 1;
+            margin: 20px;
+            align-self: center;
+            justify-self: center;
+        }    
+
+        .container {
+            grid-row: 3;
+            grid-column: 1;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 45% 10% 45%;
+            grid-template-rows: 45% 10% 45%;            
+        }
+
+        .renderCanvas {            
+            width: 100%;
+            height: 100%;
+        }
+
+        #renderCanvas0 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        #renderCanvas1 {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        #renderCanvas2 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        #renderCanvas3 {
+            grid-row: 3;
+            grid-column: 3;
+        }
+       </style>
+</head>
+
+<body>
+    <div id="root">
+        <h1 id="title">
+            Babylon.js Multi Views (multi canvases) demo
+        </h1>
+        <div id="description">
+            This test page is intended to demonstrate the use of Babylon.js with multiple canvases but only one Engine (and thus only one WebGL context)
+            <br/>
+            There are <b>4 independent canvases</b> on this page all rendered using the same scene but with different cameras. The first canvas (Top left) can be controlled with an interactive camera
+            <br/>
+            <br/>
+            Click <a href="https://doc.babylonjs.com/how_to/multi_canvases">here</a> for more documentation.
+        </div>
+        <div class="container">
+            <canvas class="renderCanvas" id="renderCanvas0" touch-action="none"></canvas>
+            <canvas class="renderCanvas" id="renderCanvas1" touch-action="none"></canvas>
+            <canvas class="renderCanvas" id="renderCanvas2" touch-action="none"></canvas>
+            <canvas class="renderCanvas" id="renderCanvas3" touch-action="none"></canvas>
+        </div>
+    </div>
+    
+    <script>
+        // Create a working document
+        var canvas = document.createElement("canvas");
+
+        var engine = new BABYLON.Engine(canvas, true);
+
+        // Set the default canvas to use for events
+        engine.inputElement = document.getElementById("renderCanvas0");
+
+        var scene = createScene();
+        
+        engine.runRenderLoop(function() {
+            if (scene.activeCamera) {
+                scene.render();
+            }
+        });
+    </script>
+
+</body>
+</html>
