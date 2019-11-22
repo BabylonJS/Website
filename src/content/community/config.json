@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Interactive background",
+                        "author": "by Naker",
+                        "link": "https://app.naker.io/back",
+                        "img": {
+                            "url": "../community/assets/img/naker-back.jpg",
+                            "alt": "Naker.Back"
+                        }
+                    },
+                    {
                         "desc": "Room Planner 3D",
                         "author": "by Wayfair",
                         "link": "https://www.wayfair.com/RoomPlanner3D",
