@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Mortar Command",
+                        "author": "by Doug Murphy",
+                        "link": "http://mortarcommand.com/",
+                        "img": {
+                            "url": "../community/assets/img/mortarCommand.jpg",
+                            "alt": "Mortar Command"
+                        }
+                    },
+                    {
                         "desc": "Hotel Atlantis",
                         "author": "by Axeon Software",
                         "link": "http://www.axeon.fr/CLIENT/UAE/Showreel/MAQUETTE_3D/3DRT/",
