@@ -1,8 +1,8 @@
 <div class="samples-carousel-block">
-    <div class="carousel" data-sample="{{delay}}">
+    <div class="carousel" data-delay="{{delay}}">
         {{#each items}}
-        {{#if videoUrl}}
         <div class="img-holder">
+            {{#if videoUrl}}
             {{#if demoLink}}
             <a href="{{demoLink}}" target="_blank">
                 <video src='{{videoUrl}}' autoplay loop muted></video>
@@ -10,20 +10,22 @@
             {{else}}
             <video src='{{videoUrl}}' autoplay loop muted></video>
             {{/if}}
-        </div>
-        {{/if}}
-        {{#if imgUrl}}
-        <div class="img-holder">
+            
+            {{/if}}
+            {{#if imgUrl}}
             <img class="img-carousel" src='{{imgUrl}}'></video>
+            {{/if}}
+            {{#if playgroundCode}}
+            <iframe src="https://playground.babylonjs.com/frame.html{{playgroundCode}}"></iframe>
+            {{/if}}
         </div>
-        {{/if}}
         {{/each}}
     </div>
     <div class="carousel-navigate">
         <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
         {{#each items}}
         <div class="carousel-navigate-item" data-order="{{@index}}">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
+            <img src="/assets/img/CarouselBreadcrumb.svg" alt="{{description}}" title="{{description}}">
         </div>
         {{/each}}
     </div>

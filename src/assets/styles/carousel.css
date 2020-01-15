@@ -43,7 +43,7 @@
 
 .carousel-navigate {
     position: absolute;
-    bottom: 30px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--background);

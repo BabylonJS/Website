@@ -1,9 +1,9 @@
-window.onload = function() {
+window.onload = function () {
     //    Carousel
     var carouselContainer = document.querySelector('.carousel');
     if (carouselContainer) {
         var carouselPaginationItems = document.querySelectorAll('.carousel-navigate-item');
-        var windowWidth = document.documentElement.clientWidth;
+        var carouselItems = carouselContainer.querySelectorAll('.img-holder');
         var caretStep = 55;
         var caret = document.querySelector('.carousel-navigate .caret');
         var currentSlide = 0;
@@ -22,7 +22,7 @@ window.onload = function() {
                             // WebGL is enabled.
                             return 1;
                         }
-                    } catch (e) { }
+                    } catch (e) {}
                 }
 
                 // WebGL is supported, but disabled.
@@ -40,7 +40,7 @@ window.onload = function() {
             carouselContainer.appendChild(frame);
             var overlay = document.createElement("div");
             overlay.setAttribute("class", 'iframe-overlay');
-            overlay.addEventListener('click', function(e) {
+            overlay.addEventListener('click', function (e) {
                 e.target.classList.add('hidden');
             });
             carouselContainer.appendChild(overlay);
@@ -69,15 +69,67 @@ window.onload = function() {
 
             var interval = setInterval(setAutoSlide, delay);
 
-            carouselPaginationItems.forEach(function(item) {
-                item.addEventListener('click', function() {
+            carouselPaginationItems.forEach(function (item) {
+
+                item.addEventListener('click', function () {
                     initiateScroll(item.dataset.order);
 
-                    clearInterval(interval);
+                    if (interval) {
+                        clearInterval(interval);
+                        interval = undefined;
+                    }
                     interval = setInterval(setAutoSlide, delay);
                 });
             });
-            window.addEventListener('resize', function() {
+
+            carouselItems.forEach(function (item) {
+                // add event listeners to stop the slider if on top of them
+                // supporting mouse events as well for older browsers.
+                ['click', 'mousemove', 'pointermove'].forEach(function (eventType) {
+                    item.addEventListener(eventType, function () {
+                        if (interval) {
+                            clearInterval(interval);
+                            interval = undefined;
+                        }
+                    });
+                });
+
+                ['pointerout', 'mouseout'].forEach(function (eventType) {
+                    item.addEventListener(eventType, function () {
+                        if (interval) {
+                            clearInterval(interval);
+                        }
+                        interval = setInterval(setAutoSlide, delay);
+                    });
+                });
+            });
+
+            // mobile scroll-stop support
+
+            // when entering the iframe:
+            var inIframe = false;
+            window.addEventListener('blur', function () {
+                inIframe = true;
+                if (interval) {
+                    clearInterval(interval);
+                    interval = undefined;
+                }
+            });
+
+            // when clicking anywhere outside of the iframe
+            window.addEventListener('pointerdown', function() {
+                if(inIframe) {
+                    inIframe = false;
+                    // just to be sure
+                    if (interval) {
+                        clearInterval(interval);
+                        interval = undefined;
+                    }
+                    interval = setInterval(setAutoSlide, delay);
+                }
+            })
+
+            window.addEventListener('resize', function () {
                 windowWidth = document.documentElement.clientWidth;
                 initiateScroll(currentSlide);
                 clearInterval(interval);
@@ -107,7 +159,7 @@ window.onload = function() {
     }
 
     // Check is menu open and click was outside menu and close it.
-    window.addEventListener('click', function(e) {
+    window.addEventListener('click', function (e) {
         var isMenuActive = headerTopWrapper.classList.contains('show');
         if (e.target.closest('.menu') === null && e.target.closest('.menu-btn') === null && isMenuActive) {
             showMenu();
@@ -121,7 +173,7 @@ window.onload = function() {
             headerTopWrapper.classList.remove('overflow');
         } else {
             menuBtn.classList.remove("active");
-            setTimeout(function() {
+            setTimeout(function () {
                 headerTopWrapper.classList.add('overflow');
             }, 500);
         }
@@ -134,7 +186,7 @@ window.onload = function() {
             var item = document.querySelector('.sub-menu .' + activeElement.firstChild.classList[0]);
 
             item.parentNode.classList.add('no-transition');
-            setTimeout(function() {
+            setTimeout(function () {
                 item.classList.add('hidden');
                 item.parentNode.classList.remove('no-transition');
             }, 100);
@@ -156,7 +208,7 @@ window.onload = function() {
             clickedMenuItem = clickedMenuItem.parentNode;
         }
 
-        document.querySelectorAll('.sub-menu ul').forEach(function(item) {
+        document.querySelectorAll('.sub-menu ul').forEach(function (item) {
             item.classList.add('hidden');
         });
 

@@ -51,18 +51,20 @@
         },
         {
             "templateName": "carouselBlock",
-            "delay": 2000,
             "content": {
+                "delay": 5000,
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/clearCoatWeb.mp4"
+                        "playgroundCode": "#LR4YHT#6",
+                        "description": "Fire Material"
                     },
                     {
-                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4",
-                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
+                        "playgroundCode": "#3I55DK#0",
+                        "description": "Marble Tower"
                     },
                     {
-                        "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
+                        "playgroundCode": "#LL5BIQ#0",
+                        "description": "Animations"
                     }
                 ]
             }
@@ -88,7 +90,7 @@
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
                         "img": {
                             "url": "../community/assets/img/marbletower.jpg",
-                            "alt": "Local War"
+                            "alt": "Marble Tower"
                         }
                     },
                     {
