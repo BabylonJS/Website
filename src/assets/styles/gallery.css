@@ -261,6 +261,7 @@
         -webkit-transform:translate3d(0,0,0);
         -ms-transform:translate3d(0,0,0);
         transform:translate3d(0,0,0);
+        backface-visibility: hidden;
     }
    
     .hexLink:hover .hoverFrame {
