@@ -74,6 +74,11 @@
             "visible": "true"
         },
         {
+            "menuTitle": "RELEASE NOTES",
+            "visible": "true",
+            "menuUrl": "https://doc.babylonjs.com/whats-new"
+        },
+        {
             "menuTitle": "GET",
             "visible": "true",
             "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get"
@@ -94,7 +99,7 @@
         },
         {
             "menuTitle": "Branding",
-            "url": "#"
+            "url": "https://github.com/BabylonJS/Brand-Toolkit"
         }
     ],
     "socials": [

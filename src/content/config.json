@@ -8,48 +8,6 @@
     ],
     "blocks": [
         {
-            "templateName": "topBlock",
-            "content": {
-                "title": "Babylon.js",
-                "title2": "Powerful, Beautiful, Simple, Open",
-                "title3": "Web-Based 3D At Its Best",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.",
-                "img": {
-                    "url": "assets/img/Page_Logo.svg"
-                },
-                "items": [
-                    {
-                        "desc": "Try Babylon.js in the playground",
-                        "link": "https://www.babylonjs-playground.com/",
-                        "img": {
-                            "url": "/assets/img/TryIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "Test gltf models in the sandbox",
-                        "link": "https://sandbox.babylonjs.com/",
-                        "img": {
-                            "url": "/assets/img/TestIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "See the full 4.0 release notes",
-                        "link": "https://doc.babylonjs.com/whats-new",
-                        "img": {
-                            "url": "/assets/img/NotesIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "Get babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
-                        "img": {
-                            "url": "/assets/img/DownloadIcon.svg"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "templateName": "carouselBlock",
             "delay": 2000,
             "content": {
@@ -65,6 +23,75 @@
                         "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
                     }
                 ]
+            }
+        },
+        {
+            "templateName": "miniTopBlock",
+            "content": {
+                "title": "Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best",
+                "desc": "Babylon.js is one of the world's leading WebGL-based graphics engines which brings powerful, beautiful, simple, and open 3D to everyone on the web.",
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#5a0014",
+                "img": {
+                    "url": "assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Advanced Rendering",
+                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering",
+                "moreInfoText": "More on Rendering"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#3b4846",
+                "img": {
+                    "url": "assets/img/animation.png",
+                    "alt": "Alternative text for the image",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Animation",
+                "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It's not just simple, though, it's modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective.",
+                "moreInfoLink": "https://doc.babylonjs.com/features/animations",
+                "moreInfoText": "More on Animation"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "https://doc.babylonjs.com/features/",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
             }
         },
         {
