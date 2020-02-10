@@ -3,7 +3,6 @@
     "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
     "metaTags": [
         {
-            "name": "custom"
         }
     ],
     "blocks": [
@@ -23,13 +22,6 @@
                         "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
                     }
                 ]
-            }
-        },
-        {
-            "templateName": "miniTopBlock",
-            "content": {
-                "title": "Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best",
-                "desc": "Babylon.js is one of the world's leading WebGL-based graphics engines which brings powerful, beautiful, simple, and open 3D to everyone on the web.",
             }
         },
         {
