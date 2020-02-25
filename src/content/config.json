@@ -25,43 +25,118 @@
             }
         },
         {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Welcome to Babylon.js 4.1",
+                "desc": "Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. Up to 3 times smaller and 12% faster, Babylon.js 4.1 includes countless performance optimizations,  continuing the lineage of a high-performance engine. With the new Node Material Editor, a truly cross-platform development experience with Babylon Native, Cascaded Shadows, Navigation Mesh, updated WebXR and glTF support, and much much more, Babylon.js 4.1 brings even more power to your web development toolbox."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Node Material Editor",
+                        "link": "https://nme.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "Sandbox",
+                        "link": "https://sandbox.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#5a0014",
+                "background": "#5f5b60",
                 "img": {
-                    "url": "assets/img/rendering.png",
-                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "url": "assets/img/nodeMaterialEditor.png",
+                    "alt": "Node material nodes wired together in a basic shader.",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Advanced Rendering",
-                "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering",
-                "moreInfoText": "More on Rendering"
+                "title": "Node Material Editor",
+                "desc": "Introducing the powerful and simple Node Material Editor. This new user-friendly node based system unlocks the power of the GPU for everyone. Traditionally, writing shaders (GPU programs) hasn't been very easy or accessible for anyone without the understanding of low level code. Babylon's new node material system removes the complexity without sacrificing power. With this new system, absolutely anyone can create beautiful shader networks by simply connecting nodes together.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/node_material",
+                "moreInfoText": "More on Node Materials"
             }
         },
         {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#3b4846",
+                "background": "#2a2342",
                 "img": {
-                    "url": "assets/img/animation.png",
-                    "alt": "Alternative text for the image",
+                    "url": "assets/img/babylonNative_identity_dark.png",
+                    "alt": "Babylon Native logo",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Animation",
-                "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It's not just simple, though, it's modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective.",
-                "moreInfoLink": "https://doc.babylonjs.com/features/animations",
-                "moreInfoText": "More on Animation"
+                "title": "Babylon Native Preview",
+                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies.",
+                "moreInfoLink": "https://aka.ms/Bnative",
+                "moreInfoText": "More on Babylon Native"
             }
-        },
+        },   
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#29333b",
+                "img": {
+                    "url": "assets/img/agents.png",
+                    "alt": "Babylon Native logo",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Navigation Mesh and Crowd Agents",
+                "desc": "With the new fun and simple Navigation Mesh system, leveraging the power of the excellent and open-source Recast navigation library, it's easier than ever to create convincing \"AI\" for your game or interactive experience. Simply provide a crowd agent with a navigation mesh, and the movement of that agent will be confined to the mesh. As seen with the fish in this Underwater Demo, you'll find it very useful for AI and path finding or to replace physics for collision detection (only allow player to go where it's possible instead of using collision detection).",
+                "moreInfoLink": "https://doc.babylonjs.com/extensions/navigationmesh",
+                "moreInfoText": "More on Navigaition Mesh and Crowd Agents"
+            }
+        }, 
+        {      
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#163035",
+                "img": {
+                    "url": "assets/img/vr.png",
+                    "alt": "Babylon Native logo",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Updated WebXR Support",
+                "desc": "It's no secret that the future is bright for AR/VR experiences on the web. Babylon 4.1 further advances the engine's best-in-class WebXR support by bringing an easy to use experience helper, a dedicated session manager for more advanced users, one camera to rule them all, full support for any device that accepts WebXR sessions, full input-source support, API for Experimental AR features, teleportation, scene interactions, physics, and more.",
+                "moreInfoLink": "https://doc.babylonjs.com/extensions/navigationmesh",
+                "moreInfoText": "More on Navigaition Mesh and Crowd Agents"
+            }
+        },       
         {
             "templateName": "textBlock",
             "content": {

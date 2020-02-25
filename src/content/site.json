@@ -16,6 +16,10 @@
                     "menuUrl": "https://sandbox.babylonjs.com/"
                 },
                 {
+                    "menuTitle": "NODE MATERIAL EDITOR",
+                    "menuUrl": "https://nme.babylonjs.com/"
+                },
+                {
                     "menuTitle": "DOCUMENTATION",
                     "menuUrl": "https://doc.babylonjs.com/"
                 },
@@ -46,6 +50,10 @@
         {
             "root": "games",
             "visible":"true"
+        },
+        {
+            "root": "native",
+            "visible": "true"
         },
         {
             "root": "learn",
