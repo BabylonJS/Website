@@ -48,7 +48,7 @@
                         "desc": "Node Material Editor",
                         "link": "https://nme.babylonjs.com",
                         "img": {
-                            "url": "../assets/img/TryIcon.svg"
+                            "url": "../assets/img/nodeIcon.svg"
                         }
                     },                    {
                         "desc": "Sandbox",
