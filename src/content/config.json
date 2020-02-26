@@ -95,7 +95,7 @@
                 "marginRight": "50px",
                 "title": "Babylon Native Preview",
                 "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies.",
-                "moreInfoLink": "https://aka.ms/Bnative",
+                "moreInfoLink": "https://www.babylonjs.com/native",
                 "moreInfoText": "More on Babylon Native"
             }
         },   
@@ -106,7 +106,7 @@
                 "background": "#29333b",
                 "img": {
                     "url": "assets/img/agents.png",
-                    "alt": "Babylon Native logo",
+                    "alt": "3D fish models swimming in a school using AI navigation mesh.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -125,7 +125,7 @@
                 "background": "#163035",
                 "img": {
                     "url": "assets/img/vr.png",
-                    "alt": "Babylon Native logo",
+                    "alt": "Photo of a Microsoft VR motion controller.",
                     "width": "550px"
                 },
                 "height": "400px",

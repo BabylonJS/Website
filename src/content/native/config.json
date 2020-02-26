@@ -12,20 +12,16 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "./assets/videos/minecraftClassic.mp4",
-                        "demoLink": "https://classic.minecraft.net"
+                        "videoUrl": "./assets/videos/BNativeWeb.mp4"
                     },
                     {
-                        "videoUrl": "./assets/videos/ACPirates.mp4",
-                        "demoLink": "http://race.assassinscreedpirates.com/"
+                        "videoUrl": "./assets/videos/BNativeWin32.mp4"
                     },
                     {
-                        "videoUrl": "./assets/videos/brilliantMan.mp4",
-                        "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
+                        "videoUrl": "./assets/videos/BNativeAndroid.mp4"
                     },
                     {
-                        "videoUrl": "./assets/videos/battlechoc.mp4",
-                        "demoLink": "https://battlechoc.com"
+                        "videoUrl": "./assets/videos/BNativeXR.mp4"
                     }
                 ]
             }
@@ -65,10 +61,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#5a0014",
+                "background": "#201f2d",
                 "img": {
-                    "url": "assets/img/rendering.png",
-                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "url": "assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -84,10 +80,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#3b4846",
+                "background": "#5a0014",
                 "img": {
-                    "url": "assets/img/animation.png",
-                    "alt": "Alternative text for the image",
+                    "url": "assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -103,10 +99,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#000000",
+                "background": "#565042",
                 "img": {
-                    "url": "assets/img/particles.png",
-                    "alt": "Alt text for image",
+                    "url": "assets/img/optimizedPackage.svg",
+                    "alt": "Illustration of cardboard box containing smaller packages.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -122,10 +118,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#453526",
+                "background": "#222222",
                 "img": {
-                    "url": "assets/img/physics.png",
-                    "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
+                    "url": "assets/img/reactNativeLogo.png",
+                    "alt": "Logo for React Native.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -143,9 +139,9 @@
                 "alignment": "left",
                 "background": "#2a2342",
                 "img": {
-                    "url": "assets/img/gui.png",
-                    "alt": "A color picker made with the Babylon.js GUI system.",
-                    "width": "550px"
+                    "url": "assets/img/XR_Experiences.gif",
+                    "alt": "An animated gif of a phone showing a 3D object floating in a room in XR",
+                    "width": "150px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",

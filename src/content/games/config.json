@@ -30,11 +30,42 @@
                 ]
             }
         },
+        
         {
-            "templateName": "anchorBlock",
+            "templateName": "textBlock",
             "content": {
-                "anchor": "feature",
-                "offset": "-70px"
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "THE GAME ENGINE MADE FOR THE WEB.",
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the web."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the features",
+                        "link": "https://www.babylonjs.com/games/#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
             }
         },
         {
