@@ -7,18 +7,17 @@
     ],
     "blocks": [
         {
-            "templateName": "carouselBlock",
-            "delay": 2000,
-            "content": {
+            "templateName": "imageListBlock",
+            "content": {       
+                "paddingTop": "70px",
+                "background": "#201F2D",
                 "items": [
                     {
-                        "videoUrl": "./assets/img/BNativeDesktop.mp4"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/BNativeMobile.mp4"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/BNativeWeb.mp4"
+                        "img": {
+                            "url": "assets/img/nativeHeroImage.jpg",
+                            "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
+                            "width": "1000px"
+                        }
                     }
                 ]
             }
