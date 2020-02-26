@@ -95,7 +95,7 @@
                 "marginRight": "50px",
                 "title": "Babylon Native Preview",
                 "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies.",
-                "moreInfoLink": "https://www.babylonjs.com/native",
+                "moreInfoLink": "/native",
                 "moreInfoText": "More on Babylon Native"
             }
         },   
@@ -115,7 +115,7 @@
                 "title": "Navigation Mesh and Crowd Agents",
                 "desc": "With the new fun and simple Navigation Mesh system, leveraging the power of the excellent and open-source Recast navigation library, it's easier than ever to create convincing \"AI\" for your game or interactive experience. Simply provide a crowd agent with a navigation mesh, and the movement of that agent will be confined to the mesh. As seen with the fish in this Underwater Demo, you'll find it very useful for AI and path finding or to replace physics for collision detection (only allow player to go where it's possible instead of using collision detection).",
                 "moreInfoLink": "https://doc.babylonjs.com/extensions/navigationmesh",
-                "moreInfoText": "More on Navigaition Mesh and Crowd Agents"
+                "moreInfoText": "More on Navigation Mesh and Crowd Agents"
             }
         }, 
         {      
@@ -133,8 +133,8 @@
                 "marginRight": "50px",
                 "title": "Updated WebXR Support",
                 "desc": "It's no secret that the future is bright for AR/VR experiences on the web. Babylon 4.1 further advances the engine's best-in-class WebXR support by bringing an easy to use experience helper, a dedicated session manager for more advanced users, one camera to rule them all, full support for any device that accepts WebXR sessions, full input-source support, API for Experimental AR features, teleportation, scene interactions, physics, and more.",
-                "moreInfoLink": "https://doc.babylonjs.com/extensions/navigationmesh",
-                "moreInfoText": "More on Navigaition Mesh and Crowd Agents"
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on WebXR"
             }
         },       
         {
