@@ -128,7 +128,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Choose your UI technology",
-                "desc": "What User Interface (UI) technology you include in your application is entirely up to you, whether it makes use of  Babylon.js comes with certain UI capabilities, particularly including 3D UI for XR and other purposes, which will also work in Babylon Native. However, Babylon Native is not intended to ever include an implementation of the HTML DOM, so depending on how you choose to implement the UI, you might have to incorporate additional technologies such as React Native or a native handcraft UI.",
+                "desc": "What User Interface (UI) technology you include in your application is entirely up to you. Babylon.js comes with certain UI capabilities, particularly including 3D UI for XR and other purposes, which will also work in Babylon Native. However, Babylon Native is not intended to ever include an implementation of the HTML DOM, so depending on how you choose to implement the UI, you might have to incorporate additional technologies such as React Native or a native handcraft UI.",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
