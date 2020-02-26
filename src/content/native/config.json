@@ -13,9 +13,8 @@
                 "background": "#201F2D",
                 "items": [
                     {
-                        "img": {
-                            "url": "assets/img/nativeHeroImage.jpg",
-                            "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
+                        "video": {
+                            "url": "assets/videos/bNativeTogether.mp4",
                             "width": "1000px"
                         }
                     }

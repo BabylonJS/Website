@@ -12,7 +12,8 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/clearCoatWeb.mp4"
+                        "videoUrl": "/assets/videos/clearCoatWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#8153LW"
                     },
                     {
                         "videoUrl": "/assets/videos/swordCarousel.mp4",
