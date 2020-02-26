@@ -152,7 +152,7 @@
                 "items": [
                     {
                         "desc": "Full List of Features",
-                        "link": "https://doc.babylonjs.com/features/",
+                        "link": "specifications/",
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         }
