@@ -12,16 +12,13 @@
             "content": {
                 "items": [
                     {
+                        "videoUrl": "./assets/img/BNativeDesktop.mp4"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/BNativeMobile.mp4"
+                    },
+                    {
                         "videoUrl": "./assets/videos/BNativeWeb.mp4"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/BNativeWin32.mp4"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/BNativeAndroid.mp4"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/BNativeXR.mp4"
                     }
                 ]
             }

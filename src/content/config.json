@@ -15,11 +15,12 @@
                         "videoUrl": "/assets/videos/clearCoatWeb.mp4"
                     },
                     {
-                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4",
-                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
+                        "videoUrl": "/assets/videos/swordCarousel.mp4",
+                        "demoLink": "https://aka.ms/DWeapon"
                     },
                     {
-                        "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
+                        "videoUrl": "/assets/videos/underWater.mp4",
+                        "demoLink": " https://aka.ms/Uwater"
                     }
                 ]
             }
@@ -168,12 +169,21 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
-                        "desc": "Bastille 1789",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
+                        "desc": "Underwater",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/Uwater",
                         "img": {
-                            "url": "../community/assets/img/axeon-bastille.jpg",
-                            "alt": "Bastille 1789 - Axeon"
+                            "url": "../community/assets/img/underwater.jpg",
+                            "alt": "Underwater - Babylon.js"
+                        }
+                    },
+                    {
+                        "desc": "Weapons",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/DWeapon",
+                        "img": {
+                            "url": "../community/assets/img/weapon.jpg",
+                            "alt": "Weapons - Babylon.js"
                         }
                     },
                     {
@@ -182,16 +192,16 @@
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
                         "img": {
                             "url": "../community/assets/img/marbletower.jpg",
-                            "alt": "Local War"
+                            "alt": "Marble Tower - PirateJC"
                         }
                     },
                     {
-                        "desc": "Final Fantasy Card Game",
-                        "author": "by Square Enix",
-                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
+                        "desc": "Red Arrows",
+                        "author": "British Royal Airforce",
+                        "link": "https://www.raf.mod.uk/display-teams/red-arrows/displays/",
                         "img": {
-                            "url": "../community/assets/img/finalFantasy.jpg",
-                            "alt": "Final Fantasy Digital Card Game"
+                            "url": "../community/assets/img/redArrows.jpg",
+                            "alt": "Red Arrows - British Royal Airforce"
                         }
                     },
                     {
@@ -213,21 +223,12 @@
                         }
                     },
                     {
-                        "desc": "Adobe Dimension web export",
-                        "author": "by Adobe",
-                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "desc": "Bastille 1789",
+                        "author": "by Axeon Software",
+                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
                         "img": {
-                            "url": "./community/assets/img/dimension.jpg",
-                            "alt": "Adobe Dimension web export"
-                        }
-                    },
-                    {
-                        "desc": "JigSpace",
-                        "author": "by JigSpace Inc.",
-                        "link": "https://jig.space",
-                        "img": {
-                            "url": "./community/assets/img/jig.jpg",
-                            "alt": "JigSpace"
+                            "url": "../community/assets/img/axeon-bastille.jpg",
+                            "alt": "Bastille 1789 - Axeon"
                         }
                     }
                 ]
