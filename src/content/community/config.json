@@ -1214,15 +1214,6 @@
                         }
                     },
                     {
-                        "desc": "Ruins",
-                        "author": "by Julien Moreau-Mathis",
-                        "link": "/Demos/ruins/",
-                        "img": {
-                            "url": "/community/assets/img/ruins.jpg",
-                            "alt": "Ruins"
-                        }
-                    },
-                    {
                         "desc": "Remix3D",
                         "author": "by Microsoft",
                         "link": "http://www.remix3D.com",
