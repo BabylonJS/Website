@@ -25,7 +25,7 @@
         <meta name="twitter:description"
             content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
         <meta name="twitter:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
-        <meta name="mini-custom" property="" content="" />
+        <meta name="" property="" content="" />
         <link rel="shortcut icon" href="/assets/favicon.ico">
         <link rel="icon" type="image/png" href="/assets/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -47,7 +47,6 @@
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
         <link rel="author" href="humans.txt">
-        <script src="//cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
     </head>
 
     <body>
@@ -72,9 +71,13 @@
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
                                     <li class="GAMES user-select"><a class="GAMES"
                                             href="/games">GAMES</a>
+                                    <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE"
+                                            href="/native">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
                                     <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
                                             href="/specifications">SPECIFICATIONS</a>
+                                    <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
+                                            href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
                                     <li class="GET user-select"><a class="GET"
                                             href="https://doc.babylonjs.com/babylon101/how_to_get">GET</a>
                                 </ul>
@@ -83,6 +86,7 @@
                                 <ul class="TOOLS hidden">
                                     <li class="user-select"><a href="https://playground.babylonjs.com/" target="_blank">PLAYGROUND</a></li>
                                     <li class="user-select"><a href="https://sandbox.babylonjs.com/" target="_blank">SANDBOX</a></li>
+                                    <li class="user-select"><a href="https://nme.babylonjs.com/" target="_blank">NODE MATERIAL EDITOR</a></li>
                                     <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
                                     <li class="user-select"><a href="https://github.com/BabylonJS/Exporters/" target="_blank">EXPORTERS</a></li>
                                     <li class="user-select"><a href="https://spector.babylonjs.com/" target="_blank">SPECTOR.JS</a></li>
@@ -105,60 +109,6 @@
         </div>
 
         <div class="content-container">
-            <section class="top-block">
-    <div class="container">
-        <div class="triangle-background short">
-            <div class="large-logo short">
-                <img id="" src="../assets/img/logo_page_smaller.svg" />
-            </div>
-        </div>
-    </div>
-    <div class="container-info short">
-        <div class="text-part short">
-            <h1></h1>
-            <h2>The Game Engine Made For The Web.</h2>
-            <h2 class="last-subtitle"></h2>
-            <span>A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what&#x27;s truly important…creating breathtaking experiences for gamers across the web.</span>
-        </div>
-    </div>
-</section>
-            <section class="linkList-block" style="margin-top:;margin-bottom:">
-    <div class="link-part">
-        <div class="link" style="margin-left:;margin-right:60px">
-            <a href="#feature" class="link-part-link">
-                <div class="icon-back">
-                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                    <img class="iconImage" src="../assets/img/NotesIcon.svg">
-                </div>
-                <div class="link-part-desc">Check out the Features</div>
-            </a>
-        </div>
-        <div class="link" style="margin-left:;margin-right:60px">
-            <a href="https://playground.babylonjs.com" class="link-part-link">
-                <div class="icon-back">
-                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                    <img class="iconImage" src="../assets/img/TryIcon.svg">
-                </div>
-                <div class="link-part-desc">Try Babylon.js in the playground</div>
-            </a>
-        </div>
-        <div class="link" style="margin-left:;margin-right:">
-            <a href="https://doc.babylonjs.com/babylon101/how_to_get" class="link-part-link">
-                <div class="icon-back">
-                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                    <img class="iconImage" src="../assets/img/DownloadIcon.svg">
-                </div>
-                <div class="link-part-desc">Get babylon.js</div>
-            </a>
-        </div>
-    </div>
-</section>
-            <div class="upTriangle-block" style="margin-top:0px">
-    <div class="container">
-        <div class="middle-triangle">
-        </div>
-    </div>
-</div>
             <div class="samples-carousel-block">
     <div class="carousel" data-sample="">
         <div class="img-holder">
@@ -198,7 +148,43 @@
         </div>
     </div>
 </div>
-            <div id="feature" style="transform:translateY(-70px)"></div>
+            <div class="text-block">
+    <div class="inner-container" style="margin-left:50px;margin-right:50px">
+        <h2>THE GAME ENGINE MADE FOR THE WEB.</h2>
+        <p>A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what&#x27;s truly important…creating breathtaking experiences for gamers across the web.</p>
+    </div>
+</div>
+            <section class="linkList-block" style="margin-top:;margin-bottom:30px">
+    <div class="link-part">
+        <div class="link" style="margin-left:;margin-right:">
+            <a href="https://www.babylonjs.com/games/#feature" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../assets/img/NotesIcon.svg">
+                </div>
+                <div class="link-part-desc">Check out the features</div>
+            </a>
+        </div>
+        <div class="link" style="margin-left:;margin-right:">
+            <a href="https://playground.babylonjs.com" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../../assets/img/TryIcon.svg">
+                </div>
+                <div class="link-part-desc">Try Babylon.js in the playground</div>
+            </a>
+        </div>
+        <div class="link" style="margin-left:;margin-right:">
+            <a href="https://doc.babylonjs.com/babylon101/how_to_get" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="../../assets/img/downloadIcon.svg">
+                </div>
+                <div class="link-part-desc">get Babylon.js</div>
+            </a>
+        </div>
+    </div>
+</section>
             <section class="image-and-text-block "
     style="background-color: #5a0014;">
     <div class="inner-container" style="max-height:400px">
@@ -303,10 +289,10 @@
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Virtual Reality</h2>
-            <p style="color:">VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebVR helper, you can get a VR scene up and running in a matter of minutes.</p>
+            <h2>XR games</h2>
+            <p style="color:">AR/VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, AR/VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebXR helper, you can get a AR/VR scene up and running in a matter of minutes.</p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/how_to/webvr_helper">More on VR</a>
+                <a style="color:" href="https://doc.babylonjs.com/how_to/introduction_to_webxr">More on XR</a>
             </div>
         </div>
     </div>
@@ -336,7 +322,7 @@
             <section class="linkList-block" style="margin-top:;margin-bottom:30px">
     <div class="link-part">
         <div class="link" style="margin-left:;margin-right:">
-            <a href="https://doc.babylonjs.com/features/" class="link-part-link">
+            <a href="/specifications" class="link-part-link">
                 <div class="icon-back">
                     <img class="backImage" src="/../assets/img/HexButtonStates.svg">
                     <img class="iconImage" src="../assets/img/NotesIcon.svg">
@@ -346,7 +332,7 @@
         </div>
     </div>
 </section>
-            <div class="imageList-block" style="margin-top:20px;margin-bottom:;background:#2f2f2f">
+            <div class="imageList-block" style="padding-top:;margin-top:20px;margin-bottom:;background:#2f2f2f">
     <a href=https://developer.microsoft.com/en-us/games>
         <img src="assets/img/gameStackBanner.png" alt="Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions."
             style="width:1000px;height:;margin-left:;margin-right:;" />
@@ -481,7 +467,7 @@
                     <a href="https://forum.babylonjs.com" target="_blank">Forum</a>
                     <a href="https://doc.babylonjs.com/how_to/how_to_start" target="_blank">Contribute</a>
                     <a href="https://doc.babylonjs.com/babylon101" target="_blank">Tutorials</a>
-                    <a href="#" target="_blank">Branding</a>
+                    <a href="https://github.com/BabylonJS/Brand-Toolkit" target="_blank">Branding</a>
                 </div>
             </div>
         </footer>
