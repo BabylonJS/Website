@@ -117,7 +117,7 @@
                                 ],
                                 [
                                     {
-                                        "text": "Antilialiasing"
+                                        "text": "Anti-aliasing"
                                     }
                                 ],
                                 [
@@ -219,17 +219,17 @@
                                 ],
                                 [
                                     {
-                                        "text": "Diffuse lightning and texture"
+                                        "text": "Diffuse lighting and texture"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Ambient lightning and texture"
+                                        "text": "Ambient lighting and texture"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Specular lightning and texture"
+                                        "text": "Specular lighting and texture"
                                     }
                                 ],
                                 [
@@ -674,7 +674,7 @@
                             "list": [
                                 [
                                     {
-                                        "text": "Exporters for glTF, OBJ & Babylon file formats"
+                                        "text": "Exporters for glTF, OBJ and Babylon file formats"
                                     }
                                 ],
                                 [
