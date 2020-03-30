@@ -36,7 +36,10 @@
                                     },
                                     {
                                         "link": "http://doc.babylonjs.com/features/webgl2",
-                                        "text": "WebGL 2.0"
+                                        "text": "WebGL 2.0 /"
+                                    },                                    {
+                                        "link": "https://doc.babylonjs.com/extensions/webgpu",
+                                        "text": "WebGPU"
                                     },
                                     {
                                         "text": "support"
@@ -55,6 +58,12 @@
                                     {
                                         "link": "http://doc.babylonjs.com/extensions/the_babylon_viewer",
                                         "text": "Easy to use full featured viewer"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "/native",
+                                        "text": "Native host (iOS, Android, MacOS, Win32, UWP)"
                                     }
                                 ],
                                 [
@@ -108,7 +117,7 @@
                                 ],
                                 [
                                     {
-                                        "text": "Antilialiasing"
+                                        "text": "Anti-aliasing"
                                     }
                                 ],
                                 [
@@ -174,12 +183,24 @@
                                         "link": "http://doc.babylonjs.com/features/behaviour",
                                         "text": "Behaviors"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/controls",
+                                        "text": "Accelerated 2D controls"
+                                    }
                                 ]
                             ]
                         },
                         {
                             "title": "SHADERS / RENDERING",
-                            "list": [
+                            "list": [                            
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/node_material",
+                                        "text": "Node Material"
+                                    }
+                                ],
                                 [
                                     {
                                         "link": "http://doc.babylonjs.com/how_to/physically_based_rendering",
@@ -198,17 +219,17 @@
                                 ],
                                 [
                                     {
-                                        "text": "Diffuse lightning and texture"
+                                        "text": "Diffuse lighting and texture"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Ambient lightning and texture"
+                                        "text": "Ambient lighting and texture"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Specular lightning and texture"
+                                        "text": "Specular lighting and texture"
                                     }
                                 ],
                                 [
@@ -289,7 +310,7 @@
                                 ],
                                 [
                                     {
-                                        "text": "Compressed (DDS, KTX) textures & TGA"
+                                        "text": "Compressed (DDS, KTX, .basis) textures & TGA"
                                     }
                                 ],
                                 [
@@ -440,12 +461,24 @@
                                         "link": "https://doc.babylonjs.com/how_to/how_to_merge_meshes",
                                         "text": "Meshes merging"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/using_offscreen_canvas",
+                                        "text": "Offscreen canvas"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/how_to/multi_canvases",
+                                        "text": "Engine sharing over multiple canvases"
+                                    }
                                 ]
                             ]
                         },
                         {
                             "title": "SPECIAL FX",
-                            "list": [
+                            "list": [    
                                 [
                                     {
                                         "link": "http://doc.babylonjs.com/babylon101/environment",
@@ -476,6 +509,11 @@
                                     {
                                         "link": "https://doc.babylonjs.com/babylon101/shadows",
                                         "text": "Shadow Maps and Exponentatial Shadow Maps (including soft shadows with PCF and PCSS)"
+                                    }
+                                ],                          [
+                                    {
+                                        "link": "https://doc.babylonjs.com/babylon101/shadows_csm",
+                                        "text": "Cascaded Shadow Maps"
                                     }
                                 ],
                                 [
@@ -522,6 +560,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://doc.babylonjs.com/how_to/using_screenspacereflectionspostprocess",
+                                        "text": "Screen space reflections"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "Rendering layers"
                                     }
                                 ],
@@ -558,6 +602,12 @@
                                     {
                                         "link": "http://doc.babylonjs.com/how_to/glow_layer",
                                         "text": "Glow layer"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/extensions/navigationmesh",
+                                        "text": "Navigation mesh and crowd of moving agents"
                                     }
                                 ]
                             ]
@@ -624,7 +674,7 @@
                             "list": [
                                 [
                                     {
-                                        "text": "Exporters for glTF, OBJ & Babylon file formats"
+                                        "text": "Exporters for glTF, OBJ and Babylon file formats"
                                     }
                                 ],
                                 [

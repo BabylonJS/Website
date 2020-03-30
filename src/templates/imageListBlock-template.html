@@ -1,10 +1,12 @@
-<div class="imageList-block" style="margin-top:{{marginTop}};margin-bottom:{{marginBottom}};background:{{background}}">
+<div class="imageList-block" style="padding-top:{{paddingTop}};margin-top:{{marginTop}};margin-bottom:{{marginBottom}};background:{{background}}">
     {{#each items}}
     {{#if img.link}}
     <a href={{img.link}}>
         <img src="{{img.url}}" alt="{{img.alt}}"
             style="width:{{img.width}};height:{{img.height}};margin-left:{{img.marginLeft}};margin-right:{{img.marginRight}};" />
     </a>
+    {{else if video.url}}
+    <video src='{{video.url}}' autoplay loop muted width="100%" style="max-width:{{video.width}};"></video>
     {{else}}
     <img src="{{img.url}}" alt="{{img.alt}}"
         style="width:{{img.width}};height:{{img.height}};margin-left:{{img.marginLeft}};margin-right:{{img.marginRight}};" />

@@ -676,7 +676,7 @@
                     {
                         "desc": "Fish tank",
                         "author": null,
-                        "link": "https://playground.babylonjs.com/frame#U45L84#1",
+                        "link": "https://playground.babylonjs.com/frame.html#U45L84#1",
                         "img": {
                             "url": "/community/assets/img/fish.jpg",
                             "alt": "Fish tank"
@@ -1211,15 +1211,6 @@
                         "img": {
                             "url": "/community/assets/img/prosecution.jpg",
                             "alt": "Prosecution"
-                        }
-                    },
-                    {
-                        "desc": "Ruins",
-                        "author": "by Julien Moreau-Mathis",
-                        "link": "/Demos/ruins/",
-                        "img": {
-                            "url": "/community/assets/img/ruins.jpg",
-                            "alt": "Ruins"
                         }
                     },
                     {

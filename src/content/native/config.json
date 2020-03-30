@@ -1,0 +1,171 @@
+{
+    "menuTitle": "BABYLON NATIVE",
+    "title": "Babylon Native: cross-platform native apps with the power of Babylon.js",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "imageListBlock",
+            "content": {       
+                "paddingTop": "70px",
+                "background": "#201F2D",
+                "items": [
+                    {
+                        "video": {
+                            "url": "assets/videos/bNativeTogether.mp4",
+                            "width": "1000px"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "anchorBlock",
+            "content": {
+                "anchor": "feature",
+                "offset": "-70px"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "BABYLON NATIVE",
+                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Get the Preview",
+                        "link": "https://github.com/BabylonJS/BabylonNative",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Cross-platform native apps",
+                "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android and Vulkan in the future).",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#5a0014",
+                "img": {
+                    "url": "assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Full power of Babylon.js",
+                "desc": "The rendering code written with Babylon.js is reusable in Babylon Native. This means that you get access, out of the box, to the feature-packed 3D rendering engine including the latest in Physically Based Rendering (PBR), animations, particle system, and physics engines. It also brings glTF consistency and conformance, backward compatibility, and a constant evolution with hundreds of new features and enhancements per year.",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#565042",
+                "img": {
+                    "url": "assets/img/optimizedPackage.svg",
+                    "alt": "Illustration of cardboard box containing smaller packages.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Optimized package size",
+                "desc": "A large file size can impact the adoption of an application. For instance, mobile users are presented with warning messages about large app sizes before downloading them over-the-air. The full-featured Babylon.js engine is built for the Web and you can pick and choose what you need with ES6 packages. Babylon Native is also built with componentization in mind, allowing you to further optimize your total package size.",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#222222",
+                "img": {
+                    "url": "assets/img/reactNativeLogo.png",
+                    "alt": "Logo for React Native.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Choose your UI technology",
+                "desc": "What User Interface (UI) technology you include in your application is entirely up to you. Babylon.js comes with certain UI capabilities, particularly including 3D UI for XR and other purposes, which will also work in Babylon Native. However, Babylon Native is not intended to ever include an implementation of the HTML DOM, so depending on how you choose to implement the UI, you might have to incorporate additional technologies such as React Native or a native handcraft UI.",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2a2342",
+                "img": {
+                    "url": "assets/img/XR_Experiences.gif",
+                    "alt": "An animated gif of a phone showing a 3D object floating in a room in XR",
+                    "width": "150px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "XR experiences",
+                "desc": "Augmented Reality, Mixed Reality, and Virtual Reality experiences are being democratized by innovative applications, mobile support, and the upcoming WebXR standard. Babylon Native offers a powerful platform to build such experiences. The use of JavaScript and Babylon.js engine features to develop an application enables a broad set of developers and content creators. The capacity to run natively allows to go beyond the Web sandbox and built-in AR viewers.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on WebXR"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#000000",
+                "img": {
+                    "url": "assets/img/forum.png",
+                    "alt": "A screen capture of our very active forum page.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Active, Friendly Community",
+                "desc": "Babylon Native is part of the Babylon.js family and inherits an active open-source community that supports each other in creating amazing experiences. As you begin your Babylon.js and Babylon Native journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.",
+                "moreInfoLink": "https://forum.babylonjs.com",
+                "moreInfoText": "Visit the Forum"
+            }
+        }
+        
+    ]
+}
