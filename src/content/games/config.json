@@ -304,12 +304,12 @@
                         }
                     },
                     {
-                        "desc": "Local War",
-                        "author": "by 蔬菜土豆泥",
-                        "link": "http://localwar.xidayun.com/",
+                        "desc": "Golf Royale",
+                        "author": "by @mr137 & @mentalnote",
+                        "link": "https://golfroyale.io/",
                         "img": {
-                            "url": "../community/assets/img/localwar.jpg",
-                            "alt": "Local War"
+                            "url": "../community/assets/img/golfRoyale.io.jpeg",
+                            "alt": "Golf Royale"
                         }
                     },
                     {
