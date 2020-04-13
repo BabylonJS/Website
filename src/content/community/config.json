@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Golf Royale",
+                        "author": "by @mr137 & @mentalnote",
+                        "link": "https://golfroyale.io/",
+                        "img": {
+                            "url": "../community/assets/img/golfRoyale.io.jpeg",
+                            "alt": "Golf Royale"
+                        }
+                    },
+                    {
                         "desc": "2020 Paper Airplane Card",
                         "author": "by @suzie_reagit",
                         "link": "https://carte2020.wanadev.io/",
