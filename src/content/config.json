@@ -3,68 +3,164 @@
     "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
     "metaTags": [
         {
-            "name": "custom"
         }
     ],
     "blocks": [
         {
-            "templateName": "topBlock",
+            "templateName": "carouselBlock",
+            "delay": 3500,
             "content": {
-                "title": "Babylon.js",
-                "title2": "Powerful, Beautiful, Simple, Open",
-                "title3": "Web-Based 3D At Its Best",
-                "desc": "Babylon.js 4.0 is here and marks a major step forward in one of the world's leading WebGL-based graphics engines. From the powerful new Inspector, best in class physically-based-rendering, countless optimizations, and much more, Babylon.js 4.0 brings powerful, beautiful, simple, and open 3D to everyone on the web.",
-                "img": {
-                    "url": "assets/img/Page_Logo.svg"
-                },
                 "items": [
                     {
-                        "desc": "Try Babylon.js in the playground",
-                        "link": "https://www.babylonjs-playground.com/",
-                        "img": {
-                            "url": "/assets/img/TryIcon.svg"
-                        }
+                        "videoUrl": "/assets/videos/clearCoatWeb.mp4",
+                        "demoLink": "https://playground.babylonjs.com/#8153LW"
                     },
                     {
-                        "desc": "Test gltf models in the sandbox",
-                        "link": "https://sandbox.babylonjs.com/",
-                        "img": {
-                            "url": "/assets/img/TestIcon.svg"
-                        }
+                        "videoUrl": "/assets/videos/swordCarousel.mp4",
+                        "demoLink": "https://aka.ms/DWeapon"
                     },
                     {
-                        "desc": "See the full 4.0 release notes",
-                        "link": "https://doc.babylonjs.com/whats-new",
-                        "img": {
-                            "url": "/assets/img/NotesIcon.svg"
-                        }
-                    },
-                    {
-                        "desc": "Get babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
-                        "img": {
-                            "url": "/assets/img/DownloadIcon.svg"
-                        }
+                        "videoUrl": "/assets/videos/underWater.mp4",
+                        "demoLink": " https://aka.ms/Uwater"
                     }
                 ]
             }
         },
         {
-            "templateName": "carouselBlock",
-            "delay": 2000,
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Welcome to Babylon.js 4.1",
+                "desc": "Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. Up to 3 times smaller and 12% faster, Babylon.js 4.1 includes countless performance optimizations,  continuing the lineage of a high-performance engine. With the new Node Material Editor, a truly cross-platform development experience with Babylon Native, Cascaded Shadows, Navigation Mesh, updated WebXR and glTF support, and much much more, Babylon.js 4.1 brings even more power to your web development toolbox."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
             "content": {
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/clearCoatWeb.mp4"
+                        "desc": "Playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TryIcon.svg"
+                        }
                     },
                     {
-                        "videoUrl": "/assets/videos/marbleTowerWeb.mp4",
-                        "demoLink": "https://playground.babylonjs.com/#3I55DK#0"
-                    },
-                    {
-                        "videoUrl": "/assets/videos/mBlurFanWeb.mp4"
+                        "desc": "Node Material Editor",
+                        "link": "https://nme.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/nodeIcon.svg"
+                        }
+                    },                    {
+                        "desc": "Sandbox",
+                        "link": "https://sandbox.babylonjs.com",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
+                        }
                     }
-                ]
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#5f5b60",
+                "img": {
+                    "url": "assets/img/nodeMaterialEditor.png",
+                    "alt": "Node material nodes wired together in a basic shader.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Node Material Editor",
+                "desc": "Introducing the powerful and simple Node Material Editor. This new user-friendly node based system unlocks the power of the GPU for everyone. Traditionally, writing shaders (GPU programs) hasn't been very easy or accessible for anyone without the understanding of low level code. Babylon's new node material system removes the complexity without sacrificing power. With this new system, absolutely anyone can create beautiful shader networks by simply connecting nodes together.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/node_material",
+                "moreInfoText": "More on Node Materials"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2a2342",
+                "img": {
+                    "url": "assets/img/babylonNative_identity_dark.png",
+                    "alt": "Babylon Native logo",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Babylon Native Preview",
+                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies.",
+                "moreInfoLink": "/native",
+                "moreInfoText": "More on Babylon Native"
+            }
+        },   
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#29333b",
+                "img": {
+                    "url": "assets/img/agents.png",
+                    "alt": "3D fish models swimming in a school using AI navigation mesh.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Navigation Mesh and Crowd Agents",
+                "desc": "With the new fun and simple Navigation Mesh system, leveraging the power of the excellent and open-source Recast navigation library, it's easier than ever to create convincing \"AI\" for your game or interactive experience. Simply provide a crowd agent with a navigation mesh, and the movement of that agent will be confined to the mesh. As seen with the fish in this Underwater Demo, you'll find it very useful for AI and path finding or to replace physics for collision detection (only allow player to go where it's possible instead of using collision detection).",
+                "moreInfoLink": "https://doc.babylonjs.com/extensions/navigationmesh",
+                "moreInfoText": "More on Navigation Mesh and Crowd Agents"
+            }
+        }, 
+        {      
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#163035",
+                "img": {
+                    "url": "assets/img/vr.png",
+                    "alt": "Photo of a Microsoft VR motion controller.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Updated WebXR Support",
+                "desc": "It's no secret that the future is bright for AR/VR experiences on the web. Babylon 4.1 further advances the engine's best-in-class WebXR support by bringing an easy to use experience helper, a dedicated session manager for more advanced users, one camera to rule them all, full support for any device that accepts WebXR sessions, full input-source support, API for Experimental AR features, teleportation, scene interactions, physics, and more.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on WebXR"
+            }
+        },       
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "specifications/",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
             }
         },
         {
@@ -74,12 +170,21 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
-                        "desc": "Bastille 1789",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
+                        "desc": "Underwater",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/Uwater",
                         "img": {
-                            "url": "../community/assets/img/axeon-bastille.jpg",
-                            "alt": "Bastille 1789 - Axeon"
+                            "url": "../community/assets/img/underwater.jpg",
+                            "alt": "Underwater - Babylon.js"
+                        }
+                    },
+                    {
+                        "desc": "Weapons",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/DWeapon",
+                        "img": {
+                            "url": "../community/assets/img/weapon.jpg",
+                            "alt": "Weapons - Babylon.js"
                         }
                     },
                     {
@@ -88,16 +193,16 @@
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
                         "img": {
                             "url": "../community/assets/img/marbletower.jpg",
-                            "alt": "Local War"
+                            "alt": "Marble Tower - PirateJC"
                         }
                     },
                     {
-                        "desc": "Final Fantasy Card Game",
-                        "author": "by Square Enix",
-                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
+                        "desc": "Red Arrows",
+                        "author": "British Royal Airforce",
+                        "link": "https://www.raf.mod.uk/display-teams/red-arrows/displays/",
                         "img": {
-                            "url": "../community/assets/img/finalFantasy.jpg",
-                            "alt": "Final Fantasy Digital Card Game"
+                            "url": "../community/assets/img/redArrows.jpg",
+                            "alt": "Red Arrows - British Royal Airforce"
                         }
                     },
                     {
@@ -119,21 +224,12 @@
                         }
                     },
                     {
-                        "desc": "Adobe Dimension web export",
-                        "author": "by Adobe",
-                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "desc": "Retro Planet",
+                        "author": "by Pryme8",
+                        "link": "https://playground.babylonjs.com/#JF18C0#58",
                         "img": {
-                            "url": "./community/assets/img/dimension.jpg",
-                            "alt": "Adobe Dimension web export"
-                        }
-                    },
-                    {
-                        "desc": "JigSpace",
-                        "author": "by JigSpace Inc.",
-                        "link": "https://jig.space",
-                        "img": {
-                            "url": "./community/assets/img/jig.jpg",
-                            "alt": "JigSpace"
+                            "url": "../community/assets/img/retroPlanet.jpg",
+                            "alt": "Retro Planetoid"
                         }
                     }
                 ]

@@ -3,53 +3,9 @@
     "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
     "metaTags": [
         {
-            "name": "mini-custom"
         }
     ],
     "blocks": [
-        {
-            "templateName": "miniTopBlock",
-            "content": {
-                "title2": "The Game Engine Made For The Web.",
-                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser.  Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the web."
-            }
-        },
-        {
-            "templateName": "linkListBlock",
-            "content": {
-                "items": [
-                    {
-                        "desc": "Check out the Features",
-                        "link": "#feature",
-                        "img": {
-                            "url": "../assets/img/NotesIcon.svg"
-                        },
-                        "marginRight": "60px"
-                    },
-                    {
-                        "desc": "Try Babylon.js in the playground",
-                        "link": "https://playground.babylonjs.com",
-                        "img": {
-                            "url": "../assets/img/TryIcon.svg"
-                        },
-                        "marginRight": "60px"
-                    },
-                    {
-                        "desc": "Get babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
-                        "img": {
-                            "url": "../assets/img/DownloadIcon.svg"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "templateName": "upTriangle",
-            "content": {
-                "marginTop": "0px"
-            }
-        },
         {
             "templateName": "carouselBlock",
             "delay": 2000,
@@ -74,11 +30,42 @@
                 ]
             }
         },
+        
         {
-            "templateName": "anchorBlock",
+            "templateName": "textBlock",
             "content": {
-                "anchor": "feature",
-                "offset": "-70px"
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "THE GAME ENGINE MADE FOR THE WEB.",
+                "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the web."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the features",
+                        "link": "https://www.babylonjs.com/games/#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
             }
         },
         {
@@ -208,10 +195,10 @@
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Virtual Reality",
-                "desc": "VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebVR helper, you can get a VR scene up and running in a matter of minutes.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/webvr_helper",
-                "moreInfoText": "More on VR"
+                "title": "XR games",
+                "desc": "AR/VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, AR/VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebXR helper, you can get a AR/VR scene up and running in a matter of minutes.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on XR"
             }
         },
         {
@@ -248,7 +235,7 @@
                 "items": [
                     {
                         "desc": "Full List of Features",
-                        "link": "https://doc.babylonjs.com/features/",
+                        "link": "/specifications",
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         }
@@ -317,12 +304,12 @@
                         }
                     },
                     {
-                        "desc": "Local War",
-                        "author": "by 蔬菜土豆泥",
-                        "link": "http://localwar.xidayun.com/",
+                        "desc": "Golf Royale",
+                        "author": "by @mr137 & @mentalnote",
+                        "link": "https://golfroyale.io/",
                         "img": {
-                            "url": "../community/assets/img/localwar.jpg",
-                            "alt": "Local War"
+                            "url": "../community/assets/img/golfRoyale.io.jpeg",
+                            "alt": "Golf Royale"
                         }
                     },
                     {
