@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Babylon.js Texture Tools</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #2a2342; 
+            color: #ffffff;
+            font-family: "acumin-pro";
+        }
+
+        #renderCanvas {
+            width: 1024px;
+            height: 1024px;
+            display: block;
+            font-size: 0;
+            margin: auto;
+            border:none !important;
+            outline:none !important;
+            background-color: black;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 230px 494px 300px auto;
+            grid-template-rows: 80px 1024px 80px;
+        }
+
+        .headerLogo {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            background-color: #201936;
+        }
+
+        .headerLogo > a > img {
+            width: auto;
+            height: 80px;
+            margin-left: 10px;
+        }
+
+        .headerText {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 40px;
+            line-height: 80px;
+            text-align: center;
+            background-color: #201936;
+            font-family: "acumin-pro-extra-condensed";
+        }
+
+        .headerTitle {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 31px;
+            line-height: 80px;
+            text-align: center;
+            background-color: #BB464B;
+        }
+
+        .content {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .footer {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: unset;
+        }
+        a:hover {
+            color: #FFFFFF;
+        }
+        a:visited {
+            color: #FFFFFF;
+        }
+        a:focus {
+            color: #FFFFFF;
+        }
+
+        .headerTitle a {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #201936;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #BB464B;
+            text-decoration: unset;
+        }
+        .footer a:visited {
+            color: #BB464B;
+            text-decoration: unset;
+        }
+
+        #iblInvite {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #iblInviteText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerLogo">
+            <a href="https://www.babylonjs.com">
+                <img src="./assets/logo.svg"></img>
+            </a>
+        </div>
+        <div class="headerText">
+            <a href="https://www.babylonjs.com">
+                Texture Tools
+            </a>
+        </div>
+        <div class="headerTitle" id="headerTitle">
+            Loading...
+        </div>
+        <div class="content">
+            <canvas id="renderCanvas" width="1024" height="1024"></canvas>
+        </div>
+        <div class="footer" id="brdfFooter"> |
+            <a href="#" id="correlatedEC">Correlated (Energie conservation)</a> |
+            <a href="#" id="correlated">Correlated</a> |
+            <a href="#" id="uncorrelated">Uncorrelated</a> |
+            <a href="#" id="toggleSheen">Toggle Sheen</a> |
+            <a href="#" id="saveBRDF">Save as RGBD</a> |
+            <a href="#" id="iblTools">IBL Tools</a> |
+            <p>
+                Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
+            </p>
+        </div>
+        <div class="footer" id="iblFooter"> |
+            <a href="#" id="iblDiffuse">Diffuse</a> |
+            <a href="#" id="iblSpecular0">L 0 R 0</a> |
+            <a href="#" id="iblSpecular1">L 1 R 0.01</a> |
+            <a href="#" id="iblSpecular2">L 2 R 0.15</a> |
+            <a href="#" id="iblSpecular3">L 3 R 0.23</a> |
+            <a href="#" id="iblSpecular4">L 4 R 0.35</a> |
+            <a href="#" id="iblSpecular5">L 5 R 0.55</a> |
+            <a href="#" id="iblSpecular6">L 6 R 0.84</a> |
+            <a href="#" id="iblSpecular64">L 6.4 R 1</a> |
+            <a href="#" id="brdfTools">BRDF Tools</a> |
+            <p>
+                Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
+            </p>
+        </div>
+    <div>
+    <div id="iblInvite">
+        <div id="iblInviteText">
+            Drag and drop an hdr file here to start processing.
+        </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
