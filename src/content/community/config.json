@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "3D Bed Designer",
+                        "author": "by GetLaidBeds",
+                        "link": "https://www.getlaidbeds.co.uk/wooden-beds/four-poster-wooden-beds/moroccan-four-poster-wooden-bed-frame#3d-design",
+                        "img": {
+                            "url": "../community/assets/img/bedDesigner.jpg",
+                            "alt": "3D Bed Designer"
+                        }
+                    },
+                    {
                         "desc": "Golf Royale",
                         "author": "by @mr137 & @mentalnote",
                         "link": "https://golfroyale.io/",
