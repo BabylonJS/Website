@@ -174,12 +174,6 @@
             const rock3 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock3.gltf", scene);
             const rock4 = await BABYLON.SceneLoader.ImportMeshAsync("", "assets/rocks/", "rock4.gltf", scene);
 
-            tree2.meshes[0].setEnabled(false);
-            rock1.meshes[0].setEnabled(false);
-            rock2.meshes[0].setEnabled(false);
-            rock3.meshes[0].setEnabled(false);
-            rock4.meshes[0].setEnabled(false);
-
             const originalMeshes = [tree2.meshes[0], rock1.meshes[0], tree2.meshes[0], rock2.meshes[0], tree2.meshes[0], rock3.meshes[0], tree2.meshes[0], rock4.meshes[0]];
             return originalMeshes;
         }
@@ -365,6 +359,10 @@
                 i++;
                 j++;
             }
+        }
+
+        for (i = 0; i < gardenMeshes.length; i++) {
+            gardenMeshes[i].setEnabled(false);
         }
 
         // After all the meshes creation, freeze as much as we can to improve perfs.
