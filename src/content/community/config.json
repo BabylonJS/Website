@@ -8,6 +8,24 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Ducatti Garage",
+                        "author": "by Barksie",
+                        "link": "https://nymbl3d.github.io/nymblWebGL/projects/04DucatiXDiavel/XDiavelDemo.html",
+                        "img": {
+                            "url": "../community/assets/img/ducatti.jpg",
+                            "alt": "Ducatti Garage"
+                        }
+                    },
+                    {
+                        "desc": "Farm House",
+                        "author": "by HiteshSahu",
+                        "link": "https://hiteshsahu.com/farmHouse",
+                        "img": {
+                            "url": "../community/assets/img/farmHouse.jpg",
+                            "alt": "Farm House"
+                        }
+                    },
+                    {
                         "desc": "Interactive Library",
                         "author": "by Cstfan",
                         "link": "http://3dmad.online.fr/WebGL/Library_Interactive_Map_Mtp/index.html",
