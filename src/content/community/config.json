@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Box Zombies",
+                        "author": "by jan-capiak",
+                        "link": "http://boxzombies.cakrod.sk/",
+                        "img": {
+                            "url": "../community/assets/img/boxZombies.jpg",
+                            "alt": "Box Zombies"
+                        }
+                    },
+                    {
                         "desc": "Ducatti Garage",
                         "author": "by Barksie",
                         "link": "https://nymbl3d.github.io/nymblWebGL/projects/04DucatiXDiavel/XDiavelDemo.html",
