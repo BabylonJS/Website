@@ -8,6 +8,24 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Attack Of The Killer Bunnies",
+                        "author": "by Eric Ben",
+                        "link": "https://ericbroberic.itch.io/attack-of-the-killer-bunnies",
+                        "img": {
+                            "url": "../community/assets/img/attackOfTheKillerBunnies.jpg",
+                            "alt": "Attack Of The Killer Bunnies"
+                        }
+                    },
+                    {
+                        "desc": "Interactive Web",
+                        "author": "by Sem",
+                        "link": "https://zuncreative.com/car-demo",
+                        "img": {
+                            "url": "../community/assets/img/interactiveWeb.jpg",
+                            "alt": "Interactive Web"
+                        }
+                    },
+                    {
                         "desc": "Box Zombies",
                         "author": "by jan-capiak",
                         "link": "http://boxzombies.cakrod.sk/",
