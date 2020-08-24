@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Playtable",
+                        "author": "by Jason Spafford",
+                        "link": "https://playtable.app/",
+                        "img": {
+                            "url": "../community/assets/img/playtable.jpg",
+                            "alt": "Playtable"
+                        }
+                    },
+                    {
                         "desc": "Attack Of The Killer Bunnies",
                         "author": "by Eric Benn",
                         "link": "https://ericbroberic.itch.io/attack-of-the-killer-bunnies",
