@@ -8,6 +8,33 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Retro Yasuo Game",
+                        "author": "by Paul Linden, Nicolas Lanoux, Matéo Borlat",
+                        "link": "https://dakharr.itch.io/yasuo",
+                        "img": {
+                            "url": "../community/assets/img/retroYasuoGame.jpg",
+                            "alt": "Retro Yasuo Game"
+                        }
+                    },
+                    {
+                        "desc": "Babel.js",
+                        "author": "by Chihabeddine Aourinmouche, Sherine Soumare Dit Sabathier, Enzo Rostaing",
+                        "link": "https://babel-js.herokuapp.com/",
+                        "img": {
+                            "url": "../community/assets/img/babeljs.jpg",
+                            "alt": "Babel.js"
+                        }
+                    },
+                    {
+                        "desc": "SpillHop",
+                        "author": "by Sacha Bydon",
+                        "link": "http://samuelmaugard.ovh/spillhop",
+                        "img": {
+                            "url": "../community/assets/img/spillHop.jpg",
+                            "alt": "SpillHop"
+                        }
+                    },
+                    {
                         "desc": "3D Expo Simulation",
                         "author": "by nasimiasl",
                         "link": "http://virtual.iranjobex.com/",
