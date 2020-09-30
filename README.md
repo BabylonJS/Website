@@ -9,7 +9,7 @@
 
 ## Development mode
 
-Web site will be available at http://localhost:8080/
+Website will be available at http://localhost:8080/
 
 ``` sh
     gulp run
