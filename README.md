@@ -19,7 +19,7 @@ Web site will be available at http://localhost:8080/
 
 ### Page title
 
-this property available as part of page level Json property
+this property available as part of page level Json property which is the best 
 
 ``` sh
     "title": "BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript"
