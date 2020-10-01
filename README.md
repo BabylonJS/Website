@@ -1,3 +1,5 @@
+make index page of resources
+
 # Babylon.js website
 
 ## Installation process
