@@ -1,4 +1,4 @@
-# Babylon.js website
+# welcome to Babylon.js
 
 ## Installation process
 
