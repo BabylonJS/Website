@@ -19,7 +19,8 @@ Web site will be available at http://localhost:8080/
 
 ### Page title
 
-this property available as part of page level Json property
+This property is available as a part of page level Json property.
+
 
 ``` sh
     "title": "BabylonJS - 3D engine based on WebGL/Web Audio and JavaScript"
@@ -27,7 +28,7 @@ this property available as part of page level Json property
 
 ### Meta tags
 
-meta tags can be unique for each page. This property available as part of page level Json property and contains list of tags
+Meta tags can be unique for each page.This property is available as a part of page level Json property and contains list of tags.
 
 ``` json
     "metaTags": [
