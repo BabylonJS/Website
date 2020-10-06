@@ -313,12 +313,12 @@
                         }
                     },
                     {
-                        "desc": "Galactic Fight",
-                        "author": "Galactic Fight",
-                        "link": "https://www.galacticfight.net/",
+                        "desc": "Caterpillar Cowboy",
+                        "author": "by Foxdog Studios",
+                        "link": "https://ld47.fds.im/",
                         "img": {
-                            "url": "../community/assets/img/galacticFight.jpg",
-                            "alt": "Galactic Fight"
+                            "url": "../community/assets/img/caterpillarCowboy.jpg",
+                            "alt": "Caterpillar Cowboy"
                         }
                     },
                     {
