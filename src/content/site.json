@@ -5,7 +5,7 @@
     "menu": [
         {
             "root": "tools",
-            "visible": "true",
+            "visible": true,
             "children": [
                 {
                     "menuTitle": "PLAYGROUND",
@@ -35,7 +35,7 @@
         },
         {
             "root": "community",
-            "visible": "true",
+            "visible": true,
             "children": [
                 {
                     "menuTitle": "FORUM",
@@ -49,15 +49,19 @@
         },
         {
             "root": "games",
-            "visible":"true"
+            "visible": true
         },
         {
             "root": "ecommerce",
-            "visible": "true"
+            "visible": true
+        },
+        {
+            "root": "reactnative",
+            "visible": false
         },
         {
             "root": "native",
-            "visible": "true",
+            "visible": true,
             "children": [
                 {
                     "menuTitle": "BABYLON NATIVE RUNTIME",
@@ -71,7 +75,7 @@
         },
         {
             "root": "learn",
-            "visible": "true",
+            "visible": true,
             "children": [
                 {
                     "menuTitle": "DOCUMENTATION",
@@ -93,16 +97,16 @@
         },
         {
             "root": "specifications",
-            "visible": "true"
+            "visible": true
         },
         {
             "menuTitle": "RELEASE NOTES",
-            "visible": "true",
+            "visible": true,
             "menuUrl": "https://doc.babylonjs.com/whats-new"
         },
         {
             "menuTitle": "GET",
-            "visible": "true",
+            "visible": true,
             "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get"
         }
     ],

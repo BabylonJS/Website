@@ -2,13 +2,12 @@
     "menuTitle": "BABYLON REACT NATIVE",
     "title": "Babylon Native: cross-platform native apps with the power of Babylon.js",
     "metaTags": [
-        {
-        }
+        {}
     ],
     "blocks": [
         {
             "templateName": "imageListBlock",
-            "content": {       
+            "content": {
                 "paddingTop": "70px",
                 "background": "#201F2D",
                 "items": [
@@ -33,7 +32,7 @@
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "BABYLON NATIVE",
+                "title": "BABYLON REACT NATIVE",
                 "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
             }
         },
@@ -166,6 +165,5 @@
                 "moreInfoText": "Visit the Forum"
             }
         }
-        
     ]
 }
