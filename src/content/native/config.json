@@ -2,13 +2,12 @@
     "menuTitle": "BABYLON NATIVE",
     "title": "Babylon Native: cross-platform native apps with the power of Babylon.js",
     "metaTags": [
-        {
-        }
+        {}
     ],
     "blocks": [
         {
             "templateName": "imageListBlock",
-            "content": {       
+            "content": {
                 "paddingTop": "70px",
                 "background": "#201F2D",
                 "items": [
@@ -66,7 +65,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Cross-platform native apps",
-                "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android and Vulkan in the future).",
+                "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -124,8 +123,8 @@
                 "marginRight": "50px",
                 "title": "Choose your UI technology",
                 "desc": "What User Interface (UI) technology you include in your application is entirely up to you. Babylon.js comes with certain UI capabilities, particularly including 3D UI for XR and other purposes, which will also work in Babylon Native. However, Babylon Native is not intended to ever include an implementation of the HTML DOM, so depending on how you choose to implement the UI, you might have to incorporate additional technologies such as React Native or a native handcraft UI.",
-                "moreInfoLink": "",
-                "moreInfoText": ""
+                "moreInfoLink": "/reactnative/",
+                "moreInfoText": "More on Babylon React Native"
             }
         },
         {
@@ -166,6 +165,5 @@
                 "moreInfoText": "Visit the Forum"
             }
         }
-        
     ]
 }
