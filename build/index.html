@@ -147,8 +147,8 @@
 </div>
             <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
-        <h2>Welcome to Babylon.js 4.1</h2>
-        <p>Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. Up to 3 times smaller and 12% faster, Babylon.js 4.1 includes countless performance optimizations,  continuing the lineage of a high-performance engine. With the new Node Material Editor, a truly cross-platform development experience with Babylon Native, Cascaded Shadows, Navigation Mesh, updated WebXR and glTF support, and much much more, Babylon.js 4.1 brings even more power to your web development toolbox.</p>
+        <h2>Welcome to Babylon.js 4.2</h2>
+        <p>Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. We are artists, developers, creators, and dreamers and we want to make it as simple as possible to enable everyone to bring their ideas to life. With this new version of Babylon.js, we set out to make it even easier to develop with. From a ton of new tools, to improved workflows and features, new documentation and more, it is our sincere hope that Babylon.js 4.2 will make your development process faster and easier while unlocking new simple ways to work.</p>
     </div>
 </div>
             <section class="linkList-block" style="margin-top:;margin-bottom:30px">
@@ -190,11 +190,8 @@
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Node Material Editor</h2>
-            <p style="color:">Introducing the powerful and simple Node Material Editor. This new user-friendly node based system unlocks the power of the GPU for everyone. Traditionally, writing shaders (GPU programs) hasn&#x27;t been very easy or accessible for anyone without the understanding of low level code. Babylon&#x27;s new node material system removes the complexity without sacrificing power. With this new system, absolutely anyone can create beautiful shader networks by simply connecting nodes together.</p>
-            <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/how_to/node_material">More on Node Materials</a>
-            </div>
+            <h2>New and Updated Tools</h2>
+            <p style="color:">The core focus of Babylon.js 4.2 has been around simplicity. While Babylon.js keeps its code-first approach, we’ve added many tools in the Inspector and enhanced the Node Material Editor to save time to developers and Tech Artists. With the Particle Editor, you can now create and configure particle systems with the click of the mouse. It is also that simple to create, control, and save sprite systems thanks to the Sprite Editor. The Skeleton Viewer makes it quick and easy to debug pesky rigging issues inside your scene, and the Texture Inspector is perfect for quickly identifying texture problems in your creation. The Node Material Editor can now be used to create Procedural Textures, Particle Shaders, and Post Process Effects!</p>
         </div>
     </div>
 </section>
@@ -203,10 +200,10 @@
     <div class="inner-container" style="max-height:400px">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Babylon Native Preview</h2>
-            <p style="color:">The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies.</p>
+            <h2>More PBR Support</h2>
+            <p style="color:">Full support for Physically Based Rendering (PBR) is a top priority for Babylon.js. With version 4.2, we’re pushing the limits of rendering even further, with some exciting new capabilities. The Node Material Editor now support PBR Materials! With this addition, you can now create your own custom PBR materials and shaders in a simple and visual editor. You can also simulate the way light bounces around below the surface of semi-translucent objects with advanced sub-surface scattering support.</p>
             <div class="link-block">
-                <a style="color:" href="/native">More on Babylon Native</a>
+                <a style="color:" href="https://aka.ms/4_2_PBRNMEDoc">More on NME PBR</a>
             </div>
         </div>
         <div>
@@ -222,10 +219,10 @@
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Navigation Mesh and Crowd Agents</h2>
-            <p style="color:">With the new fun and simple Navigation Mesh system, leveraging the power of the excellent and open-source Recast navigation library, it&#x27;s easier than ever to create convincing &quot;AI&quot; for your game or interactive experience. Simply provide a crowd agent with a navigation mesh, and the movement of that agent will be confined to the mesh. As seen with the fish in this Underwater Demo, you&#x27;ll find it very useful for AI and path finding or to replace physics for collision detection (only allow player to go where it&#x27;s possible instead of using collision detection).</p>
+            <h2>Environment Lighting Enhancements</h2>
+            <p style="color:">Lighting is essential to the realism of a scene. In Babylon.js 4.2, shadows are getting even better with the added capability of being able to render soft transparent shadows for transparent objects. With the introduction of real-time PBR filtering, advanced refraction and reflection is now just a few lines of code away. We have also added direct support for pre-filtering .hdr files. That means you can now use .hdr files directly in your Babylon.js scene!</p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/extensions/navigationmesh">More on Navigation Mesh and Crowd Agents</a>
+                <a style="color:" href="https://aka.ms/4_2_STSDoc">More on transparent shadows</a>
             </div>
         </div>
     </div>
@@ -235,14 +232,62 @@
     <div class="inner-container" style="max-height:400px">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Updated WebXR Support</h2>
-            <p style="color:">It&#x27;s no secret that the future is bright for AR/VR experiences on the web. Babylon 4.1 further advances the engine&#x27;s best-in-class WebXR support by bringing an easy to use experience helper, a dedicated session manager for more advanced users, one camera to rule them all, full support for any device that accepts WebXR sessions, full input-source support, API for Experimental AR features, teleportation, scene interactions, physics, and more.</p>
+            <h2>Babylon React Native</h2>
+            <p style="color:">With Babylon.js 4.1 we introduced Babylon Native, a system for building native applications with the same rendering power and code used for your Babylon.js web applications. This initiative takes a major step forward with Babylon React Native. This project takes the power of the React Native framework and combines it with the power, beauty, and simplicity of Babylon.js to unlock the ability to create some truly amazing cross-platform experiences.</p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/how_to/introduction_to_webxr">More on WebXR</a>
+                <a style="color:" href="/reactnative">More on Babylon React Native</a>
             </div>
         </div>
         <div>
-            <img src="assets/img/vr.png" alt="Photo of a Microsoft VR motion controller." style="width:550px">
+            <img src="assets/img/agents.png" alt="Photo of a Microsoft VR motion controller." style="width:550px">
+        </div>
+    </div>
+</section>
+            <section class="image-and-text-block "
+    style="background-color: #000000;">
+    <div class="inner-container" style="max-height:400px">
+        <div>
+            <img src="assets/img/agents.png" alt="A 3D sun made with particle systems." style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+            <h2>New Documentation</h2>
+            <p style="color:">Babylon.js features a rich library of documentation to help you get started and master the platform. With Babylon.js 4.2, we’ve completely reorganized the documentation to guide your learning as your knowledge advances. Whether you want to dive into a specific subject or follow the guided path, we are sure that the Babylon.js documentation will be more simple and helpful than ever before.</p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/4_2_NewDocs">New Documentation</a>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="image-and-text-block  right "
+    style="background-color: #453526;">
+    <div class="inner-container" style="max-height:400px">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+            <h2>WebXR</h2>
+            <p style="color:">Babylon.js 4.2 includes updated support for WebXR. This exciting new standard allows developers to easily create compelling cross-browser AR/VR web experiences. Babylon.js 4.2 adds support for hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support, and much much more.</p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/4_2_WebXRDoc">More on WebXR</a>
+            </div>
+        </div>
+        <div>
+            <img src="assets/img/agents.png" alt="A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment." style="width:550px">
+        </div>
+    </div>
+</section>
+            <section class="image-and-text-block "
+    style="background-color: #2a2342;">
+    <div class="inner-container" style="max-height:400px">
+        <div>
+            <img src="assets/img/agents.png" alt="A color picker made with the Babylon.js GUI system." style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+            <h2>Updated Standards Support</h2>
+            <p style="color:">Babylon.js 4.2 features support for the latest .glTF extensions, both ratified and experimental! This includes the latest effort from the Commerce 3D Working Group and KTX + BasisU. With constantly updated support of the latest capabilities of the .glTF format, Babylon.js ensures your 3D objects will render exactly how you expect them to.</p>
+            <div class="link-block">
+                <a style="color:" href="/ecommerce">More on e-commerce</a>
+            </div>
         </div>
     </div>
 </section>
