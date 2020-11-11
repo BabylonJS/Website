@@ -66,7 +66,7 @@
                 "alignment": "left",
                 "background": "#5a0014",
                 "img": {
-                    "url": "assets/img/rendering.png",
+                    "url": "assets/img/shoeVariants.gif",
                     "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
                     "width": "550px"
                 },
@@ -74,7 +74,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Supporting 3D Commerce™",
-                "desc": "3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences (e.g. 3D configurators, room planners), advertising (e.g. 3D ads, 3D campaigns) and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support the standards, and broaden their adoption (e.g. KHR_material_variants extension).",
+                "desc": "3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences, advertising, and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support, and broaden the adoption of the standards.",
                 "moreInfoLink": "https://aka.ms/4_2_3DCommercePlayground",
                 "moreInfoText": "A variants demo"
             }
@@ -112,9 +112,9 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Interactives experiences",
-                "desc": "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or &quot;exploding&quot; a complex object into it parts are also easy to set-up.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
-                "moreInfoText": "More on WebXR"
+                "desc": "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or 'exploding' a complex object into it parts are also easy to set-up.",
+                "moreInfoLink": "https://doc.babylonjs.com/extensions/the_babylon_viewer",
+                "moreInfoText": "More on Babylon Viewer"
             }
         },
         {
@@ -123,7 +123,26 @@
                 "alignment": "right",
                 "background": "#453526",
                 "img": {
-                    "url": "assets/img/physics.png",
+                    "url": "assets/img/WebXR.png",
+                    "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "AR and VR experiences",
+                "desc": "Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on WebXR"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2a2342",
+                "img": {
+                    "url": "assets/img/crossDevice.svg",
                     "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
                     "width": "550px"
                 },
@@ -132,7 +151,7 @@
                 "marginRight": "50px",
                 "title": "Web and Mobile",
                 "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).",
-                "moreInfoLink": "https://www.babylonjs.com/native/",
+                "moreInfoLink": "/native",
                 "moreInfoText": "More on Babylon Native"
             }
         },
