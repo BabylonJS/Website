@@ -1,0 +1,250 @@
+/* mobile styles */
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    color: #353333;
+    margin: 0px;
+}
+
+p {
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    line-height: 150%;
+    margin: 0px 0px 30px 0px;
+    color: #353333;
+}
+
+#viewport {
+    position: relative;
+}
+
+#renderCanvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    z-index: 10;
+    outline-width: 0px;
+    pointer-events: none;
+}
+
+#embed {
+    z-index: 20;
+}
+
+#htmlLayer {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    height: 100%; 
+    overflow: scroll; 
+    background-color: #dbd6d6;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #353535;
+    z-index: 1000;
+}
+
+#headerType {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    font-family: acumin-pro-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    color: #bbbbbb;
+    vertical-align: center;
+    padding: 15px 0px 0px 10px;
+}
+
+#content {
+   width: 100%; 
+}
+
+#defaultSpace {
+    margin-top: 0%;
+}
+
+[id*="block_"] {
+    width: 100%;
+    /* display: inline-block; */
+    /* padding: 50px 50px 50px 50px; */
+    /* margin-top: 300px; */
+}
+
+#bg1 {
+    background-image: url('assets/textures/blurBackgroundPurple.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:block;
+    padding: 400px 0px 400px 0px;
+}
+
+
+#bg2 {
+    background-color: #333;
+    display:block;
+    padding: 700px 0px 400px 0px;
+}
+
+#bg3 {
+    background-image: url('assets/textures/blurBackgroundOrange.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:block;
+    padding: 400px 0px 400px 0px;
+}
+
+#bg1 h1, #bg1 p, #bg2 h1, #bg2 p {
+    color: #fff;
+}
+
+#block_1 {
+    margin-top: 800px;
+}
+
+#block_2 {
+    padding-left: 20%;
+}
+
+#block_4 {
+    padding-right: 20%;
+}
+
+.col_left, .col_right {
+    width: 60%;
+}
+
+.col_spacer {
+    width: 25%;
+}
+
+.dehydrate {
+    animation:fade 0.8s forwards
+}
+@keyframes fade {
+    from {
+        opacity: 1
+    } 
+    to {
+        opacity: 0
+    }
+}
+
+.hydrate {
+    animation:appear 0.8s forwards
+}
+@keyframes appear {
+    from {
+        opacity: 0
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+[class*="button_"] {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+.button_black {
+    background-color: #333;
+} 
+.button_white {
+    background-color: #bbb;
+} 
+.button_wood {
+    background-color: #973214;
+} 
+  
+
+[class*="col_"] {
+    float: left;
+    padding: 15px;
+}
+
+/* for tablets */
+@media only screen and (min-width: 600px) {
+
+    [id*="block_"] {
+        width: 100%;
+        padding: 50px 50px 50px 50px;
+    }
+    
+    .headerContent {
+        width: 80%;
+    }
+}
+
+/* for desktop */
+@media only screen and (min-width: 992px) {
+
+    [id*="block_"] {
+        width: 60%;
+        max-width: 1200px;
+        min-width: 700px;
+        padding: 100px 50px 100px 50px;
+        align-self: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #block_2 {
+        padding: 0px 0px 300px 25%;
+    }    
+    
+    #block_3 {
+        padding: 300px 25% 0px 0px;
+    }    
+
+    #block_4 {
+        padding: 300px 0px 0px 0px;
+    }    
+
+    #block_5 {
+        padding: 500px 0px 0px 0px;
+    }
+
+    #block_6 {
+        padding: 900px 0px 0px 20%;
+    }
+
+    .headerContent {
+        width: 60%;
+        max-width: 1200px;
+        min-width: 700px;
+        align-self: center;
+        align-content: left;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
