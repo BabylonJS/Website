@@ -1,10 +1,3 @@
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\babylon.d.ts" />
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\gui\\babylon.gui.d.ts" />
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\uiControls\\babylon.uiControls.module.d.ts" />
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\serializers\\babylonjs.serializers.d.ts" />
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\postProcessesLibrary\\babylonjs.postProcess.module.d.ts" />
-/// <reference path="..\\..\\..\\Documents\\SourceControl\\GitHub\\Babylon.js\\dist\\preview release\\loaders\\babylonjs.loaders.d.ts" />
-    
 var deviceCanvas = async function() {
         var scene = await createScene(); //Call the createScene function
 
