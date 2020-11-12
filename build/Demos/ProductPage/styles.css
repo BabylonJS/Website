@@ -98,7 +98,7 @@ p {
 
 #bg1, #bg2, #bg3 {
     display:block;
-    padding: 400px 0px 50px 0px;
+    padding: 350px 0px 50px 0px;
 }
 
 #bg1 {
@@ -111,6 +111,7 @@ p {
 
 #bg3 {
     background-color: #f86d0e;
+    padding-bottom: 10px;
 }
 
 #bg1 h1, #bg1 p, #bg2 h1, #bg2 p {
@@ -118,7 +119,7 @@ p {
 }
 
 #block_1 {
-    margin-top: 400px;
+    margin: 400px 0px 50px 0px;
 }
 
 #block_2 {
@@ -130,12 +131,11 @@ p {
 }    
 
 #block_4 {
-    padding-top: 100px;
+    padding-top: 10px;
 }    
 
 #block_5 {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 10px;
 }
 
 #block_6 {
@@ -144,8 +144,8 @@ p {
 
 #loader {
     position: fixed;
-    top: 250px;
-    left: 50%;
+    top: 150px;
+    left: 40%;
     margin-left: -15%;
     width: 30%;
     align-content: center;
@@ -155,7 +155,7 @@ p {
 #loadingText {
     width: 30%;
     position: fixed;
-    top: 300px;
+    top: 230px;
     left: 50%;
     margin-left: -15%;
     z-index: 5;
@@ -228,14 +228,14 @@ p {
 /* for tablets */
 @media only screen and (min-width: 600px) {
 
-    [id*="block_"] {
+    /* [id*="block_"] {
         width: 100%;
         padding: 50px 50px 50px 50px;
     }
     
     .headerContent {
         width: 80%;
-    }
+    } */
 }
 
 /* for desktop */
@@ -245,6 +245,7 @@ p {
         font-family: acumin-pro-extra-condensed, sans-serif;
         font-weight: 700;
         font-size: 4em;
+        line-height: 1.5em;
         color: #353333;
         margin: 0px;
     }
@@ -292,7 +293,7 @@ p {
     }
 
     #block_1 {
-        margin-top: 800px;
+        margin: 800px auto 50px auto;
     }
     
     #block_2 {
@@ -315,6 +316,25 @@ p {
         padding: 600px 0px 0px 20%;
     }
 
+    #loader {
+        position: fixed;
+        top: 250px;
+        left: 50%;
+        margin-left: -15%;
+        width: 30%;
+        align-content: center;
+        z-index: 2;
+    }
+    
+    #loadingText {
+        width: 30%;
+        position: fixed;
+        top: 300px;
+        left: 50%;
+        margin-left: -15%;
+        z-index: 5;
+    }
+    
     .headerContent {
         width: 60%;
         max-width: 1200px;
