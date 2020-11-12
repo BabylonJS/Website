@@ -280,6 +280,33 @@
                         }
                     },
                     {
+                        "desc": "CustomizeCar",
+                        "author": "by SmarTeam3D",
+                        "link": "https://www.smarteam3d.com/portfolio/car_config.html",
+                        "img": {
+                            "url": "../community/assets/img/CustomizeCar.jpg",
+                            "alt": "CustomizeCar"
+                        }
+                    },
+                    {
+                        "desc": "CYBROX SUPRA",
+                        "author": "by 3D Panacea",
+                        "link": "http://www.3dpanacea.com/automotive_showroom/cybrox.html",
+                        "img": {
+                            "url": "../community/assets/img/Cybrox Supra.jpg",
+                            "alt": "CYBROX SUPRA"
+                        }
+                    },
+                    {
+                        "desc": "Ducatti Garage",
+                        "author": "by Barksie",
+                        "link": "https://nymbl3d.github.io/nymblWebGL/projects/04DucatiXDiavel/XDiavelDemo.html",
+                        "img": {
+                            "url": "../community/assets/img/ducatti.jpg",
+                            "alt": "Ducatti Garage"
+                        }
+                    },
+                    {
                         "desc": "Carport Designer",
                         "author": "by Unda Solutions",
                         "link": "https://carport.unda.com.au",
