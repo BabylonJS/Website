@@ -335,8 +335,12 @@ var createScene = async function () {
     const trackElements = [];
     const eventAnimations = [];
     let screenHeight = engine.getRenderHeight();
+    let screenWidth = engine.getRenderWidth();
+    let isMobile = (screenWidth < 992) ? true : false;
     engine.onResizeObservable.add(() => {
         screenHeight = engine.getRenderHeight();
+        screenWidth = engine.getRenderWidth();
+        isMobile = (screenWidth < 992) ? true : false;
     });
     function updateElementPositions() {
         if(trackElements.length === 0) {
@@ -347,7 +351,7 @@ var createScene = async function () {
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation1,
+                        clip: isMobile ? pivotTranslationMobile1 : pivotTranslation1,
                         animDuration: 45
                     },
                     {
@@ -365,12 +369,12 @@ var createScene = async function () {
             });
             eventAnimations.push({
                 name: "head_2",
-                motionPosition: 0.6,
-                hydrationPosition: 0.3,
+                motionPosition: isMobile ? 0.8 : 0.6,
+                hydrationPosition: isMobile ? 0.4 : 0.3,
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation2,
+                        clip: isMobile ? pivotTranslationMobile2 : pivotTranslation2,
                         animDuration: 60
                     },
                     {
@@ -388,12 +392,12 @@ var createScene = async function () {
             });
             eventAnimations.push({
                 name: "head_3",
-                motionPosition: 0.6,
-                hydrationPosition: 0.2,
+                motionPosition: isMobile ? 0.8 : 0.6,
+                hydrationPosition: isMobile ? 0.4 : 0.2,
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation3,
+                        clip: isMobile ? pivotTranslationMobile3 : pivotTranslation3,
                         animDuration: 90
                     },
                     {
@@ -411,12 +415,12 @@ var createScene = async function () {
             });
             eventAnimations.push({
                 name: "head_4",
-                motionPosition: 0.9,
+                motionPosition: isMobile ? 0.8 : 0.9,
                 hydrationPosition: 0.5,
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation4,
+                        clip: isMobile ? pivotTranslationMobile4 : pivotTranslation4,
                         animDuration: 45
                     },
                     {
@@ -440,12 +444,12 @@ var createScene = async function () {
             });
             eventAnimations.push({
                 name: "head_5",
-                motionPosition: 0.8,
+                motionPosition: isMobile ? 0.7 : 0.8,
                 hydrationPosition: 0.5,
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation5,
+                        clip: isMobile ? pivotTranslationMobile5 : pivotTranslation5,
                         animDuration: 45
                     },
                     {
@@ -478,7 +482,7 @@ var createScene = async function () {
                 animations: [
                     {
                         target: devicePivot,
-                        clip: pivotTranslation6,
+                        clip: isMobile ? pivotTranslationMobile6 : pivotTranslation6,
                         animDuration: 45
                     },
                     {
@@ -499,7 +503,8 @@ var createScene = async function () {
                 ],
                 morph: undefined,
             });
-            console.log("animations.length: " + eventAnimations[0].animations.length);
+
+            console.log("clip: " + eventAnimations[0].animations[0].clip.keys[1].value);
 
             let tags = document.getElementsByClassName("track");
             let index = 0;
@@ -528,7 +533,7 @@ var createScene = async function () {
         for (let tag of trackElements) {
             tag.position = document.getElementById(tag.id).getBoundingClientRect().top;
             if (tag.position < screenHeight * tag.motionPosition && tag.activeTrack === true) {
-                console.log(tag.id + " is in the middle of the screen at " + tag.position + " compared to position: " + tag.motionPosition);
+                // console.log(tag.id + " is in the middle of the screen at " + tag.position + " compared to position: " + tag.motionPosition);
                 for (let hotSpot of eventAnimations) {
                     if (hotSpot.name === tag.id) {
                         startEventAnimation(hotSpot.animations);
@@ -536,13 +541,12 @@ var createScene = async function () {
                             morphMaterial(hotSpot.morph);
                         }    
                         isMorphing = (hotSpot.name === "head_4") ? true : false;
-                        console.log("ismorphing: " + isMorphing);
                     }
                 }
                 tag.activeTrack = false;    
             }
             else if (tag.position > screenHeight * tag.motionPosition && tag.activeTrack === false) {
-                console.log(tag.id + " is in the middle of the screen at " + tag.position + " compared to position: " + tag.motionPosition);
+                // console.log(tag.id + " is in the middle of the screen at " + tag.position + " compared to position: " + tag.motionPosition);
                 for (let hotSpot of eventAnimations) {
                     if (hotSpot.name === tag.id) {
                         startEventAnimation(hotSpot.animations);    
@@ -550,7 +554,6 @@ var createScene = async function () {
                             morphMaterial(hotSpot.morph);
                         }    
                         isMorphing = (hotSpot.name === "head_4") ? true : false;
-                        console.log("ismorphing: " + isMorphing);
                     }
                 }
                 tag.activeTrack = true;
@@ -597,7 +600,7 @@ var createScene = async function () {
         let initAnimations = [
             {
                 target: devicePivot,
-                clip: pivotTranslation1,
+                clip: isMobile ? pivotTranslationMobile1 : pivotTranslation1,
                 animDuration: 100
             },
             {
@@ -698,7 +701,18 @@ var createScene = async function () {
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
             looping: false
         };
-        pivotRotation1 = {
+        pivotTranslationMobile1 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.0, 0.04, 0.025)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };        pivotRotation1 = {
             name: "pivotRotation",
             value: "rotation.x",
             type: BABYLON.Animation.ANIMATIONTYPE_FLOAT,
@@ -734,7 +748,18 @@ var createScene = async function () {
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
             looping: false
         };
-        pivotRotation2 = {
+        pivotTranslationMobile2 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.0, 0.04, 0.025)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };        pivotRotation2 = {
             name: "pivotRotation",
             value: "rotation.x",
             type: BABYLON.Animation.ANIMATIONTYPE_FLOAT,
@@ -765,6 +790,18 @@ var createScene = async function () {
             keys: [
                 {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
                 {frame: 60, value: new BABYLON.Vector3(0.07, 0.02, -0.12)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };
+        pivotTranslationMobile3 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.00, 0.04, 0.025)} 
             ],
             easingFunction: new BABYLON.SineEase(),
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
@@ -806,6 +843,18 @@ var createScene = async function () {
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
             looping: false
         };
+        pivotTranslationMobile4 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.0, 0.04, 0.025)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };
         pivotRotation4 = {
             name: "pivotRotation",
             value: "rotation.x",
@@ -842,6 +891,18 @@ var createScene = async function () {
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
             looping: false
         };
+        pivotTranslationMobile5 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.0, 0.04, 0.025)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };
         pivotRotation5 = {
             name: "pivotRotation",
             value: "rotation.x",
@@ -873,6 +934,18 @@ var createScene = async function () {
             keys: [
                 {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
                 {frame: 60, value: new BABYLON.Vector3(-0.07, 0.03, -0.03)} 
+            ],
+            easingFunction: new BABYLON.SineEase(),
+            easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
+            looping: false
+        };
+        pivotTranslationMobile6 = {
+            name: "pivotTranslation",
+            value: "position",
+            type: BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            keys: [
+                {frame: 0, value: new BABYLON.Vector3(0, 0, 0)},
+                {frame: 60, value: new BABYLON.Vector3(0.0, 0.04, 0.025)} 
             ],
             easingFunction: new BABYLON.SineEase(),
             easingMode: BABYLON.EasingFunction.EASINGMODE_EASEINOUT,
