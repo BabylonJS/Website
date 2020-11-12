@@ -1,7 +1,7 @@
 var createScene = async function () {
     // This creates a basic Babylon Scene object (non-mesh)
     var scene = new BABYLON.Scene(engine);
-    engine.displayLoadingUI();  
+    BABYLON.SceneLoader.ShowLoadingScreen = false;
 
     // create camera and lights for scene
     function initScene() {
@@ -611,6 +611,11 @@ var createScene = async function () {
                 animDuration: 100
             }
         ];
+        document.getElementById("loader").classList.toggle("dehydrate", true);
+        setTimeout(() => {
+            document.getElementById("loader").classList.toggle("hide", true);
+        }, 3000);
+
         startEventAnimation(initAnimations);
     }
 
@@ -1028,7 +1033,23 @@ var createScene = async function () {
     initGlowLayer();
     initializeDevice();
     animateMorph();
-    engine.hideLoadingUI();
+
+    // show inspector
+    inspectorActive = false;
+    function displayInspector() {
+        if (event.keyCode === 78) { // n key to open inspector
+            if (inspectorActive) {
+                scene.debugLayer.hide();
+                inspectorActive = false;
+            } else {
+                scene.debugLayer.show({embedMode: true});
+                inspectorActive = true;
+            }    
+        }
+        if (event.keyCode === 67) { // c for temp morph
+            morphMaterial(nextVariant(currentVariant));
+        }
+    }
 
     const scrollTarget = document.getElementById("htmlLayer");
     function scrollReroute(deltaY) {
@@ -1037,6 +1058,14 @@ var createScene = async function () {
 
     document.addEventListener("wheel", event => scrollReroute(event.deltaY));
     document.getElementById("htmlLayer").addEventListener("scroll", updateElementPositions);
+
+    // add listener for key press
+    document.addEventListener('keydown', displayInspector);
+
+    // remove listeners when scene disposed
+    scene.onDisposeObservable.add(function() {
+        canvas.removeEventListener('keydown', displayInspector);
+    });
 
     return scene;
 };

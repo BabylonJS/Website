@@ -15,7 +15,8 @@ html, body {
 h1 {
     font-family: acumin-pro-extra-condensed, sans-serif;
     font-weight: 700;
-    font-size: 4em;
+    font-size: 2em;
+    line-height: 1em;
     color: #353333;
     margin: 0px;
 }
@@ -23,7 +24,7 @@ h1 {
 p {
     font-family: acumin-pro-semi-condensed, sans-serif;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 150%;
     margin: 0px 0px 30px 0px;
     color: #353333;
@@ -90,33 +91,26 @@ p {
 [id*="block_"] {
     width: 100%;
     /* display: inline-block; */
-    /* padding: 50px 50px 50px 50px; */
+    padding-left: 10%;
+    padding-right: 10%;
     /* margin-top: 300px; */
 }
 
-#bg1 {
-    background-image: url('assets/textures/blurBackgroundPurple.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#bg1, #bg2, #bg3 {
     display:block;
-    padding: 400px 0px 400px 0px;
+    padding: 400px 0px 50px 0px;
 }
 
+#bg1 {
+    background-color: #753ca6;
+}
 
 #bg2 {
     background-color: #333;
-    display:block;
-    padding: 700px 0px 400px 0px;
 }
 
 #bg3 {
-    background-image: url('assets/textures/blurBackgroundOrange.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display:block;
-    padding: 400px 0px 400px 0px;
+    background-color: #f86d0e;
 }
 
 #bg1 h1, #bg1 p, #bg2 h1, #bg2 p {
@@ -124,15 +118,56 @@ p {
 }
 
 #block_1 {
-    margin-top: 800px;
+    margin-top: 400px;
 }
 
 #block_2 {
-    padding-left: 20%;
-}
+    padding-bottom: 150px;
+}    
+
+#block_3 {
+    padding-top: 150px;
+}    
 
 #block_4 {
-    padding-right: 20%;
+    padding-top: 100px;
+}    
+
+#block_5 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#block_6 {
+    padding-top: 150px;
+}
+
+#loader {
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    margin-left: -15%;
+    width: 30%;
+    align-content: center;
+    z-index: 2;
+}
+
+#loadingText {
+    width: 30%;
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    margin-left: -15%;
+    z-index: 5;
+}
+
+#loadingText h1 {
+    color: #888;
+    text-align: center;
+}
+
+.hide {
+    display: none;
 }
 
 .col_left, .col_right {
@@ -183,8 +218,7 @@ p {
 } 
 .button_wood {
     background-color: #973214;
-} 
-  
+}   
 
 [class*="col_"] {
     float: left;
@@ -207,6 +241,23 @@ p {
 /* for desktop */
 @media only screen and (min-width: 992px) {
 
+    h1 {
+        font-family: acumin-pro-extra-condensed, sans-serif;
+        font-weight: 700;
+        font-size: 4em;
+        color: #353333;
+        margin: 0px;
+    }
+    
+    p {
+        font-family: acumin-pro-semi-condensed, sans-serif;
+        font-weight: 300;
+        font-size: 1.25em;
+        line-height: 150%;
+        margin: 0px 0px 30px 0px;
+        color: #353333;
+    }
+
     [id*="block_"] {
         width: 60%;
         max-width: 1200px;
@@ -217,6 +268,33 @@ p {
         margin-left: auto;
     }
 
+    #bg1, #bg2, #bg3 {
+        display:block;
+        padding: 400px 0px 400px 0px;
+    }
+    
+    #bg1 {
+        background-image: url('assets/textures/blurBackgroundPurple.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    #bg2 {
+        background-color: #333;
+    }
+    
+    #bg3 {
+        background-image: url('assets/textures/blurBackgroundOrange.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #block_1 {
+        margin-top: 800px;
+    }
+    
     #block_2 {
         padding: 0px 0px 300px 25%;
     }    
@@ -226,15 +304,15 @@ p {
     }    
 
     #block_4 {
-        padding: 300px 0px 0px 0px;
+        padding: 500px 0px 100px 0px;
     }    
 
     #block_5 {
-        padding: 500px 0px 0px 0px;
+        padding: 600px 0px 0px 0px;
     }
 
     #block_6 {
-        padding: 900px 0px 0px 20%;
+        padding: 600px 0px 0px 20%;
     }
 
     .headerContent {
@@ -247,4 +325,40 @@ p {
         margin-left: auto;
     }
 }
+
+/* loading spinner from https://loading.io/css/ */
+
+.lds-ripple {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 100px;
+      left: 100px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
+  
 
