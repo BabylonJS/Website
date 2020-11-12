@@ -1,0 +1,330 @@
+{
+    "menuTitle": "E-COMMERCE",
+    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
+    "metaTags": [
+        {}
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "./assets/videos/AdobeDimension.mp4",
+                        "demoLink": "https://assets.adobe.com/id/urn:aaid:sc:US:a9d21f31-8528-4333-b762-6f3b7a525ea4?view=dimension"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/unit21.mp4",
+                        "demoLink": "https://www.productexample.com/unit21/index.html"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/targetNursery.mp4",
+                        "demoLink": "https://www.target.com/room-planner/nursery"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/shoeVariants.mp4",
+                        "demoLink": "https://aka.ms/4_2_3DCommercePlayground"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/wayfair.mp4",
+                        "demoLink": "https://www.wayfair.com/RoomPlanner3D"
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "A 3D ENGINE FOR THE E-COMMERCE.",
+                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it as simple as possible to create visually realistic 3D experiences that run on the web in any browser, or even natively with Babylon Native. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#3B251F",
+                "img": {
+                    "url": "assets/img/shoeVariants.png",
+                    "alt": "Rendering of an athletic shoe with material variants.",
+                    "width": "550px"
+                },
+                "height": "500px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "paddingTop": "30px",
+                "paddingBottom": "30px",
+                "title": "Supporting 3D Commerce™",
+                "desc": "3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences, advertising, and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support, and broaden the adoption of the standards.",
+                "moreInfoLink": "https://aka.ms/4_2_3DCommercePlayground",
+                "moreInfoText": "A variants demo"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#2a2342",
+                "img": {
+                    "url": "assets/img/transparentShadows.png",
+                    "alt": "Rendering of a half-empty soda bottle casting a shadow on the table",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
+                "title": "Visual realism",
+                "desc": "When representing a product via a 3D Model, visual realism is essential for the buying decision. The Babylon.js engine implements the latest glTF 2.0 PBR material extensions such as Sheen (e.g. to represent the fabric of a furniture), clearcoat (e.g. car paint), transmission (e.g. thin glass) and works closely with the 3D Assets™ Khronos® working group on the upcoming extensions (e.g. Volume, Translucency for thick glass and semi-transparent objects). Custom PBR Materials can also be created without coding with the Node Material Editor.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/node_material#creating-pbr-materials",
+                "moreInfoText": "More on PBR Materials in NME"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#324554",
+                "img": {
+                    "url": "assets/img/pbrDevice.png",
+                    "alt": "PBR materials rendered on an mock product electronic device.",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
+                "title": "Interactives experiences",
+                "desc": "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or 'exploding' a complex object into it parts are also easy to set-up.",
+                "moreInfoLink": "https://doc.babylonjs.com/extensions/the_babylon_viewer",
+                "moreInfoText": "More on Babylon Viewer"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#301108",
+                "img": {
+                    "url": "assets/img/WebXR.png",
+                    "alt": "WebXR logo.",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
+                "title": "AR and VR experiences",
+                "desc": "Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more.",
+                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoText": "More on WebXR"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#2a2342",
+                "img": {
+                    "url": "assets/img/crossDevice.svg",
+                    "alt": "An illustration of devices of differing size and format.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Web and Mobile",
+                "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).",
+                "moreInfoLink": "/native",
+                "moreInfoText": "More on Babylon Native"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#000000",
+                "img": {
+                    "url": "assets/img/forum.png",
+                    "alt": "A screen capture of our very active forum page.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Active, Friendly Community",
+                "desc": "Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.",
+                "moreInfoLink": "https://forum.babylonjs.com",
+                "moreInfoText": "Visit the Forum"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "/specifications",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "E-Commerce experiences made with Babylon.js",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Room Planner 3D",
+                        "author": "by Wayfair",
+                        "link": "https://www.wayfair.com/RoomPlanner3D",
+                        "img": {
+                            "url": "../community/assets/img/RoomPlanner3D.jpg",
+                            "alt": "Room Planner 3D"
+                        }
+                    },
+                    {
+                        "desc": "Nursery Room Planner",
+                        "author": "by Target",
+                        "link": "https://www.target.com/room-planner/nursery",
+                        "img": {
+                            "url": "../community/assets/img/RoomNursery.jpg",
+                            "alt": "Nursery Room Planner"
+                        }
+                    },
+                    {
+                        "desc": "College Room Planner",
+                        "author": "by Target",
+                        "link": "https://www.target.com/room-planner/college",
+                        "img": {
+                            "url": "../community/assets/img/RoomCollege.jpg",
+                            "alt": "College Room Planner"
+                        }
+                    },
+                    {
+                        "desc": "3D Bed Designer",
+                        "author": "by GetLaidBeds",
+                        "link": "https://www.getlaidbeds.co.uk/wooden-beds/four-poster-wooden-beds/moroccan-four-poster-wooden-bed-frame#3d-design",
+                        "img": {
+                            "url": "../community/assets/img/bedDesigner.jpg",
+                            "alt": "3D Bed Designer"
+                        }
+                    },
+                    {
+                        "desc": "Sportswear online design",
+                        "author": "by Juwei Chen",
+                        "link": "https://www.tontossport.com/custom-polo-uniform/women-short-sleeve-polo-shirts/white-short-sleeve-polo-shirts-with-pockets-504",
+                        "img": {
+                            "url": "/community/assets/img/Online design of diverse 3D sportswear apps.jpg",
+                            "alt": "Sportswear online design"
+                        }
+                    },
+                    {
+                        "desc": "SurfaceVue",
+                        "author": "Deft & Tact",
+                        "link": "https://surfacevue-web.azurewebsites.net/",
+                        "img": {
+                            "url": "../community/assets/img/SurfaceVue.jpg",
+                            "alt": "SurfaceVue"
+                        }
+                    },
+                    {
+                        "desc": "Unit21 Interior Visualization",
+                        "author": "by Marko & Pero",
+                        "link": "https://www.productexample.com/unit21/index.html",
+                        "img": {
+                            "url": "../community/assets/img/unit21.jpg",
+                            "alt": "Unit21 Interior Visualization - Marko & Pero"
+                        }
+                    },
+                    {
+                        "desc": "Carport Designer",
+                        "author": "by Unda Solutions",
+                        "link": "https://carport.unda.com.au",
+                        "img": {
+                            "url": "../community/assets/img/carport-designer.jpg",
+                            "alt": "Carport Designer"
+                        }
+                    },
+                    {
+                        "desc": "Pallet Configurator",
+                        "author": "by Peli",
+                        "link": "https://www.pelicatalogue.com/en/site/isp2-pallet/configurator?width=120&length=100&height=",
+                        "img": {
+                            "url": "../community/assets/img/palletConfig.jpg",
+                            "alt": "Pallet Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Apartment Configurator",
+                        "author": "by Axeon Software",
+                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
+                        "img": {
+                            "url": "../community/assets/img/ApartmentConfigurator.jpg",
+                            "alt": "Apartment Configurator"
+                        }
+                    },
+                    {
+                        "desc": "boltless configurator",
+                        "author": "by Buyrack",
+                        "link": "http://www.buyrack.com/pc/boltless-configurator.html",
+                        "img": {
+                            "url": "../community/assets/img/buyrack.jpg",
+                            "alt": "boltless configurator"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE",
+                "marginBottom": "0px"
+            }
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 <section class="image-and-text-block {{#if (eq alignment 'right')}} right {{/if}}"
     style="background-color: {{#var background}}{{/var}};">
-    <div class="inner-container" style="max-height:{{height}}">
+    <div class="inner-container" style="max-height:{{height}};padding-top:{{paddingTop}};padding-bottom:{{paddingBottom}};">
         {{#if (eq alignment "left")}}
         <div>
             <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">

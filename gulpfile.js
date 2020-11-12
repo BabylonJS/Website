@@ -11,14 +11,14 @@ const _outputRootPath = "./build";
 //--------------- End ----------------
 
 //--------------- Helpers ----------------
-var parseJsonFromFile = function(path) {
+var parseJsonFromFile = function (path) {
     var jsonStr = _fs.readFileSync(path, { encoding: 'utf8' });
     var jsonObj = JSON.parse(jsonStr);
 
     return jsonObj;
 };
 
-var getPageConfig = function(rootPath, pageConfig) {
+var getPageConfig = function (rootPath, pageConfig) {
     var res = {};
     if (pageConfig && pageConfig.root) {
         var configPath = _path.join(rootPath, pageConfig.root, 'config.json');
@@ -33,14 +33,14 @@ var getPageConfig = function(rootPath, pageConfig) {
     return res;
 };
 
-var getTemplate = function(templatePath) {
+var getTemplate = function (templatePath) {
     var source = _fs.readFileSync(templatePath, { encoding: 'utf8' });
     var template = _handlebars.compile(source);
 
     return template;
 }
 
-var renderPage = function(pageConfig, globalConfig) {
+var renderPage = function (pageConfig, globalConfig) {
     var template = getTemplate("./src/templates/index-template.html");
     var context = pageConfig;
     context.menu = globalConfig.menu;
@@ -63,46 +63,46 @@ var renderPage = function(pageConfig, globalConfig) {
 //--------------- End ----------------
 
 //--------------- Gulp tasks ----------------
-_gulp.task('build', function(done) {
+_gulp.task('build', function (done) {
     //init handlebars
     _handlebars.registerHelper({
-        block: function(block) {
+        block: function (block) {
             var template = getTemplate("./src/templates/" + block.templateName + "-template.html");
             var html = template(block.content);
 
             return html;
         },
-        json: function(obj) {
+        json: function (obj) {
             return new _handlebars.SafeString(JSON.stringify(obj));
         },
-        var: function(key) {
+        var: function (key) {
             if (_shared.variables[key])
                 return new _handlebars.SafeString(_shared.variables[key]);
             else
                 return new _handlebars.SafeString(key);
         },
-        eq: function(v1, v2) {
+        eq: function (v1, v2) {
             return v1 === v2;
         },
-        ne: function(v1, v2) {
+        ne: function (v1, v2) {
             return v1 !== v2;
         },
-        lt: function(v1, v2) {
+        lt: function (v1, v2) {
             return v1 < v2;
         },
-        gt: function(v1, v2) {
+        gt: function (v1, v2) {
             return v1 > v2;
         },
-        lte: function(v1, v2) {
+        lte: function (v1, v2) {
             return v1 <= v2;
         },
-        gte: function(v1, v2) {
+        gte: function (v1, v2) {
             return v1 >= v2;
         },
-        and: function() {
+        and: function () {
             return Array.prototype.slice.call(arguments).every(Boolean);
         },
-        or: function() {
+        or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
         }
     });
@@ -120,7 +120,7 @@ _gulp.task('build', function(done) {
     //load settings for home page
     siteConfig.home = getPageConfig(_contentRootPath, siteConfig.home);
     //load settings for all children
-    siteConfig.menu.forEach(function(menuItem) {
+    siteConfig.menu.forEach(function (menuItem) {
         var pageConfig = getPageConfig(_contentRootPath, menuItem);
         if (pageConfig.children) {
             for (var i = 0; i < pageConfig.children.length; i++) {
@@ -128,7 +128,10 @@ _gulp.task('build', function(done) {
             }
         }
 
-        globalConfig.menu.push(pageConfig);
+        if (pageConfig.visible) {
+            console.log(pageConfig.absoluteRoot)
+            globalConfig.menu.push(pageConfig);
+        }
     });
 
 
@@ -143,7 +146,7 @@ _gulp.task('build', function(done) {
     renderPage(siteConfig.home, globalConfig);
 
     //render all other pages from the menue
-    siteConfig.menu.forEach(function(menuItem) {
+    siteConfig.menu.forEach(function (menuItem) {
         if (menuItem.menuUrl)
             return;
         renderPage(menuItem, globalConfig);
@@ -158,7 +161,7 @@ _gulp.task('build', function(done) {
     done();
 });
 
-_gulp.task('server', function() {
+_gulp.task('server', function () {
     _connect.server({
         root: _outputRootPath,
         port: 8080,
@@ -167,13 +170,13 @@ _gulp.task('server', function() {
     });
 });
 
-_gulp.task('reload', function() {
+_gulp.task('reload', function () {
     _connect.reload();
 });
 
-_gulp.task('watch-and-reload', function(done) {
-    _gulp.watch(['src/content/**/*.json', 'src/templates/**/*.html', 'src/assets/**/*.js', 'src/assets/**/*.css'], function() {
-    }).on('change', function(file) {
+_gulp.task('watch-and-reload', function (done) {
+    _gulp.watch(['src/content/**/*.json', 'src/templates/**/*.html', 'src/assets/**/*.js', 'src/assets/**/*.css'], function () {
+    }).on('change', function (file) {
         _gulp.series('build', 'reload')();
     });
     done();

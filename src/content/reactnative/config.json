@@ -1,0 +1,131 @@
+{
+    "menuTitle": "BABYLON REACT NATIVE",
+    "title": "Babylon Native: cross-platform native apps with the power of Babylon.js",
+    "metaTags": [
+        {}
+    ],
+    "blocks": [
+        {
+            "templateName": "imageListBlock",
+            "content": {
+                "paddingTop": "70px",
+                "background": "#201F2D",
+                "items": [
+                    {
+                        "video": {
+                            "url": "assets/videos/bReactNativeDemo.mp4",
+                            "width": "1100px"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "anchorBlock",
+            "content": {
+                "anchor": "feature",
+                "offset": "-70px"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "BABYLON REACT NATIVE",
+                "desc": "Babylon React Native combines the React Native framework with the power, beauty, and simplicity of Babylon.js to unlock the ability to create 3D cross-platform experiences."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Get the Preview",
+                        "link": "https://www.npmjs.com/package/@babylonjs/react-native",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#363c52",
+                "img": {
+                    "url": "assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Babylon Native",
+                "desc": "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).",
+                "moreInfoLink": "/native",
+                "moreInfoText": "More on Babylon Native"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#222222",
+                "img": {
+                    "url": "assets/img/reactNativeLogo.png",
+                    "alt": "React Native logo.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "React Native",
+                "desc": "React Native enables developers to use the React JavaScript library for building user interfaces across native applications. The UI code is written in JavaScript and the React primitives render to native platform UI. Babylon React Native provides a simple solution for combining 3D rendering with platform native screen space UI via platform agnostic code.",
+                "moreInfoLink": "https://reactnative.dev/",
+                "moreInfoText": "More on React Native"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#363c52",
+                "img": {
+                    "url": "assets/img/devWorkflow.svg",
+                    "alt": "Graphic showing developer workflow from code to save to visualize and back to the start.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Developer workflow",
+                "desc": "React Native provides a mature developer toolset that does a lot of the heavy lifting of hosting a JavaScript engine, including developer features like fast refresh and debugging support. In Babylon React Native, changes to both the UI and the 3D application code are visible as soon as they are saved. No more waiting for native builds to be complete.",
+                "moreInfoLink": "https://www.youtube.com/watch?v=x6baGsEQhcU&feature=emb_logo",
+                "moreInfoText": "Babylon React Native Demo"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#000000",
+                "img": {
+                    "url": "assets/img/forum.png",
+                    "alt": "A screen capture of our very active forum page.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Active, Friendly Community",
+                "desc": "Babylon React Native is part of the Babylon.js family and inherits an active open-source community that supports each other in creating amazing experiences. As you begin your Babylon.js and Babylon React Native journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.",
+                "moreInfoLink": "https://forum.babylonjs.com",
+                "moreInfoText": "Visit the Forum"
+            }
+        }
+    ]
+}
