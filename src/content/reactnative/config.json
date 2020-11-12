@@ -13,8 +13,8 @@
                 "items": [
                     {
                         "video": {
-                            "url": "assets/videos/bNativeTogether.mp4",
-                            "width": "1000px"
+                            "url": "assets/videos/bReactNativeDemo.mp4",
+                            "width": "1100px"
                         }
                     }
                 ]
@@ -55,7 +55,7 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#201f2d",
+                "background": "#363c52",
                 "img": {
                     "url": "assets/img/crossDevice.svg",
                     "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
@@ -74,10 +74,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#5a0014",
+                "background": "#222222",
                 "img": {
                     "url": "assets/img/reactNativeLogo.png",
-                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "alt": "React Native logo.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -93,10 +93,10 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#565042",
+                "background": "#363c52",
                 "img": {
-                    "url": "assets/img/developerWorkflow.jpg",
-                    "alt": "Illustration of Developer Workflow: code, save, visualize",
+                    "url": "assets/img/devWorkflow.svg",
+                    "alt": "Graphic showing developer workflow from code to save to visualize and back to the start.",
                     "width": "550px"
                 },
                 "height": "400px",
