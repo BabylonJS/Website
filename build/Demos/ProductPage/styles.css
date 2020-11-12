@@ -55,7 +55,7 @@ p {
     width: 100%;
     z-index: 1;
     height: 100%; 
-    overflow: scroll; 
+    overflow-y: scroll; 
     background-color: #dbd6d6;
 }
 
