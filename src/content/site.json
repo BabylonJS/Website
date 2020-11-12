@@ -9,27 +9,33 @@
             "children": [
                 {
                     "menuTitle": "PLAYGROUND",
-                    "menuUrl": "https://playground.babylonjs.com/"
+                    "menuUrl": "https://playground.babylonjs.com/",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "SANDBOX",
-                    "menuUrl": "https://sandbox.babylonjs.com/"
+                    "menuUrl": "https://sandbox.babylonjs.com/",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "NODE MATERIAL EDITOR",
-                    "menuUrl": "https://nme.babylonjs.com/"
+                    "menuUrl": "https://nme.babylonjs.com/",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "DOCUMENTATION",
-                    "menuUrl": "https://doc.babylonjs.com/"
+                    "menuUrl": "https://doc.babylonjs.com/",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "EXPORTERS",
-                    "menuUrl": "https://github.com/BabylonJS/Exporters/"
+                    "menuUrl": "https://github.com/BabylonJS/Exporters/",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "SPECTOR.JS",
-                    "menuUrl": "https://spector.babylonjs.com/"
+                    "menuUrl": "https://spector.babylonjs.com/",
+                    "target": "_blank"
                 }
             ]
         },
@@ -39,11 +45,12 @@
             "children": [
                 {
                     "menuTitle": "FORUM",
-                    "menuUrl": "https://forum.babylonjs.com"
+                    "menuUrl": "https://forum.babylonjs.com",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "DEMOS",
-                    "menuUrl": "https://www.babylonjs.com/community"
+                    "menuUrl": "/community"
                 }
             ]
         },
@@ -79,19 +86,18 @@
             "children": [
                 {
                     "menuTitle": "DOCUMENTATION",
-                    "menuUrl": "https://doc.babylonjs.com/"
+                    "menuUrl": "https://doc.babylonjs.com/",
+                    "target": "_blank"
                 },
                 {
-                    "menuTitle": "EXAMPLES",
-                    "menuUrl": "https://doc.babylonjs.com/examples/"
-                },
-                {
-                    "menuTitle": "TUTORIALS",
-                    "menuUrl": "https://doc.babylonjs.com/how_to/"
+                    "menuTitle": "VIDEOS",
+                    "menuUrl": "https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ",
+                    "target": "_blank"
                 },
                 {
                     "menuTitle": "BLOG",
-                    "menuUrl": "https://medium.com/@babylonjs"
+                    "menuUrl": "https://medium.com/@babylonjs",
+                    "target": "_blank"
                 }
             ]
         },
@@ -102,12 +108,14 @@
         {
             "menuTitle": "RELEASE NOTES",
             "visible": true,
-            "menuUrl": "https://doc.babylonjs.com/whats-new"
+            "menuUrl": "https://doc.babylonjs.com/whats-new",
+            "target": "_blank"
         },
         {
             "menuTitle": "GET",
             "visible": true,
-            "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get"
+            "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get",
+            "target": "_blank"
         }
     ],
     "footerMenu": [

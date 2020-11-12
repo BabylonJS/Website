@@ -92,7 +92,7 @@
                                 <ul class="{{menuTitle}} hidden">
                                     {{#each children}}
                                     {{#if menuUrl}}
-                                    <li class="user-select"><a href="{{menuUrl}}" target="_blank">{{menuTitle}}</a></li>
+                                    <li class="user-select"><a href="{{menuUrl}}" target="{{target}}">{{menuTitle}}</a></li>
                                     {{else}}
                                     <li class="user-select"><a href="/{{../root}}/{{root}}">{{menuTitle}}</a></li>
                                     {{/if}}
