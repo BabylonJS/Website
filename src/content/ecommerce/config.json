@@ -11,20 +11,24 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "./assets/videos/minecraftClassic.mp4",
-                        "demoLink": "https://classic.minecraft.net"
+                        "videoUrl": "./assets/videos/AdobeDimension.mp4",
+                        "demoLink": "https://assets.adobe.com/id/urn:aaid:sc:US:a9d21f31-8528-4333-b762-6f3b7a525ea4?view=dimension"
                     },
                     {
-                        "videoUrl": "./assets/videos/ACPirates.mp4",
-                        "demoLink": "http://race.assassinscreedpirates.com/"
+                        "videoUrl": "./assets/videos/unit21.mp4",
+                        "demoLink": "https://www.productexample.com/unit21/index.html"
                     },
                     {
-                        "videoUrl": "./assets/videos/brilliantMan.mp4",
-                        "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
+                        "videoUrl": "./assets/videos/targetNursery.mp4",
+                        "demoLink": "https://www.target.com/room-planner/nursery"
                     },
                     {
-                        "videoUrl": "./assets/videos/battlechoc.mp4",
-                        "demoLink": "https://battlechoc.com"
+                        "videoUrl": "./assets/videos/shoeVariants.mp4",
+                        "demoLink": "https://aka.ms/4_2_3DCommercePlayground"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/wayfair.mp4",
+                        "demoLink": "https://www.wayfair.com/RoomPlanner3D"
                     }
                 ]
             }
@@ -64,15 +68,17 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#5a0014",
+                "background": "#3B251F",
                 "img": {
-                    "url": "assets/img/shoeVariants.gif",
-                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "url": "assets/img/shoeVariants.png",
+                    "alt": "Rendering of an athletic shoe with material variants.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "500px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
+                "paddingTop": "30px",
+                "paddingBottom": "30px",
                 "title": "Supporting 3D Commerce™",
                 "desc": "3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences, advertising, and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support, and broaden the adoption of the standards.",
                 "moreInfoLink": "https://aka.ms/4_2_3DCommercePlayground",
@@ -83,15 +89,17 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#3b4846",
+                "background": "#2a2342",
                 "img": {
-                    "url": "assets/img/animation.png",
-                    "alt": "Alternative text for the image",
+                    "url": "assets/img/transparentShadows.png",
+                    "alt": "Rendering of a half-empty soda bottle casting a shadow on the table",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
                 "title": "Visual realism",
                 "desc": "When representing a product via a 3D Model, visual realism is essential for the buying decision. The Babylon.js engine implements the latest glTF 2.0 PBR material extensions such as Sheen (e.g. to represent the fabric of a furniture), clearcoat (e.g. car paint), transmission (e.g. thin glass) and works closely with the 3D Assets™ Khronos® working group on the upcoming extensions (e.g. Volume, Translucency for thick glass and semi-transparent objects). Custom PBR Materials can also be created without coding with the Node Material Editor.",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/node_material#creating-pbr-materials",
@@ -102,15 +110,17 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#000000",
+                "background": "#324554",
                 "img": {
-                    "url": "assets/img/particles.png",
-                    "alt": "A 3D sun made with particle systems.",
+                    "url": "assets/img/pbrDevice.png",
+                    "alt": "PBR materials rendered on an mock product electronic device.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
                 "title": "Interactives experiences",
                 "desc": "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or 'exploding' a complex object into it parts are also easy to set-up.",
                 "moreInfoLink": "https://doc.babylonjs.com/extensions/the_babylon_viewer",
@@ -121,15 +131,17 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#453526",
+                "background": "#301108",
                 "img": {
                     "url": "assets/img/WebXR.png",
-                    "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
+                    "alt": "WebXR logo.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
+                "paddingTop": "20px",
+                "paddingBottom": "20px",
                 "title": "AR and VR experiences",
                 "desc": "Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more.",
                 "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
@@ -143,7 +155,7 @@
                 "background": "#2a2342",
                 "img": {
                     "url": "assets/img/crossDevice.svg",
-                    "alt": "A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment.",
+                    "alt": "An illustration of devices of differing size and format.",
                     "width": "550px"
                 },
                 "height": "400px",
