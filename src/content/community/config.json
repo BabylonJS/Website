@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Studio 3D",
+                        "author": "by Neimeg",
+                        "link": "https://camisadimona.com.br/produto/caneca-acessorios-caneca?studio=true",
+                        "img": {
+                            "url": "../community/assets/img/studio3D.jpg",
+                            "alt": "Studio 3D"
+                        }
+                    },
+                    {
                         "desc": "Caterpillar Cowboy",
                         "author": "by Foxdog Studios",
                         "link": "https://ld47.fds.im/",
