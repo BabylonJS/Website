@@ -8,6 +8,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Escape Room",
+                        "author": "by Taps",
+                        "link": "https://yle.fi/aihe/artikkeli/2020/11/11/trollibunkkeri",
+                        "img": {
+                            "url": "../community/assets/img/escapeRoom.jpg",
+                            "alt": "Escape Room"
+                        }
+                    },
+                    {
                         "desc": "Studio 3D",
                         "author": "by Neimeg",
                         "link": "https://camisadimona.com.br/produto/caneca-acessorios-caneca?studio=true",
