@@ -26,6 +26,15 @@
                         }
                     },
                     {
+                        "desc": "Car Customizer",
+                        "author": "by Karim Mohammed",
+                        "link": "https://modest-leavitt-9fa711.netlify.app/",
+                        "img": {
+                            "url": "../community/assets/img/carCustomizer.jpg",
+                            "alt": "Car Customizer"
+                        }
+                    },
+                    {
                         "desc": "Studio 3D",
                         "author": "by Neimeg",
                         "link": "https://camisadimona.com.br/produto/caneca-acessorios-caneca?studio=true",
