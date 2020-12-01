@@ -94,7 +94,7 @@
 								"name": "featuredDemo1",
 								"alt": "Demo 1 description"
 							},
-							"url": "https://google.com"
+							"link": "https://google.com"
 						},
 						{
 							"url": {
