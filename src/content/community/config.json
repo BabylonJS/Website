@@ -1,5 +1,6 @@
 {
     "menuTitle": "COMMUNITY",
+    "title": "Babylon.js Demos",
     "blocks": [
         {
             "templateName": "galleryBlock",
