@@ -18,6 +18,15 @@
                         }
                     },
                     {
+                        "desc": "3D Art Gallery",
+                        "author": "by Karim Mohammed",
+                        "link": "https://quirky-mcnulty-f68aa7.netlify.app/",
+                        "img": {
+                            "url": "../community/assets/img/3dArtGallery.jpg",
+                            "alt": "3D Art Gallery"
+                        }
+                    },
+                    {
                         "desc": "Escape Room",
                         "author": "by Yle",
                         "link": "https://yle.fi/aihe/artikkeli/2020/11/11/trollibunkkeri",
