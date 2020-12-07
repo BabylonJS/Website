@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Snow Ball",
+                        "author": "by mawa",
+                        "link": "http://www.media-geneva.ch/demos/bjs/snowball/psa.html",
+                        "img": {
+                            "url": "../community/assets/img/snowBall.jpg",
+                            "alt": "Snow Ball"
+                        }
+                    },
+                    {
                         "desc": "Cash App",
                         "author": "by Justin Schwinghamer",
                         "link": "https://cash.app/cashbycashapp",
