@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "3D Room Planner",
+                        "author": "by Marxent",
+                        "link": "https://www.marxentlabs.com/products/3d-room-planner-apps/",
+                        "img": {
+                            "url": "../community/assets/img/marxent.jpg",
+                            "alt": "3D Room Planner"
+                        }
+                    },
+                    {
                         "desc": "Snow Ball",
                         "author": "by mawa",
                         "link": "http://www.media-geneva.ch/demos/bjs/snowball/psa.html",
