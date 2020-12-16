@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Christmas Snow Globe",
+                        "author": "by Robin_McLaut",
+                        "link": "https://demo.seitwerk.de/sw-ice/",
+                        "img": {
+                            "url": "../community/assets/img/Christmas_Snow_Globe.jpg",
+                            "alt": "Christmas Snow Globe"
+                        }
+                    },
+                    {
                         "desc": "Shed Builder",
                         "author": "by Karim Mohammed",
                         "link": "https://affectionate-turing-a19afe.netlify.app/",
@@ -303,15 +312,6 @@
                         "img": {
                             "url": "../community/assets/img/hotelAtlantis.jpg",
                             "alt": "Hotel Atlantis"
-                        }
-                    },
-                    {
-                        "desc": "Christmas Snow Globe",
-                        "author": "by Robin_McLaut",
-                        "link": "https://demo.seitwerk.net/sw-ice/",
-                        "img": {
-                            "url": "../community/assets/img/Christmas_Snow_Globe.jpg",
-                            "alt": "Christmas Snow Globe"
                         }
                     },
                     {
