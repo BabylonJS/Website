@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "City Generator",
+                        "author": "by MackeyK24",
+                        "link": "https://assetstore.unity.com/packages/3d/environments/urban/fantastic-city-generator-157625",
+                        "img": {
+                            "url": "../community/assets/img/cityGenerator.jpg",
+                            "alt": "City Generator"
+                        }
+                    },
+                    {
                         "desc": "Christmas Snow Globe",
                         "author": "by Robin_McLaut",
                         "link": "https://demo.seitwerk.de/sw-ice/",
