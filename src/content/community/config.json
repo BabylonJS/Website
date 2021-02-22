@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Virtual Tennis",
+                        "author": "by Punk Office",
+                        "link": "https://punkoffice.com/tennis/",
+                        "img": {
+                            "url": "../community/assets/img/virtualTennis.jpg",
+                            "alt": "Virtual Tennis"
+                        }
+                    },
+                    {
                         "desc": "The Cube Earth Society",
                         "author": "by Guigoz",
                         "link": "https://thecubeearthsociety.com/#solarSystem",
