@@ -18,6 +18,15 @@
                         }
                     },
                     {
+                        "desc": "Brainy Warriors",
+                        "author": "by miyakojingi",
+                        "link": "http://brainywarriors.com/",
+                        "img": {
+                            "url": "../community/assets/img/brainyWarrior.jpg",
+                            "alt": "Brainy Warriors"
+                        }
+                    },
+                    {
                         "desc": "Wall Game",
                         "author": "by Robin_McLaut",
                         "link": "https://demo.seitwerk.de/sw-wall/",
