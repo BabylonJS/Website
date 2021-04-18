@@ -97,19 +97,19 @@
 
     <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
 
-    <script src="lib/babylon.max.js"></script>
-    <script src="lib/babylonjs.loaders.min.js"></script>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="headerLogo">
-            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
                 <img src="logo.svg"></img>
             </a>
         </div>
         <div class="headerText">
-            <a href="https://doc.babylonjs.com/extensions/WebGPU">
+            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
                 WebGL
             </a>
         </div>
@@ -140,7 +140,7 @@
         }
 
         const setupScene = function(scene) {
-            scene.clearColor = new BABYLON.Color3(0.626, 0.764, 0.883);
+            scene.clearColor = new BABYLON.Color4(0.626, 0.764, 0.883, 1);
 
             scene.environmentTexture = new BABYLON.CubeTexture("assets/environments/country.env", scene);
 
@@ -186,12 +186,14 @@
                 const tempScene = new BABYLON.Scene(tempEngine);
     
                 const onLoad = () => {
-                    const data = {
-                        data: logoDistribution.readPixels(),
-                        size: logoDistribution.getSize()
-                    };
-                    tempEngine.dispose();
-                    resolve(data);
+                    logoDistribution.readPixels().then((pixData) => {
+                        const data = {
+                            data: pixData,
+                            size: logoDistribution.getSize()
+                        };
+                        tempEngine.dispose();
+                        resolve(data);
+                    });
                 };
                 logoDistribution = new BABYLON.Texture("assets/distribution.png", tempScene, true, true, undefined, onLoad);
             });
@@ -303,8 +305,12 @@
             scene.freezeMaterials();
             scene.meshes.forEach((m) => {
                 m.isPickable = false;
+                m.alwaysSelectAsActiveMesh = true;
                 m.freezeWorldMatrix();
             });
+            setTimeout(() => {
+                scene.freezeActiveMeshes(true);
+            }, 1000);
         }
 
         const engine = new BABYLON.Engine(canvas);
@@ -353,6 +359,7 @@
                 const randomScale = Math.random() * 1.5 + scale;
                 const randomPosition = new BABYLON.Vector3(x, 0, y);
                 const randomRotation = Math.random() * Math.PI * 2;
+
                 await cloneMeshAsync(gardenMeshes[j], i + "_" + j, i, randomScale, randomPosition, randomRotation);
 
                 // NEXT !!!
@@ -389,7 +396,7 @@
             t = (t + 1) % 10;
             // Prevent hammering the composition.
             if (t === 0) {
-                divFps.innerHTML = engine.getFps().toFixed() + " fps - " + ((endCPUTime - startCPUTime)).toFixed() + " CPU ms";
+                divFps.innerHTML = engine.getFps().toFixed() + " fps - " + ((endCPUTime - startCPUTime)).toFixed(2) + " CPU ms";
             }
         });
 
