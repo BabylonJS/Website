@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "SYNTHAX",
+                        "author": "by Foxhoundn",
+                        "link": "https://synthax.gg/",
+                        "img": {
+                            "url": "../community/assets/img/SYNTHAX.jpg",
+                            "alt": "SYNTHAX"
+                        }
+                    },
+                    {
                         "desc": "Brainy Warriors",
                         "author": "by miyakojingi",
                         "link": "http://brainywarriors.com/",
