@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "3D Dev",
+                        "author": "by Martinez",
+                        "link": "https://3dev.io/",
+                        "img": {
+                            "url": "../community/assets/img/3ddevio.jpg",
+                            "alt": "3D Dev"
+                        }
+                    },
+                    {
                         "desc": "Virtual Showroom",
                         "author": "by 3dprof.com",
                         "link": "http://3dprof.com/bocchi01/",
