@@ -249,6 +249,15 @@
                         }
                     },
                     {
+                        "desc": "Mayflower Autonomous Ship",
+                        "author": "by IBM",
+                        "link": "https://www.ibm.com/resources/cloud/mayflower-ship-experience/#/",
+                        "img": {
+                            "url": "../community/assets/img/ibmAutoShip.jpg",
+                            "alt": "Mayflower Autonomous Ship"
+                        }
+                    },
+                    {
                         "desc": "Marble Tower",
                         "author": "by PirateJC",
                         "link": "https://playground.babylonjs.com/#3I55DK#0",
@@ -282,15 +291,6 @@
                         "img": {
                             "url": "./community/assets/img/masters.jpg",
                             "alt": "US Masters"
-                        }
-                    },
-                    {
-                        "desc": "Retro Planet",
-                        "author": "by Pryme8",
-                        "link": "https://playground.babylonjs.com/#JF18C0#58",
-                        "img": {
-                            "url": "../community/assets/img/retroPlanet.jpg",
-                            "alt": "Retro Planetoid"
                         }
                     }
                 ]
