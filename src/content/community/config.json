@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Mayflower Autonomous Ship",
+                        "author": "by IBM",
+                        "link": "https://www.ibm.com/resources/cloud/mayflower-ship-experience/#/",
+                        "img": {
+                            "url": "../community/assets/img/ibmAutoShip.jpg",
+                            "alt": "Mayflower Autonomous Ship"
+                        }
+                    },
+                    {
                         "desc": "3D Graphs",
                         "author": "by bjornbacklund",
                         "link": "https://www.backlund.org/app.aspx?about=FancyCharts3D",
