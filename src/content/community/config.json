@@ -18,6 +18,15 @@
                         }
                     },
                     {
+                        "desc": "SOLUS BY HEBRU BRANTLEY",
+                        "author": "by Michael Scherotter",
+                        "link": "https://www.phillips.com/solus",
+                        "img": {
+                            "url": "../community/assets/img/solus.jpg",
+                            "alt": "SOLUS BY HEBRU BRANTLEY"
+                        }
+                    },
+                    {
                         "desc": "3D Graphs",
                         "author": "by bjornbacklund",
                         "link": "https://www.backlund.org/app.aspx?about=FancyCharts3D",
