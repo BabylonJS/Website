@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Honda PBR Sketch",
+                        "author": "by rdurnin",
+                        "link": "https://www.rolesrulesrewards.com/honda-civic-utc.html?play-auto",
+                        "img": {
+                            "url": "../community/assets/img/civic.jpg",
+                            "alt": "Honda PBR Sketch"
+                        }
+                    },
+                    {
                         "desc": "Mayflower Autonomous Ship",
                         "author": "by IBM",
                         "link": "https://www.ibm.com/resources/cloud/mayflower-ship-experience/#/",
