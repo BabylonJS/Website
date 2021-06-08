@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "RedBull F1",
+                        "author": "by HiteshSahu",
+                        "link": "https://hiteshsahu.com/RedBull",
+                        "img": {
+                            "url": "../community/assets/img/f1Car.jpg",
+                            "alt": "RedBull F1"
+                        }
+                    },
+                    {
                         "desc": "Voxel Builder",
                         "author": "by nima",
                         "link": "https://nimadez.github.io/voxel-builder/",
