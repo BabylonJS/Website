@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Voxel Builder",
+                        "author": "by nima",
+                        "link": "https://nimadez.github.io/voxel-builder/",
+                        "img": {
+                            "url": "../community/assets/img/voxelBuilder.jpg",
+                            "alt": "Voxel Builder"
+                        }
+                    },
+                    {
                         "desc": "Motorcycle Showroom",
                         "author": "by sebodeweb",
                         "link": "http://sebodeweb.ir/3dshow/es01.html",
