@@ -72,12 +72,12 @@
                         }
                     },
                     {
-                        "desc": "Immage Gallery Designer",
+                        "desc": "VR Mansion Gallery",
                         "author": "by Adrianlines",
-                        "link": "https://ukcpg.co.uk/scripts/mansion.php?hash=3",
+                        "link": "https://ukcpg.co.uk/scripts/mansion.php?hash=e46678965c21fa93869ab77ac97602b58cb31e601c1d845bab824bc981ef2346",
                         "img": {
-                            "url": "../community/assets/img/artGallery.jpeg",
-                            "alt": "Immage Gallery Designer"
+                            "url": "../community/assets/img/vrMansionGallery.jpg",
+                            "alt": "VR Mansion Gallery"
                         }
                     },
                     {
