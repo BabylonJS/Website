@@ -299,12 +299,12 @@
                         }
                     },
                     {
-                        "desc": "Final Fantasy Card Game",
-                        "author": "by Square Enix",
-                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
+                        "desc": "Wall Game",
+                        "author": "by Robin_McLaut",
+                        "link": "https://demo.seitwerk.de/sw-wall/",
                         "img": {
-                            "url": "../community/assets/img/finalFantasy.jpg",
-                            "alt": "Final Fantasy Digital Card Game"
+                            "url": "../community/assets/img/wallGame.jpg",
+                            "alt": "Wall Game"
                         }
                     },
                     {
