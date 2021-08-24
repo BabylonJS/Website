@@ -9,6 +9,24 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Stagnant Pools",
+                        "author": "by MNNQNS & Yoco",
+                        "link": "https://www.mnnqns-stagnantpools.leoramaen.com/",
+                        "img": {
+                            "url": "/community/assets/img/stagnantPools.jpg",
+                            "alt": "Stagnant Pools"
+                        }
+                    },
+                    {
+                        "desc": "Diamond",
+                        "author": "by Simon",
+                        "link": "https://www.clickon.ru/demo/diamond/",
+                        "img": {
+                            "url": "/community/assets/img/diamond.jpg",
+                            "alt": "Diamond"
+                        }
+                    },
+                    {
                         "desc": "Interactive 3D Web",
                         "author": "by Zwetdesign",
                         "link": "https://www.zwetdesign.com/interaktive-ansicht/",
