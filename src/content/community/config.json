@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Genshin Toon Shader",
+                        "author": "by Lun",
+                        "link": "https://playground.babylonjs.com/#SH5DVI#1",
+                        "img": {
+                            "url": "/community/assets/img/toonShader.jpg",
+                            "alt": "Genshin Toon Shader"
+                        }
+                    },
+                    {
                         "desc": "Shiba Inu Token Price Tracker",
                         "author": "by DRLeria",
                         "link": "https://viseni.com/shiba6/",
