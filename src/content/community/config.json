@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Shiba Inu Token Price Tracker",
+                        "author": "by DRLeria",
+                        "link": "https://viseni.com/shiba6/",
+                        "img": {
+                            "url": "/community/assets/img/shiba.jpg",
+                            "alt": "Shiba Inu Token Price Tracker"
+                        }
+                    },
+                    {
                         "desc": "Build Your Own JEEP",
                         "author": "by WEDOO",
                         "link": "https://www.jeep.com/wrangler/build-your-own-3d-jeep.html",
