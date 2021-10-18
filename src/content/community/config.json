@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Guitar Sim",
+                        "author": "by jonarnold",
+                        "link": "https://guitarsim.com/",
+                        "img": {
+                            "url": "/community/assets/img/guitarsim.jpg",
+                            "alt": "Guitar Sim"
+                        }
+                    },
+                    {
                         "desc": "Cathedral",
                         "author": "by Vinc3r",
                         "link": "https://time-loop.fr/Therouanne/EXPERIENCES/3DSCAN/CATHEDRALE/#!/",
