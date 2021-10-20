@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Mercedes Speedboard",
+                        "author": "by Robin_McLaut",
+                        "link": "https://www.mercedes-benz.com/en/eq-formulae/we-drive-the-city/mercedes-eq-speedboard-game/",
+                        "img": {
+                            "url": "/community/assets/img/mercedes.jpg",
+                            "alt": "Mercedes Speedboard"
+                        }
+                    },
+                    {
                         "desc": "Guitar Sim",
                         "author": "by jonarnold",
                         "link": "https://guitarsim.com/",
