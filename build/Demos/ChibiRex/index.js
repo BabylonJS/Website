@@ -2,27 +2,23 @@ var CreateChibiRexScene = function (engine) {
 	var scene = new BABYLON.Scene(engine);
 	scene.clearColor = new BABYLON.Color4(0.02, 0.02, 0.02, 1.0);
 
-
 	engine.setHardwareScalingLevel(0.75);
 
 	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
-		var currentPluginName = plugin.name;
-
 		if (plugin.name === "gltf" && plugin instanceof BABYLON.GLTFFileLoader) {
 			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
 			plugin.compileMaterials = true;
 		}
 	});
 
-	var loader = BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Saturated.gltf", scene, function () {
-		scene.createDefaultCameraOrLight(true, true, true);
+	var loader = BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Idle.gltf", scene, function () {
+		scene.createDefaultCamera(true, true, true);
 
 		scene.activeCamera.alpha = 2.5;
 		scene.activeCamera.beta = 1.5;
 		scene.activeCamera.lowerRadiusLimit = 2;
 		scene.activeCamera.upperRadiusLimit = 10;
 		scene.activeCamera.useAutoRotationBehavior = true;
-		scene.lights[0].dispose();
 
 		var light = new BABYLON.DirectionalLight("light1", new BABYLON.Vector3(0, -1, -1), scene);
 		light.position = new BABYLON.Vector3(1, 7, -2);
