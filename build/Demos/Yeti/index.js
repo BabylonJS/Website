@@ -6,8 +6,6 @@ var CreateYetiScene = function (engine) {
 	scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
 	BABYLON.SceneLoader.OnPluginActivatedObservable.add(function (plugin) {
-		var currentPluginName = plugin.name;
-
 		if (plugin.name === "gltf" && plugin instanceof BABYLON.GLTFFileLoader) {
 			plugin.animationStartMode = BABYLON.GLTFLoaderAnimationStartMode.ALL;
 			plugin.compileMaterials = true;
@@ -15,7 +13,7 @@ var CreateYetiScene = function (engine) {
 	}); 
 
 	engine.setHardwareScalingLevel(0.75);
-	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti_Idle.gltf", scene, function () {
+	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
 
 		scene.activeCamera.alpha = 2;
