@@ -11,7 +11,7 @@ var CreateChibiRexScene = function (engine) {
 		}
 	});
 
-	var loader = BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Idle.gltf", scene, function () {
+	var loader = BABYLON.SceneLoader.Append("/Assets/ChibiRex/glTF/", "ChibiRex_Saturated.gltf", scene, function () {
 		scene.createDefaultCamera(true, true, true);
 
 		scene.activeCamera.alpha = 2.5;

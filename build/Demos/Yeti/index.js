@@ -13,7 +13,7 @@ var CreateYetiScene = function (engine) {
 	}); 
 
 	engine.setHardwareScalingLevel(0.75);
-	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti.gltf", scene, function () {
+	BABYLON.SceneLoader.Append("/Assets/Yeti/glTF/", "Yeti_Idle.gltf", scene, function () {
 		scene.createDefaultCameraOrLight(true, true, true);
 
 		scene.activeCamera.alpha = 2;
