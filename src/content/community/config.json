@@ -9,6 +9,24 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Scene Pick",
+                        "author": "by Levi_Berciu",
+                        "link": "https://scenepick.com/",
+                        "img": {
+                            "url": "/community/assets/img/scenePick.jpg",
+                            "alt": "Scene Pick"
+                        }
+                    },
+                    {
+                        "desc": "Tic Tac Toe",
+                        "author": "by fliptopbox",
+                        "link": "https://tactictoe.fliptopbox.com/",
+                        "img": {
+                            "url": "/community/assets/img/tictactoe.jpg",
+                            "alt": "Tic Tac Toe"
+                        }
+                    },
+                    {
                         "desc": "Tuggowar",
                         "author": "by Mise",
                         "link": "https://tuggowar.io/",
