@@ -32,13 +32,16 @@
 
         .container {
             display: grid;
-            grid-template-columns: auto 230px 494px 300px auto;
+            grid-template-columns: 234px 1fr 72px 1fr 30%;
             grid-template-rows: 80px 768px;
+            max-width: 1024px;
+            margin: auto;
+            background-color: #201936;
         }
 
         .headerLogo {
-            grid-column-start: 2;
-            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
             grid-row-start: 1;
             grid-row-end: 1;
             background-color: #201936;
@@ -63,19 +66,19 @@
         }
 
         .headerFPS {
-            grid-column-start: 4;
-            grid-column-end: 4;
+            grid-column-start: 5;
+            grid-column-end: 5;
             grid-row-start: 1;
             grid-row-end: 1;
-            font-size: 31px;
+            font-size: min(2vw, 31px);
             line-height: 80px;
             text-align: center;
             background-color: #BB464B;
         }
 
         .content {
-            grid-column-start: 2;
-            grid-column-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 6;
             grid-row-start: 2;
             grid-row-end: 2;
         }
@@ -275,7 +278,7 @@
             scene.stopAllAnimations();
 
             const animationBeta = new BABYLON.Animation("animBeta", "beta", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
-                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             animationBeta.setKeys([{
                 frame: 0,
                 value: scene.activeCamera.beta
@@ -283,12 +286,12 @@
                 frame: 60,
                 value: 0
             }, {
-                frame: 400,
+                frame: 500,
                 value: 0
             }]);
 
             const animationRadius = new BABYLON.Animation("animRadius", "radius", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
-                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             animationRadius.setKeys([{
                 frame: 0,
                 value: scene.activeCamera.radius
@@ -298,12 +301,13 @@
             }, {
                 frame: 400,
                 value: 1550
+            }, {
+                frame: 500,
+                value: 1550
             }]);
 
             scene.activeCamera.animations.push(animationBeta);
             scene.activeCamera.animations.push(animationRadius);
-
-            scene.beginAnimation(scene.activeCamera, 0, 400, false);
         }
 
         const optimizeScene = function(scene) {
@@ -383,13 +387,16 @@
 
         // After all the meshes creation, freeze as much as we can to improve perfs.
         optimizeScene(scene);
+        animateCamera(scene);
+
+        window.addEventListener("resize", () => engine.resize());
 
         // Animate the camera on space key pressed.
         document.onkeypress = function(e) {
             var keywhich = e.which;
             var keyChar = String.fromCharCode(keywhich);
             if (keyChar === " ") {
-                animateCamera(scene);
+                scene.beginAnimation(scene.activeCamera, 0, 400, false);
             }
         }
 
