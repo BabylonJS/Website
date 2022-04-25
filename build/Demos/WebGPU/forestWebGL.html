@@ -31,19 +31,26 @@
         }
 
         .container {
-            display: grid;
-            grid-template-columns: 234px 1fr 72px 1fr 30%;
-            grid-template-rows: 80px 768px;
-            max-width: 1024px;
+            width: min(1024px, 100%);
+            height: 768px;
+            display: block;
             margin: auto;
             background-color: #201936;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 0%;
+            z-index: 2;
         }
 
         .headerLogo {
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 1;
-            grid-row-end: 1;
+            background-color: #201936;
+            display: none;
         }
 
         .headerLogo > a > img {
@@ -53,32 +60,24 @@
         }
 
         .headerText {
-            grid-column-start: 3;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            font-size: 40px;
+            font-size: 60px;
             line-height: 80px;
             text-align: center;
             font-family: "acumin-pro-extra-condensed";
         }
 
         .headerFPS {
-            grid-column-start: 5;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            font-size: min(2vw, 31px);
+            font-size: 31px;
             line-height: 80px;
             text-align: center;
             background-color: #BB464B;
+            width: 320px;
         }
 
         .content {
-            grid-column-start: 1;
-            grid-column-end: 6;
-            grid-row-start: 2;
-            grid-row-end: 2;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
 
         a {
@@ -104,17 +103,19 @@
 
 <body>
     <div class="container">
-        <div class="headerLogo">
-            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
-                <img src="logo.svg"></img>
-            </a>
+        <div class="header">
+            <div class="headerLogo">
+                <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
+                    <img src="logo.svg"></img>
+                </a>
+            </div>
+            <div class="headerText">
+                <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
+                    WebGL
+                </a>
+            </div>
+            <div class="headerFPS" id="fps">0</div>
         </div>
-        <div class="headerText">
-            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
-                WebGL
-            </a>
-        </div>
-        <div class="headerFPS" id="fps">0</div>
         <div class="content">
             <canvas id="renderCanvas" width="1024" height="768"></canvas>
         </div>
@@ -385,7 +386,7 @@
             var keywhich = e.which;
             var keyChar = String.fromCharCode(keywhich);
             if (keyChar === " ") {
-                scene.beginAnimation(scene.activeCamera, 0, 400, true);
+                scene.beginAnimation(scene.activeCamera, 0, 500, true);
             }
         }
 
