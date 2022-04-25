@@ -31,17 +31,26 @@
         }
 
         .container {
-            display: grid;
-            grid-template-columns: auto 230px 494px 300px auto;
-            grid-template-rows: 80px 768px;
+            width: min(1024px, 100%);
+            height: 768px;
+            display: block;
+            margin: auto;
+            background-color: #201936;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 0%;
+            z-index: 2;
         }
 
         .headerLogo {
-            grid-column-start: 2;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 1;
             background-color: #201936;
+            display: none;
         }
 
         .headerLogo > a > img {
@@ -51,33 +60,24 @@
         }
 
         .headerText {
-            grid-column-start: 3;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            font-size: 40px;
+            font-size: 60px;
             line-height: 80px;
             text-align: center;
-            background-color: #201936;
             font-family: "acumin-pro-extra-condensed";
         }
 
         .headerFPS {
-            grid-column-start: 4;
-            grid-column-end: 4;
-            grid-row-start: 1;
-            grid-row-end: 1;
             font-size: 31px;
             line-height: 80px;
             text-align: center;
             background-color: #BB464B;
+            width: 320px;
         }
 
         .content {
-            grid-column-start: 2;
-            grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 2;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
 
         a {
@@ -103,17 +103,19 @@
 
 <body>
     <div class="container">
-        <div class="headerLogo">
-            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
-                <img src="logo.svg"></img>
-            </a>
+        <div class="header">
+            <div class="headerLogo">
+                <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
+                    <img src="logo.svg"></img>
+                </a>
+            </div>
+            <div class="headerText">
+                <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
+                    WebGL
+                </a>
+            </div>
+            <div class="headerFPS" id="fps">0</div>
         </div>
-        <div class="headerText">
-            <a href="https://doc.babylonjs.com/advanced_topics/webGL2">
-                WebGL
-            </a>
-        </div>
-        <div class="headerFPS" id="fps">0</div>
         <div class="content">
             <canvas id="renderCanvas" width="1024" height="768"></canvas>
         </div>
@@ -270,7 +272,7 @@
             scene.stopAllAnimations();
 
             const animationBeta = new BABYLON.Animation("animBeta", "beta", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
-                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             animationBeta.setKeys([{
                 frame: 0,
                 value: scene.activeCamera.beta
@@ -278,12 +280,12 @@
                 frame: 60,
                 value: 0
             }, {
-                frame: 400,
+                frame: 500,
                 value: 0
             }]);
 
             const animationRadius = new BABYLON.Animation("animRadius", "radius", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
-                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+                                                                            BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             animationRadius.setKeys([{
                 frame: 0,
                 value: scene.activeCamera.radius
@@ -293,12 +295,13 @@
             }, {
                 frame: 400,
                 value: 1550
+            }, {
+                frame: 500,
+                value: 1550
             }]);
 
             scene.activeCamera.animations.push(animationBeta);
             scene.activeCamera.animations.push(animationRadius);
-
-            scene.beginAnimation(scene.activeCamera, 0, 400, false);
         }
 
         const optimizeScene = function(scene) {
@@ -374,13 +377,16 @@
 
         // After all the meshes creation, freeze as much as we can to improve perfs.
         optimizeScene(scene);
+        animateCamera(scene);
+
+        window.addEventListener("resize", () => engine.resize());
 
         // Animate the camera on space key pressed.
         document.onkeypress = function(e) {
             var keywhich = e.which;
             var keyChar = String.fromCharCode(keywhich);
             if (keyChar === " ") {
-                animateCamera(scene);
+                scene.beginAnimation(scene.activeCamera, 0, 500, true);
             }
         }
 
