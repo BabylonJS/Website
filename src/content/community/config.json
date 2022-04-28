@@ -252,15 +252,6 @@
                         }
                     },
                     {
-                        "desc": "World Statistics",
-                        "author": "by Ivan",
-                        "link": "https://goinmap.com/",
-                        "img": {
-                            "url": "../community/assets/img/worldMap.jpg",
-                            "alt": "World Statistics"
-                        }
-                    },
-                    {
                         "desc": "Spot",
                         "author": "by Spot",
                         "link": "https://www.spot.xyz/",
@@ -285,15 +276,6 @@
                         "img": {
                             "url": "../community/assets/img/artema.jpg",
                             "alt": "Artema Mouse"
-                        }
-                    },
-                    {
-                        "desc": "RedBull F1",
-                        "author": "by HiteshSahu",
-                        "link": "https://hiteshsahu.com/RedBull",
-                        "img": {
-                            "url": "../community/assets/img/f1Car.jpg",
-                            "alt": "RedBull F1"
                         }
                     },
                     {
@@ -387,15 +369,6 @@
                         }
                     },
                     {
-                        "desc": "Brainy Warriors",
-                        "author": "by miyakojingi",
-                        "link": "http://brainywarriors.com/",
-                        "img": {
-                            "url": "../community/assets/img/brainyWarrior.jpg",
-                            "alt": "Brainy Warriors"
-                        }
-                    },
-                    {
                         "desc": "Wall Game",
                         "author": "by Robin_McLaut",
                         "link": "https://demo.seitwerk.de/sw-wall/",
@@ -432,15 +405,6 @@
                         }
                     },
                     {
-                        "desc": "City Generator",
-                        "author": "by MackeyK24",
-                        "link": "https://assetstore.unity.com/packages/3d/environments/urban/fantastic-city-generator-157625",
-                        "img": {
-                            "url": "../community/assets/img/cityGenerator.jpg",
-                            "alt": "City Generator"
-                        }
-                    },
-                    {
                         "desc": "Christmas Snow Globe",
                         "author": "by Robin_McLaut",
                         "link": "https://demo.seitwerk.de/sw-ice/",
@@ -474,15 +438,6 @@
                         "img": {
                             "url": "../community/assets/img/snowBall.jpg",
                             "alt": "Snow Ball"
-                        }
-                    },
-                    {
-                        "desc": "Cash App",
-                        "author": "by Justin Schwinghamer",
-                        "link": "https://cash.app/cashbycashapp",
-                        "img": {
-                            "url": "../community/assets/img/cashApp.jpg",
-                            "alt": "Cash App"
                         }
                     },
                     {
@@ -576,15 +531,6 @@
                         }
                     },
                     {
-                        "desc": "3D Expo Simulation",
-                        "author": "by nasimiasl",
-                        "link": "http://virtual.iranjobex.com/",
-                        "img": {
-                            "url": "../community/assets/img/3DexpoSim.jpg",
-                            "alt": "3D Expo Simulation"
-                        }
-                    },
-                    {
                         "desc": "Tunnel Rush",
                         "author": "by Deer Cat",
                         "link": "https://poki.com/en/g/tunnel-rush",
@@ -600,15 +546,6 @@
                         "img": {
                             "url": "../community/assets/img/blazor.jpg",
                             "alt": "Blazor Automatic Kingdom"
-                        }
-                    },
-                    {
-                        "desc": "Playtable",
-                        "author": "by Jason Spafford",
-                        "link": "https://playtable.app/",
-                        "img": {
-                            "url": "../community/assets/img/playtable.jpg",
-                            "alt": "Playtable"
                         }
                     },
                     {
@@ -648,30 +585,12 @@
                         }
                     },
                     {
-                        "desc": "Farm House",
-                        "author": "by HiteshSahu",
-                        "link": "https://hiteshsahu.com/farmHouse",
-                        "img": {
-                            "url": "../community/assets/img/farmHouse.jpg",
-                            "alt": "Farm House"
-                        }
-                    },
-                    {
                         "desc": "Interactive Library",
                         "author": "by Cstfan",
                         "link": "http://3dmad.online.fr/WebGL/Library_Interactive_Map_Mtp/index.html",
                         "img": {
                             "url": "../community/assets/img/library.jpg",
                             "alt": "Interactive Library"
-                        }
-                    },
-                    {
-                        "desc": "3D Word Factory",
-                        "author": "by dingoogle",
-                        "link": "http://www.3debut.com/home/poc/1?text=Hi%20BabylonJS&color=%23fe0d00",
-                        "img": {
-                            "url": "../community/assets/img/wordFactory.jpg",
-                            "alt": "3D Word Factory"
                         }
                     },
                     {
@@ -711,24 +630,6 @@
                         }
                     },
                     {
-                        "desc": "2020 Paper Airplane Card",
-                        "author": "by @suzie_reagit",
-                        "link": "https://carte2020.wanadev.io/",
-                        "img": {
-                            "url": "../community/assets/img/paper_airplane_card.jpg",
-                            "alt": "2020 Paper Airplane Card"
-                        }
-                    },
-                    {
-                        "desc": "Need For Speed Racing System",
-                        "author": "by MackeyK24",
-                        "link": "https://www.babylontoolkit.com/projects/speedway",
-                        "img": {
-                            "url": "../community/assets/img/NFSRacingSystem.jpg",
-                            "alt": "Need For Speed Racing System"
-                        }
-                    },
-                    {
                         "desc": "Mortar Command",
                         "author": "by Doug Murphy",
                         "link": "http://mortarcommand.com/",
@@ -765,15 +666,6 @@
                         }
                     },
                     {
-                        "desc": "Imagine My City",
-                        "author": "by Edge102",
-                        "link": "http://demo.imaginermaville.fr/",
-                        "img": {
-                            "url": "../community/assets/img/Imagine_My_City.jpg",
-                            "alt": "Imagine My City"
-                        }
-                    },
-                    {
                         "desc": "Interactive background",
                         "author": "by Naker",
                         "link": "https://app.naker.io/back",
@@ -798,33 +690,6 @@
                         "img": {
                             "url": "../community/assets/img/redArrows.jpg",
                             "alt": "Red Arrows"
-                        }
-                    },
-                    {
-                        "desc": "Galactic Fight",
-                        "author": "Galactic Fight",
-                        "link": "https://www.galacticfight.net/",
-                        "img": {
-                            "url": "../community/assets/img/galacticFight.jpg",
-                            "alt": "Galactic Fight"
-                        }
-                    },
-                    {
-                        "desc": "Truck 3D",
-                        "author": "by SmarTeam3D",
-                        "link": "https://www.smarteam3d.com/portfolio/truck/index.html",
-                        "img": {
-                            "url": "../community/assets/img/truck_3d.jpg",
-                            "alt": "Truck 3D"
-                        }
-                    },
-                    {
-                        "desc": "Final Fantasy Card Game",
-                        "author": "by Square Enix",
-                        "link": "https://games.yahoo-net.jp/title/casual/752490904",
-                        "img": {
-                            "url": "../community/assets/img/finalFantasy.jpg",
-                            "alt": "Final Fantasy Digital Card Game"
                         }
                     },
                     {
@@ -972,15 +837,6 @@
                         }
                     },
                     {
-                        "desc": "Sportswear online design",
-                        "author": "by Juwei Chen",
-                        "link": "https://www.tontossport.com/custom-polo-uniform/women-short-sleeve-polo-shirts/white-short-sleeve-polo-shirts-with-pockets-504",
-                        "img": {
-                            "url": "/community/assets/img/Online design of diverse 3D sportswear apps.jpg",
-                            "alt": "Sportswear online design - Juwei Chen"
-                        }
-                    },
-                    {
                         "desc": "Bastille 1789",
                         "author": "by Axeon Software",
                         "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
@@ -1053,15 +909,6 @@
                         }
                     },
                     {
-                        "desc": "3D visit",
-                        "author": "by Synergiz",
-                        "link": "http://visite3d.aquamalo.fr/",
-                        "img": {
-                            "url": "/community/assets/img/Aquamalo.jpg",
-                            "alt": "3D visit"
-                        }
-                    },
-                    {
                         "desc": "Cubes Got Moves",
                         "author": "by Gamezop",
                         "link": "https://games.gamezop.com/g/S1JXaMJDqJX?id=rJ49y5XJx&lang=en",
@@ -1089,39 +936,12 @@
                         }
                     },
                     {
-                        "desc": "Bronchoscopy Simulation",
-                        "author": "by NRA/iProjects",
-                        "link": "http://iprojects.space/bronchoscopy/index.html",
-                        "img": {
-                            "url": "/community/assets/img/bronchoscopy.jpg",
-                            "alt": "Bronchoscopy Simulation"
-                        }
-                    },
-                    {
-                        "desc": "Brilliant man",
-                        "author": "by Walter van Maanen",
-                        "link": "https://www.bigredbox.nl//BrilliantMan/index.html",
-                        "img": {
-                            "url": "/community/assets/img/BrilliantMan.jpg",
-                            "alt": "Brilliant man"
-                        }
-                    },
-                    {
                         "desc": "Cube Endless Runner",
                         "author": "by kingofcode.com.br",
                         "link": "https://cube-endless-runner.herokuapp.com/",
                         "img": {
                             "url": "/community/assets/img/cube-endless-runner-3d.jpg",
                             "alt": "Cube Endless Runner"
-                        }
-                    },
-                    {
-                        "desc": "GCaps Arena",
-                        "author": "by gcapsarena.com",
-                        "link": "http://gcapsarena.com",
-                        "img": {
-                            "url": "/community/assets/img/GCapsArena.JPG",
-                            "alt": "GCaps Arena"
                         }
                     },
                     {
@@ -1179,15 +999,6 @@
                         }
                     },
                     {
-                        "desc": "My 3D workspace",
-                        "author": "by MartinPham",
-                        "link": "https://www.martinpham.com",
-                        "img": {
-                            "url": "/community/assets/img/martinpham.com.jpg",
-                            "alt": "My 3D workspace"
-                        }
-                    },
-                    {
                         "desc": "Teambudd.io",
                         "author": "by Teambudd.io",
                         "link": "https://teambudd.io",
@@ -1206,30 +1017,12 @@
                         }
                     },
                     {
-                        "desc": "Le Noël des Corsaires",
-                        "author": "by KORSR Studio",
-                        "link": "https://noeldescorsaires.com",
-                        "img": {
-                            "url": "/community/assets/img/NoelDesCorsaires.jpg",
-                            "alt": "Le Noël des Corsaires"
-                        }
-                    },
-                    {
                         "desc": "MOLTEN SPHERE",
                         "author": "by Vlad Polupan",
                         "link": "https://experiments.vladpolupan.in.ua/rotatable-sphere/",
                         "img": {
                             "url": "/community/assets/img/MoltenSphere.jpg",
                             "alt": "MOLTEN SPHERE"
-                        }
-                    },
-                    {
-                        "desc": "The Gallery of Mysteries",
-                        "author": "by Dpt",
-                        "link": "http://gom.momentabiennale.com",
-                        "img": {
-                            "url": "/community/assets/img/gom.jpg",
-                            "alt": "The Gallery of Mysteries"
                         }
                     },
                     {
@@ -1248,15 +1041,6 @@
                         "img": {
                             "url": "/community/assets/img/boxigon1.jpg",
                             "alt": "BOXiGON!"
-                        }
-                    },
-                    {
-                        "desc": "Wazana.io",
-                        "author": "by Pichou",
-                        "link": "https://wazana.io/",
-                        "img": {
-                            "url": "/community/assets/img/wazanaio.jpg",
-                            "alt": "Wazana.io"
                         }
                     },
                     {
@@ -1323,15 +1107,6 @@
                         }
                     },
                     {
-                        "desc": "Zoom",
-                        "author": "by Coolroar",
-                        "link": "http://www.jounce.space/",
-                        "img": {
-                            "url": "/community/assets/img/zoom.jpg",
-                            "alt": "Zoom"
-                        }
-                    },
-                    {
                         "desc": "Talgo",
                         "author": "by Cadesign form",
                         "link": "https://byggmodul.talgo.no/app",
@@ -1370,7 +1145,7 @@
                     {
                         "desc": "Fish tank",
                         "author": null,
-                        "link": "https://playground.babylonjs.com/frame.html#U45L84#1",
+                        "link": "https://playground.babylonjs.com/frame.html#U45L84#63",
                         "img": {
                             "url": "/community/assets/img/fish.jpg",
                             "alt": "Fish tank"
@@ -1476,15 +1251,6 @@
                         }
                     },
                     {
-                        "desc": "Illuminated City",
-                        "author": "by Brian Button",
-                        "link": "https://sanfrancisco.ca.illuminated.city",
-                        "img": {
-                            "url": "/community/assets/img/Illuminated.jpg",
-                            "alt": "Illuminated City"
-                        }
-                    },
-                    {
                         "desc": "Fashion show",
                         "author": "by Punk Office",
                         "link": "http://punkoffice.com/vfashion/",
@@ -1557,15 +1323,6 @@
                         }
                     },
                     {
-                        "desc": "Augmented Reality App Creator",
-                        "author": "by YouAugment",
-                        "link": "http://www.youaugment.com/",
-                        "img": {
-                            "url": "/community/assets/img/YouAugment.jpg",
-                            "alt": "Augmented Reality App Creator"
-                        }
-                    },
-                    {
                         "desc": "Ambiani",
                         "author": "by Musée Alfred Danicourt",
                         "link": "http://www.ambiani.fr/",
@@ -1581,15 +1338,6 @@
                         "img": {
                             "url": "/community/assets/img/ramble3d2.jpg",
                             "alt": "Robot"
-                        }
-                    },
-                    {
-                        "desc": "COAM",
-                        "author": "by Veronika VR",
-                        "link": "http://www.coam.org/tourvirtual/index.html#/",
-                        "img": {
-                            "url": "/community/assets/img/COAM.jpg",
-                            "alt": "COAM"
                         }
                     },
                     {
@@ -1626,24 +1374,6 @@
                         "img": {
                             "url": "/community/assets/img/Visam.jpg",
                             "alt": "Visam 3D"
-                        }
-                    },
-                    {
-                        "desc": "CustomizeCar",
-                        "author": "by SmarTeam3D",
-                        "link": "https://www.smarteam3d.com/portfolio/car_config.html",
-                        "img": {
-                            "url": "/community/assets/img/CustomizeCar.jpg",
-                            "alt": "CustomizeCar"
-                        }
-                    },
-                    {
-                        "desc": "Model Debugging Tool",
-                        "author": "by Forreall",
-                        "link": "https://forreall.cn/3ds/app/debugcloud/",
-                        "img": {
-                            "url": "/community/assets/img/op.jpg",
-                            "alt": "Model Debugging Tool"
                         }
                     },
                     {
@@ -1692,15 +1422,6 @@
                         }
                     },
                     {
-                        "desc": "Mountain Quest",
-                        "author": "by Evian",
-                        "link": "https://mountainquest.evian.com",
-                        "img": {
-                            "url": "/community/assets/img/evian.jpg",
-                            "alt": "Mountain Quest"
-                        }
-                    },
-                    {
                         "desc": "Surf Designer",
                         "author": "by Fynsurf",
                         "link": "https://www.fynsurf.com/designer",
@@ -1710,39 +1431,12 @@
                         }
                     },
                     {
-                        "desc": "Virtual dress room",
-                        "author": "by 100% netball",
-                        "link": "http://dyo.100netball.com.au/",
-                        "img": {
-                            "url": "/community/assets/img/netball.jpg",
-                            "alt": "Virtual dress room"
-                        }
-                    },
-                    {
                         "desc": "ND Quits",
                         "author": "by North Dakota",
                         "link": "https://ndquits.health.nd.gov/get-the-facts/3d-lung/",
                         "img": {
                             "url": "/community/assets/img/ndquits.jpg",
                             "alt": "ND Quits"
-                        }
-                    },
-                    {
-                        "desc": "boltless configurator",
-                        "author": "by Buyrack",
-                        "link": "http://www.buyrack.com/pc/boltless-configurator.html",
-                        "img": {
-                            "url": "/community/assets/img/buyrack.jpg",
-                            "alt": "boltless configurator"
-                        }
-                    },
-                    {
-                        "desc": "Blackcube",
-                        "author": "by Hautau",
-                        "link": "http://3dviewer.zwetdesign.com/blackcube/",
-                        "img": {
-                            "url": "/community/assets/img/hautau.jpg",
-                            "alt": "Blackcube"
                         }
                     },
                     {
@@ -1761,15 +1455,6 @@
                         "img": {
                             "url": "/community/assets/img/pbrcomposer.jpg",
                             "alt": "PBRComposer"
-                        }
-                    },
-                    {
-                        "desc": "Build Planet",
-                        "author": "by たらえさん",
-                        "link": "http://sretks.com/demo/170828_buildplanet/",
-                        "img": {
-                            "url": "/community/assets/img/buildplanet.jpg",
-                            "alt": "Build Planet"
                         }
                     },
                     {
@@ -1827,15 +1512,6 @@
                         }
                     },
                     {
-                        "desc": "MOPS CLI",
-                        "author": "by InstantUV",
-                        "link": "http://www.instantuv.org/mops-cli/",
-                        "img": {
-                            "url": "/community/assets/img/dragon-pbr.jpg",
-                            "alt": "MOPS CLI"
-                        }
-                    },
-                    {
                         "desc": "JigSpace",
                         "author": "by JigSpace Inc.",
                         "link": "https://jig.space",
@@ -1881,48 +1557,12 @@
                         }
                     },
                     {
-                        "desc": "Savage Kingdom",
-                        "author": "by National Geographic",
-                        "link": "http://www.wildsavagekingdom.com/",
-                        "img": {
-                            "url": "/community/assets/img/savagekingdom.jpg",
-                            "alt": "Savage Kingdom"
-                        }
-                    },
-                    {
-                        "desc": "Prosecution",
-                        "author": "by ISART Digital",
-                        "link": "/Scenes/prosecution/index.html",
-                        "img": {
-                            "url": "/community/assets/img/prosecution.jpg",
-                            "alt": "Prosecution"
-                        }
-                    },
-                    {
-                        "desc": "Remix3D",
-                        "author": "by Microsoft",
-                        "link": "http://www.remix3D.com",
-                        "img": {
-                            "url": "/community/assets/img/remix3d.jpg",
-                            "alt": "Remix3D"
-                        }
-                    },
-                    {
                         "desc": "pCon.box",
                         "author": "by EasternGraphics",
                         "link": "http://www.easterngraphics.com/en/products/pconbox.html",
                         "img": {
                             "url": "/community/assets/img/pCon_box.jpg",
                             "alt": "pCon.box"
-                        }
-                    },
-                    {
-                        "desc": "IMSF",
-                        "author": "by National Geographic",
-                        "link": "http://www.makemarshome.com/recruitment/assessments",
-                        "img": {
-                            "url": "/community/assets/img/mars.jpg",
-                            "alt": "IMSF"
                         }
                     },
                     {
@@ -1959,15 +1599,6 @@
                         "img": {
                             "url": "/community/assets/img/vendeeglobe.jpg",
                             "alt": "Vendée Globe"
-                        }
-                    },
-                    {
-                        "desc": "Leblon-Delienne",
-                        "author": "by Keyveo",
-                        "link": "http://leblon-delienne.com/",
-                        "img": {
-                            "url": "/community/assets/img/astroboy.jpg",
-                            "alt": "Leblon-Delienne"
                         }
                     },
                     {
@@ -2025,24 +1656,6 @@
                         }
                     },
                     {
-                        "desc": "DOLBY EXPERIMENT",
-                        "author": "by DOLBY AUDIO",
-                        "link": "http://audioexperience.dolby.com/",
-                        "img": {
-                            "url": "/community/assets/img/dolby.jpg",
-                            "alt": "DOLBY EXPERIMENT"
-                        }
-                    },
-                    {
-                        "desc": "FLIGHT ARCADE",
-                        "author": "by Microsoft Edge",
-                        "link": "http://flightarcade.com",
-                        "img": {
-                            "url": "/community/assets/img/flightarcade.jpg",
-                            "alt": "FLIGHT ARCADE"
-                        }
-                    },
-                    {
                         "desc": "RETAIL",
                         "author": "by Michel Rousseau",
                         "link": "/Demos/Retail",
@@ -2058,15 +1671,6 @@
                         "img": {
                             "url": "/community/assets/img/v8small.jpg",
                             "alt": "V8 ENGINE"
-                        }
-                    },
-                    {
-                        "desc": "Assassin's Creed Pirates",
-                        "author": "by Ubisoft",
-                        "link": "http://race.assassinscreedpirates.com/",
-                        "img": {
-                            "url": "/community/assets/img/AssassinsCreed.jpg",
-                            "alt": "ACP"
                         }
                     },
                     {
@@ -2223,15 +1827,6 @@
                         }
                     },
                     {
-                        "desc": "SURVIVAL",
-                        "author": "by Dad72",
-                        "link": "http://www.babylon.actifgames.com/Survival/index.php",
-                        "img": {
-                            "url": "/community/assets/img/survival.jpg",
-                            "alt": "SURVIVAL"
-                        }
-                    },
-                    {
                         "desc": "CHARACTER STUDY",
                         "author": "by Samuel Girardin",
                         "link": "http://www.visualiser.fr/Babylon/character/default.htm",
@@ -2265,15 +1860,6 @@
                         "img": {
                             "url": "/community/assets/img/dancing csg.jpg",
                             "alt": "DANCING CSG"
-                        }
-                    },
-                    {
-                        "desc": "Evasion",
-                        "author": "by Dad72",
-                        "link": "http://www.babylon.actifgames.com/Evasion/index.html",
-                        "img": {
-                            "url": "/community/assets/img/Evasion.jpg",
-                            "alt": "Evasion"
                         }
                     },
                     {
