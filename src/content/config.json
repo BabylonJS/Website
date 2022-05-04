@@ -12,8 +12,8 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/sodaBottle.mp4",
-                        "demoLink": "https://aka.ms/4_2_STSPlayground"
+                        "videoUrl": "/assets/videos/spacePirates_fullBattle.mp4",
+                        "demoLink": "https://spacepirates.babylonjs.com/"
                     },
                     {
                         "videoUrl": "/assets/videos/pirateFort.mp4",
@@ -31,8 +31,8 @@
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Welcome to Babylon.js 4.2",
-                "desc": "Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. We are artists, developers, creators, and dreamers and we want to make it as simple as possible to enable everyone to bring their ideas to life. With this new version of Babylon.js, we set out to make it even easier to develop with. From a ton of new tools, to improved workflows and features, new documentation and more, it is our sincere hope that Babylon.js 4.2 will make your development process faster and easier while unlocking new simple ways to work."
+                "title": "Welcome to Babylon.js 5.0",
+                "desc": "Our mission is to create one of the most powerful, beautiful, and simple Web rendering engines in the world. Our passion is to make it completely open and free for everyone. We are artists, developers, creators, and dreamers and we want to make it as simple as possible to enable everyone to bring their ideas to life. This is an important milestone for the Babylon.js platform. Babylon.js was named with a deep love and admiration of one of the greatest sci-fi shows of all time, and we are thrilled to announce the launch of the next version of the Babylon.js platform. Babylon.js 5.0 is quite simply the biggest, boldest, and most ambitious update to the platform to date. From full support of WebGPU, to the ability to deploy experiences across platforms with Native Capabilities, to more tools, features, and improvements than you can count - Babylon.js 5.0 ushers in the next generation of web rendering technology for everyone."
             }
         },
         {
@@ -66,8 +66,8 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "left",
-                "background": "#5f5b60",
+                "alignment": "right",
+                "background": "blue",
                 "img": {
                     "url": "assets/img/nodeMaterialEditor_pbr.png",
                     "alt": "New PBR nodes added to node material editor.",
@@ -78,8 +78,8 @@
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "New and Updated Tools",
-                "desc": "The core focus of Babylon.js 4.2 has been around simplicity. While Babylon.js keeps its code-first approach, we’ve added many tools in the Inspector and enhanced the Node Material Editor to save time to developers and Tech Artists. With the Particle Editor, you can now create and configure particle systems with the click of the mouse. It is also that simple to create, control, and save sprite systems thanks to the Sprite Editor. The Skeleton Viewer makes it quick and easy to debug pesky rigging issues inside your scene, and the Texture Inspector is perfect for quickly identifying texture problems in your creation. The Node Material Editor can now be used to create Procedural Textures, Particle Shaders, and Post Process Effects!",
+                "title": "WebGPU",
+                "desc": "WebGPU represents the next evolution in browser to GPU communication. The W3C's GPU for the Web Community Group built it from the ground up with performance in mind. WebGPU offers web developers access to some of the most advanced modern graphics capabilities such as compute shaders and lightning-fast texture loading. We have been actively participating in the WebGPU Workgroup from its earliest days and are proud to announce that Babylon.js 5.0 offers FULL support for WebGPU.",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -87,30 +87,51 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "right",
-                "background": "#324554",
+                "alignment": "left",
+                "background": "#201f2d",
                 "img": {
-                    "url": "assets/img/pbrDevice.png",
-                    "alt": "PBR materials rendered on an mock product electronic device.",
+                    "url": "native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop, desktop computer, tablet, and phone.",
+                    "width": "550px"
+                },
+                "height": "480px",
+                "paddingTop": "40px",
+                "paddingBottom": "40px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Cross-Platform Native Development",
+                "desc": "We know developers want to reach as many people as possible with as little effort as possible. We are proud to announce that Babylon.js 5.0 unlocks the ability to use the Babylon.js API to develop web AND native applications. Whether you're targeting Web, Windows, Mac, iPhone, or Android Phone, Babylon.js 5.0 allows you to write your rendering code once and deploy it across the platforms of your choice, using the browser OR as native applications!",
+                "moreInfoLink": "https://aka.ms/babylon5CrossPlatDoc",
+                "moreInfoText": "Babylon cross platform documentation"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#0e1314",
+                "img": {
+                    "url": "assets/img/spacePirates1.png",
+                    "alt": "3D render of starfighters in a space battle near asteroids",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "More PBR Support",
-                "desc": "Full support for Physically Based Rendering (PBR) is a top priority for Babylon.js. With version 4.2, we’re pushing the limits of rendering even further, with some exciting new capabilities. The Node Material Editor now support PBR Materials! With this addition, you can now create your own custom PBR materials and shaders in a simple and visual editor. You can also simulate the way light bounces around below the surface of semi-translucent objects with advanced sub-surface scattering support.",
-                "moreInfoLink": "https://aka.ms/4_2_PBRNMEDoc",
-                "moreInfoText": "More on NME PBR"
+                "title": "Space Pirates Demo",
+                "desc": "What would the Babylon.js 5.0 release be without an appropriately themed demo to go with it? The Babylon Space Pirates Demo is designed to give game developers a tiny glimpse at the amazing possibilities of the Babylon.js Platform.",
+                "moreInfoLink": "https://aka.ms/babylon5DemoCode",
+                "moreInfoText": "Github repo for the project"
             }
         },   
         {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2a2342",
+                "background": "#323755",
                 "img": {
-                    "url": "assets/img/transparentShadows.png",
-                    "alt": "Rendering of a half-empty soda bottle casting a shadow on the table.",
+                    "url": "assets/img/animationCurveEditor.png",
+                    "alt": "A curve graph window showing animation curves from an animated 3D object and tools to edit or play the curves",
                     "width": "550px"
                 },
                 "height": "500px",
@@ -118,50 +139,88 @@
                 "paddingBottom": "30px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Environment Lighting Enhancements",
-                "desc": "Lighting is essential to the realism of a scene. In Babylon.js 4.2, shadows are getting even better with the added capability of being able to render soft transparent shadows for transparent objects. With the introduction of real-time PBR filtering, advanced refraction and reflection is now just a few lines of code away. We have also added direct support for pre-filtering .hdr files. That means you can now use .hdr files directly in your Babylon.js scene!",
+                "title": "Animation Curve Editor",
+                "desc": "Up until now, creating and modifying animation data in a rendering engine can be complicated and verbose. Not anymore! Babylon.js 5.0 adds a built-in Animation Curve Editor (ACE), making it incredibly easy to create and modify animation data directly in your Babylon scene. Also, as with all Babylon.js Platform tools, you can save your animation data to the Babylon.js Snippet Server and load it back into your Babylon.js scene with one single line of code!",
                 "moreInfoLink": "https://aka.ms/4_2_STSDoc",
-                "moreInfoText": "More on transparent shadows"
+                "moreInfoText": "Animation curve editor documentation"
             }
         }, 
         {      
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#222222",
+                "background": "#384845",
                 "img": {
-                    "url": "assets/img/reactNativeLogo.png",
-                    "alt": "Logo for React Native.",
+                    "url": "assets/img/performanceProfiler.png",
+                    "alt": "A line graph showing various data points about a 3D scene like frames per second and draw calls",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Babylon React Native",
-                "desc": "With Babylon.js 4.1 we introduced Babylon Native, a system for building native applications with the same rendering power and code used for your Babylon.js web applications. This initiative takes a major step forward with Babylon React Native. This project takes the power of the React Native framework and combines it with the power, beauty, and simplicity of Babylon.js to unlock the ability to create some truly amazing cross-platform experiences.",
-                "moreInfoLink": "/reactnative",
-                "moreInfoText": "More on Babylon React Native"
+                "title": "Performance Profiler",
+                "desc": "Performance is one of the most important things to keep on the front of your mind as you create advanced interactive 3D experiences. Babylon.js 5.0 makes performance debugging and management a breeze with the introduction of the new Performance Profiler. This handy tool allows you to see a real time graph of key performance indicators of your scene, all hooked up live! Make a change, see the impact on perf. It's really that simple!",
+                "moreInfoLink": "https://aka.ms/babylon5PPDoc",
+                "moreInfoText": "Performance profiler documentation"
             }
         },
         {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2A2342",
+                "background": "#000000",
                 "img": {
-                    "url": "assets/img/babylonDocs.svg",
-                    "alt": "Babylon.js logo with documentation graphic.",
+                    "url": "assets/img/unlimitedMorphTargets.png",
+                    "alt": "Tall blocks with brightly-colored edges in blues and greens.",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "New Documentation",
-                "desc": "Babylon.js features a rich library of documentation to help you get started and master the platform. With Babylon.js 4.2, we’ve completely reorganized the documentation to guide your learning as your knowledge advances. Whether you want to dive into a specific subject or follow the guided path, we are sure that the Babylon.js documentation will be more simple and helpful than ever before.",
-                "moreInfoLink": "https://aka.ms/4_2_NewDocs",
-                "moreInfoText": "New Documentation"
+                "title": "Unlimited Morph Targets",
+                "desc": "No matter what you call them, Blend Shapes, Shape Keys, or Morph Targets, Babylon.js 5.0 adds rocket fuel to your ability to use influenced vertex positions. This new feature now gives you literally unlimited amounts of Morph Targets. Want to have a complex animated face with thousands of Morph Targets to get that perfect expression? Now you can, all in the web, all for free!",
+                "moreInfoLink": "https://aka.ms/babylon5MTDoc",
+                "moreInfoText": "Unlimited morph targets documentation"
             }
         },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#4c5a4a",
+                "img": {
+                    "url": "assets/img/guiEditor.png",
+                    "alt": "An editor window showing creation of a graphical user interface",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "GUI Editor Beta",
+                "desc": "Babylon.js has a powerful GUI system that offers countless widgets, controls, and properties to help you create rich GUIs. With Babylon.js 5.0 that powerful system becomes far simpler to use with the introduction of the GUI Editor Beta. While still in active development, the GUI Editor Beta is a rich and modern tool, allowing you to create the perfect GUI with a simple and intuitive drag-and-drop interface. Say goodbye to thousands of lines of GUI code and hello to a world of design with the GUI Editor Beta and loading your creations with a single line of code!",
+                "moreInfoLink": "https://aka.ms/babylon5GUIEDoc",
+                "moreInfoText": "GUI Editor documentation"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#3F2645",
+                "img": {
+                    "url": "assets/img/orderIndependentTransparency.png",
+                    "alt": "Render of a transparent pink dragon statue in front of transparent red and green spheres",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Order Independent Transparency",
+                "desc": "Rendering transparent objects is complicated! The Babylon.js Platform has always strived to make it as easy as possible to help you inform the system of rendering order, alpha index, run depth-prepasses, and much more, so your scene can look correct. With Babylon.js 5.0 we've wrapped a bow on it all. All of the complexity of rendering transparent objects can now disappear with one single, simple line of code: scene.useOrderIndependentTransparency = true",
+                "moreInfoLink": "https://aka.ms/babylon5OITDoc",
+                "moreInfoText": "Order independent transparency documentation"
+            }
+        },       
         {
             "templateName": "imageAndTextBlock",
             "content": {
@@ -175,32 +234,126 @@
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "WebXR",
-                "desc": "Babylon.js 4.2 includes updated support for WebXR. This exciting new standard allows developers to easily create compelling cross-browser AR/VR web experiences. Babylon.js 4.2 adds support for hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support, and much much more.",
-                "moreInfoLink": "https://aka.ms/4_2_WebXRDoc",
-                "moreInfoText": "More on WebXR"
+                "title": "WebXR Advancements",
+                "desc": "WebXR is an incredible web standard allowing web developers to create amazing cross-browser XR experiences or add a mobile AR components to your web site. While the technology to render world-locked 3D objects has existed in Babylon.js for some time, Babylon.js 5.0 steps the beauty-factor up with the introduction of Light Estimation. This powerful yet easy-to-use new feature allows you to estimate the light in your real-world location and automatically match the lighting and shadows of your virtual, world-locked object. Babylon.js 5.0 also adds support for WebXR image tracking and WebXR Layers!",
+                "moreInfoLink": "https://aka.ms/babylon5WebXRLEDoc",
+                "moreInfoText": "Light estimation documentation"
+            }
+        },        
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#243F47",
+                "img": {
+                    "url": "assets/img/nmeNoiseNodes.png",
+                    "alt": "A Lego pirate ship circling a swirling whirlpool of stylized water",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "New Node Material Nodes",
+                "desc": "The Node Material Editor is one of the most advanced tools available in the Babylon Platform. One simple UI that helps you generate stunning GLSL shaders with ease. With Babylon.js 5.0 the Node Material gets even better with the introduction of several powerful new logical and procedural noise nodes!",
+                "moreInfoLink": "https://aka.ms/babylon5NMEDoc",
+                "moreInfoText": "Node Material Editor documentation"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#47382A",
+                "img": {
+                    "url": "assets/img/glTFExtensions.png",
+                    "alt": "A 3D button menu with a clicked button to change a sphere color to teal",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "glTF Updates",
+                "desc": "The Babylon.js Platform prioritizes support for the absolute latest and greatest advancements to the glTF file format. This means every new version of Babylon.js unlocks new beautiful advancements in rendering capabilities, and Babylon.js 5.0 turns up the heat! With full support for KHR_materials_volume, KHR_materials_transmission, and KHR_materials_ior, you can now render some absolutely STUNNING visuals!",
+                "moreInfoLink": "https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos",
+                "moreInfoText": "glTF 2.0 extensions documentation"
             }
         },
         {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#3B251F",
+                "background": "#293728",
                 "img": {
-                    "url": "assets/img/shoeVariants.png",
-                    "alt": "Rendering of an athletic shoe with material variants.",
+                    "url": "assets/img/mixedRealityToolkit.png",
+                    "alt": "A 3D button menu with a clicked button to change a sphere color to teal",
                     "width": "550px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Updated Standards Support",
-                "desc": "Babylon.js 4.2 features support for the latest .glTF extensions, both ratified and experimental! This includes the latest effort from the Commerce 3D Working Group and KTX + BasisU. With constantly updated support of the latest capabilities of the .glTF format, Babylon.js ensures your 3D objects will render exactly how you expect them to.",
-                "moreInfoLink": "/ecommerce",
-                "moreInfoText": "More on e-commerce"
+                "title": "Mixed Reality Toolkit for Babylon.js",
+                "desc": "Babylon.js 5.0 also adds updated support for the world's most advanced 3D interface component library, Mixed Reality Toolkit. This advanced library makes it incredibly easy to add advanced XR UX elements into your Babylon.js scenes such as: holographic slates, 3D Sliders, Touch Holographic Buttons, Touch Mesh Buttons, and much much more!",
+                "moreInfoLink": "https://aka.ms/babylon5MRTKDoc",
+                "moreInfoText": "Mixed Reality Toolkit documentation"
             }
-        },       
+        },
         {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#361E32",
+                "img": {
+                    "url": "assets/img/yeti.png",
+                    "alt": "A stylized yeti character as a 3D model",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Asset Librarian",
+                "desc": "The Babylon.js Platform offers a large library of free Creative Commons 0 assets available for you to use in your Babylon.js scenes, completely for free. With Babylon.js 5.0, accessing these assets is easier and faster than ever! The new Asset Librarian brings a new Assets namespace that you can use in your projects to easily access the 200+ free assets to make your Babylon.js scenes soar.",
+                "moreInfoLink": "https://aka.ms/babylon5ALDoc",
+                "moreInfoText": "Asset librarian documentation"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#391414",
+                "img": {
+                    "url": "assets/img/materialPluginManager.png",
+                    "alt": "A 3D model of a boom box colored red through a shader",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Material Plugin Manager",
+                "desc": "When it comes to creating real-time shaders power, performance, and flexibility are critical! Babylon.js 5.0 brings introduces a brand new feature that doubles down on all of three. The Material Plugin Manager gives you the ability to add custom code to any Babylon.js shader. This means that you can fully customize any advanced shader, such as PBR, to go even further. The Material Plugin Manager provides developers with the flexibility to fully customize the power, performance, and look of any shader!",
+                "moreInfoLink": "https://aka.ms/babylon5MPMDoc",
+                "moreInfoText": "Material Plugin Manager documentation"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#38576d",
+                "img": {
+                    "url": "assets/img/babylonDocs.svg",
+                    "alt": "Babylon.js logo with documentation graphic.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Dev Stories Documentation",
+                "desc": "Babylon.js 5.0 adds a whole new category of documentation called Dev Stories. These new tutorials are designed to walk you, step-by-step, through some common scenarios that many Babylon.js developers ask about. From setting up a Babylon.js project quickly, adding interactive 3D elements to your e-commerce site, to deploying your Babylon.js project to a Native Application, Dev Stories are rich, deep, detailed tutorials aimed at helping you take your project from idea to reality!",
+                "moreInfoLink": "https://aka.ms/babylon5DSDoc",
+                "moreInfoText": "Check out the Dev Stories"
+            }
+        },        {
             "templateName": "textBlock",
             "content": {
                 "marginLeft": "50px",

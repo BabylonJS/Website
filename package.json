@@ -9,6 +9,7 @@
     "author": "",
     "license": "Apache2",
     "dependencies": {
+        "-": "^0.0.1",
         "fs-extra": "^7.0.1",
         "gulp": "^4.0.2",
         "gulp-connect": "^5.7.0",
