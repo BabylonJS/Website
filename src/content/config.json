@@ -16,12 +16,12 @@
                         "demoLink": "https://spacepirates.babylonjs.com/"
                     },
                     {
-                        "videoUrl": "/assets/videos/pirateFort.mp4",
-                        "demoLink": "https://aka.ms/4_2_pirateFort"
+                        "videoUrl": "/assets/videos/webGPU.mp4",
+                        "demoLink": "https://doc.babylonjs.com/advanced_topics/webGPU/computeShader"
                     },
                     {
-                        "videoUrl": "/assets/videos/deviceMorph.mp4",
-                        "demoLink": "https://www.babylonjs.com/Demos/ProductPage"
+                        "videoUrl": "/assets/videos/gltfAmber.mp4",
+                        "demoLink": "https://doc.babylonjs.com/divingDeeper/materials/using/masterPBR"
                     }
                 ]
             }
@@ -67,21 +67,21 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "blue",
+                "background": "#264c67",
                 "img": {
-                    "url": "assets/img/nodeMaterialEditor_pbr.png",
+                    "url": "assets/img/webGPU_water.png",
                     "alt": "New PBR nodes added to node material editor.",
                     "width": "550px"
                 },
-                "height": "480px",
+                "height": "450px",
                 "paddingTop": "40px",
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "WebGPU",
                 "desc": "WebGPU represents the next evolution in browser to GPU communication. The W3C's GPU for the Web Community Group built it from the ground up with performance in mind. WebGPU offers web developers access to some of the most advanced modern graphics capabilities such as compute shaders and lightning-fast texture loading. We have been actively participating in the WebGPU Workgroup from its earliest days and are proud to announce that Babylon.js 5.0 offers FULL support for WebGPU.",
-                "moreInfoLink": "",
-                "moreInfoText": ""
+                "moreInfoLink": "https://doc.babylonjs.com/advanced_topics/webGPU/computeShader",
+                "moreInfoText": "WebGPU in Babylon.js documenation"
             }
         },
         {
@@ -94,7 +94,7 @@
                     "alt": "Illustration of laptop, desktop computer, tablet, and phone.",
                     "width": "550px"
                 },
-                "height": "480px",
+                "height": "450px",
                 "paddingTop": "40px",
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
@@ -115,7 +115,7 @@
                     "alt": "3D render of starfighters in a space battle near asteroids",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Space Pirates Demo",
@@ -155,7 +155,7 @@
                     "alt": "A line graph showing various data points about a 3D scene like frames per second and draw calls",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Performance Profiler",
@@ -174,7 +174,7 @@
                     "alt": "Tall blocks with brightly-colored edges in blues and greens.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Unlimited Morph Targets",
@@ -193,7 +193,7 @@
                     "alt": "An editor window showing creation of a graphical user interface",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "480px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "GUI Editor Beta",
@@ -212,7 +212,7 @@
                     "alt": "Render of a transparent pink dragon statue in front of transparent red and green spheres",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Order Independent Transparency",
@@ -231,7 +231,7 @@
                     "alt": "Phantom hands display for hand tracking in VR.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "500px", 
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "WebXR Advancements",
@@ -250,7 +250,7 @@
                     "alt": "A Lego pirate ship circling a swirling whirlpool of stylized water",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "New Node Material Nodes",
@@ -269,7 +269,7 @@
                     "alt": "A 3D button menu with a clicked button to change a sphere color to teal",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "glTF Updates",
@@ -288,7 +288,7 @@
                     "alt": "A 3D button menu with a clicked button to change a sphere color to teal",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Mixed Reality Toolkit for Babylon.js",
@@ -307,7 +307,7 @@
                     "alt": "A stylized yeti character as a 3D model",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Asset Librarian",
@@ -326,7 +326,7 @@
                     "alt": "A 3D model of a boom box colored red through a shader",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Material Plugin Manager",
@@ -345,7 +345,7 @@
                     "alt": "Babylon.js logo with documentation graphic.",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Dev Stories Documentation",
@@ -384,21 +384,21 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
-                        "desc": "Underwater",
-                        "author": "by Babylon.js",
-                        "link": "https://aka.ms/Uwater",
+                        "desc": "Nike By You",
+                        "author": "by Nike",
+                        "link": "https://www.nike.com/w/womens-nike-by-you-shoes-5e1x6z6ealhzy7ok",
                         "img": {
-                            "url": "../community/assets/img/underwater.jpg",
-                            "alt": "Underwater - Babylon.js"
+                            "url": "../community/assets/img/nikeByYou.jpg",
+                            "alt": "Nike shoe customization in 3D"
                         }
                     },
                     {
-                        "desc": "Weapons",
-                        "author": "by Babylon.js",
-                        "link": "https://aka.ms/DWeapon",
+                        "desc": "College Room Planner",
+                        "author": "by Target",
+                        "link": "https://www.target.com/room-planner/college",
                         "img": {
-                            "url": "../community/assets/img/weapon.jpg",
-                            "alt": "Weapons - Babylon.js"
+                            "url": "../community/assets/img/RoomCollege.jpg",
+                            "alt": "College Room Planner"
                         }
                     },
                     {
@@ -411,12 +411,12 @@
                         }
                     },
                     {
-                        "desc": "Marble Tower",
-                        "author": "by PirateJC",
-                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "desc": "Minecraft Classic",
+                        "author": "by Mojang",
+                        "link": "https://classic.minecraft.net",
                         "img": {
-                            "url": "../community/assets/img/marbletower.jpg",
-                            "alt": "Marble Tower - PirateJC"
+                            "url": "../games/assets/img/Minecraft_Classic.png",
+                            "alt": "Minecraft Classic"
                         }
                     },
                     {
