@@ -16,8 +16,8 @@
                         "demoLink": "https://classic.minecraft.net"
                     },
                     {
-                        "videoUrl": "./assets/videos/ACPirates.mp4",
-                        "demoLink": "http://race.assassinscreedpirates.com/"
+                        "videoUrl": "./assets/videos/spaceInvaders.mp4",
+                        "demoLink": "https://spaceinvaders.viperfish.com.au//"
                     },
                     {
                         "videoUrl": "./assets/videos/templeRun2.mp4",
@@ -281,12 +281,12 @@
                         }
                     },
                     {
-                        "desc": "Assassin's Creed Pirates",
-                        "author": "by Ubisoft",
-                        "link": "http://race.assassinscreedpirates.com/",
+                        "desc": "Space Invaders",
+                        "author": "by John Pitchers",
+                        "link": "https://spaceinvaders.viperfish.com.au/",
                         "img": {
-                            "url": "../community/assets/img/AssassinsCreed.jpg",
-                            "alt": "ACP"
+                            "url": "./assets/img/spaceInvaders.png",
+                            "alt": "Space Invaders made with Babylon.js"
                         }
                     },
                     {

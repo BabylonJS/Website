@@ -13,7 +13,7 @@
                 "items": [
                     {
                         "video": {
-                            "url": "assets/videos/bReactNativeDemo.mp4",
+                            "url": "assets/videos/NativeVideo.mp4",
                             "width": "1100px"
                         }
                     }
@@ -41,10 +41,24 @@
             "content": {
                 "items": [
                     {
-                        "desc": "Get the Preview",
+                        "desc": "Package",
                         "link": "https://www.npmjs.com/package/@babylonjs/react-native",
                         "img": {
+                            "url": "../assets/img/packageIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Source",
+                        "link": "https://github.com/BabylonJS/BabylonReactNative",
+                        "img": {
                             "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Sample",
+                        "link": "https://github.com/BabylonJS/BabylonReactNativeSample",
+                        "img": {
+                            "url": "../assets/img/TestIcon.svg"
                         }
                     }
                 ],
