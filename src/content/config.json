@@ -67,9 +67,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#264c67",
+                "background": "#274c67",
                 "img": {
-                    "url": "assets/img/webGPU_water.png",
+                    "url": "assets/img/webGPU_water.jpg",
                     "alt": "New PBR nodes added to node material editor.",
                     "width": "550px"
                 },
@@ -151,7 +151,7 @@
                 "alignment": "right",
                 "background": "#384845",
                 "img": {
-                    "url": "assets/img/performanceProfiler.png",
+                    "url": "assets/img/performanceProfiler.jpg",
                     "alt": "A line graph showing various data points about a 3D scene like frames per second and draw calls",
                     "width": "550px"
                 },
@@ -187,9 +187,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#4c5a4a",
+                "background": "#4c5a49",
                 "img": {
-                    "url": "assets/img/guiEditor.png",
+                    "url": "assets/img/guiEditor.jpg",
                     "alt": "An editor window showing creation of a graphical user interface",
                     "width": "550px"
                 },
@@ -206,9 +206,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#3F2645",
+                "background": "#3f2644",
                 "img": {
-                    "url": "assets/img/orderIndependentTransparency.png",
+                    "url": "assets/img/orderIndependentTransparency.jpg",
                     "alt": "Render of a transparent pink dragon statue in front of transparent red and green spheres",
                     "width": "550px"
                 },
@@ -227,7 +227,7 @@
                 "alignment": "right",
                 "background": "#141414",
                 "img": {
-                    "url": "assets/img/xrHands.png",
+                    "url": "assets/img/xrHands.jpg",
                     "alt": "Phantom hands display for hand tracking in VR.",
                     "width": "550px"
                 },
@@ -244,9 +244,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#243F47",
+                "background": "#243f48",
                 "img": {
-                    "url": "assets/img/nmeNoiseNodes.png",
+                    "url": "assets/img/nmeNoiseNodes.jpg",
                     "alt": "A Lego pirate ship circling a swirling whirlpool of stylized water",
                     "width": "550px"
                 },
@@ -284,7 +284,7 @@
                 "alignment": "left",
                 "background": "#293728",
                 "img": {
-                    "url": "assets/img/mixedRealityToolkit.png",
+                    "url": "assets/img/mixedRealityToolkit.jpg",
                     "alt": "A 3D button menu with a clicked button to change a sphere color to teal",
                     "width": "550px"
                 },
@@ -320,9 +320,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#391414",
+                "background": "#381414",
                 "img": {
-                    "url": "assets/img/materialPluginManager.png",
+                    "url": "assets/img/materialPluginManager.jpg",
                     "alt": "A 3D model of a boom box colored red through a shader",
                     "width": "550px"
                 },
