@@ -109,9 +109,9 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#0e1314",
+                "background": "#0e1316",
                 "img": {
-                    "url": "assets/img/spacePirates1.png",
+                    "url": "assets/img/spacePirates1.jpg",
                     "alt": "3D render of starfighters in a space battle near asteroids",
                     "width": "550px"
                 },
@@ -121,7 +121,7 @@
                 "title": "Space Pirates Demo",
                 "desc": "What would the Babylon.js 5.0 release be without an appropriately themed demo to go with it? The Babylon Space Pirates Demo is designed to give game developers a tiny glimpse at the amazing possibilities of the Babylon.js Platform.",
                 "moreInfoLink": "https://aka.ms/babylon5DemoCode",
-                "moreInfoText": "Github repo for the project"
+                "moreInfoText": "GitHub repo for the project"
             }
         },   
         {
@@ -274,8 +274,8 @@
                 "marginRight": "50px",
                 "title": "glTF Updates",
                 "desc": "The Babylon.js Platform prioritizes support for the absolute latest and greatest advancements to the glTF file format. This means every new version of Babylon.js unlocks new beautiful advancements in rendering capabilities, and Babylon.js 5.0 turns up the heat! With full support for KHR_materials_volume, KHR_materials_transmission, and KHR_materials_ior, you can now render some absolutely STUNNING visuals!",
-                "moreInfoLink": "https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos",
-                "moreInfoText": "glTF 2.0 extensions documentation"
+                "moreInfoLink": "https://doc.babylonjs.com/typedoc/modules/babylon.gltf2.loader.extensions",
+                "moreInfoText": "glTF 2.0 extensions"
             }
         },
         {
