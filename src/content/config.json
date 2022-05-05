@@ -141,7 +141,7 @@
                 "marginRight": "50px",
                 "title": "Animation Curve Editor",
                 "desc": "Up until now, creating and modifying animation data in a rendering engine can be complicated and verbose. Not anymore! Babylon.js 5.0 adds a built-in Animation Curve Editor (ACE), making it incredibly easy to create and modify animation data directly in your Babylon scene. Also, as with all Babylon.js Platform tools, you can save your animation data to the Babylon.js Snippet Server and load it back into your Babylon.js scene with one single line of code!",
-                "moreInfoLink": "https://aka.ms/4_2_STSDoc",
+                "moreInfoLink": "https://doc.babylonjs.com/toolsAndResources/tools/animationCurveEditor",
                 "moreInfoText": "Animation curve editor documentation"
             }
         }, 
