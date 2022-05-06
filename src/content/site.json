@@ -49,6 +49,31 @@
                     "target": "_blank"
                 },
                 {
+                    "menuTitle": "TWITTER",
+                    "menuUrl": "https://twitter.com/hashtag/babylonjs",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "FACEBOOK",
+                    "menuUrl": "https://facebook.com/hashtag/babylonjs",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "INSTAGRAM",
+                    "menuUrl": "https://instagram.com/explore/tags/babylonjs",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "TIKTOK",
+                    "menuUrl": "https://tiktok.com/amp/tag/babylonjs",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "DISCORD",
+                    "menuUrl": "https://discord.gg/bn2xx6VkbP",
+                    "target": "_blank"
+                },
+                {
                     "menuTitle": "DEMOS",
                     "menuUrl": "/community"
                 }
