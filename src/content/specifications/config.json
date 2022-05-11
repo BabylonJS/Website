@@ -322,13 +322,13 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://github.com/BabylonJS/Babylon.js/tree/master/proceduralTexturesLibrary",
+                                        "link": "https://doc.babylonjs.com/divingDeeper/materials/using/proceduralTextures",
                                         "text": "Procedural textures library"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://github.com/BabylonJS/Babylon.js/tree/master/materialsLibrary",
+                                        "link": "https://doc.babylonjs.com/toolsAndResources/assetLibraries/materialsLibrary",
                                         "text": "Materials library"
                                     }
                                 ]
