@@ -9,6 +9,15 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "The Island",
+                        "author": "by Diego Ramirez",
+                        "link": "https://viseni.com/bjsdemo/07_Island/index.html",
+                        "img": {
+                            "url": "/community/assets/img/theIsland.jpg",
+                            "alt": "The Island"
+                        }
+                    },
+                    {
                         "desc": "Scene Pick",
                         "author": "by Levi_Berciu",
                         "link": "https://scenepick.com/",
