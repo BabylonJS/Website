@@ -55,6 +55,10 @@
             ]
         },
         {
+            "root": "quotes",
+            "visible": true
+        },
+        {
             "root": "games",
             "visible": true
         },

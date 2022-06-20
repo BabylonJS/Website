@@ -2,7 +2,7 @@
     style="background-color: {{#var background}}{{/var}};">
     <div class="inner-container" style="min-height:{{height}};padding-top:{{paddingTop}};padding-bottom:{{paddingBottom}};">
         {{#if (eq alignment "left")}}
-        <div>
+        <div class="image-block">
             <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">
         </div>
         {{/if}}
@@ -20,7 +20,7 @@
             {{/if}}
         </div>
         {{#if (eq alignment "right")}}
-        <div>
+        <div class="image-block">
             <img src="{{img.url}}" alt="{{img.alt}}" style="width:{{img.width}}">
         </div>
         {{/if}}
