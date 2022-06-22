@@ -8,11 +8,28 @@
         {{/if}}
         <div class="text-block"
             style="text-align:{{textAlign}};width:{{textWidth}};margin-left:{{marginLeft}};margin-right:{{marginRight}};">
-            <h2>{{title}}</h2>
-            {{#if subtitle}}
-            <h3>{{subtitle}}</h3>
+            {{#if titleColor}}
+                <h2 style="color:{{titleColor}}">{{title}}</h2>
+            {{else}}
+                <h2>{{title}}</h2>
             {{/if}}
-            <p style="color:{{color}}">{{desc}}</p>
+            {{#if subtitle}}
+                {{#if subtitleColor}}
+                    <h3 style="color:{{subtitleColor}}">{{subtitle}}</h3>
+                {{else}}
+                    <h3>{{subtitle}}</h3>
+                {{/if}}
+            {{/if}}
+            <p style="color:{{color}}">
+                <script>
+                    var descText = "{{desc}}"; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             {{#if moreInfoLink}}
             <div class="link-block">
                 <a style="color:{{color}}" href="{{moreInfoLink}}">{{moreInfoText}}</a>

@@ -14,7 +14,13 @@
         {{/if}}
         {{#if imgUrl}}
         <div class="img-holder">
-            <img class="img-carousel" src='{{imgUrl}}'></video>
+            {{#if demoLink}}
+                <a href="{{demoLink}}" target="_blank">
+                    <img class="img-carousel" src='{{imgUrl}}'></video>
+                </a>
+            {{else}}
+                <img class="img-carousel" src='{{imgUrl}}'></video>
+            {{/if}}
         </div>
         {{/if}}
         {{/each}}
