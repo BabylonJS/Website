@@ -1,0 +1,103 @@
+{
+    "menuTitle": "TESTIMONIALS",
+    "title": "What People Are Saying About Babylon.js",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "imgUrl": "./assets/img/lowes_carousel.jpg",
+                        "demoLink": "https://www.lowes.com/l/about/virtual-room-designer"
+                    },
+                    {
+                        "imgUrl": "./assets/img/frameVR_carousel.jpg",
+                        "demoLink": "https://framevr.io/"
+                    },
+                    {
+                        "imgUrl": "./assets/img/powerapps_carousel.jpg",
+                        "demoLink": "https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/mixed-reality-overview"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#be2d3b",
+                "img": {
+                    "url": "assets/img/marxent-3d-cloud-logo-2022.svg",
+                    "alt": "Marxent 3DCloud logo",
+                    "width": "250px" 
+                },
+                "height": "500px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Marxent for their Room Planner used for Lowes and Macy's",
+                "desc": "About 2 years ago, we switched from another engine to using BabylonJS as the rendering engine for our 3d room planner and 3d product spins. It has been a pleasure working with BabylonJS; the API is extremely detailed, and the forums are active and helpful. The \"we used the right technology\" moment was about a month in our lead engineer on the project found a minor bug with screenshot sizes and submitted it to the forum. Within hours someone responded, had a patch, and had it submitted for the next release. We had experiences with other engines where a similar minor bug would take months to resolve. The extensibility of BabylonJS has also been a huge factor; we write our own shaders and material wrappers driven off our own proprietary 3d format, and it has been easy to integrate all of that into the BabylonJS Engine. Looking forward to continuing to work alongside BabylonJS to change how the world shops in 3D."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#000000",
+                "img": {
+                    "url": "assets/img/framevrLogo.png",
+                    "alt": "FrameVR logo",
+                    "width": "250px"
+                },
+                "height": "1000px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "FrameVR.IO",
+                "desc": "I'm the VP and Product Manager for Frame, a web-based metaverse platform, and we've been building with Babylon.js since April 2021. There's a lot to love about Babylon: the team, the community, and of course the code itself. Accessibility is a key part of our value proposition, which is why Frame runs from the browser on desktop, mobile, and VR from one codebase. Babylon.js unlocks this ability and empowers us as a small team to craft powerful, immersive, cross-platform experiences.<br /><br />It's also a bonus for us that any web developer can start cooking with Babylon without too much effort, in contrast to proprietary game engines like Unity or Unreal that sometimes require experience with those specific tools. Also ... entire framework written in Typescript? Yes, please.<br /><br />It's always a pleasure to interact with the Babylon team and community on the forums, and it's wonderful to see our own PRs get merged into the Babylon codebase. We've also open-sourced some of the tools we've created on top of Babylon and hope to add more. We were also thrilled to do a collaboration with the Babylon.js team and other teams at Microsoft for a stunning demo at Microsoft Build 2022 that involved \"speaking things into existence\" in the metaverse. This was made possible because of the flexibility of Babylon.js.<br /><br />It's also fantastic to see Babylon incorporate and contribute to evolving standards around WebXR, glTF, and more. The tooling in the Babylon ecosystem also matches some of our own philosophy around enabling no-code creatives to create incredible things: the no-code particle editor, node material editor, and animation editor from the Babylon team are just a few examples. We let users bring creations they make with those tools right into Frame, which opens up tons of creative potential for our users.<br /><br />We love Babylon and believe it's a foundational building block of the metaverse.<br /><br />-Gabe Baker"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#ffffff",
+                "color": "#000000",
+                "titleColor": "#000000",
+                "img": {
+                    "url": "assets/img/microsoftlogo.svg",
+                    "alt": "Microsoft logo",
+                    "width": "250px"
+                },
+                "height": "500px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Microsoft PowerApps",
+                "desc": "The ability to write code in the playground, and link my teammates an immediate running example of a solution to a problem, is incredible. The moment I had that, I felt like I couldn't live without it.<br /><br />Coming to Babyon.js from another well known engine was, at first, pretty scary. I initially didn't think that Babylon.js would have the full set of features available that I had become accustomed to. Turns out that Babylon.js is well equipped and is also well backed by its community. Everything is well documented on their website and on the forums. If there's something missing, they'll be open to talk about how to create it and integrate it within the engine. I'd say that their best advantage is portability, from web to mobile devices, the engine makes it super easy and fast to create content and expose it to multiple platforms."
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#5ea9dd",
+                "img": {
+                    "url": "assets/img/twitterLogo.png",
+                    "alt": "Twitter logo",
+                    "width": "250px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Tweet from Francesco Michelini",
+                "desc": "BabylonJS is very fun to work with, but their Node Material Editor is the real game changer: https://nme.babylonjs.com <br /><br />At the time (early 2020) I learned a lot about the math behind shaders just by playing with it.",
+                "moreInfoLink": "https://twitter.com/fra_michelini/status/1506269227531096071",
+                "moreInfoText": "See the tweet" 
+            }
+        }
+    ]
+}
