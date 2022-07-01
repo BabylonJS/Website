@@ -10,7 +10,7 @@
                 "items": [
                     {
                         "desc": "Pirate Fort",
-                        "author": "by PirateJC",
+                        "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/#C21DGD#2",
                         "img": {
                             "url": "/community/assets/img/pirateFort.jpg",
@@ -19,7 +19,7 @@
                     },
                     {
                         "desc": "Product Demo",
-                        "author": "by PatrickRyan",
+                        "author": "by Babylon.js",
                         "link": "https://www.babylonjs.com/demos/productpage/",
                         "img": {
                             "url": "/community/assets/img/productDemo.jpg",
@@ -28,7 +28,7 @@
                     },
                     {
                         "desc": "Soda Bottle",
-                        "author": "by PatrickRyan",
+                        "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/#P1RZV0",
                         "img": {
                             "url": "/community/assets/img/sodaBottle.jpg",
@@ -37,7 +37,7 @@
                     },
                     {
                         "desc": "Space Pirates",
-                        "author": "by PatrickRyan",
+                        "author": "by Babylon.js",
                         "link": "https://spacepirates.babylonjs.com/",
                         "img": {
                             "url": "/community/assets/img/spacePirates.jpg",
@@ -46,7 +46,7 @@
                     },
                     {
                         "desc": "WebGPU Compute Shader",
-                        "author": "by Evgeni_Popov",
+                        "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/?webgpu#YX6IB8#55",
                         "img": {
                             "url": "/community/assets/img/webGPU.jpg",
@@ -55,39 +55,85 @@
                     },
                     {
                         "desc": "glTF Amber",
-                        "author": "by bghgary",
+                        "author": "by Babylon.js",
                         "link": "https://sandbox.babylonjs.com/?kiosk=true&assetUrl=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/MosquitoInAmber/glTF/MosquitoInAmber.gltf&cameraPosition=-0.14,0.005,0.03&autoRotate=true&skybox=true&environment=https://assets.babylonjs.com/environments/studio.env",
                         "img": {
                             "url": "/community/assets/img/amber.jpg",
                             "alt": "glTF Amber"
                         }
                     },
-                    Weapons
-                    Music Visualizer
-                    xUnderwater
-                    xMarble Tower
-                    xJack Sparrow stud sea
-                    xJack Sparrow Vortex
-                    Octopus and balls
-                    Hotspots demo
-                    Snow Shader holiday demo
-                    xSnowball throw holiday demo
-                    xHoliday bells demo
-                    xHaunted mansion bust demo
-                    lightsaber
-                    Dice
-                    Sheen
-                    Clearcoat shaderball
-                    Record player - anisotropy
-                    Particle Sun
-                    Hex tiles from Patrick
-                    xHex tiles from Jason
-                    NME Glow layer bar
-                    Polar coordinates from Patrick
-                    Tri-planar projection
-                    Flight helmet LUT demo
-                    Matrix
-                    
+                    {
+                        "desc": "Underwater",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#LPTLZM",
+                        "img": {
+                            "url": "/community/assets/img/shipHelm.jpg",
+                            "alt": "Underwater"
+                        }
+                    },
+                    {
+                        "desc": "Marble Tower",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "/community/assets/img/marbletower.jpg",
+                            "alt": "Marble Tower"
+                        }
+                    },
+                    {
+                        "desc": "The Pirate",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#TWQZAU#3",
+                        "img": {
+                            "url": "/community/assets/img/thePirate.jpg",
+                            "alt": "The Pirate"
+                        }
+                    },
+                    {
+                        "desc": "Trouble",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#0TEEN7#4",
+                        "img": {
+                            "url": "/community/assets/img/trouble.jpg",
+                            "alt": "Trouble"
+                        }
+                    },
+                    {
+                        "desc": "Snowball Fight",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#0IRV8X",
+                        "img": {
+                            "url": "/community/assets/img/snowman.jpg",
+                            "alt": "Snowball Fight"
+                        }
+                    },
+                    {
+                        "desc": "The Bells",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#KR5CRQ",
+                        "img": {
+                            "url": "/community/assets/img/weWishYouAMerryChristmas.jpg",
+                            "alt": "The Bells"
+                        }
+                    },
+                    {
+                        "desc": "Haunted Busts",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#GVPILZ",
+                        "img": {
+                            "url": "/community/assets/img/grimGrinningTextures.jpg",
+                            "alt": "Haunted Busts"
+                        }
+                    },
+                    {
+                        "desc": "Hex Board Islands",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#XEP0ZD#6",
+                        "img": {
+                            "url": "/community/assets/img/hexes.jpg",
+                            "alt": "Hex Board Islands"
+                        }
+                    },                   
                     {
                         "desc": "The Island",
                         "author": "by Diego Ramirez",
