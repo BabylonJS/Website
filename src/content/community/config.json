@@ -306,6 +306,15 @@
                         }
                     },
                     {
+                        "desc": "Morterra - Survival Sandbox",
+                        "author": "by Morterra.io",
+                        "link": "https://morterra.com",
+                        "img": {
+                            "url": "../community/assets/img/morterra.jpg",
+                            "alt": "Morterra - Survival Sandbox"
+                        }
+                    },
+                    {
                         "desc": "FORCE Map",
                         "author": "by 3D Wave Design",
                         "link": "https://3d.fundyforce.ca/",
@@ -1032,15 +1041,6 @@
                         "img": {
                             "url": "../community/assets/img/AxeonJapaneseLamp.jpg",
                             "alt": "Japanese Lamp"
-                        }
-                    },
-                    {
-                        "desc": "Morterra - Survival Sandbox",
-                        "author": "by Morterra.io",
-                        "link": "https://morterra.com",
-                        "img": {
-                            "url": "../community/assets/img/morterra.jpg",
-                            "alt": "Morterra - Survival Sandbox"
                         }
                     },
                     {
