@@ -55,6 +55,10 @@
             ]
         },
         {
+            "root": "partners",
+            "visible": true
+        },
+        {
             "root": "testimonials",
             "visible": true
         },

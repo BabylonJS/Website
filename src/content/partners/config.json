@@ -1,0 +1,189 @@
+{
+    "menuTitle": "PARTNERS",
+    "title": "What People Are Saying About Babylon.js",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "imgUrl": "./assets/img/nikeByYou.jpg",
+                        "demoLink": "https://www.nike.com/u/custom-nike-air-force-1-unlocked-by-you-10001282/2092127733#Builder"
+                    },
+                    {
+                        "imgUrl": "./assets/img/targetNurseryPlanner.jpg",
+                        "demoLink": "https://www.target.com/room-planner/nursery"
+                    },
+                    {
+                        "imgUrl": "./assets/img/jeepConfigurator.jpg",
+                        "demoLink": "https://www.jeep.com/wrangler/build-your-own-3d-jeep.html"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "templateName": "textBlock",
+            "content": {
+                "title": "Partners",
+                "desc": "Babylon.js is honored to be used and trusted by these incredible partners:"
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/microsoft_logo.svg",
+                    "alt-1": "Microsoft logo",
+                    "link-1": "https://aws.amazon.com/sumerian/",
+                    "url-2": "assets/img/Adobe_Corporate_Horizontal_Red_HEX.svg",
+                    "alt-2": "Adobe logo",
+                    "link-2": "https://blog.adobe.com/en/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature#gs.gyrllx",
+                    "url-3": "assets/img/target_logo.svg",
+                    "alt-3": "Target logo",
+                    "link-3": "https://www.target.com/room-planner/nursery",
+                    "url-4": "assets/img/nike_logo.svg",
+                    "alt-4": "Nike logo",
+                    "link-4": "https://www.nike.com/u/custom-nike-air-force-1-unlocked-by-you-10001282/2092127733#Builder"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/ikea_logo.svg",
+                    "alt-1": "IKEA logo",
+                    "url-2": "assets/img/aws_logo.png",
+                    "alt-2": "Amazon Web Services logo",
+                    "link-2": "https://aws.amazon.com/sumerian/",
+                    "url-3": "assets/img/toyota_logo.svg",
+                    "alt-3": "Toyota logo",
+                    "url-4": "assets/img/lowes_logo.svg",
+                    "alt-4": "Lowes logo",
+                    "link-4": "https://deckdesigner.lowes.com/"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/wayfair_logo.svg",
+                    "alt-1": "Wayfair logo",
+                    "link-1": "https://www.wayfair.com/RoomPlanner3D",
+                    "url-2": "assets/img/tesla_logo.svg",
+                    "alt-2": "Tesla logo",
+                    "url-3": "assets/img/huffingtonPost_logo.svg",
+                    "alt-3": "Huffington Post logo",
+                    "url-4": "assets/img/ferrari_logo.svg",
+                    "alt-4": "Ferrari logo",
+                    "link-4": "https://carconfigurator.ferrari.com/en_EN"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/jeep_logo.png",
+                    "alt-1": "Jeep logo",
+                    "link-1": "https://www.jeep.com/wrangler/build-your-own-3d-jeep.html",
+                    "url-2": "assets/img/macys_logo.png",
+                    "alt-2": "Macy's logo",
+                    "link-2": "https://macys.3dcloud.io/",
+                    "url-3": "assets/img/louisVuitton_logo.svg",
+                    "alt-3": "Louis Vuitton logo",
+                    "url-4": "assets/img/ubisoft_logo.svg",
+                    "alt-4": "Ubisoft logo"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/dolby_logo.svg",
+                    "alt-1": "Dolby logo",
+                    "url-2": "assets/img/autodesk_logo.svg",
+                    "alt-2": "Autodesk logo",
+                    "url-3": "assets/img/audi_logo.svg",
+                    "alt-3": "Audi logo",
+                    "url-4": "assets/img/sony_logo.svg",
+                    "alt-4": "Sony logo"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/verizon_logo.png",
+                    "alt-1": "Verizon logo",
+                    "url-2": "assets/img/mercedesBenz_logo.png",
+                    "alt-2": "Mercedes-Benz logo",
+                    "link-2": "https://www.mercedes-benz.com/en/eq-formulae/we-drive-the-city/mercedes-eq-speedboard-game/",
+                    "url-3": "assets/img/masters_logo.png",
+                    "alt-3": "U.S. Masters logo",
+                    "url-4": "assets/img/evian_logo.svg",
+                    "alt-4": "Evian logo"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/bentley_logo.png",
+                    "alt-1": "Bentley Motors logo",
+                    "url-2": "assets/img/nationalGeographic_logo.png",
+                    "alt-2": "National Geographic logo",
+                    "link-2": "https://sociable.co/technology/babylonjs-nat-geo/",
+                    "url-3": "assets/img/nissan_logo.svg",
+                    "alt-3": "Nissan logo",
+                    "link-3": "https://virtualshowroom.nissan.in/",
+                    "url-4": "assets/img/siemens_logo.svg",
+                    "alt-4": "Siemens logo",
+                    "link-4": "https://www.siemens-energy.com/global/en/offerings/power-transmission/showroom.html"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/squareEnix_logo.svg",
+                    "alt-1": "Square Enix logo",
+                    "url-2": "assets/img/royalAirForce_logo.png",
+                    "alt-2": "Royal Air Force logo",
+                    "link-2": "https://www.raf.mod.uk/display-teams/red-arrows/displays/",
+                    "url-3": "assets/img/sevenEleven_logo.svg",
+                    "alt-3": "7-Eleven logo",
+                    "url-4": "assets/img/seat_logo.svg",
+                    "alt-4": "Seat Automotive logo",
+                    "link-4": "https://virtualexperience.seat.es/"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "url-1": "assets/img/tata_logo.svg",
+                    "alt-1": "Tata Motors logo",
+                    "link-1": "https://imaginator.tatamotors.com/altroz/#/build/showcase",
+                    "url-2": "assets/img/zara_logo.svg",
+                    "alt-2": "Zara logo",
+                    "link-2": "https://www.zara.com/es/en/joma%C2%AE-running-sneakers-p12382820.html?v1=114499566&v2=1947814",
+                    "url-3": "assets/img/nestle_logo.png",
+                    "alt-3": "Nestle logo"
+                }
+            }
+        }
+    ]
+}
