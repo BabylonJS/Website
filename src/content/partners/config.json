@@ -1,6 +1,6 @@
 {
     "menuTitle": "PARTNERS",
-    "title": "What People Are Saying About Babylon.js",
+    "title": "Partners Using Babylon.js",
     "metaTags": [
         {
         }
@@ -40,7 +40,6 @@
                 "logo": {
                     "url-1": "assets/img/microsoft_logo.svg",
                     "alt-1": "Microsoft logo",
-                    "link-1": "https://aws.amazon.com/sumerian/",
                     "url-2": "assets/img/Adobe_Corporate_Horizontal_Red_HEX.svg",
                     "alt-2": "Adobe logo",
                     "link-2": "https://blog.adobe.com/en/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature#gs.gyrllx",
