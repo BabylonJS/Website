@@ -11,6 +11,10 @@
     display: block;
 }
 
+.partner-logo .inner-container a {
+    width: 100%;
+}
+
 .partner-logo .inner-container [class*="col-"] {
     float: left;
     height: 100%;
