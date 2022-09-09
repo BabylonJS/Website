@@ -8,7 +8,7 @@
                 "title": "BABYLON.JS DEMOS",
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
-                    {
+				    {
                         "desc": "3D Cabinet Designer",
                         "author": "by Unda Solutions",
                         "link": "https://cabinet.unda.com.au/",
@@ -169,7 +169,7 @@
                             "url": "/community/assets/img/octopus.jpg",
                             "alt": "Octopus & Ball"
                         }
-                    },
+                    },     
                     {
                         "desc": "Ecommerce Hotspots",
                         "author": "by Babylon.js",
@@ -187,7 +187,7 @@
                             "url": "/community/assets/img/winter.jpg",
                             "alt": "Snow Shader"
                         }
-                    },
+                    }, 
                     {
                         "desc": "D20",
                         "author": "by Babylon.js",
@@ -205,7 +205,7 @@
                             "url": "/community/assets/img/sheen.jpg",
                             "alt": "Sheen Demo"
                         }
-                    },
+                    },     
                     {
                         "desc": "Clear Coat Demo",
                         "author": "by Babylon.js",
@@ -214,7 +214,7 @@
                             "url": "/community/assets/img/clearCoat.jpg",
                             "alt": "Clear Coat Demo"
                         }
-                    },
+                    }, 
                     {
                         "desc": "Anisotropy Demo",
                         "author": "by Babylon.js",
@@ -223,7 +223,7 @@
                             "url": "/community/assets/img/anisotropy.jpg",
                             "alt": "Anisotropy Demo"
                         }
-                    },
+                    },    
                     {
                         "desc": "Particle Sun",
                         "author": "by Babylon.js",
@@ -232,7 +232,7 @@
                             "url": "/community/assets/img/sun.jpg",
                             "alt": "Particle Sun"
                         }
-                    },
+                    },      
                     {
                         "desc": "NME Glow Layer",
                         "author": "by Babylon.js",
@@ -241,7 +241,7 @@
                             "url": "/community/assets/img/glow.jpg",
                             "alt": "NME Glow Layer"
                         }
-                    },
+                    },     
                     {
                         "desc": "Polar Coordinates",
                         "author": "by Babylon.js",
@@ -250,7 +250,7 @@
                             "url": "/community/assets/img/polarCoordinates.jpg",
                             "alt": "Polar Coordinates"
                         }
-                    },
+                    },   
                     {
                         "desc": "Triplanar Projection",
                         "author": "by Babylon.js",
@@ -259,7 +259,7 @@
                             "url": "/community/assets/img/triplanarProjection.jpg",
                             "alt": "Triplanar Projection"
                         }
-                    },
+                    },    
                     {
                         "desc": "LUT Demo",
                         "author": "by Babylon.js",
@@ -268,7 +268,7 @@
                             "url": "/community/assets/img/LUT.jpg",
                             "alt": "LUT Demo"
                         }
-                    },
+                    },       
                     {
                         "desc": "The Matrix",
                         "author": "by Babylon.js",
@@ -277,7 +277,7 @@
                             "url": "/community/assets/img/matrix.jpg",
                             "alt": "The Matrix"
                         }
-                    },
+                    },   
                     {
                         "desc": "The Island",
                         "author": "by Diego Ramirez",
