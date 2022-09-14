@@ -185,7 +185,7 @@
                 "url": "/assets/img/netlify.svg",
                 "alt": "Hosted by Netlify"
             },
-            "link": "https://www.netlify.com"
+            "link": "https://app.netlify.com/sites/babylonjs/deploys"
         }
     ],
     "downloadLink": "https://github.com/BabylonJS/Babylon.js",
