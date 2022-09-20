@@ -270,6 +270,42 @@
                         }
                     },   
                     {
+                        "desc": "Waste to Energy Fabric",
+                        "author": "by DAL",
+                        "link": "https://abir.holdings/",
+                        "img": {
+                            "url": "/community/assets/img/abirHoldings.jpg",
+                            "alt": "Waste to Energy Fabric"
+                        }
+                    },
+                    {
+                        "desc": "Exibition Of City Solutions",
+                        "author": "by DAL",
+                        "link": "https://mrexpo.online/#/expo",
+                        "img": {
+                            "url": "/community/assets/img/exibitionOfCitySolutions.jpg",
+                            "alt": "Exibition Of City Solutions"
+                        }
+                    },
+                    {
+                        "desc": "Statera",
+                        "author": "by Statera",
+                        "link": "https://staterafps.herokuapp.com/",
+                        "img": {
+                            "url": "/community/assets/img/statera.jpg",
+                            "alt": "Statera"
+                        }
+                    },
+                    {
+                        "desc": "Some Babylon Game",
+                        "author": "by Some Babylon Game",
+                        "link": "https://saad-ahmed98.github.io/SomeBabylonGame/",
+                        "img": {
+                            "url": "/community/assets/img/someBabylonGame.jpg",
+                            "alt": "Some Babylon Game"
+                        }
+                    },
+                    {
                         "desc": "The Island",
                         "author": "by Diego Ramirez",
                         "link": "https://viseni.com/bjsdemo/07_Island/index.html",
