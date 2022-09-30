@@ -22,7 +22,12 @@
                     {
                         "videoUrl": "/assets/videos/gltfAmber.mp4",
                         "demoLink": "https://doc.babylonjs.com/divingDeeper/materials/using/masterPBR"
+                    },
+                    {
+                        "imgUrl": "/assets/img/babylonBookTeaser_website.png",
+                        "demoLink": "https://doc.babylonjs.com/guidedLearning/bjsBook"
                     }
+
                 ]
             }
         },
@@ -353,13 +358,33 @@
                 "moreInfoLink": "https://aka.ms/babylon5DSDoc",
                 "moreInfoText": "Check out the Dev Stories"
             }
-        },        {
+        },       
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#3b7e81",
+                "img": {
+                    "url": "assets/img/babylonBookCover.png",
+                    "alt": "Book cover for Going the Distance with Babylon.js with images of a planet and space ships.",
+                    "width": "300px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Going the Distance with Babylon.js",
+                "desc": "This is a book that bridges the gap between the practical, focused information in the Babylon.js documentation and real-world application development incorporating those concepts. With a forward by David Catuhe (not to mention cover art!) and extensive consultation with the Babylon.js team on both the book's technical content as well as the overall content structure, it doesn't just regurgitate material available in the reference docs.",
+                "moreInfoLink": "https://doc.babylonjs.com/guidedLearning/bjsBook",
+                "moreInfoText": "Learn more about the book"
+            }
+        },       
+        {
             "templateName": "textBlock",
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Just the Tip of the Iceberg",
-                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured. Dive in to see how far this rabbit hole goes!" 
             }
         },
         {
