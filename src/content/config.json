@@ -12,6 +12,10 @@
             "content": {
                 "items": [
                     {
+                        "imgUrl": "/assets/img/babylonBookTeaser_website.png",
+                        "demoLink": "https://doc.babylonjs.com/guidedLearning/bjsBook"
+                    },
+                    {
                         "videoUrl": "/assets/videos/spacePirates_fullBattle.mp4",
                         "demoLink": "https://spacepirates.babylonjs.com/"
                     },
@@ -22,10 +26,6 @@
                     {
                         "videoUrl": "/assets/videos/gltfAmber.mp4",
                         "demoLink": "https://doc.babylonjs.com/divingDeeper/materials/using/masterPBR"
-                    },
-                    {
-                        "imgUrl": "/assets/img/babylonBookTeaser_website.png",
-                        "demoLink": "https://doc.babylonjs.com/guidedLearning/bjsBook"
                     }
 
                 ]
