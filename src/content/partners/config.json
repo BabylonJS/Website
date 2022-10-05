@@ -13,7 +13,7 @@
                 "items": [
                     {
                         "imgUrl": "./assets/img/nikeByYou.jpg",
-                        "demoLink": "https://www.nike.com/u/custom-nike-air-force-1-unlocked-by-you-10001282/2092127733#Builder"
+                        "demoLink": "https://www.nike.com/nike-by-you"
                     },
                     {
                         "imgUrl": "./assets/img/targetNurseryPlanner.jpg",
@@ -48,7 +48,7 @@
                     "link-3": "https://www.target.com/room-planner/nursery",
                     "url-4": "assets/img/nike_logo.svg",
                     "alt-4": "Nike logo",
-                    "link-4": "https://www.nike.com/u/custom-nike-air-force-1-unlocked-by-you-10001282/2092127733#Builder"
+                    "link-4": "https://www.nike.com/nike-by-you"
                 }
             }
         },

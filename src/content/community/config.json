@@ -9,15 +9,6 @@
                 "desc": "Babylon’s open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what’s possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
-                        "desc": "3D Cabinet Designer",
-                        "author": "by Unda Solutions",
-                        "link": "https://cabinet.unda.com.au/",
-                        "img": {
-                            "url": "../community/assets/img/3d-cabinet-designer.jpg",
-                            "alt": "3D Cabinet Designer"
-                        }
-                    },
-                    {
                         "desc": "Pirate Fort",
                         "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/#C21DGD#2",
@@ -278,6 +269,15 @@
                             "alt": "The Matrix"
                         }
                     },   
+                    {
+                        "desc": "3D Cabinet Designer",
+                        "author": "by Unda Solutions",
+                        "link": "https://cabinet.unda.com.au/",
+                        "img": {
+                            "url": "/community/assets/img/3d-cabinet-designer.jpg",
+                            "alt": "3D Cabinet Designer"
+                        }
+                    },
                     {
                         "desc": "Waste to Energy Fabric",
                         "author": "by DAL",
