@@ -217,15 +217,6 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
-                        "desc": "3D Cabinet Designer",
-                        "author": "by Unda Solutions",
-                        "link": "https://cabinet.unda.com.au/",
-                        "img": {
-                            "url": "../community/assets/img/3d-cabinet-designer.jpg",
-                            "alt": "3D Cabinet Designer"
-                        }
-                    },
-                    {
                         "desc": "Room Planner 3D",
                         "author": "by Wayfair",
                         "link": "https://www.wayfair.com/RoomPlanner3D",
@@ -250,6 +241,42 @@
                         "img": {
                             "url": "../community/assets/img/RoomCollege.jpg",
                             "alt": "College Room Planner"
+                        }
+                    },
+                    {
+                        "desc": "Nike By You",
+                        "author": "by Nike",
+                        "link": "https://www.nike.com/nike-by-you",
+                        "img": {
+                            "url": "../community/assets/img/nikeByYou.jpg",
+                            "alt": "Nike By You"
+                        }
+                    },
+                    {
+                        "desc": "Deck Designer",
+                        "author": "by Lowes",
+                        "link": "https://deckdesigner.lowes.com/",
+                        "img": {
+                            "url": "../community/assets/img/lowesDeckDesigner.jpg",
+                            "alt": "Deck Desiger"
+                        }
+                    },
+                    {
+                        "desc": "Build Your Wrangler",
+                        "author": "by Jeep",
+                        "link": "https://www.jeep.com/wrangler/build-your-own-3d-jeep.html",
+                        "img": {
+                            "url": "../community/assets/img/jeepConfigurator.jpg",
+                            "alt": "Build Your Wrangler"
+                        }
+                    },
+                    {
+                        "desc": "3D Cabinet Designer",
+                        "author": "by Unda Solutions",
+                        "link": "https://cabinet.unda.com.au/",
+                        "img": {
+                            "url": "../community/assets/img/3d-cabinet-designer.jpg",
+                            "alt": "3D Cabinet Designer"
                         }
                     },
                     {
