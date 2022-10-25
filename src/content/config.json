@@ -12,6 +12,10 @@
             "content": {
                 "items": [
                     {
+                        "imgUrl": "/assets/img/hideAndSeek.png",
+                        "demoLink": "https://www.colyseus.io/babylon-colyseus"
+                    },
+                    {
                         "imgUrl": "/assets/img/babylonBookTeaser_website.png",
                         "demoLink": "https://doc.babylonjs.com/guidedLearning/bjsBook"
                     },
