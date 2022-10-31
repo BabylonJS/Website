@@ -36,10 +36,10 @@
                                         "text": "Transparent WebGL 1.0 /"
                                     },
                                     {
-                                        "link": "http://doc.babylonjs.com/features/webgl2",
+                                        "link": "https://doc.babylonjs.com/setup/support/webGL2",
                                         "text": "WebGL 2.0 /"
                                     },                                    {
-                                        "link": "https://doc.babylonjs.com/extensions/webgpu",
+                                        "link": "https://doc.babylonjs.com/setup/support/webGPU",
                                         "text": "WebGPU"
                                     },
                                     {
@@ -48,7 +48,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/resources/file_format_map_(.babylon)",
+                                        "link": "https://doc.babylonjs.com/setup/support/.babylonFileFormat",
                                         "text": "Complete scene graph "
                                     },
                                     {
@@ -57,7 +57,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/extensions/the_babylon_viewer",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer",
                                         "text": "Easy to use full featured viewer"
                                     }
                                 ],
@@ -72,7 +72,7 @@
                                         "text": "Native "
                                     },
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/Cameras,_Mesh_Collisions_and_Gravity",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_collisions",
                                         "text": "collisions "
                                     },
                                     {
@@ -81,7 +81,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://www.davrous.com/2014/11/18/understanding-collisions-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js/",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/physics",
                                         "text": "Physics engine"
                                     },
                                     {
@@ -123,7 +123,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/Animations",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/animation",
                                         "text": "Animations "
                                     },
                                     {
@@ -132,7 +132,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/Particles",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/particles",
                                         "text": "Particles "
                                     },
                                     {
@@ -142,7 +142,7 @@
                                         "text": "and "
                                     },
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/solid_particles",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/particles/solid_particle_system",
                                         "text": "Solid particles "
                                     },
                                     {
@@ -151,7 +151,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/Sprites",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/sprites",
                                         "text": "Sprites "
                                     },
                                     {
@@ -163,7 +163,7 @@
                                         "text": "Complete "
                                     },
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/playing_sounds_and_music",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic",
                                         "text": "audio engine "
                                     },
                                     {
@@ -175,19 +175,19 @@
                                         "text": "Hardware accelerated "
                                     },
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/gui",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/gui",
                                         "text": "GUI"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/features/behaviour",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/behaviors",
                                         "text": "Behaviors"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/features/controls",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/controls",
                                         "text": "Accelerated 2D controls"
                                     }
                                 ]
@@ -198,13 +198,13 @@
                             "list": [                            
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/node_material",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material",
                                         "text": "Node Material"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/physically_based_rendering",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR",
                                         "text": "Physically Based Rendering (PBR)"
                                     }
                                 ],
@@ -270,7 +270,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/environment",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox",
                                         "text": "Skybox"
                                     }
                                 ],
@@ -317,12 +317,12 @@
                                 [
                                     {
                                         "text": "360 photos and videos",
-                                        "link": "https://doc.babylonjs.com/how_to/360videodome"
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/360PhotoDome"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/divingDeeper/materials/using/proceduralTextures",
+                                        "link": "https://doc.babylonjs.com/toolsAndResources/assetLibraries/proceduralTexturesLibrary",
                                         "text": "Procedural textures library"
                                     }
                                 ],
@@ -355,24 +355,24 @@
                                 [
                                     {
                                         "text": "Height maps",
-                                        "link": "http://doc.babylonjs.com/babylon101/Height_Map"
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/ground_hmap"
                                     }
                                 ],
                                 [
                                     {
                                         "text": "Skeletons and bones",
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Bones_and_Skeletons"
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/bonesSkeletons"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/Parametric_Shapes",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/param",
                                         "text": "Parametric shapes (Ribbon, tubes, etc.)"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/how_to_use_morphtargets",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/morphTargets",
                                         "text": "Morph targets"
                                     }
                                 ],
@@ -412,25 +412,25 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/features/occlusionquery",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/occlusionQueries",
                                         "text": "Occlusion queries"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/Optimizing_Your_Scene_with_Octrees",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/scene/optimizeOctrees",
                                         "text": "Selection octrees"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/Caching_Resources_in_IndexedDB",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/scene/optimizeCached",
                                         "text": "Offline mode (Assets saved in IndexedDB)"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/Using_the_Incremental_Loading_System",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/importers/incrementalLoading",
                                         "text": "Incremental loading"
                                     }
                                 ],
@@ -441,37 +441,37 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Instances",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/copies/instances",
                                         "text": "Hardware accelerated instances"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_SceneOptimizer",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/scene/sceneOptimizer",
                                         "text": "Automatic scene optimizer"
                                     }
                                 ],
                                 [
                                     {
                                         "text": "LOD (Level Of Details)",
-                                        "link": "https://doc.babylonjs.com/how_to/how_to_use_lod"
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/LOD"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/how_to_merge_meshes",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/mergeMeshes",
                                         "text": "Meshes merging"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_offscreen_canvas",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/scene/offscreenCanvas",
                                         "text": "Offscreen canvas"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/multi_canvases",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/scene/multiCanvas",
                                         "text": "Engine sharing over multiple canvases"
                                     }
                                 ]
@@ -482,7 +482,7 @@
                             "list": [    
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/babylon101/environment",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/shaders/Fog+ShaderMat",
                                         "text": "Fog"
                                     }
                                 ],
@@ -508,60 +508,60 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/babylon101/shadows",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/lights/shadows",
                                         "text": "Shadow Maps and Exponentatial Shadow Maps (including soft shadows with PCF and PCSS)"
                                     }
                                 ],                          [
                                     {
-                                        "link": "https://doc.babylonjs.com/babylon101/shadows_csm",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/lights/shadows_csm",
                                         "text": "Cascaded Shadow Maps"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/How_to_use_PostProcessRenderPipeline",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/usePostProcesses",
                                         "text": "Post-processes"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#depth-of-field",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/dofLenseEffects",
                                         "text": "Depth of field"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#image-processing-effect",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/shaders/image_processing",
                                         "text": "Image processing"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#bloom",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#bloom",
                                         "text": "Bloom"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#grain",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#grain",
                                         "text": "Grain"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#antialiasing",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#antialiasing",
                                         "text": "Anti aliasing"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_default_rendering_pipeline#sharpening",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#sharpening",
                                         "text": "Sharpening"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/using_screenspacereflectionspostprocess",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/screenSpaceReflectionsPostProcess",
                                         "text": "Screen space reflections"
                                     }
                                 ],
@@ -572,13 +572,13 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Lens_Flares",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/lenseFlare",
                                         "text": "Lens flares"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Reflection_probes",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/reflectionProbes",
                                         "text": "Reflection Probes"
                                     }
                                 ],
@@ -589,25 +589,25 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/How_to_use_Multi-Views",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/cameras/multiViewsPart1",
                                         "text": "Multi-views"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/how_to/highlight_layer",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/highlightLayer",
                                         "text": "Highlights rendering"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/how_to/glow_layer",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/glowLayer",
                                         "text": "Glow layer"
                                     }
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/extensions/navigationmesh",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/crowdNavigation",
                                         "text": "Navigation mesh and crowd of moving agents"
                                     }
                                 ]
@@ -638,14 +638,8 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/features/cameras#virtual-joysticks-camera",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_introduction#virtual-joysticks-camera",
                                         "text": "Virtual Joysticks camera"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "link": "http://doc.babylonjs.com/how_to/webvr_camera",
-                                        "text": "WebVR camera"
                                     }
                                 ],
                                 [
@@ -691,14 +685,14 @@
                                 ],
                                 [
                                     {
-                                        "link": "http://doc.babylonjs.com/features/playground_debuglayer",
+                                        "link": "https://doc.babylonjs.com/toolsAndResources/inspector",
                                         "text": "Inspector"
                                     }
                                 ],
                                 [
                                     {
                                         "text": "Assets manager",
-                                        "link": "https://doc.babylonjs.com/how_to/how_to_use_assetsmanager"
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/importers/assetManager"
                                     }
                                 ]
                             ]
