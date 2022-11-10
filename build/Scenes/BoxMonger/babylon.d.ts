@@ -440,7 +440,7 @@ declare module BABYLON {
     }
     /**
      * Represents a scene to be rendered by the engine.
-     * @see http://doc.babylonjs.com/page.php?p=21911
+     * @see https://doc.babylonjs.com/page.php?p=21911
      */
     class Scene {
         private static _FOGMODE_NONE;
@@ -672,7 +672,7 @@ declare module BABYLON {
          * @param {BABYLON.Animatable} [animatable] an animatable object. If not provided a new one will be created from the given params.
          * @return {BABYLON.Animatable} the animatable object created for this animation
          * @see BABYLON.Animatable
-         * @see http://doc.babylonjs.com/page.php?p=22081
+         * @see https://doc.babylonjs.com/page.php?p=22081
          */
         beginAnimation(target: any, from: number, to: number, loop?: boolean, speedRatio?: number, onAnimationEnd?: () => void, animatable?: Animatable): Animatable;
         beginDirectAnimation(target: any, animations: Animation[], from: number, to: number, loop?: boolean, speedRatio?: number, onAnimationEnd?: () => void): Animatable;

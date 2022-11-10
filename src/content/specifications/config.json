@@ -702,21 +702,21 @@
                             "images": [
                                 {
                                     "linkTitle": "8th Wall integration",
-                                    "link": "http://doc.babylonjs.com/resources/blender",
+                                    "link": "https://doc.babylonjs.com/resources/blender",
                                     "imgTitle": "8th wall integration",
                                     "imgAlt": "8th wall 3D logo",
                                     "imgUrl": "/specifications/assets/img/8thwall.png"
                                 },
                                 {
                                     "linkTitle": "Blender exporter",
-                                    "link": "http://doc.babylonjs.com/resources/blender",
+                                    "link": "https://doc.babylonjs.com/resources/blender",
                                     "imgTitle": "Blender exporter",
                                     "imgAlt": "Blender 3D logo",
                                     "imgUrl": "/specifications/assets/img/blender-logo.svg"
                                 },
                                 {
                                     "linkTitle": "Unity exporter",
-                                    "link": "http://doc.babylonjs.com/resources/intro",
+                                    "link": "https://doc.babylonjs.com/resources/intro",
                                     "imgTitle": "Unity exporter",
                                     "imgAlt": "Unity 3D logo",
                                     "imgUrl": "/specifications/assets/img/unity.png"
