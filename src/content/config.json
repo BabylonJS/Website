@@ -25,11 +25,11 @@
                     },
                     {
                         "videoUrl": "/assets/videos/webGPU.mp4",
-                        "demoLink": "https://doc.babylonjs.com/advanced_topics/webGPU/computeShader"
+                        "demoLink": "https://doc.babylonjs.com/setup/support/webGPU/computeShader"
                     },
                     {
                         "videoUrl": "/assets/videos/gltfAmber.mp4",
-                        "demoLink": "https://doc.babylonjs.com/divingDeeper/materials/using/masterPBR"
+                        "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/masterPBR"
                     }
 
                 ]
@@ -89,7 +89,7 @@
                 "marginRight": "50px",
                 "title": "WebGPU",
                 "desc": "WebGPU represents the next evolution in browser to GPU communication. The W3C's GPU for the Web Community Group built it from the ground up with performance in mind. WebGPU offers web developers access to some of the most advanced modern graphics capabilities such as compute shaders and lightning-fast texture loading. We have been actively participating in the WebGPU Workgroup from its earliest days and are proud to announce that Babylon.js 5.0 offers FULL support for WebGPU.",
-                "moreInfoLink": "https://doc.babylonjs.com/advanced_topics/webGPU/computeShader",
+                "moreInfoLink": "https://doc.babylonjs.com/setup/support/webGPU/computeShader",
                 "moreInfoText": "WebGPU in Babylon.js documentation"
             }
         },
@@ -150,7 +150,7 @@
                 "marginRight": "50px",
                 "title": "Animation Curve Editor",
                 "desc": "Up until now, creating and modifying animation data in a rendering engine can be complicated and verbose. Not anymore! Babylon.js 5.0 adds a built-in Animation Curve Editor (ACE), making it incredibly easy to create and modify animation data directly in your Babylon scene. Also, as with all Babylon.js Platform tools, you can save your animation data to the Babylon.js Snippet Server and load it back into your Babylon.js scene with one single line of code!",
-                "moreInfoLink": "https://doc.babylonjs.com/toolsAndResources/tools/animationCurveEditor",
+                "moreInfoLink": "https://doc.babylonjs.com/toolsAndResources/inspector/animationCurveEditor",
                 "moreInfoText": "Animation curve editor documentation"
             }
         }, 

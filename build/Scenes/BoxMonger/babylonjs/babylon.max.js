@@ -8146,7 +8146,7 @@ var BABYLON;
 (function (BABYLON) {
     /**
      * Represents a scene to be rendered by the engine.
-     * @see http://doc.babylonjs.com/page.php?p=21911
+     * @see https://doc.babylonjs.com/page.php?p=21911
      */
     var Scene = (function () {
         /**
@@ -8593,7 +8593,7 @@ var BABYLON;
          * @param {BABYLON.Animatable} [animatable] an animatable object. If not provided a new one will be created from the given params.
          * @return {BABYLON.Animatable} the animatable object created for this animation
          * @see BABYLON.Animatable
-         * @see http://doc.babylonjs.com/page.php?p=22081
+         * @see https://doc.babylonjs.com/page.php?p=22081
          */
         Scene.prototype.beginAnimation = function (target, from, to, loop, speedRatio, onAnimationEnd, animatable) {
             if (speedRatio === undefined) {

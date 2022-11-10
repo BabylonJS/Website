@@ -122,7 +122,7 @@
         {
             "menuTitle": "GET",
             "visible": true,
-            "menuUrl": "https://doc.babylonjs.com/babylon101/how_to_get",
+            "menuUrl": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
             "target": "_blank"
         }
     ],
@@ -133,11 +133,11 @@
         },
         {
             "menuTitle": "Contribute",
-            "url": "https://doc.babylonjs.com/how_to/how_to_start"
+            "url": "https://doc.babylonjs.com/contribute/toBabylon/HowToContribute"
         },
         {
             "menuTitle": "Tutorials",
-            "url": "https://doc.babylonjs.com/babylon101"
+            "url": "https://doc.babylonjs.com/features/introductionToFeatures"
         },
         {
             "menuTitle": "Branding",

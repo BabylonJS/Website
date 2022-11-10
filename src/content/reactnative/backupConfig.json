@@ -41,7 +41,7 @@
                     },
                     {
                         "desc": "Get babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
                         "img": {
                             "url": "../assets/img/DownloadIcon.svg"
                         }

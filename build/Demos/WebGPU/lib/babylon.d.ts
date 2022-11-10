@@ -40132,7 +40132,7 @@ declare module BABYLON {
         doNotHandleTouchAction?: boolean;
         /**
          * Defines if webaudio should be initialized as well
-         * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+         * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
          */
         audioEngine?: boolean;
         /**
@@ -40189,7 +40189,7 @@ declare module BABYLON {
         private _decodeEngine;
         /**
          * Gets a boolean indicating that the engine supports uniform buffers
-         * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+         * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
          */
         get supportsUniformBuffers(): boolean;
         /**
@@ -40319,7 +40319,7 @@ declare module BABYLON {
          * Sets the current alpha mode
          * @param mode defines the mode to use (one of the Engine.ALPHA_XXX)
          * @param noDepthWriteChange defines if depth writing state should remains unchanged (false by default)
-         * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
+         * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
          */
         setAlphaMode(mode: number, noDepthWriteChange?: boolean): void;
         private _getAphaBlendOperation;

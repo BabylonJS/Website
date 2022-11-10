@@ -142,7 +142,7 @@
                 "marginRight": "50px",
                 "title": "XR experiences",
                 "desc": "Augmented Reality, Mixed Reality, and Virtual Reality experiences are being democratized by innovative applications, mobile support, and the upcoming WebXR standard. Babylon Native offers a powerful platform to build such experiences. The use of JavaScript and Babylon.js engine features to develop an application enables a broad set of developers and content creators. The capacity to run natively allows to go beyond the Web sandbox and built-in AR viewers.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
                 "moreInfoText": "More on WebXR"
             }
         },
