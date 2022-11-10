@@ -55,7 +55,7 @@
                     },
                     {
                         "desc": "get Babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
                         "img": {
                             "url": "../../assets/img/downloadIcon.svg"
                         }
@@ -123,7 +123,7 @@
                 "paddingBottom": "20px",
                 "title": "Interactives experiences",
                 "desc": "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or 'exploding' a complex object into it parts are also easy to set-up.",
-                "moreInfoLink": "https://doc.babylonjs.com/extensions/the_babylon_viewer",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/viewerExamples",
                 "moreInfoText": "More on Babylon Viewer"
             }
         },
@@ -144,7 +144,7 @@
                 "paddingBottom": "20px",
                 "title": "AR and VR experiences",
                 "desc": "Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
                 "moreInfoText": "More on WebXR"
             }
         },

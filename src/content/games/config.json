@@ -63,7 +63,7 @@
                         }
                     },                    {
                         "desc": "get Babylon.js",
-                        "link": "https://doc.babylonjs.com/babylon101/how_to_get",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
                         "img": {
                             "url": "../../assets/img/downloadIcon.svg"
                         }
@@ -87,7 +87,7 @@
                 "marginRight": "50px",
                 "title": "Advanced Rendering",
                 "desc": "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/physically_based_rendering",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR",
                 "moreInfoText": "More on Rendering"
             }
         },
@@ -106,7 +106,7 @@
                 "marginRight": "50px",
                 "title": "Animation",
                 "desc": "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It's not just simple, though, it's modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective.",
-                "moreInfoLink": "https://doc.babylonjs.com/features/animations",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/animation/animation_introduction",
                 "moreInfoText": "More on Animation"
             }
         },
@@ -125,7 +125,7 @@
                 "marginRight": "50px",
                 "title": "Particles",
                 "desc": "With the powerful particle system in Babylon.js, jaw-dropping FX are at your fingertips. Whether using sprites or solid mesh particles the creative possibilities are truly limitless.  Best of all though, it's all built with performance in mind.  Meaning with Babylon.js, not only do you get both the beauty and power of complex FX, but you get it without worrying about degrading your experience. ",
-                "moreInfoLink": "https://doc.babylonjs.com/features/particles",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/particles",
                 "moreInfoText": "More on Particles"
             }
         },
@@ -144,7 +144,7 @@
                 "marginRight": "50px",
                 "title": "Physics",
                 "desc": "For truly unique experiences and worlds, nothing beats adding complex physics interactions to your game.  However physics is computationally expensive.  Luckily, amazingly smart people across the globe have created several powerful open-source physics engines, and Babylon.js has built-in support for the best of them!",
-                "moreInfoLink": "https://doc.babylonjs.com/features/physics_engine",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/physics",
                 "moreInfoText": "More on Physics"
             }
         },
@@ -163,7 +163,7 @@
                 "marginRight": "50px",
                 "title": "GUI System",
                 "desc": "Creating amazing menus and 2D interactive layers to your 3D scene is a snap with the GUI system inside Babylon.js.  From buttons, grids, stack panels, lists, a full VR GUI toolkit, and more, you'll find everything that you need in this intuitive GUI engine.",
-                "moreInfoLink": "https://doc.babylonjs.com/features/gui",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/gui",
                 "moreInfoText": "More on GUI"
             }
         },
@@ -182,7 +182,7 @@
                 "marginRight": "50px",
                 "title": "Audio",
                 "desc": "As a game creator, your number one mission is to immerse your players in fun. Nothing gets your blood pumping faster than amazing music and sound.  Whether you're looking for ambient, directional, or fully spatialized sound, Babylon.js brings immersive sound capabilities directly under one roof in a powerful, easy-to-use sound engine.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/playing_sounds_and_music",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic",
                 "moreInfoText": "More on Audio"
             }
         },
@@ -201,7 +201,7 @@
                 "marginRight": "50px",
                 "title": "XR games",
                 "desc": "AR/VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, AR/VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebXR helper, you can get a AR/VR scene up and running in a matter of minutes.",
-                "moreInfoLink": "https://doc.babylonjs.com/how_to/introduction_to_webxr",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
                 "moreInfoText": "More on XR"
             }
         },
