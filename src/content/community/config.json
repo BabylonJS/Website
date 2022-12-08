@@ -279,6 +279,15 @@
                         }
                     },
                     {
+                        "desc": "Projects",
+                        "author": "by Bit by bit developers",
+                        "link": "https://bitbybit.dev/projects/public",
+                        "img": {
+                            "url": "/community/assets/img/bitByBit.jpg",
+                            "alt": "Projects"
+                        }
+                    },
+                    {
                         "desc": "Castle of Arques-La-Bataille",
                         "author": "by Vinc3r",
                         "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
