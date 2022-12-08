@@ -270,6 +270,15 @@
                         }
                     },
                     {
+                        "desc": "JS Wings",
+                        "author": "by kri100s",
+                        "link": "https://js-wings.netlify.app/",
+                        "img": {
+                            "url": "/community/assets/img/jsWings.jpg",
+                            "alt": "JS Wings"
+                        }
+                    },
+                    {
                         "desc": "Castle of Arques-La-Bataille",
                         "author": "by Vinc3r",
                         "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
