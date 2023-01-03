@@ -270,6 +270,15 @@
                         }
                     },
                     {
+                        "desc": "Sidus Heroes",
+                        "author": "by SidusHeroes",
+                        "link": "https://sidusheroes.com/",
+                        "img": {
+                            "url": "/community/assets/img/sidusheroes.jpg",
+                            "alt": "Sidus Heroes"
+                        }
+                    },
+                    {
                         "desc": "JS Wings",
                         "author": "by kri100s",
                         "link": "https://js-wings.netlify.app/",
