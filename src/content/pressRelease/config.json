@@ -1,0 +1,105 @@
+{
+    "menuTitle": "PRESS RELEASE",
+    "title": "Babylon.js Press Release",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "imageListBlock",
+            "content": {
+                "paddingTop": "70px",
+                "background": "DarkRed",
+                "items": [
+                    {
+                        "img": {
+                            "url": "assets/img/havok_logo_reversed.svg",
+                            "alt": "",
+                            "width": "800px",
+                            "height": "400px",
+                            "marginLeft": "0px",
+                            "marginRight": "0px"
+                        }
+                    }
+                ]
+            }
+        },  
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "title": "Babylon.js Welcomes Havok Physics",
+                "date": "April 20, 2023",
+                "desc": [
+                    "Babylon.js is excited to welcome Havok Physics to the platform. Havok is an award winning physics engine that sets the standard for AAA games and now their core functionality is available through Babylon.js for free."
+                       
+                ]
+            }   
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "desc": "Babylon.js is on a mission to create one of the most powerful, beautiful and simple web rendering engines in the world. Integrating core Havok features into Babylon.js, sets a whole new benchmark for physics performance on the web, allowing developers and creators to unlock new functionality, create higher quality simulations, and dream up exciting new interactive experiences for users across the web."
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "desc": "To compliment the Havok engine, the Babylon.js team has been hard at work rewriting the existing physics interface. This brings an improved, easier to use, and more flexible API to all developers/creators."
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "desc": "The release of Babylon.js 6.0 with Havok Physics will make all existing Physics features available in one place and bring a large set of new features:"
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "list": [
+                    "New features like inertia, collision filtering, keyframed bodies, advanced sleep control, and more",
+                    "Faster raycasts",
+                    "Improved physics debugging"
+                ]
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "desc": "Babylon.js 6.0 is available from March 30th, to see Havok Physics in action check out [link to demo video] and to get started visit us at <a href=\"https://www.babylonjs.com\">https://www.babylonjs.com</a>."
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "subtitle": "About Babylon.js",
+                "desc": "Babylon.js is a powerful, open-source, web rendering engine built to make it as simple as possible for web developers to unlock the power, performance, and rendering capabilities of the GPU onboard every device. Babylon.js works across all browsers and platforms and is completely free."
+            }
+        },
+        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "subtitle": "About Havok",
+                "desc": "Havok Physics offers the fastest, most robust collision detection and physical simulation technology available, which is why it has become the gold standard within the games industry. With more than two decades of continuous investment and experience working with the top game studios in the world, Havok Physics has been validated by the best of the best and has powered hundreds of the top AAA titles on all major consoles.",
+                "end": true
+            }
+        }    
+    ]
+}

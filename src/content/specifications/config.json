@@ -3,9 +3,6 @@
     "title": "Babylon.js Specifications",
     "blocks": [
         {
-            "templateName": "marginBlock"
-        },
-        {
             "templateName": "carouselBlock",
             "delay": 2000,
             "content": {

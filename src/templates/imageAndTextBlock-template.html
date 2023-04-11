@@ -32,7 +32,8 @@
             </p>
             {{#if moreInfoLink}}
             <div class="link-block">
-                <a style="color:{{color}}" href="{{moreInfoLink}}">{{moreInfoText}}</a>
+                <a style="color:{{color}}" href="{{moreInfoLink}}" {{#if target}}target="{{target}}"{{/if}}>{{moreInfoText}}
+                </a>
             </div>
             {{/if}}
         </div>

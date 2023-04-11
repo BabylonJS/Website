@@ -1,0 +1,27 @@
+<div class="press-release">
+    <div class="inner-container" style="margin-left:{{marginLeft}};margin-right:{{marginRight}};">
+        {{#if title}}
+            <h2>{{title}}</h2>
+        {{/if}}
+        {{#if date}}
+            <p class="press-release-date">{{date}}</p>
+        {{/if}}
+        {{#if subtitle}}
+            <h3>{{subtitle}}</h3>
+        {{/if}}
+        {{#if desc}}
+            {{#if end}}
+                <p class="last-paragraph">{{{desc}}}</p> 
+            {{else}}
+                <p>{{{desc}}}</p>
+            {{/if}}
+        {{/if}}
+        {{#if list}}
+            <ul>
+                {{#each list}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}  
+    </div>
+</div>
