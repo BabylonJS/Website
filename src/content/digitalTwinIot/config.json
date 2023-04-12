@@ -10,26 +10,22 @@
             "templateName": "carouselBlock",
             "delay": 2000,
             "content": {
-                "items": [
+                "items": [ 
                     {
-                        "videoUrl": "./assets/videos/minecraftClassic.mp4",
-                        "demoLink": "https://classic.minecraft.net"
+                        "videoUrl": "assets/videos/AzureDigitalTwins.mp4",
+                        "demoLink": "https://learn.microsoft.com/en-us/azure/digital-twins/concepts-3d-scenes-studio"
                     },
                     {
-                        "videoUrl": "./assets/videos/spaceInvaders.mp4",
-                        "demoLink": "https://spaceinvaders.viperfish.com.au//"
+                        "videoUrl": "assets/videos/snaptrude.mp4",
+                        "demoLink": "https://www.snaptrude.com/"
                     },
                     {
-                        "videoUrl": "./assets/videos/templeRun2.mp4",
-                        "demoLink": "https://poki.com/en/g/temple-run-2#"
+                        "videoUrl": "./assets/videos/smplrspace.mp4",
+                        "demoLink": "https://www.smplrspace.com/"
                     },
                     {
-                        "videoUrl": "./assets/videos/brilliantMan.mp4",
-                        "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
-                    },
-                    {
-                        "videoUrl": "./assets/videos/battlechoc.mp4",
-                        "demoLink": "https://battlechoc.com"
+                        "videoUrl": "./assets/videos/bingMaps.mp4",
+                        "demoLink": "https://www.bing.com/maps"
                     }
                 ]
             }
@@ -40,8 +36,8 @@
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "A 3D ENGINE FOR DIGITAL TWIN AND IOT",
-                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it simple to create Digital Twin applications on the Web. Built on JavaScript and web standards, Babylon.js eliminates cross-platform complexity allowing you to focus on what is truly important - creating interactive 3D experiences for end-users and customers. "
+                "title": "A 3D ENGINE FOR DIGITAL TWINS AND IOT",
+                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it simple to create Digital Twins applications on the Web. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers."
             }
         },
         {
@@ -76,13 +72,13 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#5a0014",
+                "background": "#506663",
                 "img": {
-                    "url": "assets/img/wifi.svg",
+                    "url": "assets/img/snaptrude_digitalTwin.jpg",
                     "alt": "",
-                    "width": "550px"
+                    "width": "600px"
                 },
-                "height": "400px",
+                "height": "550px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Digital Twin",
@@ -95,16 +91,16 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#3b4846",
+                "background": "#272d4d",
                 "img": {
-                    "url": "assets/img/animation.png",
+                    "url": "assets/img/azuredigitaltwins_DataVis.jpg",
                     "alt": "Alternative text for the image",
                     "width": "550px"
                 },
-                "height": "400px",
+                "height": "500px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "IoT data visualization",
+                "title": "IoT Data Visualization",
                 "desc": "IoT devices can provide real-time data to digital twins which can be used to improve their accuracy and usefulness. Real-time data can easily be visualized by changing the colors or materials of 3D objects and animations or particles can be added for better simulation and visual effects. For example, Azure Digital Twins 3D Scenes Studio is an immersive 3D environment, where end users can monitor, diagnose, and investigate operational data with the visual context of 3D assets.",
                 "moreInfoLink": "https://learn.microsoft.com/en-us/azure/digital-twins/concepts-3d-scenes-studio",
                 "moreInfoText": "Visit the Azure digital twin 3D scenes studio experience"
@@ -141,66 +137,66 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
-                        "desc": "Minecraft Classic",
-                        "author": "by Mojang",
-                        "link": "https://classic.minecraft.net",
+                        "desc": "Waste to Energy Fabric",
+                        "author": "by DAL",
+                        "link": "https://abir.holdings/",
                         "img": {
-                            "url": "./assets/img/Minecraft_Classic.png",
-                            "alt": "Minecraft Classic"
+                            "url": "../community/assets/img/abirHoldings.jpg",
+                            "alt": "Waste to Energy Fabric"
                         }
                     },
                     {
-                        "desc": "Space Invaders",
-                        "author": "by John Pitchers",
-                        "link": "https://spaceinvaders.viperfish.com.au/",
+                        "desc": "Castle of Arques-La-Bataille",
+                        "author": "by Vinc3r",
+                        "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
                         "img": {
-                            "url": "./assets/img/spaceInvaders.png",
-                            "alt": "Space Invaders made with Babylon.js"
+                            "url": "../community/assets/img/Arques-La-Bataille.jpg",
+                            "alt": "Castle of Arques-La-Bataille"
+                        }
+                    }, 
+                    {
+                        "desc": "FORCE Map",
+                        "author": "by 3D Wave Design",
+                        "link": "https://3d.fundyforce.ca/",
+                        "img": {
+                            "url": "../community/assets/img/force.jpg",
+                            "alt": "FORCE Map"
                         }
                     },
                     {
-                        "desc": "Temple Run 2",
-                        "author": "by Imangi Studios",
-                        "link": "https://poki.com/en/g/temple-run-2#",
+                        "desc": "Cathedral",
+                        "author": "by Axeon Software",
+                        "link": "https://time-loop.fr/Therouanne/EXPERIENCES/3DSCAN/CATHEDRALE/#!/",
                         "img": {
-                            "url": "../community/assets/img/templeRun2.jpg",
-                            "alt": "Temple Run 2"
+                            "url": "../community/assets/img/cathedral.jpg",
+                            "alt": "Cathedral"
                         }
                     },
                     {
-                        "desc": "Wall Game",
-                        "author": "by Robin_McLaut",
-                        "link": "https://demo.seitwerk.de/sw-wall/",
+                        "desc": "Campus Albano",
+                        "author": "by wec360°",
+                        "link": "https://campusalbano.se/",
                         "img": {
-                            "url": "../community/assets/img/wallGame.jpg",
-                            "alt": "Wall Game"
+                            "url": "../community/assets/img/campus-albano.jpg",
+                            "alt": "campus Albano - wec360°"
                         }
                     },
                     {
-                        "desc": "Wazana.io",
-                        "author": "by Pichou",
-                        "link": "https://wazana.io/",
+                        "desc": "Kazaplan",
+                        "author": "by Wanadev & Kazaplan",
+                        "link": "https://www.kozikaza.com/plan-3d-maison/",
                         "img": {
-                            "url": "../community/assets/img/wazanaio.jpg",
-                            "alt": "Wazana.io"
+                            "url": "../community/assets/img/kazaplan.jpg",
+                            "alt": "Kazaplan"
                         }
                     },
                     {
-                        "desc": "Caterpillar Cowboy",
-                        "author": "by Foxdog Studios",
-                        "link": "https://ld47.fds.im/",
+                        "desc": "pCon.box",
+                        "author": "by EasternGraphics",
+                        "link": "http://www.easterngraphics.com/en/products/pconbox.html",
                         "img": {
-                            "url": "../community/assets/img/caterpillarCowboy.jpg",
-                            "alt": "Caterpillar Cowboy"
-                        }
-                    },
-                    {
-                        "desc": "Shell Shockers",
-                        "author": "by Fun Fetched",
-                        "link": "http://shellshock.io",
-                        "img": {
-                            "url": "../community/assets/img/ShellShockers.jpg",
-                            "alt": "Shell Shockers"
+                            "url": "../community/assets/img/pCon_box.jpg",
+                            "alt": "pCon.box"
                         }
                     }
                 ]
