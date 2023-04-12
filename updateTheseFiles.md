@@ -12,10 +12,12 @@
 - [ ] src\assets\videos\physics.mp4
 - [ ] src\assets\videos\SSRv2.mp4
 ---
-- [ ] src\content\community\assets\Arques-La-Bataille.jpg
-- [ ] src\content\community\assets\bitByBit.jpg
-- [ ] src\content\community\assets\jsWings.jpg
-- [ ] src\content\community\assets\sidusheroes.jpg
+- [ ] src\content\community\assets\img\Arques-La-Bataille.jpg
+- [ ] src\content\community\assets\img\bitByBit.jpg
+- [ ] src\content\community\assets\img\jsWings.jpg
+- [ ] src\content\community\assets\img\sidusheroes.jpg
+- [ ] src\content\community\assets\img\grisDiorGallery.jpg
+- [ ] src\content\community\assets\img\xboxDesignLabsTile.jpg
 - [ ] src\content\community\config.json
 ---
 - [ ] src\content\digitalTwinIot\
@@ -30,7 +32,7 @@
 ---
 - [ ] src\content\metaverse\
 ---
-- [ ] src\content\partners\assets\img
+- [ ] src\content\partners\assets\img 
 - [ ] src\content\partners\config.json
 ---
 - [ ] src\content\pressRelease\
@@ -43,6 +45,7 @@
 - [ ] src\templates\imageAndTextBlock-template.html
 - [ ] src\templates\index-template.html
 - [ ] src\templates\pressRelease-template.html
+- [ ] sec\templates\partnerLogo-template.html
 
 ## Updates to the press release page
 To make any last minute changes to the press release page that get approved from our partners, you will want to edit the file:

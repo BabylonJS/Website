@@ -389,20 +389,20 @@
                         }
                     },
                     {
-                        "desc": "SharePoint Spaces",
+                        "desc": "Xbox Design Lab",
                         "author": "by Microsoft",
-                        "link": "https://www.exploresharepointspaces.com/",
+                        "link": "https://xboxdesignlab.xbox.com/",
                         "img": {
-                            "url": "../community/assets/img/sharepoint-spaces.jpg",
-                            "alt": "SharePoint Spaces"
+                            "url": "../community/assets/img/xboxDesignLabTile.jpg",
+                            "alt": "Xbox Design Lab custom Xbox controller in pride colors"
                         }
                     },
                     {
-                        "desc": "US Masters",
-                        "author": "by ANGC",
-                        "link": " https://www.masters.com/en_US/scores/track/index.html",
+                        "desc": "Gris Dior Gallery",
+                        "author": "by Dior",
+                        "link": "https://dior.n10.app/?portal=mainl",
                         "img": {
-                            "url": "../community/assets/img/masters.jpg",
+                            "url": "../community/assets/img/grisDiorGallery.jpg",
                             "alt": "US Masters"
                         }
                     }

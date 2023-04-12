@@ -33,7 +33,7 @@
                 "title": "Babylon.js Welcomes Havok Physics",
                 "date": "April 20, 2023",
                 "desc": [
-                    "Babylon.js is excited to welcome Havok Physics to the platform. Havok is an award winning physics engine that sets the standard for AAA games and now their core functionality is available through Babylon.js for free."
+                    "Babylon.js is excited to welcome a new physics implementation by Havok to the platform. The Babylon.js team in collaboration with the Havok team have been hard at work rewriting the existing physics interface in Babylon.js. This brings an improved, easier to use, and more flexible API to all developers/creators. The new interface ships with an implementation developed in collaboration with the Havok team raising the quality and performance bar for real time simulation in Babylon.js."
                        
                 ]
             }   
@@ -43,7 +43,7 @@
             "content": {
                 "margin-left": "50px",
                 "margin-right": "50px",
-                "desc": "Babylon.js is on a mission to create one of the most powerful, beautiful and simple web rendering engines in the world. Integrating core Havok features into Babylon.js, sets a whole new benchmark for physics performance on the web, allowing developers and creators to unlock new functionality, create higher quality simulations, and dream up exciting new interactive experiences for users across the web."
+                "desc": "Babylon.js is on a mission to create one of the most powerful, beautiful and simple web rendering engines in the world. This sets a new benchmark for physics performance on the web, allowing developers and creators to unlock new functionality, create higher quality simulations, and dream up exciting new interactive experiences for users across the web."
             }
         },
         {
@@ -51,15 +51,7 @@
             "content": {
                 "margin-left": "50px",
                 "margin-right": "50px",
-                "desc": "To compliment the Havok engine, the Babylon.js team has been hard at work rewriting the existing physics interface. This brings an improved, easier to use, and more flexible API to all developers/creators."
-            }
-        },
-        {
-            "templateName": "pressRelease",
-            "content": {
-                "margin-left": "50px",
-                "margin-right": "50px",
-                "desc": "The release of Babylon.js 6.0 with Havok Physics will make all existing Physics features available in one place and bring a large set of new features:"
+                "desc": "The release of Babylon.js 6.0 with the first physics implementation by Havok brings:"
             }
         },
         {
@@ -68,8 +60,8 @@
                 "margin-left": "50px",
                 "margin-right": "50px",
                 "list": [
-                    "New features like inertia, collision filtering, keyframed bodies, advanced sleep control, and more",
-                    "Faster raycasts",
+                    "Significantly improved performance",
+                    "Expanded features for physics in Babylon.js",
                     "Improved physics debugging"
                 ]
             }
@@ -79,7 +71,14 @@
             "content": {
                 "margin-left": "50px",
                 "margin-right": "50px",
-                "desc": "Babylon.js 6.0 is available from March 30th, to see Havok Physics in action check out [link to demo video] and to get started visit us at <a href=\"https://www.babylonjs.com\">https://www.babylonjs.com</a>."
+                "desc": "This is a start of a partnership which will improve physics for all customers and future releases will look to grow the physics possibilities within the Babylon.js engine."
+            }
+        },        {
+            "templateName": "pressRelease",
+            "content": {
+                "margin-left": "50px",
+                "margin-right": "50px",
+                "desc": "Babylon.js 6.0 is available from April 20th. To see the new physics implementation in action, check out [link to demo video] and to get started visit us at <a href=\"https://www.babylonjs.com\">https://www.babylonjs.com</a>."
             }
         },
         {
@@ -97,7 +96,7 @@
                 "margin-left": "50px",
                 "margin-right": "50px",
                 "subtitle": "About Havok",
-                "desc": "Havok Physics offers the fastest, most robust collision detection and physical simulation technology available, which is why it has become the gold standard within the games industry. With more than two decades of continuous investment and experience working with the top game studios in the world, Havok Physics has been validated by the best of the best and has powered hundreds of the top AAA titles on all major consoles.",
+                "desc": "Havok offers the fastest, most robust collision detection and physical simulation technology available, which is why it has become the gold standard within the games industry. With more than two decades of continuous investment and experience working with the top game studios in the world, Havok Physics has been validated by the best of the best and has powered hundreds of the top AAA titles on all major consoles.",
                 "end": true
             }
         }    
