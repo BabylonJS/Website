@@ -78,7 +78,7 @@
             "content": {
                 "margin-left": "50px",
                 "margin-right": "50px",
-                "desc": "Babylon.js 6.0 is available from April 20th. To see the new physics implementation in action, check out [link to demo video] and to get started visit us at <a href=\"https://www.babylonjs.com\">https://www.babylonjs.com</a>."
+                "desc": "Babylon.js 6.0 is available from April 20th. To see the new physics implementation in action, check out the <a href=\"https://aka.ms/babylon6ReleaseVideo\">Babylon.js 6.0 Announcement Video</a> and to get started visit us at <a href=\"https://www.babylonjs.com\">https://www.babylonjs.com</a>."
             }
         },
         {
