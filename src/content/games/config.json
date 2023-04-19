@@ -40,7 +40,7 @@
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "THE GAME ENGINE MADE FOR THE WEB.",
+                "title": "THE GAME ENGINE MADE FOR THE WEB",
                 "desc": "A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what's truly important…creating breathtaking experiences for gamers across the web."
             }
         },

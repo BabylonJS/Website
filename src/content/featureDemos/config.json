@@ -1,0 +1,276 @@
+{
+    "menuTitle": "FEATUREDEMOS",
+    "title": "Babylon.js Feature Demos",
+    "blocks": [
+        {
+            "templateName": "galleryBlock",
+            "content": {
+                "title": "BABYLON.JS FEATURE DEMOS",
+                "desc": "A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.",
+                "items": [
+                    {
+                        "desc": "Pirate Fort",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#C21DGD#2",
+                        "img": {
+                            "url": "/community/assets/img/pirateFort.jpg",
+                            "alt": "Pirate Fort"
+                        }
+                    },
+                    {
+                        "desc": "Product Demo",
+                        "author": "by Babylon.js",
+                        "link": "https://www.babylonjs.com/demos/productpage/",
+                        "img": {
+                            "url": "/community/assets/img/productDemo.jpg",
+                            "alt": "Product Demo"
+                        }
+                    },
+                    {
+                        "desc": "Soda Bottle",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#P1RZV0",
+                        "img": {
+                            "url": "/community/assets/img/sodaBottle.jpg",
+                            "alt": "Soda Bottle"
+                        }
+                    },
+                    {
+                        "desc": "Space Pirates",
+                        "author": "by Babylon.js",
+                        "link": "https://spacepirates.babylonjs.com/",
+                        "img": {
+                            "url": "/community/assets/img/spacePirates.jpg",
+                            "alt": "Space Pirates"
+                        }
+                    },
+                    {
+                        "desc": "WebGPU Compute Shader",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/?webgpu#YX6IB8#55",
+                        "img": {
+                            "url": "/community/assets/img/webGPU.jpg",
+                            "alt": "WebGPU Compute Shader"
+                        }
+                    },
+                    {
+                        "desc": "glTF Amber",
+                        "author": "by Babylon.js",
+                        "link": "https://sandbox.babylonjs.com/?kiosk=true&assetUrl=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/MosquitoInAmber/glTF/MosquitoInAmber.gltf&cameraPosition=-0.14,0.005,0.03&autoRotate=true&skybox=true&environment=https://assets.babylonjs.com/environments/studio.env",
+                        "img": {
+                            "url": "/community/assets/img/amber.jpg",
+                            "alt": "glTF Amber"
+                        }
+                    },
+                    {
+                        "desc": "Underwater",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#LPTLZM",
+                        "img": {
+                            "url": "/community/assets/img/shipHelm.jpg",
+                            "alt": "Underwater"
+                        }
+                    },
+                    {
+                        "desc": "Marble Tower",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#3I55DK#0",
+                        "img": {
+                            "url": "/community/assets/img/marbletower.jpg",
+                            "alt": "Marble Tower"
+                        }
+                    },
+                    {
+                        "desc": "The Pirate",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#TWQZAU#3",
+                        "img": {
+                            "url": "/community/assets/img/thePirate.jpg",
+                            "alt": "The Pirate"
+                        }
+                    },
+                    {
+                        "desc": "Trouble",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#0TEEN7#4",
+                        "img": {
+                            "url": "/community/assets/img/trouble.jpg",
+                            "alt": "Trouble"
+                        }
+                    },
+                    {
+                        "desc": "Snowball Fight",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#0IRV8X",
+                        "img": {
+                            "url": "/community/assets/img/snowman.jpg",
+                            "alt": "Snowball Fight"
+                        }
+                    },
+                    {
+                        "desc": "The Bells",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#KR5CRQ",
+                        "img": {
+                            "url": "/community/assets/img/weWishYouAMerryChristmas.jpg",
+                            "alt": "The Bells"
+                        }
+                    },
+                    {
+                        "desc": "Haunted Busts",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#GVPILZ",
+                        "img": {
+                            "url": "/community/assets/img/grimGrinningTextures.jpg",
+                            "alt": "Haunted Busts"
+                        }
+                    },
+                    {
+                        "desc": "Hex Board Islands",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#XEP0ZD#6",
+                        "img": {
+                            "url": "/community/assets/img/hexes.jpg",
+                            "alt": "Hex Board Islands"
+                        }
+                    },
+                    {
+                        "desc": "Weapons",
+                        "author": "by Babylon.js",
+                        "link": "https://www.babylonjs-playground.com/#I6V1ST",
+                        "img": {
+                            "url": "/community/assets/img/weapon.jpg",
+                            "alt": "Weapons"
+                        }
+                    },
+                    {
+                        "desc": "Music Visualizer",
+                        "author": "by Babylon.js",
+                        "link": "https://www.babylonjs-playground.com/#HA3E1B#24",
+                        "img": {
+                            "url": "/community/assets/img/musicVis.jpg",
+                            "alt": "Music Visualizer"
+                        }
+                    },
+                    {
+                        "desc": "Octopus & Ball",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#8MAF6E",
+                        "img": {
+                            "url": "/community/assets/img/octopus.jpg",
+                            "alt": "Octopus & Ball"
+                        }
+                    },     
+                    {
+                        "desc": "Ecommerce Hotspots",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#8JDEIZ",
+                        "img": {
+                            "url": "/community/assets/img/hotspots.jpg",
+                            "alt": "Ecommerce Hotspots"
+                        }
+                    },
+                    {
+                        "desc": "Snow Shader",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#BP7QYG",
+                        "img": {
+                            "url": "/community/assets/img/winter.jpg",
+                            "alt": "Snow Shader"
+                        }
+                    }, 
+                    {
+                        "desc": "D20",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#UUXABN#8",
+                        "img": {
+                            "url": "/community/assets/img/d20.jpg",
+                            "alt": "D20"
+                        }
+                    },
+                    {
+                        "desc": "Sheen Demo",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#6K2EY0",
+                        "img": {
+                            "url": "/community/assets/img/sheen.jpg",
+                            "alt": "Sheen Demo"
+                        }
+                    },     
+                    {
+                        "desc": "Clear Coat Demo",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#8153LW",
+                        "img": {
+                            "url": "/community/assets/img/clearCoat.jpg",
+                            "alt": "Clear Coat Demo"
+                        }
+                    }, 
+                    {
+                        "desc": "Anisotropy Demo",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#1EISUM#3",
+                        "img": {
+                            "url": "/community/assets/img/anisotropy.jpg",
+                            "alt": "Anisotropy Demo"
+                        }
+                    },    
+                    {
+                        "desc": "Particle Sun",
+                        "author": "by Babylon.js",
+                        "link": "https://www.babylonjs-playground.com/#MX2Z99#7",
+                        "img": {
+                            "url": "/community/assets/img/sun.jpg",
+                            "alt": "Particle Sun"
+                        }
+                    },      
+                    {
+                        "desc": "NME Glow Layer",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#7QCYPB",
+                        "img": {
+                            "url": "/community/assets/img/glow.jpg",
+                            "alt": "NME Glow Layer"
+                        }
+                    },     
+                    {
+                        "desc": "Polar Coordinates",
+                        "author": "by Babylon.js",
+                        "link": "https://www.babylonjs-playground.com/#EED2HJ",
+                        "img": {
+                            "url": "/community/assets/img/polarCoordinates.jpg",
+                            "alt": "Polar Coordinates"
+                        }
+                    },   
+                    {
+                        "desc": "Triplanar Projection",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#DFQVK5",
+                        "img": {
+                            "url": "/community/assets/img/triplanarProjection.jpg",
+                            "alt": "Triplanar Projection"
+                        }
+                    },    
+                    {
+                        "desc": "LUT Demo",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#YIY1QQ",
+                        "img": {
+                            "url": "/community/assets/img/LUT.jpg",
+                            "alt": "LUT Demo"
+                        }
+                    },       
+                    {
+                        "desc": "The Matrix",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#Y9RUL5",
+                        "img": {
+                            "url": "/community/assets/img/matrix.jpg",
+                            "alt": "The Matrix"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

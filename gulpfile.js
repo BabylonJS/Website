@@ -139,7 +139,7 @@ _gulp.task('build', function (done) {
     //clear output dir
     //_fs.removeSync(_path.join(_path.resolve(), _outputRootPath));
 
-    //copy global assets to build dirrectory
+    //copy global assets to build directory
     _fs.copySync("./src/assets", _path.join(_path.resolve(), _outputRootPath, "assets"));
 
     //render home page

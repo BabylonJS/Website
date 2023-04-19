@@ -1,0 +1,210 @@
+{
+    "menuTitle": "METAVERSE",
+    "title": "Babylon.js Metaverse Engine",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "assets/videos/frame.mp4",
+                        "demoLink": "https://learn.framevr.io/"
+                    },
+                    {
+                        "videoUrl": "assets/videos/nowhere.mp4",
+                        "demoLink": "https://www.nowhere.io/"
+                    },
+                    {
+                        "videoUrl": "assets/videos/spot.mp4",
+                        "demoLink": "https://www.spotvirtual.com/"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "A 3D ENGINE FOR METAVERSE APPLICATIONS",
+                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it simple to create Metaverse applications on the Web. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the features",
+                        "link": "https://www.babylonjs.com/games/#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#7a736b",
+                "img": {
+                    "url": "assets/img/frame.jpg",
+                    "alt": "A 3D room filled with various avatars wearing colorful clothes with user names floating over their heads. Some also have muted microphone icons under their names.",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "3D Environments and Avatars", 
+                "desc": "Created as a real time 3D rendering game engine, Babylon.js offers all the key features needed to build metaverse applications: Low or high poly geometries, baked lighting or lightmap, standard or PBR material and morph or skeletal animations for avatars, etc.... For example, Frame uses Babylon.js to create immersive collaboration spaces for meetings, events, classes and more.",
+                "moreInfoLink": "https://learn.framevr.io/",
+                "moreInfoText": "Visit the Frame metaverse example"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#3b4846",
+                "img": {
+                    "url": "assets/img/nowhere.jpg",
+                    "alt": "A futuristic kiosk in front of a starfield with nebula and illuminated signs saying welcome to the middle and discover live spaces.Below the kiosk are several portraits on disks which represent simple avatars.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "VR Experiences",
+                "desc": "With the support for WebXR, developers can easily create compelling cross-browser VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more. For example, whether it is with a desktop or with an Oculus device, users of Nowhere metaverse application can enjoy festivals, music video premieres, live auctions and more.",
+                "moreInfoLink": "https://www.nowhere.io/",
+                "moreInfoText": "Visit the Nowhere VR metaverse example"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "/specifications",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "Games made with Babylon.js",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Exibition Of City Solutions",
+                        "author": "by DAL",
+                        "link": "https://mrexpo.online/#/expo",
+                        "img": {
+                            "url": "/community/assets/img/exibitionOfCitySolutions.jpg",
+                            "alt": "Exibition Of City Solutions"
+                        }
+                    },
+                    {
+                        "desc": "Grapevine",
+                        "author": "by Grapevine",
+                        "link": "https://app.thegrapevine.tech/publicmain?spaceid=-Mm-4mxKw-uhJ0qgkBCF&key=-Mm-5-lAb1lqqL8oQC8E#/",
+                        "img": {
+                            "url": "/community/assets/img/grapevine.jpg",
+                            "alt": "Grapevine"
+                        }
+                    },
+                    {
+                        "desc": "Spot",
+                        "author": "by Spot",
+                        "link": "https://www.spot.xyz/",
+                        "img": {
+                            "url": "../community/assets/img/spot.jpg",
+                            "alt": "Spot"
+                        }
+                    },
+                    {
+                        "desc": "SOLUS BY HEBRU BRANTLEY",
+                        "author": "by Michael Scherotter",
+                        "link": "https://www.phillips.com/solus",
+                        "img": {
+                            "url": "../community/assets/img/solus.jpg",
+                            "alt": "SOLUS BY HEBRU BRANTLEY"
+                        }
+                    },
+                    {
+                        "desc": "VR Mansion Gallery",
+                        "author": "by Adrianlines",
+                        "link": "https://ukcpg.co.uk/scripts/mansion.php?hash=e46678965c21fa93869ab77ac97602b58cb31e601c1d845bab824bc981ef2346",
+                        "img": {
+                            "url": "../community/assets/img/vrMansionGallery.jpg",
+                            "alt": "VR Mansion Gallery"
+                        }
+                    },
+                    {
+                        "desc": "3D Art Gallery",
+                        "author": "by Karim Mohammed",
+                        "link": "https://quirky-mcnulty-f68aa7.netlify.app/",
+                        "img": {
+                            "url": "../community/assets/img/3dArtGallery.jpg",
+                            "alt": "3D Art Gallery"
+                        }
+                    },
+                    {
+                        "desc": "Escape Room",
+                        "author": "by Yle",
+                        "link": "https://yle.fi/aihe/artikkeli/2020/11/11/trollibunkkeri",
+                        "img": {
+                            "url": "../community/assets/img/escapeRoom.jpg",
+                            "alt": "Escape Room"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE",
+                "marginBottom": "0px"
+            }
+        }
+    ]
+}

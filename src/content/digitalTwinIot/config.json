@@ -1,0 +1,214 @@
+{
+    "menuTitle": "DIGITAL TWIN AND IOT",
+    "title": "Babylon.js Digital Twins and IoT",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [ 
+                    {
+                        "videoUrl": "assets/videos/AzureDigitalTwins.mp4",
+                        "demoLink": "https://learn.microsoft.com/en-us/azure/digital-twins/concepts-3d-scenes-studio"
+                    },
+                    {
+                        "videoUrl": "assets/videos/snaptrude.mp4",
+                        "demoLink": "https://www.snaptrude.com/"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/smplrspace.mp4",
+                        "demoLink": "https://www.smplrspace.com/"
+                    },
+                    {
+                        "videoUrl": "./assets/videos/bingMaps.mp4",
+                        "demoLink": "https://www.bing.com/maps"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "A 3D ENGINE FOR DIGITAL TWINS AND IOT",
+                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it simple to create Digital Twins applications on the Web. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the features",
+                        "link": "https://www.babylonjs.com/games/#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#506663",
+                "img": {
+                    "url": "assets/img/snaptrude_digitalTwin.jpg",
+                    "alt": "",
+                    "width": "600px"
+                },
+                "height": "550px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Digital Twin",
+                "desc": "Babylon.js provides a wide range of features for creating highly detailed and accurate 3D models of objects and scenes: PBR material for visual realism, custom shaders or Node Material Editor for contour lines and other effects, heightmap for terrain generation and many more! These Digital twins can be used to monitor and optimize the performance of physical systems such as buildings, factories, and cities. They can also be used to simulate and test new designs before they are built. For example, Snaptrude is a collaborative 3D building design tool that helps Architects design more efficient & sustainable buildings using real-world data. ",
+                "moreInfoLink": "https://www.snaptrude.com/",
+                "moreInfoText": "Visit the Snaptrude digital twin experience"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#272d4d",
+                "img": {
+                    "url": "assets/img/azuredigitaltwins_DataVis.jpg",
+                    "alt": "Alternative text for the image",
+                    "width": "550px"
+                },
+                "height": "500px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "IoT Data Visualization",
+                "desc": "IoT devices can provide real-time data to digital twins which can be used to improve their accuracy and usefulness. Real-time data can easily be visualized by changing the colors or materials of 3D objects and animations or particles can be added for better simulation and visual effects. For example, Azure Digital Twins 3D Scenes Studio is an immersive 3D environment, where end users can monitor, diagnose, and investigate operational data with the visual context of 3D assets.",
+                "moreInfoLink": "https://learn.microsoft.com/en-us/azure/digital-twins/concepts-3d-scenes-studio",
+                "moreInfoText": "Visit the Azure digital twin 3D scenes studio experience"
+            }
+        }, 
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "/specifications",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "Games made with Babylon.js",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "Waste to Energy Fabric",
+                        "author": "by DAL",
+                        "link": "https://abir.holdings/",
+                        "img": {
+                            "url": "../community/assets/img/abirHoldings.jpg",
+                            "alt": "Waste to Energy Fabric"
+                        }
+                    },
+                    {
+                        "desc": "Castle of Arques-La-Bataille",
+                        "author": "by Vinc3r",
+                        "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
+                        "img": {
+                            "url": "../community/assets/img/Arques-La-Bataille.jpg",
+                            "alt": "Castle of Arques-La-Bataille"
+                        }
+                    }, 
+                    {
+                        "desc": "FORCE Map",
+                        "author": "by 3D Wave Design",
+                        "link": "https://3d.fundyforce.ca/",
+                        "img": {
+                            "url": "../community/assets/img/force.jpg",
+                            "alt": "FORCE Map"
+                        }
+                    },
+                    {
+                        "desc": "Cathedral",
+                        "author": "by Axeon Software",
+                        "link": "https://time-loop.fr/Therouanne/EXPERIENCES/3DSCAN/CATHEDRALE/#!/",
+                        "img": {
+                            "url": "../community/assets/img/cathedral.jpg",
+                            "alt": "Cathedral"
+                        }
+                    },
+                    {
+                        "desc": "Campus Albano",
+                        "author": "by wec360°",
+                        "link": "https://campusalbano.se/",
+                        "img": {
+                            "url": "../community/assets/img/campus-albano.jpg",
+                            "alt": "campus Albano - wec360°"
+                        }
+                    },
+                    {
+                        "desc": "Kazaplan",
+                        "author": "by Wanadev & Kazaplan",
+                        "link": "https://www.kozikaza.com/plan-3d-maison/",
+                        "img": {
+                            "url": "../community/assets/img/kazaplan.jpg",
+                            "alt": "Kazaplan"
+                        }
+                    },
+                    {
+                        "desc": "pCon.box",
+                        "author": "by EasternGraphics",
+                        "link": "http://www.easterngraphics.com/en/products/pconbox.html",
+                        "img": {
+                            "url": "../community/assets/img/pCon_box.jpg",
+                            "alt": "pCon.box"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE",
+                "marginBottom": "0px"
+            }
+        }
+    ]
+}

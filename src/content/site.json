@@ -49,7 +49,7 @@
                     "target": "_blank"
                 },
                 {
-                    "menuTitle": "DEMOS",
+                    "menuTitle": "COMMUNITY DEMOS",
                     "menuUrl": "/community"
                 }
             ]
@@ -63,12 +63,46 @@
             "visible": true
         },
         {
+            "root": "industries",
+            "visible": true,
+            "children": [
+                {
+                    "menuTitle": "GAMES",
+                    "menuUrl": "/games"
+                },
+                {
+                    "menuTitle": "ECOMMERCE",
+                    "menuUrl": "/ecommerce"
+                },
+                {
+                    "menuTitle": "DIGITAL TWIN AND IOT",
+                    "menuUrl": "/digitalTwinIot"
+                },
+                {
+                    "menuTitle": "METAVERSE",
+                    "menuUrl": "/metaverse"
+                }
+            ]
+        },
+        {
             "root": "games",
-            "visible": true
+            "visible": false
+        },
+        {
+            "root": "pressRelease",
+            "visible": false
         },
         {
             "root": "ecommerce",
-            "visible": true
+            "visible": false
+        },
+        {
+            "root": "digitalTwinIot",
+            "visible": false
+        },
+        {
+            "root": "metaverse",
+            "visible": false
         },
         {
             "root": "reactnative",
@@ -110,8 +144,18 @@
             ]
         },
         {
-            "root": "specifications",
-            "visible": true
+            "root": "features",
+            "visible": true,
+            "children": [
+                {
+                    "menuTitle": "SPECIFICATIONS",
+                    "menuUrl": "/specifications"
+                },
+                {
+                    "menuTitle": "FEATURE DEMOS",
+                    "menuUrl": "/featureDemos"
+                }
+            ]
         },
         {
             "menuTitle": "RELEASE NOTES",
