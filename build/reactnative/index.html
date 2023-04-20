@@ -40,12 +40,14 @@
         <link rel="stylesheet" href="/assets/styles/carousel.css">
         <link rel="stylesheet" href="/assets/styles/textBlock.css">
         <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
         <link rel="stylesheet" href="/assets/styles/twoColumns.css">
         <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
         <link rel="stylesheet" href="/assets/styles/linkList.css">
         <link rel="stylesheet" href="/assets/styles/imageList.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
         <link rel="author" href="humans.txt">
     </head>
 
@@ -69,14 +71,14 @@
                                 <ul>
                                     <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                    <li class="GAMES user-select"><a class="GAMES"
-                                            href="/games">GAMES</a>
-                                    <li class="E-COMMERCE user-select"><a class="E-COMMERCE"
-                                            href="/ecommerce">E-COMMERCE</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
                                     <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
-                                    <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
-                                            href="/specifications">SPECIFICATIONS</a>
+                                    <li class="FEATURES user-select"><a class="FEATURES">FEATURES</a>
                                     <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
                                             href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
                                     <li class="GET user-select"><a class="GET"
@@ -94,7 +96,13 @@
                                 </ul>
                                 <ul class="COMMUNITY hidden">
                                     <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                    <li class="user-select"><a href="/community" target="">DEMOS</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
                                 </ul>
                                 <ul class="BABYLON NATIVE hidden">
                                     <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
@@ -105,6 +113,10 @@
                                     <li class="user-select"><a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank">VIDEOS</a></li>
                                     <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
                                 </ul>
+                                <ul class="FEATURES hidden">
+                                    <li class="user-select"><a href="/specifications" target="">SPECIFICATIONS</a></li>
+                                    <li class="user-select"><a href="/featureDemos" target="">FEATURE DEMOS</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -114,7 +126,7 @@
 
         <div class="content-container">
             <div class="imageList-block" style="padding-top:70px;margin-top:;margin-bottom:;background:#201F2D">
-    <video src='assets/videos/NativeVideo.mp4' autoplay loop muted width="100%" style="max-width:1100px;height:100%"></video>
+    <video src='assets/videos/bReactNativeDemo.mp4' autoplay loop muted width="100%" style="max-width:1100px;height:100%"></video>
 </div>
             <div id="feature" style="transform:translateY(-70px)"></div>
             <div class="text-block">
@@ -157,15 +169,25 @@
             <section class="image-and-text-block "
     style="background-color: #363c52;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/crossDevice.svg" alt="Illustration of laptop computer, desktop computer, smart phone, and tablet." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Babylon Native</h2>
-            <p style="color:">With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).</p>
+                <h2>Babylon Native</h2>
+            <p style="color:">
+                <script>
+                    var descText = "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus)."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="/native">More on Babylon Native</a>
+                <a style="color:" href="/native" >More on Babylon Native
+                </a>
             </div>
         </div>
     </div>
@@ -175,13 +197,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>React Native</h2>
-            <p style="color:">React Native enables developers to use the React JavaScript library for building user interfaces across native applications. The UI code is written in JavaScript and the React primitives render to native platform UI. Babylon React Native provides a simple solution for combining 3D rendering with platform native screen space UI via platform agnostic code.</p>
+                <h2>React Native</h2>
+            <p style="color:">
+                <script>
+                    var descText = "React Native enables developers to use the React JavaScript library for building user interfaces across native applications. The UI code is written in JavaScript and the React primitives render to native platform UI. Babylon React Native provides a simple solution for combining 3D rendering with platform native screen space UI via platform agnostic code."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://reactnative.dev/">More on React Native</a>
+                <a style="color:" href="https://reactnative.dev/" >More on React Native
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/reactNativeLogo.png" alt="React Native logo." style="width:550px">
         </div>
     </div>
@@ -189,15 +221,25 @@
             <section class="image-and-text-block "
     style="background-color: #363c52;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/devWorkflow.svg" alt="Graphic showing developer workflow from code to save to visualize and back to the start." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Developer workflow</h2>
-            <p style="color:">React Native provides a mature developer toolset that does a lot of the heavy lifting of hosting a JavaScript engine, including developer features like fast refresh and debugging support. In Babylon React Native, changes to both the UI and the 3D application code are visible as soon as they are saved. No more waiting for native builds to be complete.</p>
+                <h2>Developer workflow</h2>
+            <p style="color:">
+                <script>
+                    var descText = "React Native provides a mature developer toolset that does a lot of the heavy lifting of hosting a JavaScript engine, including developer features like fast refresh and debugging support. In Babylon React Native, changes to both the UI and the 3D application code are visible as soon as they are saved. No more waiting for native builds to be complete."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://www.youtube.com/watch?v&#x3D;x6baGsEQhcU&amp;feature&#x3D;emb_logo">Babylon React Native Demo</a>
+                <a style="color:" href="https://www.youtube.com/watch?v&#x3D;x6baGsEQhcU&amp;feature&#x3D;emb_logo" >Babylon React Native Demo
+                </a>
             </div>
         </div>
     </div>
@@ -207,13 +249,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Active, Friendly Community</h2>
-            <p style="color:">Babylon React Native is part of the Babylon.js family and inherits an active open-source community that supports each other in creating amazing experiences. As you begin your Babylon.js and Babylon React Native journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.</p>
+                <h2>Active, Friendly Community</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon React Native is part of the Babylon.js family and inherits an active open-source community that supports each other in creating amazing experiences. As you begin your Babylon.js and Babylon React Native journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://forum.babylonjs.com">Visit the Forum</a>
+                <a style="color:" href="https://forum.babylonjs.com" >Visit the Forum
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/forum.png" alt="A screen capture of our very active forum page." style="width:550px">
         </div>
     </div>

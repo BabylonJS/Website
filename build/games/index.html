@@ -40,12 +40,14 @@
         <link rel="stylesheet" href="/assets/styles/carousel.css">
         <link rel="stylesheet" href="/assets/styles/textBlock.css">
         <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
         <link rel="stylesheet" href="/assets/styles/twoColumns.css">
         <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
         <link rel="stylesheet" href="/assets/styles/linkList.css">
         <link rel="stylesheet" href="/assets/styles/imageList.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
         <link rel="author" href="humans.txt">
     </head>
 
@@ -69,14 +71,14 @@
                                 <ul>
                                     <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                    <li class="GAMES user-select"><a class="GAMES"
-                                            href="/games">GAMES</a>
-                                    <li class="E-COMMERCE user-select"><a class="E-COMMERCE"
-                                            href="/ecommerce">E-COMMERCE</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
                                     <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
-                                    <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
-                                            href="/specifications">SPECIFICATIONS</a>
+                                    <li class="FEATURES user-select"><a class="FEATURES">FEATURES</a>
                                     <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
                                             href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
                                     <li class="GET user-select"><a class="GET"
@@ -94,7 +96,13 @@
                                 </ul>
                                 <ul class="COMMUNITY hidden">
                                     <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                    <li class="user-select"><a href="/community" target="">DEMOS</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
                                 </ul>
                                 <ul class="BABYLON NATIVE hidden">
                                     <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
@@ -104,6 +112,10 @@
                                     <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
                                     <li class="user-select"><a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank">VIDEOS</a></li>
                                     <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
+                                </ul>
+                                <ul class="FEATURES hidden">
+                                    <li class="user-select"><a href="/specifications" target="">SPECIFICATIONS</a></li>
+                                    <li class="user-select"><a href="/featureDemos" target="">FEATURE DEMOS</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -162,7 +174,7 @@
 </div>
             <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
-        <h2>THE GAME ENGINE MADE FOR THE WEB.</h2>
+        <h2>THE GAME ENGINE MADE FOR THE WEB</h2>
         <p>A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what&#x27;s truly important…creating breathtaking experiences for gamers across the web.</p>
     </div>
 </div>
@@ -200,15 +212,25 @@
             <section class="image-and-text-block "
     style="background-color: #5a0014;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/rendering.png" alt="Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Advanced Rendering</h2>
-            <p style="color:">Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser.</p>
+                <h2>Advanced Rendering</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Are you ready to tap into your creativity, using the most advanced 3D rendering anywhere on the web? From HDR image-based lighting, to the latest in Physically Based Rendering (PBR) support, to a full toolset of Post Process FX, with Babylon.js, you have a nearly limitless toolset for creating stunningly beautiful experiences, all inside of your browser."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR">More on Rendering</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR" >More on Rendering
+                </a>
             </div>
         </div>
     </div>
@@ -218,13 +240,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Animation</h2>
-            <p style="color:">Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It&#x27;s not just simple, though, it&#x27;s modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective.</p>
+                <h2>Animation</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Animating objects with Babylon.js is incredibly easy.  So easy, in fact, that you can animate any object in your scene with just one line of code!  It&#x27;s not just simple, though, it&#x27;s modern and powerful as well! With full support for complex rigid-body skeletal animation, blending between different animations, and blending between morph targets, Babylon.js helps make the animation workflow simple and effective."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/animation/animation_introduction">More on Animation</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/animation/animation_introduction" >More on Animation
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/animation.png" alt="Alternative text for the image" style="width:550px">
         </div>
     </div>
@@ -232,15 +264,25 @@
             <section class="image-and-text-block "
     style="background-color: #000000;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/particles.png" alt="A 3D sun made with particle systems." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Particles</h2>
-            <p style="color:">With the powerful particle system in Babylon.js, jaw-dropping FX are at your fingertips. Whether using sprites or solid mesh particles the creative possibilities are truly limitless.  Best of all though, it&#x27;s all built with performance in mind.  Meaning with Babylon.js, not only do you get both the beauty and power of complex FX, but you get it without worrying about degrading your experience. </p>
+                <h2>Particles</h2>
+            <p style="color:">
+                <script>
+                    var descText = "With the powerful particle system in Babylon.js, jaw-dropping FX are at your fingertips. Whether using sprites or solid mesh particles the creative possibilities are truly limitless.  Best of all though, it&#x27;s all built with performance in mind.  Meaning with Babylon.js, not only do you get both the beauty and power of complex FX, but you get it without worrying about degrading your experience. "; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/particles">More on Particles</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/particles" >More on Particles
+                </a>
             </div>
         </div>
     </div>
@@ -250,13 +292,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Physics</h2>
-            <p style="color:">For truly unique experiences and worlds, nothing beats adding complex physics interactions to your game.  However physics is computationally expensive.  Luckily, amazingly smart people across the globe have created several powerful open-source physics engines, and Babylon.js has built-in support for the best of them!</p>
+                <h2>Physics</h2>
+            <p style="color:">
+                <script>
+                    var descText = "For truly unique experiences and worlds, nothing beats adding complex physics interactions to your game.  However physics is computationally expensive.  Luckily, amazingly smart people across the globe have created several powerful open-source physics engines, and Babylon.js has built-in support for the best of them!"; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/physics">More on Physics</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/physics" >More on Physics
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/physics.png" alt="A marble tower demonstrating physics through marbles rolling down tracks and colliding with the environment." style="width:550px">
         </div>
     </div>
@@ -264,15 +316,25 @@
             <section class="image-and-text-block "
     style="background-color: #2a2342;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/gui.png" alt="A color picker made with the Babylon.js GUI system." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>GUI System</h2>
-            <p style="color:">Creating amazing menus and 2D interactive layers to your 3D scene is a snap with the GUI system inside Babylon.js.  From buttons, grids, stack panels, lists, a full VR GUI toolkit, and more, you&#x27;ll find everything that you need in this intuitive GUI engine.</p>
+                <h2>GUI System</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Creating amazing menus and 2D interactive layers to your 3D scene is a snap with the GUI system inside Babylon.js.  From buttons, grids, stack panels, lists, a full VR GUI toolkit, and more, you&#x27;ll find everything that you need in this intuitive GUI engine."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/gui">More on GUI</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/gui" >More on GUI
+                </a>
             </div>
         </div>
     </div>
@@ -282,13 +344,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Audio</h2>
-            <p style="color:">As a game creator, your number one mission is to immerse your players in fun. Nothing gets your blood pumping faster than amazing music and sound.  Whether you&#x27;re looking for ambient, directional, or fully spatialized sound, Babylon.js brings immersive sound capabilities directly under one roof in a powerful, easy-to-use sound engine.</p>
+                <h2>Audio</h2>
+            <p style="color:">
+                <script>
+                    var descText = "As a game creator, your number one mission is to immerse your players in fun. Nothing gets your blood pumping faster than amazing music and sound.  Whether you&#x27;re looking for ambient, directional, or fully spatialized sound, Babylon.js brings immersive sound capabilities directly under one roof in a powerful, easy-to-use sound engine."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic">More on Audio</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic" >More on Audio
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/audio.png" alt="Image of a 3D boom box with an audio icon." style="width:550px">
         </div>
     </div>
@@ -296,15 +368,25 @@
             <section class="image-and-text-block "
     style="background-color: #163035;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/vr.png" alt="3D model of a VR controller." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>XR games</h2>
-            <p style="color:">AR/VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, AR/VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebXR helper, you can get a AR/VR scene up and running in a matter of minutes.</p>
+                <h2>XR games</h2>
+            <p style="color:">
+                <script>
+                    var descText = "AR/VR games are no longer limited to carpet-scorching gaming rigs. With Babylon.js, you can create immersive, rich, AR/VR experiences directly in your browser!  A ton of the hard work has been done for you, and with the WebXR helper, you can get a AR/VR scene up and running in a matter of minutes."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR">More on XR</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR" >More on XR
+                </a>
             </div>
         </div>
     </div>
@@ -314,13 +396,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Active, Friendly Community</h2>
-            <p style="color:">Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.</p>
+                <h2>Active, Friendly Community</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://forum.babylonjs.com">Visit the Forum</a>
+                <a style="color:" href="https://forum.babylonjs.com" >Visit the Forum
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/forum.png" alt="A screen capture of our very active forum page." style="width:550px">
         </div>
     </div>
@@ -358,7 +450,7 @@
                 <ul id="hexGrid">
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://classic.minecraft.net">
+                            <a class="hexLink" href="https://classic.minecraft.net" target="_blank">
                                 <img src="./assets/img/Minecraft_Classic.png" alt="Minecraft Classic" />
                                 <div class="desc">
                                     <div class="hexDesc">Minecraft Classic</div>
@@ -371,7 +463,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://spaceinvaders.viperfish.com.au/">
+                            <a class="hexLink" href="https://spaceinvaders.viperfish.com.au/" target="_blank">
                                 <img src="./assets/img/spaceInvaders.png" alt="Space Invaders made with Babylon.js" />
                                 <div class="desc">
                                     <div class="hexDesc">Space Invaders</div>
@@ -384,7 +476,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://poki.com/en/g/temple-run-2#">
+                            <a class="hexLink" href="https://poki.com/en/g/temple-run-2#" target="_blank">
                                 <img src="../community/assets/img/templeRun2.jpg" alt="Temple Run 2" />
                                 <div class="desc">
                                     <div class="hexDesc">Temple Run 2</div>
@@ -397,7 +489,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://demo.seitwerk.de/sw-wall/">
+                            <a class="hexLink" href="https://demo.seitwerk.de/sw-wall/" target="_blank">
                                 <img src="../community/assets/img/wallGame.jpg" alt="Wall Game" />
                                 <div class="desc">
                                     <div class="hexDesc">Wall Game</div>
@@ -410,7 +502,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://wazana.io/">
+                            <a class="hexLink" href="https://wazana.io/" target="_blank">
                                 <img src="../community/assets/img/wazanaio.jpg" alt="Wazana.io" />
                                 <div class="desc">
                                     <div class="hexDesc">Wazana.io</div>
@@ -423,7 +515,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://ld47.fds.im/">
+                            <a class="hexLink" href="https://ld47.fds.im/" target="_blank">
                                 <img src="../community/assets/img/caterpillarCowboy.jpg" alt="Caterpillar Cowboy" />
                                 <div class="desc">
                                     <div class="hexDesc">Caterpillar Cowboy</div>
@@ -436,7 +528,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://shellshock.io">
+                            <a class="hexLink" href="http://shellshock.io" target="_blank">
                                 <img src="../community/assets/img/ShellShockers.jpg" alt="Shell Shockers" />
                                 <div class="desc">
                                     <div class="hexDesc">Shell Shockers</div>

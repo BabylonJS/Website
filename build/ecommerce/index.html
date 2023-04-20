@@ -40,12 +40,14 @@
         <link rel="stylesheet" href="/assets/styles/carousel.css">
         <link rel="stylesheet" href="/assets/styles/textBlock.css">
         <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
         <link rel="stylesheet" href="/assets/styles/twoColumns.css">
         <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
         <link rel="stylesheet" href="/assets/styles/linkList.css">
         <link rel="stylesheet" href="/assets/styles/imageList.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
         <link rel="author" href="humans.txt">
     </head>
 
@@ -69,14 +71,14 @@
                                 <ul>
                                     <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                    <li class="GAMES user-select"><a class="GAMES"
-                                            href="/games">GAMES</a>
-                                    <li class="E-COMMERCE user-select"><a class="E-COMMERCE"
-                                            href="/ecommerce">E-COMMERCE</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
                                     <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
-                                    <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
-                                            href="/specifications">SPECIFICATIONS</a>
+                                    <li class="FEATURES user-select"><a class="FEATURES">FEATURES</a>
                                     <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
                                             href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
                                     <li class="GET user-select"><a class="GET"
@@ -94,7 +96,13 @@
                                 </ul>
                                 <ul class="COMMUNITY hidden">
                                     <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                    <li class="user-select"><a href="/community" target="">DEMOS</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
                                 </ul>
                                 <ul class="BABYLON NATIVE hidden">
                                     <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
@@ -104,6 +112,10 @@
                                     <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
                                     <li class="user-select"><a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank">VIDEOS</a></li>
                                     <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
+                                </ul>
+                                <ul class="FEATURES hidden">
+                                    <li class="user-select"><a href="/specifications" target="">SPECIFICATIONS</a></li>
+                                    <li class="user-select"><a href="/featureDemos" target="">FEATURE DEMOS</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -191,15 +203,25 @@
             <section class="image-and-text-block "
     style="background-color: #3B251F;">
     <div class="inner-container" style="min-height:500px;padding-top:30px;padding-bottom:30px;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/shoeVariants.png" alt="Rendering of an athletic shoe with material variants." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Supporting 3D Commerce™</h2>
-            <p style="color:">3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences, advertising, and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support, and broaden the adoption of the standards.</p>
+                <h2>Supporting 3D Commerce™</h2>
+            <p style="color:">
+                <script>
+                    var descText = "3D visualization technologies initially developed for gaming and visual effects are beginning to transform online retail experiences, advertising, and even physical retail experiences with AR/VR. Commerce 3D™ is a newly created standardization working group from Khronos® aiming to enable realistic and consistent 3D virtual products experiences. As an active member of this working group, the Babylon.js Team is fully engaged to develop, support, and broaden the adoption of the standards."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/4_2_3DCommercePlayground">A variants demo</a>
+                <a style="color:" href="https://aka.ms/4_2_3DCommercePlayground" >A variants demo
+                </a>
             </div>
         </div>
     </div>
@@ -209,13 +231,23 @@
     <div class="inner-container" style="min-height:450px;padding-top:20px;padding-bottom:20px;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Visual realism</h2>
-            <p style="color:">When representing a product via a 3D Model, visual realism is essential for the buying decision. The Babylon.js engine implements the latest glTF 2.0 PBR material extensions such as Sheen (e.g. to represent the fabric of a furniture), clearcoat (e.g. car paint), transmission (e.g. thin glass) and Volume/Translucency for thick glass or semi-transparent objects. Custom PBR Materials can also be created without coding with the Node Material Editor.</p>
+                <h2>Visual realism</h2>
+            <p style="color:">
+                <script>
+                    var descText = "When representing a product via a 3D Model, visual realism is essential for the buying decision. The Babylon.js engine implements the latest glTF 2.0 PBR material extensions such as Sheen (e.g. to represent the fabric of a furniture), clearcoat (e.g. car paint), transmission (e.g. thin glass) and Volume/Translucency for thick glass or semi-transparent objects. Custom PBR Materials can also be created without coding with the Node Material Editor."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material/NMEPBR">More on PBR Materials in NME</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material/nodeMaterial#creating-pbr-materials" >More on PBR Materials in NME
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/transparentShadows.png" alt="Rendering of a half-empty soda bottle casting a shadow on the table" style="width:550px">
         </div>
     </div>
@@ -223,15 +255,25 @@
             <section class="image-and-text-block "
     style="background-color: #324554;">
     <div class="inner-container" style="min-height:450px;padding-top:20px;padding-bottom:20px;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/pbrDevice.png" alt="PBR materials rendered on an mock product electronic device." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Interactives experiences</h2>
-            <p style="color:">3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or &#x27;exploding&#x27; a complex object into it parts are also easy to set-up.</p>
+                <h2>Interactives experiences</h2>
+            <p style="color:">
+                <script>
+                    var descText = "3D capabilities enable a whole new world of interactive experiences for customers, a book that still must be written for it most part. The Babylon.js Viewer is simple to integrate in a Web page or a WebView and is fully customizable. It makes it easy to zoom in on a product for details or to rotate an object to inspect it from any angle. More sophisticated experiences, such as animating objects between positions for instance, or &#x27;exploding&#x27; a complex object into it parts are also easy to set-up."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/viewerExamples">More on Babylon Viewer</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/viewerExamples" >More on Babylon Viewer
+                </a>
             </div>
         </div>
     </div>
@@ -241,13 +283,23 @@
     <div class="inner-container" style="min-height:450px;padding-top:20px;padding-bottom:20px;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>AR and VR experiences</h2>
-            <p style="color:">Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more.</p>
+                <h2>AR and VR experiences</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Virtual Reality brings consumers into immersive experiences. Augmented Reality lets them visualize 3D representation of products in their living room. By making the object look like it can be touched, with the right materials, scale, and lighting, it becomes easier to be confident about what one is buying. With the support for WebXR, developers can easily create compelling cross-browser AR/VR web experiences with hand tracking, hit-testing, advanced teleportation, cross-device input management and controller support and much more."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR">More on WebXR</a>
+                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR" >More on WebXR
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/WebXR.png" alt="WebXR logo." style="width:550px">
         </div>
     </div>
@@ -255,15 +307,25 @@
             <section class="image-and-text-block "
     style="background-color: #2a2342;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="assets/img/crossDevice.svg" alt="An illustration of devices of differing size and format." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Web and Mobile</h2>
-            <p style="color:">With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus).</p>
+                <h2>Web and Mobile</h2>
+            <p style="color:">
+                <script>
+                    var descText = "With Babylon Native, you can write your rendering code once and re-use it across your web site and your various native applications. You code your application in JavaScript and the Babylon Native Runtime runs it on platform native graphics APIs (DirectX on Windows, Metal on iOS/MacOS, OpenGL on Android, and OpenXR devices such as HoloLens 2 and Oculus)."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="/native">More on Babylon Native</a>
+                <a style="color:" href="/native" >More on Babylon Native
+                </a>
             </div>
         </div>
     </div>
@@ -273,13 +335,23 @@
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-            <h2>Active, Friendly Community</h2>
-            <p style="color:">Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions.</p>
+                <h2>Active, Friendly Community</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Finally, what truly makes Babylon.js special is the active open-source community that supports each other in creating amazing experiences.  As you begin your Babylon.js journey, this amazing group of passionate folks is eager and ready to help you get started and answer any of your questions."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
             <div class="link-block">
-                <a style="color:" href="https://forum.babylonjs.com">Visit the Forum</a>
+                <a style="color:" href="https://forum.babylonjs.com" >Visit the Forum
+                </a>
             </div>
         </div>
-        <div>
+        <div class="image-block">
             <img src="assets/img/forum.png" alt="A screen capture of our very active forum page." style="width:550px">
         </div>
     </div>
@@ -311,7 +383,7 @@
                 <ul id="hexGrid">
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.wayfair.com/RoomPlanner3D">
+                            <a class="hexLink" href="https://www.wayfair.com/RoomPlanner3D" target="_blank">
                                 <img src="../community/assets/img/RoomPlanner3D.jpg" alt="Room Planner 3D" />
                                 <div class="desc">
                                     <div class="hexDesc">Room Planner 3D</div>
@@ -324,7 +396,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.target.com/room-planner/nursery">
+                            <a class="hexLink" href="https://www.target.com/room-planner/nursery" target="_blank">
                                 <img src="../community/assets/img/RoomNursery.jpg" alt="Nursery Room Planner" />
                                 <div class="desc">
                                     <div class="hexDesc">Nursery Room Planner</div>
@@ -337,7 +409,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.target.com/room-planner/college">
+                            <a class="hexLink" href="https://www.target.com/room-planner/college" target="_blank">
                                 <img src="../community/assets/img/RoomCollege.jpg" alt="College Room Planner" />
                                 <div class="desc">
                                     <div class="hexDesc">College Room Planner</div>
@@ -350,7 +422,59 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.getlaidbeds.co.uk/wooden-beds/four-poster-wooden-beds/moroccan-four-poster-wooden-bed-frame#3d-design">
+                            <a class="hexLink" href="https://www.nike.com/nike-by-you" target="_blank">
+                                <img src="../community/assets/img/nikeByYou.jpg" alt="Nike By You" />
+                                <div class="desc">
+                                    <div class="hexDesc">Nike By You</div>
+                                    <div class="hexDesc author">by Nike</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://deckdesigner.lowes.com/" target="_blank">
+                                <img src="../community/assets/img/lowesDeckDesigner.jpg" alt="Deck Desiger" />
+                                <div class="desc">
+                                    <div class="hexDesc">Deck Designer</div>
+                                    <div class="hexDesc author">by Lowes</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.jeep.com/wrangler/build-your-own-3d-jeep.html" target="_blank">
+                                <img src="../community/assets/img/jeepConfigurator.jpg" alt="Build Your Wrangler" />
+                                <div class="desc">
+                                    <div class="hexDesc">Build Your Wrangler</div>
+                                    <div class="hexDesc author">by Jeep</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://cabinet.unda.com.au/" target="_blank">
+                                <img src="../community/assets/img/3d-cabinet-designer.jpg" alt="3D Cabinet Designer" />
+                                <div class="desc">
+                                    <div class="hexDesc">3D Cabinet Designer</div>
+                                    <div class="hexDesc author">by Unda Solutions</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.getlaidbeds.co.uk/wooden-beds/four-poster-wooden-beds/moroccan-four-poster-wooden-bed-frame#3d-design" target="_blank">
                                 <img src="../community/assets/img/bedDesigner.jpg" alt="3D Bed Designer" />
                                 <div class="desc">
                                     <div class="hexDesc">3D Bed Designer</div>
@@ -363,7 +487,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.tontossport.com/custom-polo-uniform/women-short-sleeve-polo-shirts/white-short-sleeve-polo-shirts-with-pockets-504">
+                            <a class="hexLink" href="https://www.tontossport.com/custom-polo-uniform/women-short-sleeve-polo-shirts/white-short-sleeve-polo-shirts-with-pockets-504" target="_blank">
                                 <img src="/community/assets/img/Online design of diverse 3D sportswear apps.jpg" alt="Sportswear online design" />
                                 <div class="desc">
                                     <div class="hexDesc">Sportswear online design</div>
@@ -376,7 +500,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://surfacevue.com/">
+                            <a class="hexLink" href="https://surfacevue.com/" target="_blank">
                                 <img src="../community/assets/img/SurfaceVue.jpg" alt="SurfaceVue" />
                                 <div class="desc">
                                     <div class="hexDesc">SurfaceVue</div>
@@ -389,7 +513,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.productexample.com/unit21/index.html">
+                            <a class="hexLink" href="https://www.productexample.com/unit21/index.html" target="_blank">
                                 <img src="../community/assets/img/unit21.jpg" alt="Unit21 Interior Visualization - Marko &amp; Pero" />
                                 <div class="desc">
                                     <div class="hexDesc">Unit21 Interior Visualization</div>
@@ -402,7 +526,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.smarteam3d.com/portfolio/car_config.html">
+                            <a class="hexLink" href="https://www.smarteam3d.com/portfolio/car_config.html" target="_blank">
                                 <img src="../community/assets/img/CustomizeCar.jpg" alt="CustomizeCar" />
                                 <div class="desc">
                                     <div class="hexDesc">CustomizeCar</div>
@@ -415,7 +539,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://www.3dpanacea.com/automotive_showroom/cybrox.html">
+                            <a class="hexLink" href="http://www.3dpanacea.com/automotive_showroom/cybrox.html" target="_blank">
                                 <img src="../community/assets/img/Cybrox Supra.jpg" alt="CYBROX SUPRA" />
                                 <div class="desc">
                                     <div class="hexDesc">CYBROX SUPRA</div>
@@ -428,7 +552,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://nymbl3d.github.io/nymblWebGL/projects/04DucatiXDiavel/XDiavelDemo.html">
+                            <a class="hexLink" href="https://nymbl3d.github.io/nymblWebGL/projects/04DucatiXDiavel/XDiavelDemo.html" target="_blank">
                                 <img src="../community/assets/img/ducatti.jpg" alt="Ducatti Garage" />
                                 <div class="desc">
                                     <div class="hexDesc">Ducatti Garage</div>
@@ -441,7 +565,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://carport.unda.com.au">
+                            <a class="hexLink" href="https://carport.unda.com.au" target="_blank">
                                 <img src="../community/assets/img/carport-designer.jpg" alt="Carport Designer" />
                                 <div class="desc">
                                     <div class="hexDesc">Carport Designer</div>
@@ -454,7 +578,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.pelicatalogue.com/en/site/isp2-pallet/configurator?width&#x3D;120&amp;length&#x3D;100&amp;height&#x3D;">
+                            <a class="hexLink" href="https://www.pelicatalogue.com/en/site/isp2-pallet/configurator?width&#x3D;120&amp;length&#x3D;100&amp;height&#x3D;" target="_blank">
                                 <img src="../community/assets/img/palletConfig.jpg" alt="Pallet Configurator" />
                                 <div class="desc">
                                     <div class="hexDesc">Pallet Configurator</div>
@@ -467,7 +591,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/">
+                            <a class="hexLink" href="http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/" target="_blank">
                                 <img src="../community/assets/img/ApartmentConfigurator.jpg" alt="Apartment Configurator" />
                                 <div class="desc">
                                     <div class="hexDesc">Apartment Configurator</div>
@@ -480,7 +604,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://www.buyrack.com/pc/boltless-configurator.html">
+                            <a class="hexLink" href="http://www.buyrack.com/pc/boltless-configurator.html" target="_blank">
                                 <img src="../community/assets/img/buyrack.jpg" alt="boltless configurator" />
                                 <div class="desc">
                                     <div class="hexDesc">boltless configurator</div>

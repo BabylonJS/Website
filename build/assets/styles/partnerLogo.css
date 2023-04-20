@@ -1,0 +1,56 @@
+.partner-logo {
+    width: 100%;
+    padding: 0 !important;
+    background: #ffffff;
+}
+
+.partner-logo .inner-container {
+    max-width: 1200px;
+    height: 180px;
+    margin: 0 auto;
+    display: block;
+}
+
+.partner-logo .inner-container a {
+    width: 100%;
+}
+
+.partner-logo .inner-container [class*="col-"] {
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}    
+
+.partner-logo .inner-container [class*="col-"] a img, .partner-logo .inner-container [class*="col-"] img {
+    max-width: 62%;
+    margin: 0 auto;
+    display: block;
+}    
+    
+@media all and (max-width: 768px){
+    .partner-logo .inner-container {
+        max-width: 1200px;
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .partner-logo .inner-container [class*="col-"] a img, .partner-logo .inner-container [class*="col-"] img {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+    }        
+    
+    .partner-logo .images-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .partner-logo .images-container div {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+}

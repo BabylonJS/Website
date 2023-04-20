@@ -41,12 +41,14 @@
         <link rel="stylesheet" href="/assets/styles/carousel.css">
         <link rel="stylesheet" href="/assets/styles/textBlock.css">
         <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
         <link rel="stylesheet" href="/assets/styles/twoColumns.css">
         <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
         <link rel="stylesheet" href="/assets/styles/linkList.css">
         <link rel="stylesheet" href="/assets/styles/imageList.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
         <link rel="author" href="humans.txt">
     </head>
 
@@ -70,14 +72,14 @@
                                 <ul>
                                     <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                    <li class="GAMES user-select"><a class="GAMES"
-                                            href="/games">GAMES</a>
-                                    <li class="E-COMMERCE user-select"><a class="E-COMMERCE"
-                                            href="/ecommerce">E-COMMERCE</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
                                     <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
-                                    <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
-                                            href="/specifications">SPECIFICATIONS</a>
+                                    <li class="FEATURES user-select"><a class="FEATURES">FEATURES</a>
                                     <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
                                             href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
                                     <li class="GET user-select"><a class="GET"
@@ -95,7 +97,13 @@
                                 </ul>
                                 <ul class="COMMUNITY hidden">
                                     <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                    <li class="user-select"><a href="/community" target="">DEMOS</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
                                 </ul>
                                 <ul class="BABYLON NATIVE hidden">
                                     <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
@@ -105,6 +113,10 @@
                                     <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
                                     <li class="user-select"><a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank">VIDEOS</a></li>
                                     <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
+                                </ul>
+                                <ul class="FEATURES hidden">
+                                    <li class="user-select"><a href="/specifications" target="">SPECIFICATIONS</a></li>
+                                    <li class="user-select"><a href="/featureDemos" target="">FEATURE DEMOS</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -123,13 +135,22 @@
             <section class="image-and-text-block "
     style="background-color: #5C5C5C;">
     <div class="inner-container" style="min-height:;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="completeSceneGraph" alt="Complete scene graph" style="width:">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:;margin-right:;">
-            <h2>COMPLETE SCENE GRAPH</h2>
-            <p style="color:">Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements and actions.</p>
+                <h2>COMPLETE SCENE GRAPH</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js offers a fully-featured scene graph with nodes available for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements and actions."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
         </div>
     </div>
 </section>
@@ -138,10 +159,19 @@
     <div class="inner-container" style="min-height:;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:;margin-right:;">
-            <h2>SCENE INTERACTION</h2>
-            <p style="color:">Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment.</p>
+                <h2>SCENE INTERACTION</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
         </div>
-        <div>
+        <div class="image-block">
             <img src="sceneInteraction" alt="Scene interaction" style="width:">
         </div>
     </div>
@@ -149,13 +179,22 @@
             <section class="image-and-text-block "
     style="background-color: #282828;">
     <div class="inner-container" style="min-height:;padding-top:;padding-bottom:;">
-        <div>
+        <div class="image-block">
             <img src="guiSystem" alt="GUI system" style="width:">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:;margin-right:;">
-            <h2>GUI SYSTEM</h2>
-            <p style="color:">Your user interface needs are covered with the full-fledged GUI engine that provides a complete set of controls like buttons, grid, stack panels, lists and so on.</p>
+                <h2>GUI SYSTEM</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Your user interface needs are covered with the full-fledged GUI engine that provides a complete set of controls like buttons, grid, stack panels, lists and so on."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
         </div>
     </div>
 </section>
@@ -164,10 +203,19 @@
     <div class="inner-container" style="min-height:;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:;margin-right:;">
-            <h2>IMPORT AND EXPORT</h2>
-            <p style="color:">Work with existing file formats with our gITFm OBJ and STL importers. Export your entire scene to OBJ or gITL, SImply load all your scene assets with a few lines of code thanks to the AssetsManager</p>
+                <h2>IMPORT AND EXPORT</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Work with existing file formats with our gITFm OBJ and STL importers. Export your entire scene to OBJ or gITL, SImply load all your scene assets with a few lines of code thanks to the AssetsManager"; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
         </div>
-        <div>
+        <div class="image-block">
             <img src="importAndExport" alt="Import and export" style="width:">
         </div>
     </div>
@@ -177,10 +225,19 @@
     <div class="inner-container" style="min-height:;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:;margin-right:;">
-            <h2>EASILY INSPECT AND SETUP YOUR SCENE</h2>
-            <p style="color:">Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment.</p>
+                <h2>EASILY INSPECT AND SETUP YOUR SCENE</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Interactions with elements in the 3D scene are made easy through the integration or ray casting,  behaviors and mesh picking in Babylon.js. Give your users full control over your 3D environment."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
         </div>
-        <div>
+        <div class="image-block">
             <img src="inspectAndSetupScene" alt="EASILY INSPECT AND SETUP YOUR SCENE" style="width:">
         </div>
     </div>
@@ -193,7 +250,7 @@
                 <ul id="hexGrid">
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://google.com">
+                            <a class="hexLink" href="https://google.com" target="_blank">
                                 <img src="featuredDemo1" alt="Demo 1 description" />
                                 <div class="desc">
                                     <div class="hexDesc"></div>
@@ -206,7 +263,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://google.ua">
+                            <a class="hexLink" href="https://google.ua" target="_blank">
                                 <img src="featuredDemo2" alt="Demo 2 description" />
                                 <div class="desc">
                                     <div class="hexDesc"></div>
@@ -219,7 +276,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://google.nl">
+                            <a class="hexLink" href="https://google.nl" target="_blank">
                                 <img src="featuredDemo3" alt="Demo 3 description" />
                                 <div class="desc">
                                     <div class="hexDesc"></div>
