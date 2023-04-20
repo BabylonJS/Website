@@ -4,6 +4,10 @@
     },
     "menu": [
         {
+            "root": "featureDemos",
+            "visible": true
+        },
+        {
             "root": "tools",
             "visible": true,
             "children": [
@@ -150,10 +154,6 @@
                 {
                     "menuTitle": "SPECIFICATIONS",
                     "menuUrl": "/specifications"
-                },
-                {
-                    "menuTitle": "FEATURE DEMOS",
-                    "menuUrl": "/featureDemos"
                 }
             ]
         },

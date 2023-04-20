@@ -1,6 +1,6 @@
 
 .content-container > .press-release {
-    width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0;
     padding: 0 !important;
@@ -9,7 +9,7 @@
 
 .content-container > .press-release .inner-container {
     max-width: 1200px;
-    padding: 0px 160px;
+    padding: 0px 80px;
 }
 
 .content-container > .press-release .inner-container h2 {

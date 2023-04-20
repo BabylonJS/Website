@@ -1,5 +1,5 @@
 {
-    "menuTitle": "FEATUREDEMOS",
+    "menuTitle": "FEATURE DEMOS",
     "title": "Babylon.js Feature Demos",
     "blocks": [
         {
@@ -8,6 +8,15 @@
                 "title": "BABYLON.JS FEATURE DEMOS",
                 "desc": "A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.",
                 "items": [
+                    {
+                        "desc": "The Playroom",
+                        "author": "by Babylon.js",
+                        "link": "https://theplayroom.babylonjs.com",
+                        "img": {
+                            "url": "/featureDemos/assets/img/playroom.jpg",
+                            "alt": "Pirate Fort"
+                        }
+                    },
                     {
                         "desc": "Pirate Fort",
                         "author": "by Babylon.js",

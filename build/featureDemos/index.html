@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Babylon.js Feature Demos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="author" href="humans.txt" />
+
+        <!-- FB -->
+        <meta property="og:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta property="og:site_name" content="Babylon.js" />
+        <meta property="og:url" content="https://www.babylonjs.com" />
+        <meta property="og:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://www.babylonjs.com" />
+        <meta name="twitter:title" content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best" />
+        <meta name="twitter:description"
+            content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web." />
+        <meta name="twitter:image" content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png" />
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="icon" type="image/png" href="/assets/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+        <link rel="stylesheet" href="/assets/styles/variables.css">
+        <link rel="stylesheet" href="/assets/styles/upTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/downTriangleBlock.css">
+        <link rel="stylesheet" href="/assets/styles/header.css">
+        <link rel="stylesheet" href="/assets/styles/footer.css">
+        <link rel="stylesheet" href="/assets/styles/gallery.css">
+        <link rel="stylesheet" href="/assets/styles/topBlock.css">
+        <link rel="stylesheet" href="/assets/styles/carousel.css">
+        <link rel="stylesheet" href="/assets/styles/textBlock.css">
+        <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
+        <link rel="stylesheet" href="/assets/styles/twoColumns.css">
+        <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
+        <link rel="stylesheet" href="/assets/styles/linkList.css">
+        <link rel="stylesheet" href="/assets/styles/imageList.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
+        <link rel="author" href="humans.txt">
+    </head>
+
+    <body>
+        <div class="container-header-background"></div>
+        <div class="header">
+            <div class="container-header">
+                <div class="menu-btn">
+                    <img src="/assets/img/HamburgerIcon.svg">
+                </div>
+                <div class="babylon-logo hidden">
+                    <a href="/">
+                        <img src="/assets/img/BabylonIdentity.svg">
+                    </a>
+                </div>
+                <a class="download" href="https://github.com/BabylonJS/Babylon.js"><img src="/assets/img/GithubIcon.svg"></a>
+                <div class="header-top-wrapper overflow">
+                    <div class="header-top">
+                        <div class="menu">
+                            <div class="header-ul-wrapper">
+                                <ul>
+                                    <li class="FEATURE DEMOS user-select"><a class="FEATURE DEMOS"
+                                            href="/featureDemos">FEATURE DEMOS</a>
+                                    <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
+                                    <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
+                                    <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
+                                    <li class="LEARN user-select"><a class="LEARN">LEARN</a>
+                                    <li class="FEATURES user-select"><a class="FEATURES">FEATURES</a>
+                                    <li class="RELEASE NOTES user-select"><a class="RELEASE NOTES"
+                                            href="https://doc.babylonjs.com/whats-new">RELEASE NOTES</a>
+                                    <li class="GET user-select"><a class="GET"
+                                            href="https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers">GET</a>
+                                </ul>
+                            </div>
+                            <div class="sub-menu">
+                                <ul class="TOOLS hidden">
+                                    <li class="user-select"><a href="https://playground.babylonjs.com/" target="_blank">PLAYGROUND</a></li>
+                                    <li class="user-select"><a href="https://sandbox.babylonjs.com/" target="_blank">SANDBOX</a></li>
+                                    <li class="user-select"><a href="https://nme.babylonjs.com/" target="_blank">NODE MATERIAL EDITOR</a></li>
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
+                                    <li class="user-select"><a href="https://github.com/BabylonJS/Exporters/" target="_blank">EXPORTERS</a></li>
+                                    <li class="user-select"><a href="https://spector.babylonjs.com/" target="_blank">SPECTOR.JS</a></li>
+                                </ul>
+                                <ul class="COMMUNITY hidden">
+                                    <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
+                                </ul>
+                                <ul class="BABYLON NATIVE hidden">
+                                    <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
+                                    <li class="user-select"><a href="/reactnative" target="">BABYLON REACT NATIVE</a></li>
+                                </ul>
+                                <ul class="LEARN hidden">
+                                    <li class="user-select"><a href="https://doc.babylonjs.com/" target="_blank">DOCUMENTATION</a></li>
+                                    <li class="user-select"><a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank">VIDEOS</a></li>
+                                    <li class="user-select"><a href="https://medium.com/@babylonjs" target="_blank">BLOG</a></li>
+                                </ul>
+                                <ul class="FEATURES hidden">
+                                    <li class="user-select"><a href="/specifications" target="">SPECIFICATIONS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="gallery-block">
+    <div class="container">
+        <div class="middle-background-gallery">
+            <h2>BABYLON.JS FEATURE DEMOS</h2>
+            <h3>A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.</h3>
+            <div class="container-info">
+                <ul id="hexGrid">
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://theplayroom.babylonjs.com" target="_blank">
+                                <img src="/featureDemos/assets/img/playroom.jpg" alt="Pirate Fort" />
+                                <div class="desc">
+                                    <div class="hexDesc">The Playroom</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#C21DGD#2" target="_blank">
+                                <img src="/community/assets/img/pirateFort.jpg" alt="Pirate Fort" />
+                                <div class="desc">
+                                    <div class="hexDesc">Pirate Fort</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.babylonjs.com/demos/productpage/" target="_blank">
+                                <img src="/community/assets/img/productDemo.jpg" alt="Product Demo" />
+                                <div class="desc">
+                                    <div class="hexDesc">Product Demo</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#P1RZV0" target="_blank">
+                                <img src="/community/assets/img/sodaBottle.jpg" alt="Soda Bottle" />
+                                <div class="desc">
+                                    <div class="hexDesc">Soda Bottle</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://spacepirates.babylonjs.com/" target="_blank">
+                                <img src="/community/assets/img/spacePirates.jpg" alt="Space Pirates" />
+                                <div class="desc">
+                                    <div class="hexDesc">Space Pirates</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/?webgpu#YX6IB8#55" target="_blank">
+                                <img src="/community/assets/img/webGPU.jpg" alt="WebGPU Compute Shader" />
+                                <div class="desc">
+                                    <div class="hexDesc">WebGPU Compute Shader</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://sandbox.babylonjs.com/?kiosk&#x3D;true&amp;assetUrl&#x3D;https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/MosquitoInAmber/glTF/MosquitoInAmber.gltf&amp;cameraPosition&#x3D;-0.14,0.005,0.03&amp;autoRotate&#x3D;true&amp;skybox&#x3D;true&amp;environment&#x3D;https://assets.babylonjs.com/environments/studio.env" target="_blank">
+                                <img src="/community/assets/img/amber.jpg" alt="glTF Amber" />
+                                <div class="desc">
+                                    <div class="hexDesc">glTF Amber</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#LPTLZM" target="_blank">
+                                <img src="/community/assets/img/shipHelm.jpg" alt="Underwater" />
+                                <div class="desc">
+                                    <div class="hexDesc">Underwater</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#3I55DK#0" target="_blank">
+                                <img src="/community/assets/img/marbletower.jpg" alt="Marble Tower" />
+                                <div class="desc">
+                                    <div class="hexDesc">Marble Tower</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#TWQZAU#3" target="_blank">
+                                <img src="/community/assets/img/thePirate.jpg" alt="The Pirate" />
+                                <div class="desc">
+                                    <div class="hexDesc">The Pirate</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#0TEEN7#4" target="_blank">
+                                <img src="/community/assets/img/trouble.jpg" alt="Trouble" />
+                                <div class="desc">
+                                    <div class="hexDesc">Trouble</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#0IRV8X" target="_blank">
+                                <img src="/community/assets/img/snowman.jpg" alt="Snowball Fight" />
+                                <div class="desc">
+                                    <div class="hexDesc">Snowball Fight</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#KR5CRQ" target="_blank">
+                                <img src="/community/assets/img/weWishYouAMerryChristmas.jpg" alt="The Bells" />
+                                <div class="desc">
+                                    <div class="hexDesc">The Bells</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#GVPILZ" target="_blank">
+                                <img src="/community/assets/img/grimGrinningTextures.jpg" alt="Haunted Busts" />
+                                <div class="desc">
+                                    <div class="hexDesc">Haunted Busts</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#XEP0ZD#6" target="_blank">
+                                <img src="/community/assets/img/hexes.jpg" alt="Hex Board Islands" />
+                                <div class="desc">
+                                    <div class="hexDesc">Hex Board Islands</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.babylonjs-playground.com/#I6V1ST" target="_blank">
+                                <img src="/community/assets/img/weapon.jpg" alt="Weapons" />
+                                <div class="desc">
+                                    <div class="hexDesc">Weapons</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.babylonjs-playground.com/#HA3E1B#24" target="_blank">
+                                <img src="/community/assets/img/musicVis.jpg" alt="Music Visualizer" />
+                                <div class="desc">
+                                    <div class="hexDesc">Music Visualizer</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#8MAF6E" target="_blank">
+                                <img src="/community/assets/img/octopus.jpg" alt="Octopus &amp; Ball" />
+                                <div class="desc">
+                                    <div class="hexDesc">Octopus &amp; Ball</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#8JDEIZ" target="_blank">
+                                <img src="/community/assets/img/hotspots.jpg" alt="Ecommerce Hotspots" />
+                                <div class="desc">
+                                    <div class="hexDesc">Ecommerce Hotspots</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#BP7QYG" target="_blank">
+                                <img src="/community/assets/img/winter.jpg" alt="Snow Shader" />
+                                <div class="desc">
+                                    <div class="hexDesc">Snow Shader</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#UUXABN#8" target="_blank">
+                                <img src="/community/assets/img/d20.jpg" alt="D20" />
+                                <div class="desc">
+                                    <div class="hexDesc">D20</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#6K2EY0" target="_blank">
+                                <img src="/community/assets/img/sheen.jpg" alt="Sheen Demo" />
+                                <div class="desc">
+                                    <div class="hexDesc">Sheen Demo</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#8153LW" target="_blank">
+                                <img src="/community/assets/img/clearCoat.jpg" alt="Clear Coat Demo" />
+                                <div class="desc">
+                                    <div class="hexDesc">Clear Coat Demo</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#1EISUM#3" target="_blank">
+                                <img src="/community/assets/img/anisotropy.jpg" alt="Anisotropy Demo" />
+                                <div class="desc">
+                                    <div class="hexDesc">Anisotropy Demo</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.babylonjs-playground.com/#MX2Z99#7" target="_blank">
+                                <img src="/community/assets/img/sun.jpg" alt="Particle Sun" />
+                                <div class="desc">
+                                    <div class="hexDesc">Particle Sun</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#7QCYPB" target="_blank">
+                                <img src="/community/assets/img/glow.jpg" alt="NME Glow Layer" />
+                                <div class="desc">
+                                    <div class="hexDesc">NME Glow Layer</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.babylonjs-playground.com/#EED2HJ" target="_blank">
+                                <img src="/community/assets/img/polarCoordinates.jpg" alt="Polar Coordinates" />
+                                <div class="desc">
+                                    <div class="hexDesc">Polar Coordinates</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#DFQVK5" target="_blank">
+                                <img src="/community/assets/img/triplanarProjection.jpg" alt="Triplanar Projection" />
+                                <div class="desc">
+                                    <div class="hexDesc">Triplanar Projection</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#YIY1QQ" target="_blank">
+                                <img src="/community/assets/img/LUT.jpg" alt="LUT Demo" />
+                                <div class="desc">
+                                    <div class="hexDesc">LUT Demo</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#Y9RUL5" target="_blank">
+                                <img src="/community/assets/img/matrix.jpg" alt="The Matrix" />
+                                <div class="desc">
+                                    <div class="hexDesc">The Matrix</div>
+                                    <div class="hexDesc author">by Babylon.js</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="social-icons">
+                        <a href="https://www.twitter.com/babylonjs" target="_blank"><img src="/assets/img/TwitterIcon.svg" alt="Twitter"></a>
+                        <a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><img src="/assets/img/GithubIcon.svg" alt="Github"></a>
+                        <a href="https://forum.babylonjs.com/" target="_blank"><img src="/assets/img/DiscourseIcon.svg" alt="Forum"></a>
+                        <a href="https://medium.com/@babylonjs" target="_blank"><img src="/assets/img/MediumIcon.svg" alt="Blog"></a>
+                        <a href="https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ" target="_blank"><img src="/assets/img/YouTubeIcon.svg" alt="YouTube channel"></a>
+                        <a href="https://www.netlify.com" target="_blank"><img src="/assets/img/netlify.svg" alt="Hosted by Netlify"></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <a href="https://forum.babylonjs.com" target="_blank">Forum</a>
+                    <a href="https://doc.babylonjs.com/contribute/toBabylon/HowToContribute" target="_blank">Contribute</a>
+                    <a href="https://doc.babylonjs.com/features/introductionToFeatures" target="_blank">Tutorials</a>
+                    <a href="https://github.com/BabylonJS/Brand-Toolkit" target="_blank">Branding</a>
+                </div>
+            </div>
+        </footer>
+        <script src="/assets/js/animation.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/pullRefresh.js"></script>
+
+    </body>
+
+</html>
