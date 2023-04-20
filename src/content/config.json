@@ -82,7 +82,7 @@
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "New Phyiscs Plugin from the Havok Team",
+                "title": "New Physics Plugin from the Havok Team",
                 "desc": "The Havok team is bringing some of their most advanced features to Babylon.js through a special new WASM plugin partnered with a complete overhaul of the Babylon.js Physics API. Working together, they elevate Babylon.js physics to a whole new level. With exciting new physics capabilities and up to 10x faster performance, there's never been a better time to dive into physics in Babylon.js!",
                 "moreInfoLink": "https://aka.ms/babylon6HavokDoc",
                 "moreInfoText": "Learn more about the new Havok WASM plugin for Babylon.js",
