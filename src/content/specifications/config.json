@@ -82,25 +82,11 @@
                                         "text": "Physics engine"
                                     },
                                     {
-                                        "text": "(thanks to "
+                                        "text": " thanks to "
                                     },
                                     {
-                                        "link": "https://github.com/lo-th/Oimo.js/",
-                                        "text": "oimo.js "
-                                    },
-                                    {
-                                        "link": "https://github.com/kripken/ammo.js/",
-                                        "text": "ammo.js "
-                                    },
-                                    {
-                                        "text": "and "
-                                    },
-                                    {
-                                        "link": "http://www.cannonjs.org/",
-                                        "text": "cannon.js"
-                                    },
-                                    {
-                                        "text": "integrations)"
+                                        "link": "https://www.npmjs.com/package/@babylonjs/havok",
+                                        "text": "Havok for the web "
                                     }
                                 ],
                                 [
@@ -203,6 +189,12 @@
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR",
                                         "text": "Physically Based Rendering (PBR)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon6FluidsDoc",
+                                        "text": "Fluid Rendering"
                                     }
                                 ],
                                 [
@@ -607,6 +599,18 @@
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/crowdNavigation",
                                         "text": "Navigation mesh and crowd of moving agents"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon6SSRv2Doc",
+                                        "text": "Screen Space Reflections"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon6TextureDecalDoc",
+                                        "text": "Texture Decals"
+                                    }
                                 ]
                             ]
                         },
@@ -664,6 +668,12 @@
                         {
                             "title": "EXPORTERS AND TOOLING",
                             "list": [
+                                [
+                                    {
+                                        "text": "GUI Editor",
+                                        "link": "http://gui.babylonjs.com/"
+                                    }
+                                ],
                                 [
                                     {
                                         "text": "Exporters for glTF, OBJ and Babylon file formats"
@@ -731,13 +741,6 @@
                                     "imgTitle": "Maya exporter",
                                     "imgAlt": "Autodesk Maya logo",
                                     "imgUrl": "/specifications/assets/img/maya.png"
-                                },
-                                {
-                                    "linkTitle": "Clara.io exporter",
-                                    "link": "https://clara.io/",
-                                    "imgTitle": "Clara.io exporter",
-                                    "imgAlt": "Clara.io logo",
-                                    "imgUrl": "/specifications/assets/img/ClaraIO.png"
                                 }
                             ]
                         }

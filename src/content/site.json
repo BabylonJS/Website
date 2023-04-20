@@ -148,14 +148,8 @@
             ]
         },
         {
-            "root": "features",
-            "visible": true,
-            "children": [
-                {
-                    "menuTitle": "SPECIFICATIONS",
-                    "menuUrl": "/specifications"
-                }
-            ]
+            "root": "specifications",
+            "visible": true
         },
         {
             "menuTitle": "RELEASE NOTES",

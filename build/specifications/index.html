@@ -39,12 +39,14 @@
         <link rel="stylesheet" href="/assets/styles/carousel.css">
         <link rel="stylesheet" href="/assets/styles/textBlock.css">
         <link rel="stylesheet" href="/assets/styles/imageBlock.css">
+        <link rel="stylesheet" href="/assets/styles/partnerLogo.css">
         <link rel="stylesheet" href="/assets/styles/twoColumns.css">
         <link rel="stylesheet" href="/assets/styles/imageAndTextBlock.css">
         <link rel="stylesheet" href="/assets/styles/linkList.css">
         <link rel="stylesheet" href="/assets/styles/imageList.css">
         <link rel="stylesheet" href="/assets/styles/styles.css">
         <link rel="stylesheet" href="/assets/styles/mediaQueries.css">
+        <link rel="stylesheet" href="/assets/styles/pressRelease.css">
         <link rel="author" href="humans.txt">
     </head>
 
@@ -66,12 +68,15 @@
                         <div class="menu">
                             <div class="header-ul-wrapper">
                                 <ul>
+                                    <li class="FEATURE DEMOS user-select"><a class="FEATURE DEMOS"
+                                            href="/featureDemos">FEATURE DEMOS</a>
                                     <li class="TOOLS user-select"><a class="TOOLS">TOOLS</a>
                                     <li class="COMMUNITY user-select"><a class="COMMUNITY">COMMUNITY</a>
-                                    <li class="GAMES user-select"><a class="GAMES"
-                                            href="/games">GAMES</a>
-                                    <li class="E-COMMERCE user-select"><a class="E-COMMERCE"
-                                            href="/ecommerce">E-COMMERCE</a>
+                                    <li class="PARTNERS user-select"><a class="PARTNERS"
+                                            href="/partners">PARTNERS</a>
+                                    <li class="TESTIMONIALS user-select"><a class="TESTIMONIALS"
+                                            href="/testimonials">TESTIMONIALS</a>
+                                    <li class="INDUSTRIES user-select"><a class="INDUSTRIES">INDUSTRIES</a>
                                     <li class="BABYLON NATIVE user-select"><a class="BABYLON NATIVE">BABYLON NATIVE</a>
                                     <li class="LEARN user-select"><a class="LEARN">LEARN</a>
                                     <li class="SPECIFICATIONS user-select"><a class="SPECIFICATIONS"
@@ -93,7 +98,13 @@
                                 </ul>
                                 <ul class="COMMUNITY hidden">
                                     <li class="user-select"><a href="https://forum.babylonjs.com" target="_blank">FORUM</a></li>
-                                    <li class="user-select"><a href="/community" target="">DEMOS</a></li>
+                                    <li class="user-select"><a href="/community" target="">COMMUNITY DEMOS</a></li>
+                                </ul>
+                                <ul class="INDUSTRIES hidden">
+                                    <li class="user-select"><a href="/games" target="">GAMES</a></li>
+                                    <li class="user-select"><a href="/ecommerce" target="">ECOMMERCE</a></li>
+                                    <li class="user-select"><a href="/digitalTwinIot" target="">DIGITAL TWIN AND IOT</a></li>
+                                    <li class="user-select"><a href="/metaverse" target="">METAVERSE</a></li>
                                 </ul>
                                 <ul class="BABYLON NATIVE hidden">
                                     <li class="user-select"><a href="/native" target="">BABYLON NATIVE RUNTIME</a></li>
@@ -112,18 +123,16 @@
         </div>
 
         <div class="content-container">
-            <div class="margin-block">
-</div>
             <div class="samples-carousel-block">
     <div class="carousel" data-sample="">
         <div class="img-holder">
-            <img class="img-carousel" src='/specifications/assets/img/ClearCoat.jpg'></video>
+                <img class="img-carousel" src='/specifications/assets/img/ClearCoat.jpg'></video>
         </div>
         <div class="img-holder">
-            <img class="img-carousel" src='/specifications/assets/img/ControllerCarousel.jpg'></video>
+                <img class="img-carousel" src='/specifications/assets/img/ControllerCarousel.jpg'></video>
         </div>
         <div class="img-holder">
-            <img class="img-carousel" src='/specifications/assets/img/FlightHelmetCarousel.jpg'></video>
+                <img class="img-carousel" src='/specifications/assets/img/FlightHelmetCarousel.jpg'></video>
         </div>
     </div>
     <div class="carousel-navigate">
@@ -152,11 +161,11 @@
                     support
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/resources/file_format_map_(.babylon)">Complete scene graph </a>
+                    <a href="https://doc.babylonjs.com/setup/support/.babylonFileFormat">Complete scene graph </a>
                     with lights, cameras, materials, meshes, animations, audio &amp; actions
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/viewerExamples">Easy to use full featured viewer</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer">Easy to use full featured viewer</a>
                 </li>
                 <li>
                     <a href="/native">Native host (iOS, Android, MacOS, Win32, UWP)</a>
@@ -167,14 +176,10 @@
                     engine
                                     </li>
                 <li>
-                    <a href="https://www.davrous.com/2014/11/18/understanding-collisions-physics-by-building-a-cool-webgl-babylon-js-demo-with-oimo-js/">Physics engine</a>
-                    (thanks to 
-                                        <a href="https://github.com/lo-th/Oimo.js/">oimo.js </a>
-                    <a href="https://github.com/kripken/ammo.js/">ammo.js </a>
-                    and 
-                                        <a href="http://www.cannonjs.org/">cannon.js</a>
-                    integrations)
-                                    </li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/physics">Physics engine</a>
+                     thanks to 
+                                        <a href="https://www.npmjs.com/package/@babylonjs/havok">Havok for the web </a>
+                </li>
                 <li>
                     Scene picking
                                     </li>
@@ -185,14 +190,14 @@
                     Anti-aliasing
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/animation/animation_introduction">Animations </a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/animation">Animations </a>
                     engine
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/particles/particle_system/particle_system_intro">Particles </a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/particles">Particles </a>
                     (both CPU and GPU)
                                         and 
-                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/particles/solid_particle_system/sps_intro">Solid particles </a>
+                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/particles/solid_particle_system">Solid particles </a>
                     Systems
                                     </li>
                 <li>
@@ -206,7 +211,7 @@
                                     </li>
                 <li>
                     Hardware accelerated 
-                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/gui/gui">GUI</a>
+                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/gui">GUI</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/behaviors">Behaviors</a>
@@ -219,10 +224,13 @@
             <h2>SHADERS / RENDERING</h2>
             <ul>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material/nodeMaterial">Node Material</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material">Node Material</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR">Physically Based Rendering (PBR)</a>
+                </li>
+                <li>
+                    <a href="https://aka.ms/babylon6FluidsDoc">Fluid Rendering</a>
                 </li>
                 <li>
                     Clear coat
@@ -261,7 +269,7 @@
                     Light texture projection
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/environment_introduction">Skybox</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox">Skybox</a>
                 </li>
                 <li>
                     Vertex color
@@ -288,13 +296,13 @@
                     Compressed (DDS, KTX, .basis) textures &amp; TGA
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/360VideoDome">360 photos and videos</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/360PhotoDome">360 photos and videos</a>
                 </li>
                 <li>
-                    <a href="https://github.com/BabylonJS/Babylon.js/tree/master/proceduralTexturesLibrary">Procedural textures library</a>
+                    <a href="https://doc.babylonjs.com/toolsAndResources/assetLibraries/proceduralTexturesLibrary">Procedural textures library</a>
                 </li>
                 <li>
-                    <a href="https://github.com/BabylonJS/Babylon.js/tree/master/materialsLibrary">Materials library</a>
+                    <a href="https://doc.babylonjs.com/toolsAndResources/assetLibraries/materialsLibrary">Materials library</a>
                 </li>
             </ul>
             <br>
@@ -310,13 +318,13 @@
                     Decals
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/height_map">Height maps</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/ground_hmap">Height maps</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_Bones_and_Skeletons">Skeletons and bones</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/bonesSkeletons">Skeletons and bones</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/Parametric_Shapes">Parametric shapes (Ribbon, tubes, etc.)</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/param">Parametric shapes (Ribbon, tubes, etc.)</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/morphTargets">Morph targets</a>
@@ -346,22 +354,22 @@
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/occlusionQueries">Occlusion queries</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/Optimizing_Your_Scene_with_Octrees">Selection octrees</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/scene/optimizeOctrees">Selection octrees</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/Caching_Resources_in_IndexedDB">Offline mode (Assets saved in IndexedDB)</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/scene/optimizeCached">Offline mode (Assets saved in IndexedDB)</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/Using_the_Incremental_Loading_System">Incremental loading</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/importers/incrementalLoading">Incremental loading</a>
                 </li>
                 <li>
                     Binary compressed format
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_Instances">Hardware accelerated instances</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/copies/instances">Hardware accelerated instances</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_SceneOptimizer">Automatic scene optimizer</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/scene/sceneOptimizer">Automatic scene optimizer</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/LOD">LOD (Level Of Details)</a>
@@ -380,7 +388,7 @@
             <h2>SPECIAL FX</h2>
             <ul>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/environment_introduction">Fog</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/materials/shaders/Fog+ShaderMat">Fog</a>
                 </li>
                 <li>
                     Alpha blending
@@ -401,13 +409,13 @@
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/lights/shadows_csm">Cascaded Shadow Maps</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_PostProcessRenderPipeline">Post-processes</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/usePostProcesses">Post-processes</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#depth-of-field">Depth of field</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/dofLenseEffects">Depth of field</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#image-processing-effect">Image processing</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/materials/shaders/image_processing">Image processing</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/defaultRenderingPipeline#bloom">Bloom</a>
@@ -428,16 +436,16 @@
                     Rendering layers
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_Lens_Flares">Lens flares</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/lenseFlare">Lens flares</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_Reflection_probes">Reflection Probes</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/reflectionProbes">Reflection Probes</a>
                 </li>
                 <li>
                     Edges renderer
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/how_to/How_to_use_Multi-Views">Multi-views</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/cameras/multiViewsPart1">Multi-views</a>
                 </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/highlightLayer">Highlights rendering</a>
@@ -446,7 +454,13 @@
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/glowLayer">Glow layer</a>
                 </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/crowdNavigation/createNavMesh">Navigation mesh and crowd of moving agents</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/crowdNavigation">Navigation mesh and crowd of moving agents</a>
+                </li>
+                <li>
+                    <a href="https://aka.ms/babylon6SSRv2Doc">Screen Space Reflections</a>
+                </li>
+                <li>
+                    <a href="https://aka.ms/babylon6TextureDecalDoc">Texture Decals</a>
                 </li>
             </ul>
             <br>
@@ -465,10 +479,7 @@
                     Touch camera
                                     </li>
                 <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/cameras#virtual-joysticks-camera">Virtual Joysticks camera</a>
-                </li>
-                <li>
-                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/cameras/webVRCamera">WebVR camera</a>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_introduction#virtual-joysticks-camera">Virtual Joysticks camera</a>
                 </li>
                 <li>
                     Gamepad camera
@@ -486,6 +497,9 @@
             <br>
             <h2>EXPORTERS AND TOOLING</h2>
             <ul>
+                <li>
+                    <a href="http://gui.babylonjs.com/">GUI Editor</a>
+                </li>
                 <li>
                     Exporters for glTF, OBJ and Babylon file formats
                                     </li>
@@ -524,10 +538,6 @@
                 <img title="Maya exporter" alt="Autodesk Maya logo" src="/specifications/assets/img/maya.png">
             </a>
             <br />
-            <a title="Clara.io exporter" url="https://clara.io/">
-                <img title="Clara.io exporter" alt="Clara.io logo" src="/specifications/assets/img/ClaraIO.png">
-            </a>
-            <br />
             <br>
         </div>
     </div>
@@ -540,7 +550,7 @@
                 <ul id="hexGrid">
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://playground.babylonjs.com/#3I55DK#0">
+                            <a class="hexLink" href="https://playground.babylonjs.com/#3I55DK#0" target="_blank">
                                 <img src="../community/assets/img/marbletower.jpg" alt="Local War" />
                                 <div class="desc">
                                     <div class="hexDesc">Marble Tower</div>
@@ -553,7 +563,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://www.exploresharepointspaces.com/">
+                            <a class="hexLink" href="https://www.exploresharepointspaces.com/" target="_blank">
                                 <img src="../community/assets/img/sharepoint-spaces.jpg" alt="SharePoint Spaces" />
                                 <div class="desc">
                                     <div class="hexDesc">SharePoint Spaces</div>
@@ -566,7 +576,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href=" https://www.masters.com/en_US/scores/track/index.html">
+                            <a class="hexLink" href=" https://www.masters.com/en_US/scores/track/index.html" target="_blank">
                                 <img src="../community/assets/img/masters.jpg" alt="US Masters" />
                                 <div class="desc">
                                     <div class="hexDesc">US Masters</div>
@@ -579,7 +589,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/">
+                            <a class="hexLink" href="https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/" target="_blank">
                                 <img src="../community/assets/img/dimension.jpg" alt="Adobe Dimension web export" />
                                 <div class="desc">
                                     <div class="hexDesc">Adobe Dimension web export</div>
@@ -592,7 +602,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://shellshock.io">
+                            <a class="hexLink" href="http://shellshock.io" target="_blank">
                                 <img src="../community/assets/img/ShellShockers.jpg" alt="Shell Shockers" />
                                 <div class="desc">
                                     <div class="hexDesc">Shell Shockers</div>
@@ -605,7 +615,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://jig.space">
+                            <a class="hexLink" href="https://jig.space" target="_blank">
                                 <img src="../community/assets/img/jig.jpg" alt="JigSpace" />
                                 <div class="desc">
                                     <div class="hexDesc">JigSpace</div>
@@ -618,7 +628,7 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/">
+                            <a class="hexLink" href="http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/" target="_blank">
                                 <img src="../community/assets/img/ApartmentConfigurator.jpg" alt="Apartment Configurator" />
                                 <div class="desc">
                                     <div class="hexDesc">Apartment Configurator</div>
