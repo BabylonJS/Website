@@ -945,15 +945,6 @@
                         }
                     },
                     {
-                        "desc": "Marble Tower",
-                        "author": "by PirateJC",
-                        "link": "https://playground.babylonjs.com/#3I55DK#0",
-                        "img": {
-                            "url": "/community/assets/img/marbletower.jpg",
-                            "alt": "Marble Tower"
-                        }
-                    },
-                    {
                         "desc": "Local War",
                         "author": "by 蔬菜土豆泥",
                         "link": "http://localwar.xidayun.com/",
