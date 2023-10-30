@@ -54,7 +54,7 @@
                 },
                 {
                     "menuTitle": "COMMUNITY DEMOS",
-                    "menuUrl": "/community"
+                    "menuUrl": "/community/"
                 }
             ]
         },
@@ -72,19 +72,19 @@
             "children": [
                 {
                     "menuTitle": "GAMES",
-                    "menuUrl": "/games"
+                    "menuUrl": "/games/"
                 },
                 {
                     "menuTitle": "ECOMMERCE",
-                    "menuUrl": "/ecommerce"
+                    "menuUrl": "/ecommerce/"
                 },
                 {
                     "menuTitle": "DIGITAL TWIN AND IOT",
-                    "menuUrl": "/digitalTwinIot"
+                    "menuUrl": "/digitalTwinIot/"
                 },
                 {
                     "menuTitle": "METAVERSE",
-                    "menuUrl": "/metaverse"
+                    "menuUrl": "/metaverse/"
                 }
             ]
         },
@@ -118,11 +118,11 @@
             "children": [
                 {
                     "menuTitle": "BABYLON NATIVE RUNTIME",
-                    "menuUrl": "/native"
+                    "menuUrl": "/native/"
                 },
                 {
                     "menuTitle": "BABYLON REACT NATIVE",
-                    "menuUrl": "/reactnative"
+                    "menuUrl": "/reactnative/"
                 }
             ]
         },

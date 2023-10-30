@@ -12,23 +12,23 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "./assets/videos/minecraftClassic.mp4",
+                        "videoUrl": "/games/assets/videos/minecraftClassic.mp4",
                         "demoLink": "https://classic.minecraft.net"
                     },
                     {
-                        "videoUrl": "./assets/videos/spaceInvaders.mp4",
+                        "videoUrl": "/games/assets/videos/spaceInvaders.mp4",
                         "demoLink": "https://spaceinvaders.viperfish.com.au//"
                     },
                     {
-                        "videoUrl": "./assets/videos/templeRun2.mp4",
+                        "videoUrl": "/games/assets/videos/templeRun2.mp4",
                         "demoLink": "https://poki.com/en/g/temple-run-2#"
                     },
                     {
-                        "videoUrl": "./assets/videos/brilliantMan.mp4",
+                        "videoUrl": "/games/assets/videos/brilliantMan.mp4",
                         "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
                     },
                     {
-                        "videoUrl": "./assets/videos/battlechoc.mp4",
+                        "videoUrl": "/games/assets/videos/battlechoc.mp4",
                         "demoLink": "https://battlechoc.com"
                     }
                 ]
