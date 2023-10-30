@@ -6,7 +6,7 @@ var CreateScene = function (engine) {
     scene.imageProcessingConfiguration.toneMappingEnabled = true;
 
     // Load the model
-    BABYLON.SceneLoader.Append("https://www.babylonjs.com/Assets/NeonPipe/glTF/", "NeonPipe.gltf", scene, function (meshes) {
+    BABYLON.SceneLoader.Append("https://www.babylonjs.com/assets/NeonPipe/glTF/", "NeonPipe.gltf", scene, function (meshes) {
         // Create a camera pointing at your model.
         scene.createDefaultCameraOrLight(true, true, true);
         scene.activeCamera.lowerRadiusLimit = 20;

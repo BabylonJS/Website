@@ -129,7 +129,7 @@
         const scene = new BABYLON.Scene(engine);
         scene.environmentTexture = new BABYLON.CubeTexture("https://assets.babylonjs.com/environments/environmentSpecular.env", scene);
 
-        await BABYLON.SceneLoader.ImportMeshAsync("", "https://www.babylonjs.com/Assets/DamagedHelmet/glTF/", "damagedhelmet.gltf", scene);
+        await BABYLON.SceneLoader.ImportMeshAsync("", "https://www.babylonjs.com/assets/DamagedHelmet/glTF/", "damagedhelmet.gltf", scene);
         
         scene.createDefaultCamera(true, true, true);
         scene.createDefaultSkybox(scene.environmentTexture, true, undefined, 0.3);
