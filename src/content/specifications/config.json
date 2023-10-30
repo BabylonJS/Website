@@ -740,7 +740,7 @@
                                     "link": "https://github.com/BabylonJS/Exporters/tree/master/Maya",
                                     "imgTitle": "Maya exporter",
                                     "imgAlt": "Autodesk Maya logo",
-                                    "imgUrl": "/specifications/assets/img/maya.png"
+                                    "imgUrl": "/specifications/assets/img/Maya.png"
                                 }
                             ]
                         }
@@ -786,7 +786,7 @@
                         "author": "by Adobe",
                         "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
                         "img": {
-                            "url": "../community/assets/img/dimension.jpg",
+                            "url": "../community/assets/img/Dimension.jpg",
                             "alt": "Adobe Dimension web export"
                         }
                     },
