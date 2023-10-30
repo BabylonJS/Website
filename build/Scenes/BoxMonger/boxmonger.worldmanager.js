@@ -9,11 +9,11 @@ var BOXMONGER;
         BlocTypes.WOOD = 3;
         BlocTypes.LEAFS = 4;
         BlocTypes.Types = [
-            { typeName: "Stone", typeId: BlocTypes.STONE, url: "./Assets/Textures/stone.png", transparency: false },
-            { typeName: "Grass", typeId: BlocTypes.GRASS, url: "./Assets/Textures/grass.png", transparency: false },
-            { typeName: "Snow", typeId: BlocTypes.SNOW, url: "./Assets/Textures/snow.png", transparency: false },
-            { typeName: "Wood", typeId: BlocTypes.WOOD, url: "./Assets/Textures/wood.png", transparency: false },
-            { typeName: "Leafs", typeId: BlocTypes.LEAFS, url: "./Assets/Textures/leafs.png", transparency: true },
+            { typeName: "Stone", typeId: BlocTypes.STONE, url: "./assets/Textures/stone.png", transparency: false },
+            { typeName: "Grass", typeId: BlocTypes.GRASS, url: "./assets/Textures/grass.png", transparency: false },
+            { typeName: "Snow", typeId: BlocTypes.SNOW, url: "./assets/Textures/snow.png", transparency: false },
+            { typeName: "Wood", typeId: BlocTypes.WOOD, url: "./assets/Textures/wood.png", transparency: false },
+            { typeName: "Leafs", typeId: BlocTypes.LEAFS, url: "./assets/Textures/leafs.png", transparency: true },
         ];
         BlocTypes.Materials = new Array(BlocTypes.Types.length);
         return BlocTypes;

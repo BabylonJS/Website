@@ -29,7 +29,7 @@
 
     // Particles
     var particleSystem = new BABYLON.ParticleSystem("particles", 4000, scene);
-    particleSystem.particleTexture = new BABYLON.Texture("../../Assets/Flare.png", scene);
+    particleSystem.particleTexture = new BABYLON.Texture("../../assets/Flare.png", scene);
     particleSystem.minAngularSpeed = -0.5;
     particleSystem.maxAngularSpeed = 0.5;
     particleSystem.minSize = 0.1;
@@ -51,7 +51,7 @@
     particleSystem.start();
 
     var particleSystem2 = new BABYLON.ParticleSystem("particles", 4000, scene);
-    particleSystem2.particleTexture = new BABYLON.Texture("../../Assets/Flare.png", scene);
+    particleSystem2.particleTexture = new BABYLON.Texture("../../assets/Flare.png", scene);
     particleSystem2.minSize = 0.1;
     particleSystem2.maxSize = 0.3;
     particleSystem2.minEmitPower = 1.0;

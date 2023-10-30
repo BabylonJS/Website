@@ -7,12 +7,12 @@
     var cylinder = BABYLON.Mesh.CreateCylinder("Sphere1", 5, 3, 2, 32, 1, scene);
     var torus = BABYLON.Mesh.CreateTorus("Sphere2", 3, 1, 32, scene);
 
-    var cellShadingMaterial = new BABYLON.ShaderMaterial("cellShading", scene, "../../Assets/shaders/cellShading",
+    var cellShadingMaterial = new BABYLON.ShaderMaterial("cellShading", scene, "../../assets/shaders/cellShading",
     {
         uniforms: ["world", "viewProjection"],
         samplers: ["textureSampler"]
     });
-    cellShadingMaterial.setTexture("textureSampler", new BABYLON.Texture("../../Assets/Ground.jpg", scene))
+    cellShadingMaterial.setTexture("textureSampler", new BABYLON.Texture("../../assets/Ground.jpg", scene))
                        .setVector3("vLightPosition", light.position)
                        .setFloats("ToonThresholds", [0.95, 0.5, 0.2, 0.03])
                        .setFloats("ToonBrightnessLevels", [1.0, 0.8, 0.6, 0.35, 0.01])

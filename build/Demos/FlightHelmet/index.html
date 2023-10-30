@@ -18,7 +18,7 @@
         window.onload = function () {
             if (location.href.indexOf("mixedReality") !== -1) {
                 var a = document.createElement("a");
-                a.href = "../../Assets/FlightHelmet/glTF-Binary/FlightHelmet_Materials.glb";
+                a.href = "../../assets/FlightHelmet/glTF-Binary/FlightHelmet_Materials.glb";
                 document.getElementById("mixedRealityAnchor").href += a.href;
                 document.getElementById("mixedReality").className = "mixedReality";
             }
@@ -51,7 +51,7 @@
     <div id="notSupported" class="hidden">Sorry but your browser does not support WebGL...</div>
     <div id="mixedReality" class="hidden">
         <a id="mixedRealityAnchor" href="ms-mixedreality:addmodel?uri=">
-            <img src="../../Assets/MixedRealityPortal.png"></img>
+            <img src="../../assets/MixedRealityPortal.png"></img>
         </a>
     </div>
     <script src="../../js/loaderSimple.js"></script>

@@ -43,7 +43,7 @@
         scene.beginAnimation(rabbit3.skeleton, 0, 72, true, 0.8);
         
         // Dude
-        BABYLON.SceneLoader.ImportMesh("him", "/Scenes/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
+        BABYLON.SceneLoader.ImportMesh("him", "/Scenes/Dude/", "dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
             var dude = newMeshes2[0];
             
             for (var index = 0; index < newMeshes2.length; index++) {

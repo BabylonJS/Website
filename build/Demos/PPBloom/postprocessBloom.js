@@ -16,7 +16,7 @@
     var skybox = BABYLON.Mesh.CreateBox("skyBox", 1000.0, scene);
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
     skyboxMaterial.backFaceCulling = false;
-    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("../../Assets/skybox/snow", scene);
+    skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("../../assets/skybox/snow", scene);
     skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
     skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
     skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
@@ -46,14 +46,14 @@
     var blurWidth = 10.0;
     
     var postProcess0 = new BABYLON.PassPostProcess("Scene copy", 1.0, camera);
-    var postProcess1 = new BABYLON.PostProcess("Down sample", "../../Assets/postprocesses/downsample", ["screenSize", "highlightThreshold"], null, 0.25, camera, BABYLON.Texture.BILINEAR_SAMPLINGMODE);
+    var postProcess1 = new BABYLON.PostProcess("Down sample", "../../assets/postprocesses/downsample", ["screenSize", "highlightThreshold"], null, 0.25, camera, BABYLON.Texture.BILINEAR_SAMPLINGMODE);
     postProcess1.onApply = function (effect) {
         effect.setFloat2("screenSize", postProcess1.width, postProcess1.height);
         effect.setFloat("highlightThreshold", 0.90);
     };
     var postProcess2 = new BABYLON.BlurPostProcess("Horizontal blur", new BABYLON.Vector2(1.0, 0), blurWidth, 0.25, camera);
     var postProcess3 = new BABYLON.BlurPostProcess("Vertical blur", new BABYLON.Vector2(0, 1.0), blurWidth, 0.25, camera);
-    var postProcess4 = new BABYLON.PostProcess("Final compose", "../../Assets/postprocesses/compose", ["sceneIntensity", "glowIntensity", "highlightIntensity"], ["sceneSampler"], 1, camera);
+    var postProcess4 = new BABYLON.PostProcess("Final compose", "../../assets/postprocesses/compose", ["sceneIntensity", "glowIntensity", "highlightIntensity"], ["sceneSampler"], 1, camera);
     postProcess4.onApply = function (effect) {
         effect.setTextureFromPostProcess("sceneSampler", postProcess0);
         effect.setFloat("sceneIntensity", 0.5);

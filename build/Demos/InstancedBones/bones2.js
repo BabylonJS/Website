@@ -22,7 +22,7 @@
     shadowGenerator.useBlurExponentialShadowMap = true;
 
     // Dude
-    BABYLON.SceneLoader.ImportMesh("him", "../../Assets/Dude/", "Dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
+    BABYLON.SceneLoader.ImportMesh("him", "../../assets/Dude/", "dude.babylon", scene, function (newMeshes2, particleSystems2, skeletons2) {
         var dude = newMeshes2[0];
 
         for (var index = 1; index < newMeshes2.length; index++) {

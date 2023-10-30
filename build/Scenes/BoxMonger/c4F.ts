@@ -70,25 +70,25 @@
             this._edgeSize = edgeSize;
 
             var grassMaterial = new BABYLON.StandardMaterial("grassMaterial", scene);
-            grassMaterial.diffuseTexture = new BABYLON.Texture("./Assets/Textures/grass.png", scene);
+            grassMaterial.diffuseTexture = new BABYLON.Texture("./assets/Textures/grass.png", scene);
             this._grassBox = new BoxMesh("grassBox", unitBoxSize, edgeSize * edgeSize, scene, grassMaterial);
 
             var snowMaterial = new BABYLON.StandardMaterial("snowMaterial", scene);
-            snowMaterial.diffuseTexture = new BABYLON.Texture("./Assets/Textures/snow.png", scene);
+            snowMaterial.diffuseTexture = new BABYLON.Texture("./assets/Textures/snow.png", scene);
             this._snowBox = new BoxMesh("snowBox", unitBoxSize, edgeSize * edgeSize, scene, snowMaterial);
 
             var stoneMaterial = new BABYLON.StandardMaterial("stoneMaterial", scene);
-            stoneMaterial.diffuseTexture = new BABYLON.Texture("./Assets/Textures/stone.png", scene);
+            stoneMaterial.diffuseTexture = new BABYLON.Texture("./assets/Textures/stone.png", scene);
             this._stoneBox = new BoxMesh("stoneBox", unitBoxSize, edgeSize * edgeSize, scene, stoneMaterial);
 
             this._scene = scene;
             this.loadLogoCoordinates();
 
             //init global sounds
-            this._swoochSound = new BABYLON.Sound("Swouch", "./Assets/Sounds/swouch.wav", this._scene, null, { loop: false, autoplay: false });
-            this._shootSound = new BABYLON.Sound("Shooton", "./Assets/Sounds/shooton.wav", this._scene, null, { loop: false, autoplay: false });
-            this._scratchSound = new BABYLON.Sound("Scratch", "./Assets/Sounds/scratch.wav", this._scene, null, { loop: false, autoplay: false });
-            this._geekCouncilSound = new BABYLON.Sound("GeekCouncil", "./Assets/Sounds/TheGeekCouncil.wav", this._scene, null, { loop: false, autoplay: false });
+            this._swoochSound = new BABYLON.Sound("Swouch", "./assets/Sounds/swouch.wav", this._scene, null, { loop: false, autoplay: false });
+            this._shootSound = new BABYLON.Sound("Shooton", "./assets/Sounds/shooton.wav", this._scene, null, { loop: false, autoplay: false });
+            this._scratchSound = new BABYLON.Sound("Scratch", "./assets/Sounds/scratch.wav", this._scene, null, { loop: false, autoplay: false });
+            this._geekCouncilSound = new BABYLON.Sound("GeekCouncil", "./assets/Sounds/TheGeekCouncil.wav", this._scene, null, { loop: false, autoplay: false });
             this._shootSound.setVolume(0.3);
         }
 
@@ -111,13 +111,13 @@
                 sounds[0].setVolume(soundVolume);
             }
 
-            this._sounds[1] = new BABYLON.Sound("Violons11", "./Assets/Sounds/coding4fun2015violons11.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[0] = new BABYLON.Sound("Violons18", "./Assets/Sounds/coding4fun2015violons18.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[4] = new BABYLON.Sound("CelloLong", "./Assets/Sounds/coding4fun2015cellolong.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[5] = new BABYLON.Sound("CelloLong2", "./Assets/Sounds/coding4fun2015cellolong2.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[2] = new BABYLON.Sound("RapidoViolons", "./Assets/Sounds/coding4fun2015rapidviolons.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[3] = new BABYLON.Sound("Trombones", "./Assets/Sounds/coding4fun2015trombones.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
-            this._sounds[6] = new BABYLON.Sound("Voices", "./Assets/Sounds/coding4fun2015voices.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[1] = new BABYLON.Sound("Violons11", "./assets/Sounds/coding4fun2015violons11.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[0] = new BABYLON.Sound("Violons18", "./assets/Sounds/coding4fun2015violons18.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[4] = new BABYLON.Sound("CelloLong", "./assets/Sounds/coding4fun2015cellolong.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[5] = new BABYLON.Sound("CelloLong2", "./assets/Sounds/coding4fun2015cellolong2.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[2] = new BABYLON.Sound("RapidoViolons", "./assets/Sounds/coding4fun2015rapidviolons.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[3] = new BABYLON.Sound("Trombones", "./assets/Sounds/coding4fun2015trombones.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
+            this._sounds[6] = new BABYLON.Sound("Voices", "./assets/Sounds/coding4fun2015voices.wav", this._scene, soundLoaded, { loop: true, autoplay: false });
 
             this._analyzer = new BABYLON.Analyser(this._scene);
             BABYLON.Engine.audioEngine.connectToAnalyser(this._analyzer);

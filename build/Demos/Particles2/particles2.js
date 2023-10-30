@@ -41,7 +41,7 @@
 
     // Particles
     var particleSystem = new BABYLON.ParticleSystem("particles", 4000, scene, effect);
-    particleSystem.particleTexture = new BABYLON.Texture("../../Assets/Flare.png", scene);
+    particleSystem.particleTexture = new BABYLON.Texture("../../assets/Flare.png", scene);
     particleSystem.minSize = 0.1;
     particleSystem.maxSize = 1.0;
     particleSystem.minLifeTime = 0.5;

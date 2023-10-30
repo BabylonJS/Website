@@ -129,7 +129,7 @@ a {
 
 .custom-upload {
     position: relative;
-    background:url(./Assets/BtnDragdrop.png) center right no-repeat;
+    background:url(./assets/BtnDragdrop.png) center right no-repeat;
     height: 56px;
     width: 56px;
     margin: 10px 20px 5px 5px;
@@ -152,7 +152,7 @@ a {
 #logo {
     width: 100%;
     height: 100%;
-    background: url('./Assets/LogoSandbox.png') no-repeat 0 0;
+    background: url('./assets/LogoSandbox.png') no-repeat 0 0;
     background-position: center;
 }
 
