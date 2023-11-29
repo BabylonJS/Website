@@ -38,15 +38,15 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/microsoft_logo.svg",
+                    "image-1": "/partners/assets/img/microsoft_logo.svg",
                     "alt-1": "Microsoft logo",
-                    "image-2": "assets/img/Adobe_Corporate_Horizontal_Red_HEX.svg",
+                    "image-2": "/partners/assets/img/Adobe_Corporate_Horizontal_Red_HEX.svg",
                     "alt-2": "Adobe logo",
                     "link-2": "https://blog.adobe.com/en/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature#gs.gyrllx",
-                    "image-3": "assets/img/nike_logo.svg",
+                    "image-3": "/partners/assets/img/nike_logo.svg",
                     "alt-3": "Nike logo",
                     "link-3": "https://www.nike.com/nike-by-you",
-                    "image-4": "assets/img/target_logo.svg",
+                    "image-4": "/partners/assets/img/target_logo.svg",
                     "alt-4": "Target logo",
                     "link-4": "https://www.target.com/room-planner/nursery"
                 }
@@ -56,15 +56,15 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/aws_logo.png",
+                    "image-1": "/partners/assets/img/aws_logo.png",
                     "alt-1": "Amazon Web Services logo",
-                    "image-2": "assets/img/macys_logo.png",
+                    "image-2": "/partners/assets/img/macys_logo.png",
                     "alt-2": "Macy's logo",
                     "link-2": "https://macys.3dcloud.io/",
-                    "image-3": "assets/img/wayfair_logo.svg",
+                    "image-3": "/partners/assets/img/wayfair_logo.svg",
                     "alt-3": "Wayfair logo",
                     "link-3": "https://www.wayfair.com/RoomPlanner3D",
-                    "image-4": "assets/img/lowes_logo.svg",
+                    "image-4": "/partners/assets/img/lowes_logo.svg",
                     "alt-4": "Lowes logo",
                     "link-4": "https://deckdesigner.lowes.com/"
                 }
@@ -74,16 +74,16 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/ferrari_logo.svg",
+                    "image-1": "/partners/assets/img/ferrari_logo.svg",
                     "alt-1": "Ferrari logo",
                     "link-1": "https://carconfigurator.ferrari.com/en_EN",
-                    "image-2": "assets/img/dior_logo.svg",
+                    "image-2": "/partners/assets/img/dior_logo.svg",
                     "alt-2": "Dior logo",
                     "link-2": "https://dior.n10.app/?portal=main",
-                    "image-3": "assets/img/iwc_schaffhausen_logo.svg",
+                    "image-3": "/partners/assets/img/iwc_schaffhausen_logo.svg",
                     "alt-3": "IWC schaffhausen logo",
                     "link-3": "https://www.iwc.com/fr/en/watch-collections/pilot-watches/iw329303-big-pilots-watch-43.html",
-                    "image-4": "assets/img/millerknoll_logo.svg",
+                    "image-4": "/partners/assets/img/millerknoll_logo.svg",
                     "alt-4": "MillerKnoll logo",
                     "link-4": "https://www.prnewswire.com/news-releases/configure-the-iconic-aeron-chair-in-3d-millerknoll-selects-3d-cloud-by-marxent-for-scalable-3d-product-configuration-301608528.html"
                 }
@@ -93,15 +93,15 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/ibm_logo.svg",
+                    "image-1": "/partners/assets/img/ibm_logo.svg",
                     "alt-1": "IBM logo",
                     "link-1": "https://www.ibm.com/resources/cloud/mayflower-ship-experience/#/experience/harbor",
-                    "image-2": "assets/img/xbox_logo.svg",
+                    "image-2": "/partners/assets/img/xbox_logo.svg",
                     "alt-2": "Xbox logo",
                     "link-2": "https://xboxdesignlab.xbox.com/",
-                    "image-3": "assets/img/ubisoft_logo.svg",
+                    "image-3": "/partners/assets/img/ubisoft_logo.svg",
                     "alt-3": "Ubisoft logo",
-                    "image-4": "assets/img/autodesk_logo.svg",
+                    "image-4": "/partners/assets/img/autodesk_logo.svg",
                     "alt-4": "Autodesk logo"
                 }
             }
@@ -110,14 +110,14 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/squareEnix_logo.svg",
+                    "image-1": "/partners/assets/img/squareEnix_logo.svg",
                     "alt-1": "Square Enix logo",
-                    "image-2": "assets/img/verizon_logo.png",
+                    "image-2": "/partners/assets/img/verizon_logo.png",
                     "alt-2": "Verizon logo",
-                    "image-3": "assets/img/siemens_logo.svg",
+                    "image-3": "/partners/assets/img/siemens_logo.svg",
                     "alt-3": "Siemens logo",
                     "link-3": "https://www.siemens-energy.com/global/en/offerings/power-transmission/showroom.html",
-                    "image-4": "assets/img/nationalGeographic_logo.png",
+                    "image-4": "/partners/assets/img/nationalGeographic_logo.png",
                     "alt-4": "National Geographic logo",
                     "link-4": "https://sociable.co/technology/babylonjs-nat-geo/"
                 }
@@ -127,16 +127,16 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/ashley_logo.svg",
+                    "image-1": "/partners/assets/img/ashley_logo.svg",
                     "alt-1": "Ashley Furniture logo",
                     "link-1": "https://roombuilder.ashleyfurniture.com/",
-                    "image-2": "assets/img/ethanAllen_logo.png",
+                    "image-2": "/partners/assets/img/ethanAllen_logo.png",
                     "alt-2": "Ethan Allen Logo",
                     "link-2": "https://www.ethanallen.com/en_US/virtual-design-center.html",
-                    "image-3": "assets/img/joybird_logo.svg",
+                    "image-3": "/partners/assets/img/joybird_logo.svg",
                     "alt-3": "Joybird Logo",
                     "link-3": "https://design.joybird.com/",
-                    "image-4": "assets/img/lazboy_logo.svg",
+                    "image-4": "/partners/assets/img/lazboy_logo.svg",
                     "alt-4": "La-Z-Boy logo",
                     "link-4": "https://www.la-z-boy.com/content/Room-Planner-3D"
                 }
@@ -146,16 +146,16 @@
             "templateName": "partnerLogo",
             "content": {
                 "logo": {
-                    "image-1": "assets/img/tata_logo.svg",
+                    "image-1": "/partners/assets/img/tata_logo.svg",
                     "alt-1": "Tata Motors logo",
                     "link-1": "https://imaginator.tatamotors.com/altroz/#/build/showcase",
-                    "image-2": "assets/img/zara_logo.svg",
+                    "image-2": "/partners/assets/img/zara_logo.svg",
                     "alt-2": "Zara logo",
                     "link-2": "https://www.zara.com/es/en/joma%C2%AE-running-sneakers-p12382820.html?v1=114499566&v2=1947814",
-                    "image-3": "assets/img/royalAirForce_logo.png",
+                    "image-3": "/partners/assets/img/royalAirForce_logo.png",
                     "alt-3": "Royal Air Force logo",
                     "link-3": "https://www.raf.mod.uk/display-teams/red-arrows/displays/",
-                    "image-4": "assets/img/snapon_logo.svg",
+                    "image-4": "/partners/assets/img/snapon_logo.svg",
                     "alt-4": "Snap-on Logo",
                     "link-4": "https://ultimator.snaponpromotion.com/"
                 }

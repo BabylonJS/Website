@@ -13,7 +13,7 @@
                 "items": [
                     {
                         "video": {
-                            "url": "assets/videos/bNativeTogether.mp4",
+                            "url": "/native/assets/videos/bNativeTogether.mp4",
                             "width": "1000px"
                         }
                     }
@@ -44,7 +44,7 @@
                         "desc": "Get the Preview",
                         "link": "https://github.com/BabylonJS/BabylonNative",
                         "img": {
-                            "url": "../assets/img/NotesIcon.svg"
+                            "url": "/native/assets/img/NotesIcon.svg"
                         }
                     }
                 ],
@@ -57,7 +57,7 @@
                 "alignment": "left",
                 "background": "#201f2d",
                 "img": {
-                    "url": "assets/img/crossDevice.svg",
+                    "url": "/native/assets/img/crossDevice.svg",
                     "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
                     "width": "550px"
                 },
@@ -76,7 +76,7 @@
                 "alignment": "right",
                 "background": "#5a0014",
                 "img": {
-                    "url": "assets/img/rendering.png",
+                    "url": "/native/assets/img/rendering.png",
                     "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
                     "width": "550px"
                 },
@@ -95,7 +95,7 @@
                 "alignment": "left",
                 "background": "#565042",
                 "img": {
-                    "url": "assets/img/optimizedPackage.svg",
+                    "url": "/native/assets/img/optimizedPackage.svg",
                     "alt": "Illustration of cardboard box containing smaller packages.",
                     "width": "550px"
                 },
@@ -114,7 +114,7 @@
                 "alignment": "right",
                 "background": "#222222",
                 "img": {
-                    "url": "assets/img/reactNativeLogo.png",
+                    "url": "/native/assets/img/reactNativeLogo.png",
                     "alt": "Logo for React Native.",
                     "width": "550px"
                 },
@@ -133,7 +133,7 @@
                 "alignment": "left",
                 "background": "#2a2342",
                 "img": {
-                    "url": "assets/img/XR_Experiences.gif",
+                    "url": "/native/assets/img/XR_Experiences.gif",
                     "alt": "An animated gif of a phone showing a 3D object floating in a room in XR",
                     "width": "150px"
                 },
@@ -152,7 +152,7 @@
                 "alignment": "right",
                 "background": "#000000",
                 "img": {
-                    "url": "assets/img/forum.png",
+                    "url": "/native/assets/img/forum.png",
                     "alt": "A screen capture of our very active forum page.",
                     "width": "550px"
                 },
