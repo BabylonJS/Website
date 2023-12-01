@@ -83,6 +83,19 @@
 
       gtag("config", "UA-41767310-1");
     </script>
+    <script>
+        // make sure we are on babylonjs.com
+        if (window.location.hostname !== "www.babylonjs.com") {
+          return;
+        }
+      // add a trailing slash if the browser path doesn't contain a dot
+      if (
+        !window.location.pathname.endsWith("/") &&
+        !window.location.pathname.includes(".")
+      ) {
+        window.location.pathname += "/";
+      }
+    </script>
   </head>
 
   <body>
