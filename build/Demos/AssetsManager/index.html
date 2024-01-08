@@ -1,28 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta name="viewport" content="width=device-width" />
     <title>BabylonJS - Assets manager demo</title>
-    <script src="//preview.babylonjs.com/babylon.js"></script>    
+    <script src="//preview.babylonjs.com/babylon.js"></script>
     <script src="assets.js"></script>
+    <script>
+      // make sure we are on babylonjs.com
+      if (window.location.hostname === "www.babylonjs.com") {
+        // add a trailing slash if the browser path doesn't contain a dot
+        if (
+          !window.location.pathname.endsWith("/") &&
+          !window.location.pathname.includes(".")
+        ) {
+          window.location.pathname += "/";
+        }
+      }
+    </script>
     <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
 
-        #renderCanvas {
-            width: 100%;
-            height: 100%;
-            touch-action: none;
-            -ms-touch-action: none;
-        }
+      #renderCanvas {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+        -ms-touch-action: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <canvas id="renderCanvas"></canvas>
-</body>
+  </body>
 </html>

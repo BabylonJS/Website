@@ -120,6 +120,18 @@
             text-decoration: unset;
         }
     </style>
+    <script>
+        // make sure we are on babylonjs.com
+        if (window.location.hostname === "www.babylonjs.com") {
+          // add a trailing slash if the browser path doesn't contain a dot
+          if (
+            !window.location.pathname.endsWith("/") &&
+            !window.location.pathname.includes(".")
+          ) {
+            window.location.pathname += "/";
+          }
+        }
+      </script>
 </head>
 
 <body>
