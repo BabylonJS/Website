@@ -1,5 +1,5 @@
 ﻿var demo = {
-    scene: "flat2009",
+    scene: "Flat2009",
     incremental: false,
     binary: false,
     doNotUseCDN: false,

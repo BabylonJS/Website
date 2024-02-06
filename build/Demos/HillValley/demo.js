@@ -1,5 +1,6 @@
 ﻿var demo = {
     scene: "HillValley",
+    optionalFolder: "hillvalley",
     incremental: true,
     binary: false,
     doNotUseCDN: false,
