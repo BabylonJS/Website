@@ -191,12 +191,12 @@
                         }
                     },
                     {
-                        "desc": "pCon.box",
-                        "author": "by EasternGraphics",
-                        "link": "http://www.easterngraphics.com/en/products/pconbox.html",
+                        "desc": "Automated Floor Plans",
+                        "author": "by laiout",
+                        "link": "https://www.laiout.co/",
                         "img": {
-                            "url": "../community/assets/img/pCon_box.jpg",
-                            "alt": "pCon.box"
+                            "url": "../community/assets/img/laiout.jpg",
+                            "alt": "laiout Floor Plans"
                         }
                     }
                 ]

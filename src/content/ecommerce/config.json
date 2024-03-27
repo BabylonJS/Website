@@ -67,7 +67,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "left",
+                "alignment": "right",
                 "background": "#3B251F",
                 "img": {
                     "url": "assets/img/shoeVariants.png",
@@ -88,7 +88,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "right",
+                "alignment": "left",
                 "background": "#2a2342",
                 "img": {
                     "url": "assets/img/transparentShadows.png",
@@ -107,6 +107,27 @@
             }
         },
         {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#201f2d",
+                "img": {
+                    "url": "assets/img/gi_shoeDisplay.png",
+                    "alt": "",
+                    "width": "350px"
+                },
+                "height": "500px",
+                "paddingTop": "40px",
+                "paddingBottom": "40px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Global Illumination",
+                "desc": "With Babylon.js 7.0, we are excited to introduce support for basic Global Illumination. This highly desired and advanced feature allows Babylon.js scenes to render even more lifelike experiences by allowing light and shadows to “bounce” around environments in a way that much closer matches reality.",
+                "moreInfoLink": "https://aka.ms/babylon7GIDoc",
+                "moreInfoText": "Learn more about global illumunation in Babylon.js",
+                "target": "_blank"
+            }
+        },{
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
@@ -217,6 +238,60 @@
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
                     {
+                        "desc": "Ring Configurator",
+                        "author": "by Van Cleef & Arpels",
+                        "link": "https://www.vancleefarpels.com/us/en/collection/your-poetic-setting/configurator.html",
+                        "img": {
+                            "url": "/community/assets/img/vanCleef_arpels.jpg",
+                            "alt": "Van Cleef & Arpels Ring Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Apparel Configurator",
+                        "author": "by Puma",
+                        "link": "https://puma-teamwear.fr/fr/parcours",
+                        "img": {
+                            "url": "/community/assets/img/pumaConfigurator.jpg",
+                            "alt": "Puma Apparel Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Tumbler Configurator",
+                        "author": "by Stanley",
+                        "link": "https://www.stanley1913.com/collections/stanley-create",
+                        "img": {
+                            "url": "/community/assets/img/stanleyCustomizer.jpg",
+                            "alt": "Stanley Tumbler Customizer"
+                        }
+                    },
+                    {
+                        "desc": "Xbox Design Lab",
+                        "author": "by Xbox.com",
+                        "link": "https://xboxdesignlab.xbox.com/en-US/customize",
+                        "img": {
+                            "url": "/community/assets/img/xboxdesignlab.jpg",
+                            "alt": "Xbox Design Lab"
+                        }
+                    },
+                    {
+                        "desc": "SF90 Stradale Configurator",
+                        "author": "by Ferrari",
+                        "link": "https://carconfigurator.ferrari.com/en_EN/ferrari_car_configurator/sf90stradale",
+                        "img": {
+                            "url": "/community/assets/img/ferrariConfigurator.jpg",
+                            "alt": "Ferrari SF90 Stradale Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Watch Gallery",
+                        "author": "IWC Schaffhausen",
+                        "link": "https://www.iwc.com/us/en/watch-collections/pilot-watches/iw329303-big-pilots-watch-43.html",
+                        "img": {
+                            "url": "/community/assets/img/iwcSchaffhausen.jpg",
+                            "alt": "IWC Schaffhausen Watch Gallery"
+                        }
+                    },
+                    {
                         "desc": "Room Planner 3D",
                         "author": "by Wayfair",
                         "link": "https://www.wayfair.com/RoomPlanner3D",
@@ -289,15 +364,6 @@
                         }
                     },
                     {
-                        "desc": "Sportswear online design",
-                        "author": "by Juwei Chen",
-                        "link": "https://www.tontossport.com/custom-polo-uniform/women-short-sleeve-polo-shirts/white-short-sleeve-polo-shirts-with-pockets-504",
-                        "img": {
-                            "url": "/community/assets/img/Online design of diverse 3D sportswear apps.jpg",
-                            "alt": "Sportswear online design"
-                        }
-                    },
-                    {
                         "desc": "SurfaceVue",
                         "author": "Deft & Tact",
                         "link": "https://surfacevue.com/",
@@ -358,24 +424,6 @@
                         "img": {
                             "url": "../community/assets/img/palletConfig.jpg",
                             "alt": "Pallet Configurator"
-                        }
-                    },
-                    {
-                        "desc": "Apartment Configurator",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
-                        "img": {
-                            "url": "../community/assets/img/ApartmentConfigurator.jpg",
-                            "alt": "Apartment Configurator"
-                        }
-                    },
-                    {
-                        "desc": "boltless configurator",
-                        "author": "by Buyrack",
-                        "link": "http://www.buyrack.com/pc/boltless-configurator.html",
-                        "img": {
-                            "url": "../community/assets/img/buyrack.jpg",
-                            "alt": "boltless configurator"
                         }
                     }
                 ]

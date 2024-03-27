@@ -9,6 +9,42 @@
                 "desc": "A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.",
                 "items": [
                     {
+                        "desc": "Node Geometry",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#18WTCK",
+                        "img": {
+                            "url": "/featureDemos/assets/img/nodeGeometryCemetery.jpg",
+                            "alt": "Low-Poly Cemetery"
+                        }
+                    },
+                    {
+                        "desc": "Global Illumination",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/babylon7GIDemo",
+                        "img": {
+                            "url": "/featureDemos/assets/img/globalIllumination.jpg",
+                            "alt": "Global Illumination Demo"
+                        }
+                    },
+                    {
+                        "desc": "Gaussian Splat",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/babylon7GSplatDemo",
+                        "img": {
+                            "url": "/featureDemos/assets/img/gaussianSplat.jpg",
+                            "alt": "Gaussian Splat Demo"
+                        }
+                    },
+                    {
+                        "desc": "Ragdoll Physics",
+                        "author": "by Babylon.js",
+                        "link": "https://aka.ms/babylon7RagdollDemo",
+                        "img": {
+                            "url": "/featureDemos/assets/img/ragdollDemo.jpg",
+                            "alt": "Ragdoll Demo"
+                        }
+                    },
+                    {
                         "desc": "The Playroom",
                         "author": "by Babylon.js",
                         "link": "https://theplayroom.babylonjs.com",
