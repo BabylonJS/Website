@@ -152,6 +152,28 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
+                "background": "DarkRed",
+                "img": {
+                    "url": "assets/img/havok_logo_reversed.svg",
+                    "alt": "",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "paddingTop": "40px",
+                "paddingBottom": "40px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Physics Plugin from the Havok Team",
+                "desc": "The Havok team brought some of their most advanced features to Babylon.js through a special new WASM plugin partnered with a complete overhaul of the Babylon.js Physics API. Working together, they elevate Babylon.js physics to a whole new level. With exciting new physics capabilities and up to 20x faster performance, there's never been a better time to dive into physics in Babylon.js!",
+                "moreInfoLink": "https://aka.ms/babylon6HavokDoc",
+                "moreInfoText": "Learn more about the new Havok WASM plugin for Babylon.js",
+                "target": "_blank"
+            }
+        },        
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
                 "background": "#2a2342",
                 "img": {
                     "url": "assets/img/gui.png",
@@ -170,7 +192,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "right",
+                "alignment": "left",
                 "background": "#454545",
                 "img": {
                     "url": "assets/img/audio.png",
@@ -189,7 +211,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "left",
+                "alignment": "right",
                 "background": "#163035",
                 "img": {
                     "url": "assets/img/vr.png",
@@ -208,7 +230,7 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "right",
+                "alignment": "left",
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/forum.png",
@@ -308,12 +330,12 @@
                         }
                     },
                     {
-                        "desc": "Wazana.io",
-                        "author": "by Pichou",
-                        "link": "https://wazana.io/",
+                        "desc": "Sidus Heroes",
+                        "author": "by SidusHeroes",
+                        "link": "https://sidusheroes.com/",
                         "img": {
-                            "url": "../community/assets/img/wazanaio.jpg",
-                            "alt": "Wazana.io"
+                            "url": "/community/assets/img/sidusheroes.jpg",
+                            "alt": "Sidus Heroes"
                         }
                     },
                     {
