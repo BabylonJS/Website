@@ -35,7 +35,8 @@
                                     {
                                         "link": "https://doc.babylonjs.com/setup/support/webGL2",
                                         "text": "WebGL 2.0 /"
-                                    },                                    {
+                                    },                                   
+                                    {
                                         "link": "https://doc.babylonjs.com/setup/support/webGPU",
                                         "text": "WebGPU"
                                     },
@@ -88,6 +89,12 @@
                                         "link": "https://www.npmjs.com/package/@babylonjs/havok",
                                         "text": "Havok for the web "
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/physics/ragdolls",
+                                        "text": "Ragdoll Physics"
+                                    } 
                                 ],
                                 [
                                     {
@@ -173,6 +180,12 @@
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/controls",
                                         "text": "Accelerated 2D controls"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
+                                        "text": "WebXR Support"
+                                    }
                                 ]
                             ]
                         },
@@ -224,6 +237,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/lights/rsmgi",
+                                        "text": "Global Illumination with Reflective Shadow Maps"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "Opacity texture"
                                     }
                                 ],
@@ -261,6 +280,12 @@
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox",
                                         "text": "Skybox"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox#ground-projection",
+                                        "text": "Skybox Ground Projection"
                                     }
                                 ],
                                 [
@@ -324,7 +349,7 @@
                             ]
                         },
                         {
-                            "title": "MESHES",
+                            "title": "GEOMETRY",
                             "list": [
                                 [
                                     {
@@ -373,6 +398,24 @@
                                 [
                                     {
                                         "text": "Constructive Solid Geometries"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/nodeGeometry",
+                                        "text": "Node Geometry"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting",
+                                        "text": "Gaussian Splat Rendering"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/param/greased_line",
+                                        "text": "Greased Line"
                                     }
                                 ]
                             ]
@@ -611,7 +654,13 @@
                                         "link": "https://aka.ms/babylon6TextureDecalDoc",
                                         "text": "Texture Decals"
                                     }
-                                ]
+                                ],
+                                [
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/decals#improving-results",
+                                        "text": "Seamless Texture Decals"
+                                    }
+                                ]                                
                             ]
                         },
                         {
@@ -670,18 +719,44 @@
                             "list": [
                                 [
                                     {
+                                        "text": "Node Material Editor",
+                                        "link": "https://doc.babylonjs.com/toolsAndResources/nme"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Node Geometry Editor",
+                                        "link": "https://doc.babylonjs.com/toolsAndResources/nge"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "GUI Editor",
                                         "link": "http://gui.babylonjs.com/"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Exporters for glTF, OBJ and Babylon file formats"
+                                        "text": "Exporters for "
+                                    },
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/Exporters/glTFExporter",
+                                        "text": "glTF"
+                                    },
+                                    {
+                                        "text": ", OBJ and Babylon file formats"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "Importers for glTF, STL, OBJ and Babylon file formats"
+                                        "text": "Importers for "
+                                    },
+                                    {
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/importers/glTF",
+                                        "text": "glTF"
+                                    },
+                                    {
+                                        "text": ", STL, OBJ and Babylon file formats"
                                     }
                                 ],
                                 [
