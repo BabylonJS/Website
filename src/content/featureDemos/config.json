@@ -146,7 +146,7 @@
                     {
                         "desc": "Snowball Fight",
                         "author": "by Babylon.js",
-                        "link": "https://playground.babylonjs.com/#0IRV8X#22",
+                        "link": "https://playground.babylonjs.com/#0IRV8X#33",
                         "img": {
                             "url": "/community/assets/img/snowman.jpg",
                             "alt": "Snowball Fight"
@@ -155,7 +155,7 @@
                     {
                         "desc": "The Bells",
                         "author": "by Babylon.js",
-                        "link": "https://playground.babylonjs.com/#KR5CRQ#17",
+                        "link": "https://playground.babylonjs.com/#KR5CRQ#26",
                         "img": {
                             "url": "/community/assets/img/weWishYouAMerryChristmas.jpg",
                             "alt": "The Bells"
@@ -222,6 +222,15 @@
                         "img": {
                             "url": "/community/assets/img/winter.jpg",
                             "alt": "Snow Shader"
+                        }
+                    }, 
+                    {
+                        "desc": "Snow Men",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#LE4PBJ#10",
+                        "img": {
+                            "url": "/featureDemos/assets/img/snowMans.jpg",
+                            "alt": "Snow Men"
                         }
                     }, 
                     {
