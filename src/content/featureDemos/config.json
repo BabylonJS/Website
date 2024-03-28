@@ -225,6 +225,15 @@
                         }
                     }, 
                     {
+                        "desc": "Snow Men",
+                        "author": "by Babylon.js",
+                        "link": "https://playground.babylonjs.com/#LE4PBJ#10",
+                        "img": {
+                            "url": "/featureDemos/assets/img/snowMans.jpg",
+                            "alt": "Snow Men"
+                        }
+                    }, 
+                    {
                         "desc": "D20",
                         "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/#UUXABN#8",
