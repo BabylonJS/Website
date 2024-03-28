@@ -189,15 +189,6 @@
                         }
                     },
                     {
-                        "desc": "Music Visualizer",
-                        "author": "by Babylon.js",
-                        "link": "https://www.babylonjs-playground.com/#HA3E1B#24",
-                        "img": {
-                            "url": "/community/assets/img/musicVis.jpg",
-                            "alt": "Music Visualizer"
-                        }
-                    },
-                    {
                         "desc": "Octopus & Ball",
                         "author": "by Babylon.js",
                         "link": "https://playground.babylonjs.com/#8MAF6E",
