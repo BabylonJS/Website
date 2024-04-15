@@ -369,15 +369,6 @@
                         }
                     },
                     {
-                        "desc": "Artema Mouse",
-                        "author": "by Mario_Sanchez, brianzinn",
-                        "link": "https://artemacorp.com/builder",
-                        "img": {
-                            "url": "../community/assets/img/artema.jpg",
-                            "alt": "Artema Mouse"
-                        }
-                    },
-                    {
                         "desc": "Voxel Builder",
                         "author": "by nima",
                         "link": "https://nimadez.github.io/voxel-builder/",
