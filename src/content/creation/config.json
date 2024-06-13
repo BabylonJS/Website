@@ -1,0 +1,233 @@
+{
+    "menuTitle": "CREATION AND AUTHORING",
+    "title": "Babylon.js Creation and Authoring",
+    "metaTags": [
+        {
+        }
+    ],
+    "blocks": [
+        {
+            "templateName": "carouselBlock",
+            "delay": 2000,
+            "content": {
+                "items": [
+                    {
+                        "videoUrl": "assets/videos/vived_carousel.mp4",
+                        "demoLink": "https://vivedlearning.com/"
+                    },
+                    {
+                        "videoUrl": "assets/videos/pixcap_carousel.mp4",
+                        "demoLink": "https://pixcap.com/mockups"
+                    },
+                    {
+                        "videoUrl": "assets/videos/jigspace_carousel.mp4",
+                        "demoLink": "https://www.jig.space/"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "A 3D ENGINE FOR CREATION AND AUTHORING TOOLS ",
+                "desc": "A fully featured, open-source rendering engine, Babylon.js makes it simple to build Web based Creative Tools. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers."
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Check out the features",
+                        "link": "https://www.babylonjs.com/games/#feature",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    },
+                    {
+                        "desc": "Try Babylon.js in the playground",
+                        "link": "https://playground.babylonjs.com",
+                        "img": {
+                            "url": "../../assets/img/TryIcon.svg"
+                        }
+                    },                    {
+                        "desc": "get Babylon.js",
+                        "link": "https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers",
+                        "img": {
+                            "url": "../../assets/img/downloadIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#5a0014",
+                "img": {
+                    "url": "assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Advanced Rendering",
+                "desc": "Babylon.js comes packed with features that cater to a wide range of creative needs. From the latest PBR (Physically Based Rendering) and HDR image-based lighting support, procedural geometry to global illumination and state-of-the-art animation systems, it provides a comprehensive toolkit for developers.",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR",
+                "moreInfoText": "More on Rendering"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#3b4846",
+                "img": {
+                    "url": "assets/img/performanceSpheres.png",
+                    "alt": "Hundreds of spheres with unique materials swirling in a scene.",
+                    "width": "650px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Performance",
+                "desc": "Babylon.js is optimized for high-performance, real-time 3D rendering on the web. It's capable of handling complex scenes and graphics-intensive tasks with ease, which is essential for creative tools that require smooth and responsive interactions.",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/scene/optimize_your_scene",
+                "moreInfoText": "More on Performance"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "../native/assets/img/crossDevice.svg",
+                    "alt": "A 3D sun made with particle systems.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Cross-Platform and Backward Compatibility",
+                "desc": "With WebGL/WebGPU as its rendering foundation, Babylon.js ensures that your creative tools work seamlessly across different browsers and devices, including mobile platforms. The backward compatibility considerably reduces time to maintain your dependency up to date.",
+                "moreInfoLink": "https://babylonjs.medium.com/there-and-back-again-a-tale-of-backwards-compatibility-in-babylon-js-47ffc4f7ed6f",
+                "moreInfoText": "More on Backward Compatibility"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#28375b",
+                "img": {
+                    "url": "../games/assets/img/vr.png",
+                    "alt": "3D model of a VR controller.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "WebXR Support",
+                "desc": "For immersive experiences, Babylon.js provides full support for WebXR, allowing developers to create virtual and augmented reality experiences right within the browser. This opens up new possibilities for web-based creative tools that leverage immersive technologies.",
+                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
+                "moreInfoText": "More on WebXR"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Just the Tip of the Iceberg",
+                "desc": "We don't take it lightly when we say that Babylon.js is fully-featured.  Dive in to see how far this rabbit hole goes!"
+            }
+        },
+        {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Full List of Features",
+                        "link": "/specifications",
+                        "img": {
+                            "url": "../assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
+            "templateName": "imagesBlock",
+            "content": {
+                "title": "Creation and Authoring experiences made with Babylon.js ",
+                "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
+                "items": [
+                    {
+                        "desc": "JigSpace",
+                        "link": "https://view.jig.space/?jig=o7LLRx7d",
+                        "img": {
+                            "url": "./assets/img/jigspace.jpg",
+                            "alt": "JigSpace Jet Engine"
+                        }
+                    },
+                    {
+                        "desc": "PixCap",
+                        "link": "https://pixcap.com/mockups",
+                        "img": {
+                            "url": "./assets/img/pixcap.jpg",
+                            "alt": "Water Bottle Product Design"
+                        }
+                    },
+                    {
+                        "desc": "Vived Learning",
+                        "link": "https://vivedlearning.com/",
+                        "img": {
+                            "url": "./assets/img/vived.jpg",
+                            "alt": "Dissectible 3D Volcano Model "
+                        }
+                    },
+                    {
+                        "desc": "Intract",
+                        "link": "https://intract.com/",
+                        "img": {
+                            "url": "./assets/img/intract.jpg",
+                            "alt": "Collaborative Asset Editing"
+                        }
+                    },
+                    {
+                        "desc": "Bit By Bit",
+                        "link": "https://bitbybit.dev/",
+                        "img": {
+                            "url": "./assets/img/bitbybit.jpg",
+                            "alt": "Bit By Bit"
+                        }
+                    },
+                    {
+                        "desc": "Ctruh",
+                        "link": "https://www.ctruh.com/home",
+                        "img": {
+                            "url": "./assets/img/ctruh.jpg",
+                            "alt": "Virtual Automotive Showroom"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "downTriangle",
+            "content": {
+                "link": "../community",
+                "label": "MORE",
+                "marginBottom": "0px"
+            }
+        }
+    ]
+}

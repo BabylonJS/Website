@@ -79,6 +79,10 @@
                     "menuUrl": "/ecommerce/"
                 },
                 {
+                    "menuTitle": "CREATION AND AUTHORING",
+                    "menuUrl": "/creation/"
+                },
+                {
                     "menuTitle": "DIGITAL TWIN AND IOT",
                     "menuUrl": "/digitalTwinIot/"
                 },
@@ -98,6 +102,10 @@
         },
         {
             "root": "ecommerce",
+            "visible": false
+        },
+        {
+            "root": "creation",
             "visible": false
         },
         {
