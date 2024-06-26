@@ -81,6 +81,114 @@
                         }
                     },
                     {
+                        "desc": "Verizon - Project Midnight",
+                        "author": "MackeyK24",
+                        "link": "https://www.babylontoolkit.com/work/Verizon_ProjectMidnight.mp4",
+                        "img": {
+                            "url": "/community/assets/img/projectmidnight.jpg",
+                            "alt": "Verizon - Project Midnight"
+                        }
+                    },
+                    {
+                        "desc": "Verizon - TechWeek Lobby",
+                        "author": "MackeyK24",
+                        "link": "https://www.babylontoolkit.com/work/Verizon_TechWeekLobby.mp4",
+                        "img": {
+                            "url": "/community/assets/img/techweeklob.jpg",
+                            "alt": "Verizon - TechWeek Lobby"
+                        }
+                    },
+                    {
+                        "desc": "Verizon - Networked Ping Pong",
+                        "author": "MackeyK24",
+                        "link": "https://www.babylontoolkit.com/work/Verizon_NetworkedPingPong.mp4",
+                        "img": {
+                            "url": "/community/assets/img/networkedping.jpg",
+                            "alt": "Verizon - Networked Ping Pong"
+                        }
+                    },
+                    {
+                        "desc": "Skyswap Volley",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://sky.corentin.cc",
+                        "img": {
+                            "url": "/community/assets/img/skyswap.jpg",
+                            "alt": "Skyswap Volley"
+                        }
+                    },
+                    {
+                        "desc": "Golden Legends",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://golden-legends.github.io/golden-legends/",
+                        "img": {
+                            "url": "/community/assets/img/goldenlegends.jpg",
+                            "alt": "Golden Legends"
+                        }
+                    },
+                    {
+                        "desc": "Primal Olympics",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://doori4n.itch.io/primal-olympics",
+                        "img": {
+                            "url": "/community/assets/img/primalolympics.jpg",
+                            "alt": "Primal Olympics"
+                        }
+                    },
+                    {
+                        "desc": "Athlete Simulator-VR",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://tinyurl.com/3hbfr326",
+                        "img": {
+                            "url": "/community/assets/img/athletesim.jpg",
+                            "alt": "Athlete Simulator-VR"
+                        }
+                    },
+                    {
+                        "desc": "Olympic Odyssey",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://tit0u4n.github.io/games-on-web-team-ficsit/",
+                        "img": {
+                            "url": "/community/assets/img/olympicodys.jpg",
+                            "alt": "Olympic Odyssey"
+                        }
+                    },
+                    {
+                        "desc": "Olympixel",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://www.minuteanime.com/play/olympixel",
+                        "img": {
+                            "url": "/community/assets/img/olympixel.jpg",
+                            "alt": "Olympixel"
+                        }
+                    },
+                    {
+                        "desc": "Olympic Savoyard",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://dezarnaud-julian.github.io/",
+                        "img": {
+                            "url": "/community/assets/img/olympsavoy.jpg",
+                            "alt": "Olympic Savoyard"
+                        }
+                    },
+                    {
+                        "desc": "Flame Runner",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://louisvraie.github.io/flameRunner/",
+                        "img": {
+                            "url": "/community/assets/img/flamerun.jpg",
+                            "alt": "Flame Runner"
+                        }
+                    },
+                    {
+                        "desc": "Baguette Blast-VR",
+                        "author": "by Games on Web Challenge",
+                        "link": "https://baguette-blast.huesca.fr/",
+                        "img": {
+                            "url": "/community/assets/img/baguetteblast.jpg",
+                            "alt": "Baguette Blast-VR"
+                        }
+                    },
+                    {
                         "desc": "Some Babylon Game",
                         "author": "by Some Babylon Game",
                         "link": "https://saad-ahmed98.github.io/SomeBabylonGame/",
