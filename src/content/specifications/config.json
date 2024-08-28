@@ -330,6 +330,11 @@
                                 ],
                                 [
                                     {
+                                        "text": "High Dynamic Range textures - HDR and EXR"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "360 photos and videos",
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/360PhotoDome"
                                     }
