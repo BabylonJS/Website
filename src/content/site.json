@@ -135,6 +135,10 @@
             ]
         },
         {
+            "root": "viewer",
+            "visible": true
+        },
+        {
             "root": "learn",
             "visible": true,
             "children": [

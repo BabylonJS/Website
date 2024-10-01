@@ -1,0 +1,15 @@
+{
+    "menuTitle": "VIEWER",
+    "title": "Babylon Viewer: simplifying viewing 3D models in web and native apps",
+    "metaTags": [
+        {}
+    ],
+    "blocks": [
+        {
+            "templateName": "viewer",
+            "content": {
+                "height": "800px"
+            }
+        }
+    ]
+}
