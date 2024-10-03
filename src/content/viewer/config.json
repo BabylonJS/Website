@@ -34,6 +34,21 @@
             }
         },
         {
+            "templateName": "linkListBlock",
+            "content": {
+                "items": [
+                    {
+                        "desc": "Get the Preview",
+                        "link": "https://github.com/BabylonJS/Babylon.js/blob/master/packages/public/%40babylonjs/viewer-alpha",
+                        "img": {
+                            "url": "/native/assets/img/NotesIcon.svg"
+                        }
+                    }
+                ],
+                "marginBottom": "30px"
+            }
+        },
+        {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
