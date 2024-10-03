@@ -6,9 +6,27 @@
     ],
     "blocks": [
         {
-            "templateName": "viewer",
+            "templateName": "viewerBlock",
             "content": {
                 "height": "800px"
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "BABYLON NATIVE",
+                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
+            }
+        },
+        {
+            "templateName": "textBlock",
+            "content": {
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "BABYLON NATIVE",
+                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
             }
         }
     ]
