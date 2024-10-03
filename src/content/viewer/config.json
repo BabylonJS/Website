@@ -16,19 +16,106 @@
         {
             "templateName": "textBlock",
             "content": {
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "BABYLON NATIVE",
-                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
+                "title": "BABYLON VIEWER",
+                "desc": "While the Babylon platform can power any number of graphics scenarios, rendering a 3D model is a very common one. The Babylon Viewer is created specifically for this scenario and provides a simple, robust solution for rendering a 3D model in a web page or native app."
             }
         },
         {
             "templateName": "textBlock",
             "content": {
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "BABYLON NATIVE",
-                "desc": "The holy grail of software development is to write code once and have it work absolutely everywhere: on any device, on every platform. This is the inspiration behind Babylon Native. This exciting new addition to the Babylon platform allows anyone to take their Babylon.js code and build a native application with it, unlocking the power of native technologies."
+                "desc": "The 3D model rendered at the top of this page can be rendered on your own page with the simple code snippet below!"
+            }
+        },
+        {
+            "templateName": "codeBlock",
+            "content": {
+                "language": "html",
+                "code": "<html>\n\t<body>\n\t\t<script src='https://unpkg.com/@babylonjs/viewer@preview/dist/babylon-viewer.esm.min.js'></script>\n\t\t<babylon-viewer\n\t\t\tenvironment='https://unpkg.com/@babylonjs/viewer@preview/assets/photoStudio.env'\n\t\t\tsource='https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb'>\n\t\t</babylon-viewer>\n\t</body>\n</html>"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "/native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "title": "Simple",
+                "desc": "Easy to integrate with a few lines of code",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "/native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "title": "Tuned for Performance",
+                "desc": "WebGPU, fast",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "/native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "title": "Compact Package",
+                "desc": "Small footprint, delay loaded features, including splat",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "/native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "title": "Web or Native",
+                "desc": "Use it in the browser or in native apps",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "left",
+                "background": "#201f2d",
+                "img": {
+                    "url": "/native/assets/img/crossDevice.svg",
+                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "title": "Customizable",
+                "desc": "Default UI, can be changed, access to BJS API for unlimited customization.",
+                "moreInfoLink": "",
+                "moreInfoText": ""
             }
         }
     ]
