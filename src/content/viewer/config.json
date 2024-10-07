@@ -29,8 +29,8 @@
         {
             "templateName": "codeBlock",
             "content": {
-                "language": "html",
-                "code": "<html>\n\t<body>\n\t\t<script src='https://unpkg.com/@babylonjs/viewer@preview/dist/babylon-viewer.esm.min.js'></script>\n\t\t<babylon-viewer\n\t\t\tenvironment='https://unpkg.com/@babylonjs/viewer@preview/assets/photoStudio.env'\n\t\t\tsource='https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb'>\n\t\t</babylon-viewer>\n\t</body>\n</html>"
+                "gistUrl": "https://gist.github.com/ryantrem/f9ee6ae5c9fa8e5802f46e6832da63f1.js",
+                "height": "260px"
             }
         },
         {
