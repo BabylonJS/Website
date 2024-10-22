@@ -60,7 +60,7 @@
                 },
                 "height": "400px",
                 "title": "Simple",
-                "desc": "Easy to integrate with a few lines of code",
+                "desc": "The Babylon Viewer make it easy to load, view, and interact with a 3D model on the Web. With only a few lines of code, gltf/glb, obj but also Gaussian Splats (ply and splat) files can be loaded onto a web experience. Lighting enviroment can easily be applied through the environment attribute.",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -68,16 +68,18 @@
         {
             "templateName": "imageAndTextBlock",
             "content": {
-                "alignment": "left",
-                "background": "#201f2d",
+                "alignment": "right",
+                "background": "#5a0014",
                 "img": {
-                    "url": "/native/assets/img/crossDevice.svg",
-                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "url": "/native/assets/img/rendering.png",
+                    "alt": "Shader ball demonstrating PBR materials, clear coat, glow, depth of field, and bloom.",
                     "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Tuned for Performance",
-                "desc": "WebGPU, fast",
+                "desc": "It leverages Babylon.js engine WebGPU implementation, and its usage of render bundles, for a faster rendering of complex models. It is as simple as using the engine attribute to specify the default engine (WebGL or WebGPU).",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -86,15 +88,36 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#201f2d",
+                "background": "#565042",
                 "img": {
-                    "url": "/native/assets/img/crossDevice.svg",
-                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
+                    "url": "/native/assets/img/optimizedPackage.svg",
+                    "alt": "Illustration of cardboard box containing smaller packages.",
                     "width": "550px"
                 },
                 "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
                 "title": "Compact Package",
-                "desc": "Small footprint, delay loaded features, including splat",
+                "desc": "This new Babylon Viewer has a smaller package size (469KB). It uses dynamic imports to defer loading formats (gltf/glb, obj, splat/ply) and capabilities (gtTF extensions for example) depending on the model that is loaded. This reduces the download burden on the end user and reduces the time to get something on the screen.",
+                "moreInfoLink": "",
+                "moreInfoText": ""
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
+                "background": "#222222",
+                "img": {
+                    "url": "/native/assets/img/reactNativeLogo.png",
+                    "alt": "Logo for React Native.",
+                    "width": "550px"
+                },
+                "height": "400px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Fully Customizable",
+                "desc": "The Babylon Viewer includes a default UI for various capabilities, such as animation. This Default UI can be changed via various CSS variables, part selectors and slots. For unlimited customization, it also exposes the underlying Babylon.js components so that it can fully be adapted to specific scenario and needs.",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -111,27 +134,11 @@
                 },
                 "height": "400px",
                 "title": "Web or Native",
-                "desc": "Use it in the browser or in native apps",
-                "moreInfoLink": "",
-                "moreInfoText": ""
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#201f2d",
-                "img": {
-                    "url": "/native/assets/img/crossDevice.svg",
-                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
-                    "width": "550px"
-                },
-                "height": "400px",
-                "title": "Customizable",
-                "desc": "Default UI, can be changed, access to BJS API for unlimited customization.",
+                "desc": "It can be used in the browser or in native apps. Viewer is a lower level JavaScript class that implements the bulk of the features, and can be used in any babylonjs context (in the browser using pure HTML, in the browser using React, or even in Babylon Native).",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
         }
+
     ]
 }
