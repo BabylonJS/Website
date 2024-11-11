@@ -65,6 +65,8 @@
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="stylesheet" href="/assets/styles/mediaQueries.css" />
     <link rel="stylesheet" href="/assets/styles/pressRelease.css" />
+    <link rel="stylesheet" href="/assets/styles/viewer.css" />
+    <link rel="stylesheet" href="/assets/styles/code.css" />
     <link rel="author" href="humans.txt" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -148,6 +150,11 @@
                     <a class="BABYLON NATIVE">BABYLON NATIVE</a>       
                   </li>
 
+                  <li class="VIEWER user-select">
+                    <a class="VIEWER" href="/viewer">VIEWER</a>
+                          
+                  </li>
+
                   <li class="LEARN user-select">
                     <a class="LEARN">LEARN</a>       
                   </li>
@@ -221,6 +228,10 @@
                   </li>
   
                   <li class="user-select">
+                    <a href="/creation/" target="">CREATION AND AUTHORING</a>
+                  </li>
+  
+                  <li class="user-select">
                     <a href="/digitalTwinIot/" target="">DIGITAL TWIN AND IOT</a>
                   </li>
   
@@ -241,7 +252,7 @@
                   </li>
  
                 </ul>
-                  
+                    
                 <ul class="LEARN hidden">
                    
                   <li class="user-select">
@@ -323,6 +334,9 @@
                                         <a href="https://www.npmjs.com/package/@babylonjs/havok">Havok for the web </a>
                 </li>
                 <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/physics/ragdolls">Ragdoll Physics</a>
+                </li>
+                <li>
                     Scene picking
                                     </li>
                 <li>
@@ -361,6 +375,9 @@
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/controls">Accelerated 2D controls</a>
                 </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR">WebXR Support</a>
+                </li>
             </ul>
             <br>
             <h2>SHADERS / RENDERING</h2>
@@ -390,6 +407,9 @@
                     Specular lighting and texture
                                     </li>
                 <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/lights/rsmgi">Global Illumination with Reflective Shadow Maps</a>
+                </li>
+                <li>
                     Opacity texture
                                     </li>
                 <li>
@@ -405,13 +425,16 @@
                     Lightmap texture
                                     </li>
                 <li>
-                    Unlimited lights (points, directionals, spots, hemispherics)
+                    Diverse light types (point, directional, spot, hemispheric)
                                     </li>
                 <li>
                     Light texture projection
                                     </li>
                 <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox">Skybox</a>
+                </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox#ground-projection">Skybox Ground Projection</a>
                 </li>
                 <li>
                     Vertex color
@@ -438,6 +461,9 @@
                     Compressed (DDS, KTX, .basis) textures &amp; TGA
                                     </li>
                 <li>
+                    High Dynamic Range textures - HDR and EXR
+                                    </li>
+                <li>
                     <a href="https://doc.babylonjs.com/features/featuresDeepDive/environment/360PhotoDome">360 photos and videos</a>
                 </li>
                 <li>
@@ -448,7 +474,7 @@
                 </li>
             </ul>
             <br>
-            <h2>MESHES</h2>
+            <h2>GEOMETRY</h2>
             <ul>
                 <li>
                     Mesh cloning
@@ -477,6 +503,15 @@
                 <li>
                     Constructive Solid Geometries
                                     </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/nodeGeometry">Node Geometry</a>
+                </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting">Gaussian Splat Rendering</a>
+                </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/param/greased_line">Greased Line</a>
+                </li>
             </ul>
             <br>
         </div>
@@ -604,6 +639,9 @@
                 <li>
                     <a href="https://aka.ms/babylon6TextureDecalDoc">Texture Decals</a>
                 </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/decals#improving-results">Seamless Texture Decals</a>
+                </li>
             </ul>
             <br>
             <h2>CAMERAS</h2>
@@ -640,13 +678,23 @@
             <h2>EXPORTERS AND TOOLING</h2>
             <ul>
                 <li>
+                    <a href="https://doc.babylonjs.com/toolsAndResources/nme">Node Material Editor</a>
+                </li>
+                <li>
+                    <a href="https://doc.babylonjs.com/toolsAndResources/nge">Node Geometry Editor</a>
+                </li>
+                <li>
                     <a href="http://gui.babylonjs.com/">GUI Editor</a>
                 </li>
                 <li>
-                    Exporters for glTF, OBJ and Babylon file formats
+                    Exporters for 
+                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/Exporters/glTFExporter">glTF</a>
+                    , OBJ and Babylon file formats
                                     </li>
                 <li>
-                    Importers for glTF, STL, OBJ and Babylon file formats
+                    Importers for 
+                                        <a href="https://doc.babylonjs.com/features/featuresDeepDive/importers/glTF">glTF</a>
+                    , STL, OBJ and Babylon file formats
                                     </li>
                 <li>
                     <a href="http://www.babylonjs.com/sandbox">Support for drag&#x27;n&#x27;drop</a>
@@ -830,5 +878,6 @@
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/pullRefresh.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@7.33.0-alpha/dist/babylon-viewer.esm.min.js"></script>
   </body>
 </html>

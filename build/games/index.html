@@ -66,6 +66,8 @@
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="stylesheet" href="/assets/styles/mediaQueries.css" />
     <link rel="stylesheet" href="/assets/styles/pressRelease.css" />
+    <link rel="stylesheet" href="/assets/styles/viewer.css" />
+    <link rel="stylesheet" href="/assets/styles/code.css" />
     <link rel="author" href="humans.txt" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -149,6 +151,11 @@
                     <a class="BABYLON NATIVE">BABYLON NATIVE</a>       
                   </li>
 
+                  <li class="VIEWER user-select">
+                    <a class="VIEWER" href="/viewer">VIEWER</a>
+                          
+                  </li>
+
                   <li class="LEARN user-select">
                     <a class="LEARN">LEARN</a>       
                   </li>
@@ -222,6 +229,10 @@
                   </li>
   
                   <li class="user-select">
+                    <a href="/creation/" target="">CREATION AND AUTHORING</a>
+                  </li>
+  
+                  <li class="user-select">
                     <a href="/digitalTwinIot/" target="">DIGITAL TWIN AND IOT</a>
                   </li>
   
@@ -242,7 +253,7 @@
                   </li>
  
                 </ul>
-                  
+                    
                 <ul class="LEARN hidden">
                    
                   <li class="user-select">
@@ -449,11 +460,33 @@
         </div>
     </div>
 </section>  <section class="image-and-text-block "
+    style="background-color: DarkRed;">
+    <div class="inner-container" style="min-height:450px;padding-top:40px;padding-bottom:40px;">
+        <div class="image-block">
+            <img src="assets/img/havok_logo_reversed.svg" alt="" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Physics Plugin from the Havok Team</h2>
+            <p style="color:">
+                <script>
+                    var descText = "The Havok team brought some of their most advanced features to Babylon.js through a special new WASM plugin partnered with a complete overhaul of the Babylon.js Physics API. Working together, they elevate Babylon.js physics to a whole new level. With exciting new physics capabilities and up to 20x faster performance, there&#x27;s never been a better time to dive into physics in Babylon.js!"; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon6HavokDoc" target="_blank">Learn more about the new Havok WASM plugin for Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
     style="background-color: #2a2342;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div class="image-block">
-            <img src="assets/img/gui.png" alt="A color picker made with the Babylon.js GUI system." style="width:550px">
-        </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
                 <h2>GUI System</h2>
@@ -472,10 +505,16 @@
                 </a>
             </div>
         </div>
+        <div class="image-block">
+            <img src="assets/img/gui.png" alt="A color picker made with the Babylon.js GUI system." style="width:550px">
+        </div>
     </div>
-</section>  <section class="image-and-text-block  right "
+</section>  <section class="image-and-text-block "
     style="background-color: #454545;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/audio.png" alt="Image of a 3D boom box with an audio icon." style="width:550px">
+        </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
                 <h2>Audio</h2>
@@ -494,16 +533,10 @@
                 </a>
             </div>
         </div>
-        <div class="image-block">
-            <img src="assets/img/audio.png" alt="Image of a 3D boom box with an audio icon." style="width:550px">
-        </div>
     </div>
-</section>  <section class="image-and-text-block "
+</section>  <section class="image-and-text-block  right "
     style="background-color: #163035;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
-        <div class="image-block">
-            <img src="assets/img/vr.png" alt="3D model of a VR controller." style="width:550px">
-        </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
                 <h2>XR games</h2>
@@ -522,10 +555,16 @@
                 </a>
             </div>
         </div>
+        <div class="image-block">
+            <img src="assets/img/vr.png" alt="3D model of a VR controller." style="width:550px">
+        </div>
     </div>
-</section>  <section class="image-and-text-block  right "
+</section>  <section class="image-and-text-block "
     style="background-color: #000000;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/forum.png" alt="A screen capture of our very active forum page." style="width:550px">
+        </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
                 <h2>Active, Friendly Community</h2>
@@ -543,9 +582,6 @@
                 <a style="color:" href="https://forum.babylonjs.com" >Visit the Forum
                 </a>
             </div>
-        </div>
-        <div class="image-block">
-            <img src="assets/img/forum.png" alt="A screen capture of our very active forum page." style="width:550px">
         </div>
     </div>
 </section>  <div class="text-block">
@@ -630,11 +666,11 @@
                     </li>
                     <li class="hex">
                         <div class="hexIn">
-                            <a class="hexLink" href="https://wazana.io/" target="_blank">
-                                <img src="../community/assets/img/wazanaio.jpg" alt="Wazana.io" />
+                            <a class="hexLink" href="https://sidusheroes.com/" target="_blank">
+                                <img src="/community/assets/img/sidusheroes.jpg" alt="Sidus Heroes" />
                                 <div class="desc">
-                                    <div class="hexDesc">Wazana.io</div>
-                                    <div class="hexDesc author">by Pichou</div>
+                                    <div class="hexDesc">Sidus Heroes</div>
+                                    <div class="hexDesc author">by SidusHeroes</div>
                                 </div>
                                 <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
                                 <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
@@ -717,5 +753,6 @@
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/pullRefresh.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@7.33.0-alpha/dist/babylon-viewer.esm.min.js"></script>
   </body>
 </html>

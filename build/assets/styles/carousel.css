@@ -52,6 +52,11 @@
     padding-right: 15px;
 }
 
+.carousel-navigate.assets {
+    top: 80px;
+    bottom: unset;
+}
+
 .carousel-navigate-item {
     display: flex;
     align-items: center;
