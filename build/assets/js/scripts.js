@@ -242,7 +242,8 @@ window.onload = function () {
         // no hexGrid to add elements to
         return;
       }
-      if (isMainPage) {
+      const updateCarousel = false;
+      if (isMainPage && updateCarousel) {
         // get only the demos marked with "main": true
         const mainDemos = manifest.demos.filter((demo) => demo.main);
         var carouselContainer = document.querySelector(".carousel");
