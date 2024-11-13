@@ -12,7 +12,7 @@
     "dependencies": {
         "-": "^0.0.1",
         "fs-extra": "^7.0.1",
-        "gulp": "^4.0.2",
+        "gulp": "^5.0.0",
         "gulp-connect": "^5.7.0",
         "handlebars": "^4.1.1"
     }
