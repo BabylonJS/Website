@@ -165,6 +165,7 @@ _gulp.task('server', function () {
     _connect.server({
         root: _outputRootPath,
         port: 8080,
+        host: '0.0.0.0',
         keepalive: true,
         livereload: true
     });

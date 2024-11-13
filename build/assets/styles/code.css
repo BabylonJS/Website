@@ -1,0 +1,16 @@
+.content-container > .code-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.content-container > .code-block > .code-block-iframe {
+    border: 0;
+    margin: 0px 100px;
+    width: auto;
+    height: 300px;
+}
