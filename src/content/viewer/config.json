@@ -9,7 +9,7 @@
             "templateName": "viewerBlock",
             "content": {
                 "width": "auto",
-                "height": "80vh",
+                "height": "80dvh",
                 "paddingTop": "70px",
                 "environment": "https://cdn.jsdelivr.net/npm/@babylonjs/viewer@preview/assets/photoStudio.env",
                 "source": "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb"
