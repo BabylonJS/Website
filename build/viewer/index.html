@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="/assets/styles/mediaQueries.css" />
     <link rel="stylesheet" href="/assets/styles/pressRelease.css" />
     <link rel="stylesheet" href="/assets/styles/viewer.css" />
+    <link rel="stylesheet" href="/assets/styles/viewerAndTextBlock.css" />
     <link rel="stylesheet" href="/assets/styles/code.css" />
     <link rel="author" href="humans.txt" />
     <!-- Google tag (gtag.js) -->
@@ -278,7 +279,7 @@
     </div>
 
     <div class="content-container">
-       <div class="viewer-block" style="width:auto;height:80dvh;padding-top:70px">
+       <div class="viewer-block" style="width:auto;height:80vh;padding-top:70px">
     <babylon-viewer
         environment="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@preview/assets/photoStudio.env"
         source="https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb"
@@ -325,6 +326,24 @@
                     <img class="iconImage" src="/native/assets/img/NotesIcon.svg">
                 </div>
                 <div class="link-part-desc">Get the Preview</div>
+            </a>
+        </div>
+        <div class="link" style="margin-left:;margin-right:">
+            <a href="https://doc.babylonjs.com/packages/viewer/index" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="/native/assets/img/NotesIcon.svg">
+                </div>
+                <div class="link-part-desc">See the API</div>
+            </a>
+        </div>
+        <div class="link" style="margin-left:;margin-right:">
+            <a href="https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="/native/assets/img/NotesIcon.svg">
+                </div>
+                <div class="link-part-desc">Read the Docs</div>
             </a>
         </div>
     </div>
@@ -433,6 +452,110 @@
             </p>
         </div>
     </div>
+</section>  <div class="text-block">
+    <div class="inner-container" style="margin-left:50px;margin-right:50px">
+        <h2>Viewer Features</h2>
+        <p>The Babylon Viewer has a rich feature set to support the most common 3D model viewing scenarios. Both WebGL and WebGPU are supported, with improved performance when using WebGPU. It also supports various power optimizations, such as pausing rendering when the viewer is not visible.</p>
+    </div>
+</div>  <section class="viewer-and-text-block "
+    style="background-color: #5a0014;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="viewer-block">
+            <babylon-viewer style="width:100vw;height:100vh;max-width:550px;max-height:400px"
+                clear-color=""
+                environment-lighting="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@preview/assets/photoStudio.env"
+                source="https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/shoe_variants.glb"
+                hotspots='undefined'
+                camera-orbit=""
+                animation-speed=""
+                
+                camera-auto-orbit>
+            </babylon-viewer>
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:;margin-right:;">
+                <h2>Material Variants</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Easily switch between material variants that are included in a glTF. This is a common e-commerce scenario."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+        </div>
+    </div>
+</section>  <section class="viewer-and-text-block  right "
+    style="background-color: #565042;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>HotSpots</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Define points of interest on the model surface and smoothly transition the camera to them."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+        </div>
+        <div class="viewer-block">
+            <babylon-viewer style="width:100vw;height:100vh;max-width:550px;max-height:400px"
+                clear-color=""
+                environment-lighting="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@preview/assets/photoStudio.env"
+                source="https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/flightHelmet.glb"
+                hotspots='{"Plaque":{"type":"surface","meshIndex":7,"pointIndex":[8576,8561,8565],"barycentric":["0.538","0.007","0.455"],"cameraOrbit":["1.625","1.540","12.615"]},"Plug":{"type":"surface","meshIndex":7,"pointIndex":[8627,8624,8744],"barycentric":["0.550","0.172","0.278"],"cameraOrbit":["4.108","1.350","8.581"]}}'
+                camera-orbit=""
+                animation-speed=""
+                
+                camera-auto-orbit>
+            </babylon-viewer>
+        </div>
+    </div>
+</section>  <section class="viewer-and-text-block "
+    style="background-color: #222222;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="viewer-block">
+            <babylon-viewer style="width:100vw;height:100vh;max-width:550px;max-height:400px"
+                clear-color=""
+                environment-lighting=""
+                source="https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/solar_system.glb"
+                hotspots='{"Earth":{"type":"surface","meshIndex":4,"pointIndex":[2546,2431,2430],"barycentric":[0.305,0.361,0.334],"cameraOrbit":[0,1.436,0.275]},"Mars":{"type":"surface","meshIndex":5,"pointIndex":[1589,1591,1592],"barycentric":[0.078,0.177,0.745],"cameraOrbit":[4.905,1.474,0.534]},"Saturn":{"type":"surface","meshIndex":9,"pointIndex":[1005,1006,1007],"barycentric":[0.188,0.103,0.709],"cameraOrbit":[4.178,1.757,1.906]}}'
+                camera-orbit="auto auto 6"
+                animation-speed="0.5"
+                animation-auto-play
+                >
+                <babylon-viewer-annotation hotspot='Earth'>
+                    <div style='background-color: aliceblue;border-radius: 12px;padding: 3px 12px;'>Earth</div>
+                </babylon-viewer-annotation>
+                <babylon-viewer-annotation hotspot='Mars'>
+                    <div style='background-color: aliceblue;border-radius: 12px;padding: 3px 12px;'>Mars</div>
+                </babylon-viewer-annotation>
+                <babylon-viewer-annotation hotspot='Saturn'>
+                    <div style='background-color: aliceblue;border-radius: 12px;padding: 3px 12px;'>Saturn</div>
+                </babylon-viewer-annotation>
+            </babylon-viewer>
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:;margin-right:;">
+                <h2>Annotations</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Create screen space annotations with arbitrary html that can be used to label parts of the model."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+        </div>
+    </div>
 </section> 
     </div>
     <footer class="footer">
@@ -470,6 +593,6 @@
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/pullRefresh.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@7.37.1-alpha/dist/babylon-viewer.esm.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@7.40.2-alpha/dist/babylon-viewer.esm.min.js"></script>
   </body>
 </html>
