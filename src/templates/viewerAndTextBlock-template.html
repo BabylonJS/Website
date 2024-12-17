@@ -36,12 +36,14 @@
             {{/if}}
             <p style="color:{{color}}">
                 <script>
-                    var descText = "{{desc}}"; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
+                    {
+                        const descText = "{{desc}}"; 
+                        const replaceLT = descText.replace(/&lt;/gi, "<");
+                        const result = replaceLT.replace(/&gt;/gi, ">");
+                        let pTags = document.getElementsByTagName('p');
+                        pTags = pTags[pTags.length - 1];
+                        pTags.innerHTML = result;
+                    }
                 </script>
             </p>
             {{#if moreInfoLink}}
