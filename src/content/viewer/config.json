@@ -40,8 +40,8 @@
             "content": {
                 "items": [
                     {
-                        "desc": "Get the Preview",
-                        "link": "https://github.com/BabylonJS/Babylon.js/blob/master/packages/public/%40babylonjs/viewer-alpha",
+                        "desc": "Get the Package",
+                        "link": "https://www.npmjs.com/package/@babylonjs/viewer",
                         "img": {
                             "url": "/native/assets/img/NotesIcon.svg"
                         }
