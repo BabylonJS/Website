@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="./assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+    <script src="./wasm/LTCGenerator.js"></script>
 
     <style>
         html,
@@ -135,6 +136,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #ltcInviteText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -177,8 +184,16 @@
             <a href="#" id="iblSpecular5">L 5 R 0.55</a> |
             <a href="#" id="iblSpecular6">L 6 R 0.84</a> |
             <a href="#" id="iblSpecular64">L 6.4 R 1</a> |
+            <a href="#" id="iblSHTools">IBL SH</a> |
             <a href="#" id="save256">Low Res</a> |
-            <a href="#" id="brdfTools">BRDF Tools</a> |
+            <a href="#" id="brdfTools">BRDF</a> |
+            <a href="#" id="ltcTools">LTC</a> |
+            <p>
+                Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
+            </p>
+        </div>
+        <div class="footer" id="ltcFooter"> |
+            <a href="#" id="saveLTC">Save LTC Data</a>
             <p>
                 Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
             </p>
@@ -186,6 +201,11 @@
     <div>
     <div id="iblInvite">
         <div id="iblInviteText">
+            Drag and drop an hdr file here to start processing.
+        </div>
+    </div>
+    <div id="ltcInvite">
+        <div id="ltcInviteText">
             Drag and drop an hdr file here to start processing.
         </div>
     </div>
