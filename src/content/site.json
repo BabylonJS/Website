@@ -27,6 +27,21 @@
                     "target": "_blank"
                 },
                 {
+                    "menuTitle": "NODE GEOMETRY EDITOR",
+                    "menuUrl": "https://nge.babylonjs.com/",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "SMART FILTER EDITOR",
+                    "menuUrl": "https://sfe.babylonjs.com/",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "VIEWER CONFIGURATOR",
+                    "menuUrl": "https://viewerconfig.babylonjs.com/",
+                    "target": "_blank"
+                },
+                {
                     "menuTitle": "DOCUMENTATION",
                     "menuUrl": "https://doc.babylonjs.com/",
                     "target": "_blank"
