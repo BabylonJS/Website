@@ -11,8 +11,8 @@
                 "width": "auto",
                 "height": "80vh",
                 "paddingTop": "70px",
-                "environment": "https://cdn.jsdelivr.net/npm/@babylonjs/viewer/assets/photoStudio.env",
-                "source": "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb"
+                "environment": "auto",
+                "source": "https://assets.babylonjs.com/meshes/Demos/optimized/acrobaticPlane_variants.glb"
             }
         },
         {
@@ -177,7 +177,7 @@
                 "alignment": "left",
                 "background": "#5a0014",
                 "viewer": {
-                    "source": "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/shoe_variants.glb",
+                    "source": "https://assets.babylonjs.com/meshes/Demos/optimized/shoe_variants.glb",
                     "width": "550px",
                     "height": "400px"
                 },
@@ -194,7 +194,7 @@
                 "alignment": "right",
                 "background": "#565042",
                 "viewer": {
-                    "source": "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/flightHelmet.glb",
+                    "source": "https://assets.babylonjs.com/meshes/flightHelmet.glb",
                     "hotspots": {
                         "Plaque": {
                           "type": "surface",
@@ -253,7 +253,7 @@
                 "alignment": "left",
                 "background": "#222222",
                 "viewer": {
-                    "source": "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/solar_system.glb",
+                    "source": "https://assets.babylonjs.com/meshes/solar_system.glb",
                     "animationAutoPlay": true,
                     "animationSpeed": 0.5,
                     "cameraOrbit": "auto auto 6",
