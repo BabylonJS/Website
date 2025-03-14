@@ -271,7 +271,7 @@ window.onload = function () {
 <div class="img-holder">
  <babylon-viewer
             source="${manifest.baseUrl}/${demo.filename}"
-            environment="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/assets/photoStudio.env"
+            environment="auto"
           >
           </babylon-viewer>
         </div>
