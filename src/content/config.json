@@ -12,6 +12,10 @@
             "content": {
                 "items": [
                     {
+                        "videoUrl": "/assets/videos/areaLights2.mp4",
+                        "demoLink": "https://aka.ms/babylon8AreaLightsDoc"
+                    },
+                    {
                         "videoUrl": "/assets/videos/gaussianSplat.mp4",
                         "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting"
                     },
@@ -20,16 +24,12 @@
                         "demoLink": "https://aka.ms/babylon7Dispersion"
                     },                    
                     {
-                        "videoUrl": "/assets/videos/SSRv2.mp4",
-                        "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/SSRRenderingPipeline"
+                        "videoUrl": "/assets/videos/IBL.mp4",
+                        "demoLink": "https://aka.ms/babylon8IBLShadowsDoc"
                     },
                     {
                         "videoUrl": "/assets/videos/physics.mp4",
                         "demoLink": "https://theplayroom.babylonjs.com/"
-                    },
-                    {
-                        "videoUrl": "/assets/videos/fluidRendering.mp4",
-                        "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/particles/fluid_renderer/fluid_demos"
                     },
                     {
                         "videoUrl": "/assets/videos/webGPU.mp4",
@@ -43,8 +43,8 @@
             "content": {
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Welcome to Babylon.js 7.0",
-                "desc": "Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world, and we are excited to announce the next step forward in that journey: the release of Babylon.js 7.0. This new version brings a smorgasbord of performance improvements, rendering enhancements, and exciting new features that you will NOT want to miss."
+                "title": "Welcome to Babylon.js 8.0",
+                "desc": "Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world. Today, web graphics and rendering hit the accelerator with the release of Babylon.js 8.0. It represents a year of new features, optimizations, and performance improvements aimed at helping you create more compelling, interactive web experiences faster than ever."
                 }
         },
         {
@@ -76,13 +76,29 @@
             }
         },
         {
+            "templateName": "viewerBlock",
+            "content": {
+                "alt": "A red, personified toy plane with frowning eyes and gritted teeth flying against a blue sky.",
+                "width": "auto",
+                "height": "50vh",
+                "paddingTop": "0px",
+                "background-color": "#67A8D2FF",
+                "camera-orbit": "0.777 1.033 0.300",
+                "camera-target": "0.004 0.110 0.027",
+                "selected-animation": "0",
+                "animation-speed": "1",
+                "animation-auto-play": "true",
+                "source": "https://assets.babylonjs.com/meshes/Demos/optimized/acrobaticPlane_variants.glb"
+            }
+        },
+        {
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
                 "background": "#5f655b",
                 "img": {
-                    "url": "assets/img/nodeGeometryEditor.png",
-                    "alt": "Nodes wired together to create a 3D box",
+                    "url": "assets/img/iblShadows.png",
+                    "alt": "A model of a WWII leather flight helmet with googles and an oxygen mask displayed on a stand with shadows cast on the base and ground.",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -90,10 +106,10 @@
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Procedural Geometry (Node Geometry)",
-                "desc": "This simple to use tool lets you assemble a non-destructive geometry tree, allowing you to create anything from tiny geometric variations, to entire procedural worlds/landscapes. Procedural geometry offers the ability to create complex geometry at run/build time. This adds a tremendous layer of flexibility for creators to offer the perfect loading/performance optimization for their unique web experience!",
-                "moreInfoLink": "https://aka.ms/babylon7NgeDoc",
-                "moreInfoText": "Learn more about the Node Geometry Editor in Babylon.js",
+                "title": "IBL Shadows ",
+                "desc": "Image-Based Lighting is a computer graphics lighting technique that approximates environment lighting based on a source image. Babylon.js first introduced support for IBL over 8 years ago and it has quickly become one of the most used features of the engine. A great contribution from Adobe leveled up IBL in Babylon by adding shadows to the mix. Now both light and shadows for the scene environment can be approximated from a source image. ",
+                "moreInfoLink": "https://aka.ms/babylon8IBLShadowsDoc",
+                "moreInfoText": "Learn more about IBL Shadows in Babylon.js ",
                 "target": "_blank"
             }
         },
@@ -101,21 +117,21 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#201f2d",
+                "background": "#000000",
                 "img": {
-                    "url": "assets/img/globalIllumination.png",
-                    "alt": "",
-                    "width": "500px"
+                    "url": "assets/img/areaLights.png",
+                    "alt": "A series of rectangular light panels of various heights casting light on a cluster of spheres, some reflective and others matte, and reflecting on the floor that has a checkerboard of reflective and matte squares.",
+                    "width": "550px"
                 },
-                "height": "450px",
+                "height": "400px",
                 "paddingTop": "40px",
                 "paddingBottom": "40px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Global Illumination",
-                "desc": "With Babylon.js 7.0, we are excited to introduce support for basic Global Illumination. This highly desired and advanced feature allows Babylon.js scenes to render even more lifelike experiences by allowing light and shadows to “bounce” around environments in a way that much closer matches reality.",
-                "moreInfoLink": "https://aka.ms/babylon7GIDoc",
-                "moreInfoText": "Learn more about global illumunation in Babylon.js",
+                "title": "Area Lights ",
+                "desc": "This new addition to the lighting palette allows you to specify a 2D shape that emits light from it, much like a large diffuse light that you might find on a movie set. We can’t wait to see how you use this new light type to bring a new dimension to your scene!",
+                "moreInfoLink": "https://aka.ms/babylon8AreaLightsDoc",
+                "moreInfoText": "Learn more about Area Lights in Babylon.js",
                 "target": "_blank"
             }
         },
@@ -123,19 +139,19 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#21394b",
+                "background": "#23404e",
                 "img": {
-                    "url": "assets/img/gaussianSplat.png",
-                    "alt": "A 3D representation of a yellow and blue parrot standing on a stone floor.",
+                    "url": "assets/img/nrgeNodes.png",
+                    "alt": "A simple node graph with the default nodes in the node render graph editor wired together to create a sample render pipeline.",
                     "width": "550px"
                 },
-                "height": "500px",
+                "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Gaussian Splat Rendering",
-                "desc": "Gaussian Splatting is a new technique to capture and display volumetric data using Neural Radiance Fields, point clouds and billboards. In more simple terms, it's an advanced way of allowing people to capture and display the real world with a level of unmatched visual fidelity and performance running at 60 fps!",
-                "moreInfoLink": "https://aka.ms/babylon7GSplatDoc",
-                "moreInfoText": "Learn more about Gaussian Splat Rendering in Babylon.js",
+                "title": "Node Render Graph Alpha Release",
+                "desc": "With the Node Render Graph, you now have full control of the entire render pipeline. This means that you can fully customize and control every part of the process of how your frames are rendered on the GPU. It comes with a new Node Graph tool to customize your own render pipeline without writing complex render process code. Please note that the Node Render Graph is still in Alpha version.",
+                "moreInfoLink": "https://aka.ms/babylon8RenderGraphDoc",
+                "moreInfoText": "Learn more about Node Render Graph in Babylon.js",
                 "target": "_blank"
             }
         },   
@@ -143,21 +159,21 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#304c38",
+                "background": "#263220",
                 "img": {
-                    "url": "assets/img/ragdoll.png",
-                    "alt": "A stylized 3D charcter with a large head sprawled on the ground from falling as a ragdoll",
+                    "url": "assets/img/lightweightViewer.png",
+                    "alt": "A green, camouflaged, French WWII personified toy plane with frowning eyes and shark teeth in a lightweight 3D viewer with a simple control bar at the bottom to play animations and switch material variants.",
                     "width": "650px"
                 },
-                "height": "400px",
+                "height": "500px",
                 "paddingTop": "30px",
                 "paddingBottom": "30px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Ragdoll Physics",
-                "desc": "Babylon.js 7.0 builds on the momentum (see what we did there?) of Havok physics support in Babylon, by adding support for ragdoll animation. This allows any skeletal rigged asset to collapse and flop around with limp lifelessness at the push of a button.",
-                "moreInfoLink": "https://aka.ms/babylon7RagdollDoc",
-                "moreInfoText": "Learn more about ragdoll physics in Babylon.js",
+                "title": "All New Lightweight Viewer ",
+                "desc": "This new viewer is designed to harness the same rendering beauty and power of the full engine but comes in a smaller bundle footprint and uses dynamic imports and capabilities (audio or animation for example) depending on the model that is loaded. It can be added to any web page with just a few lines of HTML, is fully extensible and comes with a super easy-to-use configurator.",
+                "moreInfoLink": "https://aka.ms/babylon8viewerDoc",
+                "moreInfoText": "Learn more about the new Babylon.js Viewer ",
                 "target": "_blank"
             }
         }, 
@@ -165,19 +181,19 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#163035",
+                "background": "#3b3b3b",
                 "img": {
-                    "url": "assets/img/vr_transparent.png",
-                    "alt": "A VR controller with lights glowing around the tracking ring",
-                    "width": "550px"
+                    "url": "assets/img/nmeWgsl.png",
+                    "alt": "The settings panel of the Node Material Editor with a new dropdown to select between WebGL and WebGPU versions.",
+                    "width": "450px"
                 },
-                "height": "450px",
+                "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "State of Art WebXR Support",
-                "desc": "Babylon.js continues to support the full WebXR spec, making it as simple as possible to create incredibly immersive web experiences. With this release, Babylon.js 7.0 adds support for several new WebXR features including: full-screen GUI, touchable UI elements, world scale, antialiased multiviews, and the ability to use hands and controllers at the same time!",
-                "moreInfoLink": "https://doc.babylonjs.com/features/featuresDeepDive/webXR",
-                "moreInfoText": "Learn more about WebXR support in Babylon.js",
+                "title": "NME - Now With WGSL Support",
+                "desc": "Node materials are now able to render with either the popular WebGL API or the newer WebGPU API which allows node material to leverage a device's graphics processing unit.",
+                "moreInfoLink": "https://aka.ms/babylon7VPDemo",
+                "moreInfoText": "Learn more about WGSL and GLSL support in NME",
                 "target": "_blank"
             }
         },
@@ -185,19 +201,19 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#40364e",
+                "background": "#793333",
                 "img": {
-                    "url": "assets/img/appleVisionPro.png",
-                    "alt": "An Apple Vision Pro headset viewed from the side with the battery connected by wire sitting in front of it.",
+                    "url": "assets/img/audioEngineV2.png",
+                    "alt": "A series of orange buttons, with one selected in green above a digital audio levels display showing green stacked lights in several columns, with the tallest of them transitioning to yellow and red lights.",
                     "width": "550px"
                 },
-                "height": "450px",
+                "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Apple Vision Pro Support",
-                "desc": "Apple’s Vision Pro is an exciting product that provides a blending of the real and virtual worlds in fascinating new ways. We are excited to share the Babylon.js 7.0 adds full support for the Vision Pro allowing Apple fans to experience immersive worlds through the web at the push of a button.",
-                "moreInfoLink": "https://aka.ms/babylon7VPDemo",
-                "moreInfoText": "If you have an Apple Vision Pro, dive into a Babylon.js world here",
+                "title": "Overhauled Audio Engine ",
+                "desc": "Babylon.js 8.0 brings an entirely refreshed audio engine. It was designed to be powerful — taking advantage of the full suite of web-audio features, modern — class names and architecture you've come to expect, and simple-to-use — allowing anyone to leverage these features, no matter what your experience level.",
+                "moreInfoLink": "https://aka.ms/babylon8AudioEnginev2Doc",
+                "moreInfoText": "Learn more about Babylon.js Audio Engine ",
                 "target": "_blank"
             }
         },
@@ -205,19 +221,19 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "right",
-                "background": "#3A1919",
+                "background": "#372847",
                 "img": {
-                    "url": "assets/img/animationSkeleton.png",
-                    "alt": "A medieval knight character swinging a sword with an animation skeleton overlayed with the character's pose.",
-                    "width": "325px"
+                    "url": "assets/img/gaussianSplat.png",
+                    "alt": "A 3D representation of a yellow and blue parrot standing on a stone floor.",
+                    "width": "500px"
                 },
                 "height": "480px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Advanced Animation System Updates",
-                "desc": "Babylon.js 7.0 brings some exciting new features to the underlying animation engine, unlocking powerful new capabilities for real-time animations on the web. These updates add the ability to blend animation groups and mask specific portions of animations allowing creators to fine tune their experiences like never before. Interested in a forward walk cycle, blended with a sideways strafe, all with active morph target lip sync? It’s now all possible thanks to the exciting updates to the animation system.",
-                "moreInfoLink": "https://aka.ms/babylon7AnimGroupDoc",
-                "moreInfoText": "Learn more about the Animation System updates in Babylon.js",
+                "title": "Gaussian Splat Updates",
+                "desc": "Babylon.js 8.0 builds on the exciting foundation of Gaussian Splat support with some exciting new updates such as SPZ and compressed PLY formats, spherical harmonics, as well as runtime optimizations for memory footprint and CPU/GPU usage. ",
+                "moreInfoLink": "https://aka.ms/babylon8gsplatImprovementsDoc",
+                "moreInfoText": "Learn more about Gaussian Splatting in Babylon.js",
                 "target": "_blank"
             }
         },
@@ -225,102 +241,23 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
-                "background": "#2a514c",
+                "background": "#430606",
                 "img": {
-                    "url": "assets/img/dispersion_gltf.png",
-                    "alt": "A 3D translucent glass sculpture of a dragon sitting in front of a checkerboard background illustration dispersion of the pattern through the glass.",
-                    "width": "600px"
-                },
-                "height": "450px",
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "State of the Art glTF support",
-                "desc": "Every version of Babylon.js comes with updated support for the full glTF spec. This means you can always count on the Babylon platform to render the very state-of-the-art and cutting edge rendering advancements on the web. With Babylon.js 7.0, that rich tradition continues with the added support of the Dispersion and Anisotropy glTF extensions.",
-                "moreInfoLink": "https://aka.ms/babylon7Dispersion",
-                "moreInfoText": "See an example KHR_materials_dispersion in Babylon.js",
-                "target": "_blank"
-            }
-        },       
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "right",
-                "background": "#0f1217",
-                "img": {
-                    "url": "assets/img/greasedLines.png",
-                    "alt": "An image of a galaxy in the middle surrounded by stars streaking toward the viewport.",
-                    "width": "550px"
-                },
-                "height": "500px", 
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "The Greased Line",
-                "desc": "Built right into the core engine, the new Greased Line system unlocks some exciting new possibilities for web creators. This new special type of line is built using the mesh system to display lines of any specified width. The extra sprinkling of non-trademarked fantasy dust is that these lines are equipped with a special shader that allows the line to always face the camera so they can be viewed consistently no matter where the camera moves to.",
-                "moreInfoLink": "https://aka.ms/babylon7GLDoc",
-                "moreInfoText": "Learn more about the Greased Line system in Babylon.js",
-                "target": "_blank"
-            }
-        },        
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#3b362a",
-                "img": {
-                    "url": "assets/img/seamlessDecals.png",
-                    "alt": "An icon of a monitor with a speaker projecting sound waves in the center of the screen.",
-                    "width": "625px"
-                },
-                "height": "450px",
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "Seamless Texture Decals",
-                "desc": "Introduced with Babylon.js 6.0, texture decals offered a powerful new option of projecting images onto an existing texture of a 3D object in your scene. With Babylon.js 7.0, that same system is given superpowers by allowing the decals to seamlessly map across UV boundaries! That means that no matter how pretty or less-pretty your UV layout might be, decals will work perfectly on any 3D object!",
-                "moreInfoLink": "https://aka.ms/babylon7SeamTsDoc",
-                "moreInfoText": "Learn more about Seamless Texture Decals in Babylon.js",
-                "target": "_blank"
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "right",
-                "background": "#2d4b55",
-                "img": {
-                    "url": "assets/img/groundProjection.png",
-                    "alt": "A yeti character standing in a snowy field with hands outstretched",
+                    "url": "assets/img/havokController.png",
+                    "alt": "a pill-shaped mesh moving up a spiral staircase illustrating Havok physics in a simple character controller.",
                     "width": "550px"
                 },
                 "height": "450px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "Advanced Ground Projection",
-                "desc": "Imagine taking a 360 skybox/environment and then magically transforming the lower half into a “fake” ground that seems to support the 3D objects in your scene. This illusion provides a perfectly smooth transition from the ground to the sky within your scene. Sound like wizardry? Well what are you waiting for? Check it out!",
-                "moreInfoLink": "https://aka.ms/babylon7GProjDoc",
-                "moreInfoText": "Learn more about Advanced Ground Projection in Babylon.js",
-                "target": "_blank"
-            }
-        },
-        {
-            "templateName": "imageAndTextBlock",
-            "content": {
-                "alignment": "left",
-                "background": "#243D2E",
-                "img": {
-                    "url": "assets/img/mmdSupport.png",
-                    "alt": "Babylon.js logo with documentation graphic.",
-                    "width": "300px"
-                },
-                "height": "450px",
-                "marginLeft": "50px",
-                "marginRight": "50px",
-                "title": "MMD Support Community Extension",
-                "desc": "This exciting extension to Babylon.js 7.0 offers creators the ability to import 3D assets and animations from the popular 3D Creation Software: MikuMikuDance or MMD for short. In addition to loading assets and animations, it also has support for IK solvers, a morph system, synced audio playback, player controls, and much much more.",
-                "moreInfoLink": "https://aka.ms/babylon7MMDDoc",
-                "moreInfoText": "Learn more about MMD support in Babylon.js",
+                "title": "Havok Character Controller",
+                "desc": "With Babylon.js 8.0, we’ve continued our amazing partnership with the very talented team at Havok, this time bringing their fully featured character controller into Babylon.js. This brings a state-of-the-art character controller to your toolbox allowing you to start making your very own character-centered game with just a few lines of code!",
+                "moreInfoLink": "https://aka.ms/babylon8havokCCDoc",
+                "moreInfoText": "Learn more about Physics character controller in Babylon.js",
                 "target": "_blank"
             }
         },       
+        
         {
             "templateName": "textBlock",
             "content": {

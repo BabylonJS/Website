@@ -9,6 +9,69 @@
         "desc": "A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.",
         "items": [
           {
+            "desc": "IBL Shadows",
+
+            "link": "https://aka.ms/babylon8IBLShadows",
+            "img": {
+              "url": "/featureDemos/assets/img/iblShadows.jpg",
+              "alt": "WWII Leather Flight Helmet on a stand with shadows cast from environment image."
+            }
+          },
+          {
+            "desc": "Area Lights",
+
+            "link": "https://aka.ms/babylon8AreaLightsDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/areaLights.jpg",
+              "alt": "A series of rectangular light panels of various heights casting light on a cluster of spheres, some reflective and others matte, and reflecting on the floor that has a checkerboard of reflective and matte squares."
+            }
+          },
+          {
+            "desc": "Audio Engine V2",
+
+            "link": "https://aka.ms/babylon8AudioEnginev2Demo",
+            "img": {
+              "url": "/featureDemos/assets/img/audioEngineV2.jpg",
+              "alt": "A series of orange buttons, with one selected in green above a digital audio levels display showing green stacked lights in several columns, with the tallest of them transitioning to yellow and red lights."
+            }
+          },
+          {
+            "desc": "SPZ Loading",
+
+            "link": "https://aka.ms/babylon8gsplatImrovementsDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/spzGaussianSplat.jpg",
+              "alt": "A tree trunk with three racoons carved into it captured in 3D as a Gaussial Splat."
+            }
+          },
+          {
+            "desc": "Havok Character Controller",
+
+            "link": "https://aka.ms/babylon8havokCCDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/havokCharacterController.jpg",
+              "alt": "A 3D pill mesh standing on a spiral staircase in a room full of physics obstacles representing a character controller."
+            }
+          },
+          {
+            "desc": "Geometric Booleans",
+
+            "link": "https://aka.ms/babylon8booleanDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/geometricBooleans.jpg",
+              "alt": "A series of shapes in three rows. In each, there are a cube and a sphere showing a different operation - add on top, intersect in the middle, and subtract on the bottom - with the resulting mesh when combining the two shapes."
+            }
+          },
+          {
+            "desc": "Diffuse Transmission",
+
+            "link": "https://aka.ms/babylon8gltfdemo",
+            "img": {
+              "url": "/featureDemos/assets/img/diffuseTransmission.jpg",
+              "alt": "A houseplant in a clay pot with two fireflies circling the leaves. When the fireflies pass behind the leaves, a glow from their light can be seen transmitting though the diffuse color of the leaves."
+            }
+          },
+          {
             "desc": "Node Geometry",
 
             "link": "https://playground.babylonjs.com/#18WTCK",
