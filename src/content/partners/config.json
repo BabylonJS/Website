@@ -191,7 +191,10 @@
                     "link-2": "https://cdn-staging.spectrumcustomizer.com/carhartt/v3/frontend/index.html?sku=A_104315_N04_v3",
                     "image-3": "/partners/assets/img/volkswagen_logo.svg",
                     "alt-3": "Volkswagen logo",
-                    "link-3": "https://media.vw.com/releases/1801"
+                    "link-3": "https://media.vw.com/releases/1801",
+                    "image-4": "/partners/assets/img/marucci_logo.svg",
+                    "alt-4": "Marucci logo",
+                    "link-4": "https://maruccisports.com/custom-fielding-glove/"
                 }
             }
         }

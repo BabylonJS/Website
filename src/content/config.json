@@ -190,9 +190,9 @@
                 "height": "400px",
                 "marginLeft": "50px",
                 "marginRight": "50px",
-                "title": "NME - Now With WGSL Support",
-                "desc": "Node materials are now able to render with either the popular WebGL API or the newer WebGPU API which allows node material to leverage a device's graphics processing unit.",
-                "moreInfoLink": "https://aka.ms/babylon7VPDemo",
+                "title": "Native WGSL",
+                "desc": "All the core engine shaders for Babylon.js are now available in both GLSL and WGSL. This means direct support for WebGPU right out of the box with no conversion layer. The Node Material Editor is also able to render in the WebGPU shader language, in addition to WebGL.",
+                "moreInfoLink": "https://aka.ms/babylon8nmeWGSLDoc",
                 "moreInfoText": "Learn more about WGSL and GLSL support in NME",
                 "target": "_blank"
             }
@@ -349,6 +349,42 @@
                         "img": {
                             "url": "../community/assets/img/millerKnoll.jpg",
                             "alt": "MillerKnoll Chair Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Volkswagen ID. Buzz Configurator",
+                        "author": "by Wrapmate",
+                        "link": "https://wraps.wrapmate.com/",
+                        "img": {
+                            "url": "/community/assets/img/VW.jpg",
+                            "alt": "Volkswagen ID. Buzz Configurator"
+                        }
+                    },
+                    {
+                        "desc": "Stanley Customizer",
+                        "author": "by Stanley",
+                        "link": "https://www.stanley1913.com/collections/stanley-create-custom",
+                        "img": {
+                            "url": "/community/assets/img/stanleyCustomizer.jpg",
+                            "alt": "Stanley cup in a customizer window allowing for custom graphics and colors"
+                        }
+                    },
+                    {
+                        "desc": "Carhartt Customizer",
+                        "author": "by Carhartt",
+                        "link": "https://cdn-staging.spectrumcustomizer.com/carhartt/v3/frontend/index.html?sku=A_104315_N04_v3",
+                        "img": {
+                            "url": "/community/assets/img/carharttCustomizer.jpg",
+                            "alt": "Carhartt vest allowing for custom embroidery through a 3D configurator"
+                        }
+                    },
+                    {
+                        "desc": "Lowe's Deck Designer",
+                        "author": "by Lowe's",
+                        "link": "https://deckdesigner.lowes.com/ ",
+                        "img": {
+                            "url": "/community/assets/img/lowesDeckDesigner.jpg",
+                            "alt": "3D model of a deck in a customizer window"
                         }
                     }
                 ]

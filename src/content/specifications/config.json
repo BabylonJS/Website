@@ -55,8 +55,17 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon8RenderGraphDoc",
+                                        "text": "Node Render Graph "
+                                    },
+                                    {
+                                        "text": "for advanced control over every aspect of the render pipeline"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer",
-                                        "text": "Easy to use full featured viewer"
+                                        "text": "A user-friendly, feature-rich, and lightweight viewer"
                                     }
                                 ],
                                 [
@@ -92,14 +101,32 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon8havokCCDoc",
+                                        "text": "Havok Character Controller"
+                                    } 
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/physics/ragdolls",
                                         "text": "Ragdoll Physics"
                                     } 
                                 ],
                                 [
-                                    {
+                                        {
                                         "text": "Scene picking"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8gpuPickDoc",
+                                        "text": "GPU Mesh Picking"
+                                    } 
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8gpuBBoxDoc",
+                                        "text": "GPU Bounding Box"
+                                    } 
                                 ],
                                 [
                                     {
@@ -186,6 +213,12 @@
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
                                         "text": "WebXR Support"
                                     }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8webxrDSDoc",
+                                        "text": "WebXR Depth Sensing"
+                                    }
                                 ]
                             ]
                         },
@@ -194,8 +227,20 @@
                             "list": [                            
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon8WGSLDoc",
+                                        "text": "WGSL Core Engine Shaders"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/node_material",
                                         "text": "Node Material"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8nmeWGSLDoc",
+                                        "text": "WGSL Support in Node Material"
                                     }
                                 ],
                                 [
@@ -222,6 +267,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon8gltfDoc",
+                                        "text": "Diffuse Transmission"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "Diffuse lighting and texture"
                                     }
                                 ],
@@ -237,8 +288,26 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon8AreaLightsDoc",
+                                        "text": "Area Lights"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8EnvImprovementsDoc",
+                                        "text": "Image Based Lighting for PBR using HDR Textures"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/lights/rsmgi",
                                         "text": "Global Illumination with Reflective Shadow Maps"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8IBLShadowsDoc",
+                                        "text": "IBL Shadows"
                                     }
                                 ],
                                 [
@@ -269,6 +338,12 @@
                                 [
                                     {
                                         "text": "Diverse light types (point, directional, spot, hemispheric)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon8IESLightDoc",
+                                        "text": "IES Light Support"
                                     }
                                 ],
                                 [
@@ -415,6 +490,9 @@
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting",
                                         "text": "Gaussian Splat Rendering"
+                                    },
+                                    {
+                                        "text": "supporting .ply, compressed .ply, .splat, and .spz file formats"
                                     }
                                 ],
                                 [
@@ -742,11 +820,24 @@
                                 ],
                                 [
                                     {
+                                        "text": "Smart Filters Editor ",
+                                        "link": "https://aka.ms/babylon8sfeDoc"
+                                    },
+                                    {
+                                        "text": "for creating video filters, texture treatments, post-processing effects, and more"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "Exporters for "
                                     },
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/Exporters/glTFExporter",
                                         "text": "glTF"
+                                    },
+                                    {
+                                        "link": "https://aka.ms/babylon8usdzDoc",
+                                        "text": ", USDZ"
                                     },
                                     {
                                         "text": ", OBJ and Babylon file formats"
