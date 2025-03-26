@@ -294,6 +294,11 @@
        <div class="samples-carousel-block">
     <div class="carousel" data-sample="">
         <div class="img-holder">
+            <a href="https://aka.ms/babylon8AreaLightsDoc" target="_blank">
+                <video src='/assets/videos/areaLights2.mp4' autoplay loop muted></video>
+            </a>
+        </div>
+        <div class="img-holder">
             <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting" target="_blank">
                 <video src='/assets/videos/gaussianSplat.mp4' autoplay loop muted></video>
             </a>
@@ -304,18 +309,13 @@
             </a>
         </div>
         <div class="img-holder">
-            <a href="https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/SSRRenderingPipeline" target="_blank">
-                <video src='/assets/videos/SSRv2.mp4' autoplay loop muted></video>
+            <a href="https://aka.ms/babylon8IBLShadowsDoc" target="_blank">
+                <video src='/assets/videos/IBL.mp4' autoplay loop muted></video>
             </a>
         </div>
         <div class="img-holder">
             <a href="https://theplayroom.babylonjs.com/" target="_blank">
                 <video src='/assets/videos/physics.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://doc.babylonjs.com/features/featuresDeepDive/particles/fluid_renderer/fluid_demos" target="_blank">
-                <video src='/assets/videos/fluidRendering.mp4' autoplay loop muted></video>
             </a>
         </div>
         <div class="img-holder">
@@ -347,8 +347,8 @@
     </div>
 </div>  <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
-        <h2>Welcome to Babylon.js 7.0</h2>
-        <p>Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world, and we are excited to announce the next step forward in that journey: the release of Babylon.js 7.0. This new version brings a smorgasbord of performance improvements, rendering enhancements, and exciting new features that you will NOT want to miss.</p>
+        <h2>Welcome to Babylon.js 8.0</h2>
+        <p>Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world. Today, web graphics and rendering hit the accelerator with the release of Babylon.js 8.0. It represents a year of new features, optimizations, and performance improvements aimed at helping you create more compelling, interactive web experiences faster than ever.</p>
     </div>
 </div>  <section class="linkList-block" style="margin-top:;margin-bottom:30px">
     <div class="link-part">
@@ -380,15 +380,26 @@
             </a>
         </div>
     </div>
-</section>  <section class="image-and-text-block  right "
+</section>  <div class="viewer-block" style="width:auto;height:50vh;padding-top:0px;background-color:#67A8D2FF">
+    <babylon-viewer
+            alt = "A red, personified toy plane with frowning eyes and gritted teeth flying against a blue sky."
+            camera-orbit="0.777 1.033 0.300"
+            camera-target="0.004 0.110 0.027"
+            selected-animation="0"
+        animation-speed="1"
+            animation-auto-play
+        source="https://assets.babylonjs.com/meshes/Demos/optimized/acrobaticPlane_variants.glb">
+    </babylon-viewer>
+</div>
+  <section class="image-and-text-block  right "
     style="background-color: #5f655b;">
     <div class="inner-container" style="min-height:400px;padding-top:40px;padding-bottom:40px;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Procedural Geometry (Node Geometry)</h2>
+                <h2>IBL Shadows </h2>
             <p style="color:">
                 <script>
-                    var descText = "This simple to use tool lets you assemble a non-destructive geometry tree, allowing you to create anything from tiny geometric variations, to entire procedural worlds/landscapes. Procedural geometry offers the ability to create complex geometry at run/build time. This adds a tremendous layer of flexibility for creators to offer the perfect loading/performance optimization for their unique web experience!"; 
+                    var descText = "Image-Based Lighting is a computer graphics lighting technique that approximates environment lighting based on a source image. Babylon.js first introduced support for IBL over 8 years ago and it has quickly become one of the most used features of the engine. A great contribution from Adobe leveled up IBL in Babylon by adding shadows to the mix. Now both light and shadows for the scene environment can be approximated from a source image. "; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -397,26 +408,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7NgeDoc" target="_blank">Learn more about the Node Geometry Editor in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon8IBLShadowsDoc" target="_blank">Learn more about IBL Shadows in Babylon.js 
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/nodeGeometryEditor.png" alt="Nodes wired together to create a 3D box" style="width:550px">
+            <img src="assets/img/iblShadows.png" alt="A model of a WWII leather flight helmet with googles and an oxygen mask displayed on a stand with shadows cast on the base and ground." style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #201f2d;">
-    <div class="inner-container" style="min-height:450px;padding-top:40px;padding-bottom:40px;">
+    style="background-color: #000000;">
+    <div class="inner-container" style="min-height:400px;padding-top:40px;padding-bottom:40px;">
         <div class="image-block">
-            <img src="assets/img/globalIllumination.png" alt="" style="width:500px">
+            <img src="assets/img/areaLights.png" alt="A series of rectangular light panels of various heights casting light on a cluster of spheres, some reflective and others matte, and reflecting on the floor that has a checkerboard of reflective and matte squares." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Global Illumination</h2>
+                <h2>Area Lights </h2>
             <p style="color:">
                 <script>
-                    var descText = "With Babylon.js 7.0, we are excited to introduce support for basic Global Illumination. This highly desired and advanced feature allows Babylon.js scenes to render even more lifelike experiences by allowing light and shadows to “bounce” around environments in a way that much closer matches reality."; 
+                    var descText = "This new addition to the lighting palette allows you to specify a 2D shape that emits light from it, much like a large diffuse light that you might find on a movie set. We can’t wait to see how you use this new light type to bring a new dimension to your scene!"; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -425,70 +436,20 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7GIDoc" target="_blank">Learn more about global illumunation in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon8AreaLightsDoc" target="_blank">Learn more about Area Lights in Babylon.js
                 </a>
             </div>
         </div>
     </div>
 </section>  <section class="image-and-text-block  right "
-    style="background-color: #21394b;">
-    <div class="inner-container" style="min-height:500px;padding-top:;padding-bottom:;">
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Gaussian Splat Rendering</h2>
-            <p style="color:">
-                <script>
-                    var descText = "Gaussian Splatting is a new technique to capture and display volumetric data using Neural Radiance Fields, point clouds and billboards. In more simple terms, it&#x27;s an advanced way of allowing people to capture and display the real world with a level of unmatched visual fidelity and performance running at 60 fps!"; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7GSplatDoc" target="_blank">Learn more about Gaussian Splat Rendering in Babylon.js
-                </a>
-            </div>
-        </div>
-        <div class="image-block">
-            <img src="assets/img/gaussianSplat.png" alt="A 3D representation of a yellow and blue parrot standing on a stone floor." style="width:550px">
-        </div>
-    </div>
-</section>  <section class="image-and-text-block "
-    style="background-color: #304c38;">
-    <div class="inner-container" style="min-height:400px;padding-top:30px;padding-bottom:30px;">
-        <div class="image-block">
-            <img src="assets/img/ragdoll.png" alt="A stylized 3D charcter with a large head sprawled on the ground from falling as a ragdoll" style="width:650px">
-        </div>
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Ragdoll Physics</h2>
-            <p style="color:">
-                <script>
-                    var descText = "Babylon.js 7.0 builds on the momentum (see what we did there?) of Havok physics support in Babylon, by adding support for ragdoll animation. This allows any skeletal rigged asset to collapse and flop around with limp lifelessness at the push of a button."; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7RagdollDoc" target="_blank">Learn more about ragdoll physics in Babylon.js
-                </a>
-            </div>
-        </div>
-    </div>
-</section>  <section class="image-and-text-block  right "
-    style="background-color: #163035;">
+    style="background-color: #23404e;">
     <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>State of Art WebXR Support</h2>
+                <h2>Node Render Graph Alpha Release</h2>
             <p style="color:">
                 <script>
-                    var descText = "Babylon.js continues to support the full WebXR spec, making it as simple as possible to create incredibly immersive web experiences. With this release, Babylon.js 7.0 adds support for several new WebXR features including: full-screen GUI, touchable UI elements, world scale, antialiased multiviews, and the ability to use hands and controllers at the same time!"; 
+                    var descText = "With the Node Render Graph, you now have full control of the entire render pipeline. This means that you can fully customize and control every part of the process of how your frames are rendered on the GPU. It comes with a new Node Graph tool to customize your own render pipeline without writing complex render process code. Please note that the Node Render Graph is still in Alpha version."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -497,26 +458,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://doc.babylonjs.com/features/featuresDeepDive/webXR" target="_blank">Learn more about WebXR support in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon8RenderGraphDoc" target="_blank">Learn more about Node Render Graph in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/vr_transparent.png" alt="A VR controller with lights glowing around the tracking ring" style="width:550px">
+            <img src="assets/img/nrgeNodes.png" alt="A simple node graph with the default nodes in the node render graph editor wired together to create a sample render pipeline." style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #40364e;">
-    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
+    style="background-color: #263220;">
+    <div class="inner-container" style="min-height:500px;padding-top:30px;padding-bottom:30px;">
         <div class="image-block">
-            <img src="assets/img/appleVisionPro.png" alt="An Apple Vision Pro headset viewed from the side with the battery connected by wire sitting in front of it." style="width:550px">
+            <img src="assets/img/lightweightViewer.png" alt="A green, camouflaged, French WWII personified toy plane with frowning eyes and shark teeth in a lightweight 3D viewer with a simple control bar at the bottom to play animations and switch material variants." style="width:650px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Apple Vision Pro Support</h2>
+                <h2>All New Lightweight Viewer </h2>
             <p style="color:">
                 <script>
-                    var descText = "Apple’s Vision Pro is an exciting product that provides a blending of the real and virtual worlds in fascinating new ways. We are excited to share the Babylon.js 7.0 adds full support for the Vision Pro allowing Apple fans to experience immersive worlds through the web at the push of a button."; 
+                    var descText = "This new viewer is designed to harness the same rendering beauty and power of the full engine but comes in a smaller bundle footprint and uses dynamic imports and capabilities (audio or animation for example) depending on the model that is loaded. It can be added to any web page with just a few lines of HTML, is fully extensible and comes with a super easy-to-use configurator."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -525,20 +486,70 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7VPDemo" target="_blank">If you have an Apple Vision Pro, dive into a Babylon.js world here
+                <a style="color:" href="https://aka.ms/babylon8viewerDoc" target="_blank">Learn more about the new Babylon.js Viewer 
                 </a>
             </div>
         </div>
     </div>
 </section>  <section class="image-and-text-block  right "
-    style="background-color: #3A1919;">
+    style="background-color: #3b3b3b;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Native WGSL</h2>
+            <p style="color:">
+                <script>
+                    var descText = "All the core engine shaders for Babylon.js are now available in both GLSL and WGSL. This means direct support for WebGPU right out of the box with no conversion layer. The Node Material Editor is also able to render in the WebGPU shader language, in addition to WebGL."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon8nmeWGSLDoc" target="_blank">Learn more about WGSL and GLSL support in NME
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/nmeWgsl.png" alt="The settings panel of the Node Material Editor with a new dropdown to select between WebGL and WebGPU versions." style="width:450px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #793333;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/audioEngineV2.png" alt="A series of orange buttons, with one selected in green above a digital audio levels display showing green stacked lights in several columns, with the tallest of them transitioning to yellow and red lights." style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Overhauled Audio Engine </h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js 8.0 brings an entirely refreshed audio engine. It was designed to be powerful — taking advantage of the full suite of web-audio features, modern — class names and architecture you&#x27;ve come to expect, and simple-to-use — allowing anyone to leverage these features, no matter what your experience level."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon8AudioEnginev2Doc" target="_blank">Learn more about Babylon.js Audio Engine 
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #372847;">
     <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Advanced Animation System Updates</h2>
+                <h2>Gaussian Splat Updates</h2>
             <p style="color:">
                 <script>
-                    var descText = "Babylon.js 7.0 brings some exciting new features to the underlying animation engine, unlocking powerful new capabilities for real-time animations on the web. These updates add the ability to blend animation groups and mask specific portions of animations allowing creators to fine tune their experiences like never before. Interested in a forward walk cycle, blended with a sideways strafe, all with active morph target lip sync? It’s now all possible thanks to the exciting updates to the animation system."; 
+                    var descText = "Babylon.js 8.0 builds on the exciting foundation of Gaussian Splat support with some exciting new updates such as SPZ and compressed PLY formats, spherical harmonics, as well as runtime optimizations for memory footprint and CPU/GPU usage. "; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -547,26 +558,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7AnimGroupDoc" target="_blank">Learn more about the Animation System updates in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon8gsplatImprovementsDoc" target="_blank">Learn more about Gaussian Splatting in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/animationSkeleton.png" alt="A medieval knight character swinging a sword with an animation skeleton overlayed with the character&#x27;s pose." style="width:325px">
+            <img src="assets/img/gaussianSplat.png" alt="A 3D representation of a yellow and blue parrot standing on a stone floor." style="width:500px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #2a514c;">
+    style="background-color: #430606;">
     <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
         <div class="image-block">
-            <img src="assets/img/dispersion_gltf.png" alt="A 3D translucent glass sculpture of a dragon sitting in front of a checkerboard background illustration dispersion of the pattern through the glass." style="width:600px">
+            <img src="assets/img/havokController.png" alt="a pill-shaped mesh moving up a spiral staircase illustrating Havok physics in a simple character controller." style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>State of the Art glTF support</h2>
+                <h2>Havok Character Controller</h2>
             <p style="color:">
                 <script>
-                    var descText = "Every version of Babylon.js comes with updated support for the full glTF spec. This means you can always count on the Babylon platform to render the very state-of-the-art and cutting edge rendering advancements on the web. With Babylon.js 7.0, that rich tradition continues with the added support of the Dispersion and Anisotropy glTF extensions."; 
+                    var descText = "With Babylon.js 8.0, we’ve continued our amazing partnership with the very talented team at Havok, this time bringing their fully featured character controller into Babylon.js. This brings a state-of-the-art character controller to your toolbox allowing you to start making your very own character-centered game with just a few lines of code!"; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -575,107 +586,7 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7Dispersion" target="_blank">See an example KHR_materials_dispersion in Babylon.js
-                </a>
-            </div>
-        </div>
-    </div>
-</section>  <section class="image-and-text-block  right "
-    style="background-color: #0f1217;">
-    <div class="inner-container" style="min-height:500px;padding-top:;padding-bottom:;">
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>The Greased Line</h2>
-            <p style="color:">
-                <script>
-                    var descText = "Built right into the core engine, the new Greased Line system unlocks some exciting new possibilities for web creators. This new special type of line is built using the mesh system to display lines of any specified width. The extra sprinkling of non-trademarked fantasy dust is that these lines are equipped with a special shader that allows the line to always face the camera so they can be viewed consistently no matter where the camera moves to."; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7GLDoc" target="_blank">Learn more about the Greased Line system in Babylon.js
-                </a>
-            </div>
-        </div>
-        <div class="image-block">
-            <img src="assets/img/greasedLines.png" alt="An image of a galaxy in the middle surrounded by stars streaking toward the viewport." style="width:550px">
-        </div>
-    </div>
-</section>  <section class="image-and-text-block "
-    style="background-color: #3b362a;">
-    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
-        <div class="image-block">
-            <img src="assets/img/seamlessDecals.png" alt="An icon of a monitor with a speaker projecting sound waves in the center of the screen." style="width:625px">
-        </div>
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Seamless Texture Decals</h2>
-            <p style="color:">
-                <script>
-                    var descText = "Introduced with Babylon.js 6.0, texture decals offered a powerful new option of projecting images onto an existing texture of a 3D object in your scene. With Babylon.js 7.0, that same system is given superpowers by allowing the decals to seamlessly map across UV boundaries! That means that no matter how pretty or less-pretty your UV layout might be, decals will work perfectly on any 3D object!"; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7SeamTsDoc" target="_blank">Learn more about Seamless Texture Decals in Babylon.js
-                </a>
-            </div>
-        </div>
-    </div>
-</section>  <section class="image-and-text-block  right "
-    style="background-color: #2d4b55;">
-    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Advanced Ground Projection</h2>
-            <p style="color:">
-                <script>
-                    var descText = "Imagine taking a 360 skybox/environment and then magically transforming the lower half into a “fake” ground that seems to support the 3D objects in your scene. This illusion provides a perfectly smooth transition from the ground to the sky within your scene. Sound like wizardry? Well what are you waiting for? Check it out!"; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7GProjDoc" target="_blank">Learn more about Advanced Ground Projection in Babylon.js
-                </a>
-            </div>
-        </div>
-        <div class="image-block">
-            <img src="assets/img/groundProjection.png" alt="A yeti character standing in a snowy field with hands outstretched" style="width:550px">
-        </div>
-    </div>
-</section>  <section class="image-and-text-block "
-    style="background-color: #243D2E;">
-    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
-        <div class="image-block">
-            <img src="assets/img/mmdSupport.png" alt="Babylon.js logo with documentation graphic." style="width:300px">
-        </div>
-        <div class="text-block"
-            style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>MMD Support Community Extension</h2>
-            <p style="color:">
-                <script>
-                    var descText = "This exciting extension to Babylon.js 7.0 offers creators the ability to import 3D assets and animations from the popular 3D Creation Software: MikuMikuDance or MMD for short. In addition to loading assets and animations, it also has support for IK solvers, a morph system, synced audio playback, player controls, and much much more."; 
-                    var replaceLT = descText.replace(/&lt;/gi, "<");
-                    var result = replaceLT.replace(/&gt;/gi, ">");
-                    var pTags = document.getElementsByTagName('p');
-                    pTags = pTags[pTags.length - 1];
-                    pTags.innerHTML = result;
-                </script>
-            </p>
-            <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon7MMDDoc" target="_blank">Learn more about MMD support in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon8havokCCDoc" target="_blank">Learn more about Physics character controller in Babylon.js
                 </a>
             </div>
         </div>
@@ -788,6 +699,58 @@
                                 <div class="desc">
                                     <div class="hexDesc">Chair Configurator</div>
                                     <div class="hexDesc author">by MillerKnoll</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://wraps.wrapmate.com/" target="_blank">
+                                <img src="/community/assets/img/VW.jpg" alt="Volkswagen ID. Buzz Configurator" />
+                                <div class="desc">
+                                    <div class="hexDesc">Volkswagen ID. Buzz Configurator</div>
+                                    <div class="hexDesc author">by Wrapmate</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://www.stanley1913.com/collections/stanley-create-custom" target="_blank">
+                                <img src="/community/assets/img/stanleyCustomizer.jpg" alt="Stanley cup in a customizer window allowing for custom graphics and colors" />
+                                <div class="desc">
+                                    <div class="hexDesc">Stanley Customizer</div>
+                                    <div class="hexDesc author">by Stanley</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://cdn-staging.spectrumcustomizer.com/carhartt/v3/frontend/index.html?sku&#x3D;A_104315_N04_v3" target="_blank">
+                                <img src="/community/assets/img/carharttCustomizer.jpg" alt="Carhartt vest allowing for custom embroidery through a 3D configurator" />
+                                <div class="desc">
+                                    <div class="hexDesc">Carhartt Customizer</div>
+                                    <div class="hexDesc author">by Carhartt</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="https://deckdesigner.lowes.com/ " target="_blank">
+                                <img src="/community/assets/img/lowesDeckDesigner.jpg" alt="3D model of a deck in a customizer window" />
+                                <div class="desc">
+                                    <div class="hexDesc">Lowe&#x27;s Deck Designer</div>
+                                    <div class="hexDesc author">by Lowe&#x27;s</div>
                                 </div>
                                 <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
                                 <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />

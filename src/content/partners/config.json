@@ -42,7 +42,7 @@
                     "alt-1": "Microsoft logo",
                     "image-2": "/partners/assets/img/Adobe_Corporate_Horizontal_Red_HEX.svg",
                     "alt-2": "Adobe logo",
-                    "link-2": "https://blog.adobe.com/en/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature#gs.gyrllx",
+                    "link-2": "https://assets.adobe.com/id/urn:aaid:sc:US:4fa9cc4e-095e-4b40-b5ee-93faffca64c1?view=dimension",
                     "image-3": "/partners/assets/img/nike_logo.svg",
                     "alt-3": "Nike logo",
                     "link-3": "https://www.nike.com/nike-by-you",
@@ -79,7 +79,7 @@
                     "link-1": "https://carconfigurator.ferrari.com/en_EN",
                     "image-2": "/partners/assets/img/dior_logo.svg",
                     "alt-2": "Dior logo",
-                    "link-2": "https://dior.n10.app/?portal=main",
+                    "link-2": "https://www.dior.com/en_us/fashion/products/M2821OSHJ_M900",
                     "image-3": "/partners/assets/img/iwc_schaffhausen_logo.svg",
                     "alt-3": "IWC schaffhausen logo",
                     "link-3": "https://www.iwc.com/fr/en/watch-collections/pilot-watches/iw329303-big-pilots-watch-43.html",
@@ -116,7 +116,6 @@
                     "alt-2": "Verizon logo",
                     "image-3": "/partners/assets/img/siemens_logo.svg",
                     "alt-3": "Siemens logo",
-                    "link-3": "https://www.siemens-energy.com/global/en/offerings/power-transmission/showroom.html",
                     "image-4": "/partners/assets/img/nationalGeographic_logo.png",
                     "alt-4": "National Geographic logo",
                     "link-4": "https://sociable.co/technology/babylonjs-nat-geo/"
@@ -148,7 +147,7 @@
                 "logo": {
                     "image-1": "/partners/assets/img/stanley_horizontal_logo.png",
                     "alt-1": "Stanley logo",
-                    "link-1": "https://www.stanley1913.com/collections/stanley-create",
+                    "link-1": "https://www.stanley1913.com/collections/stanley-create-custom",
                     "image-2": "/partners/assets/img/zara_logo.svg",
                     "alt-2": "Zara logo",
                     "link-2": "https://www.zara.com/es/en/joma%C2%AE-running-sneakers-p12382820.html?v1=114499566&v2=1947814",
@@ -158,6 +157,44 @@
                     "image-4": "/partners/assets/img/snapon_logo.svg",
                     "alt-4": "Snap-on Logo",
                     "link-4": "https://ultimator.snaponpromotion.com/"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "image-1": "/partners/assets/img/hermanMiller_logo.svg",
+                    "alt-1": "Herman Miller logo",
+                    "link-1": "https://www.hermanmiller.com/products/product-configurators/",
+                    "image-2": "/partners/assets/img/designWithinReach_logo.svg",
+                    "alt-2": "Design Within Reach logo",
+                    "link-2": "https://roomplanner.dwr.com/",
+                    "image-3": "/partners/assets/img/vanCleefArpels_logo.svg",
+                    "alt-3": "Van Cleef and Arpels logo",
+                    "link-3": "https://www.vancleefarpels.com/us/en/collection/your-poetic-setting/configurator.html",
+                    "image-4": "/partners/assets/img/puma_logo.svg",
+                    "alt-4": "Puma Logo",
+                    "link-4": "https://puma-teamwear.fr/fr/parcours"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "image-1": "/partners/assets/img/huggingFace_logo.svg",
+                    "alt-1": "Hugging Face logo",
+                    "link-1": "https://huggingface.co/spaces/JeffreyXiang/TRELLIS",
+                    "image-2": "/partners/assets/img/carhartt_logo.png",
+                    "alt-2": "Carhartt logo",
+                    "link-2": "https://cdn-staging.spectrumcustomizer.com/carhartt/v3/frontend/index.html?sku=A_104315_N04_v3",
+                    "image-3": "/partners/assets/img/volkswagen_logo.svg",
+                    "alt-3": "Volkswagen logo",
+                    "link-3": "https://media.vw.com/releases/1801",
+                    "image-4": "/partners/assets/img/marucci_logo.svg",
+                    "alt-4": "Marucci logo",
+                    "link-4": "https://maruccisports.com/custom-fielding-glove/"
                 }
             }
         }

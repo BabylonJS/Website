@@ -12,6 +12,9 @@
                 "height": "80vh",
                 "paddingTop": "70px",
                 "environment": "auto",
+                "camera-orbit": "0.777 1.033 0.400",
+                "camera-target": "0.004 0.110 0.027",
+                "selected-animation": "0",
                 "source": "https://assets.babylonjs.com/meshes/Demos/optimized/acrobaticPlane_variants.glb"
             }
         },
@@ -77,9 +80,9 @@
                 "alignment": "left",
                 "background": "#201f2d",
                 "img": {
-                    "url": "/native/assets/img/crossDevice.svg",
-                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
-                    "width": "550px"
+                    "url": "/viewer/assets/img/simpleIcon.svg",
+                    "alt": "Illustration of three rounded cubes stacked.",
+                    "width": "400px"
                 },
                 "height": "400px",
                 "title": "Simple",
@@ -132,9 +135,9 @@
                 "alignment": "right",
                 "background": "#222222",
                 "img": {
-                    "url": "/native/assets/img/reactNativeLogo.png",
+                    "url": "/viewer/assets/img/configurationIcon.svg",
                     "alt": "Logo for React Native.",
-                    "width": "550px"
+                    "width": "375px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",

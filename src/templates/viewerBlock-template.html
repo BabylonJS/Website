@@ -1,7 +1,32 @@
-<div class="viewer-block" style="width:{{width}};height:{{height}};padding-top:{{paddingTop}}">
+<div class="viewer-block" style="width:{{width}};height:{{height}};padding-top:{{paddingTop}};background-color:{{background-color}}">
     <babylon-viewer
-        environment="{{environment}}"
-        source="{{source}}"
-        camera-auto-orbit>
+        {{#if alt}}
+            alt = "{{alt}}"
+        {{/if}}
+        {{#if environment}}
+            environment="{{environment}}"
+        {{/if}}
+        {{#if clear-color}}
+            clear-color="{{clear-color}}"
+        {{/if}}
+        {{#if camera-orbit}}
+            camera-orbit="{{camera-orbit}}"
+        {{/if}}
+        {{#if camera-target}}
+            camera-target="{{camera-target}}"
+        {{/if}}
+        {{#if camera-auto-orbit}}
+            camera-auto-orbit
+        {{/if}}
+        {{#if selected-animation}}
+            selected-animation="{{selected-animation}}"
+        {{/if}}
+        {{#if animation-speed}}
+        animation-speed="{{animation-speed}}"
+        {{/if}}
+        {{#if animation-auto-play}}
+            animation-auto-play
+        {{/if}}
+        source="{{source}}">
     </babylon-viewer>
 </div>
