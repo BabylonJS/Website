@@ -121,7 +121,7 @@
                 "items": [
                     {
                         "desc": "Full List of Features",
-                        "link": "/specifications",
+                        "link": "/specifications/",
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         }
@@ -205,7 +205,7 @@
         {
             "templateName": "downTriangle",
             "content": {
-                "link": "../community",
+                "link": "../community/",
                 "label": "MORE",
                 "marginBottom": "0px"
             }

@@ -70,7 +70,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "/native",
+                                        "link": "/native/",
                                         "text": "Native host (iOS, Android, MacOS, Win32, UWP)"
                                     }
                                 ],
@@ -676,12 +676,6 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/screenSpaceReflectionsPostProcess",
-                                        "text": "Screen space reflections"
-                                    }
-                                ],
-                                [
-                                    {
                                         "text": "Rendering layers"
                                     }
                                 ],
@@ -994,7 +988,7 @@
         {
             "templateName": "downTriangle",
             "content": {
-                "link": "../community",
+                "link": "../community/",
                 "label": "MORE"
             }
         }

@@ -5,6 +5,7 @@
     "menu": [
         {
             "root": "featureDemos",
+            "menuUrl": "/featureDemos/",
             "visible": true
         },
         {
@@ -75,11 +76,13 @@
         },
         {
             "root": "partners",
-            "visible": true
+            "visible": true,
+            "menuUrl": "/partners/"
         },
         {
             "root": "testimonials",
-            "visible": true
+            "visible": true,
+            "menuUrl": "/testimonials/"
         },
         {
             "root": "industries",
@@ -151,7 +154,8 @@
         },
         {
             "root": "viewer",
-            "visible": true
+            "visible": true,
+            "menuUrl": "/viewer/"
         },
         {
             "root": "learn",
@@ -176,7 +180,8 @@
         },
         {
             "root": "specifications",
-            "visible": true
+            "visible": true,
+            "menuUrl": "/specifications/"
         },
         {
             "menuTitle": "RELEASE NOTES",
