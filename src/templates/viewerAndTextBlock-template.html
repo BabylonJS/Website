@@ -7,7 +7,9 @@
                 clear-color="{{viewer.clearColor}}"
                 environment-lighting="{{viewer.environment}}"
                 source="{{viewer.source}}"
+                {{#if viewer.hotspots}}
                 hotspots='{{json viewer.hotspots}}'
+                {{/if}}
                 camera-orbit="{{viewer.cameraOrbit}}"
                 animation-speed="{{viewer.animationSpeed}}"
                 {{#if viewer.animationAutoPlay}}animation-auto-play{{/if}}
