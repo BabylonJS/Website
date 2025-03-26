@@ -808,6 +808,12 @@
                                 ],
                                 [
                                     {
+                                        "text": "Node Render Graph Editor",
+                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/frameGraph/"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "GUI Editor",
                                         "link": "http://gui.babylonjs.com/"
                                     }
