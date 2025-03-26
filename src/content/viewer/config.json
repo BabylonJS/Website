@@ -135,9 +135,9 @@
                 "alignment": "right",
                 "background": "#222222",
                 "img": {
-                    "url": "/native/assets/img/reactNativeLogo.png",
+                    "url": "/viewer/assets/img/configurationIcon.svg",
                     "alt": "Logo for React Native.",
-                    "width": "550px"
+                    "width": "375px"
                 },
                 "height": "400px",
                 "marginLeft": "50px",
