@@ -230,10 +230,7 @@ window.onload = function () {
 */
 
   // if the page is the main page or the featureDemos page, load the manifest
-  if (
-    location.pathname.indexOf("/featureDemos/") === 0 ||
-    location.pathname === "/"
-  ) {
+  if (location.pathname.indexOf("/featureDemos/") === 0) {
     const isMainPage = location.pathname === "/";
     // load the manifest from https://babylonjsassetslib.z01.azurefd.net/DEMOS/manifest.json
     getManifest().then((manifest) => {
@@ -368,7 +365,8 @@ window.onload = function () {
 
   async function getManifest() {
     const response = await fetch(
-      "https://babylonjsassetslib.z01.azurefd.net/DEMOS/manifest.json?" + Date.now()
+      "https://babylonjsassetslib.z01.azurefd.net/DEMOS/manifest.json?" +
+        Date.now()
     );
     const json = await response.json();
     return json;
