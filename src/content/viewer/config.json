@@ -80,9 +80,9 @@
                 "alignment": "left",
                 "background": "#201f2d",
                 "img": {
-                    "url": "/native/assets/img/crossDevice.svg",
-                    "alt": "Illustration of laptop computer, desktop computer, smart phone, and tablet.",
-                    "width": "550px"
+                    "url": "/viewer/assets/img/simpleIcon.svg",
+                    "alt": "Illustration of three rounded cubes stacked.",
+                    "width": "400px"
                 },
                 "height": "400px",
                 "title": "Simple",
