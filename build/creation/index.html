@@ -282,36 +282,63 @@
 
     <div class="content-container">
        <div class="samples-carousel-block">
-    <div class="carousel" data-sample="">
-        <div class="img-holder">
-            <a href="https://vivedlearning.com/" target="_blank">
-                <video src='assets/videos/vived_carousel.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://pixcap.com/mockups" target="_blank">
-                <video src='assets/videos/pixcap_carousel.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://www.jig.space/" target="_blank">
-                <video src='assets/videos/jigspace_carousel.mp4' autoplay loop muted></video>
-            </a>
-        </div>
+  <div class="carousel" data-sample="">
+     
+    <div class="img-holder">
+      <a href="https://vivedlearning.com/" target="_blank">
+        <video src="assets/videos/vived_carousel.mp4" autoplay loop muted></video>
+      </a>
+
     </div>
-    <div class="carousel-navigate">
-        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
-        <div class="carousel-navigate-item" data-order="0">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="1">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="2">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
+       
+    <div class="img-holder">
+      <a href="https://pixcap.com/mockups" target="_blank">
+        <video src="assets/videos/pixcap_carousel.mp4" autoplay loop muted></video>
+      </a>
+
     </div>
-</div>  <div class="text-block">
+       
+    <div class="img-holder">
+      <a href="https://www.jig.space/" target="_blank">
+        <video src="assets/videos/jigspace_carousel.mp4" autoplay loop muted></video>
+      </a>
+
+    </div>
+      
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    <div class="carousel-navigate-item" data-order="0">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="1">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="2">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>
+  <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
         <h2>A 3D ENGINE FOR CREATION AND AUTHORING TOOLS </h2>
         <p>A fully featured, open-source rendering engine, Babylon.js makes it simple to build Web based Creative Tools. Built on JavaScript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what is truly important…creating interactive 3D experiences for end-users and customers.</p>

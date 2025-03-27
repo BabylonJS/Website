@@ -215,10 +215,6 @@
     .hex:nth-child(5n+4){ /* first hexagon of even rows */
         margin-left:16.5%;  /* = width of .hex / 2  to indent even rows */
     }
-       
-    .hex:nth-last-child(2), .hex:last-child{
-        display: none;
-    }
 
     .hex .desc .hexDesc{
         font-size: 18px;
