@@ -281,30 +281,54 @@
 
     <div class="content-container">
        <div class="samples-carousel-block">
-    <div class="carousel" data-sample="">
-        <div class="img-holder">
-                <img class="img-carousel" src='/specifications/assets/img/ClearCoat.jpg'></video>
-        </div>
-        <div class="img-holder">
-                <img class="img-carousel" src='/specifications/assets/img/ControllerCarousel.jpg'></video>
-        </div>
-        <div class="img-holder">
-                <img class="img-carousel" src='/specifications/assets/img/FlightHelmetCarousel.jpg'></video>
-        </div>
+  <div class="carousel" data-sample="">
+      
+    <div class="img-holder">
+      <img class="img-carousel" src="/specifications/assets/img/ClearCoat.jpg" />
     </div>
-    <div class="carousel-navigate">
-        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
-        <div class="carousel-navigate-item" data-order="0">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="1">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="2">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
+       
+    <div class="img-holder">
+      <img class="img-carousel" src="/specifications/assets/img/ControllerCarousel.jpg" />
     </div>
-</div>  <section class="two-columns">
+       
+    <div class="img-holder">
+      <img class="img-carousel" src="/specifications/assets/img/FlightHelmetCarousel.jpg" />
+    </div>
+     
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    <div class="carousel-navigate-item" data-order="0">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="1">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="2">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>
+  <section class="two-columns">
     <h1>ENGINE SPECIFICATIONS</h1>
     <div class="columns-container">
         <div class="left-list">

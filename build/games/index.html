@@ -282,52 +282,83 @@
 
     <div class="content-container">
        <div class="samples-carousel-block">
-    <div class="carousel" data-sample="">
-        <div class="img-holder">
-            <a href="https://classic.minecraft.net" target="_blank">
-                <video src='/games/assets/videos/minecraftClassic.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://spaceinvaders.viperfish.com.au//" target="_blank">
-                <video src='/games/assets/videos/spaceInvaders.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://poki.com/en/g/temple-run-2#" target="_blank">
-                <video src='/games/assets/videos/templeRun2.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://www.bigredbox.nl//BrilliantMan/index.html" target="_blank">
-                <video src='/games/assets/videos/brilliantMan.mp4' autoplay loop muted></video>
-            </a>
-        </div>
-        <div class="img-holder">
-            <a href="https://battlechoc.com" target="_blank">
-                <video src='/games/assets/videos/battlechoc.mp4' autoplay loop muted></video>
-            </a>
-        </div>
+  <div class="carousel" data-sample="">
+     
+    <div class="img-holder">
+      <a href="https://classic.minecraft.net" target="_blank">
+        <video src="/games/assets/videos/minecraftClassic.mp4" autoplay loop muted></video>
+      </a>
+
     </div>
-    <div class="carousel-navigate">
-        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
-        <div class="carousel-navigate-item" data-order="0">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="1">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="2">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="3">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="4">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
+       
+    <div class="img-holder">
+      <a href="https://spaceinvaders.viperfish.com.au//" target="_blank">
+        <video src="/games/assets/videos/spaceInvaders.mp4" autoplay loop muted></video>
+      </a>
+
     </div>
-</div>  <div class="text-block">
+       
+    <div class="img-holder">
+      <a href="https://poki.com/en/g/temple-run-2#" target="_blank">
+        <video src="/games/assets/videos/templeRun2.mp4" autoplay loop muted></video>
+      </a>
+
+    </div>
+       
+    <div class="img-holder">
+      <a href="https://www.bigredbox.nl//BrilliantMan/index.html" target="_blank">
+        <video src="/games/assets/videos/brilliantMan.mp4" autoplay loop muted></video>
+      </a>
+
+    </div>
+       
+    <div class="img-holder">
+      <a href="https://battlechoc.com" target="_blank">
+        <video src="/games/assets/videos/battlechoc.mp4" autoplay loop muted></video>
+      </a>
+
+    </div>
+      
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    <div class="carousel-navigate-item" data-order="0">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="1">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="2">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="3">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="4">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>
+  <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
         <h2>THE GAME ENGINE MADE FOR THE WEB</h2>
         <p>A fully-featured, open-source game engine, Babylon.js was built with one goal in mind…making it as simple as possible to create powerful and beautiful games that run on the web in any browser. Built on javascript, and web standards, Babylon.js eliminates cross-platform complexity, allowing you to focus on what&#x27;s truly important…creating breathtaking experiences for gamers across the web.</p>
