@@ -137,7 +137,7 @@
           {
             "desc": "Soda Bottle",
 
-            "link": "https://playground.babylonjs.com/#P1RZV0",
+            "link": "https://playground.babylonjs.com/#P1RZV0#1870",
             "img": {
               "url": "/community/assets/img/sodaBottle.jpg",
               "alt": "Soda Bottle"
@@ -209,7 +209,7 @@
           {
             "desc": "Snowball Fight",
 
-            "link": "https://playground.babylonjs.com/#0IRV8X#33",
+            "link": "https://playground.babylonjs.com/#0IRV8X#58",
             "img": {
               "url": "/community/assets/img/snowman.jpg",
               "alt": "Snowball Fight"
@@ -227,7 +227,7 @@
           {
             "desc": "Haunted Busts",
 
-            "link": "https://playground.babylonjs.com/#GVPILZ",
+            "link": "https://playground.babylonjs.com/#GVPILZ#15",
             "img": {
               "url": "/community/assets/img/grimGrinningTextures.jpg",
               "alt": "Haunted Busts"
@@ -245,7 +245,7 @@
           {
             "desc": "Weapons",
 
-            "link": "https://www.babylonjs-playground.com/#I6V1ST",
+            "link": "https://www.babylonjs-playground.com/#I6V1ST#260",
             "img": {
               "url": "/community/assets/img/weapon.jpg",
               "alt": "Weapons"
@@ -317,7 +317,7 @@
           {
             "desc": "Music Visualizer Demo",
 
-            "link": "https://www.babylonjs-playground.com/#HA3E1B#92",
+            "link": "https://playground.babylonjs.com/#HA3E1B#113",
             "img": {
               "url": "/community/assets/img/musicVis.jpg",
               "alt": "Music Visualizer Demo"
@@ -334,8 +334,8 @@
           },
           {
             "desc": "Particle Sun",
-
-            "link": "https://www.babylonjs-playground.com/#MX2Z99#7",
+            
+            "link": "https://www.babylonjs-playground.com/#MX2Z99#153",
             "img": {
               "url": "/community/assets/img/sun.jpg",
               "alt": "Particle Sun"
