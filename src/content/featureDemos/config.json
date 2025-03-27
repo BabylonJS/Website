@@ -36,6 +36,15 @@
             }
           },
           {
+            "desc": "Global Illumination",
+
+            "link": "https://aka.ms/babylon7GIDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/globalIllumination.jpg",
+              "alt": "Global Illumination Demo"
+            }
+          },
+          {
             "desc": "SPZ Loading",
 
             "link": "https://aka.ms/babylon8gsplatImrovementsDemo",
@@ -369,12 +378,12 @@
             }
           },
           {
-            "desc": "The Matrix",
+            "desc": "Sub Emitters",
 
-            "link": "https://playground.babylonjs.com/#Y9RUL5",
+            "link": "https://playground.babylonjs.com/#Y9RUL5#191",
             "img": {
-              "url": "/community/assets/img/matrix.jpg",
-              "alt": "The Matrix"
+              "url": "/featureDemos/assets/img/subemitter.jpg",
+              "alt": "Green characters raining down the screen"
             }
           }
         ]
