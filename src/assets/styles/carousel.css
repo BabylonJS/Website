@@ -28,6 +28,10 @@
     height: 100%;
 }
 
+.carousel .img-fallback-carousel {
+    display: none;
+}
+
 .carousel .img-carousel {
     flex: 1 1;
     object-fit: cover;

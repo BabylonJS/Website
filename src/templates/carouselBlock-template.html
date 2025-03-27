@@ -1,36 +1,57 @@
 <div class="samples-carousel-block">
-    <div class="carousel" data-sample="{{delay}}">
-        {{#each items}}
-        {{#if videoUrl}}
-        <div class="img-holder">
-            {{#if demoLink}}
-            <a href="{{demoLink}}" target="_blank">
-                <video src='{{videoUrl}}' autoplay loop muted></video>
-            </a>
-            {{else}}
-            <video src='{{videoUrl}}' autoplay loop muted></video>
-            {{/if}}
-        </div>
+  <div class="carousel" data-sample="{{delay}}">
+    {{#each items}} {{#if videoUrl}}
+    <div class="img-holder">
+      {{#if demoLink}}
+      <a href="{{demoLink}}" target="_blank">
+        <video src="{{videoUrl}}" autoplay loop muted></video>
+        {{#if fallbackImage}}
+        <img class="img-fallback-carousel img-carousel" src="{{fallbackImage}}" />
         {{/if}}
-        {{#if imgUrl}}
-        <div class="img-holder">
-            {{#if demoLink}}
-                <a href="{{demoLink}}" target="_blank">
-                    <img class="img-carousel" src='{{imgUrl}}'></video>
-                </a>
-            {{else}}
-                <img class="img-carousel" src='{{imgUrl}}'></video>
-            {{/if}}
-        </div>
-        {{/if}}
-        {{/each}}
+      </a>
+      {{else}}
+      <video src="{{videoUrl}}" autoplay loop muted></video>
+      {{#if fallbackImage}}
+      <img class="img-fallback-carousel img-carousel" src="{{fallbackImage}}" />
+      {{/if}} {{/if}}
     </div>
-    <div class="carousel-navigate">
-        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
-        {{#each items}}
-        <div class="carousel-navigate-item" data-order="{{@index}}">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        {{/each}}
+    {{/if}} {{#if imgUrl}}
+    <div class="img-holder">
+      {{#if demoLink}}
+      <a href="{{demoLink}}" target="_blank">
+        <img class="img-carousel" src="{{imgUrl}}" />
+      </a>
+      {{else}}
+      <img class="img-carousel" src="{{imgUrl}}" />
+      {{/if}}
     </div>
+    {{/if}} {{/each}}
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    {{#each items}}
+    <div class="carousel-navigate-item" data-order="{{@index}}">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    {{/each}}
+  </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>

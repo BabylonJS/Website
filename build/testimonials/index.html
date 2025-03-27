@@ -282,36 +282,60 @@
 
     <div class="content-container">
        <div class="samples-carousel-block">
-    <div class="carousel" data-sample="">
-        <div class="img-holder">
-                <a href="https://www.lowes.com/l/about/virtual-room-designer" target="_blank">
-                    <img class="img-carousel" src='./assets/img/lowes_carousel.jpg'></video>
-                </a>
-        </div>
-        <div class="img-holder">
-                <a href="https://framevr.io/" target="_blank">
-                    <img class="img-carousel" src='./assets/img/frameVR_carousel.jpg'></video>
-                </a>
-        </div>
-        <div class="img-holder">
-                <a href="https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/mixed-reality-overview" target="_blank">
-                    <img class="img-carousel" src='./assets/img/powerapps_carousel.jpg'></video>
-                </a>
-        </div>
+  <div class="carousel" data-sample="">
+      
+    <div class="img-holder">
+      <a href="https://www.lowes.com/l/about/virtual-room-designer" target="_blank">
+        <img class="img-carousel" src="./assets/img/lowes_carousel.jpg" />
+      </a>
     </div>
-    <div class="carousel-navigate">
-        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
-        <div class="carousel-navigate-item" data-order="0">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="1">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
-        <div class="carousel-navigate-item" data-order="2">
-            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
-        </div>
+       
+    <div class="img-holder">
+      <a href="https://framevr.io/" target="_blank">
+        <img class="img-carousel" src="./assets/img/frameVR_carousel.jpg" />
+      </a>
     </div>
-</div>  <section class="image-and-text-block "
+       
+    <div class="img-holder">
+      <a href="https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/mixed-reality-overview" target="_blank">
+        <img class="img-carousel" src="./assets/img/powerapps_carousel.jpg" />
+      </a>
+    </div>
+     
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    <div class="carousel-navigate-item" data-order="0">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="1">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    <div class="carousel-navigate-item" data-order="2">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>
+  <section class="image-and-text-block "
     style="background-color: #be2d3b;">
     <div class="inner-container" style="min-height:500px;padding-top:;padding-bottom:;">
         <div class="image-block">

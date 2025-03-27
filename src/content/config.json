@@ -13,26 +13,32 @@
                 "items": [
                     {
                         "videoUrl": "/assets/videos/areaLights2.mp4",
+                        "fallbackImage": "/assets/videos/areaLights2.png",
                         "demoLink": "https://aka.ms/babylon8AreaLightsDoc"
                     },
                     {
                         "videoUrl": "/assets/videos/gaussianSplat.mp4",
+                        "fallbackImage": "/assets/videos/gaussianSplat.png",
                         "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting"
                     },
                     {
                         "videoUrl": "/assets/videos/gltfDispersion.mp4",
+                        "fallbackImage": "/assets/videos/gltfDispersion.png",
                         "demoLink": "https://aka.ms/babylon7Dispersion"
                     },                    
                     {
                         "videoUrl": "/assets/videos/iblShadow_demo.mp4",
+                        "fallbackImage": "/assets/videos/iblShadow_demo.png",
                         "demoLink": "https://aka.ms/babylon8IBLShadowsDoc"
                     },
                     {
                         "videoUrl": "/assets/videos/physics.mp4",
+                        "fallbackImage": "/assets/videos/physics.png",
                         "demoLink": "https://theplayroom.babylonjs.com/"
                     },
                     {
                         "videoUrl": "/assets/videos/webGPU.mp4",
+                        "fallbackImage": "/assets/videos/webGPU.png",
                         "demoLink": "https://doc.babylonjs.com/setup/support/webGPU/"
                     }
                 ]
