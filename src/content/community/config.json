@@ -9,6 +9,15 @@
                 "desc": "Babylon's open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what's possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Tuggowar",
+                        "author": "by Mise",
+                        "link": "https://store.steampowered.com/app/2870220/Tuggowar/?utm_source=bjscommunity",
+                        "img": {
+                            "url": "/community/assets/img/TuggowarSteam.png",
+                            "alt": "Tuggowar"
+                        }
+                    },
+                    {
                         "desc": "Volkswagen ID. Buzz Configurator",
                         "author": "by Wrapmate",
                         "link": "https://wraps.wrapmate.com/",
@@ -195,15 +204,6 @@
                         "img": {
                             "url": "/community/assets/img/tictactoe.jpg",
                             "alt": "Tic Tac Toe"
-                        }
-                    },
-                    {
-                        "desc": "Tuggowar",
-                        "author": "by Mise",
-                        "link": "https://tuggowar.io/",
-                        "img": {
-                            "url": "/community/assets/img/tuggowar.png",
-                            "alt": "Tuggowar"
                         }
                     },
                     {
