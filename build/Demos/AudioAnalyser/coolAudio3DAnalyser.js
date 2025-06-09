@@ -60,9 +60,14 @@ var CreateCoolAudio3DAnalyser = function (engine) {
 
     var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
 
+    BABYLON.AbstractEngine.audioEngine = new BABYLON.AudioEngine();
+
+    // Show the unmute button.
+    BABYLON.Engine.audioEngine.lock();
+
     // Streaming sound using HTML5 Audio element
     var music = new BABYLON.Sound("Music", "/demos/AudioAnalyser/cosmosis.mp3",
-        scene, null, { streaming: true, autoplay: true });
+        scene, null, { streaming: true, autoplay: true, loop: true });
 
     // Here we go !
     createRingcubes(20, 256, scene);
