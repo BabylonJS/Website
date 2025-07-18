@@ -1,0 +1,189 @@
+# Babylon.js Website
+
+> Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best
+
+## Project Overview
+
+This is the official website for Babylon.js, one of the world's leading WebGL-based graphics engines. Babylon.js is a fully-featured, open-source 3D rendering engine built on JavaScript and web standards that brings powerful, beautiful, simple, and open 3D experiences to everyone on the web.
+
+## What is Babylon.js?
+
+Babylon.js is a comprehensive 3D framework that:
+- Runs on WebGL 1.0, WebGL 2.0, and WebGPU platforms
+- Provides a complete scene graph with lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions
+- Offers scene interaction through ray casting, behaviors, and mesh picking
+- Supports physics engines including Cannon.js, Oimo.js, and Ammo.js
+- Features best-in-class physically-based rendering (PBR)
+- Includes a powerful node material editor and visual scene inspector
+- Supports multiple file formats including .babylon, glTF, STL, OBJ, and more
+- Provides cross-platform compatibility eliminating platform complexity
+
+## Key Features & Capabilities
+
+### Core Engine Features
+- **Complete Scene Graph**: Full support for lights, cameras, materials, meshes, sprites, layers, animations, audio clips, GUI elements, and actions
+- **Scene Interaction**: Ray casting, behaviors, and mesh picking for user interaction
+- **GUI System**: Comprehensive user interface system for 3D applications
+- **Animation System**: Powerful animation engine with timeline controls
+- **Physics Integration**: Support for multiple physics engines (Cannon.js, Oimo.js, Ammo.js)
+- **Audio Support**: Web Audio integration for 3D positional audio
+- **Cross-Platform**: Runs seamlessly on web browsers and natively with Babylon Native
+
+### Rendering Capabilities
+- **WebGL/WebGPU Support**: Transparent support for WebGL 1.0, WebGL 2.0, and WebGPU
+- **Physically-Based Rendering (PBR)**: Industry-standard material system
+- **Post-Processing**: Extensive post-processing pipeline with effects
+- **Shadows**: Advanced shadow mapping techniques
+- **Particles**: Both CPU and GPU particle systems
+- **Textures**: Support for dynamic, reflection, video, compressed (DDS, KTX, .basis), HDR, and procedural textures
+- **360° Content**: Support for 360 photos and videos
+
+### Development Tools
+- **Playground**: Interactive code editor at playground.babylonjs.com
+- **Sandbox**: Model viewer at sandbox.babylonjs.com
+- **Node Material Editor**: Visual shader editor at nme.babylonjs.com
+- **Scene Inspector**: Runtime debugging and scene analysis tools
+- **Babylon Viewer**: Simple component for embedding 3D models
+
+## Use Cases & Industries
+
+Babylon.js powers applications across multiple industries:
+
+### E-commerce
+- 3D product visualization and configurators
+- Interactive shopping experiences
+- AR/VR product previews
+
+### Gaming
+- Web-based 3D games
+- Casual and serious gaming applications
+- Cross-platform game development
+
+### Metaverse Applications
+- Virtual worlds and environments
+- Social 3D experiences
+- Immersive collaboration platforms
+
+### Creation & Authoring Tools
+- 3D content creation applications
+- Educational and training simulations
+- Interactive presentations
+
+### Digital Twin & IoT
+- Industrial visualization
+- Real-time data visualization
+- Monitoring and control interfaces
+
+## Technical Architecture
+
+### Website Structure
+```
+src/
+├── content/           # Website content and configuration
+├── templates/         # Handlebars templates
+├── assets/           # Static assets
+└── build/            # Build scripts
+
+build/                # Generated website output
+├── assets/          # Compiled assets
+├── css/             # Stylesheets
+├── js/              # JavaScript files
+├── Demos/           # Interactive demonstrations
+├── Scenes/          # 3D scene examples
+└── [pages]/         # Generated HTML pages
+```
+
+### Build System
+- **Gulp**: Build automation and development server
+- **Handlebars**: Template engine for HTML generation
+- **Node.js**: Server-side build processes
+- **Static Site Generation**: Compiles templates and content into static HTML
+
+### Content Management
+- JSON-based configuration for site structure and navigation
+- Modular page content organization
+- Template-driven page generation
+- Asset optimization and management
+
+## Key Specifications
+
+### Supported Platforms
+- **Web Browsers**: Chrome, Firefox, Safari, Edge with WebGL support
+- **Mobile**: iOS Safari, Android Chrome with WebGL
+- **Native**: Babylon Native for iOS, Android, macOS, Windows
+
+### File Format Support
+- **.babylon**: Native Babylon.js format
+- **glTF**: Industry-standard 3D format (1.0 and 2.0)
+- **STL**: 3D printing format
+- **OBJ**: Wavefront OBJ format
+- **Compressed Textures**: DDS, KTX, .basis formats
+- **HDR/EXR**: High dynamic range textures
+
+### Performance Features
+- **Parallel Shader Compilation**: Optimized shader loading
+- **ES6 Modules**: Modern JavaScript module support
+- **GPU Optimizations**: Hardware-accelerated rendering
+- **Level-of-Detail (LOD)**: Automatic quality scaling
+- **Frustum Culling**: Efficient scene rendering
+- **Instance Rendering**: Optimized batch rendering
+
+## Development Workflow
+
+### Local Development
+```bash
+npm install -g gulp
+npm install
+gulp run  # or npm start
+```
+- Development server runs on http://localhost:8080/
+- Handlebars templates compile to HTML
+- Live reload for development
+
+### Project Configuration
+- **package.json**: Dependencies and build scripts
+- **gulpfile.js**: Build automation tasks
+- **src/content/site.json**: Site structure and navigation
+- **src/content/config.json**: Global configuration
+
+## Community & Resources
+
+### Documentation
+- **Official Docs**: doc.babylonjs.com
+- **API Reference**: Comprehensive TypeScript definitions
+- **Tutorials**: Step-by-step learning materials
+- **Examples**: Extensive demo collection
+
+### Tools & Playground
+- **Playground**: Interactive code editor and sharing
+- **Sandbox**: Quick 3D model viewing
+- **Node Material Editor**: Visual shader creation
+- **Inspector**: Runtime debugging tools
+
+### Community
+- **Forum**: Active developer community
+- **GitHub**: Open-source development
+- **Partners**: Industry partnerships and showcases
+- **Testimonials**: User success stories
+
+## Website Features
+
+### Interactive Demonstrations
+- Live 3D examples embedded throughout the site
+- WebGL and WebGPU performance comparisons
+- Feature showcases with interactive elements
+- Model viewers with various 3D assets
+
+### Educational Content
+- Step-by-step tutorials and guides
+- API documentation with examples
+- Best practices and optimization tips
+- Community-contributed content
+
+### Showcase & Gallery
+- Partner implementations
+- Community creations
+- Industry use cases
+- Featured projects and testimonials
+
+This website serves as the central hub for the Babylon.js ecosystem, providing documentation, tools, examples, and community resources for developers building 3D web applications.
