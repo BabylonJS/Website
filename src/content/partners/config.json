@@ -80,9 +80,9 @@
                     "image-2": "/partners/assets/img/dior_logo.svg",
                     "alt-2": "Dior logo",
                     "link-2": "https://www.dior.com/en_us/fashion/products/M2821OSHJ_M900",
-                    "image-3": "/partners/assets/img/iwc_schaffhausen_logo.svg",
-                    "alt-3": "IWC schaffhausen logo",
-                    "link-3": "https://www.iwc.com/fr/en/watch-collections/pilot-watches/iw329303-big-pilots-watch-43.html",
+                    "image-3": "/partners/assets/img/accenture.png",
+                    "alt-3": "accenture logo",
+                    "link-3": "https://scalabletoolkit.accenture.com/",
                     "image-4": "/partners/assets/img/millerknoll_logo.svg",
                     "alt-4": "MillerKnoll logo",
                     "link-4": "https://www.prnewswire.com/news-releases/configure-the-iconic-aeron-chair-in-3d-millerknoll-selects-3d-cloud-by-marxent-for-scalable-3d-product-configuration-301608528.html"
@@ -195,6 +195,25 @@
                     "image-4": "/partners/assets/img/marucci_logo.svg",
                     "alt-4": "Marucci logo",
                     "link-4": "https://maruccisports.com/custom-fielding-glove/"
+                }
+            }
+        },
+        {
+            "templateName": "partnerLogo",
+            "content": {
+                "logo": {
+                    "image-1": "/partners/assets/img/Funko.png",
+                    "alt-1": "Funko logo",
+                    "link-1": "https://funko.com/build-your-custom-pop",
+                    "image-2": "/partners/assets/img/Lululemon.png",
+                    "alt-2": "Lululemon logo",
+                    "link-2": "https://customize.lululemon.com/",
+                    "image-3": "/partners/assets/img/iwc_schaffhausen_logo.svg",
+                    "alt-3": "IWC schaffhausen logo",
+                    "link-3": "https://www.iwc.com/fr/en/watch-collections/pilot-watches/iw329303-big-pilots-watch-43.html",
+                    "image-4": "/partners/assets/img/John-Lewis.png",
+                    "alt-4": "John Lewis logo",
+                    "link-4": "https://jlp-roomplanner.3dcloud.io/"
                 }
             }
         }
