@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
-    <script src="./wasm/LTCGenerator.js"></script>
+    <script src="wasm/LTCGenerator.js"></script>
 
     <style>
         html,
@@ -142,6 +142,21 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        
+        #areaLightEmissionInvite {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #areaLightEmissionInviteText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -188,12 +203,20 @@
             <a href="#" id="save256">Low Res</a> |
             <a href="#" id="brdfTools">BRDF</a> |
             <a href="#" id="ltcTools">LTC</a> |
+            <a href="#" id="areaLightEmissionTools">Area Light Emission</a> |
             <p>
                 Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
             </p>
         </div>
         <div class="footer" id="ltcFooter"> |
             <a href="#" id="saveLTC">Save LTC Data</a>
+            <p>
+                Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
+            </p>
+        </div>
+        <div class="footer" id="areaLightEmissionFooter"> |
+            <a href="#" id="renderAreaLightEmission">Render</a> |
+            <a href="#" id="saveAreaLightEmission">Save</a>
             <p>
                 Find the sources of the project <a href="https://github.com/sebavan/BabylonjsTextureTools">Github</a>.
             </p>
@@ -207,6 +230,11 @@
     <div id="ltcInvite">
         <div id="ltcInviteText">
             Drag and drop an hdr file here to start processing.
+        </div>
+    </div>
+    <div id="areaLightEmissionInvite">
+        <div id="areaLightEmissionInviteText">
+            Drag and drop a PNG texture that you wish to use for emission in RectAreaLight.
         </div>
     </div>
 
