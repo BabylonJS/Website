@@ -376,8 +376,8 @@
 </script>
   <div class="text-block">
     <div class="inner-container" style="margin-left:50px;margin-right:50px">
-        <h2>Welcome to Babylon.js 8.0</h2>
-        <p>Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world. Today, web graphics and rendering hit the accelerator with the release of Babylon.js 8.0. It represents a year of new features, optimizations, and performance improvements aimed at helping you create more compelling, interactive web experiences faster than ever.</p>
+        <h2>Welcome to Babylon.js 9.0</h2>
+        <p>Our mission is to build one of the most powerful, beautiful, simple, and open web rendering engines in the world. Today, web graphics and rendering hit the accelerator with the release of Babylon.js 9.0. It represents a year of new features, optimizations, and performance improvements aimed at helping you create more compelling, interactive web experiences faster than ever.</p>
     </div>
 </div>  <section class="linkList-block" style="margin-top:;margin-bottom:30px">
     <div class="link-part">
@@ -421,14 +421,14 @@
     </babylon-viewer>
 </div>
   <section class="image-and-text-block  right "
-    style="background-color: #5f655b;">
-    <div class="inner-container" style="min-height:400px;padding-top:40px;padding-bottom:40px;">
+    style="background-color: #1c1306;">
+    <div class="inner-container" style="min-height:450px;padding-top:40px;padding-bottom:40px;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>IBL Shadows </h2>
+                <h2>Clustered Lighting</h2>
             <p style="color:">
                 <script>
-                    var descText = "Image-Based Lighting is a computer graphics lighting technique that approximates environment lighting based on a source image. Babylon.js first introduced support for IBL over 8 years ago and it has quickly become one of the most used features of the engine. A great contribution from Adobe leveled up IBL in Babylon by adding shadows to the mix. Now both light and shadows for the scene environment can be approximated from a source image. "; 
+                    var descText = "When a scene has a lot of lights, per-pixel lighting calculations can get incredibly slow. Babylon.js 9.0 introduces a powerful new Clustered Lighting system that dramatically speeds up lighting calculations by intelligently grouping lights into screen-space tiles and depth slices. At render time, each pixel only calculates lighting from the lights that actually affect it. The result? Scenes with hundreds or even thousands of lights running at buttery smooth frame rates!"; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -437,26 +437,326 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8IBLShadowsDoc" target="_blank">Learn more about IBL Shadows in Babylon.js 
+                <a style="color:" href="https://aka.ms/babylon9CLDoc" target="_blank">Learn more about Clustered Lighting in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/iblShadows.png" alt="A model of a WWII leather flight helmet with googles and an oxygen mask displayed on a stand with shadows cast on the base and ground." style="width:550px">
+            <img src="assets/img/clusteredLighting.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #191b1d;">
+    <div class="inner-container" style="min-height:430px;padding-top:40px;padding-bottom:40px;">
+        <div class="image-block">
+            <img src="assets/img/texturedAreaLights.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Textured Area Lights</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Building on the Area Lights introduced in Babylon.js 8.0, area lights in Babylon.js 9.0 now support emission textures! This means you can use any image as a light source for your rectangular area light, enabling effects like stained glass projections, LED panel displays, or cinematic lighting setups, all with physically accurate light emission. An offline texture processing tool is available for production workflows, and a runtime processing option is provided for quick prototyping."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9TALDoc" target="_blank">Learn more about Textured Area Lights in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #000000;">
+    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Node Particle Editor</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Introducing the Node Particle Editor (NPE), a brand-new visual tool that lets you create complex particle systems using a powerful, non-destructive node graph. If you&#x27;re familiar with Babylon&#x27;s Node Material Editor, you&#x27;ll feel right at home! The NPE gives you complete control over every aspect of your particle systems from emission shapes and sprite sheets to update behaviors and sub-emitters, all through an intuitive drag-and-connect interface."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9NPEDoc" target="_blank">Learn more about Node Particle Editor in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/nodeParticleEditor.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #310d4f;">
+    <div class="inner-container" style="min-height:480px;padding-top:40px;padding-bottom:40px;">
+        <div class="image-block">
+            <img src="assets/img/particleFlowMaps.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Particle Flow Maps and Attractors</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js 9.0 introduces Flow Maps, a screen-aligned texture that controls the direction and intensity of forces applied to particles based on their position on the screen. Each pixel in the flow map encodes a 3D direction vector and strength, giving you fine-grained, artistic control over particle movement. Babylon.js 9.0 adds gravity attractors to the particle system toolkit. Attractors can be repositioned and adjusted in real time, making it easy to create dynamic, interactive particle effects like swirling vortexes, magnetic fields, or explosion shockwaves."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9PartFMDoc" target="_blank">Learn more about Particle Flow Maps in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #1f1f1f;">
+    <div class="inner-container" style="min-height:430px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Volumetric Lighting</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Realistic light shafts streaming through fog, dust, or haze can transform a scene from flat to cinematic. Babylon.js 9.0 makes this easier than ever with a powerful new Volumetric Lighting system. The result is stunningly realistic light scattering with configurable extinction and phase parameters that give you artistic control over how light interacts with the atmosphere. The system supports both directional and spot light sources, and takes full advantage of WebGPU compute shaders for optimal performance."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9vlDoc" target="_blank">Learn more about Volumetric Lighting in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/volumetricLighting.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #7e7041;">
+    <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/frameGraph.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Frame Graph</h2>
+            <p style="color:">
+                <script>
+                    var descText = "One of the most transformative features in Babylon.js 9.0 is the Frame Graph system. Introduced as an alpha feature in 8.0, the Frame Graph is now a fully realized v1 feature that gives you complete, fine-grained control over the entire rendering pipeline. You declare what resources each task needs and produces, and the system intelligently manages texture allocation, reuse, and optimization. This means substantial GPU memory savings and a level of rendering flexibility that was simply not possible before."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9FGDoc" target="_blank">Learn more about Frame Graph in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #564a48;">
+    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Animation Retargeting</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Animation retargeting is a game-changer for anyone working with character animations. New in Babylon.js 9.0, the retargeting system allows you to take an animation created for one character and apply it to a completely different character, even if they have different skeleton structures, bone proportions, or naming conventions. This means you can share an entire library of locomotion, combat, or facial animations across many characters. An interactive Animation Retargeting Tool is also available!"; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9ARDoc" target="_blank">Learn more about Animation Retargeting in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/animationRetargeting.png" alt="Placeholder alt text" style="width:475px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #5b0711;">
+    <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/gaussianSplat.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Advanced Gaussian Splat Support</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js 9.0 takes Gaussian Splatting to the next level. This release brings a host of advanced capabilities including support for multiple file formats (.PLY, .splat, .SPZ, and Self-Organizing Gaussians .SOG/.SOGS), Triangular Splatting for opaque mesh-like rendering, shadow casting support, and the ability to combine multiple Gaussian Splat assets into a single scene with global splat sorting. You can now programmatically create, modify, and download Gaussian Splat data, and each part of a composite splat scene can be independently transformed and animated."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9GSDoc" target="_blank">Learn more about Gaussian Splatting in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #232323;">
+    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Babylon.js Editor</h2>
+            <p style="color:">
+                <script>
+                    var descText = "The Babylon.js Editor continues to evolve as a powerful desktop application for building Babylon.js experiences. Available on Windows, macOS, and Linux, the Editor provides a full scene editing environment with support for scripting, physics, asset management, and project building, all wrapped in a familiar, intuitive interface. With Babylon.js 9.0, the Editor receives updates and improvements to keep pace with the latest engine features."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9EditorDoc" target="_blank">Learn more about Babylon.js Editor
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/babylonEditor.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #4f3d40;">
+    <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/inspectorV2.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Inspector v2</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Introducing Inspector v2, a ground-up rebuild of Babylon&#x27;s beloved debugging and inspection tool. The new Inspector features a modern, extensible architecture built on a service-oriented model with full React-based UI components. It supports overlay and inline layout modes, light and dark themes, and is fully extensible through static and dynamic extensions. Developers can now add custom panes, toolbar items, property editors, and debug views, all through a clean, well-documented API."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9iv2Doc" target="_blank">Learn more about Inspector v2 in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #302b2b;">
+    <div class="inner-container" style="min-height:430px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Babylon Viewer Updates</h2>
+            <p style="color:">
+                <script>
+                    var descText = "The Babylon.js Lightweight Viewer, introduced in 8.0, continues to receive enhancements in 9.0. The Viewer makes it easy to embed stunning 3D content on any web page with just a few lines of HTML. This update brings expanded attribute support, new rendering options including SSAO and tone mapping controls, improved environment and skybox configuration, and enhanced animation and interaction controls. Whether you need a quick product showcase or a fully interactive 3D embed, the Viewer has you covered."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9VDoc" target="_blank">Learn more about Babylon.js Viewer
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/viewerUpdates.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #33404e;">
+    <div class="inner-container" style="min-height:500px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/playgroundUpdates.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Playground Updates</h2>
+            <p style="color:">
+                <script>
+                    var descText = "The Babylon.js Playground, the beloved online sandbox for experimenting with Babylon.js, receives quality-of-life updates in 9.0. With features like CTRL+Space code templates for quickly inserting common code patterns, the ability to host your own snippet server for private and authenticated content, and improved support for external asset loading, the Playground continues to be the fastest way to prototype, share, and learn Babylon.js."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9PGDoc" target="_blank">Learn more about Playground Updates in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #3a1a1a;">
+    <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Large World Rendering</h2>
+            <p style="color:">
+                <script>
+                    var descText = "When working with very large world coordinates, 32-bit floating point numbers lose precision, causing visible jittering. Babylon.js 9.0 solves this with a comprehensive Large World Rendering / Floating Origin system. By keeping the active camera conceptually at the world origin and offsetting all geometry and shader uniforms, no matter how far you travel, the values sent to the GPU are always small and precise. The system also integrates with Havok physics through a multi-region architecture."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9LWDoc" target="_blank">Learn more about Large World Rendering in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/largeWorldRendering.png" alt="Placeholder alt text" style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
     style="background-color: #000000;">
-    <div class="inner-container" style="min-height:400px;padding-top:40px;padding-bottom:40px;">
+    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
         <div class="image-block">
-            <img src="assets/img/areaLights.png" alt="A series of rectangular light panels of various heights casting light on a cluster of spheres, some reflective and others matte, and reflecting on the floor that has a checkerboard of reflective and matte squares." style="width:550px">
+            <img src="assets/img/geospatialCamera.png" alt="Placeholder alt text" style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Area Lights </h2>
+                <h2>Geospatial Camera</h2>
             <p style="color:">
                 <script>
-                    var descText = "This new addition to the lighting palette allows you to specify a 2D shape that emits light from it, much like a large diffuse light that you might find on a movie set. We can’t wait to see how you use this new light type to bring a new dimension to your scene!"; 
+                    var descText = "Babylon.js 9.0 introduces the all-new Geospatial Camera, a purpose-built camera designed for orbiting a spherical planet. It provides map-like interactions right out of the box: drag to pan the globe, scroll to zoom toward the cursor, and right-click to tilt. It comes with configurable limits, smooth animated flights via flyToAsync, collision detection, and automatic clip plane adjustment based on altitude."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -465,20 +765,70 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8AreaLightsDoc" target="_blank">Learn more about Area Lights in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon9GSCDoc" target="_blank">Learn more about Geospatial Camera in Babylon.js
                 </a>
             </div>
         </div>
     </div>
 </section>  <section class="image-and-text-block  right "
-    style="background-color: #23404e;">
+    style="background-color: #334845;">
+    <div class="inner-container" style="min-height:460px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>3D Tiles Support</h2>
+            <p style="color:">
+                <script>
+                    var descText = "3D Tiles is an open standard created by Cesium and adopted by the Open Geospatial Consortium (OGC) for streaming massive, heterogeneous 3D geospatial datasets. Babylon.js 9.0 brings 3D Tiles support through integration with the NASA/AMMOS 3DTilesRendererJS library, which handles tile set traversal, level-of-detail selection, and tile loading. Paired with the new Geospatial Camera, this opens the door to stunning geospatial web applications."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon93DTDoc" target="_blank">Learn more about 3D Tiles in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/3dTiles.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+    </div>
+</section>  <section class="image-and-text-block "
+    style="background-color: #4565ae;">
+    <div class="inner-container" style="min-height:470px;padding-top:;padding-bottom:;">
+        <div class="image-block">
+            <img src="assets/img/physicallyBasedAtmosphere.png" alt="Placeholder alt text" style="width:550px">
+        </div>
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>Physically Based Atmosphere</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js 9.0 introduces a stunning Physically Based Atmosphere addon that provides realistic sky and aerial perspective rendering. Using physically accurate Rayleigh and Mie scattering models, along with ozone absorption and multiple scattering, the atmosphere produces breathtaking sunrises, sunsets, and day-night cycles. It integrates seamlessly with PBR materials and directional lights, and supports customizable scattering parameters to create atmospheres for any planet, from Earth to entirely alien worlds."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon9ATMDoc" target="_blank">Learn more about Physically Based Atmosphere in Babylon.js
+                </a>
+            </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #392023;">
     <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Node Render Graph Alpha Release</h2>
+                <h2>OpenPBR Support</h2>
             <p style="color:">
                 <script>
-                    var descText = "With the Node Render Graph, you now have full control of the entire render pipeline. This means that you can fully customize and control every part of the process of how your frames are rendered on the GPU. It comes with a new Node Graph tool to customize your own render pipeline without writing complex render process code. Please note that the Node Render Graph is still in Alpha version."; 
+                    var descText = "Babylon.js 9.0 begins implementation of OpenPBR, an open standard developed by Autodesk and Adobe that defines an artist-friendly, interoperable material model. OpenPBR is designed so that materials authored with it look consistent across any platform that supports the standard. Babylon.js now maps many of the OpenPBR parameter groups, including Base, Specular, Coat, Thin-film, and more, to the existing PBR material system. This is a significant step toward industry-wide material interoperability and ensures that Babylon.js stays at the forefront of rendering standards."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -487,26 +837,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8RenderGraphDoc" target="_blank">Learn more about Node Render Graph in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon9OPBRDoc" target="_blank">Learn more about OpenPBR in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/nrgeNodes.png" alt="A simple node graph with the default nodes in the node render graph editor wired together to create a sample render pipeline." style="width:550px">
+            <img src="assets/img/openPBR.png" alt="Placeholder alt text" style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #263220;">
-    <div class="inner-container" style="min-height:500px;padding-top:30px;padding-bottom:30px;">
+    style="background-color: #3e7092;">
+    <div class="inner-container" style="min-height:430px;padding-top:;padding-bottom:;">
         <div class="image-block">
-            <img src="assets/img/lightweightViewer.png" alt="A green, camouflaged, French WWII personified toy plane with frowning eyes and shark teeth in a lightweight 3D viewer with a simple control bar at the bottom to play animations and switch material variants." style="width:650px">
+            <img src="assets/img/dynamicIBLShadows.png" alt="Placeholder alt text" style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>All New Lightweight Viewer </h2>
+                <h2>Dynamic IBL Shadows</h2>
             <p style="color:">
                 <script>
-                    var descText = "This new viewer is designed to harness the same rendering beauty and power of the full engine but comes in a smaller bundle footprint and uses dynamic imports and capabilities (audio or animation for example) depending on the model that is loaded. It can be added to any web page with just a few lines of HTML, is fully extensible and comes with a super easy-to-use configurator."; 
+                    var descText = "Image-Based Lighting (IBL) has been a cornerstone of Babylon.js rendering for years, and in version 9.0, IBL gets even better with Dynamic IBL Shadows. Building on the IBL Shadow feature first introduced in 8.0 by Adobe, this update brings enhanced, dynamic environment shadows that respond to changes in lighting conditions in real time. Both light and shadow for the scene environment can now be approximated from a source image with greater fidelity and flexibility than ever before."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -515,20 +865,20 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8viewerDoc" target="_blank">Learn more about the new Babylon.js Viewer 
+                <a style="color:" href="https://aka.ms/babylon9IBLSDoc" target="_blank">Learn more about Dynamic IBL Shadows in Babylon.js
                 </a>
             </div>
         </div>
     </div>
 </section>  <section class="image-and-text-block  right "
-    style="background-color: #3b3b3b;">
-    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
+    style="background-color: #000000;">
+    <div class="inner-container" style="min-height:430px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Native WGSL</h2>
+                <h2>Signed Distance Field Text</h2>
             <p style="color:">
                 <script>
-                    var descText = "All the core engine shaders for Babylon.js are now available in both GLSL and WGSL. This means direct support for WebGPU right out of the box with no conversion layer. The Node Material Editor is also able to render in the WebGPU shader language, in addition to WebGL."; 
+                    var descText = "Rendering crisp, scalable text in 3D environments has always been a challenge. Babylon.js 9.0 introduces Signed Distance Field (SDF) text rendering, a technique that produces resolution-independent, beautifully smooth text at any size or zoom level. Unlike traditional bitmap fonts that become blurry or pixelated when scaled, SDF text maintains sharp edges and clean outlines no matter how close you get. This is perfect for in-world UI, labels, signage, HUD elements, and any scenario where readable text needs to exist in 3D space."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -537,26 +887,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8nmeWGSLDoc" target="_blank">Learn more about WGSL and GLSL support in NME
+                <a style="color:" href="https://aka.ms/babylon9sdfDoc" target="_blank">Learn more about SDF Text in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/nmeWgsl.png" alt="The settings panel of the Node Material Editor with a new dropdown to select between WebGL and WebGPU versions." style="width:450px">
+            <img src="assets/img/sdfText.png" alt="Placeholder alt text" style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #793333;">
+    style="background-color: #39323d;">
     <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="image-block">
-            <img src="assets/img/audioEngineV2.png" alt="A series of orange buttons, with one selected in green above a digital audio levels display showing green stacked lights in several columns, with the tallest of them transitioning to yellow and red lights." style="width:550px">
+            <img src="assets/img/outlineRenderer.png" alt="Placeholder alt text" style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Overhauled Audio Engine </h2>
+                <h2>Outline Renderer</h2>
             <p style="color:">
                 <script>
-                    var descText = "Babylon.js 8.0 brings an entirely refreshed audio engine. It was designed to be powerful — taking advantage of the full suite of web-audio features, modern — class names and architecture you&#x27;ve come to expect, and simple-to-use — allowing anyone to leverage these features, no matter what your experience level."; 
+                    var descText = "Babylon.js 9.0 introduces a new Outline Renderer that makes it easy to add stylized outlines to meshes in your scene. Whether you&#x27;re building a cartoon-shaded world, highlighting selected objects, or creating a technical visualization, the Outline Renderer provides clean, customizable outlines that integrate seamlessly with the rest of the rendering pipeline."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -565,20 +915,20 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8AudioEnginev2Doc" target="_blank">Learn more about Babylon.js Audio Engine 
+                <a style="color:" href="https://aka.ms/babylon9OLDoc" target="_blank">Learn more about Outline Renderer in Babylon.js
                 </a>
             </div>
         </div>
     </div>
 </section>  <section class="image-and-text-block  right "
-    style="background-color: #372847;">
-    <div class="inner-container" style="min-height:480px;padding-top:;padding-bottom:;">
+    style="background-color: #000000;">
+    <div class="inner-container" style="min-height:430px;padding-top:;padding-bottom:;">
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Gaussian Splat Updates</h2>
+                <h2>Nav Mesh Updates</h2>
             <p style="color:">
                 <script>
-                    var descText = "Babylon.js 8.0 builds on the exciting foundation of Gaussian Splat support with some exciting new updates such as SPZ and compressed PLY formats, spherical harmonics, as well as runtime optimizations for memory footprint and CPU/GPU usage. "; 
+                    var descText = "Navigation meshes are essential for pathfinding and AI movement in games and simulations. Babylon.js 9.0 brings updates to the Nav Mesh system, improving the accuracy, performance, and ease of use of navigation mesh generation and agent pathfinding. Whether you&#x27;re building an RTS, an open-world exploration game, or an architectural walkthrough, updated nav mesh capabilities make it easier than ever to get your characters and agents moving intelligently through your scenes."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -587,26 +937,26 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8gsplatImprovementsDoc" target="_blank">Learn more about Gaussian Splatting in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon9NMDoc" target="_blank">Learn more about Nav Mesh in Babylon.js
                 </a>
             </div>
         </div>
         <div class="image-block">
-            <img src="assets/img/gaussianSplat.png" alt="A 3D representation of a yellow and blue parrot standing on a stone floor." style="width:500px">
+            <img src="assets/img/navMesh.png" alt="Placeholder alt text" style="width:550px">
         </div>
     </div>
 </section>  <section class="image-and-text-block "
-    style="background-color: #430606;">
-    <div class="inner-container" style="min-height:450px;padding-top:;padding-bottom:;">
+    style="background-color: #423120;">
+    <div class="inner-container" style="min-height:400px;padding-top:;padding-bottom:;">
         <div class="image-block">
-            <img src="assets/img/havokController.png" alt="a pill-shaped mesh moving up a spiral staircase illustrating Havok physics in a simple character controller." style="width:550px">
+            <img src="assets/img/audioEngine.png" alt="Placeholder alt text" style="width:550px">
         </div>
         <div class="text-block"
             style="text-align:;width:;margin-left:50px;margin-right:50px;">
-                <h2>Havok Character Controller</h2>
+                <h2>Audio Engine Updates</h2>
             <p style="color:">
                 <script>
-                    var descText = "With Babylon.js 8.0, we’ve continued our amazing partnership with the very talented team at Havok, this time bringing their fully featured character controller into Babylon.js. This brings a state-of-the-art character controller to your toolbox allowing you to start making your very own character-centered game with just a few lines of code!"; 
+                    var descText = "Sound is a critical part of any immersive experience, and Babylon.js 9.0 continues the evolution of the audio engine that was overhauled in 8.0. This release brings further refinements, expanded features, and improved API ergonomics aligned with modern web-audio standards. The modular audio engine makes it easier than ever to add spatial audio, ambient soundscapes, and interactive sound effects to your Babylon.js experiences."; 
                     var replaceLT = descText.replace(/&lt;/gi, "<");
                     var result = replaceLT.replace(/&gt;/gi, ">");
                     var pTags = document.getElementsByTagName('p');
@@ -615,9 +965,34 @@
                 </script>
             </p>
             <div class="link-block">
-                <a style="color:" href="https://aka.ms/babylon8havokCCDoc" target="_blank">Learn more about Physics character controller in Babylon.js
+                <a style="color:" href="https://aka.ms/babylon9AudioDoc" target="_blank">Learn more about Audio Engine in Babylon.js
                 </a>
             </div>
+        </div>
+    </div>
+</section>  <section class="image-and-text-block  right "
+    style="background-color: #000000;">
+    <div class="inner-container" style="min-height:350px;padding-top:;padding-bottom:;">
+        <div class="text-block"
+            style="text-align:;width:;margin-left:50px;margin-right:50px;">
+                <h2>3MF Exporter</h2>
+            <p style="color:">
+                <script>
+                    var descText = "Babylon.js 9.0 brings a new exporter, allowing you to export your scene geometry to the popular 3D printing format 3MF! This wonderful new contribution comes courtesy of community member Guillaume_Pelletier."; 
+                    var replaceLT = descText.replace(/&lt;/gi, "<");
+                    var result = replaceLT.replace(/&gt;/gi, ">");
+                    var pTags = document.getElementsByTagName('p');
+                    pTags = pTags[pTags.length - 1];
+                    pTags.innerHTML = result;
+                </script>
+            </p>
+            <div class="link-block">
+                <a style="color:" href="https://aka.ms/babylon93MFdoc" target="_blank">Learn more about 3MF Exporter in Babylon.js
+                </a>
+            </div>
+        </div>
+        <div class="image-block">
+            <img src="assets/img/3mfExporter.png" alt="Placeholder alt text" style="width:550px">
         </div>
     </div>
 </section>  <div class="text-block">
