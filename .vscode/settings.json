@@ -1,5 +1,17 @@
 {
     "chat.tools.autoApprove": true,
     "github.copilot.chat.terminalChatLocation": "terminal",
-    "task.allowAutomaticTasks": "on"
+    "task.allowAutomaticTasks": "on",
+    "chat.tools.terminal.autoApprove": {
+        "npx playwright": true,
+        "/^node captureScreenshots\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "npm install": true,
+        "/^node captureRetry\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
 }

@@ -1,36 +1,41 @@
 ---
 description: >
-  Generate descriptive alt text for images on the Babylon.js homepage.
-  Views each image referenced in imageAndTextBlock entries in src/content/config.json,
-  then writes accurate, accessible alt text based on what the image actually shows.
-  Triggers on: "add alt tags", "alt text", "alt tags" for "main page", "home page",
-  "homepage", or "features page".
+  Generate descriptive alt text for images in any config JSON file on the
+  Babylon.js website. Views each image referenced in the file and writes
+  accurate, accessible alt text based on what the image actually shows.
+  Triggers on: "add alt tags", "alt text", "alt tags" for any page.
 ---
 
-# Homepage Image Alt Text Skill
+# Image Alt Text Skill
 
-You are adding descriptive alt text to images in the Babylon.js homepage config at `src/content/config.json`.
+You are adding descriptive alt text to images in Babylon.js website config JSON files.
 
 ## When to Run
 
-Run this skill when the user asks to add, update, or fix alt tags/alt text on the main page, home page, homepage, or features page. Example prompts:
+Run this skill when the user asks to add, update, or fix alt tags/alt text on any page. Example prompts:
 
 - "Add alt tags to the main page"
 - "Update alt text on the homepage"
 - "Fix alt tags on the features page"
-- "Add alt text to the home page images"
+- "Add alt text to the feature demos page"
+- "Write alt tags for the community page images"
 
 ## Target File
 
-**Homepage config**: `src/content/config.json`
+The target file is whichever config JSON the user specifies (or the one currently open). Common targets:
 
-The images that need alt text are inside `imageAndTextBlock` entries in the `blocks` array. Each block has an `img` object with `url` and `alt` fields.
+- **Homepage**: `src/content/config.json` — images in `imageAndTextBlock` entries
+- **Feature demos**: `src/content/featureDemos/config.json` — images in `galleryBlock` items
+- **Community**: `src/content/community/config.json` — images in `galleryBlock` items
+- **Any other config**: Any JSON file under `src/content/` that contains `img` objects with `url` and `alt` fields
+
+The skill works on any file that has image references with `alt` fields. Look for `img` objects containing `url` and `alt` properties.
 
 ## Step-by-Step Workflow
 
-1. **Read** `src/content/config.json` and find all `imageAndTextBlock` entries.
-2. **Identify** which entries have missing, empty, or placeholder alt text (e.g., `"Placeholder alt text"`, `""`, or generic text that doesn't describe the image).
-3. **For each image that needs alt text**, view the actual image file at `src/assets/img/<filename>` to see what it depicts.
+1. **Read** the target config JSON and find all entries that contain `img` objects with `alt` fields.
+2. **Identify** which entries have missing, empty, or placeholder alt text (e.g., `"Placeholder alt text"`, `"Placeholder image"`, `""`, or generic text that doesn't describe the image).
+3. **For each image that needs alt text**, view the actual image file to see what it depicts. Resolve the `url` path relative to the project — paths starting with `/` are relative to `src/content/`, and paths starting with `../` are relative to the config file's directory.
 4. **Write descriptive alt text** based on what you see in the image, following the rules below.
 5. **Apply all changes** to the config file.
 6. **Report** what was updated.

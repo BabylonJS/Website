@@ -298,4 +298,42 @@ The agent will use the **specifications-update** skill (`.github/skills/specific
 
 ---
 
+## Updating the Feature Demos Page
+
+The feature demos page at `src/content/featureDemos/config.json` showcases interactive Babylon.js Playground demos. When a new release ships, demos from the blog post need to be added to this page with captured screenshots.
+
+### How to Invoke
+
+Ask the agent to update feature demos using prompts like:
+
+- "Update the feature demos from the blog post"
+- "Add the new demos to the feature demos page"
+- "Add blog post demos to feature demos"
+
+The agent will use the **feature-demos-update** skill (`.github/skills/feature-demos-update.prompt.md`) to handle this automatically.
+
+### What the Skill Does
+
+1. **Reads** `.github/blog_post/BlogPost.md` and extracts feature headings and "Check out a demo:" links.
+2. **Reads** `src/content/featureDemos/config.json` to understand existing entries and check for duplicates.
+3. **For each Playground demo**, uses Playwright to:
+   - Navigate to the aka.ms demo link (which redirects to the Playground).
+   - Modify the URL to insert `full.html` for preview-only mode (no code editor).
+   - Resize the browser and capture a screenshot of the rendered scene.
+   - Save the screenshot to `src/content/featureDemos/assets/img/`.
+4. **Generates alt text** for each screenshot based on what the image actually shows.
+5. **Reports the plan** to the user with all proposed entries, then waits for confirmation.
+6. **Inserts new items** at the top of the `items` array in blog post order.
+
+### Key Rules
+
+- **Additive only.** Existing entries are never removed or reordered.
+- **New entries go at the top** of the items array, in blog post order.
+- **Short descriptions** — just a couple of words from the feature heading.
+- **Demo links are used as-is** from the blog post (aka.ms links).
+- **Screenshots are captured automatically** via Playwright for Playground demos.
+- **Non-Playground demos** (editors, external tools) are flagged for the user to decide how to handle.
+
+---
+
 *This workflow was established for Babylon.js 9.0 release (March 2026)*
