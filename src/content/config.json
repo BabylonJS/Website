@@ -12,24 +12,24 @@
             "content": {
                 "items": [
                     {
-                        "videoUrl": "/assets/videos/areaLights2.mp4",
-                        "fallbackImage": "/assets/videos/areaLights2.png",
-                        "demoLink": "https://aka.ms/babylon8AreaLightsDoc"
+                        "videoUrl": "/assets/videos/texturedAreaLights.mp4",
+                        "fallbackImage": "/assets/videos/texturedAreaLights.png",
+                        "demoLink": "https://aka.ms/babylon9TALDemo"
                     },
                     {
-                        "videoUrl": "/assets/videos/gaussianSplat.mp4",
-                        "fallbackImage": "/assets/videos/gaussianSplat.png",
-                        "demoLink": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting"
+                        "videoUrl": "/assets/videos/newGaussianSplat.mp4",
+                        "fallbackImage": "/assets/videos/newGaussianSplat.png",
+                        "demoLink": "https://aka.ms/babylon9GSDemo"
                     },
                     {
-                        "videoUrl": "/assets/videos/gltfDispersion.mp4",
-                        "fallbackImage": "/assets/videos/gltfDispersion.png",
-                        "demoLink": "https://aka.ms/babylon7Dispersion"
+                        "videoUrl": "/assets/videos/clusteredLights.mp4",
+                        "fallbackImage": "/assets/videos/clusteredLights.png",
+                        "demoLink": "https://aka.ms/babylon9CLDemo"
                     },                    
                     {
-                        "videoUrl": "/assets/videos/iblShadow_demo.mp4",
-                        "fallbackImage": "/assets/videos/iblShadow_demo.png",
-                        "demoLink": "https://aka.ms/babylon8IBLShadowsDoc"
+                        "videoUrl": "/assets/videos/dynamicIblShadows.mp4",
+                        "fallbackImage": "/assets/videos/dynamicIblShadows.png",
+                        "demoLink": "https://aka.ms/babylon9IBLSDemo"
                     },
                     {
                         "videoUrl": "/assets/videos/physics.mp4",
@@ -40,7 +40,13 @@
                         "videoUrl": "/assets/videos/webGPU.mp4",
                         "fallbackImage": "/assets/videos/webGPU.png",
                         "demoLink": "https://doc.babylonjs.com/setup/support/webGPU/"
+                    },
+                    {
+                        "videoUrl": "/assets/videos/volumetricLight.mp4",
+                        "fallbackImage": "/assets/videos/volumetricLight.png",
+                        "demoLink": "https://aka.ms/babylon9FGDemo"
                     }
+
                 ]
             }
         },
@@ -104,7 +110,7 @@
                 "background": "#1c1306",
                 "img": {
                     "url": "assets/img/clusteredLighting.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A dark scene with dozens of glowing fireflies illuminating stone ruins and vegetation, demonstrating clustered lighting with many light sources",
                     "width": "550px"
                 },
                 "height": "450px",
@@ -126,7 +132,7 @@
                 "background": "#191b1d",
                 "img": {
                     "url": "assets/img/texturedAreaLights.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A sci-fi corridor with a glowing electronic sign casting colored light onto surrounding metallic walls",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -148,7 +154,7 @@
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/nodeParticleEditor.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A fiery sun rendered entirely with particles, glowing bright orange and yellow against a black background",
                     "width": "550px"
                 },
                 "height": "450px",
@@ -168,7 +174,7 @@
                 "background": "#310d4f",
                 "img": {
                     "url": "assets/img/particleFlowMaps.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "Glowing purple and pink particles forming a swirling pattern against a dark purple background",
                     "width": "550px"
                 },
                 "height": "480px",
@@ -190,7 +196,7 @@
                 "background": "#1f1f1f",
                 "img": {
                     "url": "assets/img/volumetricLighting.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A dark industrial interior with visible light shafts streaming through openings, creating volumetric god rays",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -210,7 +216,7 @@
                 "background": "#7e7041",
                 "img": {
                     "url": "assets/img/frameGraph.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "The Babylon.js Playground showing a Gaussian splat of a cathedral interior with bright sunlight streaming through arched windows",
                     "width": "550px"
                 },
                 "height": "480px",
@@ -230,7 +236,7 @@
                 "background": "#564a48",
                 "img": {
                     "url": "assets/img/animationRetargeting.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "Three different 3D characters sharing the same animation pose, demonstrating animation retargeting across different body types",
                     "width": "475px"
                 },
                 "height": "450px",
@@ -250,7 +256,7 @@
                 "background": "#5b0711",
                 "img": {
                     "url": "assets/img/gaussianSplat.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A Gaussian splat capture of an outdoor fire pit scene with red chairs and a cartoon cat character",
                     "width": "550px"
                 },
                 "height": "480px",
@@ -270,7 +276,7 @@
                 "background": "#232323",
                 "img": {
                     "url": "assets/img/babylonEditor.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "The Babylon.js Editor desktop application showing a dimly lit room scene with asset browser, inspector, and scene hierarchy panels",
                     "width": "550px"
                 },
                 "height": "450px",
@@ -290,7 +296,7 @@
                 "background": "#4f3d40",
                 "img": {
                     "url": "assets/img/inspectorV2.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A colorful 3D scene with glowing crystals, candles, and floating particles being inspected with the new Inspector v2 overlay",
                     "width": "550px"
                 },
                 "height": "480px",
@@ -310,7 +316,7 @@
                 "background": "#302b2b",
                 "img": {
                     "url": "assets/img/viewerUpdates.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A detailed 3D model of a hooded fantasy archer character rendered in the Babylon.js Viewer",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -330,7 +336,7 @@
                 "background": "#33404e",
                 "img": {
                     "url": "assets/img/playgroundUpdates.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "The Babylon.js Playground with multi-file editing showing TypeScript code tabs and a 3D character model preview",
                     "width": "550px"
                 },
                 "height": "500px",
@@ -350,7 +356,7 @@
                 "background": "#3a1a1a",
                 "img": {
                     "url": "assets/img/largeWorldRendering.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "Side-by-side comparison showing jittering artifacts with floating origin off versus smooth rendering with floating origin on",
                     "width": "550px"
                 },
                 "height": "480px",
@@ -370,7 +376,7 @@
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/geospatialCamera.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A 3D rendered planet with a dark, textured surface viewed from space against a black background",
                     "width": "550px"
                 },
                 "height": "450px",
@@ -390,7 +396,7 @@
                 "background": "#334845",
                 "img": {
                     "url": "assets/img/3dTiles.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "An aerial 3D view of Central Park and surrounding New York City buildings rendered with 3D Tiles geospatial data",
                     "width": "550px"
                 },
                 "height": "460px",
@@ -410,7 +416,7 @@
                 "background": "#4565ae",
                 "img": {
                     "url": "assets/img/physicallyBasedAtmosphere.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A panoramic view of mountain ranges at sunrise with realistic atmospheric haze and light scattering",
                     "width": "550px"
                 },
                 "height": "470px",
@@ -430,7 +436,7 @@
                 "background": "#392023",
                 "img": {
                     "url": "assets/img/openPBR.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A glossy dark red sphere with clear coat and specular reflections rendered using the OpenPBR material model",
                     "width": "550px"
                 },
                 "height": "450px",
@@ -450,7 +456,7 @@
                 "background": "#3e7092",
                 "img": {
                     "url": "assets/img/dynamicIBLShadows.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A realistic shark model resting on a sandy ocean floor with soft environment-based shadows and underwater lighting",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -470,7 +476,7 @@
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/sdfText.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "Bright pink text rendered in 3D perspective on a black surface, demonstrating crisp signed distance field text at various depths",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -490,7 +496,7 @@
                 "background": "#39323d",
                 "img": {
                     "url": "assets/img/outlineRenderer.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A grayscale 3D scene with objects highlighted by colored outlines, including a blue-outlined car and other industrial objects",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -510,7 +516,7 @@
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/navMesh.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A dark outdoor scene with glowing fireflies illuminating vegetation and stone structures, with AI agents navigating the environment",
                     "width": "550px"
                 },
                 "height": "430px",
@@ -530,7 +536,7 @@
                 "background": "#423120",
                 "img": {
                     "url": "assets/img/audioEngine.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "A dark industrial scene with a glowing orange light source on the floor near stairs, demonstrating spatial audio positioning",
                     "width": "550px"
                 },
                 "height": "400px",
@@ -550,7 +556,7 @@
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/3mfExporter.png",
-                    "alt": "Placeholder alt text",
+                    "alt": "Side-by-side comparison of a pirate figurine exported as STL at 28.5 MB versus 3MF at 11.1 MB, showing the same quality at smaller file size",
                     "width": "550px"
                 },
                 "height": "350px",

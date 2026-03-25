@@ -264,4 +264,38 @@ src/assets/img/                # Processed images (output)
 
 ---
 
+## Updating the Specifications Page
+
+The specifications page at `src/content/specifications/config.json` lists all Babylon.js engine features organized by category. When a new release ships, new features from the blog post need to be added to this page.
+
+### How to Invoke
+
+Ask the agent to update specifications using prompts like:
+
+- "Update the specifications page with the new features from the blog post"
+- "Add the new blog post features to the specifications config"
+- "Update specs from the blog post"
+
+The agent will use the **specifications-update** skill (`.github/skills/specifications-update.prompt.md`) to handle this automatically.
+
+### What the Skill Does
+
+1. **Reads** `.github/blog_post/BlogPost.md` and extracts feature headings and documentation links.
+2. **Reads** `src/content/specifications/config.json` and parses the ENGINE SPECIFICATIONS `twoColumns` block.
+3. **Maps each feature** to the appropriate section (MAIN FEATURES, SHADERS / RENDERING, GEOMETRY, OPTIMIZATIONS, SPECIAL FX, CAMERAS, or EXPORTERS AND TOOLING).
+4. **Checks for duplicates** — if an existing entry looks like it covers the same feature, the agent will show both entries and ask how to handle it before making changes.
+5. **Reports the plan** — lists all proposed additions with target sections and placements, then waits for confirmation.
+6. **Applies changes** to the config after user approval.
+7. **Checks column balance** — if left and right columns become significantly uneven, suggests moving a whole section to rebalance.
+
+### Key Rules
+
+- **Additive only.** The skill never removes existing specification entries.
+- **Duplicate detection.** Potential duplicates are flagged and the user decides how to resolve them.
+- **Feature text comes from the blog heading.** No content is invented.
+- **Links are used as-is from the blog post.** No URL modification.
+- **Sections are never split between columns.** Only whole sections may move for rebalancing.
+
+---
+
 *This workflow was established for Babylon.js 9.0 release (March 2026)*
