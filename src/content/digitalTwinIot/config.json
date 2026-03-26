@@ -146,15 +146,6 @@
                         }
                     },
                     {
-                        "desc": "Castle of Arques-La-Bataille",
-                        "author": "by Vinc3r",
-                        "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
-                        "img": {
-                            "url": "../community/assets/img/Arques-La-Bataille.jpg",
-                            "alt": "Castle of Arques-La-Bataille"
-                        }
-                    }, 
-                    {
                         "desc": "FORCE Map",
                         "author": "by 3D Wave Design",
                         "link": "https://3d.fundyforce.ca/",
