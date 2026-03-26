@@ -50,10 +50,11 @@ var CreateChibiRexScene = function (engine) {
 		scene.imageProcessingConfiguration.colorCurves = new BABYLON.ColorCurves();
 		scene.imageProcessingConfiguration.colorCurves.globalSaturation = 0;
 
+		scene.materials.forEach((mat) => {
+			mat.useHorizonOcclusion = false;
+		});
+
 	});
 
-	loader.onMaterialLoadedObservable.add(function (mat) {
-		mat.useHorizonOcclusion = false;
-	})
 	return scene;
 };
