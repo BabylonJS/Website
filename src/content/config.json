@@ -203,7 +203,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Volumetric Lighting",
-                "desc": "Realistic light shafts streaming through fog, dust, or haze can transform a scene from flat to cinematic. Babylon.js 9.0 makes this easier than ever with a powerful new Volumetric Lighting system. The result is stunningly realistic light scattering with configurable extinction and phase parameters that give you artistic control over how light interacts with the atmosphere. The system supports both directional and spot light sources, and takes full advantage of WebGPU compute shaders for optimal performance.",
+                "desc": "Realistic light shafts streaming through fog, dust, or haze can transform a scene from flat to cinematic. Babylon.js 9.0 makes this easier than ever with a powerful new Volumetric Lighting system. The result is stunningly realistic light scattering with configurable extinction and phase parameters that give you artistic control over how light interacts with the atmosphere. The system supports directional light sources, and takes full advantage of WebGPU compute shaders for optimal performance.",
                 "moreInfoLink": "https://aka.ms/babylon9vlDoc",
                 "moreInfoText": "Learn more about Volumetric Lighting in Babylon.js",
                 "target": "_blank"
