@@ -86,11 +86,14 @@
 
     .image-and-text-block .text-block .link-block a{
         font-size: 0;
+        text-decoration: none;
     }
 
     .image-and-text-block .text-block .link-block a::after{
         content: "Learn more \2192";
         font-size: 16px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 
 }
