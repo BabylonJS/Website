@@ -69,12 +69,31 @@
 
     .viewer-and-text-block .text-block h2{
         max-width: 300px;
+        width: 100%;
         margin: 0 auto 18px;
+        text-align: left;
     }
 
     .viewer-and-text-block .text-block p{
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    .viewer-and-text-block .text-block .link-block{
+        max-width: 300px;
+        margin: 20px auto 0 !important;
+    }
+
+    .viewer-and-text-block .text-block .link-block a{
+        font-size: 0;
+        text-decoration: none;
+    }
+
+    .viewer-and-text-block .text-block .link-block a::after{
+        content: "Learn more \2192";
+        font-size: 16px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 
 }

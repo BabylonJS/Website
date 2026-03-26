@@ -35,25 +35,32 @@
         flex-wrap: wrap;
         max-height: none!important;
         justify-content: center!important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
     }
 
-    .image-and-text-block .inner-container,
-    .viewer-and-text-block .inner-container {div{
+    .image-and-text-block .inner-container div,
+    .viewer-and-text-block .inner-container div {
         margin: 0!important;
         padding-left: 15px!important;
         padding-right: 15px!important;
         display: grid;
     }
 
-    .image-and-text-block.right .inner-container,
-    .viewer-and-text-block.right .inner-container {
-        flex-direction: column-reverse;
-    }
-
     .image-and-text-block .text-block .link-block,
     .viewer-and-text-block .text-block .link-block {
         padding: 0 !important;
         margin: 20px 0px !important;
+    }
+
+    .image-and-text-block .inner-container .text-block,
+    .viewer-and-text-block .inner-container .text-block {
+        order: 1;
+    }
+
+    .image-and-text-block .inner-container .image-block,
+    .viewer-and-text-block .inner-container .image-block {
+        order: 2;
     }
 
 }
@@ -237,7 +244,7 @@
     .image-and-text-block.right .text-block .link-block,
     .viewer-and-text-block.right .text-block .link-block {
         max-width: 300px;
-        margin: 10px auto !important;
+        margin: 20px 0px !important;
     }
 }
 
