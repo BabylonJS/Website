@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Slim</title>
+
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="babylon.max.js"></script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        #fps {
+            position: absolute;
+            background-color: black;
+            border: 2px solid red;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            top: 15px;
+            right: 10px;
+            width: 60px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fps">0</div>
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+
+    <script>
+	if (BABYLON.Engine.isSupported()) {
+
+        var divFps = document.getElementById("fps");
+		var canvas = document.getElementById("renderCanvas");
+        var engine = new BABYLON.Engine(canvas, true, { stencil: true, disableWebGL2Support: false, preserveDrawingBuffer: true });
+		
+		// Fake random maths to ensure similar conditions.
+		var seed = 100000,
+		constant = Math.pow(2, 13) + 1,
+		prime = 37,
+		maximum = Math.pow(2, 50);
+
+		Math.random = function () {
+			seed *= constant;
+			seed += prime;
+			seed %= maximum;
+
+			return seed / maximum;
+		}
+
+		var scene = new BABYLON.Scene(engine);
+		var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+		var light0 = new BABYLON.PointLight("Omni0", new BABYLON.Vector3(0, 10, 0), scene);
+		var material = new BABYLON.StandardMaterial("kosh", scene);
+		var sphere = BABYLON.Mesh.CreateSphere("sphere0", 16, 1, scene);
+
+		camera.setPosition(new BABYLON.Vector3(-10, 10, 0));
+
+		camera.attachControl(canvas, true);
+		
+		// Sphere material
+		material.diffuseColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+		material.specularColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+		material.specularPower = 32;
+		material.checkReadyOnEveryCall = false;
+		sphere.material = material;
+		
+		// Fog
+		scene.fogMode = BABYLON.Scene.FOGMODE_EXP;
+		scene.fogDensity = 0.05;
+		
+		// Clone spheres
+		var playgroundSize = 50;
+		for (var index = 0; index < 8000; index++) {
+			var clone = sphere.clone("sphere" + (index + 1), null, true);
+			var scale = Math.random() * 0.8 + 0.6;
+			clone.scaling = new BABYLON.Vector3(scale, scale, scale);
+			clone.position = new BABYLON.Vector3(Math.random() * 2 * playgroundSize - playgroundSize, Math.random() * 2 * playgroundSize - playgroundSize, Math.random() * 2 * playgroundSize - playgroundSize);
+		}
+		sphere.setEnabled(false);
+
+		engine.runRenderLoop(function () {
+			scene.render();
+			divFps.innerHTML = engine.getFps().toFixed() + " fps";
+		});
+
+		// Resize
+		window.addEventListener("resize", function () {
+			engine.resize();
+		});
+	}
+	else {
+		alert('BabylonJS is not supported.')
+	}
+    </script>
+</body>
+
+</html>

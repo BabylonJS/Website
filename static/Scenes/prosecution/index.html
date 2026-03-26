@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prosecution</title>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <meta property="og:url"         content="http://theo.sabattie.com/games/prosecution/" />
+    <meta property="og:title"       content="Prosecution" />
+    <meta property="og:description" content="How long can you survive?" />
+    <meta property="og:image"       content="http://theo.sabattie.com/games/prosecution/assets/prosecute_facebook_sharing.jpg" />
+
+    <!--Babylon-->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+    <script src="js/utils/system/System.js"></script>
+    <script src="js/utils/system/Device.js"></script>
+
+    <script src="js/utils/Loader.js"></script>
+    <script src="js/utils/ArrayTools.js"></script>
+    <script src="js/utils/MathTools.js"></script>
+    <script src="js/utils/camera/CameraTools.js"></script>
+
+    <script src="js/utils/services/UpdateBroadcaster.js"></script>
+    <script src="js/utils/services/Services.js"></script>
+    <script src="js/utils/services/IUpdatable.js"></script>
+
+    <script src="js/utils/inputs/Keyboard.js"></script>
+    <script src="js/utils/inputs/KeyboardInput.js"></script>
+    <script src="js/utils/inputs/TouchEventType.js"></script>
+    <script src="js/utils/inputs/TouchesInput.js"></script>
+
+    <script src="js/utils/game/GameObject.js"></script>
+    <script src="js/utils/game/StateMachine.js"></script>
+    <script src="js/utils/game/StateGraphic.js"></script>
+
+    <script src="js/utils/reflection/ClassTools.js"></script>
+
+    <script src="js/utils/event/IEventDispatcher.js"></script>
+    <script src="js/utils/event/EventDispatcher.js"></script>
+    <script src="js/utils/event/MouseEventType.js"></script>
+    <script src="js/utils/event/TSEvent.js"></script>
+
+    <script src="js/utils/ui/multiscreen/UIPoint.js"></script>
+    <script src="js/utils/ui/multiscreen/UIAnchor.js"></script>
+    <script src="js/utils/ui/multiscreen/IUIelement.js"></script>
+    <script src="js/utils/ui/multiscreen/HTMLUIElement.js"></script>
+    <script src="js/utils/ui/multiscreen/MultiScreen.js"></script>
+    <script src="js/utils/ui/multiscreen/ResizeMode.js"></script>
+    
+    <script src="js/utils/ui/text/HTMLUIText.js"></script>
+    <script src="js/utils/ui/text/IUIText.js"></script>
+    <script src="js/utils/ui/text/TextAlignements.js"></script>
+    <script src="js/utils/ui/HTMLUIImage.js"></script>
+
+    <script src="js/utils/ui/UIScreensManager.js"></script>
+    <script src="js/utils/ui/IUIScreen.js"></script>
+    <script src="js/utils/ui/HTMLUIScreen.js"></script>
+
+    <script src="js/utils/ui/button/HTMLButton.js"></script>
+    <script src="js/utils/ui/button/IButton.js"></script>
+    <script src="js/utils/ui/button/ButtonEvent.js"></script>
+    <script src="js/utils/ui/button/ButtonState.js"></script>
+
+    <script src="js/utils/sounds/DistantSound.js"></script>
+    <script src="js/utils/sounds/SoundManager.js"></script>
+
+    <script src="js/ui/buttons/ColoredTextualButton.js"></script>
+    <script src="js/ui/buttons/CreditsButton.js"></script>
+    <script src="js/ui/buttons/BackButton.js"></script>
+    <script src="js/ui/buttons/PlayButton.js"></script>
+    <script src="js/ui/screens/TitleScreen.js"></script>
+    <script src="js/ui/screens/HUD.js"></script>
+    <script src="js/ui/screens/HelpScreen.js"></script>
+    <script src="js/ui/screens/CreditsScreen.js"></script>
+    <script src="js/ui/screens/GameOverScreen.js"></script>
+    <script src="js/ui/screens/LoadingScreen.js"></script>
+
+    <script src="js/game/Game.js"></script>
+    <script src="js/game/camera/CameraManager.js"></script>
+    <script src="js/game/gameObjects/player/controllers/Controller.js"></script>
+    <script src="js/game/gameObjects/player/controllers/KeyboardController.js"></script>
+    <script src="js/game/gameObjects/player/controllers/TouchController.js"></script>
+
+    <script src="js/game/FXs/Explosion.js"></script>
+    
+    <script src="js/game/gameObjects/FlyingObject.js"></script>
+    <script src="js/game/gameObjects/Cloud.js"></script>
+    <script src="js/game/gameObjects/Planet.js"></script>
+    
+    <script src="js/game/gameObjects/player/Player.js"></script>
+
+    <script src="js/game/gameObjects/enemies/Enemy.js"></script>
+    <script src="js/game/gameObjects/enemies/EnemyCollideEvent.js"></script>
+    <script src="js/game/gameObjects/enemies/Missile.js"></script>
+    <script src="js/game/gameObjects/enemies/FastMissile.js"></script>
+    <script src="js/game/gameObjects/enemies/Mine.js"></script>
+
+    <script src="js/game/GameEvent.js"></script>
+    <script src="js/game/GameAddMissileEvent.js"></script>
+
+    <script src="js/Main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sigmar+One" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Carter+One" />
+    
+    <!--Css-->
+    <link rel='stylesheet' href='css/main.css'/>
+
+    <style>
+        .splashscreen {
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            z-index:10;
+            background-image: url('splashscreen.jpg');
+            background-size: cover;
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1; 
+                }
+            to {
+                opacity: 0; 
+                } 
+        }
+
+        .fadeout {
+            animation: fade-out 1.5s;
+            animation-fill-mode: forwards; 
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="splashscreen"></div>
+
+    <script>
+        setTimeout(function() {
+            let splash = document.querySelector('.splashscreen');
+            splash.classList.add('fadeout');
+            setTimeout(function() {
+                document.body.removeChild(splash)
+            }, 1500)
+        }, 3000)
+    </script>
+
+    <!--The game canvas-->
+    <canvas id="game-canvas"></canvas>
+
+    <!--Starting the game-->
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            new Main('game-canvas');
+        });
+    </script>
+
+</body>
+</html>

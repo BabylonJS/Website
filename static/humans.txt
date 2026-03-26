@@ -1,0 +1,13 @@
+﻿# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Webmaster: David Catuhe
+	Contact: davca [at] microsoft.com
+	Twitter: @deltakosh
+	From: Seattle, USA
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, WebGL, WebGPU, Web Audio, JavaScript, TypeScript

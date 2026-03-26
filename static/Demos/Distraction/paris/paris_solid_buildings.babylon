@@ -1,0 +1,728 @@
+{"autoClear":true,"clearColor":[0,0,0],"ambientColor":[0,0,0],"gravity":[0,-9.81,0],
+"materials":[{"name":"paris_solid_buildings.Material.black","id":"paris_solid_buildings.Material.black","ambient":[0,0,0],"diffuse":[0,0,0],"specular":[0,0,0],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":false},{"name":"paris_solid_buildings.Material.border","id":"paris_solid_buildings.Material.border","ambient":[0.3343,0.3343,0.3343],"diffuse":[0.3343,0.3343,0.3343],"specular":[0,0,0],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":false,"castShadows":false},{"name":"paris_solid_buildings.Material.bridges","id":"paris_solid_buildings.Material.bridges","ambient":[0.7743,0.7743,0.7743],"diffuse":[0.7743,0.7743,0.7743],"specular":[0.5,0.5,0.5],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":false},{"name":"paris_solid_buildings.Material.buildings","id":"paris_solid_buildings.Material.buildings","ambient":[0.9647,0.9387,0.8632],"diffuse":[0.9647,0.9387,0.8632],"specular":[0,0,0],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":false},{"name":"paris_solid_buildings.Material.flag","id":"paris_solid_buildings.Material.flag","ambient":[0.8,0.8,0.8],"diffuse":[0.8,0.8,0.8],"specular":[0.5,0.5,0.5],"emissive":[0.8,0.8,0.8],"specularPower":50,"alpha":1,"backFaceCulling":false,"castShadows":true, "diffuseTexture":{"name":"flag.png","level":1,"hasAlpha":1,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},{"name":"paris_solid_buildings.Material.green.support","id":"paris_solid_buildings.Material.green.support","ambient":[0.0331,0.6105,0.3005],"diffuse":[0.0331,0.6105,0.3005],"specular":[0,0,0],"emissive":[0.0199,0.3663,0.1803],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":false},{"name":"paris_solid_buildings.Material.ground","id":"paris_solid_buildings.Material.ground","ambient":[0,0,0],"diffuse":[0,0,0],"specular":[0,0,0],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":false,"castShadows":false, "diffuseTexture":{"name":"plan.png","level":1,"hasAlpha":1,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}},{"name":"paris_solid_buildings.Material.support","id":"paris_solid_buildings.Material.support","ambient":[0.8,0.8,0.8],"diffuse":[0.8,0.8,0.8],"specular":[0,0,0],"emissive":[0.48,0.48,0.48],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":false},{"name":"paris_solid_buildings.Material.water","id":"paris_solid_buildings.Material.water","ambient":[0.036,0.2281,0.8],"diffuse":[0.036,0.2281,0.8],"specular":[0.8,0.8,0.8],"emissive":[0,0,0],"specularPower":50,"alpha":1,"backFaceCulling":true,"castShadows":true}],
+"multiMaterials":[],
+"skeletons":[],
+"meshes":[{"name":"Bridges","id":"Bridges","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Bridge.002","id":"Bridge.002","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[1.5967,-0.0025,2.1132],"rotation":[0,0.7854,0],"scaling":[0.285,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Bridge.004","id":"Bridge.004","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[0.6995,-0.0025,-2.8589],"rotation":[0,0,0],"scaling":[0.25,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Bridge.003","id":"Bridge.003","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[0.6995,-0.0025,0.1433],"rotation":[0,0,0],"scaling":[0.25,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Bridge.001","id":"Bridge.001","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[0.6948,-0.0025,2.343],"rotation":[0,0,0],"scaling":[0.25,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.001","id":"Jump.001","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-0.6941,0.0663,-1.7374],"rotation":[0,0,0.3491],"scaling":[0.2,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.002","id":"Jump.002","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[0.6143,0.0462,-0.9803],"rotation":[0,0,0.2618],"scaling":[0.2,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.003","id":"Jump.003","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[0.7977,0.062,-1.7374],"rotation":[0,0,-0.3491],"scaling":[0.2,0.001,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.004","id":"Jump.004","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-0.704,0.2305,1.2216],"rotation":[0,-1.5708,0.6109],"scaling":[0.115,0.001,0.04],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.005","id":"Jump.005","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-0.1893,0.0841,0.8008],"rotation":[0,0,-0.4189],"scaling":[0.2,0.001,0.04],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.006","id":"Jump.006","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-2.8873,0.0918,-0.9408],"rotation":[0,-1.5708,0.2618],"scaling":[0.36,0.001,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.007","id":"Jump.007","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-2.5676,0.2004,-0.4725],"rotation":[0,0,0.3142],"scaling":[0.07,0.001,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Jump.000","id":"Jump.000","parentId":"Bridges","materialId":"paris_solid_buildings.Material.bridges","billboardMode":0,"position":[-0.4671,0.1676,0.8008],"rotation":[0,0,0],"scaling":[0.093,0.001,0.04],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Checkpoints","id":"Checkpoints","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Fountain","id":"Fountain","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Smoke","id":"Smoke","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Buildings (not solid - no shadows)","id":"Buildings (not solid - no shadows)","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Supports","id":"Supports","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Ground borders","id":"Ground borders","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Buildings (not solid)","id":"Buildings (not solid)","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Impostors","id":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"M","id":"M","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"M.001","id":"M.001","parentId":"M","billboardMode":0,"position":[-2.1095,0.0947,-0.3973],"rotation":[0,0,0],"scaling":[0.25,0.12,0.15],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.8934,0.7753,1,-0.8934,-0.7753,1,-0.8934,-0.7753,-1,0.8934,0.7753,1,0.8934,-0.7753,1,0.8934,0.7753,-1,0.8934,-0.7753,-1,-0.8934,0.7753,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"M.002","id":"M.002","parentId":"M","billboardMode":0,"position":[-1.8587,0.009,-0.3973],"rotation":[0,0,0],"scaling":[0.25,0.12,0.15],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.099,0.107,1,-0.099,-0.061,1,-0.099,-0.061,-1,0.139,-0.0135,1,0.139,-0.061,1,0.139,-0.0135,-1,0.139,-0.061,-1,-0.099,0.107,-1]
+,"normals":[-0.435,0.7078,0.5566,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.6776,0.4165,0.6061,0.5773,-0.5773,0.5773,0.6776,0.4165,-0.6061,0.5773,-0.5773,-0.5773,-0.435,0.7078,-0.5566]
+,"indices":[0,1,2,0,3,4,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,1,0,4,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"M.003","id":"M.003","parentId":"M","billboardMode":0,"position":[-2.1149,0.2037,-0.4676],"rotation":[-0.3665,0,0],"scaling":[0.258,0.02,0.082],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.8934,0.7753,1,-0.8934,-0.7753,1,-0.8934,-0.7753,-1,0.8934,0.7753,1,0.8934,-0.7753,1,0.8934,0.7753,-1,0.8934,-0.7753,-1,-0.8934,0.7753,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"M.004","id":"M.004","parentId":"M","billboardMode":0,"position":[-2.1149,0.2037,-0.3258],"rotation":[0.3665,0,0],"scaling":[0.258,0.02,0.082],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.8934,0.7753,1,-0.8934,-0.7753,1,-0.8934,-0.7753,-1,0.8934,0.7753,1,0.8934,-0.7753,1,0.8934,0.7753,-1,0.8934,-0.7753,-1,-0.8934,0.7753,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Buildings","id":"Buildings","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Cube.096","id":"Cube.096","parentId":"Buildings","billboardMode":0,"position":[-1.5078,0.0927,0.0698],"rotation":[0,0,0],"scaling":[0.3,0.08,0.1],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.9353,0.9131,1.2343,-0.9353,-0.7164,1.2343,-0.9353,-1.0869,-1.1381,0.9353,0.9131,1.2343,0.9353,-0.7164,1.2343,0.9353,0.9131,-1.1381,0.9353,-1.0869,-1.1381,-0.9353,0.9131,-1.1381]
+,"normals":[-0.5773,0.5773,0.5773,-0.5859,-0.5269,0.6156,-0.5696,-0.6244,-0.5344,0.5773,0.5773,0.5773,0.5859,-0.5269,0.6156,0.5773,0.5773,-0.5773,0.5696,-0.6244,-0.5344,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,3,5,6,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,4,3,6,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.023","id":"Building.023","parentId":"Buildings","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.1428,0.1563,0.3221],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.872,1.0706,-1,-0.5493,1.0706,-1,-1.128,-0.9294,1,0.872,1.0706,1,-0.5493,1.0706,1,0.872,-0.9294,1,-1.128,-0.9294,-1,0.872,-0.9294]
+,"normals":[-0.5773,0.5773,0.5773,-0.5936,-0.4835,0.6433,-0.564,-0.6601,-0.4962,0.5773,0.5773,0.5773,0.5936,-0.4835,0.6433,0.5773,0.5773,-0.5773,0.564,-0.6601,-0.4962,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,3,5,6,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,4,3,6,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.074","id":"Building.074","parentId":"Buildings","billboardMode":0,"position":[-1.0216,0.2052,-1.4745],"rotation":[0,0,0],"scaling":[0.08,0.09,0.15],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.2423,1,-1,-0.2423,1,-1,-0.2423,-1,1,0.2423,1,1,-0.2423,1,1,0.2423,-1,1,-0.2423,-1,-1,0.2423,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.075","id":"Building.075","parentId":"Buildings","billboardMode":0,"position":[-0.5222,0.2076,-1.3007],"rotation":[0,0,0],"scaling":[0.08,0.09,0.25],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.2946,1,-1,-0.2946,1,-1,-0.2946,-1,1,0.2946,1,1,-0.2946,1,1,0.2946,-1,1,-0.2946,-1,-1,0.2946,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Fountains","id":"Fountains","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"F1","id":"F1","parentId":"Fountains","billboardMode":0,"position":[2.5083,0.03,0.1559],"rotation":[0,0,0],"scaling":[0.01,0.03,0.01],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"F1.001","id":"F1.001","parentId":"Fountains","billboardMode":0,"position":[-2.7607,0.03,-0.1751],"rotation":[0,0,0],"scaling":[0.01,0.03,0.01],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"SC","id":"SC","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Cube.073","id":"Cube.073","parentId":"SC","billboardMode":0,"position":[-1.8456,0.5149,1.6345],"rotation":[0,0.7854,0],"scaling":[0.05,0.1,0.05],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube","id":"Cube","parentId":"SC","billboardMode":0,"position":[-1.9748,0.61,1.7621],"rotation":[0,0.7854,0],"scaling":[0.165,0.18,0.105],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.075","id":"Cube.075","parentId":"SC","billboardMode":0,"position":[-2.0849,0.5149,1.8644],"rotation":[0,0.7854,0],"scaling":[0.05,0.1,0.06],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"AT","id":"AT","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"AT1","id":"AT1","parentId":"AT","billboardMode":0,"position":[-2.6039,0.0058,-2.4233],"rotation":[0,-0.7854,0],"scaling":[0.038,0.0478,0.06],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"AT2","id":"AT2","parentId":"AT","billboardMode":0,"position":[-2.4506,0.0058,-2.5696],"rotation":[0,-0.7854,0],"scaling":[0.038,0.0478,0.06],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"AT3","id":"AT3","parentId":"AT","billboardMode":0,"position":[-2.5041,0.0007,-2.3233],"rotation":[0,-0.7854,0],"scaling":[0.038,0.0478,0.06],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"AT4","id":"AT4","parentId":"AT","billboardMode":0,"position":[-2.3517,0.0007,-2.4725],"rotation":[0,-0.7854,0],"scaling":[0.038,0.0478,0.06],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"TE","id":"TE","parentId":"Impostors","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"P2","id":"P2","parentId":"TE","billboardMode":0,"position":[1.255,0.03,0.302],"rotation":[0,0,0],"scaling":[0.038,0.03,0.038],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"P3","id":"P3","parentId":"TE","billboardMode":0,"position":[1.5587,0.03,0.302],"rotation":[0,0,0],"scaling":[0.038,0.03,0.038],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"P4","id":"P4","parentId":"TE","billboardMode":0,"position":[1.5587,0.03,-0.0014],"rotation":[0,0,0],"scaling":[0.038,0.03,0.038],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"P1","id":"P1","parentId":"TE","billboardMode":0,"position":[1.255,0.03,-0.0014],"rotation":[0,0,0],"scaling":[0.038,0.03,0.038],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"NDP","id":"NDP","parentId":"Impostors","billboardMode":0,"position":[1.1888,0.15,2.6596],"rotation":[0,0,0],"scaling":[0.1,0.15,0.235],"isVisible":false,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.1612,1,1.3467,-1.1612,-1,1.3467,-1.1612,-1,-1,1.1511,1,1.3467,1.1511,-1,1.3467,1.1511,1,-1,1.1511,-1,-1,-1.1612,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Buildings (solid)","id":"Buildings (solid)","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Cube.115","id":"Cube.115","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.2098,0.343,1.5937],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.0301,0.6664,-0.9374,-1.0301,0.6664,0.9374,-1.0301,-0.3084,0.9374,0.8551,0.6664,0.9374,0.8551,-0.9369,0.9374,0.8551,0.6664,-0.9374,0.8551,-0.9369,-0.9374,-1.0301,-0.3084,-0.9374]
+,"normals":[-0.5773,0.5773,-0.5773,-0.5773,0.5773,0.5773,-0.6513,-0.4694,0.5962,0.5773,0.5773,0.5773,0.4835,-0.6709,0.5623,0.5773,0.5773,-0.5773,0.4835,-0.6709,-0.5623,-0.6513,-0.4694,-0.5962]
+,"indices":[0,1,2,1,3,4,5,6,4,0,7,6,2,4,6,3,1,0,7,0,2,2,1,4,3,5,4,5,0,6,7,2,6,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.114","id":"Cube.114","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.4949,0.0977,2.4408],"rotation":[0,0.5585,0],"scaling":[0.04,0.01,0.06],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.098","id":"Cube.098","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.9517,0.1303,-0.1674],"rotation":[0,0,0],"scaling":[0.02,0.01,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.113","id":"Cube.113","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.6552,0.1078,0.9384],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.9338,0.6229,1.8688,-0.9338,-0.6229,1.8688,-0.9338,-0.6229,-1.8688,0.9338,0.6229,1.8688,0.9338,-0.6229,1.8688,0.9338,0.6229,-1.8688,0.9338,-0.6229,-1.8688,-0.9338,0.6229,-1.8688]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.107","id":"Cube.107","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.0315,0.0427,0.187],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.9401,0.4195,0.9434,-0.9401,-0.4195,0.9434,-0.9401,-0.4195,-0.9434,0.9401,0.4195,0.9434,0.9401,-0.4195,0.9434,0.9401,0.4195,-0.9434,0.9401,-0.4195,-0.9434,-0.9401,0.4195,-0.9434]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.106","id":"Cube.106","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.3558,0.0105,-0.1775],"rotation":[0,0,0],"scaling":[0.2,0.01,0.02],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.095","id":"Cube.095","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.5507,0.06,0.3002],"rotation":[0,0,0],"scaling":[0.08,0.06,0.14],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.087","id":"Cube.087","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.25,0.1,2.7829],"rotation":[0,-0.733,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.3516,2.0442,-1,-1,2.0442,-1,-1,-1,0.4897,0.3516,1.4774,0.4897,-1,1.4774,1.3057,0.3516,-0.6605,1.3057,-1,-0.6605,-1,0.3516,-1]
+,"normals":[-0.47,0.5606,0.6818,-0.47,-0.5606,0.6818,-0.537,-0.57,-0.6218,0.5513,0.6256,0.5519,0.5513,-0.6256,0.5519,0.7109,0.5667,-0.4165,0.7109,-0.5667,-0.4165,-0.537,0.57,-0.6218]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.021","id":"Building.021","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.2365,0.0996,0.0816],"rotation":[0,0,0],"scaling":[0.21,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.7812,1.0327,-1,-0.6491,1.0327,-1,-0.9004,-0.9673,1,0.7812,1.0327,1,-0.6491,1.0327,1,0.7812,-0.9673,1,-0.9004,-0.9673,-1,0.7812,-0.9673]
+,"normals":[-0.5773,0.5773,0.5773,-0.5842,-0.5369,0.6086,-0.571,-0.6156,-0.5431,0.5773,0.5773,0.5773,0.5842,-0.5369,0.6086,0.5773,0.5773,-0.5773,0.571,-0.6156,-0.5431,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,0,3,4,3,5,6,7,2,6,1,4,6,3,0,7,7,0,2,1,0,4,4,3,6,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.083","id":"Cube.083","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.4418,0.0507,2.4816],"rotation":[0,0.5585,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.7642,0.377,-1.336,-0.7642,0.377,1.2558,-0.7642,-0.465,1.2558,0.7642,0.377,1.2558,0.7642,-0.465,1.2558,0.7642,0.377,-1.336,0.7642,-0.2824,-1.336,-0.7642,-0.2824,-1.336]
+,"normals":[-0.5773,0.5773,-0.5773,-0.5773,0.5773,0.5773,-0.5737,-0.5991,0.5584,0.5773,0.5773,0.5773,0.5737,-0.5991,0.5584,0.5773,0.5773,-0.5773,0.5811,-0.5548,-0.5953,-0.5811,-0.5548,-0.5953]
+,"indices":[0,1,2,3,4,2,5,6,4,0,7,6,2,4,6,3,1,0,7,0,2,1,3,2,3,5,4,5,0,6,7,2,6,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.015","id":"Cube.015","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.6298,0.02,2.2037],"rotation":[0,0,0],"scaling":[0.15,0.02,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.072","id":"Cube.072","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.4665,0.3788,2.0751],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-3.1523,0.5043,0.8242,-3.1523,0.4861,0.8242,-1.2711,0.4861,-1.0384,1.5084,0.5043,0.8242,1.5084,-1.165,0.8242,1.5084,0.5043,-1.0384,1.5084,-1.165,-1.0384,-1.2711,0.5043,-1.0384]
+,"normals":[-0.7743,0.5468,0.3185,-0.8455,-0.4219,0.3273,-0.42,-0.3378,-0.8423,0.5773,0.5773,0.5773,0.4775,-0.6757,0.5615,0.5773,0.5773,-0.5773,0.4593,-0.6798,-0.5717,-0.2952,0.6307,-0.7177]
+,"indices":[0,1,2,0,3,4,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,1,0,4,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.076","id":"Cube.076","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.019,0.3918,2.4524],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.3429,0.5526,-1.0608,-2.3429,0.5526,0.8202,-2.3429,-0.8648,0.8202,2.3429,0.5526,0.8202,2.3429,-0.8648,0.8202,2.3429,0.5526,-1.0608,2.3429,-0.0964,-1.0608,-2.3429,-0.0964,-1.0608]
+,"normals":[-0.5773,0.5773,-0.5773,-0.5773,0.5773,0.5773,-0.5596,-0.6879,0.4621,0.5773,0.5773,0.5773,0.5596,-0.6879,0.4621,0.5773,0.5773,-0.5773,0.6005,-0.4458,-0.6637,-0.6005,-0.4458,-0.6637]
+,"indices":[0,1,2,3,4,2,5,6,4,0,7,6,2,4,6,3,1,0,7,0,2,1,3,2,3,5,4,5,0,6,7,2,6,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.077","id":"Cube.077","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.4402,0.2714,0.9367],"rotation":[0,0,0],"scaling":[0.08,0.08,0.08],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.1416,0.9867,1.1857,-1.1416,-1.0133,1.1857,-1.1416,-1.1588,-1.1496,1.1936,0.9867,1.1857,1.1936,-0.8034,1.1857,1.1936,0.9867,-1.1496,1.1936,-0.9489,-1.1496,-1.1416,0.9867,-1.1496]
+,"normals":[-0.5773,0.5773,0.5773,-0.5571,-0.585,0.5894,-0.5492,-0.6243,-0.5554,0.5773,0.5773,0.5773,0.6027,-0.5289,0.5974,0.5773,0.5773,-0.5773,0.5976,-0.5677,-0.5662,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,3,5,6,5,7,2,2,1,4,3,0,7,7,0,2,0,3,1,4,3,6,6,5,2,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.078","id":"Cube.078","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.5347,0.1428,0.5575],"rotation":[0,0,0],"scaling":[0.08,0.08,0.08],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.1335,0.8344,1.2263,-1.1335,-0.7067,1.2263,-1.1335,-1.1656,-1.1002,1.2032,0.8344,1.2263,1.2032,-0.4539,1.2263,1.2032,0.8344,-1.1002,1.2032,-0.9128,-1.1002,-1.1335,0.8344,-1.1002]
+,"normals":[-0.5773,0.5773,0.5773,-0.5615,-0.5458,0.6219,-0.5361,-0.6687,-0.5151,0.5773,0.5773,0.5773,0.6126,-0.4802,0.6278,0.5773,0.5773,-0.5773,0.5975,-0.6008,-0.531,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,3,5,6,5,7,2,2,1,4,3,0,7,7,0,2,0,3,1,4,3,6,6,5,2,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.079","id":"Cube.079","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.7543,0.1515,2.1604],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.9087,0.983,-0.9754,-0.9087,0.983,0.8953,-0.9087,-0.7294,0.8953,0.9737,0.4384,0.8953,0.9737,-1.0247,0.8953,0.9737,0.4384,-0.9754,0.9737,-0.7164,-0.9754,-0.9087,-0.4211,-0.9754]
+,"normals":[-0.4962,0.6601,-0.564,-0.4962,0.6601,0.564,-0.6108,-0.5755,0.5437,0.6433,0.4835,0.5936,0.5235,-0.6737,0.5216,0.6433,0.4835,-0.5936,0.5464,-0.5707,-0.613,-0.6214,-0.4753,-0.6228]
+,"indices":[0,1,2,1,3,4,5,6,4,0,7,6,7,2,4,3,1,0,7,0,2,2,1,4,3,5,4,5,0,6,6,7,4,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.080","id":"Cube.080","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0875,0.0904,1.2892],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.0873,0.0742,0.1148,-0.0873,-0.062,0.1148,-0.1811,-0.062,0.0227,0.0999,0.0742,0.1148,0.0999,-0.082,0.1148,0.0999,0.0742,-0.1681,0.0999,-0.082,-0.1681,-0.1811,0.0742,0.0227]
+,"normals":[-0.2936,0.631,0.718,-0.3315,-0.573,0.7495,-0.8393,-0.5391,-0.0701,0.5773,0.5773,0.5773,0.5556,-0.6007,0.5749,0.3903,0.5523,-0.7366,0.3806,-0.5678,-0.7299,-0.8199,0.5676,-0.074]
+,"indices":[0,1,2,0,3,4,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,1,0,4,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.081","id":"Cube.081","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0955,0.0832,1.8768],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.0953,0.0632,-0.1883,-0.0953,0.0632,0.1856,-0.0953,-0.0606,0.1856,0.092,0.0632,0.1856,0.092,-0.0721,0.1856,0.092,0.0632,-0.1883,0.092,-0.0654,-0.1883,-0.0953,-0.0538,-0.1883]
+,"normals":[-0.5773,0.5773,-0.5773,-0.5773,0.5773,0.5773,-0.5923,-0.5633,0.576,0.5773,0.5773,0.5773,0.5597,-0.6021,0.5693,0.5773,0.5773,-0.5773,0.5619,-0.5907,-0.579,-0.5939,-0.552,-0.5852]
+,"indices":[0,1,2,1,3,4,5,6,4,0,7,6,7,2,4,3,1,0,7,0,2,2,1,4,3,5,4,5,0,6,6,7,4,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.042","id":"Cube.042","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0408,0.1905,-1.8998],"rotation":[0,0,0],"scaling":[0.05,0.05,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.022","id":"Cube.022","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.4752,0.08,-0.4224],"rotation":[0,0,0],"scaling":[0.28,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.064","id":"Cube.064","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.4564,0.183,0.465],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.3879,0.8966,0.987,-1.3879,-0.5442,0.987,-1.3879,-1.163,-0.8427,1.3879,0.8966,0.987,1.3879,-0.5442,0.987,1.3879,0.8966,-0.8427,1.3879,-1.163,-0.8427,-1.3879,0.8966,-0.8427]
+,"normals":[-0.5773,0.5773,0.5773,-0.5965,-0.4679,0.6522,-0.5621,-0.672,-0.4821,0.5773,0.5773,0.5773,0.5965,-0.4679,0.6522,0.5773,0.5773,-0.5773,0.5621,-0.672,-0.4821,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,3,5,6,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,4,3,6,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.066","id":"Cube.066","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.7821,0.2098,1.4555],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.5358,0.7894,1.3699,-1.5358,-0.2082,1.3699,-1.5358,-0.2082,-1.3699,1.2205,0.7894,1.3699,1.2205,-1.2106,1.3699,1.2205,0.7894,-1.3699,1.2205,-1.2106,-1.3699,-1.5358,0.7894,-1.3699]
+,"normals":[-0.5773,0.5773,0.5773,-0.6565,-0.4598,0.5979,-0.6565,-0.4598,-0.5979,0.5773,0.5773,0.5773,0.4748,-0.6779,0.5612,0.5773,0.5773,-0.5773,0.4748,-0.6779,-0.5612,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,0,3,4,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,1,0,4,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.067","id":"Cube.067","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.0776,0.1263,2.8122],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.3245,0.7243,0.9259,-2.3245,-0.7243,0.9259,-2.3245,-0.7243,-0.9259,2.3245,0.7243,0.9259,2.3245,-0.7243,0.9259,2.3245,0.7243,-0.9259,2.3245,-0.7243,-0.9259,-2.3245,0.7243,-0.9259]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.063","id":"Cube.063","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.636,0.3464,1.7809],"rotation":[0,0,0],"scaling":[0.1,0.1,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.8284,0.837,0.9358,-0.8284,-1.1893,0.9358,-0.8284,-1.1893,-0.9358,1.0475,0.837,0.9358,1.0475,-0.3333,0.9358,1.0475,0.837,-0.9358,1.0475,-0.3333,-0.9358,-0.8284,0.837,-0.9358]
+,"normals":[-0.5773,0.5773,0.5773,-0.4487,-0.698,0.5581,-0.4487,-0.698,-0.5581,0.5773,0.5773,0.5773,0.6709,-0.4313,0.6033,0.5773,0.5773,-0.5773,0.6709,-0.4313,-0.6033,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,5,7,2,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,6,5,2,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.047","id":"Cube.047","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.5936,0.0507,-0.6406],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,0.507,1.5273,-1,-0.507,1.5273,-1,-0.507,-1.5273,1,0.507,1.5273,1,-0.507,1.5273,1,0.507,-1.5273,1,-0.507,-1.5273,-1,0.507,-1.5273]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.032","id":"Cube.032","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.7895,0.05,-0.6779],"rotation":[0,-0.8378,0],"scaling":[0.05,0.05,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.030","id":"Cube.030","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.4126,0.04,-2.0787],"rotation":[0,0,0],"scaling":[0.04,0.04,0.04],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.9941,1,2.2805,-1.9941,-1,2.2805,-1.9941,-1,-2.7873,2.2104,1,2.2805,2.2104,-1,2.2805,2.2104,1,-1.6815,2.2104,-1,-1.6815,-1.9941,1,-2.7873]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5038,-0.565,-0.6534,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.6382,0.5921,-0.492,0.6382,-0.5921,-0.492,-0.5038,0.565,-0.6534]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.029","id":"Cube.029","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.6866,0.07,-2.617],"rotation":[0,0,0],"scaling":[0.07,0.07,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[0.4809,1,3.1442,0.4809,-1,3.1442,-3.1032,-1,-1.6115,1.1839,1,3.1442,1.1839,-1,3.1442,1.1839,1,-1.6115,1.1839,-1,-1.6115,-3.1032,1,-1.6115]
+,"normals":[-0.3504,0.6191,0.7028,-0.3504,-0.6191,0.7028,-0.7469,-0.5508,-0.3724,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.7469,0.5508,-0.3724]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.023","id":"Cube.023","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.2616,0.08,-1.4118],"rotation":[0,0,0],"scaling":[0.1,0.08,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.062","id":"Building.062","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.4702,0.07,1.1948],"rotation":[0,0.7854,0],"scaling":[0.05,0.07,0.15],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.060","id":"Building.060","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.9492,0.08,0.6533],"rotation":[0,0,0],"scaling":[0.15,0.08,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.058","id":"Building.058","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.3131,0.11,1.0146],"rotation":[0,-0.7854,0],"scaling":[0.1,0.11,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.055","id":"Building.055","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.5924,0.08,0.6523],"rotation":[0,0,0],"scaling":[0.08,0.08,0.08],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.8645,1,0.8303,-2.8645,-1,0.8303,-2.5126,-1,-0.863,2.7003,1,0.8303,2.7003,-1,0.8303,2.7003,1,-0.863,2.7003,-1,-0.863,-2.5126,1,-0.863]
+,"normals":[-0.6388,0.5673,0.5197,-0.6388,-0.5673,0.5197,-0.51,-0.5889,-0.6269,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.51,0.5889,-0.6269]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.054","id":"Building.054","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.4318,0.045,1.5641],"rotation":[0,0,0],"scaling":[0.3,0.045,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.053","id":"Building.053","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.2951,0.1,1.4832],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.8459,1,0.8271,-0.8459,-1,0.8271,-1.7923,-1,-0.0347,1.1541,1,0.8271,1.1541,-1,0.8271,1.1541,1,-1.1729,1.1541,-1,-1.1729,-1.7923,1,-0.0347]
+,"normals":[-0.2791,0.6341,0.7211,-0.2791,-0.6341,0.7211,-0.8165,-0.5568,-0.1528,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.4684,0.5604,-0.683,0.4684,-0.5604,-0.683,-0.8165,0.5568,-0.1528]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.052","id":"Building.052","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.093,0.05,1.6443],"rotation":[0,-0.7854,0],"scaling":[0.2,0.05,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.051","id":"Building.051","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.1712,0.105,-2.0265],"rotation":[0,0,0],"scaling":[0.02,0.005,0.04],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.049","id":"Building.049","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.5503,0.05,-2.4876],"rotation":[0,-0.7854,0],"scaling":[0.1,0.05,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.047","id":"Building.047","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.9414,0.06,-2.0835],"rotation":[0,0,0],"scaling":[0.07,0.06,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.2151,1,1,-1.2151,-1,1,-1.2151,-1,-1,1.2151,1,1,1.2151,-1,1,1.2151,1,-1,1.2151,-1,-1,-1.2151,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.042","id":"Building.042","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.8683,0.04,-2.6075],"rotation":[0,0,0],"scaling":[0.15,0.04,0.03],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.041","id":"Building.041","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.1128,0.15,0.5739],"rotation":[0,-0.5236,0],"scaling":[0.1,0.15,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.039","id":"Building.039","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0007,0.1,0.262],"rotation":[0,0,0],"scaling":[0.2,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.036","id":"Building.036","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0684,0.1,-0.766],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.7552,1,1,-2.7552,-1,1,-2.7552,-1,-1,0.4766,1,1,0.4766,-1,1,2.0191,1,-1,2.0191,-1,-1,-2.7552,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.3461,0.62,0.7041,0.3461,-0.62,0.7041,0.7492,0.5504,-0.3683,0.7492,-0.5504,-0.3683,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.037","id":"Building.037","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.0823,0.06,-2.5205],"rotation":[0,0,0],"scaling":[0.06,0.06,0.06],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-4.277,1,2.634,-4.277,-1,2.634,-2.4554,-1,-2.3783,3.1804,1,2.6369,3.1804,-1,2.6369,3.1804,1,-3.5086,3.1804,-1,-3.5086,-2.4554,1,-2.3783]
+,"normals":[-0.6779,0.5612,0.4747,-0.6779,-0.5612,0.4747,-0.5157,-0.6117,-0.5999,0.5772,0.5773,0.5775,0.5772,-0.5773,0.5775,0.5217,0.5676,-0.6368,0.5217,-0.5676,-0.6368,-0.5157,0.6117,-0.5999]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.038","id":"Building.038","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.169,0.08,-0.6667],"rotation":[0,0,0],"scaling":[0.1,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1.5091,-1,-1,1.5091,-1.8136,-1,-0.5025,1,1,1.5141,1,-1,1.5141,1,1,-1.9784,1,-1,-1.9784,-1.8136,1,-0.5025]
+,"normals":[-0.4478,0.6005,0.6625,-0.4478,-0.6005,0.6625,-0.7629,-0.5827,-0.2799,0.5767,0.5772,0.5781,0.5767,-0.5772,0.5781,0.43,0.5561,-0.7112,0.43,-0.5561,-0.7112,-0.7629,0.5827,-0.2799]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.017","id":"Building.017","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.5601,0.08,-1.4135],"rotation":[0,0,0],"scaling":[0.1,0.08,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-0.627,1,-1,-0.627,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5258,-0.5683,-0.6329,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.6223,0.5877,-0.517,0.6223,-0.5877,-0.517,-0.5258,0.5683,-0.6329]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.014","id":"Building.014","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.3875,0.08,-1.5184],"rotation":[0,0,0],"scaling":[0.25,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.6959,1,1.0469,-0.6959,-1,1.0469,-1.0911,-1,-0.9532,0.9089,1,1.0469,0.9089,-1,1.0469,0.9089,1,-0.9532,0.9089,-1,-0.9532,-1.0911,1,-0.9532]
+,"normals":[-0.5134,0.5883,0.6247,-0.5134,-0.5883,0.6247,-0.636,-0.5678,-0.5226,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.636,0.5678,-0.5226]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.033","id":"Building.033","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.8881,0.09,-2.447],"rotation":[0,0,0],"scaling":[0.1,0.09,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.009","id":"Building.009","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.3866,0.1,-0.9675],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.9906,1,1,-1.9906,-1,1,-2.7073,-1,-1.2325,2.212,1,1,2.212,-1,1,3.1397,1,-1.2261,3.1397,-1,-1.2261,-2.7073,1,-1.2325]
+,"normals":[-0.4733,0.5954,0.6491,-0.4733,-0.5954,0.6491,-0.6677,-0.5627,-0.4874,0.4433,0.601,0.665,0.4433,-0.601,0.665,0.6899,0.5594,-0.4594,0.6899,-0.5594,-0.4594,-0.6677,0.5627,-0.4874]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.018","id":"Building.018","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.5528,0.08,-0.9197],"rotation":[0,0,0],"scaling":[0.1,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.0987,1,-1.2606,-3.7626,1,1.3111,-3.7626,-1,1.3111,2.3395,1,1.306,2.3395,-1,1.306,2.3541,1,-1.2539,2.3541,-1,-1.2539,-2.0987,-1,-1.2606]
+,"normals":[-0.3768,0.6136,-0.6939,-0.7317,0.553,0.3985,-0.7317,-0.553,0.3985,0.5758,0.5777,0.5786,0.5758,-0.5777,0.5786,0.5795,0.5771,-0.5754,0.5795,-0.5771,-0.5754,-0.3768,-0.6136,-0.6939]
+,"indices":[0,1,2,3,4,2,5,6,4,0,7,6,2,4,6,5,3,1,7,0,2,1,3,2,3,5,4,5,0,6,7,2,6,0,5,1]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.024","id":"Building.024","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.023,0.1,-1.7705],"rotation":[0,0,0],"scaling":[0.1,0.1,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.003","id":"Building.003","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.7696,0.06,-2.5999],"rotation":[0,-1.5708,0],"scaling":[0.08,0.06,0.31],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.002","id":"Building.002","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.3176,0.1,-2.0081],"rotation":[0,-2.3562,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.1473,1,0.1924,-0.1473,-1,0.1924,-0.1718,-1,-2.1621,2.1095,1,2.1095,2.1095,-1,2.1095,3.5679,1,1.5679,3.5679,-1,1.5679,-0.1718,1,-2.1621]
+,"normals":[-0.7071,0.6245,0.3316,-0.7071,-0.6245,0.3316,-0.3249,-0.5467,-0.7717,-0.1375,0.6091,0.7811,-0.1375,-0.6091,0.7811,0.8108,0.558,0.1764,0.8108,-0.558,0.1764,-0.3249,0.5467,-0.7717]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.000","id":"Building.000","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.703,0.1,-2.1032],"rotation":[0,-2.3562,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.1717,1,0.0905,-2.1717,-1,0.0905,-0.1919,-1,-3.5277,1.2558,1,3.7307,1.2558,-1,3.7307,1.1303,1,-2.2151,1.1303,-1,-2.2151,-0.1919,1,-3.5277]
+,"normals":[-0.7967,0.5957,0.102,-0.7967,-0.5957,0.102,-0.1187,-0.564,-0.8172,0.3172,0.5456,0.7756,0.3172,-0.5456,0.7756,0.7125,0.6317,-0.3055,0.7125,-0.6317,-0.3055,-0.1187,0.564,-0.8172]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.004","id":"Building.004","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.6166,0.07,-2.6844],"rotation":[0,0,0],"scaling":[0.08,0.07,0.25],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.012","id":"Building.012","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.8946,0.1,-2.6844],"rotation":[0,0,0],"scaling":[0.08,0.1,0.25],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.005","id":"Building.005","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.5222,0.09,-1.3007],"rotation":[0,0,0],"scaling":[0.08,0.09,0.25],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.006","id":"Building.006","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.5204,0.09,-0.9064],"rotation":[0,0,0],"scaling":[0.08,0.09,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1.2631,-1,-1,1.2631,-1,-1,-1,1,1,1.4674,1,-1,1.4674,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.603,0.5829,0.5446,-0.603,-0.5829,0.5446,-0.5773,-0.5773,-0.5773,0.5496,0.5722,0.6087,0.5496,-0.5722,0.6087,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.007","id":"Building.007","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.5204,0.03,-0.804],"rotation":[0,0,0],"scaling":[0.04,0.03,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1.8143,-1,-1,1.8143,-1,-1,-1,1,1,1.4674,1,-1,1.4674,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5295,0.5688,0.6293,-0.5295,-0.5688,0.6293,-0.5773,-0.5773,-0.5773,0.6195,0.5869,0.5213,0.6195,-0.5869,0.5213,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.028","id":"Building.028","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.0801,0.05,-1.5779],"rotation":[0,-0.6109,0],"scaling":[0.05,0.05,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.027","id":"Building.027","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.159,0.05,-2.0231],"rotation":[0,0,0],"scaling":[0.05,0.05,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.026","id":"Building.026","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.1265,0.05,-2.0786],"rotation":[0,-1.5708,0],"scaling":[0.05,0.05,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.025","id":"Building.025","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.1314,0.05,-1.6861],"rotation":[0,-1.5708,0],"scaling":[0.05,0.05,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.020","id":"Building.020","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.91,0.1,-1.4237],"rotation":[0,0,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.0448,1,1.3036,-2.0448,-1,1.3036,-2.0448,-1,-1.8997,3.1722,1,1.3036,3.1722,-1,1.3036,-0.0448,1,-1.8997,-0.0448,-1,-1.8997,-2.0448,1,-1.8997]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.7738,0.5469,0.3196,0.7738,-0.5469,0.3196,0.2963,0.6304,-0.7175,0.2963,-0.6304,-0.7175,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.019","id":"Building.019","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-1.0216,0.09,-1.4745],"rotation":[0,0,0],"scaling":[0.08,0.09,0.15],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.040","id":"Building.040","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[0.1075,0.05,0.135],"rotation":[0,0,0],"scaling":[0.15,0.05,0.06],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.043","id":"Building.043","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.3115,0.1,-2.0095],"rotation":[0,0,0],"scaling":[0.08,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.044","id":"Building.044","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.1725,0.05,-1.9427],"rotation":[0,0,0],"scaling":[0.05,0.05,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-8.4832,2.3509,1.5387,-8.4832,-1,1.5387,-8.4832,-1,-1.8596,8.3793,2.3509,1.5387,8.3793,-1,1.5387,8.3793,2.3509,-1.8596,8.3793,-1,-1.8596,-8.4832,2.3509,-1.8596]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.045","id":"Building.045","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.3119,0.05,-2.2821],"rotation":[0,0,0],"scaling":[0.04,0.05,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.046","id":"Building.046","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.4389,0.1,-2.5465],"rotation":[0,0,0],"scaling":[0.2,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.056","id":"Building.056","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.5435,0.08,1.0137],"rotation":[0,-0.4363,0],"scaling":[0.08,0.08,0.08],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-3.1014,1,0.9434,-3.1014,-1,0.9434,-3.3047,-1,-0.9379,3.2175,1,0.9434,3.2175,-1,0.9434,3.2175,1,-0.9139,3.2175,-1,-0.9139,-3.3047,1,-0.9379]
+,"normals":[-0.5426,0.5832,0.6044,-0.5426,-0.5832,0.6044,-0.6095,-0.5717,-0.5492,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5783,0.5775,-0.5762,0.5783,-0.5775,-0.5762,-0.6095,0.5717,-0.5492]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.057","id":"Building.057","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.6854,0.05,0.8652],"rotation":[0,0,0],"scaling":[0.07,0.05,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.059","id":"Building.059","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.6458,0.11,1.3397],"rotation":[0,-0.7854,0],"scaling":[0.1,0.11,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.061","id":"Building.061","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.4577,0.1,0.6533],"rotation":[0,0,0],"scaling":[0.3,0.1,0.07],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.063","id":"Building.063","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.247,0.07,0.8498],"rotation":[0,0,0],"scaling":[0.05,0.07,0.15],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.066","id":"Building.066","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.2611,0.08,-0.52],"rotation":[0,0,0],"scaling":[0.1,0.08,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,0.58,1,-1,0.58,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5191,0.5672,0.6394,-0.5191,-0.5672,0.6394,-0.5773,-0.5773,-0.5773,0.6274,0.589,0.5093,0.6274,-0.589,0.5093,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.067","id":"Building.067","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.441,0.08,-0.4198],"rotation":[0,0,0],"scaling":[0.28,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-0.5147,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-0.5147,1,-1]
+,"normals":[-0.6481,0.5658,0.5097,-0.6481,-0.5658,0.5097,-0.4987,-0.5909,-0.6341,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.4987,0.5909,-0.6341]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.033","id":"Cube.033","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.5709,0.05,-0.6959],"rotation":[0,-0.6109,0],"scaling":[0.05,0.05,0.05],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.046","id":"Cube.046","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[1.721,0.08,-1.1735],"rotation":[0,0,0],"scaling":[0.08,0.08,0.08],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.6445,1,0.8961,-2.6445,-1,0.8961,-2.6445,-1,-1.1039,3.3549,1,0.8961,3.3549,-1,0.8961,1.4149,1,-1.1039,1.4149,-1,-1.1039,-2.6445,1,-1.1039]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.7707,0.5473,0.3262,0.7707,-0.5473,0.3262,0.3029,0.629,-0.7159,0.3029,-0.629,-0.7159,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.052","id":"Cube.052","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[2.5503,0.08,-1.1839],"rotation":[0,0,0],"scaling":[0.1,0.08,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-2.0297,1,1,-2.0297,-1,1,-2.0297,-1,-1,2.0297,1,1,2.0297,-1,1,2.0297,1,-1,2.0297,-1,-1,-2.0297,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.022","id":"Building.022","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.1294,0.2589,0.6592],"rotation":[0,-1.1345,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.88,0.8529,1,-0.88,-1.2428,1,-0.88,-1.2428,-1,1.12,0.8529,1,1.12,-0.2814,1,1.12,0.8529,-1,1.12,-0.2814,-1,-0.88,0.8529,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.442,-0.7028,0.5574,-0.442,-0.7028,-0.5574,0.5773,0.5773,0.5773,0.6742,-0.424,0.6046,0.5773,0.5773,-0.5773,0.6742,-0.424,-0.6046,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,5,7,2,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,6,5,2,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.082","id":"Cube.082","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.0876,0.0694,2.5622],"rotation":[0,-0.733,0],"scaling":[1,1,1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-0.0943,0.0662,-0.1873,-0.0943,0.0662,0.1866,-0.0943,-0.0648,0.1866,0.093,0.0662,0.1866,0.093,-0.0691,0.1866,0.093,0.0662,-0.1873,0.093,-0.0676,-0.1873,-0.0943,-0.0633,-0.1873]
+,"normals":[-0.5773,0.5773,-0.5773,-0.5773,0.5773,0.5773,-0.5831,-0.5714,0.5775,0.5773,0.5773,0.5773,0.5711,-0.5857,0.5751,0.5773,0.5773,-0.5773,0.5716,-0.5832,-0.5772,-0.5835,-0.5689,-0.5796]
+,"indices":[0,1,2,1,3,4,5,6,4,0,7,6,7,2,4,3,1,0,7,0,2,2,1,4,3,5,4,5,0,6,6,7,4,5,3,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.050","id":"Building.050","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.872,0.1,-0.497],"rotation":[0,-0.7854,0],"scaling":[0.1,0.1,0.1],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-4.6207,1,0.6474,-4.6207,-1,0.6474,-4.629,-1,-1,0.1294,1,0.6442,0.1294,-1,0.6442,1,1,-1,1,-1,-1,-4.629,1,-1]
+,"normals":[-0.5755,0.5776,0.5789,-0.5755,-0.5776,0.5789,-0.5789,-0.5771,-0.576,0.41,0.6074,0.6804,0.41,-0.6074,0.6804,0.7121,0.556,-0.4287,0.7121,-0.556,-0.4287,-0.5789,0.5771,-0.576]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,5,3,0,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,7,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.072","id":"Building.072","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.7869,0.09,-0.4722],"rotation":[0,-1.5708,0],"scaling":[0.08,0.09,0.15],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1.4557,1,1,-1.4557,-1,1,-1.4557,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1.4557,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Building.073","id":"Building.073","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-2.9304,0.06,-0.2832],"rotation":[0,0,0],"scaling":[0.05,0.06,0.2],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,-0.5773,-0.5773,-0.5773,0.5773,-0.5773]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,1,4,6,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,2,1,6,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Cube.105","id":"Cube.105","parentId":"Buildings (solid)","materialId":"paris_solid_buildings.Material.buildings","billboardMode":0,"position":[-0.7373,0.08,0.0767],"rotation":[0,0.7854,0],"scaling":[0.08,0.08,0.23],"isVisible":true,"isEnabled":true,"useFlatShading":false,"checkCollisions":false,"castShadows":false,"receiveShadows":false
+,"positions":[-1,1,1,-1,-1,1,-1,-1,-1.6978,1,1,1,1,-1,1,1,1,-1,1,-1,-1,-1,1,-1.6978]
+,"normals":[-0.5773,0.5773,0.5773,-0.5773,-0.5773,0.5773,-0.479,-0.5617,-0.6745,0.5773,0.5773,0.5773,0.5773,-0.5773,0.5773,0.654,0.5971,-0.4645,0.654,-0.5971,-0.4645,-0.479,0.5617,-0.6745]
+,"indices":[0,1,2,3,4,1,5,6,4,7,2,6,2,1,4,3,0,7,7,0,2,0,3,1,3,5,4,5,7,6,6,2,4,5,3,7]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":8,"indexStart":0,"indexCount":36}]
+,"instances":[]}
+,{"name":"Trees","id":"Trees","position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false},{"name":"Ground.parent","id":"Ground.parent","position":[0.7825,-0.1786,0.2346],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"isEnabled":true,"checkCollisions":false,"billboardMode":0,"receiveShadows":false}],
+"cameras":[],"activeCamera":"Camera",
+"lights":[],
+"shadowGenerators":[]}

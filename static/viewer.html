@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Babylon Viewer Demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@7.54.2/dist/babylon-viewer.esm.min.js"
+    ></script>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const url =
+        location.search.split("url=").pop() ||
+        "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb";
+
+      document.body.innerHTML = `
+          <babylon-viewer
+            source="${url}"
+            environment="auto"
+            camera-auto-orbit
+          >
+          </babylon-viewer>
+        `;
+    </script>
+  </body>
+</html>

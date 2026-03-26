@@ -1,0 +1,28 @@
+﻿# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	3D Artist: Michel Rousseau
+	Contact: mirousse [at] microsoft.com
+	Twitter: @rousseau_michel
+	From: Paris, France
+
+	Developer: David Rousset
+	Contact: davrous [at] microsoft.com
+	Twitter: @davrous
+	From: Paris, France
+
+	Developer: David Catuhe
+	Contact: davca [at] microsoft.com
+	Twitter: @deltakosh
+	From: Seattle, USA
+
+	Developer: Julien Moreau-Mathis
+	Contact: moreau-mathis [at] intechinfo.fr
+	Twitter: @luaacro
+	From: Paris, France
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, WebGL, Web Audio, IndexedDB

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Minority Race</title>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!--Babylon-->
+	<script src="https://cdn.socket.io/socket.io-1.4.0.js"></script>
+    <script src="js/libs/babylon.max.js"></script>
+    <script src="js/libs/babylon.skyMaterial.min.js"></script>
+	<script src="js/libs/cannon.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Car.js"></script>
+    <script src="js/Hud.js"></script>
+    <script src="js/Socket.js"></script>
+    <script src="js/GamepadController.js"></script>
+    <script src="js/KeyboardController.js"></script>
+    <script src="js/CheckpointManager.js"></script>
+    <script src="js/MenuManager.js"></script>
+    <script src="js/MainMenu.js"></script>
+    <script src="js/MenuMultiEnd.js"></script>
+    <script src="js/MenuMultiStart.js"></script>
+    <script src="js/MenuSoloEnd.js"></script>
+	
+    <!--Css-->
+    <link rel='stylesheet' href='css/main.css'/>
+
+    <style>
+        .loader {
+            background-image: url('splashscreen.jpg');
+            background-size: cover;
+        }
+
+        .text {
+            position:absolute;
+            z-index:10;
+            color:white;
+            text-align:center;
+            width:100%;
+            bottom: 50px;
+            font-size:0.25em;
+            letter-spacing: 3px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div class="text">
+            Loading in progress, it may take a few minutes...
+        </div>
+    </div>
+        
+    <!--The game canvas-->
+    <canvas id="game-canvas"></canvas>
+
+    <!--Starting the game-->
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            new Game('game-canvas');
+        });
+    </script>
+
+</body>
+</html>

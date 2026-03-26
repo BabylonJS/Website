@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Haunted mansion</title>
+    <script src="//preview.babylonjs.com/babylon.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #326696;
+            margin: 0px;
+            overflow: hidden;
+            font-family: Monospace;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+        var engine = new BABYLON.Engine(canvas, true);
+        BABYLON.SceneLoader.ForceFullSceneLoadingForIncremental = true;
+        BABYLON.SceneLoader.Load("", "Manoir.babylon", engine, function (scene) {
+
+            scene.activeCamera.attachControl(canvas);
+
+            if (scene.activeCamera.keysUp) {
+                scene.activeCamera.keysUp.push(90); // Z
+                scene.activeCamera.keysUp.push(87); // W
+                scene.activeCamera.keysDown.push(83); // S
+                scene.activeCamera.keysLeft.push(65); // A
+                scene.activeCamera.keysLeft.push(81); // Q
+                scene.activeCamera.keysRight.push(69); // E
+                scene.activeCamera.keysRight.push(68); // D
+            }
+
+            scene.executeWhenReady(function() {
+                engine.runRenderLoop(function() {
+                    scene.render();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

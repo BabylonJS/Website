@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Babylon.js Ink Demo</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cta4xsb.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #2a2342; 
+            color: #ffffff;
+            font-family: "acumin-pro";
+        }
+
+        #renderCanvas {
+            width: 1024px;
+            height: 768px;
+            display: block;
+            font-size: 0;
+            margin: auto;
+            border:none !important;
+            outline:none !important;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 230px 494px 300px auto;
+            grid-template-rows: 80px 768px 80px;
+        }
+
+        .headerLogo {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            background-color: #201936;
+        }
+
+        .headerLogo > a > img {
+            width: auto;
+            height: 80px;
+            margin-left: 10px;
+        }
+
+        .headerText {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 40px;
+            line-height: 80px;
+            text-align: center;
+            background-color: #201936;
+            font-family: "acumin-pro-extra-condensed";
+        }
+
+        .headerFPS {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 31px;
+            line-height: 80px;
+            text-align: center;
+            background-color: #BB464B;
+        }
+
+        .content {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        .footer {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: unset;
+        }
+        a:hover {
+            color: #FFFFFF;
+        }
+        a:visited {
+            color: #FFFFFF;
+        }
+        a:focus {
+            color: #FFFFFF;
+        }
+
+        .headerFPS a {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #201936;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #BB464B;
+            text-decoration: unset;
+        }
+        .footer a:visited {
+            color: #BB464B;
+            text-decoration: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerLogo">
+            <a href="https://www.babylonjs.com">
+                <img src="./assets/logo.svg"></img>
+            </a>
+        </div>
+        <div class="headerText">
+            <a href="https://www.babylonjs.com">
+                Web Ink Trial
+            </a>
+        </div>
+        <div class="headerFPS" id="fps">
+            Loading...
+        </div>
+        <div class="content">
+            <canvas id="renderCanvas" width="1024" height="768"></canvas>
+        </div>
+        <div class="footer"> |
+            <a href="#" id="undo">Undo (ctrl+z)</a> |
+            <a href="#" id="redo">Redo (ctrl+y)</a> |
+            <a href="#" id="clear">Clear</a> |
+            <a href="#" id="size1">Size 1</a> |
+            <a href="#" id="size5">Size 5</a> |
+            <a href="#" id="size15">Size 15</a> |
+            <a href="#" id="black">Black</a> |
+            <a href="#" id="white">White</a> |
+            <a href="#" id="rainbow">Rainbow</a> |
+            <p>
+                Find the sources of the project <a href="https://github.com/sebavan/BabylonjsInkSample">Github</a>.
+            </p>
+        </div>
+    <div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

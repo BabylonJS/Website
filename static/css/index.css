@@ -1,0 +1,240 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    font-family: "Segoe WP", "Segoe UI", "Verdana", "Arial";
+    touch-action: none;
+    -ms-touch-action: none;
+}
+
+.warning {
+    color: red;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: white;
+    }
+
+
+#optimizerFeedback {
+    font-size: 12px;
+    color: orange;
+}
+
+#enableDebug, #fullscreen {
+    width: 100px;
+    margin-left: 50px;
+}
+
+.buttonControlPanel {
+    height: 3em;
+    width: 17em;
+    margin: 5px 0px 5px 0px;
+    line-height: 2.2em;
+}
+
+.smallButtonControlPanel {
+    height: 2.2em;
+    width: 17em;
+    margin: 2px 0px 2px 0px;
+}
+
+    .smallButtonControlPanel.pushed {
+        border: 2px solid #00008b;
+    }
+
+.buttonImg {
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+
+button {
+    border: 1px solid #888888;
+    background-color: #DEDEDE;
+    color: #888888;
+}
+
+    button:hover {
+        background-color: #EEEEEE;
+    }
+
+    button:active {
+        transform: scale(0.98);
+        -webkit-transform: scale(0.98);
+    }
+
+#notSupported {
+    color: red;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    background-color: #EEEEEE;
+    border: 1px solid #888888;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 30px;
+    z-index: 3;
+    cursor: default;
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+#fps {
+    position: absolute;
+    right: 20px;
+    top: 5em;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+#attribution {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+#attribution a {
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+#attribution a:hover {
+    font-size: 15px;
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+#attribution a:visited {
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+#stats {
+    position: absolute;
+    right: 20px;
+    top: 11em;
+    font-size: 14px;
+    color: white;
+    text-align: right;
+    text-shadow: 2px 2px 0 black;
+}
+
+#status {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+#controlPanel {
+    position: absolute;
+    height: 100px;
+    bottom: 0px;
+    width: 220px;
+    left: 50%;
+    margin-left: -110px;
+    z-index: 10;
+    transition: transform 0.25s ease-in-out;
+    transform: translateY(100px);
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: translateY(100px);
+}
+
+.tag {
+    position: absolute;
+    background-color: #EEEEEE;
+    height: 40px;
+    width: 150px;
+    left: 50%;
+    padding: 5px;
+    color: #888888;
+    font-size: 18px;
+    margin-left: -75px;
+    text-align: center;
+    top: -40px;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+}
+
+#controlsZone {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    color: #888888;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    padding: 10px;
+}
+
+#cameraPanel {
+    position: absolute;
+    right: 0px;
+    width: 17em;
+    top: 2em;
+    z-index: 10;
+    transition: transform 0.25s ease-in-out;
+    transform: translateX(17em);
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: translateX(17em);
+}
+
+.cameraTag {
+    position: absolute;
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 50px;
+    top: 0px;
+    left: -50px;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    z-index: 100;
+}
+
+#clickableTag {
+    cursor: hand;
+    background-color: transparent;
+}
+
+#cameraClickableTag {
+    cursor: hand;
+    background-color: transparent;
+}
+
+#cameraControlsZone {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    color: #888888;
+    padding: 20px;
+    border-bottom-left-radius: 10px 10px;
+}
+
+.hidden {
+    display: none;
+}
