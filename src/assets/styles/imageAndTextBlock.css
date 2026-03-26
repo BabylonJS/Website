@@ -69,7 +69,9 @@
 
     .image-and-text-block .text-block h2{
         max-width: 300px;
+        width: 100%;
         margin: 0 auto 18px;
+        text-align: left;
     }
 
     .image-and-text-block .text-block p{
