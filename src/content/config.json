@@ -563,7 +563,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "3MF Exporter",
-                "desc": "Babylon.js 9.0 brings a new exporter, allowing you to export your scene geometry to the popular 3D printing format 3MF! This wonderful new contribution comes courtesy of community member Guillaume_Pelletier.",
+                "desc": "Babylon.js 9.0 brings a new exporter, allowing you to export your scene geometry to the popular 3D printing format 3MF!",
                 "moreInfoLink": "https://aka.ms/babylon93MFdoc",
                 "moreInfoText": "Learn more about 3MF Exporter in Babylon.js",
                 "target": "_blank"
