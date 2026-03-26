@@ -38,6 +38,16 @@
                     "target": "_blank"
                 },
                 {
+                    "menuTitle": "NODE PARTICLE EDITOR",
+                    "menuUrl": "https://npe.babylonjs.com/",
+                    "target": "_blank"
+                },
+                {
+                    "menuTitle": "NODE RENDER GRAPH EDITOR",
+                    "menuUrl": "https://nrge.babylonjs.com/",
+                    "target": "_blank"
+                },
+                {
                     "menuTitle": "VIEWER CONFIGURATOR",
                     "menuUrl": "https://viewerconfig.babylonjs.com/",
                     "target": "_blank"
