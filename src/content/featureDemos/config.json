@@ -9,6 +9,158 @@
         "desc": "A collection of demos highlighting some of the features of Babylon.js including physically-based rendering, user input and interaction, physics, animation, particle systems, custom node materials, and more.",
         "items": [
           {
+            "desc": "Clustered Lighting",
+            "link": "https://aka.ms/babylon9CLDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/clusteredLighting.jpg",
+              "alt": "Dozens of glowing fireflies illuminating stone ruins, a vine-wrapped tree, and ferns in a dark nighttime scene"
+            }
+          },
+          {
+            "desc": "Textured Area Lights",
+            "link": "https://aka.ms/babylon9TALDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/texturedAreaLights.jpg",
+              "alt": "A sci-fi corridor with a glowing navigation sign reading Storage Room and Engine Room, casting orange and blue light on metallic walls"
+            }
+          },
+          {
+            "desc": "Node Particle Editor",
+            "link": "https://aka.ms/babylon9NPEDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/nodeParticleEditor.jpg",
+              "alt": "A bright fiery sun made entirely of particles, glowing orange and yellow with solar flares against a black background"
+            }
+          },
+          {
+            "desc": "Particle Flow Maps",
+            "link": "https://aka.ms/babylon9PartFMDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/particleFlowMaps.jpg",
+              "alt": "Swirling purple and pink glowing particles forming an abstract flowing pattern against a dark background"
+            }
+          },
+          {
+            "desc": "Volumetric Lighting",
+            "link": "https://aka.ms/babylon9vlDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/volumetricLighting.jpg",
+              "alt": "A dark industrial warehouse interior with a dramatic diagonal light shaft cutting through hazy atmosphere"
+            }
+          },
+          {
+            "desc": "Frame Graph",
+            "link": "https://aka.ms/babylon9FGDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/frameGraph.jpg",
+              "alt": "Sunlight streaming through Gothic arched windows of a stone cathedral interior rendered as a Gaussian splat"
+            }
+          },
+          {
+            "desc": "Animation Retargeting",
+            "link": "https://aka.ms/babylon9ARDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/animationRetargeting.jpg",
+              "alt": "Three different 3D characters of varying body types sharing the same animation pose on a grid floor"
+            }
+          },
+          {
+            "desc": "Gaussian Splats",
+            "link": "https://aka.ms/babylon9GSDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/gaussianSplats.jpg",
+              "alt": "A Gaussian splat capture of red Adirondack chairs circled around a stone fire pit with a cartoon cat character"
+            }
+          },
+          {
+            "desc": "Inspector v2",
+            "link": "https://aka.ms/babylon9iv2Demo",
+            "img": {
+              "url": "/featureDemos/assets/img/inspectorV2.jpg",
+              "alt": "A colorful 3D scene with glowing crystals, candles, and floating orbs alongside the Inspector v2 Scene Explorer and Properties panels"
+            }
+          },
+          {
+            "desc": "Geospatial Camera",
+            "link": "https://aka.ms/babylon9GSCDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/geospatialCamera.jpg",
+              "alt": "A textured planet with swirling brown and tan cloud patterns viewed from orbit against a black space background with navigation controls overlay"
+            }
+          },
+          {
+            "desc": "3D Tiles",
+            "link": "https://aka.ms/babylon93DTDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/threeDTiles.jpg",
+              "alt": "An aerial 3D view of Manhattan showing photorealistic buildings, parks, and waterways streamed from geospatial tile data"
+            }
+          },
+          {
+            "desc": "Large World Rendering",
+            "link": "https://aka.ms/babylon9LWDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/largeWorldRendering.jpg",
+              "alt": "Side-by-side comparison showing jittering artifacts with Floating Origin off versus smooth, stable objects with Floating Origin on"
+            }
+          },
+          {
+            "desc": "Atmosphere",
+            "link": "https://aka.ms/babylon9ATMDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/atmosphere.jpg",
+              "alt": "A sunset horizon with warm orange-to-blue gradient sky fading into a dark landscape, with a time-of-day slider at 5:24pm"
+            }
+          },
+          {
+            "desc": "OpenPBR",
+            "link": "https://aka.ms/babylon9OPBRDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/openPBR.jpg",
+              "alt": "A glossy dark red sphere with a cutaway revealing a matte interior, sitting on a blue-gray pedestal with clear coat reflections"
+            }
+          },
+          {
+            "desc": "Dynamic IBL Shadows",
+            "link": "https://aka.ms/babylon9IBLSDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/dynamicIBLShadows.jpg",
+              "alt": "A realistic shark model resting on a sandy ocean floor with soft environment-based shadows and blue underwater lighting"
+            }
+          },
+          {
+            "desc": "SDF Text",
+            "link": "https://aka.ms/babylon9sdfDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/sdfText.jpg",
+              "alt": "Hot pink Lorem Ipsum text rendered in perspective on a black surface, remaining sharp and crisp at all depths"
+            }
+          },
+          {
+            "desc": "Outline Renderer",
+            "link": "https://aka.ms/babylon9OLDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/outlineRenderer.jpg",
+              "alt": "Two dark cylindrical objects on a grayscale surface, one highlighted with a blue outline showing its silhouette shape"
+            }
+          },
+          {
+            "desc": "Nav Mesh",
+            "link": "https://aka.ms/babylon9NMDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/navMesh.jpg",
+              "alt": "A cluster of glowing fireflies hovering over a dirt path among rocks, ferns, and a tree trunk in a dark outdoor scene"
+            }
+          },
+          {
+            "desc": "Audio Engine",
+            "link": "https://aka.ms/babylon9AudioDemo",
+            "img": {
+              "url": "/featureDemos/assets/img/audioEngine.jpg",
+              "alt": "A glowing sci-fi system monitor display showing temperature, pressure, and energy readings in a dark industrial environment"
+            }
+          },
+          {
             "desc": "IBL Shadows",
 
             "link": "https://aka.ms/babylon8IBLShadows",

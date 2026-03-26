@@ -412,5 +412,32 @@
             "url": "/community/assets/img/Evasion.jpg",
             "alt": "Evasion"
         }
+    },
+    {
+        "desc": "Babel.js",
+        "author": "by Chihabeddine Aourinmouche, Sherine Soumare Dit Sabathier, Enzo Rostaing",
+        "link": "https://babel-js.herokuapp.com/",
+        "img": {
+            "url": "../community/assets/img/babeljs.jpg",
+            "alt": "Babel.js"
+        }
+    },
+    {
+        "desc": "Snow Ball",
+        "author": "by mawa",
+        "link": "http://www.media-geneva.ch/demos/bjs/snowball/psa.html",
+        "img": {
+            "url": "../community/assets/img/snowBall.jpg",
+            "alt": "Snow Ball"
+        }
+    },
+    {
+        "desc": "MRI",
+        "author": "by Jonathan Lurie",
+        "link": "http://www.pixpipe.io/pixpipejs/examples/bjs_texture3D_example.html",
+        "img": {
+            "url": "/community/assets/img/mri.jpg",
+            "alt": "MRI"
+        }
     }
 ]

@@ -5,6 +5,8 @@
     "main": "gulpfile.js",
     "scripts": {
         "start": "gulp run",
+        "process-images": "node .github/scripts/process-images.js",
+        "update-image": "node .github/scripts/update-image.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -14,6 +16,7 @@
         "fs-extra": "^7.0.1",
         "gulp": "^5.0.0",
         "gulp-connect": "^5.7.0",
-        "handlebars": "^4.1.1"
+        "handlebars": "^4.1.1",
+        "sharp": "^0.33.5"
     }
 }

@@ -64,7 +64,13 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer",
+                                        "link": "https://aka.ms/babylon9FGDoc",
+                                        "text": "Frame Graph"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9VDoc",
                                         "text": "A user-friendly, feature-rich, and lightweight viewer"
                                     }
                                 ],
@@ -149,6 +155,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9ARDoc",
+                                        "text": "Animation Retargeting"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/particles",
                                         "text": "Particles "
                                     },
@@ -168,6 +180,18 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9PartFMDoc",
+                                        "text": "Particle Flow Maps"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9PartAttDoc",
+                                        "text": "Particle Attractors"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/sprites",
                                         "text": "Sprites "
                                     },
@@ -180,7 +204,7 @@
                                         "text": "Complete "
                                     },
                                     {
-                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/audio/playingSoundsMusic",
+                                        "link": "https://aka.ms/babylon9AudioDoc",
                                         "text": "audio engine "
                                     },
                                     {
@@ -210,6 +234,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9sdfDoc",
+                                        "text": "Signed Distance Field Text"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR",
                                         "text": "WebXR Support"
                                     }
@@ -218,6 +248,18 @@
                                     {
                                         "link": "https://aka.ms/babylon8webxrDSDoc",
                                         "text": "WebXR Depth Sensing"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon93DTDoc",
+                                        "text": "3D Tiles Support"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9LWDoc",
+                                        "text": "Large World Rendering"
                                     }
                                 ]
                             ]
@@ -247,6 +289,12 @@
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/materials/using/introToPBR",
                                         "text": "Physically Based Rendering (PBR)"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9OPBRDoc",
+                                        "text": "OpenPBR Support"
                                     }
                                 ],
                                 [
@@ -290,6 +338,19 @@
                                     {
                                         "link": "https://aka.ms/babylon8AreaLightsDoc",
                                         "text": "Area Lights"
+                                    },
+                                    {
+                                        "text": " and "
+                                    },
+                                    {
+                                        "link": "https://aka.ms/babylon9TALDoc",
+                                        "text": "Textured Area Lights"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9CLDoc",
+                                        "text": "Clustered Lighting"
                                     }
                                 ],
                                 [
@@ -307,7 +368,17 @@
                                 [
                                     {
                                         "link": "https://aka.ms/babylon8IBLShadowsDoc",
-                                        "text": "IBL Shadows"
+                                        "text": "IBL"
+                                    },
+                                    {
+                                        "text": " and "
+                                    },
+                                    {
+                                        "link": "https://aka.ms/babylon9IBLSDoc",
+                                        "text": "Dynamic IBL"
+                                    },
+                                    {
+                                        "text": " Shadows"
                                     }
                                 ],
                                 [
@@ -361,6 +432,12 @@
                                     {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/environment/skybox#ground-projection",
                                         "text": "Skybox Ground Projection"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9ATMDoc",
+                                        "text": "Physically Based Atmosphere"
                                     }
                                 ],
                                 [
@@ -488,8 +565,8 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting",
-                                        "text": "Gaussian Splat Rendering"
+                                        "link": "https://aka.ms/babylon9GSDoc",
+                                        "text": "Advanced Gaussian Splat Support"
                                     },
                                     {
                                         "text": "supporting .ply, compressed .ply, .splat, and .spz file formats"
@@ -634,6 +711,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9vlDoc",
+                                        "text": "Volumetric Lighting"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/postProcesses/usePostProcesses",
                                         "text": "Post-processes"
                                     }
@@ -698,6 +781,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9OLDoc",
+                                        "text": "Outline Renderer"
+                                    }
+                                ],
+                                [
+                                    {
                                         "link": "https://doc.babylonjs.com/features/featuresDeepDive/cameras/multiViewsPart1",
                                         "text": "Multi-views"
                                     }
@@ -716,7 +805,7 @@
                                 ],
                                 [
                                     {
-                                        "link": "https://doc.babylonjs.com/features/featuresDeepDive/crowdNavigation",
+                                        "link": "https://aka.ms/babylon9NMDoc",
                                         "text": "Navigation mesh and crowd of moving agents"
                                     }
                                 ],
@@ -743,6 +832,12 @@
                         {
                             "title": "CAMERAS",
                             "list": [
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9GSCDoc",
+                                        "text": "Geospatial Camera"
+                                    }
+                                ],
                                 [
                                     {
                                         "text": "Universal camera (keyboard/touch/gamepad)"
@@ -829,6 +924,12 @@
                                 ],
                                 [
                                     {
+                                        "link": "https://aka.ms/babylon9NPEDoc",
+                                        "text": "Node Particle Editor"
+                                    }
+                                ],
+                                [
+                                    {
                                         "text": "Exporters for "
                                     },
                                     {
@@ -865,6 +966,12 @@
                                     {
                                         "link": "https://doc.babylonjs.com/toolsAndResources/inspector",
                                         "text": "Inspector"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "link": "https://aka.ms/babylon9iv2Doc",
+                                        "text": "Inspector v2"
                                     }
                                 ],
                                 [

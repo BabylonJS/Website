@@ -29,5 +29,34 @@
                 }
             }
         },
+        {
+            "label": "Process All Images",
+            "type": "shell",
+            "command": "npm run process-images",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Update Single Image",
+            "type": "shell",
+            "command": "npm run update-image -- ${input:imageName}",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
     ],
+    "inputs": [
+        {
+            "id": "imageName",
+            "type": "promptString",
+            "description": "Base name of the image to update (e.g., clusteredLights, particleFMAT)"
+        }
+    ]
 }

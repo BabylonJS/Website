@@ -1,0 +1,60 @@
+Starting image processing...
+
+Destination directory: ./src/assets/img
+
+Γ£ô clusteredLights.png -> clusteredLighting.png (43.24 KB) [BG: #060400]
+Γ£ô texturedAreaLights.png -> texturedAreaLights.png (60.02 KB) [BG: #191b1d]
+Γ£ô NPE.png -> nodeParticleEditor.png (26.73 KB) [BG: #000000]
+Γ£ô particleFMAT.png -> particleFlowMaps.png (43.03 KB) [BG: #0b0b0b]
+Γ£ô volumetricLighting.png -> volumetricLighting.png (30.84 KB) [BG: #1f1f1f]
+Γ£ô frameGraph.png -> frameGraph.png (72.19 KB) [BG: #343434]
+Γ£ô animationRetargeting.png -> animationRetargeting.png (27.37 KB) [BG: #33334c]
+Γ£ô GaussianSplat.png -> gaussianSplat.png (54.41 KB) [BG: #32324b]
+Γ£ô editor.png -> babylonEditor.png (31.65 KB) [BG: #232323]
+Γ£ô inspectorV2.png -> inspectorV2.png (48.50 KB) [BG: #4f3d40]
+Γ£ô viewer.png -> viewerUpdates.png (48.03 KB) [BG: #302b2b]
+Γ£ô playground.png -> playgroundUpdates.png (39.53 KB) [BG: #32324b]
+Γ£ô largeWorld.png -> largeWorldRendering.png (23.24 KB) [BG: #33334d]
+Γ£ô geoSpatialCamera.png -> geospatialCamera.png (8.14 KB) [BG: #000000]
+Γ£ô 3DTiles.png -> 3dTiles.png (133.28 KB) [BG: #333333]
+Γ£ô atmospheric.png -> physicallyBasedAtmosphere.png (30.37 KB) [BG: #96a5cd]
+Γ£ô openPBR.png -> openPBR.png (30.28 KB) [BG: #958c88]
+Γ£ô IBLShadows.png -> dynamicIBLShadows.png (46.35 KB) [BG: #3e7092]
+Γ£ô sdf.png -> sdfText.png (18.77 KB) [BG: #000000]
+Γ£ô outlineRenderer.png -> outlineRenderer.png (30.84 KB) [BG: #020202]
+Γ£ô navMesh.png -> navMesh.png (30.30 KB) [BG: #000000]
+Γ£ô audio.png -> audioEngine.png (34.40 KB) [BG: #000000]
+Γ£ô 3mf.png -> 3mfExporter.png (18.26 KB) [BG: #000000]
+
+============================================================
+SUMMARY - Background Colors for config.json:
+============================================================
+clusteredLighting.png               -> #060400
+texturedAreaLights.png              -> #191b1d
+nodeParticleEditor.png              -> #000000
+particleFlowMaps.png                -> #0b0b0b
+volumetricLighting.png              -> #1f1f1f
+frameGraph.png                      -> #343434
+animationRetargeting.png            -> #33334c
+gaussianSplat.png                   -> #32324b
+babylonEditor.png                   -> #232323
+inspectorV2.png                     -> #4f3d40
+viewerUpdates.png                   -> #302b2b
+playgroundUpdates.png               -> #32324b
+largeWorldRendering.png             -> #33334d
+geospatialCamera.png                -> #000000
+3dTiles.png                         -> #333333
+physicallyBasedAtmosphere.png       -> #96a5cd
+openPBR.png                         -> #958c88
+dynamicIBLShadows.png               -> #3e7092
+sdfText.png                         -> #000000
+outlineRenderer.png                 -> #020202
+navMesh.png                         -> #000000
+audioEngine.png                     -> #000000
+3mfExporter.png                     -> #000000
+
+Γ£ô All images processed successfully!
+Total images: 23
+Total size: 929.77 KB
+
+≡ƒô¥ Background colors saved to image-colors.json
