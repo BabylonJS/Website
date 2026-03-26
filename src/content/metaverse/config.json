@@ -42,7 +42,7 @@
                 "items": [
                     {
                         "desc": "Check out the features",
-                        "link": "https://www.babylonjs.com/games/#feature",
+                        "link": "https://www.babylonjs.com/specifications/",
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         }
@@ -132,15 +132,6 @@
                 "title": "More Metaverse Experiences",
                 "desc": "Babylon.js is a fully-featured 3D framework built on the WebGL platform. The engine works seamlessly and transparently on both WebGL 1.0 and WebGL 2.0 platforms. And Babylon.js is available on the devices your users frequent:",
                 "items": [
-                    {
-                        "desc": "Exibition Of City Solutions",
-                        "author": "by DAL",
-                        "link": "https://mrexpo.online/#/expo",
-                        "img": {
-                            "url": "/community/assets/img/exibitionOfCitySolutions.jpg",
-                            "alt": "Exibition Of City Solutions"
-                        }
-                    },
                     {
                         "desc": "Grapevine",
                         "author": "by Grapevine",
