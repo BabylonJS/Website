@@ -84,6 +84,15 @@
         margin: 20px auto 0 !important;
     }
 
+    .viewer-and-text-block .text-block .link-block a{
+        font-size: 0;
+    }
+
+    .viewer-and-text-block .text-block .link-block a::after{
+        content: "Learn more \2192";
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 350px){
