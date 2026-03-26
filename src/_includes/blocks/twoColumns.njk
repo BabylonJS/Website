@@ -1,0 +1,119 @@
+<section class="two-columns">
+    <h1>{{ title }}</h1>
+    <div class="columns-container">
+        <div class="left-list">
+            {% for section in left.sections %}
+            {% if section.title %}
+            <h2>{{ section.title }}</h2>
+            {% endif %}
+            {% if section.list %}
+            <ul>
+                {% for listItem in section.list %}
+                <li>
+                    {% for part in listItem %}
+                    {% if part.link %}
+                    <a href="{{ part.link }}">{{ part.text }}</a>
+                    {% elif part.list %}
+                    <ul>
+                        {% for subItem in part.list %}
+                        <li>
+                            {% for subPart in subItem %}
+                            {% if subPart.link %}
+                            <a href="{{ subPart.link }}">{{ subPart.text }}</a>
+                            {% else %}
+                            {{ subPart.text }}
+                            {% endif %}
+                            {% endfor %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    {{ part.text }}
+                    {% endif %}
+                    {% endfor %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% elif section.spans %}
+            <p>
+                {% for span in section.spans %}
+                {% if span.isBold %}<b>{% endif %}
+                    {% if span.link %}
+                    <a href="{{ span.link }}">{{ span.text }}</a>
+                    {% else %}
+                    {{ span.text }}
+                    {% endif %}
+                    {% if span.isBold %}</b>{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+            {% if section.images %}
+            {% for image in section.images %}
+            <a title="{{ image.linkTitle }}" url="{{ image.link }}">
+                <img height="40" title="{{ image.imgTitle }}" alt="{{ image.imgAlt }}" src="{{ image.imgUrl }}">
+            </a>
+            <br />
+            {% endfor %}
+            {% endif %}
+            <br>
+            {% endfor %}
+        </div>
+        <div class="right-list">
+            {% for section in right.sections %}
+            {% if section.title %}
+            <h2>{{ section.title }}</h2>
+            {% endif %}
+            {% if section.list %}
+            <ul>
+                {% for listItem in section.list %}
+                <li>
+                    {% for part in listItem %}
+                    {% if part.link %}
+                    <a href="{{ part.link }}">{{ part.text }}</a>
+                    {% elif part.list %}
+                    <ul>
+                        {% for subItem in part.list %}
+                        <li>
+                            {% for subPart in subItem %}
+                            {% if subPart.link %}
+                            <a href="{{ subPart.link }}">{{ subPart.text }}</a>
+                            {% else %}
+                            {{ subPart.text }}
+                            {% endif %}
+                            {% endfor %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    {{ part.text }}
+                    {% endif %}
+                    {% endfor %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% elif section.spans %}
+            <p>
+                {% for span in section.spans %}
+                {% if span.isBold %}<b>{% endif %}
+                    {% if span.link %}
+                    <a href="{{ span.link }}">{{ span.text }}</a>
+                    {% else %}
+                    {{ span.text }}
+                    {% endif %}
+                    {% if span.isBold %}</b>{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+            {% if section.images %}
+            {% for image in section.images %}
+            <a title="{{ image.linkTitle }}" url="{{ image.link }}">
+                <img title="{{ image.imgTitle }}" alt="{{ image.imgAlt }}" src="{{ image.imgUrl }}">
+            </a>
+            <br />
+            {% endfor %}
+            {% endif %}
+            <br>
+            {% endfor %}
+        </div>
+    </div>
+</section>

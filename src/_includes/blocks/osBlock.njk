@@ -1,0 +1,8 @@
+<div class="os">
+    {% for item in items %}
+    <div class="os__item">
+        <img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+        <p>{{ item.text }}</p>
+    </div>
+    {% endfor %}
+</div>

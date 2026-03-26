@@ -1,0 +1,32 @@
+<div class="viewer-block" style="width:{{ width }};height:{{ height }};padding-top:{{ paddingTop }};background-color:{{ _content['background-color'] }}">
+    <babylon-viewer
+        {% if alt %}
+            alt="{{ alt }}"
+        {% endif %}
+        {% if environment %}
+            environment="{{ environment }}"
+        {% endif %}
+        {% if _content['clear-color'] %}
+            clear-color="{{ _content['clear-color'] }}"
+        {% endif %}
+        {% if _content['camera-orbit'] %}
+            camera-orbit="{{ _content['camera-orbit'] }}"
+        {% endif %}
+        {% if _content['camera-target'] %}
+            camera-target="{{ _content['camera-target'] }}"
+        {% endif %}
+        {% if _content['camera-auto-orbit'] %}
+            camera-auto-orbit
+        {% endif %}
+        {% if _content['selected-animation'] %}
+            selected-animation="{{ _content['selected-animation'] }}"
+        {% endif %}
+        {% if _content['animation-speed'] %}
+            animation-speed="{{ _content['animation-speed'] }}"
+        {% endif %}
+        {% if _content['animation-auto-play'] %}
+            animation-auto-play
+        {% endif %}
+        source="{{ source }}">
+    </babylon-viewer>
+</div>

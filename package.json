@@ -2,9 +2,10 @@
     "name": "babylonjs-website",
     "version": "2.0.0",
     "description": "",
-    "main": "gulpfile.js",
+    "main": "eleventy.config.js",
     "scripts": {
-        "start": "gulp run",
+        "start": "npx @11ty/eleventy --serve",
+        "build": "npx @11ty/eleventy",
         "process-images": "node .github/scripts/process-images.js",
         "update-image": "node .github/scripts/update-image.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,11 +13,7 @@
     "author": "",
     "license": "Apache2",
     "dependencies": {
-        "-": "^0.0.1",
-        "fs-extra": "^7.0.1",
-        "gulp": "^5.0.0",
-        "gulp-connect": "^5.7.0",
-        "handlebars": "^4.1.1",
+        "@11ty/eleventy": "^3.1.5",
         "sharp": "^0.33.5"
     }
 }

@@ -1,0 +1,15 @@
+<section class="linkList-block" style="margin-top:{{ marginTop }};margin-bottom:{{ marginBottom }}">
+    <div class="link-part">
+        {% for item in items %}
+        <div class="link" style="margin-left:{{ item.marginLeft }};margin-right:{{ item.marginRight }}">
+            <a href="{{ item.link }}" class="link-part-link">
+                <div class="icon-back">
+                    <img class="backImage" src="/../assets/img/HexButtonStates.svg">
+                    <img class="iconImage" src="{{ item.img.url }}">
+                </div>
+                <div class="link-part-desc">{{ item.desc }}</div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
