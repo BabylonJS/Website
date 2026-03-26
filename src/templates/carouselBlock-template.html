@@ -6,23 +6,23 @@
       <a href="{{demoLink}}" target="_blank">
         <video src="{{videoUrl}}" autoplay loop muted></video>
         {{#if fallbackImage}}
-        <img class="img-fallback-carousel img-carousel" src="{{fallbackImage}}" />
+        <img class="img-fallback-carousel img-carousel" alt="{{alt}}" src="{{fallbackImage}}" />
         {{/if}}
       </a>
       {{else}}
       <video src="{{videoUrl}}" autoplay loop muted></video>
       {{#if fallbackImage}}
-      <img class="img-fallback-carousel img-carousel" src="{{fallbackImage}}" />
+      <img class="img-fallback-carousel img-carousel" alt="{{alt}}" src="{{fallbackImage}}" />
       {{/if}} {{/if}}
     </div>
     {{/if}} {{#if imgUrl}}
     <div class="img-holder">
       {{#if demoLink}}
       <a href="{{demoLink}}" target="_blank">
-        <img class="img-carousel" src="{{imgUrl}}" />
+        <img class="img-carousel" alt="{{alt}}" src="{{imgUrl}}" />
       </a>
       {{else}}
-      <img class="img-carousel" src="{{imgUrl}}" />
+      <img class="img-carousel" alt="{{alt}}" src="{{imgUrl}}" />
       {{/if}}
     </div>
     {{/if}} {{/each}}
