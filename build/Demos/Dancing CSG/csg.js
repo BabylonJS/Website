@@ -85,8 +85,9 @@
 
 		}, { streaming: true });
 
+    BABYLON.AbstractEngine.audioEngine = new BABYLON.AudioEngine();
     var analyzer = new BABYLON.Analyser(scene);
-    BABYLON.Engine.audioEngine.connectToAnalyser(analyzer);
+    BABYLON.AbstractEngine.audioEngine.connectToAnalyser(analyzer);
     analyzer.FFT_SIZE = 32;
     analyzer.SMOOTHING = 0.9;
 

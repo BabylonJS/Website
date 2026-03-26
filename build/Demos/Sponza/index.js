@@ -12,7 +12,7 @@ var vrBtn = document.getElementById("vrButton");
 var vrCamera;
 
 // Babylon
-var engine = new BABYLON.Engine(canvas, true, { limitDeviceRatio: 2 }, true);
+var engine = new BABYLON.Engine(canvas, true, { limitDeviceRatio: 2, audioEngine: true }, true);
 engine.enableOfflineSupport = true;
 
 function togglerDebugLayer() {
