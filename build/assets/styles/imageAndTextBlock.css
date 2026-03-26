@@ -77,6 +77,11 @@
         margin: 0 auto;
     }
 
+    .image-and-text-block .text-block .link-block{
+        max-width: 300px;
+        margin: 20px auto 0 !important;
+    }
+
 }
 
 @media (max-width: 350px){
