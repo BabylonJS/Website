@@ -42,7 +42,7 @@
                 "items": [
                     {
                         "desc": "Check out the features",
-                        "link": "https://www.babylonjs.com/games/#feature",
+                        "link": "https://www.babylonjs.com/specifications/",
                         "img": {
                             "url": "../assets/img/NotesIcon.svg"
                         }

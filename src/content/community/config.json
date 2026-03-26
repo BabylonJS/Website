@@ -52,16 +52,7 @@
                             "url": "/community/assets/img/bitByBit.jpg",
                             "alt": "Projects"
                         }
-                    },
-                    {
-                        "desc": "Castle of Arques-La-Bataille",
-                        "author": "by Vinc3r",
-                        "link": "https://time-loop.fr/Arques/EXPERIENCES/3DSCAN/",
-                        "img": {
-                            "url": "/community/assets/img/Arques-La-Bataille.jpg",
-                            "alt": "Castle of Arques-La-Bataille"
-                        }
-                    },      
+                    },  
                     {
                         "desc": "3D Cabinet Designer",
                         "author": "by Unda Solutions",
@@ -893,7 +884,7 @@
                     {
                         "desc": "Adobe Dimension web export",
                         "author": "by Adobe",
-                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "link": "https://blog.adobe.com/en/publish/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature",
                         "img": {
                             "url": "/community/assets/img/Dimension.jpg",
                             "alt": "Adobe Dimension web export"

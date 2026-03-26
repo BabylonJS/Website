@@ -1062,7 +1062,7 @@
                     {
                         "desc": "Adobe Dimension web export",
                         "author": "by Adobe",
-                        "link": "https://theblog.adobe.com/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature/",
+                        "link": "https://blog.adobe.com/en/publish/2018/11/12/behind-the-scenes-with-adobe-dimension-engineers-how-we-built-the-3d-publish-feature",
                         "img": {
                             "url": "../community/assets/img/Dimension.jpg",
                             "alt": "Adobe Dimension web export"
@@ -1084,15 +1084,6 @@
                         "img": {
                             "url": "../community/assets/img/jig.jpg",
                             "alt": "JigSpace"
-                        }
-                    },
-                    {
-                        "desc": "Apartment Configurator",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
-                        "img": {
-                            "url": "../community/assets/img/ApartmentConfigurator.jpg",
-                            "alt": "Apartment Configurator"
                         }
                     }
                 ]

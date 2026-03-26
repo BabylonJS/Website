@@ -78,7 +78,7 @@ Learn more: [https://aka.ms/babylon9PartAttDoc](https://aka.ms/babylon9PartAttDo
 
 Realistic light shafts streaming through fog, dust, or haze can transform a scene from flat to cinematic — and Babylon.js 9.0 makes this easier than ever with a powerful new Volumetric Lighting system. Built on a technique using extruded light volumes, the system generates position, normal, and flux textures from the light's perspective, where each texel acts as a Virtual Point Light that illuminates participating media in the scene.
 
-The result is stunningly realistic light scattering with configurable extinction and phase parameters that give you artistic control over how light interacts with the atmosphere. The system supports both directional and spot light sources, and takes full advantage of WebGPU compute shaders for optimal performance. WebGL 2 is also supported with graceful fallbacks. Whether you're building a moody dungeon crawler, a foggy forest, or an atmospheric architectural visualization, Volumetric Lighting brings your scenes to life.
+The result is stunningly realistic light scattering with configurable extinction and phase parameters that give you artistic control over how light interacts with the atmosphere. The system supports directional light sources, and takes full advantage of WebGPU compute shaders for optimal performance. WebGL 2 is also supported with graceful fallbacks. Whether you're building a moody dungeon crawler, a foggy forest, or an atmospheric architectural visualization, Volumetric Lighting brings your scenes to life.
 
 ![Volumetric Lighting](volumetricLighting.png)
 
