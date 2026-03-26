@@ -81,15 +81,6 @@
                         }
                     },
                     {
-                        "desc": "Exibition Of City Solutions",
-                        "author": "by DAL",
-                        "link": "https://mrexpo.online/#/expo",
-                        "img": {
-                            "url": "/community/assets/img/exibitionOfCitySolutions.jpg",
-                            "alt": "Exibition Of City Solutions"
-                        }
-                    },
-                    {
                         "desc": "Verizon - Project Midnight",
                         "author": "MackeyK24",
                         "link": "https://www.babylontoolkit.com/work/Verizon_ProjectMidnight.mp4",
@@ -272,37 +263,10 @@
                     {
                         "desc": "Free Visit",
                         "author": "by Thierry_Milard",
-                        "link": "https://free-visit.net/fr/demo01",
+                        "link": "https://free-visit.net/index.php/free-visit/fridge-visit",
                         "img": {
                             "url": "/community/assets/img/freeVisit.jpg",
                             "alt": "Free Visit"
-                        }
-                    },
-                    {
-                        "desc": "Mercedes Speedboard",
-                        "author": "by Robin_McLaut",
-                        "link": "https://www.mercedes-benz.com/storage/formula-e/2021-eq-house-digital-showroom/speedboard/20211129-v2.html",
-                        "img": {
-                            "url": "/community/assets/img/mercedes.jpg",
-                            "alt": "Mercedes Speedboard"
-                        }
-                    },
-                    {
-                        "desc": "Cathedral",
-                        "author": "by Axeon Software",
-                        "link": "https://time-loop.fr/Therouanne/EXPERIENCES/3DSCAN/CATHEDRALE/#!/",
-                        "img": {
-                            "url": "/community/assets/img/cathedral.jpg",
-                            "alt": "Cathedral"
-                        }
-                    },
-                    {
-                        "desc": "Millstones",
-                        "author": "by Axeon Software",
-                        "link": "https://time-loop.fr/Therouanne/EXPERIENCES/3DSCAN/MEULE/#!/",
-                        "img": {
-                            "url": "/community/assets/img/millstones.jpg",
-                            "alt": "Millstones"
                         }
                     },
                     {
@@ -450,15 +414,6 @@
                         }
                     },
                     {
-                        "desc": "3D Graphs",
-                        "author": "by bjornbacklund",
-                        "link": "https://www.backlund.org/app.aspx?about=FancyCharts3D",
-                        "img": {
-                            "url": "../community/assets/img/3dgraphs.jpg",
-                            "alt": "3D Graphs"
-                        }
-                    },
-                    {
                         "desc": "3D Dev",
                         "author": "by Martinez",
                         "link": "https://3dev.io/",
@@ -483,15 +438,6 @@
                         "img": {
                             "url": "../community/assets/img/vrMansionGallery.jpg",
                             "alt": "VR Mansion Gallery"
-                        }
-                    },
-                    {
-                        "desc": "SYNTHAX",
-                        "author": "by Foxhoundn",
-                        "link": "https://synthax.gg/",
-                        "img": {
-                            "url": "../community/assets/img/SYNTHAX.jpg",
-                            "alt": "SYNTHAX"
                         }
                     },
                     {
@@ -528,15 +474,6 @@
                         "img": {
                             "url": "../community/assets/img/furBall.jpg",
                             "alt": "Furball Shader"
-                        }
-                    },
-                    {
-                        "desc": "Christmas Snow Globe",
-                        "author": "by Robin_McLaut",
-                        "link": "https://demo.seitwerk.de/sw-ice/",
-                        "img": {
-                            "url": "../community/assets/img/Christmas_Snow_Globe.jpg",
-                            "alt": "Christmas Snow Globe"
                         }
                     },
                     {
@@ -630,15 +567,6 @@
                         }
                     },
                     {
-                        "desc": "SpillHop",
-                        "author": "by Sacha Bydon",
-                        "link": "http://samuelmaugard.ovh/spillhop",
-                        "img": {
-                            "url": "../community/assets/img/spillHop.jpg",
-                            "alt": "SpillHop"
-                        }
-                    },
-                    {
                         "desc": "Tunnel Rush",
                         "author": "by Deer Cat",
                         "link": "https://poki.com/en/g/tunnel-rush",
@@ -672,15 +600,6 @@
                         "img": {
                             "url": "../community/assets/img/interactiveWeb.jpg",
                             "alt": "Interactive Web"
-                        }
-                    },
-                    {
-                        "desc": "Box Zombies",
-                        "author": "by jan-capiak",
-                        "link": "http://boxzombies.cakrod.sk/",
-                        "img": {
-                            "url": "../community/assets/img/boxZombies.jpg",
-                            "alt": "Box Zombies"
                         }
                     },
                     {
@@ -765,24 +684,6 @@
                         }
                     },
                     {
-                        "desc": "疯狂跳跳鸡",
-                        "author": "by yunikoro",
-                        "link": "https://h5.mobilemart.cn/dev-cock/",
-                        "img": {
-                            "url": "../community/assets/img/JumpyChicken.jpg",
-                            "alt": "疯狂跳跳鸡"
-                        }
-                    },
-                    {
-                        "desc": "Interactive background",
-                        "author": "by Naker",
-                        "link": "https://app.naker.io/back",
-                        "img": {
-                            "url": "../community/assets/img/naker-back.jpg",
-                            "alt": "Naker.Back"
-                        }
-                    },
-                    {
                         "desc": "Room Planner 3D",
                         "author": "by Wayfair",
                         "link": "https://www.wayfair.com/RoomPlanner3D",
@@ -864,15 +765,6 @@
                         }
                     },
                     {
-                        "desc": "Japanese Lamp",
-                        "author": "by Quentin Davy",
-                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/TEST/lampBabylon/",
-                        "img": {
-                            "url": "../community/assets/img/AxeonJapaneseLamp.jpg",
-                            "alt": "Japanese Lamp"
-                        }
-                    },
-                    {
                         "desc": "battlechoc",
                         "author": "by battlechoc.com",
                         "link": "https://battlechoc.com",
@@ -933,15 +825,6 @@
                         "img": {
                             "url": "/community/assets/img/unit21.jpg",
                             "alt": "Unit21 Interior Visualization - Marko & Pero"
-                        }
-                    },
-                    {
-                        "desc": "Bastille 1789",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/AXEON_SOFTWARE/PARIS_Bastille/",
-                        "img": {
-                            "url": "/community/assets/img/axeon-bastille.jpg",
-                            "alt": "Bastille 1789 - Axeon"
                         }
                     },
                     {
@@ -1017,15 +900,6 @@
                         }
                     },
                     {
-                        "desc": "Apartment Configurator",
-                        "author": "by Axeon Software",
-                        "link": "http://www.axeon.fr/CLIENT/INFIME/Virtual_Staging_V2/",
-                        "img": {
-                            "url": "/community/assets/img/ApartmentConfigurator.jpg",
-                            "alt": "Apartment Configurator"
-                        }
-                    },
-                    {
                         "desc": "Cube Endless Runner",
                         "author": "by kingofcode.com.br",
                         "link": "https://cube-endless-runner.herokuapp.com/",
@@ -1050,15 +924,6 @@
                         "img": {
                             "url": "/community/assets/img/jumpy.jpg",
                             "alt": "Jumpy Jumpy"
-                        }
-                    },
-                    {
-                        "desc": "Bordeaux Hyperion",
-                        "author": "by Axeon Software",
-                        "link": "https://www.axeon.fr/CLIENT/EIFFAGE/Bordeaux.Hyperion/#/MAQUETTE_RT/index.html",
-                        "img": {
-                            "url": "/community/assets/img/axeon.jpg",
-                            "alt": "Bordeaux Hyperion"
                         }
                     },
                     {
