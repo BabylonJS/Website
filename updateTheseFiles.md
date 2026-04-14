@@ -45,7 +45,7 @@
 - [ ] src\templates\imageAndTextBlock-template.html
 - [ ] src\templates\index-template.html
 - [ ] src\templates\pressRelease-template.html
-- [ ] sec\templates\partnerLogo-template.html
+- [x] sec\templates\partnerLogo-template.html
 
 ## Updates to the press release page
 To make any last minute changes to the press release page that get approved from our partners, you will want to edit the file:

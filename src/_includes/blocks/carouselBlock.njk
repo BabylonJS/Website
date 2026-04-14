@@ -6,23 +6,23 @@
       <a href="{{ item.demoLink }}" target="_blank">
         <video src="{{ item.videoUrl }}" autoplay loop muted></video>
         {% if item.fallbackImage %}
-        <img class="img-fallback-carousel img-carousel" src="{{ item.fallbackImage }}" />
+        <img class="img-fallback-carousel img-carousel" alt="{{ item.alt }}" src="{{ item.fallbackImage }}" />
         {% endif %}
       </a>
       {% else %}
       <video src="{{ item.videoUrl }}" autoplay loop muted></video>
       {% if item.fallbackImage %}
-      <img class="img-fallback-carousel img-carousel" src="{{ item.fallbackImage }}" />
+      <img class="img-fallback-carousel img-carousel" alt="{{ item.alt }}" src="{{ item.fallbackImage }}" />
       {% endif %}{% endif %}
     </div>
     {% endif %}{% if item.imgUrl %}
     <div class="img-holder">
       {% if item.demoLink %}
       <a href="{{ item.demoLink }}" target="_blank">
-        <img class="img-carousel" src="{{ item.imgUrl }}" />
+        <img class="img-carousel" alt="{{ item.alt }}" src="{{ item.imgUrl }}" />
       </a>
       {% else %}
-      <img class="img-carousel" src="{{ item.imgUrl }}" />
+      <img class="img-carousel" alt="{{ item.alt }}" src="{{ item.imgUrl }}" />
       {% endif %}
     </div>
     {% endif %}{% endfor %}
