@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "gulp run",
+            "label": "eleventy serve",
             "type": "shell",
             "command": "npm start",
             "isBackground": true,
@@ -16,15 +16,15 @@
             },
             "problemMatcher": {
                 "pattern": {
-                    "regexp": ".*'build' errored after .*",
+                    "regexp": ".*Eleventy.*error.*",
                 },
                 "background": {
                     "activeOnStart": true,
                     "beginsPattern": {
-                        "regexp": ".*Starting 'build'..."
+                        "regexp": ".*Writing.*"
                     },
                     "endsPattern": {
-                        "regexp": ".*Finished 'build' after .*"
+                        "regexp": ".*Wrote.*"
                     }
                 }
             }

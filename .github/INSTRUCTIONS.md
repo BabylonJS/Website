@@ -159,9 +159,9 @@ After updating config.json:
 npm start
 ```
 
-This runs `gulp run` which:
-1. Builds the site from templates
-2. Starts a local server at http://localhost:8080  
+This runs Eleventy which:
+1. Builds the site from Nunjucks templates and JSON config files
+2. Starts a local dev server at http://localhost:8080  
 3. Enables live reload for changes
 
 Navigate to http://localhost:8080 to preview your changes.

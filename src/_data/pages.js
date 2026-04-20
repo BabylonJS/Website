@@ -24,7 +24,7 @@ module.exports = function () {
   const siteConfig = parseJson(path.join(contentRoot, "site.json"));
   const pages = [];
 
-  // Build the global menu (visible items) - same as gulpfile logic
+  // Build the global menu (visible items)
   const globalMenu = [];
 
   siteConfig.menu.forEach(function (menuItem) {

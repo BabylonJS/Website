@@ -73,7 +73,7 @@ module.exports = function (eleventyConfig) {
       return JSON.stringify(obj);
     });
     const templateFile = `blocks/${block.templateName}.njk`;
-    // Pass block.content as context (matching original Handlebars behavior)
+    // Pass block.content as context
     // Also include block-level properties like delay for carousel
     const content = block.content || {};
     const context = { ...content, delay: block.delay };
@@ -84,7 +84,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // ---- Filters ----
-  // json filter (Nunjucks has `dump` built-in, but this matches the Handlebars helper)
+  // json filter (Nunjucks has `dump` built-in, but this is kept for consistency)
   eleventyConfig.addFilter("json", function (obj) {
     return JSON.stringify(obj);
   });
