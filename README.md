@@ -1,19 +1,97 @@
-# Babylon.js website
+# Babylon.js Website
 
-## Installation process
+## Architecture Overview
 
-``` sh
-    npm install -g gulp
-    npm install
+This website is built with [Eleventy (11ty)](https://www.11ty.dev/) using Nunjucks templates. All pages are **configuration-driven** — there are no individual `.njk` files per page. Instead, a single pagination template (`src/pages.njk`) generates every page from JSON config files.
+
+### How It Works
+
+1. **`src/content/site.json`** defines the navigation menu, footer, social links, and global variables.
+2. **`src/_data/pages.js`** reads the menu structure and resolves a `config.json` from each content directory.
+3. **`src/pages.njk`** uses Eleventy pagination to generate one HTML page per entry.
+4. Each `config.json` contains a `blocks` array. Each block specifies a `templateName` and `content`:
+   ```json
+   {
+     "templateName": "imageAndTextBlock",
+     "content": { "title": "...", "img": "...", "align": "right" }
+   }
+   ```
+5. The `renderBlock` shortcode renders the matching Nunjucks template from `src/_includes/blocks/`.
+
+### Directory Structure
+
+```
+src/
+├── pages.njk              # Single pagination template (generates all pages)
+├── _data/
+│   ├── pages.js           # Builds page list from site.json menu
+│   └── site.js            # Exposes site.json globally
+├── _includes/
+│   ├── base.njk           # HTML scaffold (header, nav, footer)
+│   └── blocks/            # ~21 reusable block templates
+│       ├── carouselBlock.njk
+│       ├── imageAndTextBlock.njk
+│       ├── galleryBlock.njk
+│       ├── textBlock.njk
+│       └── ...
+├── content/
+│   ├── site.json          # Menu, footer, socials, variables
+│   ├── config.json        # Homepage blocks
+│   └── [section]/
+│       ├── config.json    # Page blocks
+│       └── assets/        # Page-specific images/media
+├── assets/                # Global assets (fonts, CSS, JS, images)
+└── build/                 # Build-time helpers
+static/                    # Files copied to build root (robots.txt, CNAME, etc.)
+build/                     # Output directory (generated)
 ```
 
-## Development mode
+### Asset Handling
 
-Web site will be available at http://localhost:8080/
+Assets are served from three sources:
 
-``` sh
-    gulp run
+| Source | Destination | Contents |
+|--------|------------|----------|
+| `src/assets/` | `build/assets/` | Global CSS, JS, fonts, images, videos |
+| `static/` | `build/` (root) | robots.txt, CNAME, _headers, etc. |
+| `src/content/[page]/assets/` | `build/[page]/assets/` | Per-page images and media |
+
+Per-page assets are discovered automatically by parsing the menu structure in `site.json`.
+
+## Installation
+
+```sh
+npm install
 ```
+
+## Development
+
+Starts a local dev server at http://localhost:8080/ with live reload:
+
+```sh
+npm start
+```
+
+## Production Build
+
+```sh
+npm run build
+```
+
+Output is written to the `build/` directory.
+
+## Adding or Editing Pages
+
+1. Create a directory under `src/content/` with a `config.json` containing a `blocks` array.
+2. Add a menu entry in `src/content/site.json` with a `root` matching the directory name.
+3. The page is generated automatically on the next build.
+
+To edit an existing page, modify its `config.json` — add, remove, or reorder blocks. Available block types are the `.njk` files in `src/_includes/blocks/`.
+
+### Template Filters
+
+- `{{ key | var }}` — Resolves a value from `site.json`'s `variables` object.
+- `{{ obj | json }}` — JSON-stringifies a value.
 
 ## Updating the Website
 

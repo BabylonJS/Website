@@ -1,0 +1,57 @@
+<div class="samples-carousel-block">
+  <div class="carousel" data-delay="{{ delay }}">
+    {% for item in items %}{% if item.videoUrl %}
+    <div class="img-holder">
+      {% if item.demoLink %}
+      <a href="{{ item.demoLink }}" target="_blank">
+        <video src="{{ item.videoUrl }}" autoplay loop muted></video>
+        {% if item.fallbackImage %}
+        <img class="img-fallback-carousel img-carousel" alt="{{ item.alt }}" src="{{ item.fallbackImage }}" />
+        {% endif %}
+      </a>
+      {% else %}
+      <video src="{{ item.videoUrl }}" autoplay loop muted></video>
+      {% if item.fallbackImage %}
+      <img class="img-fallback-carousel img-carousel" alt="{{ item.alt }}" src="{{ item.fallbackImage }}" />
+      {% endif %}{% endif %}
+    </div>
+    {% endif %}{% if item.imgUrl %}
+    <div class="img-holder">
+      {% if item.demoLink %}
+      <a href="{{ item.demoLink }}" target="_blank">
+        <img class="img-carousel" alt="{{ item.alt }}" src="{{ item.imgUrl }}" />
+      </a>
+      {% else %}
+      <img class="img-carousel" alt="{{ item.alt }}" src="{{ item.imgUrl }}" />
+      {% endif %}
+    </div>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="carousel-navigate">
+    <img src="/assets/img/CarouselActive.svg" alt="" class="caret" />
+    {% for item in items %}
+    <div class="carousel-navigate-item" data-order="{{ loop.index0 }}">
+      <img src="/assets/img/CarouselBreadcrumb.svg" alt="" />
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // iphone or chrome on iOS.
+    const isIphoneUserAgent = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/CriOS/i);
+    if (!isIphoneUserAgent) {
+      return;
+    }
+    // replace all videos with fallback images
+    const videos = document.querySelectorAll(".carousel video");
+    videos.forEach((video) => {
+      video.style.display = "none";
+    });
+    // enable all fallback images
+    const fallbackImages = document.querySelectorAll(".img-fallback-carousel");
+    fallbackImages.forEach((img) => {
+      img.style.display = "block";
+    });
+  });
+</script>

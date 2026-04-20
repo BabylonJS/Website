@@ -1,0 +1,15 @@
+<div class="imageList-block" style="padding-top:{{ paddingTop }};margin-top:{{ marginTop }};margin-bottom:{{ marginBottom }};background:{{ background }}">
+    {% for item in items %}
+    {% if item.img.link %}
+    <a href="{{ item.img.link }}">
+        <img src="{{ item.img.url }}" alt="{{ item.img.alt }}"
+            style="width:{{ item.img.width }};height:{{ item.img.height }};margin-left:{{ item.img.marginLeft }};margin-right:{{ item.img.marginRight }};" />
+    </a>
+    {% elif item.video.url %}
+    <video src='{{ item.video.url }}' autoplay loop muted width="100%" style="max-width:{{ item.video.width }};height:100%"></video>
+    {% else %}
+    <img src="{{ item.img.url }}" alt="{{ item.img.alt }}"
+        style="width:{{ item.img.width }};height:{{ item.img.height }};margin-left:{{ item.img.marginLeft }};margin-right:{{ item.img.marginRight }};" />
+    {% endif %}
+    {% endfor %}
+</div>

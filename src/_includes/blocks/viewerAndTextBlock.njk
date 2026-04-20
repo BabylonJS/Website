@@ -1,0 +1,80 @@
+<section class="viewer-and-text-block {% if alignment == 'right' %} right {% endif %}"
+    style="background-color: {{ background | var }};">
+    <div class="inner-container" style="min-height:{{ height }};padding-top:{{ paddingTop }};padding-bottom:{{ paddingBottom }};">
+        {% if alignment == "left" %}
+        <div class="viewer-block">
+            <babylon-viewer style="width:100vw;height:100vh;max-width:{{ viewer.width }};max-height:{{ viewer.height }}"
+                clear-color="{{ viewer.clearColor }}"
+                environment-lighting="{{ viewer.environment }}"
+                source="{{ viewer.source }}"
+                {% if viewer.hotspots %}
+                hotspots='{{ viewer.hotspots | json }}'
+                {% endif %}
+                camera-orbit="{{ viewer.cameraOrbit }}"
+                animation-speed="{{ viewer.animationSpeed }}"
+                {% if viewer.animationAutoPlay %}animation-auto-play{% endif %}
+                {% if viewer.cameraAutoOrbit != false %}camera-auto-orbit{% endif %}>
+            {% if viewer.annotations %}{% for annotation in viewer.annotations %}
+                <babylon-viewer-annotation hotspot='{{ annotation.name }}'>
+                    {{ annotation.html | safe }}
+                </babylon-viewer-annotation>
+            {% endfor %}{% endif %}
+            </babylon-viewer>
+        </div>
+        {% endif %}
+        <div class="text-block"
+            style="text-align:{{ textAlign }};width:{{ textWidth }};margin-left:{{ marginLeft }};margin-right:{{ marginRight }};">
+            {% if titleColor %}
+                <h2 style="color:{{ titleColor }}">{{ title }}</h2>
+            {% else %}
+                <h2>{{ title }}</h2>
+            {% endif %}
+            {% if subtitle %}
+                {% if subtitleColor %}
+                    <h3 style="color:{{ subtitleColor }}">{{ subtitle }}</h3>
+                {% else %}
+                    <h3>{{ subtitle }}</h3>
+                {% endif %}
+            {% endif %}
+            <p style="color:{{ color }}">
+                <script>
+                    {
+                        const descText = "{{ desc }}"; 
+                        const replaceLT = descText.replace(/&lt;/gi, "<");
+                        const result = replaceLT.replace(/&gt;/gi, ">");
+                        let pTags = document.getElementsByTagName('p');
+                        pTags = pTags[pTags.length - 1];
+                        pTags.innerHTML = result;
+                    }
+                </script>
+            </p>
+            {% if moreInfoLink %}
+            <div class="link-block">
+                <a style="color:{{ color }}" href="{{ moreInfoLink }}" {% if target %}target="{{ target }}"{% endif %}>{{ moreInfoText }}
+                </a>
+            </div>
+            {% endif %}
+        </div>
+        {% if alignment == "right" %}
+        <div class="viewer-block">
+            <babylon-viewer style="width:100vw;height:100vh;max-width:{{ viewer.width }};max-height:{{ viewer.height }}"
+                clear-color="{{ viewer.clearColor }}"
+                environment-lighting="{{ viewer.environment }}"
+                source="{{ viewer.source }}"
+                {% if viewer.hotspots %}
+                hotspots='{{ viewer.hotspots | json }}'
+                {% endif %}
+                camera-orbit="{{ viewer.cameraOrbit }}"
+                animation-speed="{{ viewer.animationSpeed }}"
+                {% if viewer.animationAutoPlay %}animation-auto-play{% endif %}
+                {% if viewer.cameraAutoOrbit != false %}camera-auto-orbit{% endif %}>
+            {% if viewer.annotations %}{% for annotation in viewer.annotations %}
+                <babylon-viewer-annotation hotspot='{{ annotation.name }}'>
+                    {{ annotation.html | safe }}
+                </babylon-viewer-annotation>
+            {% endfor %}{% endif %}
+            </babylon-viewer>
+        </div>
+        {% endif %}
+    </div>
+</section>

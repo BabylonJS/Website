@@ -1,0 +1,26 @@
+<div class="middle-block">
+    <div class="container">
+        <div class="middle-background">
+            <h2>{{ title }}</h2>
+            <div class="container-info">
+                <ul id="hexGrid">
+                    {% for item in items %}
+                    <li class="hex">
+                        <div class="hexIn">
+                            <a class="hexLink" href="{{ item.link }}" target="_blank">
+                                <img src="{{ item.img.url }}" alt="{{ item.img.alt }}" />
+                                <div class="desc">
+                                    <div class="hexDesc">{{ item.desc }}</div>
+                                    <div class="hexDesc author">{{ item.author }}</div>
+                                </div>
+                                <img src="/assets/img/hoverFrame.svg" class="hoverFrame" />
+                                <img src="/assets/img/defaultFrame.svg" class="defaultFrame" />
+                            </a>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

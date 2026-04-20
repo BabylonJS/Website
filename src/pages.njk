@@ -1,0 +1,11 @@
+---
+pagination:
+  data: pages
+  size: 1
+  alias: pageData
+permalink: "{% if pageData.url %}{{ pageData.url }}/index.html{% else %}index.html{% endif %}"
+layout: base.njk
+---
+{% for block in pageData.pageConfig.blocks %}
+{% renderBlock block %}
+{% endfor %}

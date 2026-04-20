@@ -1,0 +1,36 @@
+<div class="samples-carousel-block">
+    <div class="carousel assets">
+        <!-- {% for item in items %}
+        {% if item.videoUrl %}
+        <div class="img-holder">
+            {% if item.demoLink %}
+            <a href="{{ item.demoLink }}" target="_blank">
+                <video src='{{ item.videoUrl }}' autoplay loop muted></video>
+            </a>
+            {% else %}
+            <video src='{{ item.videoUrl }}' autoplay loop muted></video>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% if item.imgUrl %}
+        <div class="img-holder">
+            {% if item.demoLink %}
+                <a href="{{ item.demoLink }}" target="_blank">
+                    <img class="img-carousel" src='{{ item.imgUrl }}'>
+                </a>
+            {% else %}
+                <img class="img-carousel" src='{{ item.imgUrl }}'>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %} -->
+    </div>
+    <div class="carousel-navigate assets">
+        <img src="/assets/img/CarouselActive.svg" alt="" class="caret">
+        <!-- {% for item in items %}
+        <div class="carousel-navigate-item" data-order="{{ loop.index0 }}">
+            <img src="/assets/img/CarouselBreadcrumb.svg" alt="">
+        </div>
+        {% endfor %} -->
+    </div>
+</div>
