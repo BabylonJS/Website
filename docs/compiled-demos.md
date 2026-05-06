@@ -34,7 +34,19 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  Bump/
+    index.html
+    main.ts
+    scene.ts
+  Fog/
+    index.html
+    main.ts
+    scene.ts
   Lines/
+    index.html
+    main.ts
+    scene.ts
+  Lights/
     index.html
     main.ts
     scene.ts
@@ -47,6 +59,10 @@ src/compiledDemos/
     main.ts
     scene.ts
     worker.ts
+  Particles/
+    index.html
+    main.ts
+    scene.ts
 ```
 
 Each demo folder owns its HTML shell and TypeScript entry. Shared browser bootstrapping lives in `shared/demoRunner.ts`, which creates the engine, starts the render loop, wires common controls, and exposes `window.__babylonDemoReady` for CI.

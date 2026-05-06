@@ -17,18 +17,18 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | Lines | done | Thin animated line rendering; custom low colored-sample threshold. |
 | Heightmap | done | Texture and heightmap asset loading. |
 | Offscreen | done | Custom worker bootstrap; render check validates both canvases. |
-| Fog | wave-1 | Animated simple geometry and exponential fog. |
-| Bump | wave-1 | Simple texture material using an existing normal map asset. |
-| Lights | wave-1 | Multiple dynamic lights and skybox. |
-| Particles | wave-1 | CPU particle systems plus mirror render target texture. |
+| Fog | done | Animated simple geometry and exponential fog. |
+| Bump | done | Simple texture material using an existing shared normal map asset. |
+| Lights | done | Multiple dynamic lights and shared skybox assets. |
+| Particles | done | CPU particle systems plus mirror render target texture. |
 
 ## Next Waves
 
 | Wave | Demos | Main Risk To Prove |
 | --- | --- | --- |
-| Wave 1 follow-up | Fresnel, Ribbons, Polygon, Shadows, PointLightShadowMap, Refraction | Lens flares, procedural textures, polygon triangulation, shadows, and reflection/refraction scene components. |
+| Wave 1 follow-up | Fresnel, Ribbons, Polygon, Shadows, PointLightShadowMap, Refraction | Lens flares, procedural textures, polygon triangulation, shadows, and reflection/refraction scene components. Polygon needs an explicit `earcut` dependency decision before porting. |
 | Asset and loader demos | AssetsManager, FlightHelmet, GLTF, GLTF1CesiumMan, GLTFMeshPrimitiveAttributeTest, GLTFNormals, Mansion, Sponza, TheCar, Yeti | Loader side effects, remote/local asset paths, large model load times. |
-| Materials and render pipeline demos | Bump, CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
+| Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
 | Interaction and tooling demos | ActionBuilder, Actions, Charting, CustomShader, Decals, DragNDrop, Facets, Highlights, Lens, LookAt, Octree, Procedural, Simplification, VertexData, Views | Picking, pointer events, custom shaders, scene tools, and user interaction checks. |
 | Animation, skeleton, and morph demos | Bones, Dancers, Dancing CSG, HillValley, HillValleyVR, InstancedBones, Instances, Instances2, LOD, MorphTargets, V8 | Skeletons, animation loops, instancing, LOD behavior, and render-check stability. |
 | Physics and advanced systems | AdvancedShadows, CSG, Cloth, CustomRenderTarget, DisplacementMap, ExtrudePolygon, Multimaterial, Particles2, Physics, Planet, Ribbons, Ruins, SelfShadowing, SoftShadows, SPS, SPSCollisions, Starfield, Tunnel, Viper | Physics engines, generated geometry, custom render targets, particles, and advanced scene components. |

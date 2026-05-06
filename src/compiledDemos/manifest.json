@@ -18,6 +18,26 @@
             }
         },
         {
+            "slug": "Bump",
+            "title": "Babylon.js - Bump demo",
+            "legacyPath": "static/Demos/Bump",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Fog",
+            "title": "Babylon.js - Fog demo",
+            "legacyPath": "static/Demos/Fog",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
             "slug": "Lines",
             "title": "Babylon.js - Lines demo",
             "legacyPath": "static/Demos/Lines",
@@ -25,6 +45,16 @@
             "renderCheck": {
                 "timeoutMs": 15000,
                 "minimumColoredSamples": 10
+            }
+        },
+        {
+            "slug": "Lights",
+            "title": "Babylon.js - Lights demo",
+            "legacyPath": "static/Demos/Lights",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
             }
         },
         {
@@ -47,6 +77,16 @@
                 "canvasSelector": "canvas",
                 "minimumCanvasCount": 2,
                 "minimumColoredSamples": 150
+            }
+        },
+        {
+            "slug": "Particles",
+            "title": "Babylon.js - Particles demo",
+            "legacyPath": "static/Demos/Particles",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
             }
         }
     ]
