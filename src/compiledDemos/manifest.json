@@ -48,6 +48,16 @@
             }
         },
         {
+            "slug": "FlightHelmet",
+            "title": "Babylon.js - Flight Helmet demo",
+            "legacyPath": "static/Demos/FlightHelmet",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
             "slug": "Fresnel",
             "title": "Babylon.js - Fresnel demo",
             "legacyPath": "static/Demos/Fresnel",
@@ -85,6 +95,16 @@
             "renderCheck": {
                 "timeoutMs": 60000,
                 "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "GLTF1CesiumMan",
+            "title": "Babylon.js - glTF 1.0 Cesium Man demo",
+            "legacyPath": "static/Demos/GLTF1CesiumMan",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 100
             }
         },
         {

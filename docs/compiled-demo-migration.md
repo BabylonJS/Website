@@ -20,7 +20,9 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | Offscreen | done | Custom worker bootstrap; render check validates both canvases. |
 | Fog | done | Animated simple geometry and exponential fog. |
 | Bump | done | Simple texture material using an existing shared normal map asset. |
+| FlightHelmet | done | Remote glTF asset, default environment, shadows, and scene optimizer coverage. |
 | GLTF | done | glTF binary asset loading from the deployed legacy `/assets/` path. |
+| GLTF1CesiumMan | done | Remote glTF 1.0 asset loading with shared prefiltered DDS environment texture. |
 | GLTFMeshPrimitiveAttributeTest | done | Multiple remote glTF assets plus generated normal attribute coverage. |
 | GLTFNormals | done | Multiple remote glTF assets covering normals/tangents variants. |
 | Lights | done | Multiple dynamic lights and shared skybox assets. |
@@ -34,7 +36,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 
 | Wave | Demos | Main Risk To Prove |
 | --- | --- | --- |
-| Asset and loader follow-up | FlightHelmet, GLTF1CesiumMan, Mansion, Sponza, TheCar, Yeti | Larger model load times, glTF v1 compatibility, environment assets, shadows, and optimizer behavior. |
+| Asset and loader follow-up | Mansion, Sponza, TheCar, Yeti | Larger model load times, local scene payloads, animation/UI dependencies, service workers, shadows, and optimizer behavior. |
 | Render/effects follow-up | Ribbons, Polygon | Ribbons needs procedural texture and volumetric-light-scattering post-process coverage. Polygon needs an explicit `earcut` dependency decision before porting. |
 | Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
 | Interaction and tooling demos | ActionBuilder, Actions, Charting, CustomShader, Decals, DragNDrop, Facets, Highlights, Lens, LookAt, Octree, Procedural, Simplification, VertexData, Views | Picking, pointer events, custom shaders, scene tools, and user interaction checks. |

@@ -46,11 +46,19 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  FlightHelmet/
+    index.html
+    main.ts
+    scene.ts
   Fresnel/
     index.html
     main.ts
     scene.ts
   GLTF/
+    index.html
+    main.ts
+    scene.ts
+  GLTF1CesiumMan/
     index.html
     main.ts
     scene.ts
