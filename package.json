@@ -5,7 +5,16 @@
     "main": "eleventy.config.js",
     "scripts": {
         "start": "npx @11ty/eleventy --serve",
-        "build": "npx @11ty/eleventy",
+        "site:build": "npx @11ty/eleventy",
+        "build": "npm run site:build && npm run demos:build",
+        "demos:lint": "eslint \"vite.demos.config.mjs\" \"scripts/demos/**/*.mjs\" \"src/compiledDemos/**/*.ts\"",
+        "demos:format": "prettier --check \"azure-pipelines.compiled-demos.yml\" \"docs/compiled-demos.md\" \"eslint.config.mjs\" \"package.json\" \"scripts/demos/**/*.mjs\" \"src/compiledDemos/**/*.{html,json,ts}\" \"tsconfig.demos.json\" \"vite.demos.config.mjs\"",
+        "demos:format:write": "prettier --write \"azure-pipelines.compiled-demos.yml\" \"docs/compiled-demos.md\" \"eslint.config.mjs\" \"package.json\" \"scripts/demos/**/*.mjs\" \"src/compiledDemos/**/*.{html,json,ts}\" \"tsconfig.demos.json\" \"vite.demos.config.mjs\"",
+        "demos:build": "vite build --config vite.demos.config.mjs --logLevel silent && node scripts/demos/generate-source-pages.mjs",
+        "demos:serve": "npm run build && vite preview --host 127.0.0.1 --port 4173 --outDir build",
+        "demos:typecheck": "tsc -p tsconfig.demos.json --noEmit",
+        "demos:check": "node scripts/demos/check-render.mjs",
+        "demos:ci": "npm run demos:lint && npm run demos:format && npm run demos:typecheck && npm run demos:check",
         "process-images": "node .github/scripts/process-images.js",
         "update-image": "node .github/scripts/update-image.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +24,20 @@
     "dependencies": {
         "@11ty/eleventy": "^3.1.5",
         "sharp": "^0.33.5"
+    },
+    "devDependencies": {
+        "@babylonjs/core": "^9.5.2",
+        "@babylonjs/gui": "^9.5.2",
+        "@babylonjs/inspector": "^9.5.2",
+        "@babylonjs/loaders": "^9.5.2",
+        "@babylonjs/materials": "^9.5.2",
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.3.0",
+        "globals": "^17.6.0",
+        "playwright": "^1.59.1",
+        "prettier": "^3.8.3",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.59.2",
+        "vite": "^8.0.10"
     }
 }

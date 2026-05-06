@@ -1,0 +1,21 @@
+{
+    "demos": [
+        {
+            "slug": "Boom",
+            "title": "Babylon.js - Boom demo",
+            "legacyPath": "static/Demos/Boom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200,
+                "interaction": {
+                    "type": "clickCanvas",
+                    "x": 0.5,
+                    "y": 0.5,
+                    "waitMs": 1000,
+                    "minimumChangedSamples": 400
+                }
+            }
+        }
+    ]
+}
