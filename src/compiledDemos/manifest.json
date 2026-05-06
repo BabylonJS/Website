@@ -98,16 +98,6 @@
             }
         },
         {
-            "slug": "GLTF1CesiumMan",
-            "title": "Babylon.js - glTF 1.0 Cesium Man demo",
-            "legacyPath": "static/Demos/GLTF1CesiumMan",
-            "sourceFiles": ["main.ts", "scene.ts"],
-            "renderCheck": {
-                "timeoutMs": 45000,
-                "minimumColoredSamples": 100
-            }
-        },
-        {
             "slug": "GLTFMeshPrimitiveAttributeTest",
             "title": "Babylon.js - Mesh primitive attribute test",
             "legacyPath": "static/Demos/GLTFMeshPrimitiveAttributeTest",
@@ -187,6 +177,16 @@
             "renderCheck": {
                 "timeoutMs": 20000,
                 "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Yeti",
+            "title": "Babylon.js - Yeti demo",
+            "legacyPath": "static/Demos/Yeti",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
             }
         }
     ]

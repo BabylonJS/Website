@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Babylon.js - glTF 1.0 Cesium Man demo</title>
+        <title>Babylon.js - Yeti demo</title>
         <style>
             html,
             body {
@@ -11,7 +11,7 @@
                 height: 100%;
                 margin: 0;
                 overflow: hidden;
-                background: #080808;
+                background: #050505;
                 font-family: Arial, Helvetica, sans-serif;
             }
 
@@ -28,6 +28,7 @@
             #status,
             #sourceLink,
             #toolbar,
+            #attribution,
             #notSupported {
                 position: fixed;
                 z-index: 2;
@@ -44,6 +45,12 @@
             #status {
                 left: 12px;
                 bottom: 12px;
+                font-size: 13px;
+            }
+
+            #attribution {
+                left: 12px;
+                bottom: 34px;
                 font-size: 13px;
             }
 
@@ -98,6 +105,7 @@
         </div>
         <a id="sourceLink" href="./source/">Source</a>
         <div id="fps"></div>
+        <div id="attribution">Yeti by Patrick Ryan</div>
         <div id="status"></div>
         <div id="notSupported" class="hidden">Sorry, your browser does not support WebGL.</div>
         <script type="module" src="./main.ts"></script>

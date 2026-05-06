@@ -58,10 +58,6 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
-  GLTF1CesiumMan/
-    index.html
-    main.ts
-    scene.ts
   GLTFMeshPrimitiveAttributeTest/
     index.html
     main.ts
@@ -75,6 +71,10 @@ src/compiledDemos/
     main.ts
     scene.ts
   Lights/
+    index.html
+    main.ts
+    scene.ts
+  Yeti/
     index.html
     main.ts
     scene.ts

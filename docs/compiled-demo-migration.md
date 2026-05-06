@@ -5,6 +5,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 ## Status Key
 
 - `done`: Ported to `src/compiledDemos`, registered in `manifest.json`, and covered by render checks.
+- `unusable`: The legacy/online demo no longer renders correctly and should not be ported until the source demo is repaired or replaced.
 - `wave-1`: Simple single-canvas demo selected for the current migration wave.
 - `candidate`: Not migrated yet, likely suitable for a later wave after inspection.
 - `special`: Needs extra handling such as workers, vendored bundles, service workers, generated app bundles, WebGPU, physics, GUI, or complex external assets.
@@ -22,7 +23,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | Bump | done | Simple texture material using an existing shared normal map asset. |
 | FlightHelmet | done | Remote glTF asset, default environment, shadows, and scene optimizer coverage. |
 | GLTF | done | glTF binary asset loading from the deployed legacy `/assets/` path. |
-| GLTF1CesiumMan | done | Remote glTF 1.0 asset loading with shared prefiltered DDS environment texture. |
+| GLTF1CesiumMan | unusable | Legacy and online demo do not render; excluded from the compiled registry until the source demo is repaired or replaced. |
 | GLTFMeshPrimitiveAttributeTest | done | Multiple remote glTF assets plus generated normal attribute coverage. |
 | GLTFNormals | done | Multiple remote glTF assets covering normals/tangents variants. |
 | Lights | done | Multiple dynamic lights and shared skybox assets. |
@@ -31,12 +32,13 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | Shadows | done | Directional lights, shadow generators, and legacy grass texture. |
 | PointLightShadowMap | done | Point light shadow generator with torus knot scene. |
 | Refraction | done | Reflection probe refraction with built-in bump/fresnel/IOR controls. |
+| Yeti | done | Remote animated glTF asset with loader animation options, default environment, and textured snow particles. |
 
 ## Next Waves
 
 | Wave | Demos | Main Risk To Prove |
 | --- | --- | --- |
-| Asset and loader follow-up | Mansion, Sponza, TheCar, Yeti | Larger model load times, local scene payloads, animation/UI dependencies, service workers, shadows, and optimizer behavior. |
+| Asset and loader follow-up | Mansion, Sponza, TheCar | Larger model load times, local scene payloads, animation/UI dependencies, service workers, shadows, and optimizer behavior. |
 | Render/effects follow-up | Ribbons, Polygon | Ribbons needs procedural texture and volumetric-light-scattering post-process coverage. Polygon needs an explicit `earcut` dependency decision before porting. |
 | Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
 | Interaction and tooling demos | ActionBuilder, Actions, Charting, CustomShader, Decals, DragNDrop, Facets, Highlights, Lens, LookAt, Octree, Procedural, Simplification, VertexData, Views | Picking, pointer events, custom shaders, scene tools, and user interaction checks. |
