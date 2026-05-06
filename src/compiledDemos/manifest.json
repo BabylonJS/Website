@@ -36,6 +36,18 @@
                 "timeoutMs": 20000,
                 "minimumColoredSamples": 200
             }
+        },
+        {
+            "slug": "Offscreen",
+            "title": "Babylon.js - Worker mode",
+            "legacyPath": "static/Demos/Offscreen",
+            "sourceFiles": ["main.ts", "scene.ts", "worker.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "canvasSelector": "canvas",
+                "minimumCanvasCount": 2,
+                "minimumColoredSamples": 150
+            }
         }
     ]
 }

@@ -145,6 +145,19 @@ async function waitForAnimationFramePair(page) {
     );
 }
 
+async function checkCanvas(locator, demo, timeoutMs, label) {
+    const sample = await sampleCanvas(locator, timeoutMs);
+    const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
+
+    if (sample.stats.coloredSamples < minimumColoredSamples) {
+        failures.push(
+            `${demo.slug}: ${label} canvas check failed (${JSON.stringify(sample.stats)}, expected at least ${minimumColoredSamples} colored samples)`
+        );
+    }
+
+    return sample;
+}
+
 try {
     for (const demo of demos) {
         const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
@@ -166,22 +179,28 @@ try {
             await page.evaluate(() => window.__babylonDemoReady);
             await waitForAnimationFramePair(page);
 
-            const canvas = page.locator("canvas").first();
-            const canvasCount = await canvas.count();
+            const canvasSelector = demo.renderCheck?.canvasSelector || "canvas";
+            const canvases = page.locator(canvasSelector);
+            const canvasCount = await canvases.count();
+            const minimumCanvasCount = demo.renderCheck?.minimumCanvasCount || 1;
+            const canvas = canvases.first();
             let canvasStats = { exists: false };
             let canvasPixels = null;
 
+            if (canvasCount < minimumCanvasCount) {
+                failures.push(
+                    `${demo.slug}: expected at least ${minimumCanvasCount} canvas element${minimumCanvasCount === 1 ? "" : "s"}, found ${canvasCount}`
+                );
+            }
+
             if (canvasCount > 0) {
-                const sample = await sampleCanvas(canvas, timeoutMs);
+                const sample = await checkCanvas(canvas, demo, timeoutMs, "primary");
                 canvasStats = sample.stats;
                 canvasPixels = sample.pixels;
             }
 
-            const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
-            if (!canvasStats.exists || !canvasStats.readable || canvasStats.coloredSamples < minimumColoredSamples) {
-                failures.push(
-                    `${demo.slug}: canvas check failed (${JSON.stringify(canvasStats)}, expected at least ${minimumColoredSamples} colored samples)`
-                );
+            for (let canvasIndex = 1; canvasIndex < Math.min(canvasCount, minimumCanvasCount); canvasIndex++) {
+                await checkCanvas(canvases.nth(canvasIndex), demo, timeoutMs, `canvas ${canvasIndex + 1}`);
             }
 
             const interaction = demo.renderCheck?.interaction;

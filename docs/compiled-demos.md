@@ -40,6 +40,11 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  Offscreen/
+    index.html
+    main.ts
+    scene.ts
+    worker.ts
 ```
 
 Each demo folder owns its HTML shell and TypeScript entry. Shared browser bootstrapping lives in `shared/demoRunner.ts`, which creates the engine, starts the render loop, wires common controls, and exposes `window.__babylonDemoReady` for CI.
@@ -81,6 +86,8 @@ Each demo page should include a small source link at the bottom of the viewport:
 `npm run demos:check` serves the `build/` directory locally, opens each compiled demo with Playwright Chromium, waits for `window.__babylonDemoReady`, screenshots the canvas, samples pixels with Sharp, and fails if the canvas is blank or browser errors were reported.
 
 The initial check is intentionally a health check. It proves the demo compiles and renders. Individual demos can add `renderCheck.interaction` entries for important first-screen behavior; Boom uses this to click the canvas and verify the rendered output changes after the sign explodes. Screenshot baselines can be added later once the migration has enough coverage to justify the extra maintenance.
+
+Demos with more than one canvas can set `renderCheck.minimumCanvasCount` and `renderCheck.canvasSelector`. The Offscreen demo uses this to verify both the main-thread canvas and worker OffscreenCanvas render nonblank frames.
 
 ## Linting And Formatting
 
