@@ -16,6 +16,16 @@
                     "minimumChangedSamples": 400
                 }
             }
+        },
+        {
+            "slug": "Lines",
+            "title": "Babylon.js - Lines demo",
+            "legacyPath": "static/Demos/Lines",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 10
+            }
         }
     ]
 }
