@@ -1,6 +1,16 @@
 {
     "demos": [
         {
+            "slug": "AssetsManager",
+            "title": "Babylon.js - Assets manager demo",
+            "legacyPath": "static/Demos/AssetsManager",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
             "slug": "Boom",
             "title": "Babylon.js - Boom demo",
             "legacyPath": "static/Demos/Boom",
@@ -65,6 +75,36 @@
             "renderCheck": {
                 "timeoutMs": 20000,
                 "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "GLTF",
+            "title": "Babylon.js - GLTF demo",
+            "legacyPath": "static/Demos/GLTF",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "GLTFMeshPrimitiveAttributeTest",
+            "title": "Babylon.js - Mesh primitive attribute test",
+            "legacyPath": "static/Demos/GLTFMeshPrimitiveAttributeTest",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "GLTFNormals",
+            "title": "Babylon.js - Normals Test",
+            "legacyPath": "static/Demos/GLTFNormals",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 100
             }
         },
         {

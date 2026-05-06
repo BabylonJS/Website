@@ -30,6 +30,10 @@ src/compiledDemos/
   manifest.json
   shared/
     demoRunner.ts
+  AssetsManager/
+    index.html
+    main.ts
+    scene.ts
   Boom/
     index.html
     main.ts
@@ -43,6 +47,18 @@ src/compiledDemos/
     main.ts
     scene.ts
   Fresnel/
+    index.html
+    main.ts
+    scene.ts
+  GLTF/
+    index.html
+    main.ts
+    scene.ts
+  GLTFMeshPrimitiveAttributeTest/
+    index.html
+    main.ts
+    scene.ts
+  GLTFNormals/
     index.html
     main.ts
     scene.ts
