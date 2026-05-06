@@ -180,6 +180,16 @@
             }
         },
         {
+            "slug": "VolumetricLightScattering",
+            "title": "Babylon.js - Volumetric Light Scattering demo",
+            "legacyPath": "static/Demos/VolumetricLightScattering",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
             "slug": "Yeti",
             "title": "Babylon.js - Yeti demo",
             "legacyPath": "static/Demos/Yeti",

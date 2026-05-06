@@ -74,6 +74,10 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  VolumetricLightScattering/
+    index.html
+    main.ts
+    scene.ts
   Yeti/
     index.html
     main.ts

@@ -34,6 +34,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | PointLightShadowMap | done | Point light shadow generator with torus knot scene. |
 | Refraction | done | Reflection probe refraction with built-in bump/fresnel/IOR controls. |
 | Ribbons | done | Dynamic ribbon geometry with volumetric light scattering post-process coverage. |
+| VolumetricLightScattering | done | Local skull scene asset with volumetric light scattering billboard and texture coverage. |
 | Yeti | done | Remote animated glTF asset with loader animation options, default environment, and textured snow particles. |
 
 ## Next Waves
@@ -42,7 +43,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | --- | --- | --- |
 | Asset and loader follow-up | Mansion, Sponza, TheCar | Larger model load times, local scene payloads, animation/UI dependencies, service workers, shadows, and optimizer behavior. TheCar currently needs investigation because its scene readiness can stall render validation. |
 | Render/effects follow-up | Polygon | Polygon needs an explicit `earcut` dependency decision before porting. |
-| Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
+| Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline | Extra Babylon packages, shader/material side effects, post-process scene components. |
 | Interaction and tooling demos | ActionBuilder, Actions, Charting, CustomShader, Decals, DragNDrop, Facets, Highlights, Lens, LookAt, Octree, Procedural, Simplification, VertexData, Views | Picking, pointer events, custom shaders, scene tools, and user interaction checks. |
 | Animation, skeleton, and morph demos | Bones, Dancers, Dancing CSG, HillValley, HillValleyVR, InstancedBones, Instances, Instances2, LOD, MorphTargets, V8 | Skeletons, animation loops, instancing, LOD behavior, and render-check stability. |
 | Physics and advanced systems | AdvancedShadows, CSG, Cloth, CustomRenderTarget, DisplacementMap, ExtrudePolygon, Multimaterial, Particles2, Physics, Planet, Ruins, SelfShadowing, SoftShadows, SPS, SPSCollisions, Starfield, Tunnel, Viper | Physics engines, generated geometry, custom render targets, particles, and advanced scene components. |
