@@ -26,6 +26,16 @@
                 "timeoutMs": 15000,
                 "minimumColoredSamples": 10
             }
+        },
+        {
+            "slug": "Heightmap",
+            "title": "Babylon.js - Heightmap demo",
+            "legacyPath": "static/Demos/Heightmap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200
+            }
         }
     ]
 }
