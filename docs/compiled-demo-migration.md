@@ -21,12 +21,16 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | Bump | done | Simple texture material using an existing shared normal map asset. |
 | Lights | done | Multiple dynamic lights and shared skybox assets. |
 | Particles | done | CPU particle systems plus mirror render target texture. |
+| Fresnel | done | Fresnel material parameters, shared skybox assets, and lens flares. |
+| Shadows | done | Directional lights, shadow generators, and legacy grass texture. |
+| PointLightShadowMap | done | Point light shadow generator with torus knot scene. |
+| Refraction | done | Reflection probe refraction with built-in bump/fresnel/IOR controls. |
 
 ## Next Waves
 
 | Wave | Demos | Main Risk To Prove |
 | --- | --- | --- |
-| Wave 1 follow-up | Fresnel, Ribbons, Polygon, Shadows, PointLightShadowMap, Refraction | Lens flares, procedural textures, polygon triangulation, shadows, and reflection/refraction scene components. Polygon needs an explicit `earcut` dependency decision before porting. |
+| Wave 2 follow-up | Ribbons, Polygon | Ribbons needs procedural texture and volumetric-light-scattering post-process coverage. Polygon needs an explicit `earcut` dependency decision before porting. |
 | Asset and loader demos | AssetsManager, FlightHelmet, GLTF, GLTF1CesiumMan, GLTFMeshPrimitiveAttributeTest, GLTFNormals, Mansion, Sponza, TheCar, Yeti | Loader side effects, remote/local asset paths, large model load times. |
 | Materials and render pipeline demos | CellShading, FireMaterial, Fur, GlowLayer, PBR, PBRGlossy, PBRGlossyBloom, PBRRough, WaterMaterial, DOF, DefaultRenderingPipeline, MotionBlur, PPBloom, PPConvolution, PPRef, SSAO, SSAO2, StandardRenderingPipeline, VolumetricLightScattering | Extra Babylon packages, shader/material side effects, post-process scene components. |
 | Interaction and tooling demos | ActionBuilder, Actions, Charting, CustomShader, Decals, DragNDrop, Facets, Highlights, Lens, LookAt, Octree, Procedural, Simplification, VertexData, Views | Picking, pointer events, custom shaders, scene tools, and user interaction checks. |

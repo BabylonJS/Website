@@ -42,6 +42,10 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  Fresnel/
+    index.html
+    main.ts
+    scene.ts
   Lines/
     index.html
     main.ts
@@ -59,7 +63,19 @@ src/compiledDemos/
     main.ts
     scene.ts
     worker.ts
+  PointLightShadowMap/
+    index.html
+    main.ts
+    scene.ts
   Particles/
+    index.html
+    main.ts
+    scene.ts
+  Refraction/
+    index.html
+    main.ts
+    scene.ts
+  Shadows/
     index.html
     main.ts
     scene.ts

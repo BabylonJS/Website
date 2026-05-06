@@ -38,6 +38,16 @@
             }
         },
         {
+            "slug": "Fresnel",
+            "title": "Babylon.js - Fresnel demo",
+            "legacyPath": "static/Demos/Fresnel",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
             "slug": "Lines",
             "title": "Babylon.js - Lines demo",
             "legacyPath": "static/Demos/Lines",
@@ -80,6 +90,16 @@
             }
         },
         {
+            "slug": "PointLightShadowMap",
+            "title": "Babylon.js - Point light shadow map demo",
+            "legacyPath": "static/Demos/PointLightShadowMap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
             "slug": "Particles",
             "title": "Babylon.js - Particles demo",
             "legacyPath": "static/Demos/Particles",
@@ -87,6 +107,26 @@
             "renderCheck": {
                 "timeoutMs": 20000,
                 "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Refraction",
+            "title": "Babylon.js - Refraction demo",
+            "legacyPath": "static/Demos/Refraction",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Shadows",
+            "title": "Babylon.js - Shadows demo",
+            "legacyPath": "static/Demos/Shadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
             }
         }
     ]
