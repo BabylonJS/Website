@@ -2,6 +2,8 @@
 
 The legacy demos under `static/Demos/` are copied directly into `build/` and load Babylon from the UMD CDN. Compiled demos live under `src/compiledDemos/`, import `@babylonjs/core` and sibling packages as ES modules, and are bundled with Vite.
 
+The migration tracker lives in `docs/compiled-demo-migration.md`.
+
 ## Goals
 
 - Keep existing demo URLs stable, for example `/Demos/Boom/`.
