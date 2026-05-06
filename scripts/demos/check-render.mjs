@@ -145,6 +145,18 @@ async function waitForAnimationFramePair(page) {
     );
 }
 
+async function waitForDemoReady(page, timeoutMs) {
+    await page.evaluate((timeout) => {
+        const ready = window.__babylonDemoReady;
+        return Promise.race([
+            ready,
+            new Promise((_, reject) => {
+                window.setTimeout(() => reject(new Error(`Demo readiness timed out after ${timeout}ms`)), timeout);
+            }),
+        ]);
+    }, timeoutMs);
+}
+
 async function checkCanvas(locator, demo, timeoutMs, label) {
     const sample = await sampleCanvas(locator, timeoutMs);
     const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
@@ -176,7 +188,7 @@ try {
         try {
             await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
             await page.waitForFunction(() => Boolean(window.__babylonDemoReady), null, { timeout: timeoutMs });
-            await page.evaluate(() => window.__babylonDemoReady);
+            await waitForDemoReady(page, timeoutMs);
             await waitForAnimationFramePair(page);
 
             const canvasSelector = demo.renderCheck?.canvasSelector || "canvas";

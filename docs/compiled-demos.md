@@ -46,10 +46,6 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
-  FlightHelmet/
-    index.html
-    main.ts
-    scene.ts
   Fresnel/
     index.html
     main.ts
@@ -71,6 +67,10 @@ src/compiledDemos/
     main.ts
     scene.ts
   Lights/
+    index.html
+    main.ts
+    scene.ts
+  Ribbons/
     index.html
     main.ts
     scene.ts

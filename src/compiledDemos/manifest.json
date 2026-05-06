@@ -48,16 +48,6 @@
             }
         },
         {
-            "slug": "FlightHelmet",
-            "title": "Babylon.js - Flight Helmet demo",
-            "legacyPath": "static/Demos/FlightHelmet",
-            "sourceFiles": ["main.ts", "scene.ts"],
-            "renderCheck": {
-                "timeoutMs": 60000,
-                "minimumColoredSamples": 160
-            }
-        },
-        {
             "slug": "Fresnel",
             "title": "Babylon.js - Fresnel demo",
             "legacyPath": "static/Demos/Fresnel",
@@ -173,6 +163,16 @@
             "slug": "Shadows",
             "title": "Babylon.js - Shadows demo",
             "legacyPath": "static/Demos/Shadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Ribbons",
+            "title": "Babylon.js - Ribbons demo",
+            "legacyPath": "static/Demos/Ribbons",
             "sourceFiles": ["main.ts", "scene.ts"],
             "renderCheck": {
                 "timeoutMs": 20000,
