@@ -228,6 +228,111 @@
             }
         },
         {
+            "slug": "AdvancedShadows",
+            "title": "Babylon.js - Advanced Shadows demo",
+            "legacyPath": "static/Demos/AdvancedShadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "CustomRenderTarget",
+            "title": "Babylon.js - Custom Render Target demo",
+            "legacyPath": "static/Demos/CustomRenderTarget",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "MotionBlur",
+            "title": "Babylon.js - Motion Blur demo",
+            "legacyPath": "static/Demos/MotionBlur",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "PBR",
+            "title": "Babylon.js - PBR demo",
+            "legacyPath": "static/Demos/PBR",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "PBRRough",
+            "title": "Babylon.js - PBR Rough demo",
+            "legacyPath": "static/Demos/PBRRough",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "PBRGlossy",
+            "title": "Babylon.js - PBR Glossy demo",
+            "legacyPath": "static/Demos/PBRGlossy",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "PBRGlossyBloom",
+            "title": "Babylon.js - PBR Glossy Bloom demo",
+            "legacyPath": "static/Demos/PBRGlossyBloom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "WaterMaterial",
+            "title": "Babylon.js - Water Material demo",
+            "legacyPath": "static/Demos/WaterMaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "GlowLayer",
+            "title": "Babylon.js - Glow Layer demo",
+            "legacyPath": "static/Demos/GlowLayer",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "DefaultRenderingPipeline",
+            "title": "Babylon.js - Default Rendering Pipeline demo",
+            "legacyPath": "static/Demos/DefaultRenderingPipeline",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "StandardRenderingPipeline",
+            "title": "Babylon.js - Standard Rendering Pipeline demo",
+            "legacyPath": "static/Demos/StandardRenderingPipeline",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "Fur",
+            "title": "Babylon.js - Fur demo",
+            "legacyPath": "static/Demos/Fur",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "FireMaterial",
+            "title": "Babylon.js - Fire Material demo",
+            "legacyPath": "static/Demos/FireMaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "VertexData",
+            "title": "Babylon.js - Vertex Data demo",
+            "legacyPath": "static/Demos/VertexData",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
+            "slug": "GUI",
+            "title": "Babylon.js - GUI demo",
+            "legacyPath": "static/Demos/GUI",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        },
+        {
             "slug": "GLTF",
             "title": "Babylon.js - GLTF demo",
             "legacyPath": "static/Demos/GLTF",

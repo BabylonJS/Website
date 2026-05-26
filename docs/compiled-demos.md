@@ -30,6 +30,10 @@ src/compiledDemos/
   manifest.json
   shared/
     demoRunner.ts
+  AdvancedShadows/
+    index.html
+    main.ts
+    scene.ts
   AssetsManager/
     index.html
     main.ts
@@ -54,7 +58,15 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  CustomRenderTarget/
+    index.html
+    main.ts
+    scene.ts
   Decals/
+    index.html
+    main.ts
+    scene.ts
+  DefaultRenderingPipeline/
     index.html
     main.ts
     scene.ts
@@ -66,11 +78,23 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  FireMaterial/
+    index.html
+    main.ts
+    scene.ts
   Fog/
     index.html
     main.ts
     scene.ts
   Fresnel/
+    index.html
+    main.ts
+    scene.ts
+  Fur/
+    index.html
+    main.ts
+    scene.ts
+  GlowLayer/
     index.html
     main.ts
     scene.ts
@@ -83,6 +107,10 @@ src/compiledDemos/
     main.ts
     scene.ts
   GLTFNormals/
+    index.html
+    main.ts
+    scene.ts
+  GUI/
     index.html
     main.ts
     scene.ts
@@ -99,6 +127,10 @@ src/compiledDemos/
     main.ts
     scene.ts
   Lights/
+    index.html
+    main.ts
+    scene.ts
+  MotionBlur/
     index.html
     main.ts
     scene.ts
@@ -159,11 +191,39 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  PBR/
+    index.html
+    main.ts
+    scene.ts
+  PBRGlossy/
+    index.html
+    main.ts
+    scene.ts
+  PBRGlossyBloom/
+    index.html
+    main.ts
+    scene.ts
+  PBRRough/
+    index.html
+    main.ts
+    scene.ts
   Refraction/
     index.html
     main.ts
     scene.ts
   Shadows/
+    index.html
+    main.ts
+    scene.ts
+  StandardRenderingPipeline/
+    index.html
+    main.ts
+    scene.ts
+  VertexData/
+    index.html
+    main.ts
+    scene.ts
+  WaterMaterial/
     index.html
     main.ts
     scene.ts
@@ -206,6 +266,8 @@ Each demo page should include a small source link at the bottom of the viewport:
 ## Render Checks
 
 `npm run demos:check` serves the `build/` directory locally, opens each compiled demo with Playwright Chromium, waits for `window.__babylonDemoReady`, screenshots the canvas, samples pixels with Sharp, and fails if the canvas is blank or browser errors were reported.
+
+`npm run demos:smoke` is the lighter companion check. It also serves `build/` and opens each compiled demo in Playwright, but it only waits for demo readiness and fails on console errors, page errors, or failed requests. It does not screenshot or sample canvas pixels, so it is useful as a quick browser/runtime sanity check before running the render check.
 
 The initial check is intentionally a health check. It proves the demo compiles and renders. Individual demos can add `renderCheck.interaction` entries for important first-screen behavior; Boom uses this to click the canvas and verify the rendered output changes after the sign explodes. Screenshot baselines can be added later once the migration has enough coverage to justify the extra maintenance.
 

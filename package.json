@@ -13,6 +13,7 @@
         "demos:build": "vite build --config vite.demos.config.mjs --logLevel silent && node scripts/demos/generate-source-pages.mjs",
         "demos:serve": "npm run build && vite preview --host 127.0.0.1 --port 4173 --outDir build",
         "demos:typecheck": "tsc -p tsconfig.demos.json --noEmit",
+        "demos:smoke": "node scripts/demos/check-smoke.mjs",
         "demos:check": "node scripts/demos/check-render.mjs",
         "demos:ci": "npm run demos:lint && npm run demos:format && npm run demos:typecheck && npm run demos:check",
         "deploy:package": "node scripts/deploy/create-deploy-package.mjs",

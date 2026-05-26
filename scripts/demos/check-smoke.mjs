@@ -1,0 +1,129 @@
+import fs from "node:fs/promises";
+import http from "node:http";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
+
+const repoRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
+const buildRoot = path.join(repoRoot, "build");
+const manifestPath = path.join(repoRoot, "src/compiledDemos/manifest.json");
+const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
+const selectedDemos = new Set(
+    (process.env.DEMOS || "")
+        .split(",")
+        .map((value) => value.trim())
+        .filter(Boolean)
+);
+
+const contentTypes = new Map([
+    [".html", "text/html; charset=utf-8"],
+    [".js", "text/javascript; charset=utf-8"],
+    [".css", "text/css; charset=utf-8"],
+    [".json", "application/json; charset=utf-8"],
+    [".png", "image/png"],
+    [".jpg", "image/jpeg"],
+    [".jpeg", "image/jpeg"],
+    [".webp", "image/webp"],
+    [".hdr", "application/octet-stream"],
+    [".wasm", "application/wasm"],
+]);
+
+const demos = manifest.demos.filter(
+    (demo) => !demo.renderCheck?.disabled && (selectedDemos.size === 0 || selectedDemos.has(demo.slug))
+);
+
+if (demos.length === 0) {
+    console.log("No compiled demos selected for smoke checks.");
+    process.exit(0);
+}
+
+const server = http.createServer(async (request, response) => {
+    try {
+        const requestUrl = new URL(request.url || "/", "http://127.0.0.1");
+        let relativePath = decodeURIComponent(requestUrl.pathname).replace(/^\/+/, "");
+        if (!relativePath || relativePath.endsWith("/")) {
+            relativePath = path.join(relativePath, "index.html");
+        }
+
+        const filePath = path.normalize(path.join(buildRoot, relativePath));
+        if (!filePath.startsWith(buildRoot)) {
+            response.writeHead(403);
+            response.end("Forbidden");
+            return;
+        }
+
+        const body = await fs.readFile(filePath);
+        response.writeHead(200, {
+            "content-type": contentTypes.get(path.extname(filePath).toLowerCase()) || "application/octet-stream",
+        });
+        response.end(body);
+    } catch {
+        response.writeHead(404);
+        response.end("Not found");
+    }
+});
+
+await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+const address = server.address();
+const baseUrl = `http://127.0.0.1:${address.port}`;
+const browser = await chromium.launch({ args: ["--ignore-gpu-blocklist", "--use-gl=swiftshader"] });
+const failures = [];
+
+async function waitForDemoReady(page, timeoutMs) {
+    await page.waitForFunction(() => Boolean(window.__babylonDemoReady), null, { timeout: timeoutMs });
+    await page.evaluate((timeout) => {
+        const ready = window.__babylonDemoReady;
+        return Promise.race([
+            ready,
+            new Promise((_, reject) => {
+                window.setTimeout(() => reject(new Error(`Demo readiness timed out after ${timeout}ms`)), timeout);
+            }),
+        ]);
+    }, timeoutMs);
+}
+
+try {
+    for (const demo of demos) {
+        const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
+        const consoleErrors = [];
+        const pageErrors = [];
+        const requestFailures = [];
+
+        page.on("console", (message) => {
+            if (message.type() === "error") {
+                consoleErrors.push(message.text());
+            }
+        });
+        page.on("pageerror", (error) => pageErrors.push(error.message));
+        page.on("requestfailed", (request) => {
+            requestFailures.push(`${request.url()} (${request.failure()?.errorText || "failed"})`);
+        });
+
+        const timeoutMs = demo.renderCheck?.timeoutMs || 15000;
+        const url = `${baseUrl}/Demos/${encodeURIComponent(demo.slug)}/`;
+
+        try {
+            await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
+            await waitForDemoReady(page, timeoutMs);
+
+            const browserIssues = [...consoleErrors, ...pageErrors, ...requestFailures];
+            if (browserIssues.length > 0) {
+                failures.push(`${demo.slug}: browser issues: ${browserIssues.join(" | ")}`);
+            }
+        } catch (error) {
+            failures.push(`${demo.slug}: ${error.message}`);
+        } finally {
+            await page.close();
+        }
+    }
+} finally {
+    await browser.close();
+    server.close();
+}
+
+if (failures.length > 0) {
+    console.error(failures.join("\n"));
+    process.exit(1);
+}
+
+console.log(`Smoke checked ${demos.length} compiled demo${demos.length === 1 ? "" : "s"}.`);
