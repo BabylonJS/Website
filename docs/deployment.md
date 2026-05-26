@@ -9,8 +9,9 @@ On pull requests targeting `master`, the pipeline only validates the compiled de
 1. Use Node.js 22.
 2. Install dependencies with `npm ci`.
 3. Install Playwright Chromium.
-4. Build the Eleventy site and compiled demos with `npm run build`.
+4. Build the Eleventy site, compiled demos, and pure compiled demos with `npm run build`.
 5. Run `npm run demos:ci` to lint, format-check, typecheck, and render-check compiled demos.
+6. Run `npm run demos:pure:ci` to lint, format-check, typecheck, build, and render-check pure compiled demos.
 
 The pull request stage does not load deployment secrets, create a deploy package, upload files, or purge the CDN.
 
@@ -18,7 +19,7 @@ On `master`, the pipeline deploys the website:
 
 1. Use Node.js 22.
 2. Install dependencies with `npm ci`.
-3. Build the Eleventy site and compiled demos with `npm run build`.
+3. Build the Eleventy site, compiled demos, and pure compiled demos with `npm run build`.
 4. Create a deploy zip with `npm run deploy:package`.
 5. Upload the deploy zip to the existing deployment service.
 6. Purge the CDN endpoint after a successful upload.
@@ -33,7 +34,7 @@ The deployment stage keeps using the `BabylonJS-Deployment` variable group. The 
 - `src/assets/`
 - `src/content/**/assets/`
 
-Generated files, HTML pages, and compiled demo output are still included. If a passthrough asset changed in the current commit range, only that changed output file is included instead of re-uploading the entire static tree.
+Generated files, HTML pages, compiled demo output, and pure compiled demo output are still included. If a passthrough asset changed in the current commit range, only that changed output file is included instead of re-uploading the entire static tree.
 
 The script writes a JSON manifest next to the zip with the included and skipped file lists. In Azure DevOps this manifest is published as the `website-deploy-package` artifact for debugging.
 

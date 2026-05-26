@@ -6,7 +6,7 @@
     "scripts": {
         "start": "npx @11ty/eleventy --serve",
         "site:build": "npx @11ty/eleventy",
-        "build": "npm run site:build && npm run demos:build",
+        "build": "npm run site:build && npm run demos:build && npm run demos:pure:build",
         "demos:lint": "eslint \"vite.demos.config.mjs\" \"scripts/**/*.mjs\" \"src/compiledDemos/**/*.ts\"",
         "demos:format": "prettier --check \"azure-pipelines.yml\" \"azure-pipelines.compiled-demos.yml\" \"docs/compiled-demos.md\" \"docs/deployment.md\" \"eslint.config.mjs\" \"package.json\" \"scripts/**/*.mjs\" \"src/compiledDemos/**/*.{html,json,ts}\" \"src/pureCompiledDemos/**/*.{html,json,ts}\" \"tsconfig.demos.json\" \"tsconfig.pure-demos.json\" \"vite.demos.config.mjs\" \"vite.pure-demos.config.mjs\"",
         "demos:format:write": "prettier --write \"azure-pipelines.yml\" \"azure-pipelines.compiled-demos.yml\" \"docs/compiled-demos.md\" \"docs/deployment.md\" \"eslint.config.mjs\" \"package.json\" \"scripts/**/*.mjs\" \"src/compiledDemos/**/*.{html,json,ts}\" \"src/pureCompiledDemos/**/*.{html,json,ts}\" \"tsconfig.demos.json\" \"tsconfig.pure-demos.json\" \"vite.demos.config.mjs\" \"vite.pure-demos.config.mjs\"",

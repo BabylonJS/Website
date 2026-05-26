@@ -20,10 +20,13 @@ pr:
             - package-lock.json
             - scripts/demos/**
             - src/compiledDemos/**
+            - src/pureCompiledDemos/**
             - static/Demos/**
             - static/Scenes/**
             - tsconfig.demos.json
+            - tsconfig.pure-demos.json
             - vite.demos.config.mjs
+            - vite.pure-demos.config.mjs
 
 pool:
     vmImage: ubuntu-latest
@@ -56,6 +59,9 @@ stages:
 
                 - script: npm run demos:ci
                   displayName: Lint, typecheck, and render-check compiled demos
+
+                - script: npm run demos:pure:ci
+                  displayName: Lint, typecheck, and render-check pure compiled demos
 
     - stage: BuildAndDeploy
       displayName: Build and deploy website

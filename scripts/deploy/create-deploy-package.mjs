@@ -26,7 +26,8 @@ if (!existsSync(buildDir)) {
     fail(`Build directory does not exist: ${buildDir}`);
 }
 
-const compiledDemoSlugs = readCompiledDemoSlugs();
+const compiledDemoSlugs = readDemoSlugs("src/compiledDemos/manifest.json");
+const pureDemoSlugs = readDemoSlugs("src/pureCompiledDemos/manifest.json");
 const buildFiles = await listFiles(buildDir);
 const passthroughOutputs = await collectPassthroughOutputs();
 const changedAssetPaths =
@@ -41,7 +42,10 @@ const includedFiles = [];
 const skippedAssetFiles = [];
 
 for (const file of buildFiles) {
-    const copiedFromPassthrough = passthroughOutputs.has(file) && !isCompiledDemoOutput(file, compiledDemoSlugs);
+    const copiedFromPassthrough =
+        passthroughOutputs.has(file) &&
+        !isDemoOutput(file, "Demos", compiledDemoSlugs) &&
+        !isDemoOutput(file, "PureDemos", pureDemoSlugs);
     if (copiedFromPassthrough && !changedAssetPaths.has(file)) {
         skippedAssetFiles.push(file);
         continue;
@@ -131,8 +135,8 @@ async function walk(root, current, files) {
     }
 }
 
-function readCompiledDemoSlugs() {
-    const manifestFile = join(repoRoot, "src/compiledDemos/manifest.json");
+function readDemoSlugs(manifestPath) {
+    const manifestFile = join(repoRoot, manifestPath);
     if (!existsSync(manifestFile)) {
         return new Set();
     }
@@ -141,13 +145,13 @@ function readCompiledDemoSlugs() {
     return new Set((manifest.demos ?? []).map((demo) => demo.slug));
 }
 
-function isCompiledDemoOutput(file, slugs) {
-    if (file.startsWith("Demos/_compiled/")) {
+function isDemoOutput(file, outputRoot, slugs) {
+    if (file.startsWith(`${outputRoot}/_compiled/`)) {
         return true;
     }
 
     for (const slug of slugs) {
-        if (file === `Demos/${slug}/index.html` || file === `Demos/${slug}/source/index.html`) {
+        if (file === `${outputRoot}/${slug}/index.html` || file === `${outputRoot}/${slug}/source/index.html`) {
             return true;
         }
     }

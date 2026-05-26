@@ -102,8 +102,32 @@ const browser = await chromium.launch({
 
 const failures = [];
 
-async function sampleCanvas(canvas, timeoutMs) {
-    const screenshot = await canvas.screenshot({ timeout: timeoutMs });
+async function getCanvasBox(page, canvas, timeoutMs) {
+    const box = await canvas.boundingBox({ timeout: timeoutMs });
+    if (!box) {
+        throw new Error("Canvas has no bounding box.");
+    }
+
+    const viewport = page.viewportSize();
+    if (!viewport) {
+        throw new Error("Page has no viewport size.");
+    }
+
+    const x = Math.max(0, Math.floor(box.x));
+    const y = Math.max(0, Math.floor(box.y));
+    const width = Math.min(viewport.width - x, Math.ceil(box.width));
+    const height = Math.min(viewport.height - y, Math.ceil(box.height));
+
+    if (width <= 0 || height <= 0) {
+        throw new Error(`Canvas is outside the viewport (${JSON.stringify({ box, viewport })}).`);
+    }
+
+    return { x, y, width, height };
+}
+
+async function sampleCanvas(page, canvas, timeoutMs) {
+    const clip = await getCanvasBox(page, canvas, timeoutMs);
+    const screenshot = await page.screenshot({ clip, timeout: timeoutMs });
     const image = sharp(screenshot).ensureAlpha();
     const metadata = await image.metadata();
     const pixels = await image.raw().toBuffer();
@@ -186,8 +210,8 @@ async function waitForDemoReady(page, timeoutMs) {
     }, timeoutMs);
 }
 
-async function checkCanvas(locator, demo, timeoutMs, label) {
-    const sample = await sampleCanvas(locator, timeoutMs);
+async function checkCanvas(page, locator, demo, timeoutMs, label) {
+    const sample = await sampleCanvas(page, locator, timeoutMs);
     const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
 
     if (sample.stats.coloredSamples < minimumColoredSamples) {
@@ -244,32 +268,29 @@ try {
             }
 
             if (canvasCount > 0) {
-                const sample = await checkCanvas(canvas, demo, timeoutMs, "primary");
+                const sample = await checkCanvas(page, canvas, demo, timeoutMs, "primary");
                 canvasStats = sample.stats;
                 canvasPixels = sample.pixels;
             }
 
             for (let canvasIndex = 1; canvasIndex < Math.min(canvasCount, minimumCanvasCount); canvasIndex++) {
-                await checkCanvas(canvases.nth(canvasIndex), demo, timeoutMs, `canvas ${canvasIndex + 1}`);
+                await checkCanvas(page, canvases.nth(canvasIndex), demo, timeoutMs, `canvas ${canvasIndex + 1}`);
             }
 
             const interaction = demo.renderCheck?.interaction;
             if (interaction?.type === "clickCanvas" && canvasStats.readable) {
-                const box = await canvas.boundingBox();
+                const box = await getCanvasBox(page, canvas, timeoutMs);
                 if (!box) {
                     failures.push(`${demo.slug}: interaction check failed (canvas has no bounding box)`);
                 } else {
-                    await canvas.click({
-                        position: {
-                            x: box.width * (interaction.x ?? 0.5),
-                            y: box.height * (interaction.y ?? 0.5),
-                        },
-                        timeout: timeoutMs,
-                    });
+                    await page.mouse.click(
+                        box.x + box.width * (interaction.x ?? 0.5),
+                        box.y + box.height * (interaction.y ?? 0.5)
+                    );
                     await page.waitForTimeout(interaction.waitMs || 750);
                     await waitForAnimationFramePair(page);
 
-                    const afterInteraction = await sampleCanvas(canvas, timeoutMs);
+                    const afterInteraction = await sampleCanvas(page, canvas, timeoutMs);
                     const changedSamples = countChangedSamples(
                         canvasPixels,
                         afterInteraction.pixels,
