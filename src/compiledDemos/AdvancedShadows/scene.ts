@@ -1,14 +1,15 @@
-import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
-import type { Engine } from "@babylonjs/core/Engines/engine";
-import { DirectionalLight } from "@babylonjs/core/Lights/directionalLight";
-import { ShadowGenerator } from "@babylonjs/core/Lights/Shadows/shadowGenerator";
-import { Color3 } from "@babylonjs/core/Maths/math.color";
-import { Vector3 } from "@babylonjs/core/Maths/math.vector";
-import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
-import { CreateBox } from "@babylonjs/core/Meshes/Builders/boxBuilder";
-import { CreateGround } from "@babylonjs/core/Meshes/Builders/groundBuilder";
-import { Scene } from "@babylonjs/core/scene";
-import "@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent";
+import {
+    ArcRotateCamera,
+    Color3,
+    CreateBox,
+    CreateGround,
+    DirectionalLight,
+    type Engine,
+    Scene,
+    ShadowGenerator,
+    StandardMaterial,
+    Vector3,
+} from "@babylonjs/core/pure";
 
 export function createAdvancedShadowsScene(engine: Engine, canvas: HTMLCanvasElement): Scene {
     const scene = new Scene(engine);
