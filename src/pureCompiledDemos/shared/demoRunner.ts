@@ -1,8 +1,11 @@
 import {
+    RegisterAbstractEngineCubeTexture,
     DepthRenderer,
     Engine,
     RegisterDepthRendererSceneComponent,
-    RegisterFullEngineExtensions,
+    RegisterEnginesExtensionsEngineCubeTexture,
+    RegisterEnginesExtensionsEngineDynamicTexture,
+    RegisterEnginesExtensionsEngineReadTexture,
     RegisterOutlineRenderer,
     Scene,
     RegisterStandardMaterial,
@@ -10,8 +13,11 @@ import {
 
 void Scene;
 
-// Required in pure builds so demos don't rely on stripped engine side-effect registration.
-RegisterFullEngineExtensions();
+// Required in pure builds so common demos don't rely on stripped side-effect registration.
+RegisterAbstractEngineCubeTexture();
+RegisterEnginesExtensionsEngineCubeTexture();
+RegisterEnginesExtensionsEngineDynamicTexture();
+RegisterEnginesExtensionsEngineReadTexture();
 RegisterStandardMaterial();
 RegisterDepthRendererSceneComponent(DepthRenderer);
 RegisterOutlineRenderer();
