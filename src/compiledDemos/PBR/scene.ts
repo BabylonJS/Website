@@ -1,5 +1,6 @@
 import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
 import type { Engine } from "@babylonjs/core/Engines/engine";
+import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
 import { PointLight } from "@babylonjs/core/Lights/pointLight";
 import { Color3 } from "@babylonjs/core/Maths/math.color";
 import { Vector3 } from "@babylonjs/core/Maths/math.vector";
@@ -12,7 +13,8 @@ export function createPbrScene(engine: Engine, canvas: HTMLCanvasElement): Scene
     const scene = new Scene(engine);
     const camera = new ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 2.5, 140, Vector3.Zero(), scene);
     camera.attachControl(canvas, true);
-    new PointLight("point", new Vector3(0, 60, 0), scene);
+    new HemisphericLight("fill", new Vector3(0, 1, 0), scene).intensity = 0.8;
+    new PointLight("point", new Vector3(0, 60, 0), scene).intensity = 2.5;
     const colors = [new Color3(0.85, 0.85, 0.85), new Color3(0.01, 0.01, 0.01), new Color3(0.206, 0.94, 1)];
     const metalness = [0, 1, 0.1];
     for (let index = 0; index < 3; index++) {
