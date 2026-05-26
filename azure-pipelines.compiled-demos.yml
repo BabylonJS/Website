@@ -1,0 +1,60 @@
+trigger:
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - azure-pipelines.compiled-demos.yml
+            - .prettierignore
+            - .prettierrc.json
+            - docs/compiled-demos.md
+            - eslint.config.mjs
+            - package.json
+            - package-lock.json
+            - scripts/demos/**
+            - src/compiledDemos/**
+            - static/Demos/**
+            - static/Scenes/**
+            - tsconfig.demos.json
+            - vite.demos.config.mjs
+
+pr:
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - azure-pipelines.compiled-demos.yml
+            - .prettierignore
+            - .prettierrc.json
+            - docs/compiled-demos.md
+            - eslint.config.mjs
+            - package.json
+            - package-lock.json
+            - scripts/demos/**
+            - src/compiledDemos/**
+            - static/Demos/**
+            - static/Scenes/**
+            - tsconfig.demos.json
+            - vite.demos.config.mjs
+
+pool:
+    vmImage: ubuntu-latest
+
+steps:
+    - task: NodeTool@0
+      displayName: Use Node.js 20
+      inputs:
+          versionSpec: 20.x
+
+    - script: npm ci
+      displayName: Install dependencies
+
+    - script: npx playwright install --with-deps chromium
+      displayName: Install Playwright Chromium
+
+    - script: npm run build
+      displayName: Build site and compiled demos
+
+    - script: npm run demos:ci
+      displayName: Lint, typecheck, and render-check compiled demos

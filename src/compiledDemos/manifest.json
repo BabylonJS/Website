@@ -1,0 +1,203 @@
+{
+    "demos": [
+        {
+            "slug": "AssetsManager",
+            "title": "Babylon.js - Assets manager demo",
+            "legacyPath": "static/Demos/AssetsManager",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Boom",
+            "title": "Babylon.js - Boom demo",
+            "legacyPath": "static/Demos/Boom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200,
+                "interaction": {
+                    "type": "clickCanvas",
+                    "x": 0.5,
+                    "y": 0.5,
+                    "waitMs": 1000,
+                    "minimumChangedSamples": 400
+                }
+            }
+        },
+        {
+            "slug": "Bump",
+            "title": "Babylon.js - Bump demo",
+            "legacyPath": "static/Demos/Bump",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Fog",
+            "title": "Babylon.js - Fog demo",
+            "legacyPath": "static/Demos/Fog",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Fresnel",
+            "title": "Babylon.js - Fresnel demo",
+            "legacyPath": "static/Demos/Fresnel",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "Lines",
+            "title": "Babylon.js - Lines demo",
+            "legacyPath": "static/Demos/Lines",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 10
+            }
+        },
+        {
+            "slug": "Lights",
+            "title": "Babylon.js - Lights demo",
+            "legacyPath": "static/Demos/Lights",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "GLTF",
+            "title": "Babylon.js - GLTF demo",
+            "legacyPath": "static/Demos/GLTF",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "GLTFMeshPrimitiveAttributeTest",
+            "title": "Babylon.js - Mesh primitive attribute test",
+            "legacyPath": "static/Demos/GLTFMeshPrimitiveAttributeTest",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "GLTFNormals",
+            "title": "Babylon.js - Normals Test",
+            "legacyPath": "static/Demos/GLTFNormals",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "Heightmap",
+            "title": "Babylon.js - Heightmap demo",
+            "legacyPath": "static/Demos/Heightmap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200
+            }
+        },
+        {
+            "slug": "Offscreen",
+            "title": "Babylon.js - Worker mode",
+            "legacyPath": "static/Demos/Offscreen",
+            "sourceFiles": ["main.ts", "scene.ts", "worker.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "canvasSelector": "canvas",
+                "minimumCanvasCount": 2,
+                "minimumColoredSamples": 150
+            }
+        },
+        {
+            "slug": "PointLightShadowMap",
+            "title": "Babylon.js - Point light shadow map demo",
+            "legacyPath": "static/Demos/PointLightShadowMap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Particles",
+            "title": "Babylon.js - Particles demo",
+            "legacyPath": "static/Demos/Particles",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Refraction",
+            "title": "Babylon.js - Refraction demo",
+            "legacyPath": "static/Demos/Refraction",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Shadows",
+            "title": "Babylon.js - Shadows demo",
+            "legacyPath": "static/Demos/Shadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Ribbons",
+            "title": "Babylon.js - Ribbons demo",
+            "legacyPath": "static/Demos/Ribbons",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "VolumetricLightScattering",
+            "title": "Babylon.js - Volumetric Light Scattering demo",
+            "legacyPath": "static/Demos/VolumetricLightScattering",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Yeti",
+            "title": "Babylon.js - Yeti demo",
+            "legacyPath": "static/Demos/Yeti",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        }
+    ]
+}

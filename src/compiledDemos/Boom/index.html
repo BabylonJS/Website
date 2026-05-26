@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Babylon.js - Boom demo</title>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+                background: #111;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                display: block;
+                opacity: 0;
+                touch-action: none;
+                transition: opacity 160ms ease-out;
+            }
+
+            #fps,
+            #status,
+            #sourceLink,
+            #toolbar,
+            #notSupported {
+                position: fixed;
+                z-index: 2;
+                color: #fff;
+                text-shadow: 0 1px 2px #000;
+            }
+
+            #fps {
+                top: 12px;
+                right: 12px;
+                font-size: 13px;
+            }
+
+            #status {
+                left: 12px;
+                bottom: 12px;
+                font-size: 13px;
+            }
+
+            #sourceLink {
+                right: 12px;
+                bottom: 12px;
+                min-height: 32px;
+                padding: 7px 10px;
+                border: 1px solid rgba(255, 255, 255, 0.35);
+                border-radius: 4px;
+                box-sizing: border-box;
+                background: rgba(20, 20, 20, 0.7);
+                color: #fff;
+                font-size: 13px;
+                text-decoration: none;
+            }
+
+            #toolbar {
+                top: 12px;
+                left: 12px;
+                display: flex;
+                gap: 8px;
+            }
+
+            button {
+                min-height: 32px;
+                border: 1px solid rgba(255, 255, 255, 0.35);
+                border-radius: 4px;
+                background: rgba(20, 20, 20, 0.7);
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #notSupported {
+                inset: 0;
+                display: grid;
+                place-items: center;
+                background: rgba(0, 0, 0, 0.82);
+                font-size: 18px;
+            }
+
+            #notSupported.hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="renderCanvas"></canvas>
+        <div id="toolbar">
+            <button id="enableDebug" type="button">Debug layer</button>
+            <button id="fullscreen" type="button">Fullscreen</button>
+        </div>
+        <a id="sourceLink" href="./source/">Source</a>
+        <div id="fps"></div>
+        <div id="status"></div>
+        <div id="notSupported" class="hidden">Sorry, your browser does not support WebGL.</div>
+        <script type="module" src="./main.ts"></script>
+    </body>
+</html>

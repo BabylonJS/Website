@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "useDefineForClassFields": false,
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "types": [],
+        "allowJs": false,
+        "checkJs": false,
+        "strict": false,
+        "isolatedModules": true,
+        "noEmit": true,
+        "skipLibCheck": true
+    },
+    "include": ["src/compiledDemos/**/*.ts"]
+}
