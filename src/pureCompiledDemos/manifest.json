@@ -1,0 +1,11 @@
+{
+    "demos": [
+        {
+            "slug": "AdvancedShadows",
+            "title": "Babylon.js - Advanced Shadows pure demo",
+            "legacyPath": "static/Demos/AdvancedShadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+        }
+    ]
+}

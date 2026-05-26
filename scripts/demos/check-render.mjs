@@ -7,7 +7,8 @@ import sharp from "sharp";
 
 const repoRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
 const buildRoot = path.join(repoRoot, "build");
-const manifestPath = path.join(repoRoot, "src/compiledDemos/manifest.json");
+const manifestPath = path.resolve(repoRoot, process.env.DEMOS_MANIFEST_PATH || "src/compiledDemos/manifest.json");
+const demosBasePath = (process.env.DEMOS_BASE_PATH || "Demos").replace(/^\/+|\/+$/g, "");
 const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
 const selectedDemos = new Set(
     (process.env.DEMOS || "")
@@ -27,6 +28,34 @@ const contentTypes = new Map([
     [".webp", "image/webp"],
     [".wasm", "application/wasm"],
 ]);
+
+function escapeAzureDevOpsMessage(message) {
+    return String(message)
+        .replace(/%/g, "%AZP25")
+        .replace(/\r/g, "%0D")
+        .replace(/\n/g, "%0A")
+        .replace(/]/g, "%5D")
+        .replace(/;/g, "%3B");
+}
+
+function logFailure(message) {
+    console.error(`##vso[task.logissue type=error]${escapeAzureDevOpsMessage(message)}`);
+    console.error(message);
+}
+
+function formatBrowserIssues(consoleErrors, pageErrors, requestFailures) {
+    const sections = [];
+    if (consoleErrors.length > 0) {
+        sections.push(`console errors: ${consoleErrors.join(" | ")}`);
+    }
+    if (pageErrors.length > 0) {
+        sections.push(`page errors: ${pageErrors.join(" | ")}`);
+    }
+    if (requestFailures.length > 0) {
+        sections.push(`request failures: ${requestFailures.join(" | ")}`);
+    }
+    return sections.join("; ");
+}
 
 const demos = manifest.demos.filter(
     (demo) => !demo.renderCheck?.disabled && (selectedDemos.size === 0 || selectedDemos.has(demo.slug))
@@ -175,15 +204,19 @@ try {
         const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
         const consoleErrors = [];
         const pageErrors = [];
+        const requestFailures = [];
         page.on("console", (message) => {
             if (message.type() === "error") {
                 consoleErrors.push(message.text());
             }
         });
         page.on("pageerror", (error) => pageErrors.push(error.message));
+        page.on("requestfailed", (request) => {
+            requestFailures.push(`${request.url()} (${request.failure()?.errorText || "failed"})`);
+        });
 
         const timeoutMs = demo.renderCheck?.timeoutMs || 15000;
-        const url = `${baseUrl}/Demos/${encodeURIComponent(demo.slug)}/`;
+        const url = `${baseUrl}/${demosBasePath}/${encodeURIComponent(demo.slug)}/`;
 
         try {
             await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
@@ -248,11 +281,15 @@ try {
                 }
             }
 
-            if (consoleErrors.length > 0 || pageErrors.length > 0) {
-                failures.push(`${demo.slug}: browser errors: ${[...consoleErrors, ...pageErrors].join(" | ")}`);
+            const browserIssues = formatBrowserIssues(consoleErrors, pageErrors, requestFailures);
+            if (browserIssues) {
+                failures.push(`${demo.slug}: browser issues while opening ${url}: ${browserIssues}`);
             }
         } catch (error) {
-            failures.push(`${demo.slug}: ${error.message}`);
+            const browserIssues = formatBrowserIssues(consoleErrors, pageErrors, requestFailures);
+            failures.push(
+                `${demo.slug}: ${error.message} while opening ${url}${browserIssues ? `. Browser details: ${browserIssues}` : ""}`
+            );
         } finally {
             await page.close();
         }
@@ -263,7 +300,9 @@ try {
 }
 
 if (failures.length > 0) {
-    console.error(failures.join("\n"));
+    for (const failure of failures) {
+        logFailure(failure);
+    }
     process.exit(1);
 }
 

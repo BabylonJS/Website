@@ -67,6 +67,12 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 | WaterMaterial | done | Water material coverage with generated bump texture and reflection render list. |
 | Yeti | done | Remote animated glTF asset with loader animation options, default environment, and textured snow particles. |
 
+## Pure Barrel Track
+
+| Demo | Status | Notes |
+| --- | --- | --- |
+| AdvancedShadows | experimental | Isolated under `src/pureCompiledDemos/` and built to `/PureDemos/AdvancedShadows/` with `@babylonjs/core/pure`. Not part of normal `demos:ci` yet. |
+
 ## Next Waves
 
 | Wave | Demos | Main Risk To Prove |

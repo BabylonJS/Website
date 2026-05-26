@@ -9,7 +9,7 @@ export default [
     js.configs.recommended,
     ...tseslint.configs.recommended,
     {
-        files: ["scripts/**/*.mjs", "vite.demos.config.mjs", "eslint.config.mjs"],
+        files: ["scripts/**/*.mjs", "vite.demos.config.mjs", "vite.pure-demos.config.mjs", "eslint.config.mjs"],
         languageOptions: {
             ecmaVersion: "latest",
             sourceType: "module",
@@ -17,7 +17,7 @@ export default [
         },
     },
     {
-        files: ["src/compiledDemos/**/*.ts"],
+        files: ["src/compiledDemos/**/*.ts", "src/pureCompiledDemos/**/*.ts"],
         languageOptions: {
             ecmaVersion: "latest",
             sourceType: "module",

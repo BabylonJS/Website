@@ -2,6 +2,8 @@
 
 The legacy demos under `static/Demos/` are copied directly into `build/` and load Babylon from the UMD CDN. Compiled demos live under `src/compiledDemos/`, import `@babylonjs/core` and sibling packages as ES modules, and are bundled with Vite.
 
+Pure compiled demo experiments live under `src/pureCompiledDemos/`, import from `@babylonjs/core/pure`, and are bundled separately to `/PureDemos/`. They are intentionally not part of the normal `/Demos/` build or `demos:ci` gate yet.
+
 The migration tracker lives in `docs/compiled-demo-migration.md`.
 
 ## Goals
@@ -22,6 +24,14 @@ The migration tracker lives in `docs/compiled-demo-migration.md`.
 This keeps the site and demo build steps available separately while making the default `build` script produce the final combined output.
 
 For local preview, run `npm run demos:serve`. This builds the site, overlays the compiled demos, and serves the final `build/` output with Vite preview.
+
+Pure demo experiments use a separate build flow:
+
+1. `npm run demos:pure:build` bundles `src/pureCompiledDemos/manifest.json` to `build/PureDemos/`.
+2. `npm run demos:pure:smoke` opens `/PureDemos/<slug>/` and checks browser readiness and errors.
+3. `npm run demos:pure:check` runs the same nonblank canvas render health check against `/PureDemos/<slug>/`.
+
+The pure build currently disables Rollup treeshaking in `vite.pure-demos.config.mjs` while the pure barrel migration path is evaluated. This keeps pure experiments isolated from the shipping compiled demo bundle.
 
 ## Source Layout
 
@@ -227,6 +237,13 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+
+src/pureCompiledDemos/
+  manifest.json
+  AdvancedShadows/
+    index.html
+    main.ts
+    scene.ts
 ```
 
 Each demo folder owns its HTML shell and TypeScript entry. Shared browser bootstrapping lives in `shared/demoRunner.ts`, which creates the engine, starts the render loop, wires common controls, and exposes `window.__babylonDemoReady` for CI.
@@ -284,6 +301,8 @@ Compiled demo source is linted with ESLint and formatted with Prettier. The chec
 ## CI
 
 Pull requests targeting `master` run a validation-only stage in `azure-pipelines.yml`. The PR stage installs dependencies, installs Playwright Chromium, runs `npm run build`, and then runs `npm run demos:ci` to lint, format-check, typecheck, and render-check the compiled demos. It does not load deployment secrets or run any upload/purge steps.
+
+Pure compiled demo experiments are not part of `demos:ci` yet. Use `npm run demos:pure:ci` locally when changing `src/pureCompiledDemos/` or `vite.pure-demos.config.mjs`.
 
 `azure-pipelines.compiled-demos.yml` remains available as a separate compiled-demo validation pipeline. It runs `npm run build` first, which produces the site with compiled demos, and then runs `npm run demos:ci`. If the main build pipeline can publish a build artifact later, this pipeline can be changed to consume that artifact instead of rebuilding the site.
 

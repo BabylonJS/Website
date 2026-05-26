@@ -1,0 +1,4 @@
+{
+    "extends": "./tsconfig.demos.json",
+    "include": ["src/pureCompiledDemos/**/*.ts", "src/compiledDemos/shared/**/*.ts"]
+}
