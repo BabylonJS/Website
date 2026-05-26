@@ -240,11 +240,13 @@ src/compiledDemos/
 
 src/pureCompiledDemos/
   manifest.json
-  AdvancedShadows/
+  <PureDemo>/
     index.html
     main.ts
     scene.ts
 ```
+
+Pure demo folders mirror compiled demo folders, but their source imports Babylon core symbols from `@babylonjs/core/pure`. `src/pureCompiledDemos/manifest.json` controls which pure experiments are built to `/PureDemos/`.
 
 Each demo folder owns its HTML shell and TypeScript entry. Shared browser bootstrapping lives in `shared/demoRunner.ts`, which creates the engine, starts the render loop, wires common controls, and exposes `window.__babylonDemoReady` for CI.
 
@@ -255,6 +257,8 @@ Each demo page should include a small source link at the bottom of the viewport:
 ```
 
 `npm run demos:build` generates `/Demos/<slug>/source/` from the files listed in `manifest.json`, so the site can show the exact TypeScript source for each compiled demo.
+
+`npm run demos:pure:build` does the same for `/PureDemos/<slug>/source/` using `src/pureCompiledDemos/manifest.json`.
 
 ## Adding A Demo
 

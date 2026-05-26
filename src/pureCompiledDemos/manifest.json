@@ -1,11 +1,304 @@
 {
     "demos": [
         {
+            "slug": "Bump",
+            "title": "Babylon.js - Bump pure demo",
+            "legacyPath": "static/Demos/Bump",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Fog",
+            "title": "Babylon.js - Fog pure demo",
+            "legacyPath": "static/Demos/Fog",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Lines",
+            "title": "Babylon.js - Lines pure demo",
+            "legacyPath": "static/Demos/Lines",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 15000,
+                "minimumColoredSamples": 10
+            }
+        },
+        {
+            "slug": "Lights",
+            "title": "Babylon.js - Lights pure demo",
+            "legacyPath": "static/Demos/Lights",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Multimaterial",
+            "title": "Babylon.js - Multimaterial pure demo",
+            "legacyPath": "static/Demos/Multimaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "CSG",
+            "title": "Babylon.js - CSG pure demo",
+            "legacyPath": "static/Demos/CSG",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Decals",
+            "title": "Babylon.js - Decals pure demo",
+            "legacyPath": "static/Demos/Decals",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "CustomShader",
+            "title": "Babylon.js - Custom Shader pure demo",
+            "legacyPath": "static/Demos/CustomShader",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPBloom",
+            "title": "Babylon.js - Post-process Bloom pure demo",
+            "legacyPath": "static/Demos/PPBloom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPConvolution",
+            "title": "Babylon.js - Post-process Convolution pure demo",
+            "legacyPath": "static/Demos/PPConvolution",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPRef",
+            "title": "Babylon.js - Post-process Refraction pure demo",
+            "legacyPath": "static/Demos/PPRef",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "DOF",
+            "title": "Babylon.js - Depth of Field pure demo",
+            "legacyPath": "static/Demos/DOF",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Lens",
+            "title": "Babylon.js - Lens Flares pure demo",
+            "legacyPath": "static/Demos/Lens",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Highlights",
+            "title": "Babylon.js - Highlights pure demo",
+            "legacyPath": "static/Demos/Highlights",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "DisplacementMap",
+            "title": "Babylon.js - Displacement Map pure demo",
+            "legacyPath": "static/Demos/DisplacementMap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
             "slug": "AdvancedShadows",
             "title": "Babylon.js - Advanced Shadows pure demo",
             "legacyPath": "static/Demos/AdvancedShadows",
             "sourceFiles": ["main.ts", "scene.ts"],
-            "renderCheck": { "timeoutMs": 20000, "minimumColoredSamples": 120 }
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "CustomRenderTarget",
+            "title": "Babylon.js - Custom Render Target pure demo",
+            "legacyPath": "static/Demos/CustomRenderTarget",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "MotionBlur",
+            "title": "Babylon.js - Motion Blur pure demo",
+            "legacyPath": "static/Demos/MotionBlur",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PBR",
+            "title": "Babylon.js - PBR pure demo",
+            "legacyPath": "static/Demos/PBR",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PBRRough",
+            "title": "Babylon.js - PBR Rough pure demo",
+            "legacyPath": "static/Demos/PBRRough",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PBRGlossy",
+            "title": "Babylon.js - PBR Glossy pure demo",
+            "legacyPath": "static/Demos/PBRGlossy",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PBRGlossyBloom",
+            "title": "Babylon.js - PBR Glossy Bloom pure demo",
+            "legacyPath": "static/Demos/PBRGlossyBloom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "GlowLayer",
+            "title": "Babylon.js - Glow Layer pure demo",
+            "legacyPath": "static/Demos/GlowLayer",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "DefaultRenderingPipeline",
+            "title": "Babylon.js - Default Rendering Pipeline pure demo",
+            "legacyPath": "static/Demos/DefaultRenderingPipeline",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "StandardRenderingPipeline",
+            "title": "Babylon.js - Standard Rendering Pipeline pure demo",
+            "legacyPath": "static/Demos/StandardRenderingPipeline",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "VertexData",
+            "title": "Babylon.js - Vertex Data pure demo",
+            "legacyPath": "static/Demos/VertexData",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Heightmap",
+            "title": "Babylon.js - Heightmap pure demo",
+            "legacyPath": "static/Demos/Heightmap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200
+            }
+        },
+        {
+            "slug": "Particles",
+            "title": "Babylon.js - Particles pure demo",
+            "legacyPath": "static/Demos/Particles",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Refraction",
+            "title": "Babylon.js - Refraction pure demo",
+            "legacyPath": "static/Demos/Refraction",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Ribbons",
+            "title": "Babylon.js - Ribbons pure demo",
+            "legacyPath": "static/Demos/Ribbons",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
         }
     ]
 }

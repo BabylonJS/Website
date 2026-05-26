@@ -71,7 +71,7 @@ This tracks the move from legacy static demos under `static/Demos/` to compiled 
 
 | Demo | Status | Notes |
 | --- | --- | --- |
-| AdvancedShadows | experimental | Isolated under `src/pureCompiledDemos/` and built to `/PureDemos/AdvancedShadows/` with `@babylonjs/core/pure`. Not part of normal `demos:ci` yet. |
+| 30 core-only demos | experimental | Isolated under `src/pureCompiledDemos/` and built to `/PureDemos/<Demo>/` with `@babylonjs/core/pure`. Not part of normal `demos:ci` yet; validate with `npm run demos:pure:ci`. |
 
 ## Next Waves
 

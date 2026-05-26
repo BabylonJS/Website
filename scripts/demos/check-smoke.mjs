@@ -127,6 +127,11 @@ try {
         page.on("requestfailed", (request) => {
             requestFailures.push(`${request.url()} (${request.failure()?.errorText || "failed"})`);
         });
+        page.on("response", (response) => {
+            if (response.status() >= 400) {
+                requestFailures.push(`${response.url()} (${response.status()} ${response.statusText()})`);
+            }
+        });
 
         const timeoutMs = demo.renderCheck?.timeoutMs || 15000;
         const url = `${baseUrl}/${demosBasePath}/${encodeURIComponent(demo.slug)}/`;
