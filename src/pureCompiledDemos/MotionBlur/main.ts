@@ -1,4 +1,4 @@
-import { runDemo } from "../../compiledDemos/shared/demoRunner";
+import { runDemo } from "../shared/demoRunner";
 import { createMotionBlurScene } from "./scene";
 
 runDemo({ createScene: createMotionBlurScene });

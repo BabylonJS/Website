@@ -1,4 +1,4 @@
-import { runDemo } from "../../compiledDemos/shared/demoRunner";
+import { runDemo } from "../shared/demoRunner";
 import { createPbrGlossyBloomScene } from "./scene";
 
 runDemo({ createScene: createPbrGlossyBloomScene });

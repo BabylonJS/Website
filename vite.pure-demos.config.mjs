@@ -21,7 +21,6 @@ export default defineConfig({
         emptyOutDir: false,
         sourcemap: true,
         rollupOptions: {
-            treeshake: false,
             input,
             output: {
                 entryFileNames: "_compiled/[name]-[hash].js",
