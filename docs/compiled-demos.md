@@ -42,6 +42,30 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  CellShading/
+    index.html
+    main.ts
+    scene.ts
+  CSG/
+    index.html
+    main.ts
+    scene.ts
+  CustomShader/
+    index.html
+    main.ts
+    scene.ts
+  Decals/
+    index.html
+    main.ts
+    scene.ts
+  DisplacementMap/
+    index.html
+    main.ts
+    scene.ts
+  DOF/
+    index.html
+    main.ts
+    scene.ts
   Fog/
     index.html
     main.ts
@@ -66,11 +90,47 @@ src/compiledDemos/
     index.html
     main.ts
     scene.ts
+  LOD/
+    index.html
+    main.ts
+    scene.ts
+  LookAt/
+    index.html
+    main.ts
+    scene.ts
   Lights/
     index.html
     main.ts
     scene.ts
+  Multimaterial/
+    index.html
+    main.ts
+    scene.ts
+  Octree/
+    index.html
+    main.ts
+    scene.ts
+  PPBloom/
+    index.html
+    main.ts
+    scene.ts
+  PPConvolution/
+    index.html
+    main.ts
+    scene.ts
+  PPRef/
+    index.html
+    main.ts
+    scene.ts
   Ribbons/
+    index.html
+    main.ts
+    scene.ts
+  Highlights/
+    index.html
+    main.ts
+    scene.ts
+  Lens/
     index.html
     main.ts
     scene.ts

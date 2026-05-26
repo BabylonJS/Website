@@ -78,6 +78,156 @@
             }
         },
         {
+            "slug": "Multimaterial",
+            "title": "Babylon.js - Multimaterial demo",
+            "legacyPath": "static/Demos/Multimaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "CSG",
+            "title": "Babylon.js - CSG demo",
+            "legacyPath": "static/Demos/CSG",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "LOD",
+            "title": "Babylon.js - LOD demo",
+            "legacyPath": "static/Demos/LOD",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Octree",
+            "title": "Babylon.js - Octree demo",
+            "legacyPath": "static/Demos/Octree",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "LookAt",
+            "title": "Babylon.js - LookAt demo",
+            "legacyPath": "static/Demos/LookAt",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Decals",
+            "title": "Babylon.js - Decals demo",
+            "legacyPath": "static/Demos/Decals",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "CustomShader",
+            "title": "Babylon.js - Custom Shader demo",
+            "legacyPath": "static/Demos/CustomShader",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPBloom",
+            "title": "Babylon.js - Post-process Bloom demo",
+            "legacyPath": "static/Demos/PPBloom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPConvolution",
+            "title": "Babylon.js - Post-process Convolution demo",
+            "legacyPath": "static/Demos/PPConvolution",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PPRef",
+            "title": "Babylon.js - Post-process Refraction demo",
+            "legacyPath": "static/Demos/PPRef",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "DOF",
+            "title": "Babylon.js - Depth of Field demo",
+            "legacyPath": "static/Demos/DOF",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Lens",
+            "title": "Babylon.js - Lens Flares demo",
+            "legacyPath": "static/Demos/Lens",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "CellShading",
+            "title": "Babylon.js - Cell Shading demo",
+            "legacyPath": "static/Demos/CellShading",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Highlights",
+            "title": "Babylon.js - Highlights demo",
+            "legacyPath": "static/Demos/Highlights",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "DisplacementMap",
+            "title": "Babylon.js - Displacement Map demo",
+            "legacyPath": "static/Demos/DisplacementMap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
             "slug": "GLTF",
             "title": "Babylon.js - GLTF demo",
             "legacyPath": "static/Demos/GLTF",
