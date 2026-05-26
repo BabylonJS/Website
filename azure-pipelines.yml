@@ -1,0 +1,143 @@
+trigger:
+    batch: true
+    branches:
+        include:
+            - master
+
+pr:
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - azure-pipelines.yml
+            - azure-pipelines.compiled-demos.yml
+            - .prettierignore
+            - .prettierrc.json
+            - docs/compiled-demos.md
+            - eslint.config.mjs
+            - package.json
+            - package-lock.json
+            - scripts/demos/**
+            - src/compiledDemos/**
+            - src/pureCompiledDemos/**
+            - static/Demos/**
+            - static/Scenes/**
+            - tsconfig.demos.json
+            - tsconfig.pure-demos.json
+            - vite.demos.config.mjs
+            - vite.pure-demos.config.mjs
+
+pool:
+    vmImage: ubuntu-latest
+
+stages:
+    - stage: ValidatePullRequest
+      displayName: Validate pull request
+      condition: eq(variables['Build.Reason'], 'PullRequest')
+      jobs:
+          - job: ValidateCompiledDemos
+            displayName: Validate compiled demos
+            timeoutInMinutes: 60
+            steps:
+                - checkout: self
+                  clean: true
+
+                - task: UseNode@1
+                  displayName: Use Node.js 22
+                  inputs:
+                      version: 22.x
+
+                - script: npm ci
+                  displayName: Install dependencies
+
+                - script: npx playwright install --with-deps chromium
+                  displayName: Install Playwright Chromium
+
+                - script: npm run build
+                  displayName: Build site and compiled demos
+
+                - script: npm run demos:ci
+                  displayName: Lint, typecheck, and render-check compiled demos
+
+                - script: npm run demos:pure:ci
+                  displayName: Lint, typecheck, and render-check pure compiled demos
+
+    - stage: BuildAndDeploy
+      displayName: Build and deploy website
+      condition: ne(variables['Build.Reason'], 'PullRequest')
+      variables:
+          - group: BabylonJS-Deployment
+          - name: system.debug
+            value: false
+          - name: deploymentPath
+            value: cdn/website
+          - name: storageAccount
+            value: babylonsnapshots
+          - name: cdnEndpoint
+            value: babylonjs-webbsite
+          - name: cdnProfile
+            value: babylonjscdn
+          - name: deployPackage
+            value: $(Build.ArtifactStagingDirectory)/website-deploy.zip
+          - name: deployManifest
+            value: $(Build.ArtifactStagingDirectory)/deploy-package-manifest.json
+      jobs:
+          - job: DeploySite
+            displayName: Deploy site
+            timeoutInMinutes: 60
+            steps:
+                - checkout: self
+                  clean: true
+                  fetchDepth: 0
+
+                - task: UseNode@1
+                  displayName: Use Node.js 22
+                  inputs:
+                      version: 22.x
+
+                - script: npm ci
+                  displayName: Install dependencies
+
+                - script: rm -rf build
+                  displayName: Clean build output
+
+                - script: npm run build
+                  displayName: Build site and compiled demos
+
+                - script: npm run deploy:package -- --out "$(deployPackage)" --manifest "$(deployManifest)"
+                  displayName: Create smart deploy package
+
+                - publish: $(Build.ArtifactStagingDirectory)
+                  artifact: website-deploy-package
+                  displayName: Publish deploy package manifest
+                  condition: succeededOrFailed()
+
+                - bash: |
+                      curl "$(DEPLOYMENT_SERVER)/upload" \
+                          -i \
+                          -X POST \
+                          -H "Content-Type: multipart/form-data" \
+                          -H "Authorization: Bearer $(DEPLOY_TOKEN)" \
+                          -F "path=$(deploymentPath)" \
+                          -F "storageAccount=$(storageAccount)" \
+                          -F "zip=@$(deployPackage)" \
+                          --fail-with-body \
+                          --retry 3 \
+                          --retry-delay 10 \
+                          --retry-all-errors \
+                          --max-time 600
+                  displayName: Upload changed website files
+                  condition: and(succeeded(), eq(variables.deployPackageHasFiles, 'true'))
+
+                - bash: |
+                      curl "$(DEPLOYMENT_SERVER)/purge?endpoint=$(cdnEndpoint)&profileName=$(cdnProfile)" \
+                          -i \
+                          -X POST \
+                          -H "Authorization: Bearer $(DEPLOY_TOKEN)" \
+                          --fail-with-body \
+                          --retry 3 \
+                          --retry-delay 10 \
+                          --retry-all-errors
+                  displayName: Purge CDN
+                  condition: and(succeeded(), eq(variables.deployPackageHasFiles, 'true'))

@@ -13,10 +13,13 @@ trigger:
             - package-lock.json
             - scripts/demos/**
             - src/compiledDemos/**
+            - src/pureCompiledDemos/**
             - static/Demos/**
             - static/Scenes/**
             - tsconfig.demos.json
+            - tsconfig.pure-demos.json
             - vite.demos.config.mjs
+            - vite.pure-demos.config.mjs
 
 pr:
     branches:
@@ -33,19 +36,22 @@ pr:
             - package-lock.json
             - scripts/demos/**
             - src/compiledDemos/**
+            - src/pureCompiledDemos/**
             - static/Demos/**
             - static/Scenes/**
             - tsconfig.demos.json
+            - tsconfig.pure-demos.json
             - vite.demos.config.mjs
+            - vite.pure-demos.config.mjs
 
 pool:
     vmImage: ubuntu-latest
 
 steps:
-    - task: NodeTool@0
+    - task: UseNode@1
       displayName: Use Node.js 20
       inputs:
-          versionSpec: 20.x
+          version: 20.x
 
     - script: npm ci
       displayName: Install dependencies
@@ -58,3 +64,6 @@ steps:
 
     - script: npm run demos:ci
       displayName: Lint, typecheck, and render-check compiled demos
+
+    - script: npm run demos:pure:ci
+      displayName: Lint, typecheck, and render-check pure compiled demos

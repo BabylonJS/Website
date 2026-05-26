@@ -7,7 +7,8 @@ import sharp from "sharp";
 
 const repoRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
 const buildRoot = path.join(repoRoot, "build");
-const manifestPath = path.join(repoRoot, "src/compiledDemos/manifest.json");
+const manifestPath = path.resolve(repoRoot, process.env.DEMOS_MANIFEST_PATH || "src/compiledDemos/manifest.json");
+const demosBasePath = (process.env.DEMOS_BASE_PATH || "Demos").replace(/^\/+|\/+$/g, "");
 const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
 const selectedDemos = new Set(
     (process.env.DEMOS || "")
@@ -27,6 +28,34 @@ const contentTypes = new Map([
     [".webp", "image/webp"],
     [".wasm", "application/wasm"],
 ]);
+
+function escapeAzureDevOpsMessage(message) {
+    return String(message)
+        .replace(/%/g, "%AZP25")
+        .replace(/\r/g, "%0D")
+        .replace(/\n/g, "%0A")
+        .replace(/]/g, "%5D")
+        .replace(/;/g, "%3B");
+}
+
+function logFailure(message) {
+    console.error(`##vso[task.logissue type=error]${escapeAzureDevOpsMessage(message)}`);
+    console.error(message);
+}
+
+function formatBrowserIssues(consoleErrors, pageErrors, requestFailures) {
+    const sections = [];
+    if (consoleErrors.length > 0) {
+        sections.push(`console errors: ${consoleErrors.join(" | ")}`);
+    }
+    if (pageErrors.length > 0) {
+        sections.push(`page errors: ${pageErrors.join(" | ")}`);
+    }
+    if (requestFailures.length > 0) {
+        sections.push(`request failures: ${requestFailures.join(" | ")}`);
+    }
+    return sections.join("; ");
+}
 
 const demos = manifest.demos.filter(
     (demo) => !demo.renderCheck?.disabled && (selectedDemos.size === 0 || selectedDemos.has(demo.slug))
@@ -73,8 +102,32 @@ const browser = await chromium.launch({
 
 const failures = [];
 
-async function sampleCanvas(canvas, timeoutMs) {
-    const screenshot = await canvas.screenshot({ timeout: timeoutMs });
+async function getCanvasBox(page, canvas, timeoutMs) {
+    const box = await canvas.boundingBox({ timeout: timeoutMs });
+    if (!box) {
+        throw new Error("Canvas has no bounding box.");
+    }
+
+    const viewport = page.viewportSize();
+    if (!viewport) {
+        throw new Error("Page has no viewport size.");
+    }
+
+    const x = Math.max(0, Math.floor(box.x));
+    const y = Math.max(0, Math.floor(box.y));
+    const width = Math.min(viewport.width - x, Math.ceil(box.width));
+    const height = Math.min(viewport.height - y, Math.ceil(box.height));
+
+    if (width <= 0 || height <= 0) {
+        throw new Error(`Canvas is outside the viewport (${JSON.stringify({ box, viewport })}).`);
+    }
+
+    return { x, y, width, height };
+}
+
+async function sampleCanvas(page, canvas, timeoutMs) {
+    const clip = await getCanvasBox(page, canvas, timeoutMs);
+    const screenshot = await page.screenshot({ clip, timeout: timeoutMs });
     const image = sharp(screenshot).ensureAlpha();
     const metadata = await image.metadata();
     const pixels = await image.raw().toBuffer();
@@ -157,8 +210,8 @@ async function waitForDemoReady(page, timeoutMs) {
     }, timeoutMs);
 }
 
-async function checkCanvas(locator, demo, timeoutMs, label) {
-    const sample = await sampleCanvas(locator, timeoutMs);
+async function checkCanvas(page, locator, demo, timeoutMs, label) {
+    const sample = await sampleCanvas(page, locator, timeoutMs);
     const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
 
     if (sample.stats.coloredSamples < minimumColoredSamples) {
@@ -175,15 +228,24 @@ try {
         const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
         const consoleErrors = [];
         const pageErrors = [];
+        const requestFailures = [];
         page.on("console", (message) => {
             if (message.type() === "error") {
                 consoleErrors.push(message.text());
             }
         });
         page.on("pageerror", (error) => pageErrors.push(error.message));
+        page.on("requestfailed", (request) => {
+            requestFailures.push(`${request.url()} (${request.failure()?.errorText || "failed"})`);
+        });
+        page.on("response", (response) => {
+            if (response.status() >= 400) {
+                requestFailures.push(`${response.url()} (${response.status()} ${response.statusText()})`);
+            }
+        });
 
         const timeoutMs = demo.renderCheck?.timeoutMs || 15000;
-        const url = `${baseUrl}/Demos/${encodeURIComponent(demo.slug)}/`;
+        const url = `${baseUrl}/${demosBasePath}/${encodeURIComponent(demo.slug)}/`;
 
         try {
             await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
@@ -206,32 +268,29 @@ try {
             }
 
             if (canvasCount > 0) {
-                const sample = await checkCanvas(canvas, demo, timeoutMs, "primary");
+                const sample = await checkCanvas(page, canvas, demo, timeoutMs, "primary");
                 canvasStats = sample.stats;
                 canvasPixels = sample.pixels;
             }
 
             for (let canvasIndex = 1; canvasIndex < Math.min(canvasCount, minimumCanvasCount); canvasIndex++) {
-                await checkCanvas(canvases.nth(canvasIndex), demo, timeoutMs, `canvas ${canvasIndex + 1}`);
+                await checkCanvas(page, canvases.nth(canvasIndex), demo, timeoutMs, `canvas ${canvasIndex + 1}`);
             }
 
             const interaction = demo.renderCheck?.interaction;
             if (interaction?.type === "clickCanvas" && canvasStats.readable) {
-                const box = await canvas.boundingBox();
+                const box = await getCanvasBox(page, canvas, timeoutMs);
                 if (!box) {
                     failures.push(`${demo.slug}: interaction check failed (canvas has no bounding box)`);
                 } else {
-                    await canvas.click({
-                        position: {
-                            x: box.width * (interaction.x ?? 0.5),
-                            y: box.height * (interaction.y ?? 0.5),
-                        },
-                        timeout: timeoutMs,
-                    });
+                    await page.mouse.click(
+                        box.x + box.width * (interaction.x ?? 0.5),
+                        box.y + box.height * (interaction.y ?? 0.5)
+                    );
                     await page.waitForTimeout(interaction.waitMs || 750);
                     await waitForAnimationFramePair(page);
 
-                    const afterInteraction = await sampleCanvas(canvas, timeoutMs);
+                    const afterInteraction = await sampleCanvas(page, canvas, timeoutMs);
                     const changedSamples = countChangedSamples(
                         canvasPixels,
                         afterInteraction.pixels,
@@ -248,11 +307,15 @@ try {
                 }
             }
 
-            if (consoleErrors.length > 0 || pageErrors.length > 0) {
-                failures.push(`${demo.slug}: browser errors: ${[...consoleErrors, ...pageErrors].join(" | ")}`);
+            const browserIssues = formatBrowserIssues(consoleErrors, pageErrors, requestFailures);
+            if (browserIssues) {
+                failures.push(`${demo.slug}: browser issues while opening ${url}: ${browserIssues}`);
             }
         } catch (error) {
-            failures.push(`${demo.slug}: ${error.message}`);
+            const browserIssues = formatBrowserIssues(consoleErrors, pageErrors, requestFailures);
+            failures.push(
+                `${demo.slug}: ${error.message} while opening ${url}${browserIssues ? `. Browser details: ${browserIssues}` : ""}`
+            );
         } finally {
             await page.close();
         }
@@ -263,7 +326,9 @@ try {
 }
 
 if (failures.length > 0) {
-    console.error(failures.join("\n"));
+    for (const failure of failures) {
+        logFailure(failure);
+    }
     process.exit(1);
 }
 

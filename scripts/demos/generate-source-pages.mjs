@@ -3,9 +3,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
-const sourceRoot = path.join(repoRoot, "src/compiledDemos");
-const buildRoot = path.join(repoRoot, "build/Demos");
-const manifest = JSON.parse(await fs.readFile(path.join(sourceRoot, "manifest.json"), "utf8"));
+const sourceRoot = path.resolve(repoRoot, process.env.DEMOS_SOURCE_ROOT || "src/compiledDemos");
+const outputRoot = process.env.DEMOS_OUTPUT_ROOT || "Demos";
+const buildRoot = path.join(repoRoot, "build", outputRoot);
+const manifestPath = path.resolve(repoRoot, process.env.DEMOS_MANIFEST_PATH || path.join(sourceRoot, "manifest.json"));
+const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
 
 const escapeHtml = (value) =>
     value
