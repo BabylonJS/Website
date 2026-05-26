@@ -4,31 +4,78 @@ trigger:
         include:
             - master
 
-pr: none
-
-variables:
-    - group: BabylonJS-Deployment
-    - name: system.debug
-      value: false
-    - name: deploymentPath
-      value: cdn/website
-    - name: storageAccount
-      value: babylonsnapshots
-    - name: cdnEndpoint
-      value: babylonjs-webbsite
-    - name: cdnProfile
-      value: babylonjscdn
-    - name: deployPackage
-      value: $(Build.ArtifactStagingDirectory)/website-deploy.zip
-    - name: deployManifest
-      value: $(Build.ArtifactStagingDirectory)/deploy-package-manifest.json
+pr:
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - azure-pipelines.yml
+            - azure-pipelines.compiled-demos.yml
+            - .prettierignore
+            - .prettierrc.json
+            - docs/compiled-demos.md
+            - eslint.config.mjs
+            - package.json
+            - package-lock.json
+            - scripts/demos/**
+            - src/compiledDemos/**
+            - static/Demos/**
+            - static/Scenes/**
+            - tsconfig.demos.json
+            - vite.demos.config.mjs
 
 pool:
     vmImage: ubuntu-latest
 
 stages:
+    - stage: ValidatePullRequest
+      displayName: Validate pull request
+      condition: eq(variables['Build.Reason'], 'PullRequest')
+      jobs:
+          - job: ValidateCompiledDemos
+            displayName: Validate compiled demos
+            timeoutInMinutes: 60
+            steps:
+                - checkout: self
+                  clean: true
+
+                - task: NodeTool@0
+                  displayName: Use Node.js 22
+                  inputs:
+                      versionSpec: 22.x
+
+                - script: npm ci
+                  displayName: Install dependencies
+
+                - script: npx playwright install --with-deps chromium
+                  displayName: Install Playwright Chromium
+
+                - script: npm run build
+                  displayName: Build site and compiled demos
+
+                - script: npm run demos:ci
+                  displayName: Lint, typecheck, and render-check compiled demos
+
     - stage: BuildAndDeploy
       displayName: Build and deploy website
+      condition: ne(variables['Build.Reason'], 'PullRequest')
+      variables:
+          - group: BabylonJS-Deployment
+          - name: system.debug
+            value: false
+          - name: deploymentPath
+            value: cdn/website
+          - name: storageAccount
+            value: babylonsnapshots
+          - name: cdnEndpoint
+            value: babylonjs-webbsite
+          - name: cdnProfile
+            value: babylonjscdn
+          - name: deployPackage
+            value: $(Build.ArtifactStagingDirectory)/website-deploy.zip
+          - name: deployManifest
+            value: $(Build.ArtifactStagingDirectory)/deploy-package-manifest.json
       jobs:
           - job: DeploySite
             displayName: Deploy site

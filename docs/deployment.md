@@ -4,6 +4,18 @@ The website deployment pipeline lives in `azure-pipelines.yml`. It replaces the 
 
 ## Pipeline Flow
 
+On pull requests targeting `master`, the pipeline only validates the compiled demo path:
+
+1. Use Node.js 22.
+2. Install dependencies with `npm ci`.
+3. Install Playwright Chromium.
+4. Build the Eleventy site and compiled demos with `npm run build`.
+5. Run `npm run demos:ci` to lint, format-check, typecheck, and render-check compiled demos.
+
+The pull request stage does not load deployment secrets, create a deploy package, upload files, or purge the CDN.
+
+On `master`, the pipeline deploys the website:
+
 1. Use Node.js 22.
 2. Install dependencies with `npm ci`.
 3. Build the Eleventy site and compiled demos with `npm run build`.
@@ -11,7 +23,7 @@ The website deployment pipeline lives in `azure-pipelines.yml`. It replaces the 
 5. Upload the deploy zip to the existing deployment service.
 6. Purge the CDN endpoint after a successful upload.
 
-The YAML keeps using the `BabylonJS-Deployment` variable group. The deployment service values are intentionally still provided by Azure DevOps secrets, not by files in this repository.
+The deployment stage keeps using the `BabylonJS-Deployment` variable group. The deployment service values are intentionally still provided by Azure DevOps secrets, not by files in this repository.
 
 ## Smart Deploy Package
 

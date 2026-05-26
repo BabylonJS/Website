@@ -283,7 +283,9 @@ Compiled demo source is linted with ESLint and formatted with Prettier. The chec
 
 ## CI
 
-`azure-pipelines.compiled-demos.yml` is intentionally separate from the existing build CI. It runs `npm run build` first, which produces the site with compiled demos, and then runs `npm run demos:ci` to lint, format-check, typecheck, and render-check the compiled demos. If the main build pipeline can publish a build artifact later, this pipeline can be changed to consume that artifact instead of rebuilding the site.
+Pull requests targeting `master` run a validation-only stage in `azure-pipelines.yml`. The PR stage installs dependencies, installs Playwright Chromium, runs `npm run build`, and then runs `npm run demos:ci` to lint, format-check, typecheck, and render-check the compiled demos. It does not load deployment secrets or run any upload/purge steps.
+
+`azure-pipelines.compiled-demos.yml` remains available as a separate compiled-demo validation pipeline. It runs `npm run build` first, which produces the site with compiled demos, and then runs `npm run demos:ci`. If the main build pipeline can publish a build artifact later, this pipeline can be changed to consume that artifact instead of rebuilding the site.
 
 ## Migration Notes
 
