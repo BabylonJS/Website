@@ -12,6 +12,12 @@
             "content": {
                 "items": [
                     {
+                        "imgUrl": "/lite/assets/hero.jpg",
+                        "alt": "Babylon.js Lite - coming June 17, 2026",
+                        "demoLink": "/lite/",
+                        "target": "_self"
+                    },
+                    {
                         "videoUrl": "/assets/videos/texturedAreaLights.mp4",
                         "fallbackImage": "/assets/videos/texturedAreaLights.jpg",
                         "alt": "A sci-fi corridor with a glowing navigation sign casting orange and blue light onto dark metallic walls",

@@ -1,0 +1,73 @@
+<section class="countdown-block">
+    {% if title %}
+    <h2 class="countdown-title">{{ title }}</h2>
+    {% endif %}
+    <div class="countdown-timer" data-target="{{ target }}">
+        <div class="countdown-unit">
+            <span class="countdown-value" data-unit="days">00</span>
+            <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+            <span class="countdown-value" data-unit="hours">00</span>
+            <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+            <span class="countdown-value" data-unit="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+            <span class="countdown-value" data-unit="seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+        </div>
+    </div>
+</section>
+<script>
+    (function () {
+        var timer = document.currentScript.previousElementSibling.querySelector(".countdown-timer");
+        if (!timer) {
+            return;
+        }
+        var targetTime = new Date(timer.getAttribute("data-target")).getTime();
+        var values = {
+            days: timer.querySelector('[data-unit="days"]'),
+            hours: timer.querySelector('[data-unit="hours"]'),
+            minutes: timer.querySelector('[data-unit="minutes"]'),
+            seconds: timer.querySelector('[data-unit="seconds"]'),
+        };
+
+        function pad(num, size) {
+            var s = String(num);
+            while (s.length < size) {
+                s = "0" + s;
+            }
+            return s;
+        }
+
+        function render() {
+            var diff = targetTime - Date.now();
+            if (isNaN(targetTime) || diff <= 0) {
+                values.days.textContent = "00";
+                values.hours.textContent = "00";
+                values.minutes.textContent = "00";
+                values.seconds.textContent = "00";
+                clearInterval(interval);
+                return;
+            }
+            var totalSeconds = Math.floor(diff / 1000);
+            var days = Math.floor(totalSeconds / 86400);
+            var hours = Math.floor((totalSeconds % 86400) / 3600);
+            var minutes = Math.floor((totalSeconds % 3600) / 60);
+            var seconds = totalSeconds % 60;
+            values.days.textContent = pad(days, 2);
+            values.hours.textContent = pad(hours, 2);
+            values.minutes.textContent = pad(minutes, 2);
+            values.seconds.textContent = pad(seconds, 2);
+        }
+
+        render();
+        var interval = setInterval(render, 1000);
+    })();
+</script>
