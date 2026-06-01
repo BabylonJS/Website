@@ -5,6 +5,8 @@
     max-height: 100vh;
     overflow: hidden;
     display: grid;
+    padding-top: 70px;
+    background: var(--darkBackground);
 }
 
 .carousel{

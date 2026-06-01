@@ -1,0 +1,22 @@
+.hero-block {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 70px 0 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.hero-block .hero-block-inner {
+    width: 100%;
+    line-height: 0;
+}
+
+.hero-block .hero-block-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

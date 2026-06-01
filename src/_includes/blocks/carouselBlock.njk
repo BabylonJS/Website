@@ -3,7 +3,7 @@
     {% for item in items %}{% if item.videoUrl %}
     <div class="img-holder">
       {% if item.demoLink %}
-      <a href="{{ item.demoLink }}" target="_blank">
+      <a href="{{ item.demoLink }}" target="{% if item.target %}{{ item.target }}{% else %}_blank{% endif %}">
         <video src="{{ item.videoUrl }}" autoplay loop muted></video>
         {% if item.fallbackImage %}
         <img class="img-fallback-carousel img-carousel" alt="{{ item.alt }}" src="{{ item.fallbackImage }}" />
@@ -18,7 +18,7 @@
     {% endif %}{% if item.imgUrl %}
     <div class="img-holder">
       {% if item.demoLink %}
-      <a href="{{ item.demoLink }}" target="_blank">
+      <a href="{{ item.demoLink }}" target="{% if item.target %}{{ item.target }}{% else %}_blank{% endif %}">
         <img class="img-carousel" alt="{{ item.alt }}" src="{{ item.imgUrl }}" />
       </a>
       {% else %}

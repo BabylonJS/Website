@@ -194,6 +194,10 @@
             "menuUrl": "/specifications/"
         },
         {
+            "root": "lite",
+            "visible": false
+        },
+        {
             "menuTitle": "RELEASE NOTES",
             "visible": true,
             "menuUrl": "https://doc.babylonjs.com/whats-new",

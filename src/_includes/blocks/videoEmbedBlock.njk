@@ -1,0 +1,17 @@
+<section class="video-embed-block">
+    {% if title %}
+    <h2 class="video-embed-title">{{ title }}</h2>
+    {% endif %}
+    <div class="video-embed-inner">
+        <div class="video-embed-frame">
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/{{ videoId }}"
+                title="{{ title | default('Babylon.js video') }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</section>
