@@ -1,23 +1,41 @@
 import {
     RegisterAbstractEngineCubeTexture,
+    RegisterArcRotateCamera,
     DepthRenderer,
     Engine,
     RegisterDepthRendererSceneComponent,
+    RegisterDirectionalLight,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineDynamicTexture,
     RegisterEnginesExtensionsEngineReadTexture,
+    RegisterFresnelParameters,
+    RegisterHemisphericLight,
+    RegisterLoadingScreen,
+    RegisterMultiMaterial,
     RegisterOutlineRenderer,
+    RegisterPointLight,
     Scene,
+    RegisterSpotLight,
     RegisterStandardMaterial,
+    RegisterUniversalCamera,
 } from "@babylonjs/core/pure";
 
 void Scene;
 
 // Required in pure builds so common demos don't rely on stripped side-effect registration.
 RegisterAbstractEngineCubeTexture();
+RegisterArcRotateCamera();
+RegisterUniversalCamera();
+RegisterDirectionalLight();
+RegisterHemisphericLight();
+RegisterPointLight();
+RegisterSpotLight();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineDynamicTexture();
 RegisterEnginesExtensionsEngineReadTexture();
+RegisterLoadingScreen();
+RegisterFresnelParameters();
+RegisterMultiMaterial();
 RegisterStandardMaterial();
 RegisterDepthRendererSceneComponent(DepthRenderer);
 RegisterOutlineRenderer();

@@ -299,6 +299,570 @@
                 "timeoutMs": 20000,
                 "minimumColoredSamples": 120
             }
+        },
+        {
+            "slug": "Viper",
+            "title": "Babylon.js - Viper pure demo",
+            "legacyPath": "static/Demos/Viper",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Mansion",
+            "title": "Babylon.js - Mansion pure demo",
+            "legacyPath": "static/Demos/Mansion",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "V8",
+            "title": "Babylon.js - V8 pure demo",
+            "legacyPath": "static/Demos/V8",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Heart",
+            "title": "Babylon.js - Heart pure demo",
+            "legacyPath": "static/Demos/Heart",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "WCafe",
+            "title": "Babylon.js - WCafe pure demo",
+            "legacyPath": "static/Demos/WCafe",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Spaceship",
+            "title": "Babylon.js - Spaceship pure demo",
+            "legacyPath": "static/Demos/Spaceship",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "SpaceDeK",
+            "title": "Babylon.js - SpaceDeK pure demo",
+            "legacyPath": "static/Demos/SpaceDeK",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Espilit",
+            "title": "Babylon.js - Espilit pure demo",
+            "legacyPath": "static/Demos/Espilit",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "HillValley",
+            "title": "Babylon.js - HillValley pure demo",
+            "legacyPath": "static/Demos/HillValley",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Facets",
+            "title": "Babylon.js - Facets pure demo",
+            "legacyPath": "static/Demos/Facets",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Bones",
+            "title": "Babylon.js - Bones pure demo",
+            "legacyPath": "static/Demos/Bones",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 40000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Instances",
+            "title": "Babylon.js - Instances pure demo",
+            "legacyPath": "static/Demos/Instances",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Flat2009",
+            "title": "Babylon.js - Flat 2009 pure demo",
+            "legacyPath": "static/Demos/Flat2009",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "disabled": true,
+                "disabledReason": "VideoTexture GPU upload (texImage2D of a <video>) fails under swiftshader headless GL, so scene.executeWhenReady never resolves. The scene itself loads with no console/page errors and renders correctly in real browsers; verified manually.",
+                "timeoutMs": 120000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Train",
+            "title": "Babylon.js - Train pure demo",
+            "legacyPath": "static/Demos/Train",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "GlowingEspilit",
+            "title": "Babylon.js - Glowing Espilit pure demo",
+            "legacyPath": "static/Demos/GlowingEspilit",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Fresnel",
+            "title": "Babylon.js - Fresnel pure demo",
+            "legacyPath": "static/Demos/Fresnel",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "Shadows",
+            "title": "Babylon.js - Shadows pure demo",
+            "legacyPath": "static/Demos/Shadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "LOD",
+            "title": "Babylon.js - LOD pure demo",
+            "legacyPath": "static/Demos/LOD",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "LookAt",
+            "title": "Babylon.js - LookAt pure demo",
+            "legacyPath": "static/Demos/LookAt",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Octree",
+            "title": "Babylon.js - Octree pure demo",
+            "legacyPath": "static/Demos/Octree",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "PointLightShadowMap",
+            "title": "Babylon.js - Point light shadow map pure demo",
+            "legacyPath": "static/Demos/PointLightShadowMap",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Boom",
+            "title": "Babylon.js - Boom pure demo",
+            "legacyPath": "static/Demos/Boom",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 200
+            }
+        },
+        {
+            "slug": "VolumetricLightScattering",
+            "title": "Babylon.js - Volumetric Light Scattering pure demo",
+            "legacyPath": "static/Demos/VolumetricLightScattering",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "AssetsManager",
+            "title": "Babylon.js - Assets manager pure demo",
+            "legacyPath": "static/Demos/AssetsManager",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "GUI",
+            "title": "Babylon.js - GUI pure demo",
+            "legacyPath": "static/Demos/GUI",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "WaterMaterial",
+            "title": "Babylon.js - Water Material pure demo",
+            "legacyPath": "static/Demos/WaterMaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "CellShading",
+            "title": "Babylon.js - Cell Shading pure demo",
+            "legacyPath": "static/Demos/CellShading",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "FireMaterial",
+            "title": "Babylon.js - Fire Material pure demo",
+            "legacyPath": "static/Demos/FireMaterial",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "Fur",
+            "title": "Babylon.js - Fur pure demo",
+            "legacyPath": "static/Demos/Fur",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 20000,
+                "minimumColoredSamples": 120
+            }
+        },
+        {
+            "slug": "GLTF",
+            "title": "Babylon.js - GLTF pure demo",
+            "legacyPath": "static/Demos/GLTF",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "GLTFMeshPrimitiveAttributeTest",
+            "title": "Babylon.js - Mesh primitive attribute test",
+            "legacyPath": "static/Demos/GLTFMeshPrimitiveAttributeTest",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "GLTFNormals",
+            "title": "Babylon.js - Normals Test",
+            "legacyPath": "static/Demos/GLTFNormals",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 100
+            }
+        },
+        {
+            "slug": "Yeti",
+            "title": "Babylon.js - Yeti pure demo",
+            "legacyPath": "static/Demos/Yeti",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 160
+            }
+        },
+        {
+            "slug": "Offscreen",
+            "title": "Babylon.js - Worker mode pure demo",
+            "legacyPath": "static/Demos/Offscreen",
+            "sourceFiles": ["main.ts", "scene.ts", "worker.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "canvasSelector": "canvas",
+                "minimumCanvasCount": 2,
+                "minimumColoredSamples": 150
+            }
+        },
+        {
+            "slug": "Tunnel",
+            "title": "Babylon.js - Tunnel pure demo",
+            "legacyPath": "static/Demos/Tunnel",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Particles2",
+            "title": "Babylon.js - Particles 2 pure demo",
+            "legacyPath": "static/Demos/Particles2",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "RefProbe",
+            "title": "Babylon.js - Reflection Probe pure demo",
+            "legacyPath": "static/Demos/RefProbe",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "SelfShadowing",
+            "title": "Babylon.js - Self Shadowing pure demo",
+            "legacyPath": "static/Demos/SelfShadowing",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "SoftShadows",
+            "title": "Babylon.js - Soft Shadows pure demo",
+            "legacyPath": "static/Demos/SoftShadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Actions",
+            "title": "Babylon.js - Actions pure demo",
+            "legacyPath": "static/Demos/Actions",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Starfield",
+            "title": "Babylon.js - Starfield pure demo",
+            "legacyPath": "static/Demos/Starfield",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "Polygon",
+            "title": "Babylon.js - Polygon pure demo",
+            "legacyPath": "static/Demos/Polygon",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 40
+            }
+        },
+        {
+            "slug": "Procedural",
+            "title": "Babylon.js - Procedural Textures pure demo",
+            "legacyPath": "static/Demos/Procedural",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "ExtrudePolygon",
+            "title": "Babylon.js - Extrude Polygon pure demo",
+            "legacyPath": "static/Demos/ExtrudePolygon",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 80
+            }
+        },
+        {
+            "slug": "SSAO",
+            "title": "Babylon.js - SSAO pure demo",
+            "legacyPath": "static/Demos/SSAO",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "SSAO2",
+            "title": "Babylon.js - SSAO 2 pure demo",
+            "legacyPath": "static/Demos/SSAO2",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "DragNDrop",
+            "title": "Babylon.js - Drag and Drop pure demo",
+            "legacyPath": "static/Demos/DragNDrop",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "SPS",
+            "title": "Babylon.js - Solid Particle System pure demo",
+            "legacyPath": "static/Demos/SPS",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "SPSCollisions",
+            "title": "Babylon.js - SPS Collisions pure demo",
+            "legacyPath": "static/Demos/SPSCollisions",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "InstancedBones",
+            "title": "Babylon.js - Instanced Bones pure demo",
+            "legacyPath": "static/Demos/InstancedBones",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "SponzaDynamicShadows",
+            "title": "Babylon.js - Sponza Dynamic Shadows pure demo",
+            "legacyPath": "static/Demos/SponzaDynamicShadows",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 60000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "Instances2",
+            "title": "Babylon.js - Instances 2 pure demo",
+            "legacyPath": "static/Demos/Instances2",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "Charting",
+            "title": "Babylon.js - Charting pure demo",
+            "legacyPath": "static/Demos/Charting",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 60
+            }
+        },
+        {
+            "slug": "MorphTargets",
+            "title": "Babylon.js - Morph Targets pure demo",
+            "legacyPath": "static/Demos/MorphTargets",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 30000,
+                "minimumColoredSamples": 40
+            }
+        },
+        {
+            "slug": "Dancers",
+            "title": "Babylon.js - Dancers pure demo",
+            "legacyPath": "static/Demos/Dancers",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 40
+            }
+        },
+        {
+            "slug": "Simplification",
+            "title": "Babylon.js - Simplification pure demo",
+            "legacyPath": "static/Demos/Simplification",
+            "sourceFiles": ["main.ts", "scene.ts"],
+            "renderCheck": {
+                "timeoutMs": 45000,
+                "minimumColoredSamples": 40
+            }
         }
     ]
 }
