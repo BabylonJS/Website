@@ -5,7 +5,7 @@ import "@babylonjs/core/Loading/Plugins/babylonFileLoader";
 import "@babylonjs/core/Engines/Extensions/engine.cubeTexture";
 
 export async function createSpaceDeKScene(engine: Engine): Promise<Scene> {
-    const scene = await LoadSceneAsync("/Scenes/SpaceDeK/SpaceDek.babylon", engine);
+    const scene = await LoadSceneAsync("/Scenes/SpaceDek/SpaceDek.babylon", engine);
     scene.collisionsEnabled = false;
     return scene;
 }

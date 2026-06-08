@@ -21,7 +21,7 @@ export async function createEspilitScene(engine: Engine): Promise<Scene> {
     if (scene.cameras.length > 1) {
         new RefractionPostProcess(
             "Refraction",
-            "/Scenes/customs/refMap.jpg",
+            "/Scenes/Customs/refMap.jpg",
             new Color3(1.0, 1.0, 1.0),
             0.5,
             0.5,
