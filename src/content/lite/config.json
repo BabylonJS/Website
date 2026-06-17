@@ -132,6 +132,11 @@
                         "text": "Demos",
                         "link": "https://babylonjs.com/lite-demos/",
                         "target": "_blank"
+                    },
+                    {
+                        "text": "Forum Announcement",
+                        "link": "https://forum.babylonjs.com/t/introducing-babylon-lite/63648",
+                        "target": "_blank"
                     }
                 ]
             }
