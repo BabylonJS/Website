@@ -4,6 +4,25 @@
     },
     "menu": [
         {
+            "root": "lite",
+            "menuUrl": "/lite/",
+            "visible": true
+        },
+        {
+            "root": "native",
+            "visible": true,
+            "children": [
+                {
+                    "menuTitle": "BABYLON NATIVE RUNTIME",
+                    "menuUrl": "/native/"
+                },
+                {
+                    "menuTitle": "BABYLON REACT NATIVE",
+                    "menuUrl": "/reactnative/"
+                }
+            ]
+        },
+        {
             "root": "featureDemos",
             "menuUrl": "/featureDemos/",
             "visible": true
@@ -149,20 +168,6 @@
             "visible": false
         },
         {
-            "root": "native",
-            "visible": true,
-            "children": [
-                {
-                    "menuTitle": "BABYLON NATIVE RUNTIME",
-                    "menuUrl": "/native/"
-                },
-                {
-                    "menuTitle": "BABYLON REACT NATIVE",
-                    "menuUrl": "/reactnative/"
-                }
-            ]
-        },
-        {
             "root": "viewer",
             "visible": true,
             "menuUrl": "/viewer/"
@@ -192,11 +197,6 @@
             "root": "specifications",
             "visible": true,
             "menuUrl": "/specifications/"
-        },
-        {
-            "root": "lite",
-            "visible": true,
-            "menuUrl": "/lite/"
         },
         {
             "menuTitle": "RELEASE NOTES",

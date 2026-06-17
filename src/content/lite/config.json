@@ -1,5 +1,5 @@
 {
-    "menuTitle": "LITE",
+    "menuTitle": "BABYLON LITE",
     "title": "Babylon Lite",
     "metaTags": [
         {
@@ -125,7 +125,7 @@
                     },
                     {
                         "text": "Documentation",
-                        "link": "https://doc.babylonjs.com/",
+                        "link": "https://doc.babylonjs.com/lite",
                         "target": "_blank"
                     },
                     {
