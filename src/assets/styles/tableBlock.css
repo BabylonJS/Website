@@ -1,0 +1,105 @@
+.table-block {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: #E2E2E2;
+}
+
+.table-block .table-block-title {
+    font-size: 36px;
+    font-weight: 200;
+    margin: 0 0 16px;
+}
+
+.table-block .table-block-intro {
+    font-family: "acumin-pro";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #B9B9B9;
+    max-width: 760px;
+    margin: 0 auto 30px;
+}
+
+.table-block .table-block-scroll {
+    overflow-x: auto;
+}
+
+.table-block .table-block-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--midBackground);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.table-block .table-block-table th {
+    font-family: "acumin-pro";
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B9B9B9;
+    background: var(--darkBackground);
+    padding: 16px 22px;
+    text-align: left;
+}
+
+.table-block .table-block-table th:last-child {
+    text-align: right;
+}
+
+.table-block .table-block-table td {
+    font-family: "acumin-pro";
+    padding: 16px 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-block .table-block-table .table-block-label {
+    font-weight: 400;
+    color: #E2E2E2;
+}
+
+.table-block .table-block-table .table-block-value {
+    font-weight: 400;
+    color: #C9C5D6;
+    text-align: right;
+}
+
+.table-block .table-block-table .table-block-emph {
+    font-family: "acumin-pro";
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--mainColor3);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.table-block .table-block-footnote {
+    font-family: "acumin-pro";
+    font-size: 18px;
+    font-style: italic;
+    line-height: 28px;
+    color: #8E89A3;
+    margin: 22px auto 0;
+    max-width: 760px;
+}
+
+@media all and (max-width: 600px) {
+    .table-block .table-block-title {
+        font-size: 28px;
+    }
+
+    .table-block .table-block-table th,
+    .table-block .table-block-table td {
+        padding: 12px 14px;
+        font-size: 18px;
+    }
+}

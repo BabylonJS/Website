@@ -195,7 +195,8 @@
         },
         {
             "root": "lite",
-            "visible": false
+            "visible": true,
+            "menuUrl": "/lite/"
         },
         {
             "menuTitle": "RELEASE NOTES",

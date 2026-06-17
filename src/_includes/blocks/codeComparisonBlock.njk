@@ -1,0 +1,19 @@
+<section class="code-comparison-block">
+    {% if title %}
+    <h2 class="code-comparison-title">{{ title }}</h2>
+    {% endif %}
+    {% if intro %}
+    <p class="code-comparison-intro">{{ intro }}</p>
+    {% endif %}
+    <div class="code-comparison-grid">
+        {% for column in columns %}
+        <div class="code-comparison-column">
+            <div class="code-comparison-label">{{ column.label }}</div>
+            <pre class="code-comparison-pre"><code>{{ column.code | e }}</code></pre>
+        </div>
+        {% endfor %}
+    </div>
+    {% if footnote %}
+    <p class="code-comparison-footnote">{{ footnote }}</p>
+    {% endif %}
+</section>

@@ -1,0 +1,84 @@
+.cta-block {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(135deg, var(--midBackground), var(--darkBackground));
+    padding: 60px 20px;
+    text-align: center;
+    color: #E2E2E2;
+}
+
+.cta-block .cta-block-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.cta-block .cta-block-title {
+    font-size: 34px;
+    font-weight: 200;
+    margin: 0 0 16px;
+}
+
+.cta-block .cta-block-desc {
+    font-family: "acumin-pro";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #C9C9C9;
+    margin: 0 auto 32px;
+    max-width: 640px;
+}
+
+.cta-block .cta-block-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.cta-block .cta-block-button {
+    font-family: "acumin-pro";
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #E2E2E2;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.cta-block .cta-block-button:hover {
+    border-color: var(--mainColor3);
+    color: #FFFFFF;
+}
+
+.cta-block .cta-block-button-primary {
+    background: var(--mainColor3);
+    border-color: var(--mainColor3);
+    color: #FFFFFF;
+}
+
+.cta-block .cta-block-button-primary:hover {
+    background: var(--mainColor2);
+    border-color: var(--mainColor2);
+}
+
+@media all and (max-width: 600px) {
+    .cta-block {
+        padding: 44px 18px;
+    }
+
+    .cta-block .cta-block-title {
+        font-size: 26px;
+    }
+
+    .cta-block .cta-block-button {
+        width: 100%;
+        max-width: 320px;
+    }
+}

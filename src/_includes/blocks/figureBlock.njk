@@ -1,0 +1,11 @@
+<section class="figure-block">
+    {% if title %}
+    <h2 class="figure-block-title">{{ title }}</h2>
+    {% endif %}
+    <figure class="figure-block-figure">
+        <img class="figure-block-img" src="{{ img.url }}" alt="{{ img.alt }}" />
+        {% if caption %}
+        <figcaption class="figure-block-caption">{{ caption }}</figcaption>
+        {% endif %}
+    </figure>
+</section>

@@ -1,0 +1,44 @@
+.figure-block {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+    text-align: center;
+    color: #E2E2E2;
+}
+
+.figure-block .figure-block-title {
+    font-size: 36px;
+    font-weight: 200;
+    margin: 0 0 26px;
+}
+
+.figure-block .figure-block-figure {
+    margin: 0;
+}
+
+.figure-block .figure-block-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.35);
+}
+
+.figure-block .figure-block-caption {
+    font-family: "acumin-pro";
+    margin-top: 18px;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 28px;
+    color: #9B96AE;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (max-width: 600px) {
+    .figure-block .figure-block-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,33 @@
+<section class="table-block">
+    {% if title %}
+    <h2 class="table-block-title">{{ title }}</h2>
+    {% endif %}
+    {% if intro %}
+    <p class="table-block-intro">{{ intro }}</p>
+    {% endif %}
+    <div class="table-block-scroll">
+        <table class="table-block-table">
+            {% if headers %}
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                    <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            {% endif %}
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    {% for cell in row %}
+                    <td class="{% if loop.first %}table-block-label{% else %}table-block-value{% endif %}">{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if footnote %}
+    <p class="table-block-footnote">{{ footnote }}</p>
+    {% endif %}
+</section>
