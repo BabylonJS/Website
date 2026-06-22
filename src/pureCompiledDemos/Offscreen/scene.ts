@@ -2,8 +2,10 @@ import type { Engine } from "@babylonjs/core/pure";
 import {
     Animation,
     ImportMeshAsync,
+    RegisterAbstractEngineCubeTexture,
     RegisterAnimatable,
     RegisterAnimation,
+    RegisterCubeTexture,
     RegisterEnginePrefilteredCubeTexture,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineRawTexture,
@@ -15,11 +17,17 @@ import {
     RegisterSceneHelpers,
     Scene,
 } from "@babylonjs/core/pure";
+// Side-effect only: wires AbstractEngine.GetCompatibleTextureLoader so special-format
+// textures (e.g. .env/.dds/.tga) load. Offscreen uses its own runner, not the shared
+// demoRunner, so it needs this import directly.
+import "@babylonjs/core/Engines/AbstractEngine/abstractEngine.textureLoaders";
 import "@babylonjs/loaders/glTF";
 
 RegisterSceneHelpers();
 RegisterAnimation();
 RegisterAnimatable();
+RegisterAbstractEngineCubeTexture();
+RegisterCubeTexture();
 RegisterEnginePrefilteredCubeTexture();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineRawTexture();
