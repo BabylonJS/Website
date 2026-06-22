@@ -3,6 +3,7 @@ import type { Engine } from "@babylonjs/core/Engines/engine";
 import { ImportMeshAsync } from "@babylonjs/core/Loading/sceneLoader";
 import { Scene } from "@babylonjs/core/scene";
 import "@babylonjs/core/Helpers/sceneHelpers";
+import "@babylonjs/core/Materials/Textures/cubeTexture";
 import "@babylonjs/loaders/glTF";
 
 export async function createOffscreenScene(engine: Engine, attachCameraControls: boolean): Promise<Scene> {

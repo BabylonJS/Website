@@ -11,6 +11,7 @@ import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
 import { CreateBox } from "@babylonjs/core/Meshes/Builders/boxBuilder";
 import { CreateSphere } from "@babylonjs/core/Meshes/Builders/sphereBuilder";
 import { Scene } from "@babylonjs/core/scene";
+import "@babylonjs/core/Culling/ray";
 
 export function createLensScene(engine: Engine, canvas: HTMLCanvasElement): Scene {
     const scene = new Scene(engine);

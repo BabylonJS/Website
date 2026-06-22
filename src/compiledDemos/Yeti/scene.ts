@@ -10,6 +10,7 @@ import { Scene } from "@babylonjs/core/scene";
 import { GLTFLoaderAnimationStartMode } from "@babylonjs/loaders/glTF";
 import "@babylonjs/core/Helpers/sceneHelpers";
 import "@babylonjs/core/Loading/loadingScreen";
+import "@babylonjs/core/Materials/Textures/cubeTexture";
 
 export async function createYetiScene(engine: Engine): Promise<Scene> {
     const scene = new Scene(engine);
