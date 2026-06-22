@@ -1,0 +1,18 @@
+<section class="cta-block">
+    <div class="cta-block-inner">
+        {% if title %}
+        <h2 class="cta-block-title">{{ title }}</h2>
+        {% endif %}
+        {% if desc %}
+        <p class="cta-block-desc">{{ desc }}</p>
+        {% endif %}
+        <div class="cta-block-buttons">
+            {% for button in buttons %}
+            <a class="cta-block-button {% if button.primary %}cta-block-button-primary{% endif %}"
+                href="{{ button.link }}" {% if button.target %}target="{{ button.target }}"{% endif %}>
+                {{ button.text }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

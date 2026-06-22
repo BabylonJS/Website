@@ -1,11 +1,11 @@
 {
-    "menuTitle": "",
-    "title": "Babylon.js Lite - Coming Soon",
+    "menuTitle": "BABYLON LITE",
+    "title": "Babylon Lite",
     "metaTags": [
         {
             "name": "description",
             "property": "og:description",
-            "content": "Something new is coming to Babylon.js. Count down to the reveal on June 17, 2026."
+            "content": "Babylon Lite is a WebGPU-exclusive, tree-shakable, data-oriented renderer engineered for an unprecedentedly small bundle size and high performance \u2014 with output pixel-for-pixel identical to Babylon.js."
         }
     ],
     "blocks": [
@@ -14,20 +14,131 @@
             "content": {
                 "img": {
                     "url": "/lite/assets/hero.jpg",
-                    "alt": "Babylon.js Lite teaser hero image"
+                    "alt": "Babylon Lite hero image"
                 }
             }
         },
         {
-            "templateName": "countdownBlock",
+            "templateName": "textBlock",
             "content": {
-                "target": "2026-06-17T10:00:00-07:00"
+                "title": "Welcome to the next generation in web graphics engines",
+                "desc": "Babylon Lite is the engine we've always dreamed of building \u2014 a 3D engine started from a blank page, with no legacy to carry, built directly on top of modern GPU APIs and a modern toolchain. It is a WebGPU-exclusive, tree-shakable, data-oriented renderer, engineered for an unprecedentedly small bundle size and high performance \u2014 while producing output that is pixel-for-pixel identical to the beautiful rendering you've come to expect from Babylon.js. Babylon Lite is not a replacement for Babylon.js. The two engines move forward side by side, as one family. They simply optimize for different things \u2014 so you can pick the right tool for the job."
             }
         },
         {
-            "templateName": "videoEmbedBlock",
+            "templateName": "tableBlock",
             "content": {
-                "videoId": "pBpfoejksHc"
+                "title": "The numbers",
+                "intro": "Measured live across our full parity test suite (100+ scenes), comparing the exact same scene built in each engine.",
+                "headers": ["Metric", "Babylon Lite vs Babylon.js"],
+                "rows": [
+                    ["Bundle size (gzipped JS)", "<span class=\"table-block-emph\">~19\u00d7</span> smaller on average; up to <span class=\"table-block-emph\">50\u00d7</span> on focused scenes"],
+                    ["Frame time (RAF CPU)", "<span class=\"table-block-emph\">~3\u20134\u00d7</span> faster"],
+                    ["Startup time", "<span class=\"table-block-emph\">~2.5\u00d7</span> faster"],
+                    ["Memory", "<span class=\"table-block-emph\">~5\u00d7</span> less"]
+                ],
+                "footnote": "For the BoomBox PBR scene below, that's 34 KB vs 675 KB gzipped (84.5 KB vs 2.8 MB raw) \u2014 the same image, a fraction of the download."
+            }
+        },
+        {
+            "templateName": "figureBlock",
+            "content": {
+                "title": "Same scene, side by side",
+                "img": {
+                    "url": "/lite/assets/parity-side-by-side.png",
+                    "alt": "Babylon Lite and Babylon.js rendering the identical BoomBox PBR scene side by side, annotated with bundle size and frame time"
+                },
+                "caption": "Left: Babylon Lite. Right: Babylon.js. Same model, same lights, same IBL \u2014 identical result, at a fraction of the size."
+            }
+        },
+        {
+            "templateName": "tableBlock",
+            "content": {
+                "title": "Which engine should I use?",
+                "intro": "There are no wrong answers \u2014 and because the APIs share the same shape, you can switch later knowing the pixels won't change.",
+                "headers": ["If you want\u2026", "Choose"],
+                "rows": [
+                    ["The smallest possible bundle size, the highest performance, ship-only-what-you-use", "<span class=\"table-block-emph\">Babylon Lite</span>"],
+                    ["The broadest feature set, WebGL and WebGPU support, and rock-solid backward compatibility", "<span class=\"table-block-emph\">Babylon.js</span>"],
+                    ["To learn 3D on the modern web from a clean, classless API", "<span class=\"table-block-emph\">Babylon Lite</span>"],
+                    ["To ship a production app today that depends on the full Babylon feature set", "<span class=\"table-block-emph\">Babylon.js</span>"]
+                ]
+            }
+        },
+        {
+            "templateName": "codeComparisonBlock",
+            "content": {
+                "title": "The same scene in both engines",
+                "intro": "Moving a scene to Babylon Lite is meant to feel familiar. The API is different \u2014 there are no classes, and behavior lives in standalone functions rather than methods \u2014 but it is still similar in shape and naming, so the concepts carry over directly.",
+                "columns": [
+                    {
+                        "label": "Babylon.js",
+                        "code": "import { WebGPUEngine } from \"@babylonjs/core/Engines/webgpuEngine\";\nimport \"@babylonjs/core/Helpers/sceneHelpers\";\nimport { HemisphericLight } from \"@babylonjs/core/Lights/hemisphericLight\";\nimport { SceneLoader } from \"@babylonjs/core/Loading/sceneLoader\";\nimport { CubeTexture } from \"@babylonjs/core/Materials/Textures/cubeTexture\";\nimport { Vector3 } from \"@babylonjs/core/Maths/math.vector\";\nimport { Scene } from \"@babylonjs/core/scene\";\nimport \"@babylonjs/loaders/glTF\";\n\nconst engine = new WebGPUEngine(canvas, { antialias: true, adaptToDeviceRatio: true });\nawait engine.initAsync();\nconst scene = new Scene(engine);\n\nconst light = new HemisphericLight(\"hemi\", new Vector3(0, 1, 0), scene);\nlight.intensity = 1.0;\n\nawait SceneLoader.ImportMeshAsync(\"\", \"https://playground.babylonjs.com/scenes/\", \"BoomBox.glb\", scene);\nscene.environmentTexture = new CubeTexture(\"https://assets.babylonjs.com/core/environments/environmentSpecular.env\", scene);\nscene.createDefaultCamera(true, true, true);\nscene.createDefaultEnvironment({ createSkybox: true, createGround: true, skyboxSize: 1000 });\n\nengine.runRenderLoop(() => scene.render());"
+                    },
+                    {
+                        "label": "Babylon Lite",
+                        "code": "import {\n    createEngine,\n    createSceneContext,\n    createDefaultCamera,\n    createHemisphericLight,\n    loadGltf,\n    loadEnvironment,\n    addToScene,\n    attachControl,\n    registerScene,\n    startEngine,\n} from \"babylon-lite\";\n\nconst engine = await createEngine(canvas);\nconst scene = createSceneContext(engine);\n\naddToScene(scene, createHemisphericLight([0, 1, 0], 1.0));\naddToScene(scene, await loadGltf(engine, \"https://playground.babylonjs.com/scenes/BoomBox.glb\"));\nawait loadEnvironment(scene, \"https://assets.babylonjs.com/core/environments/environmentSpecular.env\", {\n    groundTextureUrl: \"https://assets.babylonjs.com/core/environments/backgroundGround.png\",\n    skyboxUrl: \"https://assets.babylonjs.com/core/environments/backgroundSkybox.dds\",\n    skyboxSize: 1000,\n});\n\nconst cam = createDefaultCamera(scene);\nattachControl(cam, canvas, scene);\n\nawait registerScene(engine, scene);\nawait startEngine(engine);"
+                    }
+                ],
+                "footnote": "The shape is the same: create an engine, build a scene, add a light, load a glTF, set up the environment and camera, then run. The difference is that Lite hands you plain data plus tree-shakable functions instead of classes and methods \u2014 which is exactly what lets the bundler strip everything you don't use."
+            }
+        },
+        {
+            "templateName": "faqBlock",
+            "content": {
+                "title": "Frequently asked questions",
+                "items": [
+                    {
+                        "question": "Which browsers does it run on?",
+                        "answer": "Babylon Lite is WebGPU-only, so it runs anywhere WebGPU is available: Chrome and Edge 113+, and recent Firefox and Safari. There is no WebGL fallback by design."
+                    },
+                    {
+                        "question": "Will Babylon.js features come to Lite?",
+                        "answer": "Yes \u2014 bringing Lite up toward Babylon.js feature parity is our top priority. Features land as isolated, tree-shakable modules, so the engine grows without bloating your bundle."
+                    },
+                    {
+                        "question": "Can I mix Babylon.js and Babylon Lite in one project?",
+                        "answer": "A given scene is built with one engine or the other. Because the APIs are similar in shape, the concepts and assets (glTF, .env, textures) carry straight across when you choose which engine fits a project."
+                    },
+                    {
+                        "question": "Is it production-ready? Is the API stable?",
+                        "answer": "Lite is young and the API may still evolve as we close the feature gap. It is fully open source and usable today \u2014 we'd love early adopters, with the caveat that some APIs can change before we stabilize."
+                    },
+                    {
+                        "question": "Does pixel-perfect mean exactly identical?",
+                        "answer": "It means visually indistinguishable, enforced by an automated per-scene MAD threshold in CI. The goal is Babylon.js-quality output you can't tell apart by eye."
+                    }
+                ]
+            }
+        },
+        {
+            "templateName": "ctaBlock",
+            "content": {
+                "title": "Two engines, one family, moving forward together",
+                "desc": "Babylon Lite is open source and available now. Explore the code, browse the scene gallery, and follow along with development. Star the repo, open an issue, and tell us what you'd want before reaching for Lite.",
+                "buttons": [
+                    {
+                        "text": "Explore on GitHub",
+                        "link": "https://github.com/BabylonJS/Babylon-Lite",
+                        "target": "_blank",
+                        "primary": true
+                    },
+                    {
+                        "text": "Documentation",
+                        "link": "https://doc.babylonjs.com/lite",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "Demos",
+                        "link": "https://babylonjs.com/lite-demos/",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "Forum Announcement",
+                        "link": "https://forum.babylonjs.com/t/introducing-babylon-lite/63648",
+                        "target": "_blank"
+                    }
+                ]
             }
         }
     ]
