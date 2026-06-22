@@ -8,6 +8,7 @@ import {
     PostProcessRenderPipelineManager,
     RegisterBabylonFileLoader,
     RegisterDepthRendererSceneComponent,
+    RegisterEnginesExtensionsEngineMultiRender,
     RegisterEnginesExtensionsEngineRawTexture,
     RegisterEnginesExtensionsEngineRenderTarget,
     RegisterEnginesExtensionsEngineRenderTargetTexture,
@@ -22,6 +23,7 @@ import {
 } from "@babylonjs/core/pure";
 
 RegisterBabylonFileLoader();
+RegisterEnginesExtensionsEngineMultiRender();
 RegisterEnginesExtensionsEngineRawTexture();
 RegisterEnginesExtensionsEngineRenderTarget();
 RegisterEnginesExtensionsEngineRenderTargetTexture();

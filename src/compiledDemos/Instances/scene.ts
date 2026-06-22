@@ -15,6 +15,7 @@ import type { GroundMesh } from "@babylonjs/core/Meshes/groundMesh";
 import type { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { ImportMeshAsync } from "@babylonjs/core/Loading/sceneLoader";
 import "@babylonjs/core/Loading/Plugins/babylonFileLoader";
+import "@babylonjs/core/Meshes/instancedMesh";
 import "@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent";
 import "@babylonjs/core/Engines/Extensions/engine.cubeTexture";
 

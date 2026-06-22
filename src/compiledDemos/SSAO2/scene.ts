@@ -5,6 +5,7 @@ import { SSAO2RenderingPipeline } from "@babylonjs/core/PostProcesses/RenderPipe
 import { AppendSceneAsync } from "@babylonjs/core/Loading/sceneLoader";
 import { Scene } from "@babylonjs/core/scene";
 import "@babylonjs/core/Loading/Plugins/babylonFileLoader";
+import "@babylonjs/core/Engines/Extensions/engine.multiRender";
 import "@babylonjs/core/Rendering/depthRendererSceneComponent";
 import "@babylonjs/core/Rendering/geometryBufferRendererSceneComponent";
 import "@babylonjs/core/Rendering/prePassRendererSceneComponent";

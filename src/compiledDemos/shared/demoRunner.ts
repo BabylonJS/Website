@@ -1,7 +1,9 @@
 import { Engine } from "@babylonjs/core/Engines/engine";
 import type { Scene } from "@babylonjs/core/scene";
+import "@babylonjs/core/Cameras/camera";
 import "@babylonjs/core/Cameras/arcRotateCamera";
 import "@babylonjs/core/Cameras/universalCamera";
+import "@babylonjs/core/Culling/ray";
 import "@babylonjs/core/Engines/Extensions/engine.dynamicTexture";
 import "@babylonjs/core/Engines/Extensions/engine.readTexture";
 import "@babylonjs/core/Lights/directionalLight";
@@ -12,6 +14,8 @@ import "@babylonjs/core/Loading/loadingScreen";
 import "@babylonjs/core/Materials/fresnelParameters";
 import "@babylonjs/core/Materials/multiMaterial";
 import "@babylonjs/core/Materials/standardMaterial";
+import "@babylonjs/core/Materials/Textures/cubeTexture";
+import "@babylonjs/core/Materials/Textures/texture";
 import "@babylonjs/core/Rendering/depthRendererSceneComponent";
 import "@babylonjs/core/Rendering/outlineRenderer";
 
