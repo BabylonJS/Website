@@ -7,6 +7,7 @@ import {
     Engine,
     RegisterDepthRendererSceneComponent,
     RegisterDirectionalLight,
+    RegisterEngineUniformBuffer,
     RegisterEnginesExtensionsEngineAlpha,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineDynamicTexture,
@@ -33,6 +34,7 @@ import "@babylonjs/core/Engines/AbstractEngine/abstractEngine.textureLoaders";
 void Scene;
 
 // Required in pure builds so common demos don't rely on stripped side-effect registration.
+RegisterEngineUniformBuffer();
 RegisterAbstractEngineCubeTexture();
 RegisterCamera();
 RegisterArcRotateCamera();
