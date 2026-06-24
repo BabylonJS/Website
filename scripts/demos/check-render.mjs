@@ -211,16 +211,32 @@ async function waitForDemoReady(page, timeoutMs) {
 }
 
 async function checkCanvas(page, locator, demo, timeoutMs, label) {
-    const sample = await sampleCanvas(page, locator, timeoutMs);
     const minimumColoredSamples = demo.renderCheck?.minimumColoredSamples || 50;
+    // Heavier scenes (large .babylon/glTF assets, post-process pipelines) can take several
+    // render-loop iterations to fully paint, especially under the software renderer used in
+    // CI. Rather than judging a single early frame, keep rendering and re-sampling until the
+    // canvas reaches the expected coverage or the settle deadline passes. Genuinely blank
+    // demos still fail once the deadline elapses.
+    const settleTimeoutMs = demo.renderCheck?.settleTimeoutMs ?? 8000;
+    const deadline = Date.now() + settleTimeoutMs;
 
-    if (sample.stats.coloredSamples < minimumColoredSamples) {
+    let best = await sampleCanvas(page, locator, timeoutMs);
+    while (best.stats.coloredSamples < minimumColoredSamples && Date.now() < deadline) {
+        await waitForAnimationFramePair(page);
+        await page.waitForTimeout(150);
+        const next = await sampleCanvas(page, locator, timeoutMs);
+        if (next.stats.coloredSamples >= best.stats.coloredSamples) {
+            best = next;
+        }
+    }
+
+    if (best.stats.coloredSamples < minimumColoredSamples) {
         failures.push(
-            `${demo.slug}: ${label} canvas check failed (${JSON.stringify(sample.stats)}, expected at least ${minimumColoredSamples} colored samples)`
+            `${demo.slug}: ${label} canvas check failed (${JSON.stringify(best.stats)}, expected at least ${minimumColoredSamples} colored samples)`
         );
     }
 
-    return sample;
+    return best;
 }
 
 try {
