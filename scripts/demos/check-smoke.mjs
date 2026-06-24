@@ -27,6 +27,8 @@ const contentTypes = new Map([
     [".webp", "image/webp"],
     [".hdr", "application/octet-stream"],
     [".wasm", "application/wasm"],
+    [".mp4", "video/mp4"],
+    [".webm", "video/webm"],
 ]);
 
 function escapeAzureDevOpsMessage(message) {
@@ -82,8 +84,33 @@ const server = http.createServer(async (request, response) => {
         }
 
         const body = await fs.readFile(filePath);
+        const contentType = contentTypes.get(path.extname(filePath).toLowerCase()) || "application/octet-stream";
+
+        // Support HTTP Range requests so that <video>/<audio> elements (which
+        // request partial content) load correctly instead of being aborted.
+        const rangeHeader = request.headers.range;
+        if (rangeHeader) {
+            const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader);
+            if (match) {
+                const start = match[1] ? Number.parseInt(match[1], 10) : 0;
+                const end = match[2] ? Number.parseInt(match[2], 10) : body.length - 1;
+                if (start <= end && end < body.length) {
+                    response.writeHead(206, {
+                        "content-type": contentType,
+                        "content-range": `bytes ${start}-${end}/${body.length}`,
+                        "accept-ranges": "bytes",
+                        "content-length": end - start + 1,
+                    });
+                    response.end(body.subarray(start, end + 1));
+                    return;
+                }
+            }
+        }
+
         response.writeHead(200, {
-            "content-type": contentTypes.get(path.extname(filePath).toLowerCase()) || "application/octet-stream",
+            "content-type": contentType,
+            "accept-ranges": "bytes",
+            "content-length": body.length,
         });
         response.end(body);
     } catch {

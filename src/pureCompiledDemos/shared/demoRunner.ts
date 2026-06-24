@@ -1,24 +1,59 @@
 import {
     RegisterAbstractEngineCubeTexture,
+    RegisterArcRotateCamera,
+    RegisterCamera,
+    RegisterCubeTexture,
     DepthRenderer,
     Engine,
     RegisterDepthRendererSceneComponent,
+    RegisterDirectionalLight,
+    RegisterEngineUniformBuffer,
+    RegisterEnginesExtensionsEngineAlpha,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineDynamicTexture,
     RegisterEnginesExtensionsEngineReadTexture,
+    RegisterFresnelParameters,
+    RegisterHemisphericLight,
+    RegisterLoadingScreen,
+    RegisterMultiMaterial,
     RegisterOutlineRenderer,
+    RegisterPointLight,
+    RegisterRay,
     Scene,
+    RegisterSpotLight,
     RegisterStandardMaterial,
+    RegisterTexture,
+    RegisterUniversalCamera,
 } from "@babylonjs/core/pure";
+// Side-effect only: wires AbstractEngine.GetCompatibleTextureLoader so 2D textures in
+// special formats (.tga/.dds/.hdr/.env/.ktx) can load. There is no pure Register*() for
+// this; in compiled builds it is pulled in transitively. Without it, e.g. Instances'
+// Tree.tga never becomes ready and scene.isReady() hangs forever.
+import "@babylonjs/core/Engines/AbstractEngine/abstractEngine.textureLoaders";
 
 void Scene;
 
 // Required in pure builds so common demos don't rely on stripped side-effect registration.
+RegisterEngineUniformBuffer();
 RegisterAbstractEngineCubeTexture();
+RegisterCamera();
+RegisterArcRotateCamera();
+RegisterUniversalCamera();
+RegisterDirectionalLight();
+RegisterHemisphericLight();
+RegisterPointLight();
+RegisterSpotLight();
+RegisterRay();
+RegisterEnginesExtensionsEngineAlpha();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineDynamicTexture();
 RegisterEnginesExtensionsEngineReadTexture();
+RegisterLoadingScreen();
+RegisterFresnelParameters();
+RegisterMultiMaterial();
 RegisterStandardMaterial();
+RegisterTexture();
+RegisterCubeTexture();
 RegisterDepthRendererSceneComponent(DepthRenderer);
 RegisterOutlineRenderer();
 

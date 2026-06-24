@@ -264,6 +264,12 @@ Each demo page should include a small source link at the bottom of the viewport:
 
 ## Adding A Demo
 
+> Demos on the website must use the ES6 `@babylonjs/*` packages. UMD/CDN demos
+> are not allowed and nothing new should be added to `static/Demos/`. Every demo
+> is added in both compiled (`src/compiledDemos/`) and pure
+> (`src/pureCompiledDemos/`) form. See [AGENTS.md](../AGENTS.md) for the full
+> policy and the compiled→pure registration map.
+
 1. Create `src/compiledDemos/<Slug>/index.html`, `main.ts`, and `scene.ts`.
 2. Export a scene factory from `scene.ts`:
 
