@@ -192,6 +192,11 @@
     <script src="/assets/js/animation.js"></script>
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/pullRefresh.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@9.0.0/dist/babylon-viewer.esm.min.js"></script>
+    {% if pageData.pageConfig.forceFullViewer %}
+    <script>
+      window.babylonViewerConfig = { forceFull: true };
+    </script>
+    {% endif %}
+    <script type="module" src="/assets/js/viewerLoader.js"></script>
   </body>
 </html>

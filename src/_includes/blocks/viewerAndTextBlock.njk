@@ -4,14 +4,14 @@
         {% if alignment == "left" %}
         <div class="viewer-block">
             <babylon-viewer style="width:100vw;height:100vh;max-width:{{ viewer.width }};max-height:{{ viewer.height }}"
-                clear-color="{{ viewer.clearColor }}"
-                environment-lighting="{{ viewer.environment }}"
+                {% if viewer.clearColor %}clear-color="{{ viewer.clearColor }}"{% endif %}
+                {% if viewer.environment %}environment-lighting="{{ viewer.environment }}"{% endif %}
                 source="{{ viewer.source }}"
                 {% if viewer.hotspots %}
                 hotspots='{{ viewer.hotspots | json }}'
                 {% endif %}
-                camera-orbit="{{ viewer.cameraOrbit }}"
-                animation-speed="{{ viewer.animationSpeed }}"
+                {% if viewer.cameraOrbit %}camera-orbit="{{ viewer.cameraOrbit }}"{% endif %}
+                {% if viewer.animationSpeed %}animation-speed="{{ viewer.animationSpeed }}"{% endif %}
                 {% if viewer.animationAutoPlay %}animation-auto-play{% endif %}
                 {% if viewer.cameraAutoOrbit != false %}camera-auto-orbit{% endif %}>
             {% if viewer.annotations %}{% for annotation in viewer.annotations %}
@@ -58,14 +58,14 @@
         {% if alignment == "right" %}
         <div class="viewer-block">
             <babylon-viewer style="width:100vw;height:100vh;max-width:{{ viewer.width }};max-height:{{ viewer.height }}"
-                clear-color="{{ viewer.clearColor }}"
-                environment-lighting="{{ viewer.environment }}"
+                {% if viewer.clearColor %}clear-color="{{ viewer.clearColor }}"{% endif %}
+                {% if viewer.environment %}environment-lighting="{{ viewer.environment }}"{% endif %}
                 source="{{ viewer.source }}"
                 {% if viewer.hotspots %}
                 hotspots='{{ viewer.hotspots | json }}'
                 {% endif %}
-                camera-orbit="{{ viewer.cameraOrbit }}"
-                animation-speed="{{ viewer.animationSpeed }}"
+                {% if viewer.cameraOrbit %}camera-orbit="{{ viewer.cameraOrbit }}"{% endif %}
+                {% if viewer.animationSpeed %}animation-speed="{{ viewer.animationSpeed }}"{% endif %}
                 {% if viewer.animationAutoPlay %}animation-auto-play{% endif %}
                 {% if viewer.cameraAutoOrbit != false %}camera-auto-orbit{% endif %}>
             {% if viewer.annotations %}{% for annotation in viewer.annotations %}

@@ -34,7 +34,7 @@
         {
             "templateName": "codeBlock",
             "content": {
-                "gistUrl": "https://gist.github.com/ryantrem/f9ee6ae5c9fa8e5802f46e6832da63f1.js",
+                "gistUrl": "https://gist.github.com/ryantrem/6a04bad409935a043eb27ba14f1d48f4.js",
                 "height": "260px"
             }
         },
@@ -124,7 +124,7 @@
                 "marginLeft": "50px",
                 "marginRight": "50px",
                 "title": "Compact Package",
-                "desc": "This new Babylon Viewer has a smaller bundle footprint (469KB distribution). Dynamic imports are used to defer loading formats (gltf/glb, obj, splat/ply) and capabilities (audio or animation for example) depending on the model that is loaded. This reduces the download burden on the end user and reduces the time to render the first frame.",
+                "desc": "This new Babylon Viewer has a smaller bundle footprint (180KB compressed distribution for Viewer Lite). Dynamic imports are used to defer loading formats (gltf/glb, obj, splat/ply) and capabilities (audio or animation for example) depending on the model that is loaded. This reduces the download burden on the end user and reduces the time to render the first frame.",
                 "moreInfoLink": "",
                 "moreInfoText": ""
             }
@@ -208,14 +208,14 @@
                             8565
                           ],
                           "barycentric": [
-                            "0.538",
-                            "0.007",
-                            "0.455"
+                            0.538,
+                            0.007,
+                            0.455
                           ],
                           "cameraOrbit": [
-                            "1.625",
-                            "1.540",
-                            "12.615"
+                            1.625,
+                            1.54,
+                            12.615
                           ]
                         },
                         "Plug": {
@@ -227,14 +227,14 @@
                             8744
                             ],
                             "barycentric": [
-                            "0.550",
-                            "0.172",
-                            "0.278"
+                            0.55,
+                            0.172,
+                            0.278
                             ],
                             "cameraOrbit": [
-                            "4.108",
-                            "1.350",
-                            "8.581"
+                            4.108,
+                            1.35,
+                            8.581
                             ]
                         }
                       },

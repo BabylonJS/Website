@@ -4,10 +4,7 @@
     <title>Babylon Viewer Demo</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@9.0.0/dist/babylon-viewer.esm.min.js"
-    ></script>
+    <script type="module" src="/assets/js/viewerLoader.js"></script>
     <style>
       html,
       body {
@@ -21,18 +18,18 @@
   </head>
   <body>
     <script>
+      // URLSearchParams keeps other params (such as the loader's ?viewer=lite|full
+      // override) out of the model URL and percent-decodes the value. Build the
+      // element with DOM APIs so a crafted ?url= cannot inject markup.
       const url =
-        location.search.split("url=").pop() ||
+        new URLSearchParams(location.search).get("url") ||
         "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/ufo.glb";
 
-      document.body.innerHTML = `
-          <babylon-viewer
-            source="${url}"
-            environment="auto"
-            camera-auto-orbit
-          >
-          </babylon-viewer>
-        `;
+      const viewer = document.createElement("babylon-viewer");
+      viewer.setAttribute("source", url);
+      viewer.setAttribute("environment", "auto");
+      viewer.setAttribute("camera-auto-orbit", "");
+      document.body.replaceChildren(viewer);
     </script>
   </body>
 </html>
