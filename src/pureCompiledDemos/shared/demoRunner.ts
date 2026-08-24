@@ -23,19 +23,17 @@ import {
     RegisterParticleSystemComponent,
     RegisterPointLight,
     RegisterRay,
-    Scene,
     RegisterSpotLight,
     RegisterStandardMaterial,
     RegisterTexture,
     RegisterUniversalCamera,
 } from "@babylonjs/core/pure";
+import type { Scene } from "@babylonjs/core/pure";
 // Side-effect only: wires AbstractEngine.GetCompatibleTextureLoader so 2D textures in
 // special formats (.tga/.dds/.hdr/.env/.ktx) can load. There is no pure Register*() for
 // this; in compiled builds it is pulled in transitively. Without it, e.g. Instances'
 // Tree.tga never becomes ready and scene.isReady() hangs forever.
 import "@babylonjs/core/Engines/AbstractEngine/abstractEngine.textureLoaders";
-
-void Scene;
 
 // Required in pure builds so common demos don't rely on stripped side-effect registration.
 RegisterEngineUniformBuffer();

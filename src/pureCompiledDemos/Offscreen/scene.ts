@@ -9,6 +9,7 @@ import {
     RegisterAnimation,
     RegisterCubeTexture,
     RegisterEnginePrefilteredCubeTexture,
+    RegisterEngineUniformBuffer,
     RegisterEnginesExtensionsEngineAlpha,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineRawTexture,
@@ -35,6 +36,7 @@ RegisterAbstractEngineStates();
 RegisterAbstractEngineStencil();
 RegisterCubeTexture();
 RegisterEnginePrefilteredCubeTexture();
+RegisterEngineUniformBuffer();
 RegisterEnginesExtensionsEngineAlpha();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineRawTexture();
