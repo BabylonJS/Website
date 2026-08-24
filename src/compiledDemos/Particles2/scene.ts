@@ -63,7 +63,7 @@ export function createParticles2Scene(engine: Engine, canvas: HTMLCanvasElement)
     let time = 0;
     let order = 0.1;
     scene.registerBeforeRender(() => {
-        if (!effect) {
+        if (!effect.isReady()) {
             return;
         }
         effect.setFloat("time", time);

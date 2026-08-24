@@ -16,6 +16,7 @@ import "@babylonjs/core/Materials/multiMaterial";
 import "@babylonjs/core/Materials/standardMaterial";
 import "@babylonjs/core/Materials/Textures/cubeTexture";
 import "@babylonjs/core/Materials/Textures/texture";
+import "@babylonjs/core/Particles/particleSystemComponent";
 import "@babylonjs/core/Rendering/depthRendererSceneComponent";
 import "@babylonjs/core/Rendering/outlineRenderer";
 

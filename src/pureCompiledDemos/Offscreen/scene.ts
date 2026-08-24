@@ -3,15 +3,19 @@ import {
     Animation,
     ImportMeshAsync,
     RegisterAbstractEngineCubeTexture,
+    RegisterAbstractEngineStates,
+    RegisterAbstractEngineStencil,
     RegisterAnimatable,
     RegisterAnimation,
     RegisterCubeTexture,
     RegisterEnginePrefilteredCubeTexture,
+    RegisterEnginesExtensionsEngineAlpha,
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineRawTexture,
     RegisterEnginesExtensionsEngineRenderTarget,
     RegisterEnginesExtensionsEngineRenderTargetCube,
     RegisterEnginesExtensionsEngineRenderTargetTexture,
+    RegisterFileTools,
     RegisterPassPostProcess,
     RegisterRenderTargetTexture,
     RegisterSceneHelpers,
@@ -27,13 +31,17 @@ RegisterSceneHelpers();
 RegisterAnimation();
 RegisterAnimatable();
 RegisterAbstractEngineCubeTexture();
+RegisterAbstractEngineStates();
+RegisterAbstractEngineStencil();
 RegisterCubeTexture();
 RegisterEnginePrefilteredCubeTexture();
+RegisterEnginesExtensionsEngineAlpha();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineRawTexture();
 RegisterEnginesExtensionsEngineRenderTarget();
 RegisterEnginesExtensionsEngineRenderTargetTexture();
 RegisterEnginesExtensionsEngineRenderTargetCube();
+RegisterFileTools();
 RegisterRenderTargetTexture();
 RegisterPassPostProcess();
 

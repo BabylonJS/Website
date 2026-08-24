@@ -1,5 +1,7 @@
 import {
     RegisterAbstractEngineCubeTexture,
+    RegisterAbstractEngineStates,
+    RegisterAbstractEngineStencil,
     RegisterArcRotateCamera,
     RegisterCamera,
     RegisterCubeTexture,
@@ -12,11 +14,13 @@ import {
     RegisterEnginesExtensionsEngineCubeTexture,
     RegisterEnginesExtensionsEngineDynamicTexture,
     RegisterEnginesExtensionsEngineReadTexture,
+    RegisterFileTools,
     RegisterFresnelParameters,
     RegisterHemisphericLight,
     RegisterLoadingScreen,
     RegisterMultiMaterial,
     RegisterOutlineRenderer,
+    RegisterParticleSystemComponent,
     RegisterPointLight,
     RegisterRay,
     Scene,
@@ -36,6 +40,8 @@ void Scene;
 // Required in pure builds so common demos don't rely on stripped side-effect registration.
 RegisterEngineUniformBuffer();
 RegisterAbstractEngineCubeTexture();
+RegisterAbstractEngineStates();
+RegisterAbstractEngineStencil();
 RegisterCamera();
 RegisterArcRotateCamera();
 RegisterUniversalCamera();
@@ -48,12 +54,14 @@ RegisterEnginesExtensionsEngineAlpha();
 RegisterEnginesExtensionsEngineCubeTexture();
 RegisterEnginesExtensionsEngineDynamicTexture();
 RegisterEnginesExtensionsEngineReadTexture();
+RegisterFileTools();
 RegisterLoadingScreen();
 RegisterFresnelParameters();
 RegisterMultiMaterial();
 RegisterStandardMaterial();
 RegisterTexture();
 RegisterCubeTexture();
+RegisterParticleSystemComponent();
 RegisterDepthRendererSceneComponent(DepthRenderer);
 RegisterOutlineRenderer();
 
