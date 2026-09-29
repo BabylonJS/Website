@@ -333,6 +333,15 @@
                         }
                     },
                     {
+                        "desc": "CottageCore",
+                        "author": "by Deltakosh",
+                        "link": "https://store.steampowered.com/app/4941950/CottageCore/",
+                        "img": {
+                            "url": "./assets/img/cottageCore.jpg",
+                            "alt": "CottageCore title over a cottage surrounded by trees"
+                        }
+                    },
+                    {
                         "desc": "Kingdom Heroes",
                         "author": "by AlexSo",
                         "link": "https://poki.com/en/g/kingdom-heroes",
