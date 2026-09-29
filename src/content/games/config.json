@@ -231,6 +231,26 @@
             "templateName": "imageAndTextBlock",
             "content": {
                 "alignment": "left",
+                "background": "#232323",
+                "img": {
+                    "url": "/assets/img/babylonEditor.png",
+                    "alt": "The Babylon.js Editor desktop application showing a dimly lit room scene with asset browser, inspector, and scene hierarchy panels",
+                    "width": "550px"
+                },
+                "height": "450px",
+                "marginLeft": "50px",
+                "marginRight": "50px",
+                "title": "Babylon.js Editor",
+                "desc": "The Babylon.js Editor continues to evolve as a powerful desktop application for building Babylon.js experiences. Available on Windows, macOS, and Linux, the Editor provides a full scene editing environment with support for scripting, physics, asset management, and project building, all wrapped in a familiar, intuitive interface.",
+                "moreInfoLink": "https://aka.ms/babylon9EditorDoc",
+                "moreInfoText": "Learn more about Babylon.js Editor",
+                "target": "_blank"
+            }
+        },
+        {
+            "templateName": "imageAndTextBlock",
+            "content": {
+                "alignment": "right",
                 "background": "#000000",
                 "img": {
                     "url": "assets/img/forum.png",
@@ -271,23 +291,6 @@
             }
         },
         {
-            "templateName": "imageListBlock",
-            "content": {
-                "background": "#2f2f2f",
-                "marginTop": "20px",
-                "items": [
-                    {
-                        "img": {
-                            "url": "assets/img/gameStackBanner.png",
-                            "alt": "Babylon.js is part of Microsoft Game Stack. Game Stack offers the tools and services developers need to bring their game to players around the world. Explore Solutions.",
-                            "width": "1000px",
-                            "link": "https://developer.microsoft.com/en-us/games"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "templateName": "imagesBlock",
             "content": {
                 "title": "Games made with Babylon.js",
@@ -303,21 +306,66 @@
                         }
                     },
                     {
-                        "desc": "Space Invaders",
-                        "author": "by John Pitchers",
-                        "link": "https://spaceinvaders.viperfish.com.au/",
-                        "img": {
-                            "url": "./assets/img/spaceInvaders.png",
-                            "alt": "Space Invaders made with Babylon.js"
-                        }
-                    },
-                    {
                         "desc": "Temple Run 2",
                         "author": "by Imangi Studios",
                         "link": "https://poki.com/en/g/temple-run-2#",
                         "img": {
                             "url": "../community/assets/img/templeRun2.jpg",
                             "alt": "Temple Run 2"
+                        }
+                    },
+                    {
+                        "desc": "Tuggowar",
+                        "author": "by Tension Games",
+                        "link": "https://store.steampowered.com/app/2870220/Tuggowar/",
+                        "img": {
+                            "url": "/community/assets/img/TuggowarSteam.png",
+                            "alt": "Tuggowar game artwork showing a soldier and a tank"
+                        }
+                    },
+                    {
+                        "desc": "Out 4 Blood",
+                        "author": "by Cesharpe",
+                        "link": "https://cesharpe.com/o4b",
+                        "img": {
+                            "url": "./assets/img/out4Blood.jpg",
+                            "alt": "Out 4 Blood logo"
+                        }
+                    },
+                    {
+                        "desc": "Kingdom Heroes",
+                        "author": "by AlexSo",
+                        "link": "https://poki.com/en/g/kingdom-heroes",
+                        "img": {
+                            "url": "./assets/img/kingdomHeroes.jpg",
+                            "alt": "Illustrated hero from Kingdom Heroes"
+                        }
+                    },
+                    {
+                        "desc": "Path Defenders",
+                        "author": "by Benjamin Adams",
+                        "link": "https://store.steampowered.com/app/4819620/Path_Defenders/",
+                        "img": {
+                            "url": "./assets/img/pathDefenders.jpg",
+                            "alt": "Heroes facing monsters in Path Defenders"
+                        }
+                    },
+                    {
+                        "desc": "Shell Shockers",
+                        "author": "by Fun Fetched",
+                        "link": "http://shellshock.io",
+                        "img": {
+                            "url": "../community/assets/img/ShellShockers.jpg",
+                            "alt": "Shell Shockers"
+                        }
+                    },
+                    {
+                        "desc": "Space Invaders",
+                        "author": "by John Pitchers",
+                        "link": "https://spaceinvaders.viperfish.com.au/",
+                        "img": {
+                            "url": "./assets/img/spaceInvaders.png",
+                            "alt": "Space Invaders made with Babylon.js"
                         }
                     },
                     {
@@ -330,12 +378,30 @@
                         }
                     },
                     {
-                        "desc": "Sidus Heroes",
-                        "author": "by SidusHeroes",
-                        "link": "https://sidusheroes.com/",
+                        "desc": "Space Intruders Alliance",
+                        "author": "by Bitmo software",
+                        "link": "https://store.steampowered.com/app/2989230/Space_intruders_alliance/",
                         "img": {
-                            "url": "/community/assets/img/sidusheroes.jpg",
-                            "alt": "Sidus Heroes"
+                            "url": "./assets/img/spaceIntrudersAlliance.jpg",
+                            "alt": "Spacecraft above a planet in Space Intruders Alliance"
+                        }
+                    },
+                    {
+                        "desc": "Jigsaw Puzzle Palace",
+                        "author": "by Taurna",
+                        "link": "https://store.steampowered.com/app/4456230/Jigsaw_Puzzle_Palace/",
+                        "img": {
+                            "url": "./assets/img/jigsawPuzzlePalace.jpg",
+                            "alt": "Jigsaw puzzle pieces surrounding an image in Jigsaw Puzzle Palace"
+                        }
+                    },
+                    {
+                        "desc": "Crystalline Bliss",
+                        "author": "by Divine Star Software",
+                        "link": "https://store.steampowered.com/app/2547740/Crystalline_Bliss/",
+                        "img": {
+                            "url": "./assets/img/crystallineBliss.jpg",
+                            "alt": "Colorful crystals in a glowing arena in Crystalline Bliss"
                         }
                     },
                     {
@@ -348,12 +414,57 @@
                         }
                     },
                     {
-                        "desc": "Shell Shockers",
-                        "author": "by Fun Fetched",
-                        "link": "http://shellshock.io",
+                        "desc": "Terachain",
+                        "author": "by Jabuticabra Games",
+                        "link": "https://store.steampowered.com/app/4609310/Terachain/",
                         "img": {
-                            "url": "../community/assets/img/ShellShockers.jpg",
-                            "alt": "Shell Shockers"
+                            "url": "./assets/img/terachain.jpg",
+                            "alt": "Colorful game board in orbit in Terachain"
+                        }
+                    },
+                    {
+                        "desc": "HacK [C]omplete",
+                        "author": "by valery-ka",
+                        "link": "https://valery-ka.itch.io/hack-complete",
+                        "img": {
+                            "url": "./assets/img/hackComplete.jpg",
+                            "alt": "Top-down hacking puzzle with orange projectiles in HacK [C]omplete"
+                        }
+                    },
+                    {
+                        "desc": "Razarion",
+                        "author": "by Razarion contributors",
+                        "link": "https://www.razarion.com/",
+                        "img": {
+                            "url": "./assets/img/razarion.jpg",
+                            "alt": "Razarion title over a battlefield and coastline"
+                        }
+                    },
+                    {
+                        "desc": "IdleQuest",
+                        "author": "by Brynn",
+                        "link": "https://www.idlequest.net/",
+                        "img": {
+                            "url": "./assets/img/idleQuest.jpg",
+                            "alt": "Characters in a grassy field with the classic RPG interface in IdleQuest"
+                        }
+                    },
+                    {
+                        "desc": "Aether Garden",
+                        "author": "by withADoveInOneHand",
+                        "link": "https://aether.garden",
+                        "img": {
+                            "url": "./assets/img/aetherGarden.jpg",
+                            "alt": "Aether Garden dandelion logo on a white background"
+                        }
+                    },
+                    {
+                        "desc": "Cardboarder",
+                        "author": "by Richie Pearce",
+                        "link": "https://cardboarder.racing/",
+                        "img": {
+                            "url": "./assets/img/cardboarder.jpg",
+                            "alt": "Cartoon driver racing a cardboard car in Cardboarder"
                         }
                     }
                 ]
