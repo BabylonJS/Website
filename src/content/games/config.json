@@ -16,6 +16,10 @@
                         "demoLink": "https://classic.minecraft.net"
                     },
                     {
+                        "videoUrl": "/games/assets/videos/CottageCore-Web.mp4",
+                        "demoLink": "https://store.steampowered.com/app/4941950/CottageCore/"
+                    },
+                    {
                         "videoUrl": "/games/assets/videos/spaceInvaders.mp4",
                         "demoLink": "https://spaceinvaders.viperfish.com.au//"
                     },
@@ -26,10 +30,6 @@
                     {
                         "videoUrl": "/games/assets/videos/brilliantMan.mp4",
                         "demoLink": "https://www.bigredbox.nl//BrilliantMan/index.html"
-                    },
-                    {
-                        "videoUrl": "/games/assets/videos/battlechoc.mp4",
-                        "demoLink": "https://battlechoc.com"
                     }
                 ]
             }
