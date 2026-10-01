@@ -475,6 +475,33 @@
                             "url": "./assets/img/cardboarder.jpg",
                             "alt": "Cartoon driver racing a cardboard car in Cardboarder"
                         }
+                    },
+                    {
+                        "desc": "Luigi's Pizza House",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/luigis-pizza-house",
+                        "img": {
+                            "url": "./assets/img/luigisPizzaHouse.jpg",
+                            "alt": "Luigi's Pizza House title above a chef serving a pizza"
+                        }
+                    },
+                    {
+                        "desc": "Traffic Boss",
+                        "author": "by Karim Alatif",
+                        "link": "https://trafficboss.vercel.app/",
+                        "img": {
+                            "url": "./assets/img/trafficBoss.jpg",
+                            "alt": "Cars at a nighttime city intersection in Traffic Boss"
+                        }
+                    },
+                    {
+                        "desc": "Twisted Retro Rally",
+                        "author": "by Ape Aviary",
+                        "link": "https://apeaviary.itch.io/twisted-babylon",
+                        "img": {
+                            "url": "./assets/img/twistedRetroRally.jpg",
+                            "alt": "Twisted Retro Rally title over a combat car"
+                        }
                     }
                 ]
             }
