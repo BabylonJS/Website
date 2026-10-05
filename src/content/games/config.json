@@ -502,6 +502,78 @@
                             "url": "./assets/img/twistedRetroRally.jpg",
                             "alt": "Twisted Retro Rally title over a combat car"
                         }
+                    },
+                    {
+                        "desc": "Shu Chess",
+                        "author": "by onekit",
+                        "link": "https://shuchess.com/",
+                        "img": {
+                            "url": "./assets/img/shuChess.jpg",
+                            "alt": "Smiling wooden knight chess piece from Shu Chess"
+                        }
+                    },
+                    {
+                        "desc": "Shu in Space",
+                        "author": "by onekit",
+                        "link": "https://space.1kit.net/",
+                        "img": {
+                            "url": "./assets/img/shuInSpace.jpg",
+                            "alt": "Spaceship flying toward monsters in Shu in Space"
+                        }
+                    },
+                    {
+                        "desc": "ShuMatch3",
+                        "author": "by oneKit",
+                        "link": "https://match3.1kit.net/",
+                        "img": {
+                            "url": "./assets/img/shuMatch3.jpg",
+                            "alt": "Blue diamond from ShuMatch3"
+                        }
+                    },
+                    {
+                        "desc": "Dark BASIC Online",
+                        "author": "by ThinkAppsAI",
+                        "link": "https://darkbasiconline.com/",
+                        "img": {
+                            "url": "./assets/img/darkBasicOnline.jpg",
+                            "alt": "Dark BASIC Online artwork with a fantasy game world, rocket, and racing car"
+                        }
+                    },
+                    {
+                        "desc": "They Are Adorable",
+                        "author": "by 3kittens",
+                        "link": "https://store.steampowered.com/app/5009860/They_Are_Adorable/",
+                        "img": {
+                            "url": "./assets/img/theyAreAdorable.jpg",
+                            "alt": "They Are Adorable title above a crowd of colorful creatures"
+                        }
+                    },
+                    {
+                        "desc": "Mythraval",
+                        "author": "by AQTO",
+                        "link": "https://mythraval.com/",
+                        "img": {
+                            "url": "./assets/img/mythraval.jpg",
+                            "alt": "Gold Mythraval title on a dark cloud background"
+                        }
+                    },
+                    {
+                        "desc": "Cosmos Journeyer",
+                        "author": "by BarthPaleologue",
+                        "link": "https://cosmosjourneyer.com/",
+                        "img": {
+                            "url": "./assets/img/cosmosJourneyer.jpg",
+                            "alt": "Spacecraft flying above a planet toward a bright star"
+                        }
+                    },
+                    {
+                        "desc": "CosmoKick.io",
+                        "author": "by Adam Toth",
+                        "link": "https://www.cosmokick.io/",
+                        "img": {
+                            "url": "./assets/img/cosmoKick.jpg",
+                            "alt": "CosmoKick.io jetpack soccer match in a stadium"
+                        }
                     }
                 ]
             }
