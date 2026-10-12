@@ -9,6 +9,15 @@
                 "desc": "Babylon's open, vibrant community of developers, creators, and artists are constantly pushing the boundaries of what's possible with web 3D.  Check out some of their latest amazing work!",
                 "items": [
                     {
+                        "desc": "Almighty",
+                        "author": "by Almighty",
+                        "link": "https://almighty.you/?utm_source=babylonjs-community",
+                        "img": {
+                            "url": "/community/assets/img/almighty.jpg",
+                            "alt": "Almighty AI 3D model generator"
+                        }
+                    },
+                    {
                         "desc": "Tuggowar",
                         "author": "by Mise",
                         "link": "https://store.steampowered.com/app/2870220/Tuggowar/?utm_source=bjscommunity",
