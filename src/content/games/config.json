@@ -619,6 +619,33 @@
                             "url": "./assets/img/taki.jpg",
                             "alt": "Taki cover with an orange car driving through a sunny town"
                         }
+                    },
+                    {
+                        "desc": "Nitro Legends",
+                        "author": "by UN1T",
+                        "link": "https://nitro-legends.netlify.app/",
+                        "img": {
+                            "url": "./assets/img/nitroLegends.jpg",
+                            "alt": "Nitro Legends logo above a sports car in the racing game garage"
+                        }
+                    },
+                    {
+                        "desc": "Lythravel",
+                        "author": "by FialaGames",
+                        "link": "https://lythravel.com/",
+                        "img": {
+                            "url": "./assets/img/lythravel.jpg",
+                            "alt": "Armored adventurer in a voxel meadow with a distant castle"
+                        }
+                    },
+                    {
+                        "desc": "Battlegrounds: Tanks Warfare",
+                        "author": "by IT-REX",
+                        "link": "https://tankswarfare.io/",
+                        "img": {
+                            "url": "./assets/img/tanksWarfare.jpg",
+                            "alt": "Red tank driving across an open desert battleground"
+                        }
                     }
                 ]
             }
