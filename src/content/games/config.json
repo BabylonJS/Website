@@ -574,6 +574,78 @@
                             "url": "./assets/img/cosmoKick.jpg",
                             "alt": "CosmoKick.io jetpack soccer match in a stadium"
                         }
+                    },
+                    {
+                        "desc": "TurboWave",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/turbowave",
+                        "img": {
+                            "url": "./assets/img/turbowave.jpg",
+                            "alt": "Neon racing car beneath the TurboWave logo"
+                        }
+                    },
+                    {
+                        "desc": "The Winter List",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/the-winter-list",
+                        "img": {
+                            "url": "./assets/img/winterList.jpg",
+                            "alt": "The Winter List cover with a figure looking out a dark window"
+                        }
+                    },
+                    {
+                        "desc": "BadLuck Tano",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/badlucktano",
+                        "img": {
+                            "url": "./assets/img/badLuckTano.jpg",
+                            "alt": "BadLuck Tano cover with a surprised man among scattered papers"
+                        }
+                    },
+                    {
+                        "desc": "Robert",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/robert",
+                        "img": {
+                            "url": "./assets/img/robertsBunker.jpg",
+                            "alt": "Nuclear Survival: Robert's Bunker cover with a gas-mask figure"
+                        }
+                    },
+                    {
+                        "desc": "Taki",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/taki",
+                        "img": {
+                            "url": "./assets/img/taki.jpg",
+                            "alt": "Taki cover with an orange car driving through a sunny town"
+                        }
+                    },
+                    {
+                        "desc": "Nitro Legends",
+                        "author": "by UN1T",
+                        "link": "https://nitro-legends.netlify.app/",
+                        "img": {
+                            "url": "./assets/img/nitroLegends.jpg",
+                            "alt": "Nitro Legends logo above a sports car in the racing game garage"
+                        }
+                    },
+                    {
+                        "desc": "Lythravel",
+                        "author": "by FialaGames",
+                        "link": "https://lythravel.com/",
+                        "img": {
+                            "url": "./assets/img/lythravel.jpg",
+                            "alt": "Armored adventurer in a voxel meadow with a distant castle"
+                        }
+                    },
+                    {
+                        "desc": "Battlegrounds: Tanks Warfare",
+                        "author": "by IT-REX",
+                        "link": "https://tankswarfare.io/",
+                        "img": {
+                            "url": "./assets/img/tanksWarfare.jpg",
+                            "alt": "Red tank driving across an open desert battleground"
+                        }
                     }
                 ]
             }
