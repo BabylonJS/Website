@@ -646,6 +646,15 @@
                             "url": "./assets/img/tanksWarfare.jpg",
                             "alt": "Red tank driving across an open desert battleground"
                         }
+                    },
+                    {
+                        "desc": "Beacon 9",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/beacon-9",
+                        "img": {
+                            "url": "./assets/img/beacon9.jpg",
+                            "alt": "Beacon 9 cover with an astronaut, rover, drones, and a distant station"
+                        }
                     }
                 ]
             }
