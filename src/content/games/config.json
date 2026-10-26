@@ -655,6 +655,42 @@
                             "url": "./assets/img/beacon9.jpg",
                             "alt": "Beacon 9 cover with an astronaut, rover, drones, and a distant station"
                         }
+                    },
+                    {
+                        "desc": "Wizardos",
+                        "author": "by ertucetin",
+                        "link": "https://wizardos.io/",
+                        "img": {
+                            "url": "./assets/img/wizardos.jpg",
+                            "alt": "Purple-robed Wizardos wizard holding a glowing staff in a stone courtyard"
+                        }
+                    },
+                    {
+                        "desc": "Washiki Washoi!",
+                        "author": "by Higher Standard Games",
+                        "link": "https://washoi.net/",
+                        "img": {
+                            "url": "./assets/img/washikiWashoi.jpg",
+                            "alt": "Washiki Washoi first-person combat arena with a futuristic weapon and neon signs"
+                        }
+                    },
+                    {
+                        "desc": "SHIBA: Space Warrior",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/shiba-space-warrior",
+                        "img": {
+                            "url": "./assets/img/shibaSpaceWarrior.jpg",
+                            "alt": "SHIBA: Space Warrior cover with a Shiba Inu piloting a starship above a neon grid"
+                        }
+                    },
+                    {
+                        "desc": "Seedborn",
+                        "author": "by DragonLore Games",
+                        "link": "https://seedborn.world/",
+                        "img": {
+                            "url": "./assets/img/seedborn.jpg",
+                            "alt": "Seedborn logo above farmhands and livestock in stone-walled fields"
+                        }
                     }
                 ]
             }
