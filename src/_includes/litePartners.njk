@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ pageData.pageConfig.title | escape }}</title>
+        <meta name="description" content="{{ pageData.pageConfig.description | escape }}" />
+        <link rel="icon" href="/assets/favicon.ico" />
+        <link rel="stylesheet" href="/assets/styles/litePartners.css" />
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <a class="logo-link" href="/lite/" aria-label="About Babylon Lite">
+                    <img class="logo" src="/assets/img/logo_page_smaller.svg" alt="" width="48" height="56" />
+                </a>
+                <h1><span class="brand">Babylon</span> Lite <span class="accent">partners</span></h1>
+                <p>{{ pageData.pageConfig.description | escape }}</p>
+            </header>
+            <main aria-label="Applications built with Babylon Lite">
+                {{ content | safe }}
+            </main>
+            <footer>
+                <nav aria-label="Babylon Lite resources">
+                    <a href="/lite/">About Babylon Lite</a>
+                    <a href="https://babylonjs.com/lite-demos/">Demos</a>
+                    <a href="https://doc.babylonjs.com/lite">Documentation</a>
+                    <a href="https://github.com/BabylonJS/Babylon-Lite">GitHub</a>
+                </nav>
+                <p>Built with Babylon Lite. Part of the <a href="/">Babylon.js</a> family.</p>
+            </footer>
+        </div>
+    </body>
+</html>

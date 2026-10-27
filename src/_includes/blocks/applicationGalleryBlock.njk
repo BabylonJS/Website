@@ -1,0 +1,21 @@
+<div class="grid">
+    {% for item in items %}
+    <article class="card">
+        <a class="card-main" href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">
+            <div class="card-image {% if item.img.contain %}card-image-contain{% endif %}">
+                <img src="{{ item.img.url | escape }}" alt="{{ item.img.alt | escape }}" width="{{ item.img.width }}" height="{{ item.img.height }}" />
+            </div>
+            <div class="card-body">
+                <h2>{{ item.name | escape }}</h2>
+                <p>{{ item.description | escape }}</p>
+                <ul class="tags" aria-label="Application categories">
+                    {% for tag in item.tags %}
+                    <li class="tag">{{ tag | escape }}</li>
+                    {% endfor %}
+                </ul>
+                <span class="card-link">{{ item.linkText | escape }} <span aria-hidden="true">&rarr;</span></span>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</div>

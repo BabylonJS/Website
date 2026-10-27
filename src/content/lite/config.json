@@ -134,6 +134,10 @@
                         "target": "_blank"
                     },
                     {
+                        "text": "Partners",
+                        "link": "/lite-partners/"
+                    },
+                    {
                         "text": "Forum Announcement",
                         "link": "https://forum.babylonjs.com/t/introducing-babylon-lite/63648",
                         "target": "_blank"

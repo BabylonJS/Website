@@ -27,7 +27,8 @@ src/
 │   ├── pages.js           # Builds page list from site.json menu
 │   └── site.js            # Exposes site.json globally
 ├── _includes/
-│   ├── base.njk           # HTML scaffold (header, nav, footer)
+│   ├── base.njk           # Default HTML scaffold (header, nav, footer)
+│   ├── litePartners.njk   # Standalone Lite showcase scaffold
 │   └── blocks/            # ~21 reusable block templates
 │       ├── carouselBlock.njk
 │       ├── imageAndTextBlock.njk
@@ -87,6 +88,8 @@ Output is written to the `build/` directory.
 3. The page is generated automatically on the next build.
 
 To edit an existing page, modify its `config.json` — add, remove, or reorder blocks. Available block types are the `.njk` files in `src/_includes/blocks/`.
+
+Pages use `base.njk` by default. A config can specify a `layout` from `src/_includes/` for a different HTML scaffold. The `/lite-partners/` showcase uses `litePartners.njk` to match the standalone Lite Demos gallery, with application cards defined in `src/content/lite-partners/config.json`. Its hidden menu entry registers the page and its assets without adding it to the main navigation.
 
 ### Template Filters
 
@@ -230,4 +233,3 @@ meta tags can be unique for each page. This property available as part of page l
     }
   ]
 ```
-
