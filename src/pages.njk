@@ -4,8 +4,10 @@ pagination:
   size: 1
   alias: pageData
 permalink: "{% if pageData.url %}{{ pageData.url }}/index.html{% else %}index.html{% endif %}"
-layout: base.njk
 ---
+{% set content %}
 {% for block in pageData.pageConfig.blocks %}
 {% renderBlock block %}
 {% endfor %}
+{% endset %}
+{% include pageData.pageConfig.layout or "base.njk" %}

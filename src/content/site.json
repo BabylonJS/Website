@@ -9,6 +9,10 @@
             "visible": true
         },
         {
+            "root": "lite-partners",
+            "visible": false
+        },
+        {
             "root": "native",
             "visible": true,
             "children": [

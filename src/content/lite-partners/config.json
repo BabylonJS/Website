@@ -1,0 +1,40 @@
+{
+    "title": "Babylon Lite Partners",
+    "layout": "litePartners.njk",
+    "description": "Discover applications built with Babylon Lite, from cozy games to professional 3D design tools.",
+    "blocks": [
+        {
+            "templateName": "applicationGalleryBlock",
+            "content": {
+                "items": [
+                    {
+                        "name": "CottageCore",
+                        "description": "A cozy building game where you shape cottages and towers, welcome villagers into your glade, and prepare their homes and supplies for winter.",
+                        "tags": ["Game", "Creative building"],
+                        "link": "https://store.steampowered.com/app/4941950/CottageCore/",
+                        "linkText": "Discover on Steam",
+                        "img": {
+                            "url": "/lite-partners/assets/img/cottageCore.jpg",
+                            "alt": "CottageCore gameplay showing a village of cottages in a green glade",
+                            "width": 1280,
+                            "height": 720
+                        }
+                    },
+                    {
+                        "name": "NuminaPRO",
+                        "description": "A kitchen-furniture configurator with cabinet assembly, edgebanding, hardware, and customizable materials.",
+                        "tags": ["Configurator", "Kitchen design"],
+                        "link": "https://forum.babylonjs.com/t/babylon-lite-no-dynamictexture-typeerror-dynamictexture-is-not-a-constructor/63806/7",
+                        "linkText": "Read on the forum",
+                        "img": {
+                            "url": "/lite-partners/assets/img/numinaPro.jpg",
+                            "alt": "A NuminaPRO kitchen design with pale green cabinets, dark countertops, a dining table, and a gold pendant light",
+                            "width": 1713,
+                            "height": 1229
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
