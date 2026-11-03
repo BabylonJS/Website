@@ -1,0 +1,100 @@
+name: CodeQL
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  merge_group:
+    branches:
+      - master
+  schedule:
+    - cron: "31 4 * * 2"
+
+concurrency:
+  group: codeql-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  analyze:
+    name: CodeQL / ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: javascript-typescript
+            name: JavaScript-TypeScript
+            source_only: false
+          - language: actions
+            name: GitHub-Actions
+            source_only: false
+          - language: csharp
+            name: CSharp-source-only
+            source_only: true
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout merge result
+        if: ${{ !matrix.source_only }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # C# build-mode none can restore dependencies and process project metadata.
+      # Only C# source is checked out so fork-controlled project tooling is absent.
+      - name: Checkout C# source only
+        if: ${{ matrix.source_only }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            **/*.cs
+          sparse-checkout-cone-mode: false
+
+      - name: Verify C# source-only boundary
+        if: ${{ matrix.source_only }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if find . -type f \( \
+            -iname '*.csproj' -o \
+            -iname '*.sln' -o \
+            -iname '*.slnx' -o \
+            -iname '*.cshtml' -o \
+            -iname 'Directory.Build.props' -o \
+            -iname 'Directory.Build.targets' -o \
+            -iname 'global.json' -o \
+            -iname 'nuget.config' -o \
+            -iname 'packages.config' -o \
+            -iname 'project.assets.json' \
+          \) -print -quit | grep -q .; then
+            echo "Unsafe C# project or dependency metadata is present." >&2
+            exit 1
+          fi
+
+          if ! find . -type f -iname '*.cs' -print -quit | grep -q .; then
+            echo "No C# source files were checked out." >&2
+            exit 1
+          fi
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@1fc58d04a4d4374f921bdac573c3811c240f9c26 # v4.39.2
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          dependency-caching: false
+          config: |
+            queries:
+              - uses: security-extended
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@1fc58d04a4d4374f921bdac573c3811c240f9c26 # v4.39.2
+        with:
+          category: "/language:${{ matrix.language }}"
