@@ -691,6 +691,33 @@
                             "url": "./assets/img/seedborn.jpg",
                             "alt": "Seedborn logo above farmhands and livestock in stone-walled fields"
                         }
+                    },
+                    {
+                        "desc": "Chatters",
+                        "author": "by mangalinteractive",
+                        "link": "https://mangalinteractive.itch.io/chatters",
+                        "img": {
+                            "url": "./assets/img/chatters.jpg",
+                            "alt": "Dithered bedroom with a computer desk and a dark doorway in Chatters"
+                        }
+                    },
+                    {
+                        "desc": "COLORDER",
+                        "author": "by Korochin",
+                        "link": "https://korochin.site/gallery/colorder",
+                        "img": {
+                            "url": "./assets/img/colorder.jpg",
+                            "alt": "Pink, orange, and yellow 3D tiles beneath a color-gradient guide in COLORDER"
+                        }
+                    },
+                    {
+                        "desc": "TILTFALL",
+                        "author": "by VibeMyCode",
+                        "link": "https://tiltfall.com/",
+                        "img": {
+                            "url": "./assets/img/tiltfall.jpg",
+                            "alt": "Shattering glass blocks among glowing boosters and red hazards in TILTFALL"
+                        }
                     }
                 ]
             }
