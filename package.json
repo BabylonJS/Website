@@ -30,26 +30,26 @@
     "author": "",
     "license": "Apache2",
     "dependencies": {
-        "@11ty/eleventy": "^3.1.6",
-        "sharp": "^0.35.4"
+        "@11ty/eleventy": "^3.1.7",
+        "sharp": "^0.35.5"
     },
     "devDependencies": {
-        "@babylonjs/core": "^9.24.0",
-        "@babylonjs/gui": "^9.24.0",
+        "@babylonjs/core": "^9.32.0",
+        "@babylonjs/gui": "^9.32.0",
         "@babylonjs/havok": "^1.3.14",
-        "@babylonjs/inspector": "^9.24.0",
-        "@babylonjs/loaders": "^9.24.0",
-        "@babylonjs/materials": "^9.23.0",
-        "@babylonjs/procedural-textures": "^9.23.0",
+        "@babylonjs/inspector": "^9.32.0",
+        "@babylonjs/loaders": "^9.32.0",
+        "@babylonjs/materials": "^9.32.0",
+        "@babylonjs/procedural-textures": "^9.32.0",
         "@eslint/js": "^10.0.1",
-        "@types/earcut": "^3.0.0",
-        "earcut": "^3.2.3",
-        "eslint": "^10.9.1",
-        "globals": "^17.12.0",
-        "playwright": "^1.62.1",
-        "prettier": "^3.9.6",
+        "@types/earcut": "^3.2.4",
+        "earcut": "^3.2.4",
+        "eslint": "^10.13.0",
+        "globals": "^17.13.0",
+        "playwright": "^1.64.1",
+        "prettier": "^3.9.10",
         "typescript": "^6.0.3",
-        "typescript-eslint": "^8.69.0",
-        "vite": "^8.2.4"
+        "typescript-eslint": "^8.72.0",
+        "vite": "^8.3.5"
     }
 }
