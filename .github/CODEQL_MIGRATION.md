@@ -213,7 +213,7 @@ organization or another repository.
    repository change.
    **Expected evidence:** Both jobs succeed for the same `master` SHA and
    upload categories `/language:javascript-typescript` and `/language:actions`.
-   In **Security → Code scanning → Tool status**, both are healthy and use
+   In **Security and quality → Code scanning → Tool status**, both are healthy and use
    `security-extended`; no C# advanced analysis is expected.
    **Recovery:** If either job fails, do not add gates. Re-enable the recorded
    default configuration, disable or revert the advanced workflow, capture
