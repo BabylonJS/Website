@@ -1,6 +1,7 @@
 name: CodeQL
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -81,6 +82,19 @@ jobs:
 
           if ! find . -type f -iname '*.cs' -print -quit | grep -q .; then
             echo "No C# source files were checked out." >&2
+            exit 1
+          fi
+
+          if find . -type l -iname '*.cs' -print -quit | grep -q .; then
+            echo "Symbolic-link C# sources are not allowed." >&2
+            exit 1
+          fi
+
+          if grep -rIEi \
+            --include='*.cs' \
+            '(PackageReference|FrameworkReference|ImplicitUsings|UseWPF|UseWindowsForms|Microsoft\.CSharp\.targets|<package[[:space:]][^>]*id=|<[^>]*Project[^>]*Sdk=|<Using[[:space:]][^>]*Include=)' \
+            .; then
+            echo "C# source contains project/dependency metadata tokens." >&2
             exit 1
           fi
 
