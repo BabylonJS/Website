@@ -5,8 +5,8 @@
 | Milestone | Status | Evidence required before advancing |
 | --- | --- | --- |
 | Workflow prepared | **Prepared locally** | `.github/workflows/codeql.yml` passes independent YAML and actionlint validation. |
-| Advanced baseline scanned | **Not verified** | An owner-dispatched `master` run must upload all three analyses after the managed-to-advanced cutover. |
-| Fork PR successfully scanned | **Not verified** | An authorized benign fork PR must produce all three successful CodeQL checks against the pull request merge commit. |
+| Advanced baseline scanned | **Not verified** | An owner-dispatched `master` run must upload both analyses after the managed-to-advanced cutover. |
+| Fork PR successfully scanned | **Not verified** | An authorized benign fork PR must produce both successful CodeQL checks against the pull request merge commit. |
 | Scan-execution gate verified | **Not verified** | A pending or missing required CodeQL analysis must block the benign fork PR; a completed clean analysis must satisfy only the execution portion of the gate. |
 | Alert-threshold gate verified | **Not verified** | Requires a separately authorized PR that already contains a genuine CodeQL finding at the owner-approved threshold. No code change may be introduced to manufacture a finding. |
 | Merge-queue gate verified | **Not applicable / not verified** | No merge queue exists. If one is enabled later, its generated merge group must be scanned and gated separately. |
@@ -24,21 +24,20 @@ Read-only inspection on 2026-11-03 found:
   currently needs push and pull request scanning. No release branch or merge
   queue is configured. The workflow includes `merge_group` proactively so a
   future queue does not bypass scanning.
-- Managed CodeQL default setup is enabled for C# and
-  JavaScript/TypeScript, with the default query suite, remote threat model,
+- Managed CodeQL default setup is enabled for C# and JavaScript/TypeScript,
+  with the default query suite, remote threat model,
   weekly schedule, and standard GitHub-hosted runner.
 - The latest managed analyses covered `master` only. Recent fork PR merge
   commits had the Azure Pipelines checks but no CodeQL check, corroborating the
   documented default-setup exclusion for fork pull requests.
-- The repository has one C# source file,
-  `static/Scenes/BoxMonger/ImageProxy.ashx.cs`, and no checked-in `.csproj`,
-  `.sln`, `.slnx`, `nuget.config`, `packages.config`, `global.json`,
-  `project.assets.json`, `Directory.Build.props`, `Directory.Build.targets`, or
-  `.cshtml` files.
 - GitHub's language inventory reports JavaScript (46,460,386 bytes),
   TypeScript (781,486 bytes), C# (1,349 bytes), ASP.NET (96 bytes), plus HTML,
   CSS, Nunjucks, Roff, and HLSL. Existing managed analyses contain
   `javascript-typescript` and `csharp`; they do not contain `actions`.
+- The user explicitly confirmed that Website has no C# code that should be in
+  CodeQL scope. The prepared advanced workflow therefore intentionally excludes
+  C# despite the API inventory and prior managed C# analysis. This is a
+  deliberate owner-directed coverage change, not an accidental loss.
 - The repository had no checked-in GitHub Actions workflow or local action.
   This migration adds a workflow, so GitHub Actions workflow analysis is
   included.
@@ -95,35 +94,12 @@ GitHub-generated pull request merge commit rather than running in a privileged
 base-repository context.
 
 The JavaScript/TypeScript and GitHub Actions jobs perform static extraction from
-a normal checkout. The C# job uses a non-cone sparse checkout containing only
-`**/*.cs`, followed by a fail-closed boundary check. Fork-controlled project and
-dependency metadata, binaries, Razor views, and build scripts are not present
-when CodeQL starts. This is necessary because GitHub documents that C#
-`build-mode: none` normally restores dependencies and generates source files.
-The current C# extractor exposes no supported option that disables those
-operations.
+one normal checkout. C# is not initialized or analyzed, by explicit user
+direction.
 
-The source boundary is backed by the current extractor implementation:
-`FileProvider` discovers projects, solutions, DLLs, NuGet/global/package
-configuration, Razor views, and resources from files present in the checkout;
-`NugetPackageRestorer` calls project restore only for discovered solution and
-project paths. The checkout excludes all of those file classes. Because
-`FileContent` also searches small non-binary files for project-like XML, the
-guard rejects those metadata tokens inside `.cs` source before CodeQL starts.
-This preserves direct source coverage while preventing fork-submitted project
-restore, MSBuild/project evaluation, Razor/resource generation, and submitted
-source-generator binaries.
-
-This boundary does **not** mean that no `dotnet` process runs. CodeQL's trusted
-C# extractor uses its own .NET runtime and framework discovery. It may also
-perform feed/runtime probing. The claim is narrower: submitted project tooling,
-project restore/evaluation, and submitted generators are unavailable. That
-claim remains subject to confirmation in the first authorized GitHub run and
-must be treated as a blocker if the logs show otherwise.
-
-The workflow does not run autobuild, invoke submitted MSBuild/project commands,
-run repository scripts, run tests, use a PAT, request an OIDC token, use
-secrets, use an internal runner, or persist checkout credentials.
+The workflow does not run autobuild, run repository scripts, run tests, use a
+PAT, request an OIDC token, use secrets, use an internal runner, or persist
+checkout credentials.
 Dependency caching is explicitly disabled. Query configuration is inline in the
 trusted default-branch workflow and uses GitHub's built-in
 `security-extended` suite; it does not load fork-controlled configuration,
@@ -133,7 +109,6 @@ The expected check names are:
 
 - `CodeQL / JavaScript-TypeScript`
 - `CodeQL / GitHub-Actions`
-- `CodeQL / CSharp-source-only`
 
 Confirm these exact names from a real run before using them in protection
 rules. GitHub UI naming can change, and a required check must match the emitted
@@ -167,9 +142,9 @@ and metadata review. Do not replace the SHAs with floating major tags.
 
 ## Local validation evidence
 
-Validation was intentionally limited to workflow structure and source
-isolation. No repository dependency install, build, test, application script,
-CodeQL extraction, workflow run, or SARIF upload was executed.
+Validation was intentionally limited to workflow structure and policy. No
+repository dependency install, build, test, application script, CodeQL
+extraction, workflow run, or SARIF upload was executed.
 
 - `actionlint` 1.7.12: passed with no findings.
 - `actionlint` archive SHA-256:
@@ -177,19 +152,12 @@ CodeQL extraction, workflow run, or SARIF upload was executed.
   matched the release checksum published by `rhysd/actionlint`.
 - PyYAML 6.0.3 parser: workflow syntax passed.
 - `git diff --check`: passed.
-- A disposable Git sparse-checkout simulation using the workflow pattern
-  `**/*.cs` produced exactly
-  `static/Scenes/BoxMonger/ImageProxy.ashx.cs`, one C# source file, and zero
-  disallowed project/dependency metadata files.
 - The action release refs resolved to the exact pinned SHAs, and both commits
   reported valid GitHub-verified signatures.
 
-The sparse simulation proves the Git checkout boundary only. It does not prove
-the full CodeQL runtime behavior. Local validation does not prove that GitHub
-accepts advanced uploads, that a fork PR receives the checks, that C# performs
-no project restore/evaluation, that Dependabot uploads succeed with its
-read-only token, or that any gate blocks a merge. Those require the owner-run
-steps below.
+Local validation does not prove that GitHub accepts advanced uploads, that a
+fork PR receives the checks, that Dependabot uploads succeed with its read-only
+token, or that any gate blocks a merge. Those require the owner-run steps below.
 
 ## Owner migration procedure
 
@@ -199,15 +167,17 @@ organization or another repository.
 1. **Inventory trusted managed coverage before cutover.**
    **Permission:** Repository admin or security manager who can view CodeQL
    configuration.
-   **Action:** Open **Settings → Security and quality → Advanced Security →
-   CodeQL analysis → … → View CodeQL configuration → Edit**. Record languages,
+   **Action:** Open **Settings → Security and quality → Code scanning → CodeQL
+   analysis → … → View CodeQL configuration → Edit**. Record languages,
    query suite, threat model, runner, schedule, private-registry use, custom
    configuration, and every model pack/extension shown. Also inspect
    `.github/codeql/extensions`.
    **Consequence:** Read-only inventory; no setting is changed.
-   **Expected evidence:** A saved inventory matching C#, JavaScript/TypeScript,
-   default suite, remote threat model, standard runner, weekly schedule, plus
-   an explicit list of model packs (including “none”).
+   **Expected evidence:** A saved inventory matching the current C# and
+   JavaScript/TypeScript managed setup, default suite, remote threat model,
+   standard runner, weekly schedule, plus an explicit list of model packs
+   (including “none”). Record the explicit decision that advanced setup will
+   retain JavaScript/TypeScript, add Actions, and omit C#.
    **Recovery/stop:** If any model pack, private registry, custom configuration,
    or trusted extension is unknown or not represented by the prepared advanced
    workflow, stop. Preserve managed setup until that coverage is reviewed and
@@ -226,7 +196,7 @@ organization or another repository.
    from the reviewed version. Do not disable managed setup.
 3. **Perform the managed-to-advanced switch.**
    **Permission:** Repository admin.
-   **Action:** Open **Settings → Security and quality → Advanced Security**. In
+   **Action:** Open **Settings → Security and quality → Code scanning**. In
    **CodeQL analysis**, open `…`, choose **Switch to advanced**, then choose
    **Disable CodeQL**.
    **Consequence:** Managed default scanning stops and advanced CodeQL uploads
@@ -241,16 +211,13 @@ organization or another repository.
    then choose **Run workflow**.
    **Consequence:** Starts the reviewed advanced workflow without another
    repository change.
-   **Expected evidence:** All three jobs succeed for the same `master` SHA and
-   upload categories `/language:javascript-typescript`, `/language:actions`,
-   and `/language:csharp`. In **Security → Code scanning → Tool status**, all
-   three are healthy and use `security-extended`. C# logs must show zero
-   solution/project files and no submitted project restore, MSBuild/project
-   evaluation, Razor/resource generation, or submitted generator loading.
-   CodeQL's trusted .NET runtime activity is expected and is not project code.
-   **Recovery:** If any job fails or C# crosses the source-only boundary, do not
-   add gates. Re-enable the recorded default configuration, disable or revert
-   the advanced workflow, capture logs, and stop.
+   **Expected evidence:** Both jobs succeed for the same `master` SHA and
+   upload categories `/language:javascript-typescript` and `/language:actions`.
+   In **Security → Code scanning → Tool status**, both are healthy and use
+   `security-extended`; no C# advanced analysis is expected.
+   **Recovery:** If either job fails, do not add gates. Re-enable the recorded
+   default configuration, disable or revert the advanced workflow, capture
+   logs, and stop.
 5. **Open only a benign fork PR.**
    **Permission:** A repository owner authorizes a contributor to create a
    personal-fork PR; no workflow approval is implied.
@@ -270,7 +237,7 @@ organization or another repository.
    **Approve workflows to run**. Approval may release every pending workflow
    for that commit, not only CodeQL.
    **Consequence:** Consumes approval for that commit's pending workflows.
-   **Expected evidence:** The three CodeQL jobs start. Keep
+   **Expected evidence:** Both CodeQL jobs start. Keep
    `first_time_contributors`; changing to stronger approval for returning
    contributors is a separate security-policy action requiring explicit owner
    authorization.
@@ -280,28 +247,28 @@ organization or another repository.
    **Permission:** Repository read access; security/tool-status access for full
    analysis inspection.
    **Action:** Compare the workflow checkout/analyze SHA with
-   `refs/pull/<PR>/merge` and the fork head SHA. Inspect all three job logs and
+   `refs/pull/<PR>/merge` and the fork head SHA. Inspect both job logs and
    Code scanning Tool status.
    **Consequence:** Read-only verification.
    **Expected evidence:** Event `pull_request`; checkout and all analyses use
    the GitHub-generated merge SHA; no PAT, Actions secret, OIDC token,
    environment, internal runner, or persisted checkout credential is used;
-   all three checks succeed; C# retains the source-only boundary. Code scanning
-   annotations may appear only when every alert location is inside the PR diff,
-   so absence of an inline annotation is not proof of no findings.
+   both checks succeed. Code scanning annotations may appear only when every
+   alert location is inside the PR diff, so absence of an inline annotation is
+   not proof of no findings.
    **Recovery:** If any SHA differs, any unsafe capability appears, or any
    analysis is missing, do not configure gates. Close the PR and revert to
    managed setup if the workflow cannot be corrected safely.
-8. **Require the three observed workflow checks.**
+8. **Require the two observed workflow checks.**
    **Permission:** Repository admin.
    **Action:** Open **Settings → Branches → Branch protection rule for
    `master`**. Preserve `Website - YAML`, strict/up-to-date checks, one approval,
-   and conversation resolution. Add the exact three CodeQL check names observed
+   and conversation resolution. Add the exact two CodeQL check names observed
    in step 7. There is no existing required CodeQL check to remove.
    **Consequence:** Missing, pending, or failed CodeQL jobs block the PR. This
    proves scan execution only; it does not prove alert-threshold enforcement.
    **Expected evidence:** While a rerun is pending, the benign PR is blocked;
-   after all three clean jobs succeed, those required checks are satisfied.
+   after both clean jobs succeed, those required checks are satisfied.
    **Recovery:** Remove only the new CodeQL check contexts if they deadlock.
    Preserve `Website - YAML` and all existing protections.
 9. **Create the CodeQL code-scanning results ruleset.**
@@ -318,7 +285,7 @@ organization or another repository.
    becomes eligible after the clean analysis completes. This still does not
    prove that a qualifying alert is blocked.
    **Recovery:** If the ruleset deadlocks clean PRs, change this new ruleset to
-   **Evaluate** or **Disabled**, or remove only its CodeQL tool requirement.
+   **Disabled**, or remove only its CodeQL tool requirement.
    Do not add a bypass and do not weaken existing protections.
 10. **Leave alert-threshold blocking unverified unless a genuine case exists.**
     **Permission:** Separate explicit owner authorization for an existing PR
@@ -338,11 +305,11 @@ organization or another repository.
     **Permission:** Read access to a naturally occurring Dependabot PR; do not
     create or approve an update solely for this test.
     **Action:** Observe the next legitimate Dependabot PR.
-    **Consequence:** The same three checks and code-scanning rules apply despite
+    **Consequence:** The same two checks and code-scanning rules apply despite
     the same-repository branch. Dependabot's `GITHUB_TOKEN` remains read-only
     and Actions secrets remain unavailable. It is not subject to the public
     fork approval prompt.
-    **Expected evidence:** All three analyses upload and satisfy the same gates
+    **Expected evidence:** Both analyses upload and satisfy the same gates
     with no bypass.
     **Recovery:** If upload fails, do not grant secrets, broaden token
     permissions, or add a Dependabot bypass. Capture the failure and use only a
@@ -353,7 +320,7 @@ organization or another repository.
     **Action:** After a queue is configured for `master`, place an authorized
     benign PR in it. GitHub creates a temporary merge group containing the
     latest `master`, that PR, and any PRs ahead of it.
-    **Consequence:** The `merge_group` `checks_requested` event runs all three
+    **Consequence:** The `merge_group` `checks_requested` event runs both
     jobs against the group head. The branch/ruleset requirements for `master`
     wait for those group results.
     **Expected evidence:** All categories reference the merge-group head SHA,
@@ -364,16 +331,17 @@ organization or another repository.
 
 ## Recovery
 
-If advanced setup cannot produce all three successful analyses:
+If advanced setup cannot produce both successful analyses:
 
 1. Do not add or keep new required CodeQL checks.
 2. Capture the failed run URL, job logs, checked-out SHA, analysis category, and
    Tool status diagnostics.
-3. Re-enable managed setup at **Settings → Security and quality → Advanced
-   Security → CodeQL analysis → Set up → Default** with the previously observed configuration:
-   C# plus JavaScript/TypeScript, default query suite, remote threat model,
-   weekly schedule, standard runner.
-4. Confirm a managed `master` scan succeeds for both previous languages.
+3. Re-enable managed setup at **Settings → Security and quality → Code
+   scanning → CodeQL analysis → Set up → Default** with
+   JavaScript/TypeScript, the default query suite, remote threat model, weekly
+   schedule, and standard runner. Keep C# excluded per the explicit user
+   direction recorded above.
+4. Confirm a managed `master` JavaScript/TypeScript scan succeeds.
 5. Keep the advanced workflow disabled or revert it before retrying; default
    and advanced CodeQL upload configurations are incompatible for this
    transition.
@@ -387,14 +355,8 @@ approve unrelated contributor workflows to make a scan pass.
 - [About code scanning setup types](https://docs.github.com/en/code-security/concepts/code-scanning/setup-types)
 - [Configure advanced CodeQL setup](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/configure-code-scanning/configuring-advanced-setup-for-code-scanning)
 - [CodeQL workflow configuration options](https://docs.github.com/en/code-security/reference/code-scanning/workflow-configuration-options)
-- [CodeQL build options for compiled languages](https://docs.github.com/en/code-security/reference/code-scanning/codeql/build-options-for-compiled-languages)
 - [`actions/checkout` v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1)
 - [`github/codeql-action` v4.39.2](https://github.com/github/codeql-action/releases/tag/v4.39.2)
-- [C# extractor option definitions](https://github.com/github/codeql/blob/main/csharp/codeql-extractor.yml)
-- [C# standalone extractor](https://github.com/github/codeql/blob/main/csharp/extractor/Semmle.Extraction.CSharp.Standalone/Extractor.cs)
-- [C# dependency manager](https://github.com/github/codeql/blob/main/csharp/extractor/Semmle.Extraction.CSharp.DependencyFetching/DependencyManager.cs)
-- [C# file discovery](https://github.com/github/codeql/blob/main/csharp/extractor/Semmle.Extraction.CSharp.DependencyFetching/FileProvider.cs)
-- [C# package restore conditions](https://github.com/github/codeql/blob/main/csharp/extractor/Semmle.Extraction.CSharp.DependencyFetching/NugetPackageRestorer.cs)
 - [Set code scanning merge protection](https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/manage-your-configuration/set-merge-protection)
 - [Approve workflow runs from forks](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/approve-runs-from-forks)
 - [Dependabot on GitHub Actions](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-on-actions)

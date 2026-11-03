@@ -29,74 +29,17 @@ jobs:
         include:
           - language: javascript-typescript
             name: JavaScript-TypeScript
-            source_only: false
           - language: actions
             name: GitHub-Actions
-            source_only: false
-          - language: csharp
-            name: CSharp-source-only
-            source_only: true
     permissions:
       contents: read
       security-events: write
 
     steps:
       - name: Checkout merge result
-        if: ${{ !matrix.source_only }}
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-
-      # C# build-mode none can restore dependencies and process project metadata.
-      # Only C# source is checked out so fork-controlled project tooling is absent.
-      - name: Checkout C# source only
-        if: ${{ matrix.source_only }}
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-          sparse-checkout: |
-            **/*.cs
-          sparse-checkout-cone-mode: false
-
-      - name: Verify C# source-only boundary
-        if: ${{ matrix.source_only }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          if find . -type f \( \
-            -iname '*.csproj' -o \
-            -iname '*.sln' -o \
-            -iname '*.slnx' -o \
-            -iname '*.cshtml' -o \
-            -iname 'Directory.Build.props' -o \
-            -iname 'Directory.Build.targets' -o \
-            -iname 'global.json' -o \
-            -iname 'nuget.config' -o \
-            -iname 'packages.config' -o \
-            -iname 'project.assets.json' \
-          \) -print -quit | grep -q .; then
-            echo "Unsafe C# project or dependency metadata is present." >&2
-            exit 1
-          fi
-
-          if ! find . -type f -iname '*.cs' -print -quit | grep -q .; then
-            echo "No C# source files were checked out." >&2
-            exit 1
-          fi
-
-          if find . -type l -iname '*.cs' -print -quit | grep -q .; then
-            echo "Symbolic-link C# sources are not allowed." >&2
-            exit 1
-          fi
-
-          if grep -rIEi \
-            --include='*.cs' \
-            '(PackageReference|FrameworkReference|ImplicitUsings|UseWPF|UseWindowsForms|Microsoft\.CSharp\.targets|<package[[:space:]][^>]*id=|<[^>]*Project[^>]*Sdk=|<Using[[:space:]][^>]*Include=)' \
-            .; then
-            echo "C# source contains project/dependency metadata tokens." >&2
-            exit 1
-          fi
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@1fc58d04a4d4374f921bdac573c3811c240f9c26 # v4.39.2
