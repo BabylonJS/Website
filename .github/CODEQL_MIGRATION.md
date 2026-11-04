@@ -77,7 +77,7 @@ Event-specific coverage and exceptions are:
 | Source | Managed default setup now | Prepared advanced workflow |
 | --- | --- | --- |
 | Same-repository PR | Scanned against `master` | Scanned with the normal `pull_request` merge ref |
-| Public fork PR | Excluded by managed default setup | Included, subject to the configured contributor approval prompt |
+| Public fork PR | Excluded by managed default setup | Included; first-time contributors require the configured approval, while returning contributors may not |
 | Dependabot PR | Same-repository PR, but Dependabot workflow token restrictions still apply | Included without the public-fork prompt; read-only token/no Actions secrets still apply |
 | Push to `master` | Scanned | Scanned |
 | Weekly schedule | Scanned when managed scheduling conditions are met | Explicit Tuesday schedule |
@@ -93,6 +93,14 @@ The workflow uses the normal `pull_request` event. It never uses
 GitHub-generated pull request merge commit rather than running in a privileged
 base-repository context.
 
+These properties apply only to the reviewed, unmodified workflow. A
+`pull_request` run evaluates the workflow and inline CodeQL configuration from
+the pull request merge revision, so a contributor can change them in the PR.
+Do not treat a run from a PR that modifies this workflow or CodeQL
+configuration as validation evidence; review the complete diff and require the
+expected checks to remain present. Returning contributors may not receive the
+first-time-contributor approval prompt.
+
 The JavaScript/TypeScript and GitHub Actions jobs perform static extraction from
 one normal checkout. C# is not initialized or analyzed, by explicit user
 direction.
@@ -101,9 +109,10 @@ The workflow does not run autobuild, run repository scripts, run tests, use a
 PAT, request an OIDC token, use secrets, use an internal runner, or persist
 checkout credentials.
 Dependency caching is explicitly disabled. Query configuration is inline in the
-trusted default-branch workflow and uses GitHub's built-in
-`security-extended` suite; it does not load fork-controlled configuration,
-custom query packs, model packs, or model extensions.
+reviewed workflow and uses GitHub's built-in `security-extended` suite. As
+reviewed, it does not reference external custom configuration, query packs,
+model packs, or model extensions; a PR that changes these properties requires
+separate review and is not evidence that this prepared workflow is safe.
 
 The expected check names are:
 
@@ -130,7 +139,7 @@ commits have valid GitHub-verified signatures. The reviewed
 `persist-credentials: false`; the prepared workflow does not set `ref`,
 submodules, LFS, a custom token, an SSH key, or the unsafe fork-checkout option.
 The reviewed CodeQL init metadata supports one language per matrix job,
-`build-mode: none`, inline trusted configuration, and disabled dependency
+`build-mode: none`, inline configuration, and disabled dependency
 caching.
 
 The `github/codeql-action` release is marked immutable by GitHub. The
