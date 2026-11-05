@@ -16,10 +16,10 @@
         <div class="img-holder">
             {% if item.demoLink %}
                 <a href="{{ item.demoLink }}" target="_blank">
-                    <img class="img-carousel" src='{{ item.imgUrl }}'>
+                    <img class="img-carousel" src='{{ item.imgUrl }}' alt="{{ item.alt }}">
                 </a>
             {% else %}
-                <img class="img-carousel" src='{{ item.imgUrl }}'>
+                <img class="img-carousel" src='{{ item.imgUrl }}' alt="{{ item.alt }}">
             {% endif %}
         </div>
         {% endif %}

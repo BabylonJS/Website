@@ -1,16 +1,6 @@
 {
     "menuTitle": "INDUSTRIES",
-    "title": "BabylonJS - Industries",
-    "metaTags": [
-        {
-            "name": "description",
-            "content": "BabylonJS - Industries"
-        },
-        {
-            "property": "og:title",
-            "content": "BabylonJS - Industries"
-        }
-    ],
+    "title": "Babylon.js Industries",
     "blocks": [
     ]
 } 

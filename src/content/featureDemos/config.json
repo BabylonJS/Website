@@ -1,6 +1,7 @@
 {
   "menuTitle": "FEATURE DEMOS",
   "title": "Babylon.js Feature Demos",
+  "description": "Interactive Babylon.js demos showcasing physically-based rendering, Gaussian splats, global illumination, Havok physics, particles, animation and node materials.",
   "blocks": [
     {
       "templateName": "galleryBlock",

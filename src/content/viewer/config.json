@@ -1,9 +1,7 @@
 {
     "menuTitle": "VIEWER",
     "title": "Babylon Viewer: simplifying viewing 3D models in web and native apps",
-    "metaTags": [
-        {}
-    ],
+    "description": "The Babylon Viewer renders glTF/GLB, OBJ and STL 3D models in a web page or native app with a few lines of code. Simple, fast, compact and fully customizable.",
     "blocks": [
         {
             "templateName": "viewerBlock",

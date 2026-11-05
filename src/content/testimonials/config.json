@@ -1,10 +1,7 @@
 {
     "menuTitle": "TESTIMONIALS",
     "title": "What People Are Saying About Babylon.js",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Read what teams such as Marxent and Microsoft Power Apps say about building interactive 3D experiences with Babylon.js and its community.",
     "blocks": [
         {
             "templateName": "carouselBlock",

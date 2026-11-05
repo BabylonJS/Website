@@ -1,48 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ pageData.pageConfig.title }}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="author" href="humans.txt" />
-
-    <!-- FB -->
-    <meta
-      property="og:title"
-      content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best"
-    />
-    <meta property="og:site_name" content="Babylon.js" />
-    <meta property="og:url" content="https://www.babylonjs.com" />
-    <meta
-      property="og:description"
-      content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png"
-    />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://www.babylonjs.com" />
-    <meta
-      name="twitter:title"
-      content="Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best"
-    />
-    <meta
-      name="twitter:description"
-      content="Babylon.js is one of the world's leading WebGL-based graphics engines. From a new visual scene inspector, best-in-class physically-based rendering, countless performance optimizations, and much more, Babylon.js brings powerful, beautiful, simple, and open 3D to everyone on the web."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.babylonjs.com/assets/logo-babylonjs-social-twitter.png"
-    />
-    {% if pageData.pageConfig.metaTags %}{% for meta in pageData.pageConfig.metaTags %}
-    <meta name="{{ meta.name }}" property="{{ meta.property }}" content="{{ meta.content }}" />
-    {% endfor %}{% endif %}
+    {% include "seoHead.njk" %}
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="icon" type="image/png" href="/assets/favicon.ico" />
     <link
@@ -79,7 +41,6 @@
     <link rel="stylesheet" href="/assets/styles/codeComparisonBlock.css" />
     <link rel="stylesheet" href="/assets/styles/faqBlock.css" />
     <link rel="stylesheet" href="/assets/styles/ctaBlock.css" />
-    <link rel="author" href="humans.txt" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -113,15 +74,15 @@
     <div class="header">
       <div class="container-header">
         <div class="menu-btn">
-          <img src="/assets/img/HamburgerIcon.svg" />
+          <img src="/assets/img/HamburgerIcon.svg" alt="Menu" />
         </div>
         <div class="babylon-logo hidden">
           <a href="/">
-            <img src="/assets/img/BabylonIdentity.svg" />
+            <img src="/assets/img/BabylonIdentity.svg" alt="Babylon.js home" />
           </a>
         </div>
         <a class="download" href="{{ pageData.downloadLink }}"
-          ><img src="/assets/img/GithubIcon.svg"
+          ><img src="/assets/img/GithubIcon.svg" alt="Babylon.js on GitHub"
         /></a>
         <div class="header-top-wrapper overflow">
           <div class="header-top">
@@ -169,6 +130,7 @@
     </div>
 
     <div class="content-container">
+      {% if not pageData.seo.hasH1 %}<h1 class="visually-hidden">{{ pageData.seo.heading | escape }}</h1>{% endif %}
       {{ content | safe }}
     </div>
     <footer class="footer">

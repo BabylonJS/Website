@@ -1,6 +1,7 @@
 {
     "menuTitle": "SPECIFICATIONS",
     "title": "Babylon.js Specifications",
+    "description": "Full Babylon.js engine specifications: WebGL and WebGPU support, scene graph, Frame Graph, Havok physics, animation, particles, materials, XR and native hosts.",
     "blocks": [
         {
             "templateName": "carouselBlock",

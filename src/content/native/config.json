@@ -1,9 +1,7 @@
 {
     "menuTitle": "BABYLON NATIVE",
     "title": "Babylon Native: cross-platform native apps with the power of Babylon.js",
-    "metaTags": [
-        {}
-    ],
+    "description": "Babylon Native lets you write Babylon.js rendering code once and run it in native apps on Windows, macOS, iOS and Android using DirectX, Metal and OpenGL.",
     "blocks": [
         {
             "templateName": "imageListBlock",

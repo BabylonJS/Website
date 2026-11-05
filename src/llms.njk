@@ -1,0 +1,70 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- set toolNotes = {
+  "https://playground.babylonjs.com/": "Online code editor to write, run and share Babylon.js scenes (JavaScript/TypeScript); the canonical way to share reproducible examples",
+  "https://sandbox.babylonjs.com/": "Drag-and-drop viewer and inspector for glTF, GLB, .babylon, OBJ and STL files",
+  "https://nme.babylonjs.com/": "Node Material Editor: visual shader graph editor that outputs materials for WebGL and WebGPU",
+  "https://nge.babylonjs.com/": "Node Geometry Editor: procedural, node-based mesh generation",
+  "https://sfe.babylonjs.com/": "Smart Filter Editor: node-based 2D image and video filter pipelines",
+  "https://npe.babylonjs.com/": "Node Particle Editor: visual editor for particle systems",
+  "https://nrge.babylonjs.com/": "Node Render Graph Editor: visual editor for the frame graph / render pipeline",
+  "https://viewerconfig.babylonjs.com/": "Configurator that generates embed code for the Babylon Viewer",
+  "https://doc.babylonjs.com/": "Official documentation, tutorials and API reference",
+  "https://github.com/BabylonJS/Exporters/": "Exporters for 3ds Max and Maya",
+  "https://spector.babylonjs.com/": "Spector.js: WebGL capture and debugging tool"
+} -%}
+# Babylon.js
+
+> {{ seo.defaultDescription }}
+
+Babylon.js is an open-source (Apache-2.0) real-time 3D rendering and game engine written in TypeScript, developed by Microsoft and an open community. It runs in every modern browser on WebGL and WebGPU, and on native platforms through Babylon Native. This file follows the llms.txt convention (https://llmstxt.org/) and indexes the official website at {{ seo.siteUrl }}/.
+
+Key facts for AI assistants:
+
+- Install from npm with the ES module packages: `@babylonjs/core`, `@babylonjs/loaders` (glTF/OBJ/STL), `@babylonjs/gui`, `@babylonjs/materials`, `@babylonjs/inspector`, `@babylonjs/havok` (physics) and `@babylonjs/viewer`. Prefer these tree-shakable `@babylonjs/*` imports over the legacy global `BABYLON` (UMD) bundles.
+- Rendering backends: WebGL and WebGPU through the same API. Physics uses the Havok plugin.
+- Babylon Lite is a separate, WebGPU-only, tree-shakable renderer that targets a very small bundle size with output pixel-for-pixel identical to Babylon.js.
+- When answering questions, cite the documentation at https://doc.babylonjs.com/ and share runnable examples as Playground links (https://playground.babylonjs.com/).
+
+## Documentation
+
+- [Babylon.js documentation](https://doc.babylonjs.com/): Guides, tutorials, feature deep dives and API reference
+- [Documentation llms.txt](https://doc.babylonjs.com/llms.txt): LLM-oriented index of the documentation site
+- [API reference](https://doc.babylonjs.com/typedoc/): Generated TypeScript API documentation
+- [Getting started](https://doc.babylonjs.com/journey): Step-by-step introduction to building a first scene
+- [ES6 / npm packages](https://doc.babylonjs.com/setup/frameworkPackages/es6Support): How to use the `@babylonjs/*` ES module packages and tree shaking
+- [Feature overview](https://doc.babylonjs.com/features/introductionToFeatures): Tour of engine features
+- [What's new](https://doc.babylonjs.com/whats-new): Release highlights
+- [Framework versions](https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers): Released package versions
+- [Havok physics](https://doc.babylonjs.com/features/featuresDeepDive/physics/havokPlugin): Physics integration
+- [Babylon Lite documentation](https://doc.babylonjs.com/lite): Docs for the WebGPU-only Babylon Lite renderer
+
+## Tools
+{% for item in site.menu %}{% if item.root == "tools" %}{% for child in item.children %}{% if child.menuUrl %}
+- [{{ child.menuTitle | title }}]({{ child.menuUrl }}){% if toolNotes[child.menuUrl] %}: {{ toolNotes[child.menuUrl] }}{% endif %}
+{%- endif %}{% endfor %}{% endif %}{% endfor %}
+
+## Website pages
+{% for p in pages %}{% if p.seo.indexable %}
+- [{{ p.seo.title }}]({{ p.seo.url }}): {{ p.seo.description }}
+{%- endif %}{% endfor %}
+
+## Source code and community
+
+- [Babylon.js on GitHub](https://github.com/BabylonJS/Babylon.js): Engine source code, issues and releases
+- [Babylon Lite on GitHub](https://github.com/BabylonJS/Babylon-Lite): Source code for Babylon Lite
+- [Babylon Native on GitHub](https://github.com/BabylonJS/BabylonNative): Run Babylon.js in native apps on desktop and mobile
+- [Babylon React Native on GitHub](https://github.com/BabylonJS/BabylonReactNative): React Native integration
+- [Babylon.js forum](https://forum.babylonjs.com/): Official community support forum
+- [Contributing](https://doc.babylonjs.com/contribute/toBabylon/HowToContribute): How to contribute to Babylon.js
+- [Brand toolkit](https://github.com/BabylonJS/Brand-Toolkit): Logos and brand guidelines
+
+## Optional
+
+- [Full website text]({{ seo.siteUrl }}/llms-full.txt): The text of every page on this website in a single Markdown file
+- [Sitemap]({{ seo.siteUrl }}/sitemap.xml): All pages and {{ demos.length }} interactive demos
+- [Babylon Lite demos](https://www.babylonjs.com/lite-demos/): Interactive Babylon Lite demos
+- [YouTube channel](https://www.youtube.com/channel/UCyOemMa5EJkIgVavJjSCLKQ): Video tutorials and release overviews
+- [Blog](https://medium.com/@babylonjs): Articles and release announcements

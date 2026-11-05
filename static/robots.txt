@@ -1,5 +1,11 @@
-# www.robotstxt.org/
+# https://www.robotstxt.org/
+#
+# All crawlers, including search engines and AI/LLM crawlers
+# (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot,
+# Google-Extended, Applebot-Extended, CCBot, ...), are welcome.
+# LLM-friendly summaries: /llms.txt and /llms-full.txt
 
-# Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://www.babylonjs.com/sitemap.xml

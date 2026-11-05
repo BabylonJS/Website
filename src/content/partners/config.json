@@ -1,10 +1,7 @@
 {
     "menuTitle": "PARTNERS",
     "title": "Partners Using Babylon.js",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Babylon.js is trusted by companies such as Microsoft, Adobe, Nike, Target, AWS, Ferrari, Ubisoft and Siemens to power interactive 3D on the web.",
     "blocks": [
         {
             "templateName": "carouselBlock",

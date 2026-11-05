@@ -1,6 +1,7 @@
 {
     "menuTitle": "COMMUNITY",
     "title": "Babylon.js Community Demos",
+    "description": "Explore games, product configurators and interactive 3D experiences built with Babylon.js by its open community of developers, creators and artists.",
     "blocks": [
         {
             "templateName": "galleryBlock",
