@@ -54,6 +54,15 @@ function gitLastModified(contentPath) {
   }
 }
 
+function isHost(link, domain) {
+  try {
+    const host = new URL(link).hostname;
+    return host === domain || host.endsWith(`.${domain}`);
+  } catch {
+    return false;
+  }
+}
+
 function absoluteUrl(url) {
   if (!url || /^https?:\/\//.test(url)) return url;
   return seo.siteUrl + (url.startsWith("/") ? url : `/${url}`);
@@ -120,7 +129,7 @@ function buildPageSeo(page, socials) {
       },
       sameAs: (socials || [])
         .map((s) => s.link)
-        .filter((link) => link && !link.includes("netlify.com")),
+        .filter((link) => link && !isHost(link, "netlify.com")),
     },
     {
       "@type": "WebSite",

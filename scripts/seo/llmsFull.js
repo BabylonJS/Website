@@ -46,6 +46,16 @@ function absolutize(href, pageUrl) {
     }
 }
 
+// Repeats a replacement until the text stops changing, so removals cannot reassemble the pattern.
+function replaceUntilStable(text, pattern, replacement) {
+    let previous;
+    do {
+        previous = text;
+        text = text.replace(pattern, replacement);
+    } while (text !== previous);
+    return text;
+}
+
 // Extracts the main content of a generated page and converts it to lightweight Markdown.
 function htmlToMarkdown(html, pageUrl) {
     let body = html;
@@ -59,16 +69,23 @@ function htmlToMarkdown(html, pageUrl) {
         if (main) body = main[1];
     }
 
+    body = replaceUntilStable(body, /<!--[\s\S]*?-->/g, "");
+    body = replaceUntilStable(
+        body,
+        /<(script|style|svg|noscript|template|canvas|iframe|video|audio)\b[\s\S]*?<\/\1\s*>/gi,
+        ""
+    );
+
     return decodeEntities(
         body
-            .replace(/<!--[\s\S]*?-->/g, "")
             // The fallback heading repeats the page title already emitted above.
             .replace(/<h1 class="visually-hidden">[\s\S]*?<\/h1>/gi, "")
-            .replace(/<(script|style|svg|noscript|template|canvas|iframe|video|audio)\b[\s\S]*?<\/\1>/gi, "")
+            // Keep meaningful image alt text (e.g. partner logos) so image-only links are not dropped.
+            .replace(/<img\b[^>]*?\balt\s*=\s*(["'])(.*?)\1[^>]*>/gi, (match, quote, alt) => ` ${alt} `)
             .replace(/<a\b[^>]*?href\s*=\s*["']([^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi, (match, href, inner) => {
                 const text = inlineText(inner);
                 if (!text) return "";
-                if (!href || href.startsWith("#") || href.startsWith("javascript:")) {
+                if (!href || href.startsWith("#") || /^\s*(javascript|data|vbscript):/i.test(href)) {
                     return text;
                 }
                 return `[${text}](${absolutize(href, pageUrl)})`;
