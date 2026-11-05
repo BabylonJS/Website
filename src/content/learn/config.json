@@ -1,16 +1,7 @@
 {
 		"menuTitle": "LEARN",
-		"title": "BabylonJS - tools",
-		"metaTags": [
-			{
-				"name": "description",
-				"content": "BabylonJS - tools"
-			},
-			{
-				"property": "og:title",
-				"content": "BabylonJS - tools"
-			}
-		],
+		"title": "Why Babylon.js? Features of the Web 3D Engine",
+		"description": "Why choose Babylon.js: a complete scene graph, ray casting and mesh picking, a GUI system, import and export of 3D formats, and a built-in scene inspector.",
 		"blocks": [
 			{
 				"templateName": "textBlock",

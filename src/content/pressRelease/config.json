@@ -1,10 +1,7 @@
 {
     "menuTitle": "PRESS RELEASE",
-    "title": "Babylon.js Press Release",
-    "metaTags": [
-        {
-        }
-    ],
+    "title": "Babylon.js Welcomes Havok Physics | Press Release",
+    "description": "April 20, 2023: Babylon.js welcomes Havok Physics, a new physics implementation built with the Havok team for faster, higher-quality real-time simulation on the web.",
     "blocks": [
         {
             "templateName": "imageListBlock",

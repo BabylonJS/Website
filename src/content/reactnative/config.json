@@ -1,9 +1,7 @@
 {
     "menuTitle": "BABYLON REACT NATIVE",
     "title": "Babylon React Native",
-    "metaTags": [
-        {}
-    ],
+    "description": "Babylon React Native combines the React Native framework with Babylon.js so you can build cross-platform native 3D experiences from a single JavaScript codebase.",
     "blocks": [
         {
             "templateName": "imageListBlock",

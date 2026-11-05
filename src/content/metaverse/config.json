@@ -1,10 +1,7 @@
 {
     "menuTitle": "METAVERSE",
     "title": "Babylon.js Metaverse Engine",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Build metaverse applications on the web with Babylon.js: 3D environments, avatars, PBR materials, morph targets and VR experiences that run in any browser.",
     "blocks": [
         {
             "templateName": "carouselBlock",

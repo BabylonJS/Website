@@ -1,0 +1,30 @@
+{% set pageSeo = pageData.seo %}
+    <title>{{ pageSeo.title | escape }}</title>
+    <meta name="description" content="{{ pageSeo.description | escape }}" />
+    <meta name="robots" content="{{ pageSeo.robots }}" />
+    <link rel="canonical" href="{{ pageSeo.url }}" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="LLM-friendly site summary" href="/llms.txt" />
+    <link rel="author" href="/humans.txt" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ seo.siteName }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="{{ pageSeo.url }}" />
+    <meta property="og:title" content="{{ pageSeo.title | escape }}" />
+    <meta property="og:description" content="{{ pageSeo.description | escape }}" />
+    <meta property="og:image" content="{{ pageSeo.image }}" />
+    <meta property="og:image:alt" content="{{ pageSeo.imageAlt | escape }}" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="{% if pageData.pageConfig.socialImage %}summary_large_image{% else %}summary{% endif %}" />
+    <meta name="twitter:site" content="{{ seo.twitterHandle }}" />
+    <meta name="twitter:title" content="{{ pageSeo.title | escape }}" />
+    <meta name="twitter:description" content="{{ pageSeo.description | escape }}" />
+    <meta name="twitter:image" content="{{ pageSeo.image }}" />
+    <meta name="twitter:image:alt" content="{{ pageSeo.imageAlt | escape }}" />
+    {% for meta in pageSeo.extraMeta %}
+    <meta {{ meta.attr }}="{{ meta.key | escape }}" content="{{ meta.content | escape }}" />
+    {% endfor %}
+    <script type="application/ld+json">{{ pageSeo.jsonLd | jsonLd | safe }}</script>

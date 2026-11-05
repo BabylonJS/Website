@@ -1,10 +1,7 @@
 {
     "menuTitle": "",
-    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best ",
-    "metaTags": [
-        {
-        }
-    ],
+    "title": "Babylon.js: Powerful, Beautiful, Simple, Open - Web-Based 3D At Its Best",
+    "description": "Babylon.js is a free, open-source web 3D engine. Create games, product configurators, digital twins and XR experiences with WebGL and WebGPU in any browser.",
     "blocks": [
         {
             "templateName": "carouselBlock",

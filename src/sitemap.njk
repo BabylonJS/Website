@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in pages %}{% if p.seo.indexable %}
+  <url>
+    <loc>{{ p.seo.url | xmlEscape }}</loc>
+    {%- if p.seo.lastModified %}
+    <lastmod>{{ p.seo.lastModified }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endif %}{% endfor %}
+{%- for demo in demos %}
+  <url>
+    <loc>{{ seo.siteUrl }}{{ demo.path | xmlEscape }}</loc>
+  </url>
+{%- endfor %}
+</urlset>

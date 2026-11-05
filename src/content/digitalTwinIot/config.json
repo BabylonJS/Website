@@ -1,10 +1,7 @@
 {
     "menuTitle": "DIGITAL TWIN AND IOT",
     "title": "Babylon.js Digital Twins and IoT",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Create web-based digital twins and IoT data visualizations with Babylon.js: realistic PBR materials, custom shaders and interactive real-time 3D in any browser.",
     "blocks": [
         {
             "templateName": "carouselBlock",

@@ -1,10 +1,7 @@
 {
     "menuTitle": "CREATION AND AUTHORING",
     "title": "Babylon.js Creation and Authoring",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Build web-based 3D creation and authoring tools with Babylon.js: PBR, global illumination, procedural geometry, high performance and WebXR support.",
     "blocks": [
         {
             "templateName": "carouselBlock",

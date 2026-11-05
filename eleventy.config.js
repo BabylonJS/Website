@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const { writeLlmsFull } = require("./scripts/seo/llmsFull");
 
 module.exports = function (eleventyConfig) {
   // ---- Watch targets ----
@@ -101,6 +102,31 @@ module.exports = function (eleventyConfig) {
       return siteData.variables[key];
     }
     return key;
+  });
+
+  // JSON-LD safe for embedding inside <script type="application/ld+json">
+  eleventyConfig.addFilter("jsonLd", function (obj) {
+    return JSON.stringify(obj).replace(/</g, "\\u003c");
+  });
+
+  eleventyConfig.addFilter("xmlEscape", function (value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&apos;");
+  });
+
+  // ---- llms-full.txt (generated from the rendered pages) ----
+  eleventyConfig.on("eleventy.after", function ({ dir, directories }) {
+    // Bypass the require cache so `--serve` rebuilds pick up content edits.
+    for (const file of ["./src/_data/pages.js", "./src/_data/seo.js"]) {
+      delete require.cache[require.resolve(file)];
+    }
+    const pages = require("./src/_data/pages.js")();
+    const seo = require("./src/_data/seo.js");
+    writeLlmsFull({ outputDir: (directories && directories.output) || dir.output, pages, seo });
   });
 
   // ---- Config ----

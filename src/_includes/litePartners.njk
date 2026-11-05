@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{{ pageData.pageConfig.title | escape }}</title>
-        <meta name="description" content="{{ pageData.pageConfig.description | escape }}" />
+{% include "seoHead.njk" %}
         <link rel="icon" href="/assets/favicon.ico" />
         <link rel="stylesheet" href="/assets/styles/litePartners.css" />
     </head>

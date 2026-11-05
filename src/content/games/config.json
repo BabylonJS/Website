@@ -1,10 +1,7 @@
 {
     "menuTitle": "GAMES",
     "title": "Babylon.js game engine",
-    "metaTags": [
-        {
-        }
-    ],
+    "description": "Babylon.js is a fully featured, open-source game engine for the web: advanced PBR rendering, animation, particles, Havok physics, GUI, spatial audio and WebXR.",
     "blocks": [
         {
             "templateName": "carouselBlock",

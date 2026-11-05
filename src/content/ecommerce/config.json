@@ -1,9 +1,7 @@
 {
     "menuTitle": "E-COMMERCE",
     "title": "Babylon.js and e-commerce",
-    "metaTags": [
-        {}
-    ],
+    "description": "Build photorealistic 3D product viewers, configurators and AR/VR shopping experiences for web and mobile with Babylon.js, the open-source rendering engine.",
     "blocks": [
         {
             "templateName": "carouselBlock",

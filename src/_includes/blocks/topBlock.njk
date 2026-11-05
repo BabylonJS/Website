@@ -2,7 +2,7 @@
     <div class="container">
         <div class="triangle-background">
             <div class="large-logo">
-                <img id="" src="{{ img.url }}" />
+                <img id="" src="{{ img.url }}" alt="{{ img.alt or 'Babylon.js' }}" />
             </div>
             <div class="version">4.0</div>
         </div>
@@ -20,8 +20,8 @@
                 <li>
                     <a href="{{ item.link }}" class="logo-part-link" target="_blank">
                         <div class="icon-back">
-                            <img class="backImage" src="/../assets/img/HexButtonStates.svg">
-                            <img class="iconImage" src="{{ item.img.url }}">
+                            <img class="backImage" src="/../assets/img/HexButtonStates.svg" alt="">
+                            <img class="iconImage" src="{{ item.img.url }}" alt="">
                         </div>
                         <div class="logo-part-desc">{{ item.desc }}</div>
                     </a>
