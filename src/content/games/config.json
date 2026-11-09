@@ -715,6 +715,24 @@
                             "url": "./assets/img/tiltfall.jpg",
                             "alt": "Shattering glass blocks among glowing boosters and red hazards in TILTFALL"
                         }
+                    },
+                    {
+                        "desc": "ALONE",
+                        "author": "by DRLeria",
+                        "link": "https://drleria.itch.io/alone",
+                        "img": {
+                            "url": "./assets/img/alone.jpg",
+                            "alt": "A lone traveler overlooking a mountain valley and a lit cabin at dusk in ALONE"
+                        }
+                    },
+                    {
+                        "desc": "Dopaga Ring",
+                        "author": "by Korochin",
+                        "link": "https://korochin.site/en/gallery/dopaga-ring",
+                        "img": {
+                            "url": "./assets/img/dopagaRing.jpg",
+                            "alt": "Colorful rings flying toward numbered pegs beneath confetti in Dopaga Ring"
+                        }
                     }
                 ]
             }
