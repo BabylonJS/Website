@@ -733,6 +733,15 @@
                             "url": "./assets/img/dopagaRing.jpg",
                             "alt": "Colorful rings flying toward numbered pegs beneath confetti in Dopaga Ring"
                         }
+                    },
+                    {
+                        "desc": "Dorfrivalen",
+                        "author": "by Thomas Fercher",
+                        "link": "https://dorfrivalen.com/",
+                        "img": {
+                            "url": "./assets/img/dorfrivalen.jpg",
+                            "alt": "A floating hexagonal island with forests, fields, mountains, and colorful villages in Dorfrivalen"
+                        }
                     }
                 ]
             }
